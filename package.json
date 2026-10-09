@@ -1,0 +1,24 @@
+{
+  "name": "into-the-night",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=24.0.0 <25",
+    "npm": ">=11 <12"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --test-isolation=none test/*.test.mjs && sh scripts/test-cli.sh",
+    "check": "npm run typecheck && npm run build && npm test",
+    "solar": "node dist/cli.js",
+    "validate:solar": "node scripts/validate-solar.mjs",
+    "fixtures:solar": "node scripts/generate-solar-fixtures.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2",
+    "astronomy-engine": "2.1.19"
+  }
+}
