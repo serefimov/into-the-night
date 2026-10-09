@@ -1,0 +1,158 @@
+import { SOLAR_MODEL } from './config.js';
+import { greatCircle, greatCircleNormal, greatCirclePosition } from './geometry.js';
+import type { GreatCircle } from './geometry.js';
+import { solarDirection, surfaceNormal, validateCoordinates } from './solar.js';
+import type { Coordinates, Vector3 } from './solar.js';
+import { validateUtcMs } from './time.js';
+import { searchLimits, searchSolarInterval } from './interval-search.js';
+import type { SearchOptions, SearchResult } from './interval-search.js';
+
+export const ROUTE_MODEL = Object.freeze({ version: 'great-circle-solar-1', configVersion: 1, solarModelVersion: 'meeus-noaa-1',
+  speedKmPerHour: 850, groundPhaseSeconds: 900,
+  solarSpeedBoundPerSecond: 8e-5, solarCurvatureBoundPerSecond2: 8e-9,
+  evaluationErrorBound: 1e-8 });
+export interface RouteRequest {
+  readonly startUtcMs: number;
+  readonly waypoints: readonly Coordinates[];
+  readonly initialServiceRequired?: boolean;
+}
+export type RoutePhaseKind = 'initial_service' | 'preparation' | 'takeoff' | 'cruise' | 'landing' | 'service';
+export interface RoutePhase {
+  readonly kind: RoutePhaseKind;
+  readonly legIndex: number;
+  readonly startUtcMs: number;
+  readonly endUtcMs: number;
+  readonly location: Readonly<Coordinates>;
+  readonly path: GreatCircle | null;
+}
+export interface RoutePlan {
+  readonly startUtcMs: number;
+  readonly endUtcMs: number;
+  readonly distanceKm: number;
+  readonly phases: readonly RoutePhase[];
+}
+export interface RouteSafety {
+  readonly status: SearchResult['status'];
+  readonly modelVersion: string;
+  readonly solarModelVersion: string;
+  readonly configVersion: number;
+  readonly startUtcMs: number;
+  readonly endUtcMs: number;
+  readonly distanceKm: number;
+  readonly safeUntilUtcMs: number;
+  readonly evaluations: number;
+  readonly reason: SearchResult['reason'];
+  readonly unresolvedIntervalUtcMs: readonly [number, number] | null;
+  readonly event: {
+    readonly utcMs: number;
+    readonly bracketUtcMs: readonly [number, number];
+    readonly timeErrorBoundSeconds: number;
+    readonly position: Coordinates;
+    readonly phase: RoutePhaseKind;
+    readonly legIndex: number;
+    readonly q: number;
+  } | null;
+}
+
+export function createRoutePlan(request: RouteRequest): RoutePlan {
+  validateUtcMs(request.startUtcMs);
+  if (!Array.isArray(request.waypoints) || request.waypoints.length < 2 ||
+      (request.initialServiceRequired !== undefined && typeof request.initialServiceRequired !== 'boolean')) {
+    throw new RangeError('Route requires at least two waypoints and a boolean initialServiceRequired.');
+  }
+  request.waypoints.forEach(validateCoordinates);
+  const phases: RoutePhase[] = [];
+  let cursor = request.startUtcMs, distanceKm = 0;
+  function append(kind: RoutePhaseKind, legIndex: number, location: Coordinates, durationSeconds: number, path: GreatCircle | null = null): void {
+    const startUtcMs = cursor;
+    cursor += durationSeconds * 1000;
+    validateUtcMs(cursor);
+    phases.push(Object.freeze({ kind, legIndex, startUtcMs, endUtcMs: cursor,
+      location: Object.freeze({ latitudeDeg: location.latitudeDeg, longitudeDeg: location.longitudeDeg }), path }));
+  }
+  const first = request.waypoints[0]!;
+  if (request.initialServiceRequired) append('initial_service', 0, first, ROUTE_MODEL.groundPhaseSeconds);
+  for (let i = 0; i < request.waypoints.length - 1; i++) {
+    const from = request.waypoints[i]!, to = request.waypoints[i + 1]!;
+    const path = greatCircle(from, to);
+    distanceKm += path.distanceKm;
+    append('preparation', i, from, ROUTE_MODEL.groundPhaseSeconds);
+    append('takeoff', i, from, ROUTE_MODEL.groundPhaseSeconds);
+    append('cruise', i, from, path.distanceKm / ROUTE_MODEL.speedKmPerHour * 3600, path);
+    append('landing', i, to, ROUTE_MODEL.groundPhaseSeconds);
+    append('service', i, to, ROUTE_MODEL.groundPhaseSeconds);
+  }
+  return Object.freeze({ startUtcMs: request.startUtcMs, endUtcMs: cursor, distanceKm, phases: Object.freeze(phases) });
+}
+
+function phaseFraction(phase: RoutePhase, utcMs: number): number {
+  if (!Number.isFinite(utcMs) || utcMs < phase.startUtcMs || utcMs > phase.endUtcMs) {
+    throw new RangeError('UTC is outside the route phase.');
+  }
+  return (utcMs - phase.startUtcMs) / (phase.endUtcMs - phase.startUtcMs);
+}
+export function routePhasePosition(phase: RoutePhase, utcMs: number): Coordinates {
+  const fraction = phaseFraction(phase, utcMs);
+  return phase.path ? greatCirclePosition(phase.path, fraction) : { ...phase.location };
+}
+export function routePhaseNormal(phase: RoutePhase, utcMs: number): Vector3 {
+  const fraction = phaseFraction(phase, utcMs);
+  return phase.path ? greatCircleNormal(phase.path, fraction) : surfaceNormal(phase.location);
+}
+function phaseQ(phase: RoutePhase, utcMs: number): number {
+  const n = routePhaseNormal(phase, utcMs), s = solarDirection(utcMs);
+  return Math.max(-1, Math.min(1, n[0] * s[0] + n[1] * s[1] + n[2] * s[2]));
+}
+
+/** The single solar validator for both forecast and execution. */
+export function checkRouteSafety(request: RouteRequest, options: SearchOptions = {}): RouteSafety {
+  if (SOLAR_MODEL.version !== ROUTE_MODEL.solarModelVersion) {
+    throw new Error('Solar model changed: revalidate route curvature bounds before use.');
+  }
+  const plan = createRoutePlan(request);
+  const limits = searchLimits(options);
+  let evaluations = 0;
+  for (const phase of plan.phases) {
+    const remaining = limits.maxEvaluations - evaluations;
+    if (remaining < 4) return result('indeterminate', phase.startUtcMs, null,
+      [phase.startUtcMs, phase.endUtcMs], 'evaluation_budget');
+    const w = phase.path ? phase.path.angleRad / ((phase.endUtcMs - phase.startUtcMs) / 1000) : 0;
+    const curvature = w * w + 2 * w * ROUTE_MODEL.solarSpeedBoundPerSecond + ROUTE_MODEL.solarCurvatureBoundPerSecond2;
+    const search = searchSolarInterval(phase.startUtcMs, phase.endUtcMs, t => phaseQ(phase, t),
+      curvature, ROUTE_MODEL.evaluationErrorBound, { ...options, maxEvaluations: remaining });
+    evaluations += search.evaluations;
+    if (search.status === 'indeterminate') return result(search.status, search.safeUntilUtcMs, null, search.bracket, search.reason);
+    if (search.status === 'unsafe') {
+      const time = search.witnessUtcMs!;
+      const bracket = search.bracket!;
+      const event = { utcMs: time, bracketUtcMs: bracket, timeErrorBoundSeconds: (bracket[1] - bracket[0]) / 1000,
+        position: routePhasePosition(phase, time), phase: phase.kind, legIndex: phase.legIndex, q: phaseQ(phase, time) };
+      return result('unsafe', search.safeUntilUtcMs, event, null, null);
+    }
+  }
+  return result('safe', plan.endUtcMs, null, null, null);
+
+  function result(status: RouteSafety['status'], safeUntilUtcMs: number, event: RouteSafety['event'],
+    unresolvedIntervalUtcMs: RouteSafety['unresolvedIntervalUtcMs'], reason: RouteSafety['reason']): RouteSafety {
+    return { status, modelVersion: ROUTE_MODEL.version, solarModelVersion: SOLAR_MODEL.version,
+      configVersion: ROUTE_MODEL.configVersion, startUtcMs: plan.startUtcMs, endUtcMs: plan.endUtcMs,
+      distanceKm: plan.distanceKm, safeUntilUtcMs, evaluations, reason, unresolvedIntervalUtcMs, event };
+  }
+}
+
+/** Solar-only execution adapter: stop at the same event returned by forecasting.
+ * Resource/state-machine execution is deliberately deferred to #5.
+ */
+export function executeSolarRoute(request: RouteRequest, options: SearchOptions = {}): {
+  readonly outcome: 'completed' | 'solar_death' | 'needs_refinement';
+  readonly stoppedUtcMs: number;
+  readonly position: Coordinates;
+  readonly safety: RouteSafety;
+} {
+  const safety = checkRouteSafety(request, options);
+  const plan = createRoutePlan(request);
+  const time = safety.event?.utcMs ?? safety.safeUntilUtcMs;
+  const phase = plan.phases.find(p => time >= p.startUtcMs && time <= p.endUtcMs)!;
+  return { outcome: safety.status === 'safe' ? 'completed' : safety.status === 'unsafe' ? 'solar_death' : 'needs_refinement',
+    stoppedUtcMs: time, position: routePhasePosition(phase, time), safety };
+}
