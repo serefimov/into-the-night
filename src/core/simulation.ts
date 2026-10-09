@@ -8,7 +8,7 @@ import { validateCoordinates } from './solar.js';
 import type { Coordinates } from './solar.js';
 import { validateUtcMs } from './time.js';
 
-export const SIMULATION_CONFIG = Object.freeze({ version: 2, simulationVersion: 'resources-waiting-2', crew: 30,
+export const SIMULATION_CONFIG = Object.freeze({ version: 3, simulationVersion: 'resources-resume-3', crew: 30,
   fuelCapacityKg: 18000, foodCapacityPersonHours: 2160, fuelKgPerKm: 3,
   fuelLoadingKgPerSecond: 200 / 60, foodLoadingPersonHoursPerSecond: 72 / 60,
   foodConsumptionPersonHoursPerSecond: 30 / 3600, achievementsDays: Object.freeze([30, 90, 180, 365]) });
@@ -18,12 +18,12 @@ export interface World { scenarioId: string; scenarioVersion: number; seed: stri
 export type Action = { kind: 'load'; fuelKg: number; foodPersonHours: number } | { kind: 'wait'; seconds: number } |
   { kind: 'auto_wait'; options?: WaitingOptions } | { kind: 'prepare' } | { kind: 'service' } | { kind: 'fly'; destinationId: string };
 export interface State {
-  schemaVersion: 2; simulationVersion: string; configVersion: number; scenarioId: string; scenarioVersion: number; seed: string;
+  schemaVersion: 3; simulationVersion: string; configVersion: number; scenarioId: string; scenarioVersion: number; seed: string;
   startTimeUtc: number; currentTimeUtc: number; phase: 'planning' | 'simulating' | 'game_over';
   aircraft: Stock & { airportId: string | null; position: Coordinates; activeFlight: { from: string; to: string; stage: string; startUtcMs: number; endUtcMs: number } | null };
   stocks: Record<string, Stock>; discovered: string[]; serviceRequired: boolean; departurePrepared: boolean;
   distanceKm: number; completedFlights: number; achievements: number[];
-  activeAction: { action: Action; startedUtcMs: number; transferred: Stock } | null;
+  activeAction: { action: Action; startedUtcMs: number; elapsedSeconds: number; transferred: Stock } | null;
   waitingWarning: { issuedUtcMs: number; reasons: readonly string[]; foodThresholdCrewHours: number; sunriseWarningHours: number } | null;
   death: { reason: 'sun' | 'food' | 'fuel'; utcMs: number } | null;
 }
@@ -62,7 +62,7 @@ export function createSimulation(world: World, stocks: Record<string, Stock>, st
   amount(aircraft.fuelKg); amount(aircraft.foodPersonHours);
   if (aircraft.fuelKg > SIMULATION_CONFIG.fuelCapacityKg || aircraft.foodPersonHours > SIMULATION_CONFIG.foodCapacityPersonHours || typeof serviced !== 'boolean') throw new RangeError('Invalid aircraft resources.');
   const a = airport(world, airportId);
-  return { schemaVersion: 2, simulationVersion: SIMULATION_CONFIG.simulationVersion, configVersion: SIMULATION_CONFIG.version,
+  return { schemaVersion: 3, simulationVersion: SIMULATION_CONFIG.simulationVersion, configVersion: SIMULATION_CONFIG.version,
     scenarioId: world.scenarioId, scenarioVersion: world.scenarioVersion, seed: world.seed, startTimeUtc: startUtcMs,
     currentTimeUtc: startUtcMs, phase: 'planning', aircraft: { ...aircraft, airportId,
       position: { latitudeDeg: a.latitudeDeg, longitudeDeg: a.longitudeDeg }, activeFlight: null }, stocks: clone(stocks),
@@ -81,13 +81,20 @@ export function fuelExhaustionSeconds(fuelKg: number, distanceKm: number, durati
   const required = distanceKm * SIMULATION_CONFIG.fuelKgPerKm;
   return fuelKg >= required ? null : durationSeconds * fuelKg / required;
 }
-function run(world: World, original: State, actions: readonly Action[], forecast: boolean, options: SearchOptions): Execution {
+export type TraceEntry = { kind: 'checkpoint'; state: State; eventCount: number } |
+  { kind: 'segment'; before: State; after: State; phase: RoutePhase; eventsBefore: number; eventsAfter: number };
+export interface ExecutionTrace { result: Execution; entries: readonly TraceEntry[] }
+function run(world: World, original: State, actions: readonly Action[], forecast: boolean, options: SearchOptions,
+  observe?: (entry: TraceEntry) => void): Execution {
   const state = clone(original), events: Event[] = [];
   let outcome: Outcome = 'completed', message: string | null = null;
   let waiting: StandingForecast | null = null;
-  const emit = (kind: string, detail: Record<string, unknown> = {}) => events.push({ kind, utcMs: state.currentTimeUtc, detail });
+  const checkpoint = () => observe?.({ kind: 'checkpoint', state: clone(state), eventCount: events.length });
+  const emit = (kind: string, detail: Record<string, unknown> = {}) => {
+    events.push({ kind, utcMs: state.currentTimeUtc, detail }); checkpoint();
+  };
   try {
-    if (state.schemaVersion !== 2 || state.phase !== 'planning' || state.aircraft.airportId === null || state.aircraft.activeFlight !== null || state.death !== null || state.simulationVersion !== SIMULATION_CONFIG.simulationVersion || state.configVersion !== SIMULATION_CONFIG.version ||
+    if (state.schemaVersion !== 3 || state.phase !== 'planning' || state.aircraft.airportId === null || state.aircraft.activeFlight !== null || state.death !== null || state.simulationVersion !== SIMULATION_CONFIG.simulationVersion || state.configVersion !== SIMULATION_CONFIG.version ||
         state.scenarioId !== world.scenarioId || state.scenarioVersion !== world.scenarioVersion || state.seed !== world.seed) throw new RangeError('Incompatible or non-planning state.');
     validateUtcMs(state.startTimeUtc); validateUtcMs(state.currentTimeUtc);
     if (state.startTimeUtc > state.currentTimeUtc || !state.discovered.includes(state.aircraft.airportId!)) throw new RangeError('Invalid planning state.');
@@ -108,7 +115,7 @@ function run(world: World, original: State, actions: readonly Action[], forecast
       const id = state.aircraft.airportId!;
       const a = airport(world, id), stock = state.stocks[id]!;
       if (forecast && !state.discovered.includes(id)) { outcome = 'needs_discovery'; break; }
-      state.activeAction = { action: clone(action), startedUtcMs: state.currentTimeUtc, transferred: { fuelKg: 0, foodPersonHours: 0 } };
+      state.activeAction = { action: clone(action), startedUtcMs: state.currentTimeUtc, elapsedSeconds: 0, transferred: { fuelKg: 0, foodPersonHours: 0 } };
       if (action.kind === 'fly') {
         if (state.serviceRequired || !state.departurePrepared) throw new RangeError('Flight requires service and departure preparation.');
         const target = airport(world, action.destinationId), path = greatCircle(a, target);
@@ -187,6 +194,7 @@ function run(world: World, original: State, actions: readonly Action[], forecast
       if (outcome === 'completed' || outcome === 'waiting_stopped' || outcome === 'needs_discovery') state.activeAction = null;
     }
     if (!state.death) state.phase = 'planning';
+    checkpoint();
     return { outcome, state, events, message, waiting };
   } catch (error) { return { outcome: 'validation_error', state: clone(original), events: [], message: error instanceof Error ? error.message : String(error), waiting: null }; }
 
@@ -207,6 +215,8 @@ function run(world: World, original: State, actions: readonly Action[], forecast
     advance(phase, true, stock, rf, re, seconds, 0);
   }
   function advance(phase: RoutePhase, onGround: boolean, stock: Stock, rf: number, re: number, seconds: number, distance: number): void {
+    const before = observe ? clone(state) : null;
+    const eventsBefore = events.length;
     validateUtcMs(phase.endUtcMs);
     const totalFood = state.aircraft.foodPersonHours + (onGround ? stock.foodPersonHours : 0);
     const hunger = totalFood / C;
@@ -233,6 +243,7 @@ function run(world: World, original: State, actions: readonly Action[], forecast
       state.aircraft.foodPersonHours += transferredFood;
     } else state.aircraft.foodPersonHours = Math.max(0, state.aircraft.foodPersonHours - C * dt);
     state.currentTimeUtc = end;
+    if (state.activeAction) state.activeAction.elapsedSeconds = (end - state.activeAction.startedUtcMs) / 1000;
     if (phase.endUtcMs > phase.startUtcMs) state.aircraft.position = routePhasePosition(phase, end);
     state.distanceKm += distance * (seconds > 0 ? dt / seconds : 0);
     const death = safety.status === 'unsafe' ? 'sun' : safety.status === 'safe' && fatalResource ? (hunger <= (fuelTime ?? Infinity) ? 'food' : 'fuel') : null;
@@ -244,17 +255,31 @@ function run(world: World, original: State, actions: readonly Action[], forecast
     }
     if (death) { state.death = { reason: death, utcMs: end }; state.phase = 'game_over'; outcome = 'death'; emit('death', { reason: death, solarBracketUtcMs: safety.bracket }); }
     else if (safety.status === 'indeterminate') { outcome = 'needs_refinement'; message = safety.reason; }
+    if (observe && before) observe({ kind: 'segment', before, after: clone(state), phase: clone(phase), eventsBefore, eventsAfter: events.length });
   }
 }
 export function forecastPlan(world: World, state: State, actions: readonly Action[], options: SearchOptions = {}): Forecast {
   const result = run(world, state, actions, true, options);
   return { ...result, state: visibleState(world, result.state) };
 }
-export function executePlan(world: World, state: State, actions: readonly Action[], options: SearchOptions & { confirmRisk?: boolean } = {}): Execution {
+function riskPreview(world: World, state: State, actions: readonly Action[], options: SearchOptions & { confirmRisk?: boolean }): Execution | null {
   const preview = run(world, state, actions, true, options);
   if (preview.outcome === 'validation_error') return preview;
   if (preview.outcome === 'needs_refinement') return { ...preview, state: clone(state), events: [] };
   if (options.confirmRisk !== true && preview.events.some(event => event.kind === 'manual_wait_risk') && preview.outcome !== 'death') return { outcome: 'risk_confirmation_required', state: clone(state), events: [], message: 'Manual waiting after a warning requires explicit risk confirmation.', waiting: preview.waiting };
   if (preview.outcome === 'death' && options.confirmRisk !== true) return { outcome: 'risk_confirmation_required', state: clone(state), events: [], message: `${preview.state.death!.reason} at UTC ${preview.state.death!.utcMs}`, waiting: preview.waiting };
-  return run(world, state, actions, false, options);
+  return null;
+}
+export function executePlan(world: World, state: State, actions: readonly Action[], options: SearchOptions & { confirmRisk?: boolean } = {}): Execution {
+  return riskPreview(world, state, actions, options) ?? run(world, state, actions, false, options);
+}
+/** Internal engine trace; contains private state. UI uses a timeline's public views. */
+export function tracePlan(world: World, state: State, actions: readonly Action[], options: SearchOptions & { confirmRisk?: boolean } = {}, mode: 'forecast' | 'execute' = 'forecast'): ExecutionTrace {
+  if (mode === 'execute') {
+    const blocked = riskPreview(world, state, actions, options);
+    if (blocked) return { result: blocked, entries: [] };
+  }
+  const entries: TraceEntry[] = [];
+  const result = run(world, state, actions, mode === 'forecast', options, entry => entries.push(entry));
+  return { result, entries: result.outcome === 'validation_error' ? [] : entries };
 }

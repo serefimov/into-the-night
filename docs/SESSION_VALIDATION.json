@@ -1,0 +1,109 @@
+{
+  "reportVersion": 1,
+  "simulationVersion": "resources-resume-3",
+  "schemaVersion": 3,
+  "configVersion": 3,
+  "results": [
+    {
+      "name": "resource-plan",
+      "scenarioId": "resources-demo",
+      "scenarioVersion": 1,
+      "seed": "fixture-1",
+      "actions": [
+        {
+          "kind": "load",
+          "fuelKg": 6000,
+          "foodPersonHours": 300
+        },
+        {
+          "kind": "prepare"
+        },
+        {
+          "kind": "fly",
+          "destinationId": "TOS"
+        }
+      ],
+      "cutsUtcMs": [
+        1767297600000,
+        1767297692226.5525,
+        1767299905663.8118,
+        1767302211327.6235,
+        1767304516991.4355,
+        1767306730428.6948
+      ],
+      "outcome": "completed",
+      "finalUtcMs": 1767306822655.2473,
+      "eventCount": 7,
+      "finalStateExactlyEqual": true,
+      "finalSaveExactlyEqual": true,
+      "journalExactlyEqual": true
+    },
+    {
+      "name": "polar-wait",
+      "scenarioId": "polar-standing-control",
+      "scenarioVersion": 1,
+      "seed": "fixture-wait-1",
+      "actions": [
+        {
+          "kind": "auto_wait"
+        }
+      ],
+      "cutsUtcMs": [
+        1795132800000,
+        1795236782867.2485,
+        1797732371681.2134,
+        1800331943362.4268,
+        1802931515043.6401,
+        1805427103857.605
+      ],
+      "outcome": "waiting_stopped",
+      "finalUtcMs": 1805531086724.8535,
+      "eventCount": 5,
+      "finalStateExactlyEqual": true,
+      "finalSaveExactlyEqual": true,
+      "journalExactlyEqual": true
+    },
+    {
+      "name": "partial-loading",
+      "scenarioId": "partial-loading-control",
+      "scenarioVersion": 1,
+      "seed": "fixed",
+      "actions": [
+        {
+          "kind": "load",
+          "fuelKg": 6000,
+          "foodPersonHours": 120
+        }
+      ],
+      "cutsUtcMs": [
+        1767225600000,
+        1767225618000,
+        1767226050000,
+        1767226500000,
+        1767226950000,
+        1767227382000
+      ],
+      "outcome": "completed",
+      "finalUtcMs": 1767227400000,
+      "eventCount": 3,
+      "finalStateExactlyEqual": true,
+      "finalSaveExactlyEqual": true,
+      "journalExactlyEqual": true
+    }
+  ],
+  "tolerance": {
+    "finalState": "exact IEEE-754 values, canonical JSON equality",
+    "journal": "exact order, values and timestamps",
+    "intermediateResourcesAbsolute": 0.000001,
+    "unit": "kg or person-hours",
+    "samples": 101,
+    "maxFuelErrorKg": 3.3502510632388294e-7,
+    "maxFoodErrorPersonHours": 1.0986326515194378e-7
+  },
+  "limitations": [
+    "Tested fixtures are controls, not verified long-term strategies.",
+    "Resume replays the accepted plan from its private origin. Querying stateAt uses recorded linear phases; it does not replay per frame.",
+    "Physical solar error is separate from numeric event brackets. Previews and execution stop at the first terminal or planning boundary."
+  ],
+  "passed": true
+}

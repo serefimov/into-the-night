@@ -124,3 +124,55 @@ import assert from 'node:assert/strict';
 assert.equal(JSON.parse(readFileSync(process.argv[2],'utf8')).outcome,'validation_error');
 JS
 printf '%s\n' 'Waiting CLI: four timezones, forecast/execution equality, non-mutating standing analysis and invalid horizon verified.'
+for session_test_tz in UTC Europe/Oslo America/New_York Pacific/Auckland; do
+  TZ="$session_test_tz" node scripts/simulation-cli.mjs --plan examples/resource-plan.json --mode execute --stop-at 2026-01-01T21:15:00Z --save "$solar_cli_test_dir/session.json" > "$solar_cli_test_dir/session-current"
+  if test -f "$solar_cli_test_dir/session-reference"; then
+    cmp "$solar_cli_test_dir/session-reference" "$solar_cli_test_dir/session-current"
+    cmp "$solar_cli_test_dir/save-reference.json" "$solar_cli_test_dir/session.json"
+  else
+    cp "$solar_cli_test_dir/session-current" "$solar_cli_test_dir/session-reference"
+    cp "$solar_cli_test_dir/session.json" "$solar_cli_test_dir/save-reference.json"
+  fi
+  TZ="$session_test_tz" node scripts/simulation-cli.mjs --restore "$solar_cli_test_dir/session.json" --mode execute > "$solar_cli_test_dir/session-restored-current"
+  if test -f "$solar_cli_test_dir/session-restored-reference"; then
+    cmp "$solar_cli_test_dir/session-restored-reference" "$solar_cli_test_dir/session-restored-current"
+  else
+    cp "$solar_cli_test_dir/session-restored-current" "$solar_cli_test_dir/session-restored-reference"
+  fi
+done
+node scripts/simulation-cli.mjs --restore "$solar_cli_test_dir/session.json" --mode forecast > "$solar_cli_test_dir/session-preview"
+cmp "$solar_cli_test_dir/session.json" "$solar_cli_test_dir/save-reference.json"
+node scripts/simulation-cli.mjs --restore "$solar_cli_test_dir/session.json" --mode execute --stop-after 123.456 --save "$solar_cli_test_dir/session-next.json" > "$solar_cli_test_dir/session-next"
+node scripts/simulation-cli.mjs --restore "$solar_cli_test_dir/session-next.json" --mode execute > "$solar_cli_test_dir/session-resumed"
+node scripts/simulation-cli.mjs --plan examples/resource-plan.json --mode execute > "$solar_cli_test_dir/session-full"
+node --input-type=module - "$solar_cli_test_dir/session-reference" "$solar_cli_test_dir/session-next" "$solar_cli_test_dir/session-resumed" "$solar_cli_test_dir/session-full" "$solar_cli_test_dir/session.json" "$solar_cli_test_dir/session-preview" <<'JS'
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const read=path=>JSON.parse(readFileSync(path,'utf8'));
+const first=read(process.argv[2]),next=read(process.argv[3]),last=read(process.argv[4]),full=read(process.argv[5]);
+assert.equal(first.outcome,'paused');assert.equal(first.state.currentTimeUtc,Date.parse('2026-01-01T21:15:00Z'));
+assert.equal(first.state.aircraft.activeFlight.stage,'cruise');assert.equal(first.state.aircraft.airportId,null);
+assert.deepEqual(first.state.warehouses.TOS.foodPersonHours,[0,5000]);
+assert.equal(next.state.currentTimeUtc,first.state.currentTimeUtc+123456);
+assert.deepEqual(last.state,full.state);assert.deepEqual(last.events,full.events);
+assert.deepEqual([...first.newEvents,...next.newEvents,...last.newEvents],full.events);
+assert.equal(read(process.argv[7]).state.warehouses.TOS.foodPersonHours[0],0);
+const save=read(process.argv[6]);assert.equal(save.payload.snapshot.currentTimeUtc,first.state.currentTimeUtc);
+assert.equal(save.payload.snapshot.activeAction.elapsedSeconds,1800);
+save.payload.snapshot.aircraft.fuelKg+=1;
+writeFileSync(process.argv[6]+'.broken',JSON.stringify(save));
+JS
+cp "$solar_cli_test_dir/session.json" "$solar_cli_test_dir/session-protected.json"
+if node scripts/simulation-cli.mjs --restore "$solar_cli_test_dir/session.json.broken" --mode execute --save "$solar_cli_test_dir/session-protected.json" > "$solar_cli_test_dir/stdout" 2> "$solar_cli_test_dir/stderr"; then
+  echo 'Corrupted save unexpectedly accepted' >&2
+  exit 1
+fi
+test ! -s "$solar_cli_test_dir/stdout"
+cmp "$solar_cli_test_dir/session-protected.json" "$solar_cli_test_dir/save-reference.json"
+node --input-type=module - "$solar_cli_test_dir/stderr" <<'JS'
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const error=JSON.parse(readFileSync(process.argv[2],'utf8'));
+assert.equal(error.error,'validation_error');assert.match(error.message,/checksum/);
+JS
+printf '%s\n' 'Session CLI: four timezones, deterministic saves, flight pause/restore/resume, forecast privacy and damaged-save preservation verified.'

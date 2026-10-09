@@ -19,7 +19,8 @@
     "route": "node scripts/route-cli.mjs",
     "validate:route": "node scripts/validate-route.mjs",
     "simulation": "node scripts/simulation-cli.mjs",
-    "validate:waiting": "node scripts/validate-waiting.mjs"
+    "validate:waiting": "node scripts/validate-waiting.mjs",
+    "validate:sessions": "node scripts/validate-sessions.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.2",
