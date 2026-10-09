@@ -9,3 +9,4 @@ export type { RouteRequest, RoutePlan, RoutePhase, RoutePhaseKind, RouteSafety }
 export type { SearchOptions } from './interval-search.js';
 
 export * from './simulation.js';
+export * from './waiting.js';

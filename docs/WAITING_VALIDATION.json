@@ -1,0 +1,313 @@
+{
+  "reportVersion": 1,
+  "simulationVersion": "resources-waiting-2",
+  "simulationConfigVersion": 2,
+  "waitingConfig": {
+    "version": 1,
+    "horizonDays": 370,
+    "segmentDays": 30,
+    "foodThresholdCrewHours": 72,
+    "sunriseWarningHours": 12
+  },
+  "solarModelVersion": "meeus-noaa-1",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "release": "6.18.44",
+    "arch": "x64",
+    "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+    "logicalCpus": 3
+  },
+  "controls": [
+    {
+      "name": "north_pole_winter",
+      "position": {
+        "latitudeDeg": 90,
+        "longitudeDeg": 0
+      },
+      "utc": "2026-11-20T00:00:00Z",
+      "forecast": {
+        "configVersion": 1,
+        "sunrise": {
+          "status": "found",
+          "startUtcMs": 1795132800000,
+          "requestedEndUtcMs": 1827100800000,
+          "searchedUntilUtcMs": 1805574286862.1826,
+          "safeUntilUtcMs": 1805574286724.8535,
+          "horizonEndUtcMs": 1827100800000,
+          "rangeLimited": false,
+          "eventUtcMs": 1805574286862.1826,
+          "bracketUtcMs": [
+            1805574286724.8535,
+            1805574286862.1826
+          ],
+          "timeErrorBoundSeconds": 0.1373291015625,
+          "evaluations": 11653,
+          "segments": 5,
+          "reason": null
+        },
+        "hungerUtcMs": 1807132800000,
+        "maximum": {
+          "status": "limited",
+          "reason": "sun",
+          "boundaryUtcMs": 1805574286862.1826,
+          "seconds": 10441486.862182617,
+          "certifiedUntilUtcMs": 1805574286724.8535,
+          "eventBracketUtcMs": [
+            1805574286724.8535,
+            1805574286862.1826
+          ]
+        },
+        "automatic": {
+          "status": "threshold",
+          "stopUtcMs": 1805531086724.8535,
+          "seconds": 10398286.724853516,
+          "maximumRemainingSeconds": 43200.13732910156,
+          "reasons": [
+            "sunrise_warning"
+          ],
+          "alreadyReached": false,
+          "foodThresholdCrewHours": 72,
+          "sunriseWarningHours": 12
+        }
+      },
+      "timingMs": {
+        "min": 5.882337000000007,
+        "median": 6.288875999999959,
+        "max": 43.06776100000002,
+        "repetitions": 9,
+        "warmups": 2
+      }
+    },
+    {
+      "name": "south_pole_winter",
+      "position": {
+        "latitudeDeg": -90,
+        "longitudeDeg": 0
+      },
+      "utc": "2026-05-20T00:00:00Z",
+      "forecast": {
+        "configVersion": 1,
+        "sunrise": {
+          "status": "found",
+          "startUtcMs": 1779235200000,
+          "requestedEndUtcMs": 1811203200000,
+          "searchedUntilUtcMs": 1790122182440.1855,
+          "safeUntilUtcMs": 1790122182302.8564,
+          "horizonEndUtcMs": 1811203200000,
+          "rangeLimited": false,
+          "eventUtcMs": 1790122182440.1855,
+          "bracketUtcMs": [
+            1790122182302.8564,
+            1790122182440.1855
+          ],
+          "timeErrorBoundSeconds": 0.1373291015625,
+          "evaluations": 12148,
+          "segments": 5,
+          "reason": null
+        },
+        "hungerUtcMs": 1791235200000,
+        "maximum": {
+          "status": "limited",
+          "reason": "sun",
+          "boundaryUtcMs": 1790122182440.1855,
+          "seconds": 10886982.440185547,
+          "certifiedUntilUtcMs": 1790122182302.8564,
+          "eventBracketUtcMs": [
+            1790122182302.8564,
+            1790122182440.1855
+          ]
+        },
+        "automatic": {
+          "status": "threshold",
+          "stopUtcMs": 1790078982302.8564,
+          "seconds": 10843782.302856445,
+          "maximumRemainingSeconds": 43200.13732910156,
+          "reasons": [
+            "sunrise_warning"
+          ],
+          "alreadyReached": false,
+          "foodThresholdCrewHours": 72,
+          "sunriseWarningHours": 12
+        }
+      },
+      "timingMs": {
+        "min": 4.620337000000006,
+        "median": 5.9188669999999775,
+        "max": 23.952568999999983,
+        "repetitions": 9,
+        "warmups": 2
+      }
+    },
+    {
+      "name": "longyearbyen_geometry_only",
+      "position": {
+        "latitudeDeg": 78.246111,
+        "longitudeDeg": 15.465556
+      },
+      "utc": "2026-11-20T00:00:00Z",
+      "forecast": {
+        "configVersion": 1,
+        "sunrise": {
+          "status": "found",
+          "startUtcMs": 1795132800000,
+          "requestedEndUtcMs": 1827100800000,
+          "searchedUntilUtcMs": 1802947114668.274,
+          "safeUntilUtcMs": 1802947114654.541,
+          "horizonEndUtcMs": 1827100800000,
+          "rangeLimited": false,
+          "eventUtcMs": 1802947114668.274,
+          "bracketUtcMs": [
+            1802947114654.541,
+            1802947114668.274
+          ],
+          "timeErrorBoundSeconds": 0.01373291015625,
+          "evaluations": 8704,
+          "segments": 4,
+          "reason": null
+        },
+        "hungerUtcMs": 1807132800000,
+        "maximum": {
+          "status": "limited",
+          "reason": "sun",
+          "boundaryUtcMs": 1802947114668.274,
+          "seconds": 7814314.668273926,
+          "certifiedUntilUtcMs": 1802947114654.541,
+          "eventBracketUtcMs": [
+            1802947114654.541,
+            1802947114668.274
+          ]
+        },
+        "automatic": {
+          "status": "threshold",
+          "stopUtcMs": 1802903914654.541,
+          "seconds": 7771114.654541016,
+          "maximumRemainingSeconds": 43200.013732910156,
+          "reasons": [
+            "sunrise_warning"
+          ],
+          "alreadyReached": false,
+          "foodThresholdCrewHours": 72,
+          "sunriseWarningHours": 12
+        }
+      },
+      "timingMs": {
+        "min": 3.8010700000000384,
+        "median": 4.27897200000001,
+        "max": 5.877766000000008,
+        "repetitions": 9,
+        "warmups": 2
+      }
+    },
+    {
+      "name": "equatorial_night",
+      "position": {
+        "latitudeDeg": 0,
+        "longitudeDeg": 0
+      },
+      "utc": "2026-01-01T00:00:00Z",
+      "forecast": {
+        "configVersion": 1,
+        "sunrise": {
+          "status": "found",
+          "startUtcMs": 1767225600000,
+          "requestedEndUtcMs": 1799193600000,
+          "searchedUntilUtcMs": 1767247407270.813,
+          "safeUntilUtcMs": 1767247407257.08,
+          "horizonEndUtcMs": 1799193600000,
+          "rangeLimited": false,
+          "eventUtcMs": 1767247407270.813,
+          "bracketUtcMs": [
+            1767247407257.08,
+            1767247407270.813
+          ],
+          "timeErrorBoundSeconds": 0.01373291015625,
+          "evaluations": 42,
+          "segments": 1,
+          "reason": null
+        },
+        "hungerUtcMs": 1779225600000,
+        "maximum": {
+          "status": "limited",
+          "reason": "sun",
+          "boundaryUtcMs": 1767247407270.813,
+          "seconds": 21807.27081298828,
+          "certifiedUntilUtcMs": 1767247407257.08,
+          "eventBracketUtcMs": [
+            1767247407257.08,
+            1767247407270.813
+          ]
+        },
+        "automatic": {
+          "status": "threshold",
+          "stopUtcMs": 1767225600000,
+          "seconds": 0,
+          "maximumRemainingSeconds": 21807.27081298828,
+          "reasons": [
+            "sunrise_warning"
+          ],
+          "alreadyReached": true,
+          "foodThresholdCrewHours": 72,
+          "sunriseWarningHours": 12
+        }
+      },
+      "timingMs": {
+        "min": 0.016634999999951106,
+        "median": 0.017996999999979835,
+        "max": 0.04953400000005104,
+        "repetitions": 9,
+        "warmups": 2
+      }
+    }
+  ],
+  "requested370DayManualWait": {
+    "requestedSeconds": 31968000,
+    "outcome": "death",
+    "death": {
+      "reason": "sun",
+      "utcMs": 1805574286862.1826
+    },
+    "elapsedModelSeconds": 10441486.862182617,
+    "timingMs": {
+      "min": 10.064186999999947,
+      "median": 12.558733999999959,
+      "max": 16.496024000000034,
+      "repetitions": 9,
+      "warmups": 2
+    }
+  },
+  "automaticExecution": {
+    "outcome": "waiting_stopped",
+    "stopUtcMs": 1805531086724.8535,
+    "foodRemainingPersonHours": 13447.610626220703,
+    "timingMs": {
+      "min": 20.984716999999932,
+      "median": 22.78391399999998,
+      "max": 29.573346000000015,
+      "repetitions": 9,
+      "warmups": 2
+    }
+  },
+  "rangeBoundary": {
+    "status": "not_found_within_horizon",
+    "startUtcMs": 2237932800000,
+    "requestedEndUtcMs": 2269900800000,
+    "searchedUntilUtcMs": 2240611199999.9995,
+    "safeUntilUtcMs": 2240611199999.9995,
+    "horizonEndUtcMs": 2240611199999.9995,
+    "rangeLimited": true,
+    "eventUtcMs": null,
+    "bracketUtcMs": null,
+    "timeErrorBoundSeconds": null,
+    "evaluations": 2978,
+    "segments": 2,
+    "reason": null
+  },
+  "limitations": [
+    "370 days is the requested horizon; chronological search and execution stop at the first event. No claim of survival for 370 days.",
+    "Timing is machine-specific, not a frame rate or a CI wall-clock requirement.",
+    "These controls are algorithm regressions using the accepted Sun; independent ephemeris validation remains validate:solar.",
+    "No real airport or monthly strategy is implied by synthetic pole fixtures; physical ephemeris timing error is separate from the <=1 s event bracket."
+  ],
+  "passed": true
+}
