@@ -1,0 +1,41 @@
+{
+  "world": {
+    "scenarioId": "polar-standing-control",
+    "scenarioVersion": 1,
+    "seed": "fixture-wait-1",
+    "airports": [
+      {
+        "id": "NORTH_CONTROL",
+        "latitudeDeg": 90,
+        "longitudeDeg": 0,
+        "stockBounds": {
+          "fuelKg": [
+            0,
+            18000
+          ],
+          "foodPersonHours": [
+            0,
+            150000
+          ]
+        }
+      }
+    ]
+  },
+  "stocks": {
+    "NORTH_CONTROL": {
+      "fuelKg": 0,
+      "foodPersonHours": 100000
+    }
+  },
+  "utc": "2026-11-20T00:00:00Z",
+  "airportId": "NORTH_CONTROL",
+  "aircraft": {
+    "fuelKg": 0,
+    "foodPersonHours": 100
+  },
+  "actions": [
+    {
+      "kind": "auto_wait"
+    }
+  ]
+}

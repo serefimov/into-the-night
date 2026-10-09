@@ -90,3 +90,37 @@ fi
 test ! -s "$solar_cli_test_dir/stdout"
 test -s "$solar_cli_test_dir/stderr"
 printf '%s\n' 'Simulation CLI: four timezones, stock visibility, risk confirmation and invalid-file exit verified.'
+for waiting_test_tz in UTC Europe/Oslo America/New_York Pacific/Auckland; do
+  TZ="$waiting_test_tz" node scripts/simulation-cli.mjs --plan examples/polar-wait.json > "$solar_cli_test_dir/waiting-current"
+  if test -f "$solar_cli_test_dir/waiting-reference"; then
+    cmp "$solar_cli_test_dir/waiting-reference" "$solar_cli_test_dir/waiting-current"
+  else
+    cp "$solar_cli_test_dir/waiting-current" "$solar_cli_test_dir/waiting-reference"
+  fi
+done
+node scripts/simulation-cli.mjs --plan examples/polar-wait.json --mode execute > "$solar_cli_test_dir/waiting-execute"
+node scripts/simulation-cli.mjs --plan examples/polar-wait.json --mode standing > "$solar_cli_test_dir/standing"
+node --input-type=module - "$solar_cli_test_dir/waiting-reference" "$solar_cli_test_dir/waiting-execute" "$solar_cli_test_dir/standing" <<'JS'
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const read=path=>JSON.parse(readFileSync(path,'utf8'));
+const f=read(process.argv[2]),e=read(process.argv[3]),s=read(process.argv[4]);
+assert.deepEqual(f,e);assert.equal(e.outcome,'waiting_stopped');
+assert.deepEqual(e.waiting.automatic.reasons,['sunrise_warning']);
+assert.equal(s.state.currentTimeUtc,s.state.startTimeUtc);
+assert.equal(s.waiting.sunrise.requestedEndUtcMs-s.state.currentTimeUtc,370*86400000);
+assert.equal(s.waiting.maximum.reason,'sun');
+assert.equal(Object.hasOwn(e.state,'stocks'),false);
+const fixture=read('examples/polar-wait.json');fixture.actions[0].options={horizonDays:2};
+writeFileSync(process.argv[4]+'.invalid',JSON.stringify(fixture));
+JS
+if node scripts/simulation-cli.mjs --plan "$solar_cli_test_dir/standing.invalid" > "$solar_cli_test_dir/waiting-invalid"; then
+  echo 'Short sunrise horizon unexpectedly accepted' >&2
+  exit 1
+fi
+node --input-type=module - "$solar_cli_test_dir/waiting-invalid" <<'JS'
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+assert.equal(JSON.parse(readFileSync(process.argv[2],'utf8')).outcome,'validation_error');
+JS
+printf '%s\n' 'Waiting CLI: four timezones, forecast/execution equality, non-mutating standing analysis and invalid horizon verified.'

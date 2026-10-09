@@ -18,7 +18,8 @@
     "fixtures:solar": "node scripts/generate-solar-fixtures.mjs",
     "route": "node scripts/route-cli.mjs",
     "validate:route": "node scripts/validate-route.mjs",
-    "simulation": "node scripts/simulation-cli.mjs"
+    "simulation": "node scripts/simulation-cli.mjs",
+    "validate:waiting": "node scripts/validate-waiting.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.2",

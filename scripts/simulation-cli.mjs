@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
-import { createSimulation, forecastPlan, executePlan, visibleState } from '../dist/core/simulation.js';
+import { createSimulation, forecastPlan, executePlan, visibleState, SIMULATION_CONFIG } from '../dist/core/simulation.js';
+import { forecastStanding } from '../dist/core/waiting.js';
 import { parseUtc } from '../dist/core/time.js';
 try {
   const args = process.argv.slice(2);
@@ -8,12 +9,14 @@ try {
     if (args[i] === '--confirm-risk') { confirmRisk = true; continue; }
     if (args[i] === '--plan' && args[i + 1]) { file = args[++i]; continue; }
     if (args[i] === '--mode' && args[i + 1]) { mode = args[++i]; continue; }
-    throw new Error('Usage: --plan FILE [--mode forecast|execute] [--confirm-risk]');
+    throw new Error('Usage: --plan FILE [--mode forecast|execute|standing] [--confirm-risk]');
   }
-  if (!file || !['forecast', 'execute'].includes(mode) || (confirmRisk && mode !== 'execute')) throw new Error('Invalid CLI arguments.');
+  if (!file || !['forecast', 'execute', 'standing'].includes(mode) || (confirmRisk && mode !== 'execute')) throw new Error('Invalid CLI arguments.');
   const input = JSON.parse(readFileSync(file, 'utf8'));
   const state = createSimulation(input.world, input.stocks, parseUtc(input.utc), input.airportId, input.aircraft, input.serviced ?? true);
-  const result = mode === 'forecast' ? forecastPlan(input.world, state, input.actions) : executePlan(input.world, state, input.actions, { confirmRisk });
+  const result = mode === 'standing' ? { outcome: 'standing', state: visibleState(input.world, state),
+    waiting: forecastStanding({ position: state.aircraft.position, startUtcMs: state.currentTimeUtc, crew: SIMULATION_CONFIG.crew,
+      foodPersonHours: state.aircraft.foodPersonHours + state.stocks[state.aircraft.airportId].foodPersonHours }, input.waitingOptions) } : mode === 'forecast' ? forecastPlan(input.world, state, input.actions) : executePlan(input.world, state, input.actions, { confirmRisk });
   if (mode === 'execute') result.state = visibleState(input.world, result.state);
   process.stdout.write(JSON.stringify(result, null, 2) + '\n');
   if (result.outcome === 'validation_error') process.exitCode = 2;

@@ -1,3 +1,5 @@
+import { forecastStanding } from './waiting.js';
+import type { StandingForecast, WaitingOptions } from './waiting.js';
 import { greatCircle } from './geometry.js';
 import { checkRoutePhaseSafety, createFlightPhases, routePhasePosition, ROUTE_MODEL } from './route.js';
 import type { RoutePhase } from './route.js';
@@ -6,7 +8,7 @@ import { validateCoordinates } from './solar.js';
 import type { Coordinates } from './solar.js';
 import { validateUtcMs } from './time.js';
 
-export const SIMULATION_CONFIG = Object.freeze({ version: 1, simulationVersion: 'resources-1', crew: 30,
+export const SIMULATION_CONFIG = Object.freeze({ version: 2, simulationVersion: 'resources-waiting-2', crew: 30,
   fuelCapacityKg: 18000, foodCapacityPersonHours: 2160, fuelKgPerKm: 3,
   fuelLoadingKgPerSecond: 200 / 60, foodLoadingPersonHoursPerSecond: 72 / 60,
   foodConsumptionPersonHoursPerSecond: 30 / 3600, achievementsDays: Object.freeze([30, 90, 180, 365]) });
@@ -14,21 +16,22 @@ export interface Stock { fuelKg: number; foodPersonHours: number }
 export interface Airport extends Coordinates { id: string; stockBounds: { fuelKg: readonly [number, number]; foodPersonHours: readonly [number, number] } }
 export interface World { scenarioId: string; scenarioVersion: number; seed: string; airports: readonly Airport[] }
 export type Action = { kind: 'load'; fuelKg: number; foodPersonHours: number } | { kind: 'wait'; seconds: number } |
-  { kind: 'prepare' } | { kind: 'service' } | { kind: 'fly'; destinationId: string };
+  { kind: 'auto_wait'; options?: WaitingOptions } | { kind: 'prepare' } | { kind: 'service' } | { kind: 'fly'; destinationId: string };
 export interface State {
-  schemaVersion: 1; simulationVersion: string; configVersion: number; scenarioId: string; scenarioVersion: number; seed: string;
+  schemaVersion: 2; simulationVersion: string; configVersion: number; scenarioId: string; scenarioVersion: number; seed: string;
   startTimeUtc: number; currentTimeUtc: number; phase: 'planning' | 'simulating' | 'game_over';
   aircraft: Stock & { airportId: string | null; position: Coordinates; activeFlight: { from: string; to: string; stage: string; startUtcMs: number; endUtcMs: number } | null };
   stocks: Record<string, Stock>; discovered: string[]; serviceRequired: boolean; departurePrepared: boolean;
   distanceKm: number; completedFlights: number; achievements: number[];
   activeAction: { action: Action; startedUtcMs: number; transferred: Stock } | null;
+  waitingWarning: { issuedUtcMs: number; reasons: readonly string[]; foodThresholdCrewHours: number; sunriseWarningHours: number } | null;
   death: { reason: 'sun' | 'food' | 'fuel'; utcMs: number } | null;
 }
 export interface Event { kind: string; utcMs: number; detail: Record<string, unknown> }
 export type PublicState = Omit<State, 'stocks'> & { warehouses: Record<string, Stock | Airport['stockBounds']> };
-export type Outcome = 'completed' | 'needs_discovery' | 'needs_refinement' | 'validation_error' | 'death' | 'risk_confirmation_required';
-export interface Execution { outcome: Outcome; state: State; events: Event[]; message: string | null }
-export interface Forecast { outcome: Outcome; state: PublicState; events: Event[]; message: string | null }
+export type Outcome = 'completed' | 'waiting_stopped' | 'needs_discovery' | 'needs_refinement' | 'validation_error' | 'death' | 'risk_confirmation_required';
+export interface Execution { outcome: Outcome; state: State; events: Event[]; message: string | null; waiting: StandingForecast | null }
+export interface Forecast { outcome: Outcome; state: PublicState; events: Event[]; message: string | null; waiting: StandingForecast | null }
 const C = SIMULATION_CONFIG.foodConsumptionPersonHoursPerSecond;
 function clone<T>(value: T): T {
   if (Array.isArray(value)) return value.map(clone) as T;
@@ -59,12 +62,12 @@ export function createSimulation(world: World, stocks: Record<string, Stock>, st
   amount(aircraft.fuelKg); amount(aircraft.foodPersonHours);
   if (aircraft.fuelKg > SIMULATION_CONFIG.fuelCapacityKg || aircraft.foodPersonHours > SIMULATION_CONFIG.foodCapacityPersonHours || typeof serviced !== 'boolean') throw new RangeError('Invalid aircraft resources.');
   const a = airport(world, airportId);
-  return { schemaVersion: 1, simulationVersion: SIMULATION_CONFIG.simulationVersion, configVersion: 1,
+  return { schemaVersion: 2, simulationVersion: SIMULATION_CONFIG.simulationVersion, configVersion: SIMULATION_CONFIG.version,
     scenarioId: world.scenarioId, scenarioVersion: world.scenarioVersion, seed: world.seed, startTimeUtc: startUtcMs,
     currentTimeUtc: startUtcMs, phase: 'planning', aircraft: { ...aircraft, airportId,
       position: { latitudeDeg: a.latitudeDeg, longitudeDeg: a.longitudeDeg }, activeFlight: null }, stocks: clone(stocks),
     discovered: [airportId], serviceRequired: !serviced, departurePrepared: false, distanceKm: 0,
-    completedFlights: 0, achievements: [], activeAction: null, death: null };
+    completedFlights: 0, achievements: [], activeAction: null, waitingWarning: null, death: null };
 }
 export function visibleState(world: World, state: State): PublicState {
   const { stocks, ...publicFields } = clone(state);
@@ -81,9 +84,10 @@ export function fuelExhaustionSeconds(fuelKg: number, distanceKm: number, durati
 function run(world: World, original: State, actions: readonly Action[], forecast: boolean, options: SearchOptions): Execution {
   const state = clone(original), events: Event[] = [];
   let outcome: Outcome = 'completed', message: string | null = null;
+  let waiting: StandingForecast | null = null;
   const emit = (kind: string, detail: Record<string, unknown> = {}) => events.push({ kind, utcMs: state.currentTimeUtc, detail });
   try {
-    if (state.schemaVersion !== 1 || state.phase !== 'planning' || state.aircraft.airportId === null || state.aircraft.activeFlight !== null || state.death !== null || state.simulationVersion !== SIMULATION_CONFIG.simulationVersion || state.configVersion !== 1 ||
+    if (state.schemaVersion !== 2 || state.phase !== 'planning' || state.aircraft.airportId === null || state.aircraft.activeFlight !== null || state.death !== null || state.simulationVersion !== SIMULATION_CONFIG.simulationVersion || state.configVersion !== SIMULATION_CONFIG.version ||
         state.scenarioId !== world.scenarioId || state.scenarioVersion !== world.scenarioVersion || state.seed !== world.seed) throw new RangeError('Incompatible or non-planning state.');
     validateUtcMs(state.startTimeUtc); validateUtcMs(state.currentTimeUtc);
     if (state.startTimeUtc > state.currentTimeUtc || !state.discovered.includes(state.aircraft.airportId!)) throw new RangeError('Invalid planning state.');
@@ -91,9 +95,11 @@ function run(world: World, original: State, actions: readonly Action[], forecast
     if (state.aircraft.fuelKg > SIMULATION_CONFIG.fuelCapacityKg || state.aircraft.foodPersonHours > SIMULATION_CONFIG.foodCapacityPersonHours) throw new RangeError('Aircraft exceeds capacity.');
     if (!Array.isArray(actions)) throw new RangeError('Plan must be an array.');
     for (const action of actions) {
-      if (!action || !['load', 'wait', 'prepare', 'service', 'fly'].includes(action.kind)) throw new RangeError('Invalid action.');
+      if (!action || !['load', 'wait', 'auto_wait', 'prepare', 'service', 'fly'].includes(action.kind)) throw new RangeError('Invalid action.');
       if (action.kind === 'load') { amount(action.fuelKg); amount(action.foodPersonHours); }
       if (action.kind === 'wait') amount(action.seconds);
+      if (action.kind === 'auto_wait' && action.options !== undefined &&
+          (action.options === null || typeof action.options !== 'object' || Array.isArray(action.options))) throw new RangeError('Invalid waiting options.');
       if (action.kind === 'fly') airport(world, action.destinationId);
     }
     state.phase = 'simulating';
@@ -108,7 +114,7 @@ function run(world: World, original: State, actions: readonly Action[], forecast
         const target = airport(world, action.destinationId), path = greatCircle(a, target);
         if (state.aircraft.fuelKg < path.distanceKm * SIMULATION_CONFIG.fuelKgPerKm) throw new RangeError('Insufficient fuel; flight blocked.');
         const phases = createFlightPhases(state.currentTimeUtc, a, target);
-        state.departurePrepared = false; state.aircraft.airportId = null; emit('takeoff', { from: id, to: target.id });
+        state.departurePrepared = false; state.waitingWarning = null; state.aircraft.airportId = null; emit('takeoff', { from: id, to: target.id });
         for (const phase of phases) {
           state.aircraft.activeFlight = { from: id, to: target.id, stage: phase.kind, startUtcMs: phase.startUtcMs, endUtcMs: phase.endUtcMs };
           const distance = phase.path?.distanceKm ?? 0;
@@ -146,33 +152,55 @@ function run(world: World, original: State, actions: readonly Action[], forecast
           if (storeDone && outcome === 'completed') stock.foodPersonHours = 0;
         }
         if (outcome === 'completed') emit('loading_completed', { ...state.activeAction!.transferred });
+      } else if (action.kind === 'auto_wait') {
+        waiting = forecastStanding({ position: state.aircraft.position, startUtcMs: state.currentTimeUtc,
+          foodPersonHours: stock.foodPersonHours + state.aircraft.foodPersonHours, crew: SIMULATION_CONFIG.crew }, { ...options, ...action.options });
+        const automatic = waiting.automatic;
+        if (automatic.status === 'needs_refinement') {
+          outcome = 'needs_refinement'; message = waiting.sunrise.reason;
+        } else {
+          if (automatic.seconds > 0) emit('auto_wait_started');
+          waitGround(automatic.seconds, stock);
+          if (outcome === 'completed') {
+            const warningReasons = automatic.reasons.filter(reason => reason === 'food_threshold' || reason === 'sunrise_warning');
+            state.waitingWarning = warningReasons.length ? { issuedUtcMs: state.currentTimeUtc, reasons: warningReasons,
+              foodThresholdCrewHours: automatic.foodThresholdCrewHours, sunriseWarningHours: automatic.sunriseWarningHours } : null;
+            for (const reason of automatic.reasons) emit(reason, { hungerUtcMs: waiting.hungerUtcMs,
+              sunriseBracketUtcMs: waiting.sunrise.bracketUtcMs, foodPersonHours: stock.foodPersonHours + state.aircraft.foodPersonHours });
+            emit('auto_wait_stopped', { reasons: automatic.reasons, alreadyReached: automatic.alreadyReached });
+            outcome = 'waiting_stopped';
+          }
+        }
       } else {
         if (action.kind === 'prepare' && (state.serviceRequired || state.departurePrepared)) throw new RangeError('Preparation requires service and cannot be repeated.');
         if (action.kind === 'service' && !state.serviceRequired) throw new RangeError('Service is required only once after landing.');
+        if (action.kind === 'wait' && action.seconds > 0 && state.waitingWarning) emit('manual_wait_risk', { ...state.waitingWarning });
         const kind = action.kind === 'prepare' ? 'departure_preparation' : action.kind;
         emit(`${kind}_started`);
-        let left = action.kind === 'wait' ? action.seconds : ROUTE_MODEL.groundPhaseSeconds;
-        // A zero-duration action still checks immediate death.
-        do {
-          const duration = Math.min(left, stock.foodPersonHours > 0 ? stock.foodPersonHours / C : left);
-          const exhausted = stock.foodPersonHours > 0 && duration === stock.foodPersonHours / C;
-          ground(duration, stock, 0, 0);
-          if (exhausted && outcome === 'completed') stock.foodPersonHours = 0;
-          left = Math.max(0, left - duration);
-          if (outcome !== 'completed') break;
-        } while (left > 0);
+        waitGround(action.kind === 'wait' ? action.seconds : ROUTE_MODEL.groundPhaseSeconds, stock);
         if (outcome === 'completed') {
           if (action.kind === 'prepare') state.departurePrepared = true;
           if (action.kind === 'service') state.serviceRequired = false;
           emit(`${kind}_completed`);
         }
       }
-      if (outcome === 'completed' || outcome === 'needs_discovery') state.activeAction = null;
+      if (outcome === 'completed' || outcome === 'waiting_stopped' || outcome === 'needs_discovery') state.activeAction = null;
     }
     if (!state.death) state.phase = 'planning';
-    return { outcome, state, events, message };
-  } catch (error) { return { outcome: 'validation_error', state: clone(original), events: [], message: error instanceof Error ? error.message : String(error) }; }
+    return { outcome, state, events, message, waiting };
+  } catch (error) { return { outcome: 'validation_error', state: clone(original), events: [], message: error instanceof Error ? error.message : String(error), waiting: null }; }
 
+  function waitGround(seconds: number, stock: Stock): void {
+    let left = seconds;
+    do {
+      const duration = Math.min(left, stock.foodPersonHours > 0 ? stock.foodPersonHours / C : left);
+      const exhausted = stock.foodPersonHours > 0 && duration === stock.foodPersonHours / C;
+      ground(duration, stock, 0, 0);
+      if (exhausted && outcome === 'completed') stock.foodPersonHours = 0;
+      left = Math.max(0, left - duration);
+      if (outcome !== 'completed') break;
+    } while (left > 0);
+  }
   function ground(seconds: number, stock: Stock, rf: number, re: number): void {
     const start = state.currentTimeUtc, end = start + seconds * 1000;
     const phase: RoutePhase = { kind: 'service', legIndex: state.completedFlights, startUtcMs: start, endUtcMs: end, location: state.aircraft.position, path: null };
@@ -226,6 +254,7 @@ export function executePlan(world: World, state: State, actions: readonly Action
   const preview = run(world, state, actions, true, options);
   if (preview.outcome === 'validation_error') return preview;
   if (preview.outcome === 'needs_refinement') return { ...preview, state: clone(state), events: [] };
-  if (preview.outcome === 'death' && options.confirmRisk !== true) return { outcome: 'risk_confirmation_required', state: clone(state), events: [], message: `${preview.state.death!.reason} at UTC ${preview.state.death!.utcMs}` };
+  if (options.confirmRisk !== true && preview.events.some(event => event.kind === 'manual_wait_risk') && preview.outcome !== 'death') return { outcome: 'risk_confirmation_required', state: clone(state), events: [], message: 'Manual waiting after a warning requires explicit risk confirmation.', waiting: preview.waiting };
+  if (preview.outcome === 'death' && options.confirmRisk !== true) return { outcome: 'risk_confirmation_required', state: clone(state), events: [], message: `${preview.state.death!.reason} at UTC ${preview.state.death!.utcMs}`, waiting: preview.waiting };
   return run(world, state, actions, false, options);
 }
