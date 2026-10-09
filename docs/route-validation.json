@@ -1,0 +1,207 @@
+{
+  "routeModel": "great-circle-solar-1",
+  "solarModel": "meeus-noaa-1",
+  "cases": [
+    {
+      "name": "oslo-tromso",
+      "utc": "2026-11-20T03:00:00Z",
+      "status": "safe",
+      "distanceKm": 1114.5524296875344,
+      "durationSeconds": 8320.457349365235,
+      "departureQ": -0.5281318696571751,
+      "endQ": -0.24686643943893122,
+      "event": null,
+      "denseFirstUtcMs": null,
+      "witnessMinusDenseSeconds": null,
+      "evaluations": 15,
+      "forecastMatchesExecution": true
+    },
+    {
+      "name": "dark-endpoints",
+      "utc": "2026-03-20T00:00:00Z",
+      "status": "unsafe",
+      "distanceKm": 17791.212837365263,
+      "durationSeconds": 78951.01907592773,
+      "departureQ": -0.14087953733461123,
+      "endQ": -0.6803499447603366,
+      "event": {
+        "utcMs": 1773992732876.587,
+        "bracketUtcMs": [
+          1773992732862.854,
+          1773992732876.587
+        ],
+        "timeErrorBoundSeconds": 0.01373291015625,
+        "position": {
+          "latitudeDeg": 0,
+          "longitudeDeg": -24.509572595255978
+        },
+        "phase": "cruise",
+        "legIndex": 0,
+        "q": 0.000001009727562617524
+      },
+      "denseFirstUtcMs": 1773992732867.3857,
+      "witnessMinusDenseSeconds": 0.009201171875,
+      "evaluations": 51,
+      "forecastMatchesExecution": true
+    },
+    {
+      "name": "date-line",
+      "utc": "2026-03-20T12:00:00Z",
+      "status": "safe",
+      "distanceKm": 222.39016046706487,
+      "durationSeconds": 4541.887738525391,
+      "departureQ": -0.9987503949270328,
+      "endQ": -0.9507100834872257,
+      "event": null,
+      "denseFirstUtcMs": null,
+      "witnessMinusDenseSeconds": null,
+      "evaluations": 11,
+      "forecastMatchesExecution": true
+    },
+    {
+      "name": "polar-arc",
+      "utc": "2026-12-21T00:00:00Z",
+      "status": "safe",
+      "distanceKm": 2223.9016046706593,
+      "durationSeconds": 13018.877384521484,
+      "departureQ": -0.5509817603285219,
+      "endQ": -0.29977678962206794,
+      "event": null,
+      "denseFirstUtcMs": null,
+      "witnessMinusDenseSeconds": null,
+      "evaluations": 20,
+      "forecastMatchesExecution": true
+    }
+  ],
+  "convergence": [
+    {
+      "maxIntervalSeconds": 3600,
+      "eventToleranceSeconds": 1,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.0274658203125,
+      "witnessMinusDenseSeconds": 0.009201171875,
+      "evaluations": 30
+    },
+    {
+      "maxIntervalSeconds": 3600,
+      "eventToleranceSeconds": 0.5,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.01373291015625,
+      "witnessMinusDenseSeconds": 0.009201171875,
+      "evaluations": 31
+    },
+    {
+      "maxIntervalSeconds": 3600,
+      "eventToleranceSeconds": 0.1,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.001716796875,
+      "witnessMinusDenseSeconds": 0.0006181640625,
+      "evaluations": 34
+    },
+    {
+      "maxIntervalSeconds": 3600,
+      "eventToleranceSeconds": 0.01,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.00042919921875,
+      "witnessMinusDenseSeconds": 0.00018896484375,
+      "evaluations": 37
+    },
+    {
+      "maxIntervalSeconds": 900,
+      "eventToleranceSeconds": 1,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.0274658203125,
+      "witnessMinusDenseSeconds": 0.009201171875,
+      "evaluations": 50
+    },
+    {
+      "maxIntervalSeconds": 900,
+      "eventToleranceSeconds": 0.5,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.01373291015625,
+      "witnessMinusDenseSeconds": 0.009201171875,
+      "evaluations": 51
+    },
+    {
+      "maxIntervalSeconds": 900,
+      "eventToleranceSeconds": 0.1,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.001716796875,
+      "witnessMinusDenseSeconds": 0.0006181640625,
+      "evaluations": 54
+    },
+    {
+      "maxIntervalSeconds": 900,
+      "eventToleranceSeconds": 0.01,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.00042919921875,
+      "witnessMinusDenseSeconds": 0.00018896484375,
+      "evaluations": 57
+    },
+    {
+      "maxIntervalSeconds": 120,
+      "eventToleranceSeconds": 1,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.029296875,
+      "witnessMinusDenseSeconds": 0.0037080078125,
+      "evaluations": 249
+    },
+    {
+      "maxIntervalSeconds": 120,
+      "eventToleranceSeconds": 0.5,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.0146484375,
+      "witnessMinusDenseSeconds": 0.0037080078125,
+      "evaluations": 250
+    },
+    {
+      "maxIntervalSeconds": 120,
+      "eventToleranceSeconds": 0.1,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.0018310546875,
+      "witnessMinusDenseSeconds": 0.0000458984375,
+      "evaluations": 253
+    },
+    {
+      "maxIntervalSeconds": 120,
+      "eventToleranceSeconds": 0.01,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.00022900390625,
+      "witnessMinusDenseSeconds": 0.0000458984375,
+      "evaluations": 256
+    },
+    {
+      "maxIntervalSeconds": 30,
+      "eventToleranceSeconds": 1,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.029296875,
+      "witnessMinusDenseSeconds": 0.0037080078125,
+      "evaluations": 945
+    },
+    {
+      "maxIntervalSeconds": 30,
+      "eventToleranceSeconds": 0.5,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.0146484375,
+      "witnessMinusDenseSeconds": 0.0037080078125,
+      "evaluations": 946
+    },
+    {
+      "maxIntervalSeconds": 30,
+      "eventToleranceSeconds": 0.1,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.0018310546875,
+      "witnessMinusDenseSeconds": 0.0000458984375,
+      "evaluations": 949
+    },
+    {
+      "maxIntervalSeconds": 30,
+      "eventToleranceSeconds": 0.01,
+      "status": "unsafe",
+      "eventBracketSeconds": 0.00022900390625,
+      "witnessMinusDenseSeconds": 0.0000458984375,
+      "evaluations": 952
+    }
+  ],
+  "passed": true
+}

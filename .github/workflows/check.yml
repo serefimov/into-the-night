@@ -16,5 +16,6 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm run check
       - run: npm run validate:solar
+      - run: npm run validate:route
       - run: npm run fixtures:solar
       - run: git diff --exit-code -- test/fixtures/solar-reference.json

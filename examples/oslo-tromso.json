@@ -1,0 +1,7 @@
+{
+  "waypoints": [
+    { "latitudeDeg": 60.202778, "longitudeDeg": 11.083889 },
+    { "latitudeDeg": 69.681389, "longitudeDeg": 18.917778 }
+  ],
+  "initialServiceRequired": false
+}

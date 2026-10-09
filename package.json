@@ -15,7 +15,9 @@
     "check": "npm run typecheck && npm run build && npm test",
     "solar": "node dist/cli.js",
     "validate:solar": "node scripts/validate-solar.mjs",
-    "fixtures:solar": "node scripts/generate-solar-fixtures.mjs"
+    "fixtures:solar": "node scripts/generate-solar-fixtures.mjs",
+    "route": "node scripts/route-cli.mjs",
+    "validate:route": "node scripts/validate-route.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.2",

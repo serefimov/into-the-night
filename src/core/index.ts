@@ -2,3 +2,8 @@ export { SOLAR_MODEL } from './config.js';
 export { parseUtc, validateUtcMs } from './time.js';
 export { solarDirection, solarExposure, surfaceNormal, isSolarSafe, validateCoordinates } from './solar.js';
 export type { Vector3, Coordinates, SolarExposure } from './solar.js';
+export { greatCircle, greatCircleNormal, greatCirclePosition, normalCoordinates } from './geometry.js';
+export type { GreatCircle } from './geometry.js';
+export { ROUTE_MODEL, createRoutePlan, routePhasePosition, routePhaseNormal, checkRouteSafety, executeSolarRoute } from './route.js';
+export type { RouteRequest, RoutePlan, RoutePhase, RoutePhaseKind, RouteSafety } from './route.js';
+export type { SearchOptions } from './interval-search.js';
