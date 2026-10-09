@@ -1,0 +1,97 @@
+{
+  "modelVersion": "meeus-noaa-1",
+  "referenceVersion": "2.1.19",
+  "samples": 1346,
+  "maximumDirectionError": {
+    "errorDeg": 0.008388755037558112,
+    "utc": "2023-01-15T00:00:00.000Z"
+  },
+  "maximumAltitudeErrorDeg": {
+    "ordinary": 0.008305813083124836,
+    "highLatitude": 0.0052803464759971774,
+    "poles": 0.002866361727414765
+  },
+  "horizon": [
+    {
+      "name": "equator",
+      "latitudeDeg": 0,
+      "longitudeDeg": 0,
+      "referenceUtc": "2026-03-20T06:07:30.560Z",
+      "modelUtc": "2026-03-20T06:07:31.771Z",
+      "differenceSeconds": 1.211,
+      "modelAltitudeAtReferenceDeg": -0.005044516755389511,
+      "modelSlopeDegPerSecond": 0.004167507604731314
+    },
+    {
+      "name": "greenwich",
+      "latitudeDeg": 51.4779,
+      "longitudeDeg": 0,
+      "referenceUtc": "2026-06-21T03:49:45.382Z",
+      "modelUtc": "2026-06-21T03:49:46.118Z",
+      "differenceSeconds": 0.736,
+      "modelAltitudeAtReferenceDeg": -0.0014680078247194858,
+      "modelSlopeDegPerSecond": 0.0019965558932514287
+    },
+    {
+      "name": "tromso",
+      "latitudeDeg": 69.681389,
+      "longitudeDeg": 18.917778,
+      "referenceUtc": "2026-03-20T04:53:36.513Z",
+      "modelUtc": "2026-03-20T04:53:36.347Z",
+      "differenceSeconds": -0.166,
+      "modelAltitudeAtReferenceDeg": 0.0002416513696247519,
+      "modelSlopeDegPerSecond": 0.001451373537902734
+    },
+    {
+      "name": "longyearbyen",
+      "latitudeDeg": 78.246111,
+      "longitudeDeg": 15.465556,
+      "referenceUtc": "2026-02-18T10:28:45.867Z",
+      "modelUtc": "2026-02-18T10:28:38.687Z",
+      "differenceSeconds": -7.18,
+      "modelAltitudeAtReferenceDeg": 0.0011516424990208362,
+      "modelSlopeDegPerSecond": 0.0001601611002361514
+    },
+    {
+      "name": "near-north-pole",
+      "latitudeDeg": 89,
+      "longitudeDeg": 0,
+      "referenceUtc": "2026-03-18T10:08:31.614Z",
+      "modelUtc": "2026-03-18T10:07:35.624Z",
+      "differenceSeconds": -55.99,
+      "modelAltitudeAtReferenceDeg": 0.0022923398839612913,
+      "modelSlopeDegPerSecond": 0.00004081301295868134
+    },
+    {
+      "name": "near-south-pole",
+      "latitudeDeg": -89,
+      "longitudeDeg": 0,
+      "referenceUtc": "2026-09-20T11:14:34.914Z",
+      "modelUtc": "2026-09-20T11:15:49.580Z",
+      "differenceSeconds": 74.666,
+      "modelAltitudeAtReferenceDeg": -0.0012371468303159392,
+      "modelSlopeDegPerSecond": 0.000016763949283567882
+    },
+    {
+      "name": "north-pole",
+      "latitudeDeg": 90,
+      "longitudeDeg": 0,
+      "referenceUtc": "2026-03-20T14:45:20.179Z",
+      "modelUtc": "2026-03-20T14:37:44.341Z",
+      "differenceSeconds": -455.838,
+      "modelAltitudeAtReferenceDeg": 0.0020853242382788194,
+      "modelSlopeDegPerSecond": 0.000004574695199462825
+    },
+    {
+      "name": "south-pole",
+      "latitudeDeg": -90,
+      "longitudeDeg": 0,
+      "referenceUtc": "2026-09-23T00:05:48.566Z",
+      "modelUtc": "2026-09-23T00:09:42.432Z",
+      "differenceSeconds": 233.866,
+      "modelAltitudeAtReferenceDeg": -0.0010534343762491287,
+      "modelSlopeDegPerSecond": 0.000004504448135150202
+    }
+  ],
+  "passed": true
+}
