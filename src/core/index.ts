@@ -7,3 +7,5 @@ export type { GreatCircle } from './geometry.js';
 export { ROUTE_MODEL, createRoutePlan, routePhasePosition, routePhaseNormal, checkRouteSafety, executeSolarRoute } from './route.js';
 export type { RouteRequest, RoutePlan, RoutePhase, RoutePhaseKind, RouteSafety } from './route.js';
 export type { SearchOptions } from './interval-search.js';
+
+export * from './simulation.js';

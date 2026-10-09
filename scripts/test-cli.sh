@@ -52,3 +52,41 @@ import assert from 'node:assert/strict';
 assert.equal(JSON.parse(readFileSync(process.argv[2],'utf8')).error,'validation_error');
 JS
 printf '%s\n' 'Route CLI: four timezones, execution stop, invalid-file exit/output verified.'
+for simulation_test_tz in UTC Europe/Oslo America/New_York Pacific/Auckland; do
+  TZ="$simulation_test_tz" node scripts/simulation-cli.mjs --plan examples/resource-plan.json > "$solar_cli_test_dir/simulation-current"
+  if test -f "$solar_cli_test_dir/simulation-reference"; then
+    cmp "$solar_cli_test_dir/simulation-reference" "$solar_cli_test_dir/simulation-current"
+  else
+    cp "$solar_cli_test_dir/simulation-current" "$solar_cli_test_dir/simulation-reference"
+  fi
+done
+node scripts/simulation-cli.mjs --plan examples/resource-plan.json --mode execute > "$solar_cli_test_dir/simulation-execute"
+node --input-type=module - "$solar_cli_test_dir/simulation-reference" "$solar_cli_test_dir/simulation-execute" <<'JS'
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const forecast=JSON.parse(readFileSync(process.argv[2],'utf8'));
+const execution=JSON.parse(readFileSync(process.argv[3],'utf8'));
+assert.equal(forecast.outcome,'completed');assert.equal(execution.outcome,'completed');
+assert.deepEqual(forecast.state.aircraft,execution.state.aircraft);
+assert.deepEqual(forecast.state.warehouses.TOS.foodPersonHours,[0,5000]);
+assert.equal(execution.state.warehouses.TOS.foodPersonHours,3000);
+assert.equal(Object.hasOwn(execution.state,'stocks'),false);
+const fixture=JSON.parse(readFileSync('examples/resource-plan.json','utf8'));
+fixture.actions=[{kind:'wait',seconds:1e6}];fixture.stocks.OSL.foodPersonHours=0;fixture.aircraft.foodPersonHours=1;
+writeFileSync(process.argv[3]+'.risk',JSON.stringify(fixture));
+JS
+node scripts/simulation-cli.mjs --plan "$solar_cli_test_dir/simulation-execute.risk" --mode execute > "$solar_cli_test_dir/blocked"
+node scripts/simulation-cli.mjs --plan "$solar_cli_test_dir/simulation-execute.risk" --mode execute --confirm-risk > "$solar_cli_test_dir/death"
+node --input-type=module - "$solar_cli_test_dir/blocked" "$solar_cli_test_dir/death" <<'JS'
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+assert.equal(JSON.parse(readFileSync(process.argv[2],'utf8')).outcome,'risk_confirmation_required');
+assert.equal(JSON.parse(readFileSync(process.argv[3],'utf8')).state.death.reason,'food');
+JS
+if node scripts/simulation-cli.mjs --plan examples/missing.json > "$solar_cli_test_dir/stdout" 2> "$solar_cli_test_dir/stderr"; then
+  echo 'Missing simulation file unexpectedly accepted' >&2
+  exit 1
+fi
+test ! -s "$solar_cli_test_dir/stdout"
+test -s "$solar_cli_test_dir/stderr"
+printf '%s\n' 'Simulation CLI: four timezones, stock visibility, risk confirmation and invalid-file exit verified.'

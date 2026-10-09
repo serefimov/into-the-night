@@ -77,19 +77,34 @@ export function createRoutePlan(request: RouteRequest): RoutePlan {
     const path = greatCircle(from, to);
     distanceKm += path.distanceKm;
     append('preparation', i, from, ROUTE_MODEL.groundPhaseSeconds);
-    append('takeoff', i, from, ROUTE_MODEL.groundPhaseSeconds);
-    append('cruise', i, from, path.distanceKm / ROUTE_MODEL.speedKmPerHour * 3600, path);
-    append('landing', i, to, ROUTE_MODEL.groundPhaseSeconds);
+    const flight = createFlightPhases(cursor, from, to);
+    phases.push(...flight.map(phase => Object.freeze({ ...phase, legIndex: i })));
+    cursor = flight[flight.length - 1]!.endUtcMs;
     append('service', i, to, ROUTE_MODEL.groundPhaseSeconds);
   }
   return Object.freeze({ startUtcMs: request.startUtcMs, endUtcMs: cursor, distanceKm, phases: Object.freeze(phases) });
+}
+
+/** Flight phases without unrelated preparation or service timestamps. */
+export function createFlightPhases(startUtcMs: number, from: Coordinates, to: Coordinates): readonly RoutePhase[] {
+  validateUtcMs(startUtcMs);
+  const path = greatCircle(from, to);
+  let cursor = startUtcMs;
+  return (['takeoff', 'cruise', 'landing'] as const).map(kind => {
+    const start = cursor;
+    cursor += (kind === 'cruise' ? path.distanceKm / ROUTE_MODEL.speedKmPerHour * 3600 : ROUTE_MODEL.groundPhaseSeconds) * 1000;
+    validateUtcMs(cursor);
+    return { kind, legIndex: 0, startUtcMs: start, endUtcMs: cursor,
+      location: Object.freeze({ latitudeDeg: (kind === 'landing' ? to : from).latitudeDeg,
+        longitudeDeg: (kind === 'landing' ? to : from).longitudeDeg }), path: kind === 'cruise' ? path : null };
+  });
 }
 
 function phaseFraction(phase: RoutePhase, utcMs: number): number {
   if (!Number.isFinite(utcMs) || utcMs < phase.startUtcMs || utcMs > phase.endUtcMs) {
     throw new RangeError('UTC is outside the route phase.');
   }
-  return (utcMs - phase.startUtcMs) / (phase.endUtcMs - phase.startUtcMs);
+  return phase.endUtcMs === phase.startUtcMs ? 0 : (utcMs - phase.startUtcMs) / (phase.endUtcMs - phase.startUtcMs);
 }
 export function routePhasePosition(phase: RoutePhase, utcMs: number): Coordinates {
   const fraction = phaseFraction(phase, utcMs);
@@ -104,6 +119,17 @@ function phaseQ(phase: RoutePhase, utcMs: number): number {
   return Math.max(-1, Math.min(1, n[0] * s[0] + n[1] * s[1] + n[2] * s[2]));
 }
 
+/** Search a prefix without changing the trajectory of the original phase. */
+export function checkRoutePhaseSafety(phase: RoutePhase, options: SearchOptions = {}, endUtcMs = phase.endUtcMs): SearchResult {
+  if (SOLAR_MODEL.version !== ROUTE_MODEL.solarModelVersion) throw new Error('Solar bounds need revalidation.');
+  validateUtcMs(endUtcMs);
+  if (endUtcMs < phase.startUtcMs || endUtcMs > phase.endUtcMs) throw new RangeError('Invalid phase cutoff.');
+  const w = phase.path ? phase.path.angleRad / ((phase.endUtcMs - phase.startUtcMs) / 1000) : 0;
+  const curvature = w * w + 2 * w * ROUTE_MODEL.solarSpeedBoundPerSecond + ROUTE_MODEL.solarCurvatureBoundPerSecond2;
+  return searchSolarInterval(phase.startUtcMs, endUtcMs, t => phaseQ(phase, t), curvature,
+    ROUTE_MODEL.evaluationErrorBound, options);
+}
+
 /** The single solar validator for both forecast and execution. */
 export function checkRouteSafety(request: RouteRequest, options: SearchOptions = {}): RouteSafety {
   if (SOLAR_MODEL.version !== ROUTE_MODEL.solarModelVersion) {
@@ -116,10 +142,7 @@ export function checkRouteSafety(request: RouteRequest, options: SearchOptions =
     const remaining = limits.maxEvaluations - evaluations;
     if (remaining < 4) return result('indeterminate', phase.startUtcMs, null,
       [phase.startUtcMs, phase.endUtcMs], 'evaluation_budget');
-    const w = phase.path ? phase.path.angleRad / ((phase.endUtcMs - phase.startUtcMs) / 1000) : 0;
-    const curvature = w * w + 2 * w * ROUTE_MODEL.solarSpeedBoundPerSecond + ROUTE_MODEL.solarCurvatureBoundPerSecond2;
-    const search = searchSolarInterval(phase.startUtcMs, phase.endUtcMs, t => phaseQ(phase, t),
-      curvature, ROUTE_MODEL.evaluationErrorBound, { ...options, maxEvaluations: remaining });
+    const search = checkRoutePhaseSafety(phase, { ...options, maxEvaluations: remaining });
     evaluations += search.evaluations;
     if (search.status === 'indeterminate') return result(search.status, search.safeUntilUtcMs, null, search.bracket, search.reason);
     if (search.status === 'unsafe') {

@@ -1,0 +1,69 @@
+{
+  "world": {
+    "scenarioId": "resources-demo",
+    "scenarioVersion": 1,
+    "seed": "fixture-1",
+    "airports": [
+      {
+        "id": "OSL",
+        "latitudeDeg": 60.1976,
+        "longitudeDeg": 11.1004,
+        "stockBounds": {
+          "fuelKg": [
+            0,
+            18000
+          ],
+          "foodPersonHours": [
+            0,
+            5000
+          ]
+        }
+      },
+      {
+        "id": "TOS",
+        "latitudeDeg": 69.6833,
+        "longitudeDeg": 18.9189,
+        "stockBounds": {
+          "fuelKg": [
+            0,
+            18000
+          ],
+          "foodPersonHours": [
+            0,
+            5000
+          ]
+        }
+      }
+    ]
+  },
+  "stocks": {
+    "OSL": {
+      "fuelKg": 18000,
+      "foodPersonHours": 5000
+    },
+    "TOS": {
+      "fuelKg": 9000,
+      "foodPersonHours": 3000
+    }
+  },
+  "utc": "2026-01-01T20:00:00Z",
+  "airportId": "OSL",
+  "aircraft": {
+    "fuelKg": 0,
+    "foodPersonHours": 0
+  },
+  "actions": [
+    {
+      "kind": "load",
+      "fuelKg": 6000,
+      "foodPersonHours": 300
+    },
+    {
+      "kind": "prepare"
+    },
+    {
+      "kind": "fly",
+      "destinationId": "TOS"
+    }
+  ]
+}
