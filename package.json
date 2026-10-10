@@ -22,7 +22,12 @@
     "validate:waiting": "node scripts/validate-waiting.mjs",
     "validate:sessions": "node scripts/validate-sessions.mjs",
     "spike": "node scripts/spike-cli.mjs",
-    "validate:spike": "node scripts/spike-cli.mjs --research --verify-report"
+    "validate:spike": "node scripts/spike-cli.mjs --research --verify-report",
+    "dev": "npm run build && node scripts/dev-server.mjs",
+    "build:web": "npm run build && node scripts/build-web.mjs",
+    "serve:web": "node scripts/dev-server.mjs --built",
+    "review": "node scripts/review-cli.mjs",
+    "test:browser": "node scripts/test-browser.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.2",

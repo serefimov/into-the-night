@@ -20,5 +20,7 @@ jobs:
       - run: npm run validate:waiting
       - run: npm run validate:sessions
       - run: npm run validate:spike
+      - run: npm run build:web
+      - run: npm run test:browser
       - run: npm run fixtures:solar
       - run: git diff --exit-code -- test/fixtures/solar-reference.json
