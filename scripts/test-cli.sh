@@ -204,3 +204,48 @@ import assert from 'node:assert/strict';
 assert.match(JSON.parse(readFileSync(process.argv[2],'utf8')).error,/Use --research/);
 JS
 printf '%s\n' 'Spike CLI: deterministic 90-day replay in two timezones and argument validation verified.'
+
+node --input-type=module - "$solar_cli_test_dir/browser-review.json" <<'JS'
+import {readFileSync,writeFileSync} from 'node:fs';
+import {SpikeGame} from './dist/core/game.js';
+const read=p=>JSON.parse(readFileSync(p,'utf8'));
+const game=new SpikeGame(read('data/spike/airports.json'),read('data/spike/scenario.json'));
+game.start(game.flight('LYR').actions);game.advance(game.endUtcMs);
+game.start([{kind:'service'}]);game.advance(game.endUtcMs);
+game.start([{kind:'wait',seconds:30*86400}]);game.advance(game.current().currentTimeUtc+15*86400000);
+const save=game.save();game.restore(save);game.cancelGround();
+game.start([{kind:'wait',seconds:15*86400}]);game.advance(game.endUtcMs);
+writeFileSync(process.argv[2],JSON.stringify(game.journal()));
+JS
+for review_tz in UTC Pacific/Auckland; do
+  TZ="$review_tz" node scripts/review-cli.mjs "$solar_cli_test_dir/browser-review.json" > "$solar_cli_test_dir/review-current"
+  if test -f "$solar_cli_test_dir/review-reference"; then
+    cmp "$solar_cli_test_dir/review-reference" "$solar_cli_test_dir/review-current"
+  else
+    cp "$solar_cli_test_dir/review-current" "$solar_cli_test_dir/review-reference"
+  fi
+done
+node --input-type=module - "$solar_cli_test_dir/browser-review.json" "$solar_cli_test_dir/review-current" <<'JS'
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const read=p=>JSON.parse(readFileSync(p,'utf8')),journal=read(process.argv[2]),result=read(process.argv[3]);
+assert.equal(result.passed,true);assert.deepEqual(result.state,journal.state);
+assert.ok(result.state.achievements.includes(30));assert.ok(journal.entries.some(e=>e.cancelGround));
+const clone=()=>JSON.parse(JSON.stringify(journal));
+const drift=clone();drift.state.aircraft.fuelKg+=2e-12;drift.state.distanceKm+=5e-13;
+writeFileSync(process.argv[2]+'.drift',JSON.stringify(drift));
+for(const [suffix,alter] of [
+ ['broken',j=>j.state.aircraft.fuelKg+=1e-7],
+ ['time',j=>j.state.currentTimeUtc+=0.25],
+ ['event',j=>j.entries[0].events[0].utcMs+=0.25],
+]){const altered=clone();alter(altered);writeFileSync(process.argv[2]+'.'+suffix,JSON.stringify(altered));}
+JS
+node scripts/review-cli.mjs "$solar_cli_test_dir/browser-review.json.drift" > "$solar_cli_test_dir/review-drift"
+for review_invalid in broken time event; do
+if node scripts/review-cli.mjs "$solar_cli_test_dir/browser-review.json.$review_invalid" > "$solar_cli_test_dir/stdout" 2> "$solar_cli_test_dir/stderr"; then
+  echo 'Modified browser journal unexpectedly accepted' >&2
+  exit 1
+fi
+test ! -s "$solar_cli_test_dir/stdout"
+done
+printf '%s\n' 'Browser review CLI: partial wait/stop/save/resume, two timezones and corrupted-state rejection verified.'
