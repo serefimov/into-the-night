@@ -176,3 +176,31 @@ const error=JSON.parse(readFileSync(process.argv[2],'utf8'));
 assert.equal(error.error,'validation_error');assert.match(error.message,/checksum/);
 JS
 printf '%s\n' 'Session CLI: four timezones, deterministic saves, flight pause/restore/resume, forecast privacy and damaged-save preservation verified.'
+
+for spike_tz in UTC Pacific/Auckland; do
+  TZ="$spike_tz" node scripts/spike-cli.mjs --plan examples/spike/plans/direct-90.json > "$solar_cli_test_dir/spike-current"
+  if test -f "$solar_cli_test_dir/spike-reference"; then
+    cmp "$solar_cli_test_dir/spike-reference" "$solar_cli_test_dir/spike-current"
+  else
+    cp "$solar_cli_test_dir/spike-current" "$solar_cli_test_dir/spike-reference"
+  fi
+done
+node --input-type=module - "$solar_cli_test_dir/spike-reference" <<'JS'
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const report=JSON.parse(readFileSync(process.argv[2],'utf8'));
+assert.equal(report.outcome,'completed');assert.equal(report.survivedDays,90);
+assert.ok(report.achievements.includes(90));assert.equal(report.savedResume,true);
+assert.equal(report.stages[0].outcome,'completed');
+JS
+if node scripts/spike-cli.mjs --plan > "$solar_cli_test_dir/stdout" 2> "$solar_cli_test_dir/stderr"; then
+  echo 'Invalid spike CLI arguments unexpectedly accepted' >&2
+  exit 1
+fi
+test ! -s "$solar_cli_test_dir/stdout"
+node --input-type=module - "$solar_cli_test_dir/stderr" <<'JS'
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+assert.match(JSON.parse(readFileSync(process.argv[2],'utf8')).error,/Use --research/);
+JS
+printf '%s\n' 'Spike CLI: deterministic 90-day replay in two timezones and argument validation verified.'

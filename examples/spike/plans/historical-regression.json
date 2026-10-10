@@ -1,0 +1,126 @@
+{
+  "planVersion": 1,
+  "input": {
+    "world": {
+      "scenarioId": "historical-osl-tos-lyr",
+      "scenarioVersion": 1,
+      "seed": "historical-explicit-1",
+      "airports": [
+        {
+          "id": "OSL",
+          "latitudeDeg": 60.202778,
+          "longitudeDeg": 11.083889,
+          "stockBounds": {
+            "fuelKg": [
+              6000,
+              6000
+            ],
+            "foodPersonHours": [
+              720,
+              720
+            ]
+          }
+        },
+        {
+          "id": "TOS",
+          "latitudeDeg": 69.681389,
+          "longitudeDeg": 18.917778,
+          "stockBounds": {
+            "fuelKg": [
+              8000,
+              8000
+            ],
+            "foodPersonHours": [
+              1440,
+              1440
+            ]
+          }
+        },
+        {
+          "id": "LYR",
+          "latitudeDeg": 78.246111,
+          "longitudeDeg": 15.465556,
+          "stockBounds": {
+            "fuelKg": [
+              4000,
+              4000
+            ],
+            "foodPersonHours": [
+              1080,
+              1080
+            ]
+          }
+        }
+      ]
+    },
+    "stocks": {
+      "OSL": {
+        "fuelKg": 6000,
+        "foodPersonHours": 720
+      },
+      "TOS": {
+        "fuelKg": 8000,
+        "foodPersonHours": 1440
+      },
+      "LYR": {
+        "fuelKg": 4000,
+        "foodPersonHours": 1080
+      }
+    },
+    "utc": "2026-11-20T03:00:00Z",
+    "airportId": "OSL",
+    "aircraft": {
+      "fuelKg": 8000,
+      "foodPersonHours": 180
+    },
+    "serviced": true
+  },
+  "batches": [
+    {
+      "actions": [
+        {
+          "kind": "prepare"
+        },
+        {
+          "kind": "fly",
+          "destinationId": "TOS"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "kind": "service"
+        },
+        {
+          "kind": "load",
+          "fuelKg": 0,
+          "foodPersonHours": 720
+        },
+        {
+          "kind": "prepare"
+        },
+        {
+          "kind": "fly",
+          "destinationId": "LYR"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "kind": "service"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "kind": "wait",
+          "seconds": 69822.84874414062
+        }
+      ],
+      "confirmRisk": true
+    }
+  ]
+}

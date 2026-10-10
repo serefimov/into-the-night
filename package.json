@@ -20,7 +20,9 @@
     "validate:route": "node scripts/validate-route.mjs",
     "simulation": "node scripts/simulation-cli.mjs",
     "validate:waiting": "node scripts/validate-waiting.mjs",
-    "validate:sessions": "node scripts/validate-sessions.mjs"
+    "validate:sessions": "node scripts/validate-sessions.mjs",
+    "spike": "node scripts/spike-cli.mjs",
+    "validate:spike": "node scripts/spike-cli.mjs --research --verify-report"
   },
   "devDependencies": {
     "typescript": "5.9.2",
