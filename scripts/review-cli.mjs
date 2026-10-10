@@ -12,6 +12,14 @@ try {
   if(game.active)game.advance(entry.stopUtcMs);
   if(entry.cancelGround)game.cancelGround();
  }
- if(canonicalJson(game.journal())!==canonicalJson(journal))throw Error('Replay differs from exported journal.');
+ if(canonicalJson(game.journal())!==canonicalJson(journal)) {
+  const differences=[];
+  function diff(a,b,path='journal') {
+   if(differences.length>=12)return;
+   if(a&&b&&typeof a==='object'&&typeof b==='object')for(const key of new Set([...Object.keys(a),...Object.keys(b)]))diff(a[key],b[key],path+'.'+key);
+   else if(a!==b)differences.push({path,replayed:a,exported:b});
+  }
+  diff(game.journal(),journal);throw Error('Replay differs from exported journal: '+JSON.stringify(differences));
+ }
  process.stdout.write(JSON.stringify({passed:true,state:game.current(),entries:journal.entries.length},null,2)+'\n');
 }catch(e){process.stderr.write(JSON.stringify({error:e.message})+'\n');process.exitCode=2;}
