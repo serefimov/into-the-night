@@ -1,6 +1,8 @@
 name: Checks
 on:
   push:
+    branches-ignore:
+      - pages-archive
   pull_request:
 permissions:
   contents: read
@@ -22,5 +24,9 @@ jobs:
       - run: npm run validate:spike
       - run: npm run build:web
       - run: npm run test:browser
+      - name: Проверить вложенный путь Pages
+        run: npm run test:browser
+        env:
+          SPIKE_TEST_BASE: /into-the-night/release/0.1.0/
       - run: npm run fixtures:solar
       - run: git diff --exit-code -- test/fixtures/solar-reference.json

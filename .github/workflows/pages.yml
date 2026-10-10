@@ -1,0 +1,109 @@
+name: Публикация dev и release
+on:
+  push:
+    branches-ignore:
+      - pages-archive
+    tags:
+      - 'v*'
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+  delete:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  archive:
+    # Only branches of this repository may write its site; fork PRs use Checks.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.event.action != 'closed' && github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Определить сборку
+        id: target
+        env:
+          EVENT: ${{ github.event_name }}
+          ACTION: ${{ github.event.action }}
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+          PR_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          if [ "$EVENT" = push ] && [ "$REF_TYPE" = branch ]; then
+            echo "branch=$REF_NAME" >> "$GITHUB_OUTPUT"
+          elif [ "$EVENT" = pull_request ] && [ "$ACTION" != closed ]; then
+            echo "branch=$PR_BRANCH" >> "$GITHUB_OUTPUT"
+          elif [ "$EVENT" = push ] && [ "$REF_TYPE" = tag ]; then
+            echo "tag=$REF_NAME" >> "$GITHUB_OUTPUT"
+          fi
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Проверить игру перед публикацией
+        if: steps.target.outputs.branch != '' || steps.target.outputs.tag != ''
+        run: |
+          npm run check
+          npm run validate:solar
+          npm run validate:route
+          npm run validate:waiting
+          npm run validate:sessions
+          npm run validate:spike
+          npm run build:web
+          npm run test:browser
+        env:
+          SPIKE_TEST_BASE: /into-the-night/dev/check/
+      - name: Подготовить проверенную сборку или очистку
+        env:
+          PAGES_BRANCH: ${{ steps.target.outputs.branch }}
+          PAGES_RELEASE_TAG: ${{ steps.target.outputs.tag }}
+          PAGES_MAIN_REF: origin/main
+        run: node scripts/pages.mjs prepare
+      - name: Обновить архив и убрать закрытые ветки
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: node scripts/store-pages.mjs
+  deploy:
+    needs: archive
+    runs-on: ubuntu-latest
+    # Serialize deployment only. Every tag/build has already been archived.
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: pages-archive
+          path: archive
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Собрать сайт из текущего архива
+        run: node source/scripts/pages.mjs render archive .build/pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .build/pages
+      - name: Опубликовать
+        id: deployment
+        uses: actions/deploy-pages@v4
