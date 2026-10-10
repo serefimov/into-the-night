@@ -4,6 +4,8 @@ import {mkdtempSync,writeFileSync,rmSync,readFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {resolve} from 'node:path';
 const directory=mkdtempSync(`${tmpdir()}/into-the-night-browser-`);
+const base=process.env.SPIKE_TEST_BASE??'/';
+const gameUrl='http://127.0.0.1:5983'+base;
 const chromePath=process.env.SPIKE_CHROME_PATH??'google-chrome';
 let browser,server,socket,id=0,sessionId,browserLog='';const pending=new Map(),errors=[];
 function send(method,params={},session=sessionId){
@@ -19,7 +21,11 @@ async function evaluate(expression){
  return r.result.value;
 }
 async function until(expression){
- for(let i=0;i<100;i++){if(await evaluate(expression))return;await new Promise(r=>setTimeout(r,50));}
+ for(let i=0;i<200;i++){
+  try{if(await evaluate(expression))return;}
+  catch(e){if(!/Inspected target navigated or closed|Execution context was destroyed|Cannot find context with specified id/.test(e.message))throw e;}
+  await new Promise(r=>setTimeout(r,50));
+ }
  throw Error(`Browser did not reach: ${expression}`);
 }
 async function click(selector,mobile){
@@ -35,7 +41,7 @@ async function exportFile(selector,mobile){
 async function scenarioRun(mobile){
  await send('Emulation.setDeviceMetricsOverride',{width:mobile?390:1280,height:mobile?844:900,deviceScaleFactor:1,mobile});
  await send('Emulation.setTouchEmulationEnabled',{enabled:mobile});
- await send('Page.navigate',{url:'http://127.0.0.1:5983/'});
+ await send('Page.navigate',{url:gameUrl});
  await until(`document.getElementById('clock')?.textContent.includes('2026-11-20') && document.getElementById('message')?.textContent.includes('Выберите')`);
  assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true,'Horizontal overflow');
  assert.match(await evaluate(`document.getElementById('destination-card').textContent`),/примерно/);
@@ -69,7 +75,7 @@ async function scenarioRun(mobile){
  const cli=spawnSync(process.execPath,['scripts/review-cli.mjs',path],{encoding:'utf8'});
  assert.equal(cli.status,0,cli.stderr);assert.equal(JSON.parse(cli.stdout).passed,true);
  // Explicit risk confirmation must leave UTC frozen until the affirmative click.
- await send('Page.navigate',{url:'http://127.0.0.1:5983/'});
+ await send('Page.navigate',{url:gameUrl});
  await until(`document.getElementById('clock')?.textContent.includes('2026-11-20') && document.getElementById('message')?.textContent.includes('Выберите')`);
  await value('#wait-days',1);await click('#add-wait',mobile);await click('#execute',mobile);
  assert.equal(await evaluate(`document.getElementById('risk').open`),true);
@@ -84,14 +90,14 @@ async function scenarioRun(mobile){
    'exported review matches CLI','explicit solar-risk confirmation and death summary','no horizontal overflow']};
 }
 try {
- server=spawn(process.execPath,['scripts/dev-server.mjs','--built','--port','5983'],{stdio:['ignore','ignore','pipe']});
- let ready=false;for(let i=0;i<100;i++){try{ready=(await fetch('http://127.0.0.1:5983/')).ok;if(ready)break;}catch{}await new Promise(r=>setTimeout(r,50));}
+ server=spawn(process.execPath,['scripts/dev-server.mjs','--built','--port','5983','--base',base],{stdio:['ignore','ignore','pipe']});
+ let ready=false;for(let i=0;i<100;i++){try{ready=(await fetch(gameUrl)).ok;if(ready)break;}catch{}await new Promise(r=>setTimeout(r,50));}
  assert.ok(ready,'Local build server did not start');
  browser=spawn(chromePath,['--headless','--no-sandbox','--disable-gpu','--disable-dev-shm-usage',`--user-data-dir=${directory}/profile`,'--remote-debugging-port=0','--remote-debugging-address=127.0.0.1'],{stdio:['ignore','ignore','pipe']});
  browser.on('error',e=>{browserLog+=e.message;});
  browser.stderr.on('data',b=>{browserLog=(browserLog+b.toString()).slice(-6000);});
  let endpoint=null;
- for(let i=0;i<200;i++){
+ for(let i=0;i<600;i++){
   try{const [port,path]=readFileSync(`${directory}/profile/DevToolsActivePort`,'utf8').trim().split('\n');endpoint=`ws://127.0.0.1:${port}${path}`;break;}catch{}
   if(browser.exitCode!==null)throw Error(`Chrome exited: ${browser.exitCode}\n${browserLog}`);
   await new Promise(r=>setTimeout(r,50));
@@ -109,6 +115,6 @@ try {
  await send('Page.enable');await send('Runtime.enable');
  const version=await send('Browser.getVersion',{},null);
  const results=[await scenarioRun(false),await scenarioRun(true)];assert.deepEqual(errors,[]);
- process.stdout.write(JSON.stringify({passed:true,browser:version.product,results},null,2)+'\n');
+ process.stdout.write(JSON.stringify({passed:true,browser:version.product,base,results},null,2)+'\n');
 }catch(e){process.stderr.write(e.stack+'\n'+browserLog+'\n');process.exitCode=1;}
 finally{socket?.close();browser?.kill();server?.kill();for(const p of pending.values())clearTimeout(p.timer);rmSync(directory,{recursive:true,force:true});}

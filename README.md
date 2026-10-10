@@ -31,6 +31,14 @@ npm run dev
 
 Сборка: `npm run build:web`, запуск сборки: `npm run serve:web`. [Управление, ручная проверка, сохранения и ограничения](docs/PLAYABLE_SPIKE.md).
 
+## Играть на GitHub Pages
+
+[Открыть сайт](https://serefimov.github.io/into-the-night/) · [Dev](https://serefimov.github.io/into-the-night/dev/) · [Релизы](https://serefimov.github.io/into-the-night/release/).
+
+В dev доступна только последняя успешная сборка main и каждой ветки с открытым PR. При закрытии PR её сборка удаляется; истории dev-сборок на сайте нет. Выпуски публикуются тегами `vX.Y.Z` в `release/X.Y.Z/` и сохраняются. Версия продукта — [VERSION](VERSION), изменения — [CHANGELOG.md](CHANGELOG.md).
+
+После однократного включения Pages → GitHub Actions публикация работает автоматически. [Настройка, выпуск по тегам и проверки](docs/PAGES.md). До успешного первого деплоя ссылки могут быть недоступны.
+
 ## Запуск вычислительного ядра
 
 Нужны Node.js 24 (проверено на 24.19.0), npm 11 и POSIX shell для процессных проверок CLI. Версия Node указана в `.nvmrc`, инструменты фиксированы lockfile. Установка зависимостей требует доступа к npm; дальнейшие расчёты и проверки работают офлайн.
