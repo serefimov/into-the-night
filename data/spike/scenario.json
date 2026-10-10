@@ -1,0 +1,54 @@
+{
+  "scenarioId": "norway-autumn-spike",
+  "scenarioVersion": 1,
+  "experimental": true,
+  "catalogId": "norway-control",
+  "catalogVersion": 1,
+  "generatorVersion": 1,
+  "seed": "norway-autumn-1",
+  "utc": "2026-11-20T00:00:00Z",
+  "airportId": "OSL",
+  "aircraft": {
+    "fuelKg": 10000,
+    "foodPersonHours": 1080
+  },
+  "serviced": true,
+  "resourceBounds": {
+    "OSL": {
+      "fuelKg": [
+        6000,
+        8000
+      ],
+      "foodPersonHours": [
+        2880,
+        3600
+      ]
+    },
+    "TOS": {
+      "fuelKg": [
+        8000,
+        10000
+      ],
+      "foodPersonHours": [
+        14400,
+        18000
+      ]
+    },
+    "LYR": {
+      "fuelKg": [
+        12000,
+        14000
+      ],
+      "foodPersonHours": [
+        72000,
+        79200
+      ]
+    }
+  },
+  "modelVersions": {
+    "simulationVersion": "resources-resume-3",
+    "configVersion": 3,
+    "solarModelVersion": "meeus-noaa-1",
+    "routeModelVersion": "great-circle-solar-1"
+  }
+}

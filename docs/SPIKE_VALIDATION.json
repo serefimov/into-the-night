@@ -1,0 +1,962 @@
+{
+  "reportVersion": 1,
+  "scenario": {
+    "scenarioId": "norway-autumn-spike",
+    "scenarioVersion": 1,
+    "experimental": true,
+    "catalogId": "norway-control",
+    "catalogVersion": 1,
+    "generatorVersion": 1,
+    "seed": "norway-autumn-1",
+    "utc": "2026-11-20T00:00:00Z",
+    "airportId": "OSL",
+    "aircraft": {
+      "fuelKg": 10000,
+      "foodPersonHours": 1080
+    },
+    "serviced": true,
+    "resourceBounds": {
+      "OSL": {
+        "fuelKg": [
+          6000,
+          8000
+        ],
+        "foodPersonHours": [
+          2880,
+          3600
+        ]
+      },
+      "TOS": {
+        "fuelKg": [
+          8000,
+          10000
+        ],
+        "foodPersonHours": [
+          14400,
+          18000
+        ]
+      },
+      "LYR": {
+        "fuelKg": [
+          12000,
+          14000
+        ],
+        "foodPersonHours": [
+          72000,
+          79200
+        ]
+      }
+    },
+    "modelVersions": {
+      "simulationVersion": "resources-resume-3",
+      "configVersion": 3,
+      "solarModelVersion": "meeus-noaa-1",
+      "routeModelVersion": "great-circle-solar-1"
+    }
+  },
+  "simulation": {
+    "version": 3,
+    "simulationVersion": "resources-resume-3",
+    "crew": 30,
+    "fuelCapacityKg": 18000,
+    "foodCapacityPersonHours": 2160,
+    "fuelKgPerKm": 3,
+    "fuelLoadingKgPerSecond": 3.3333333333333335,
+    "foodLoadingPersonHoursPerSecond": 1.2,
+    "foodConsumptionPersonHoursPerSecond": 0.008333333333333333,
+    "achievementsDays": [
+      30,
+      90,
+      180,
+      365
+    ]
+  },
+  "solarModelVersion": "meeus-noaa-1",
+  "routeModelVersion": "great-circle-solar-1",
+  "catalog": "data/spike/airports.json",
+  "generatedTrueStocks": {
+    "LYR": {
+      "fuelKg": 13253,
+      "foodPersonHours": 72509
+    },
+    "OSL": {
+      "fuelKg": 7611,
+      "foodPersonHours": 3214
+    },
+    "TOS": {
+      "fuelKg": 8609,
+      "foodPersonHours": 17104
+    }
+  },
+  "experimental": true,
+  "start": {
+    "q": -0.74440480430977,
+    "sunrise": {
+      "status": "found",
+      "startUtcMs": 1795132800000,
+      "requestedEndUtcMs": 1827100800000,
+      "searchedUntilUtcMs": 1795160161065.6738,
+      "safeUntilUtcMs": 1795160161051.941,
+      "horizonEndUtcMs": 1827100800000,
+      "rangeLimited": false,
+      "eventUtcMs": 1795160161065.6738,
+      "bracketUtcMs": [
+        1795160161051.941,
+        1795160161065.6738
+      ],
+      "timeErrorBoundSeconds": 0.01373291015625,
+      "evaluations": 48,
+      "segments": 1,
+      "reason": null
+    }
+  },
+  "results": {
+    "direct-30": {
+      "outcome": "completed",
+      "endUtcMs": 1797724800000,
+      "endUtc": "2026-12-20T00:00:00.000Z",
+      "survivedDays": 30,
+      "death": null,
+      "achievements": [
+        30
+      ],
+      "completedFlights": 1,
+      "distanceKm": 2013.3459492433649,
+      "savedResume": true,
+      "visibleRanges": {
+        "unvisitedWarehouseFloorsReplayed": true,
+        "forecastIndependentOfHiddenStocks": true,
+        "outcome": "completed",
+        "survivedDays": 30,
+        "policy": "Opening actions are fixed before discovery; later loading uses only the visited warehouse. Minimum-stock replay tests these decisions, not all possible seeds."
+      },
+      "stagesReport": "docs/spike/direct-30.json"
+    },
+    "via-tos-30": {
+      "outcome": "completed",
+      "endUtcMs": 1797724800000,
+      "endUtc": "2026-12-20T00:00:00.000Z",
+      "survivedDays": 30,
+      "death": null,
+      "achievements": [
+        30
+      ],
+      "completedFlights": 2,
+      "distanceKm": 2073.0883417104546,
+      "savedResume": true,
+      "visibleRanges": {
+        "unvisitedWarehouseFloorsReplayed": true,
+        "forecastIndependentOfHiddenStocks": true,
+        "outcome": "completed",
+        "survivedDays": 30,
+        "policy": "Opening actions are fixed before discovery; later loading uses only the visited warehouse. Minimum-stock replay tests these decisions, not all possible seeds."
+      },
+      "stagesReport": "docs/spike/via-tos-30.json"
+    },
+    "direct-90": {
+      "outcome": "completed",
+      "endUtcMs": 1802908800000,
+      "endUtc": "2027-02-18T00:00:00.000Z",
+      "survivedDays": 90,
+      "death": null,
+      "achievements": [
+        30,
+        90
+      ],
+      "completedFlights": 1,
+      "distanceKm": 2013.3459492433649,
+      "savedResume": true,
+      "visibleRanges": {
+        "unvisitedWarehouseFloorsReplayed": true,
+        "forecastIndependentOfHiddenStocks": true,
+        "outcome": "completed",
+        "survivedDays": 90,
+        "policy": "Opening actions are fixed before discovery; later loading uses only the visited warehouse. Minimum-stock replay tests these decisions, not all possible seeds."
+      },
+      "stagesReport": "docs/spike/direct-90.json"
+    },
+    "seasonal-departure": {
+      "outcome": "completed",
+      "endUtcMs": 1802913370372.0403,
+      "endUtc": "2027-02-18T01:16:10.372Z",
+      "survivedDays": 90.05289782454031,
+      "death": null,
+      "achievements": [
+        30,
+        90
+      ],
+      "completedFlights": 2,
+      "distanceKm": 2970.9674272574753,
+      "savedResume": true,
+      "visibleRanges": {
+        "unvisitedWarehouseFloorsReplayed": true,
+        "forecastIndependentOfHiddenStocks": true,
+        "outcome": "completed",
+        "survivedDays": 90.05289782454031,
+        "policy": "Opening actions are fixed before discovery; later loading uses only the visited warehouse. Minimum-stock replay tests these decisions, not all possible seeds."
+      },
+      "stagesReport": "docs/spike/seasonal-departure.json"
+    },
+    "revisit": {
+      "outcome": "completed",
+      "endUtcMs": 1795162038729.4812,
+      "endUtc": "2026-11-20T08:07:18.729Z",
+      "survivedDays": 0.3384112208472358,
+      "death": null,
+      "achievements": [],
+      "completedFlights": 3,
+      "distanceKm": 3928.5889052715856,
+      "savedResume": true,
+      "visibleRanges": {
+        "unvisitedWarehouseFloorsReplayed": true,
+        "forecastIndependentOfHiddenStocks": true,
+        "outcome": "completed",
+        "survivedDays": 0.3384112208472358,
+        "policy": "Opening actions are fixed before discovery; later loading uses only the visited warehouse. Minimum-stock replay tests these decisions, not all possible seeds."
+      },
+      "stagesReport": "docs/spike/revisit.json"
+    },
+    "sunrise-threshold": {
+      "outcome": "waiting_stopped",
+      "endUtcMs": 1802903914563.4275,
+      "endUtc": "2027-02-17T22:38:34.563Z",
+      "survivedDays": 89.94345559522559,
+      "death": null,
+      "achievements": [
+        30
+      ],
+      "completedFlights": 1,
+      "distanceKm": 2013.3459492433649,
+      "savedResume": true,
+      "stagesReport": "docs/spike/sunrise-threshold.json"
+    },
+    "food-scale-10": {
+      "outcome": "waiting_stopped",
+      "endUtcMs": 1795868100000,
+      "endUtc": "2026-11-28T12:15:00.000Z",
+      "survivedDays": 8.510416666666666,
+      "death": null,
+      "achievements": [],
+      "completedFlights": 1,
+      "distanceKm": 2013.3459492433649,
+      "savedResume": true,
+      "stagesReport": "docs/spike/food-scale-10.json"
+    },
+    "food-scale-40": {
+      "outcome": "waiting_stopped",
+      "endUtcMs": 1798460100000,
+      "endUtc": "2026-12-28T12:15:00.000Z",
+      "survivedDays": 38.510416666666664,
+      "death": null,
+      "achievements": [
+        30
+      ],
+      "completedFlights": 1,
+      "distanceKm": 2013.3459492433649,
+      "savedResume": true,
+      "stagesReport": "docs/spike/food-scale-40.json"
+    },
+    "food-scale-100": {
+      "outcome": "waiting_stopped",
+      "endUtcMs": 1802903914563.4275,
+      "endUtc": "2027-02-17T22:38:34.563Z",
+      "survivedDays": 89.94345559522559,
+      "death": null,
+      "achievements": [
+        30
+      ],
+      "completedFlights": 1,
+      "distanceKm": 2013.3459492433649,
+      "savedResume": true,
+      "stagesReport": "docs/spike/food-scale-100.json"
+    },
+    "seasonal-limit": {
+      "outcome": "death",
+      "endUtcMs": 1802934842724.6404,
+      "endUtc": "2027-02-18T07:14:02.724Z",
+      "survivedDays": 90.30142042407849,
+      "death": {
+        "reason": "sun",
+        "utcMs": 1802934842724.6404
+      },
+      "achievements": [
+        30,
+        90
+      ],
+      "completedFlights": 2,
+      "distanceKm": 2970.9674272574753,
+      "savedResume": true,
+      "stagesReport": "docs/spike/seasonal-limit.json"
+    },
+    "stay-to-180": {
+      "outcome": "death",
+      "endUtcMs": 1802947114577.1604,
+      "endUtc": "2027-02-18T10:38:34.577Z",
+      "survivedDays": 90.4434557541713,
+      "death": {
+        "reason": "sun",
+        "utcMs": 1802947114577.1604
+      },
+      "achievements": [
+        30,
+        90
+      ],
+      "completedFlights": 1,
+      "distanceKm": 2013.3459492433649,
+      "savedResume": true,
+      "stagesReport": "docs/spike/stay-to-180.json"
+    },
+    "historical-regression": {
+      "outcome": "completed",
+      "endUtcMs": 1795230000000,
+      "endUtc": "2026-11-21T03:00:00.000Z",
+      "survivedDays": 1,
+      "death": null,
+      "achievements": [],
+      "completedFlights": 2,
+      "distanceKm": 2072.382935409109,
+      "savedResume": true,
+      "stagesReport": "docs/spike/historical-regression.json"
+    },
+    "best-180-true-stocks": {
+      "outcome": "death",
+      "endUtcMs": 1802947114584.0496,
+      "endUtc": "2027-02-18T10:38:34.584Z",
+      "survivedDays": 90.44345583390695,
+      "death": {
+        "reason": "sun",
+        "utcMs": 1802947114584.0496
+      },
+      "achievements": [
+        30,
+        90
+      ],
+      "completedFlights": 2,
+      "distanceKm": 2073.0883417104546,
+      "savedResume": true,
+      "stagesReport": "docs/spike/best-180-true-stocks.json"
+    },
+    "best-180-visible-range-floors": {
+      "outcome": "death",
+      "endUtcMs": 1802947114584.0496,
+      "endUtc": "2027-02-18T10:38:34.584Z",
+      "survivedDays": 90.44345583390695,
+      "death": {
+        "reason": "sun",
+        "utcMs": 1802947114584.0496
+      },
+      "achievements": [
+        30,
+        90
+      ],
+      "completedFlights": 2,
+      "distanceKm": 2073.0883417104546,
+      "savedResume": true,
+      "stagesReport": "docs/spike/best-180-visible-range-floors.json"
+    }
+  },
+  "foodScales": [
+    {
+      "warehouseCrewDays": 10,
+      "aircraftAndFuelUnchanged": true,
+      "warningUtc": 1795868100000,
+      "warningReasons": [
+        "food_threshold"
+      ],
+      "thirtyDayOutcome": "death",
+      "thirtyDaySurvivedDays": 11.510416666666666
+    },
+    {
+      "warehouseCrewDays": 40,
+      "aircraftAndFuelUnchanged": true,
+      "warningUtc": 1798460100000,
+      "warningReasons": [
+        "food_threshold"
+      ],
+      "thirtyDayOutcome": "completed",
+      "thirtyDaySurvivedDays": 30
+    },
+    {
+      "warehouseCrewDays": 100,
+      "aircraftAndFuelUnchanged": true,
+      "warningUtc": 1802903914563.4275,
+      "warningReasons": [
+        "sunrise_warning"
+      ],
+      "thirtyDayOutcome": "completed",
+      "thirtyDaySurvivedDays": 30
+    }
+  ],
+  "searches": [
+    {
+      "mode": "true-stocks",
+      "horizonDays": 30,
+      "found": true,
+      "candidates": 1,
+      "maxCandidates": 130,
+      "outcomes": {
+        "completed": 1
+      },
+      "best": {
+        "survivedDays": 30,
+        "outcome": "completed",
+        "death": null,
+        "batches": [
+          {
+            "actions": [
+              {
+                "kind": "prepare"
+              },
+              {
+                "kind": "fly",
+                "destinationId": "LYR"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "service"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "wait",
+                "seconds": 2579872.887744385
+              }
+            ],
+            "confirmRisk": true
+          }
+        ]
+      },
+      "witness": {
+        "batches": [
+          {
+            "actions": [
+              {
+                "kind": "prepare"
+              },
+              {
+                "kind": "fly",
+                "destinationId": "LYR"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "service"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "wait",
+                "seconds": 2579872.887744385
+              }
+            ],
+            "confirmRisk": true
+          }
+        ],
+        "survivedDays": 30
+      },
+      "elapsedMs": 6.534825000000069,
+      "bounds": {
+        "catalogSize": 3,
+        "maxFlights": 3,
+        "openingRoutes": [
+          "OSL-LYR",
+          "OSL-TOS-LYR"
+        ],
+        "departureDayOffsets": [
+          30,
+          60,
+          75,
+          85,
+          89,
+          90,
+          120,
+          150
+        ],
+        "departureUtcHours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "destinationIds": [
+          "TOS",
+          "OSL"
+        ],
+        "loading": {
+          "fuelKg": 6000,
+          "foodPersonHours": 600
+        },
+        "method": "Enumerate standing witnesses, then one timed evacuation and standing to target; no repeated hops, hemisphere crossings or arbitrary departure times."
+      }
+    },
+    {
+      "mode": "true-stocks",
+      "horizonDays": 90,
+      "found": true,
+      "candidates": 1,
+      "maxCandidates": 130,
+      "outcomes": {
+        "completed": 1
+      },
+      "best": {
+        "survivedDays": 90,
+        "outcome": "completed",
+        "death": null,
+        "batches": [
+          {
+            "actions": [
+              {
+                "kind": "prepare"
+              },
+              {
+                "kind": "fly",
+                "destinationId": "LYR"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "service"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "wait",
+                "seconds": 7763872.887744385
+              }
+            ],
+            "confirmRisk": true
+          }
+        ]
+      },
+      "witness": {
+        "batches": [
+          {
+            "actions": [
+              {
+                "kind": "prepare"
+              },
+              {
+                "kind": "fly",
+                "destinationId": "LYR"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "service"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "wait",
+                "seconds": 7763872.887744385
+              }
+            ],
+            "confirmRisk": true
+          }
+        ],
+        "survivedDays": 90
+      },
+      "elapsedMs": 11.387831000000006,
+      "bounds": {
+        "catalogSize": 3,
+        "maxFlights": 3,
+        "openingRoutes": [
+          "OSL-LYR",
+          "OSL-TOS-LYR"
+        ],
+        "departureDayOffsets": [
+          30,
+          60,
+          75,
+          85,
+          89,
+          90,
+          120,
+          150
+        ],
+        "departureUtcHours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "destinationIds": [
+          "TOS",
+          "OSL"
+        ],
+        "loading": {
+          "fuelKg": 6000,
+          "foodPersonHours": 600
+        },
+        "method": "Enumerate standing witnesses, then one timed evacuation and standing to target; no repeated hops, hemisphere crossings or arbitrary departure times."
+      }
+    },
+    {
+      "mode": "true-stocks",
+      "horizonDays": 180,
+      "found": false,
+      "candidates": 130,
+      "maxCandidates": 130,
+      "outcomes": {
+        "death": 71,
+        "risk_confirmation_required": 15,
+        "validation_error": 44
+      },
+      "best": {
+        "survivedDays": 90.44345583390695,
+        "outcome": "death",
+        "death": {
+          "reason": "sun",
+          "utcMs": 1802947114584.0496
+        },
+        "plan": "examples/spike/plans/best-180-true-stocks.json"
+      },
+      "witness": null,
+      "elapsedMs": 2183.9279269999997,
+      "bounds": {
+        "catalogSize": 3,
+        "maxFlights": 3,
+        "openingRoutes": [
+          "OSL-LYR",
+          "OSL-TOS-LYR"
+        ],
+        "departureDayOffsets": [
+          30,
+          60,
+          75,
+          85,
+          89,
+          90,
+          120,
+          150
+        ],
+        "departureUtcHours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "destinationIds": [
+          "TOS",
+          "OSL"
+        ],
+        "loading": {
+          "fuelKg": 6000,
+          "foodPersonHours": 600
+        },
+        "method": "Enumerate standing witnesses, then one timed evacuation and standing to target; no repeated hops, hemisphere crossings or arbitrary departure times."
+      }
+    },
+    {
+      "mode": "visible-range-floors",
+      "horizonDays": 30,
+      "found": true,
+      "candidates": 1,
+      "maxCandidates": 130,
+      "outcomes": {
+        "completed": 1
+      },
+      "best": {
+        "survivedDays": 30,
+        "outcome": "completed",
+        "death": null,
+        "batches": [
+          {
+            "actions": [
+              {
+                "kind": "prepare"
+              },
+              {
+                "kind": "fly",
+                "destinationId": "LYR"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "service"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "wait",
+                "seconds": 2579872.887744385
+              }
+            ],
+            "confirmRisk": true
+          }
+        ]
+      },
+      "witness": {
+        "batches": [
+          {
+            "actions": [
+              {
+                "kind": "prepare"
+              },
+              {
+                "kind": "fly",
+                "destinationId": "LYR"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "service"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "wait",
+                "seconds": 2579872.887744385
+              }
+            ],
+            "confirmRisk": true
+          }
+        ],
+        "survivedDays": 30
+      },
+      "elapsedMs": 3.912620000000061,
+      "bounds": {
+        "catalogSize": 3,
+        "maxFlights": 3,
+        "openingRoutes": [
+          "OSL-LYR",
+          "OSL-TOS-LYR"
+        ],
+        "departureDayOffsets": [
+          30,
+          60,
+          75,
+          85,
+          89,
+          90,
+          120,
+          150
+        ],
+        "departureUtcHours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "destinationIds": [
+          "TOS",
+          "OSL"
+        ],
+        "loading": {
+          "fuelKg": 6000,
+          "foodPersonHours": 600
+        },
+        "method": "Enumerate standing witnesses, then one timed evacuation and standing to target; no repeated hops, hemisphere crossings or arbitrary departure times."
+      }
+    },
+    {
+      "mode": "visible-range-floors",
+      "horizonDays": 90,
+      "found": true,
+      "candidates": 1,
+      "maxCandidates": 130,
+      "outcomes": {
+        "completed": 1
+      },
+      "best": {
+        "survivedDays": 90,
+        "outcome": "completed",
+        "death": null,
+        "batches": [
+          {
+            "actions": [
+              {
+                "kind": "prepare"
+              },
+              {
+                "kind": "fly",
+                "destinationId": "LYR"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "service"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "wait",
+                "seconds": 7763872.887744385
+              }
+            ],
+            "confirmRisk": true
+          }
+        ]
+      },
+      "witness": {
+        "batches": [
+          {
+            "actions": [
+              {
+                "kind": "prepare"
+              },
+              {
+                "kind": "fly",
+                "destinationId": "LYR"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "service"
+              }
+            ]
+          },
+          {
+            "actions": [
+              {
+                "kind": "wait",
+                "seconds": 7763872.887744385
+              }
+            ],
+            "confirmRisk": true
+          }
+        ],
+        "survivedDays": 90
+      },
+      "elapsedMs": 11.32040599999982,
+      "bounds": {
+        "catalogSize": 3,
+        "maxFlights": 3,
+        "openingRoutes": [
+          "OSL-LYR",
+          "OSL-TOS-LYR"
+        ],
+        "departureDayOffsets": [
+          30,
+          60,
+          75,
+          85,
+          89,
+          90,
+          120,
+          150
+        ],
+        "departureUtcHours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "destinationIds": [
+          "TOS",
+          "OSL"
+        ],
+        "loading": {
+          "fuelKg": 6000,
+          "foodPersonHours": 600
+        },
+        "method": "Enumerate standing witnesses, then one timed evacuation and standing to target; no repeated hops, hemisphere crossings or arbitrary departure times."
+      }
+    },
+    {
+      "mode": "visible-range-floors",
+      "horizonDays": 180,
+      "found": false,
+      "candidates": 130,
+      "maxCandidates": 130,
+      "outcomes": {
+        "death": 71,
+        "risk_confirmation_required": 15,
+        "validation_error": 44
+      },
+      "best": {
+        "survivedDays": 90.44345583390695,
+        "outcome": "death",
+        "death": {
+          "reason": "sun",
+          "utcMs": 1802947114584.0496
+        },
+        "plan": "examples/spike/plans/best-180-visible-range-floors.json"
+      },
+      "witness": null,
+      "elapsedMs": 2043.7673130000003,
+      "bounds": {
+        "catalogSize": 3,
+        "maxFlights": 3,
+        "openingRoutes": [
+          "OSL-LYR",
+          "OSL-TOS-LYR"
+        ],
+        "departureDayOffsets": [
+          30,
+          60,
+          75,
+          85,
+          89,
+          90,
+          120,
+          150
+        ],
+        "departureUtcHours": [
+          0,
+          6,
+          12,
+          18
+        ],
+        "destinationIds": [
+          "TOS",
+          "OSL"
+        ],
+        "loading": {
+          "fuelKg": 6000,
+          "foodPersonHours": 600
+        },
+        "method": "Enumerate standing witnesses, then one timed evacuation and standing to target; no repeated hops, hemisphere crossings or arbitrary departure times."
+      }
+    }
+  ],
+  "accuracy": {
+    "defaultEventToleranceSeconds": 0.5,
+    "refinedEventToleranceSeconds": 0.25,
+    "refinedMaxIntervalSeconds": 300,
+    "warningDriftSeconds": 0.00457763671875,
+    "deathDriftSeconds": 0,
+    "solarExtrema": "Sampled extrema every <=900 seconds per recorded phase, plus a conservative upper bound using the same curvature and evaluation-error bounds as the kernel. Safety comes from the unchanged continuous kernel.",
+    "physicalEphemerisError": "See SOLAR_MODEL.md: independent direction max 0.00839 degrees; polar timing example up to 455.8 seconds. Numeric brackets do not bound physical error."
+  },
+  "elapsedMs": 5355.613734,
+  "limitations": [
+    "Three-airport experimental world, not the final catalog or balance. Thirty and ninety days are certified only for these inputs and recorded actions.",
+    "No 180-day witness in this bounded search; this is not proof of impossibility.",
+    "Seasonal evacuation survives landing and service; TOS has sunlight the next morning. Twelve-hour warning does not guarantee months of escape.",
+    "Minimum-range runs assess these fixed decisions. Hidden true stocks are printed only in research reports, not passed to destination forecasts.",
+    "Generated food stores of 100..110 crew-days intentionally enable a winter study. They are fictional, finite and not airport inventory data."
+  ],
+  "passed": true
+}

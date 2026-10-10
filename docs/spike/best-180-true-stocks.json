@@ -1,0 +1,361 @@
+{
+  "scenarioId": "norway-autumn-spike",
+  "scenarioVersion": 1,
+  "simulationVersion": "resources-resume-3",
+  "seed": "norway-autumn-1",
+  "outcome": "death",
+  "endUtcMs": 1802947114584.0496,
+  "endUtc": "2027-02-18T10:38:34.584Z",
+  "survivedDays": 90.44345583390695,
+  "death": {
+    "reason": "sun",
+    "utcMs": 1802947114584.0496
+  },
+  "achievements": [
+    30,
+    90
+  ],
+  "completedFlights": 2,
+  "distanceKm": 2073.0883417104546,
+  "savedResume": true,
+  "stages": [
+    {
+      "startUtcMs": 1795132800000,
+      "endUtcMs": 1795140224330.2463,
+      "startUtc": "2026-11-20T00:00:00.000Z",
+      "endUtc": "2026-11-20T02:03:44.330Z",
+      "actions": [
+        {
+          "kind": "prepare"
+        },
+        {
+          "kind": "fly",
+          "destinationId": "TOS"
+        }
+      ],
+      "outcome": "completed",
+      "airportId": "TOS",
+      "aircraft": {
+        "fuelKg": 6653.599408910966,
+        "foodPersonHours": 1025.6305812805176
+      },
+      "warehouses": {
+        "LYR": {
+          "fuelKg": 13253,
+          "foodPersonHours": 72509
+        },
+        "OSL": {
+          "fuelKg": 7611,
+          "foodPersonHours": 3206.5
+        },
+        "TOS": {
+          "fuelKg": 8609,
+          "foodPersonHours": 17104
+        }
+      },
+      "discovered": [
+        "OSL",
+        "TOS"
+      ],
+      "events": [
+        {
+          "kind": "departure_preparation_started",
+          "utcMs": 1795132800000,
+          "detail": {}
+        },
+        {
+          "kind": "departure_preparation_completed",
+          "utcMs": 1795133700000,
+          "detail": {}
+        },
+        {
+          "kind": "takeoff",
+          "utcMs": 1795133700000,
+          "detail": {
+            "from": "OSL",
+            "to": "TOS"
+          }
+        },
+        {
+          "kind": "landing",
+          "utcMs": 1795140224330.2463,
+          "detail": {
+            "airportId": "TOS"
+          }
+        },
+        {
+          "kind": "airport_discovered",
+          "utcMs": 1795140224330.2463,
+          "detail": {
+            "airportId": "TOS"
+          }
+        }
+      ],
+      "solarSamples": {
+        "intervalSecondsAtMost": 900,
+        "count": 13,
+        "qMin": -0.74440480430977,
+        "qMax": -0.510090624331468,
+        "sampledMaximumAltitudeDeg": -30.669866371587926,
+        "conservativeQUpperBound": -0.509280614331468,
+        "conservativeAltitudeUpperBoundDeg": -30.615923697574434
+      },
+      "waiting": null
+    },
+    {
+      "startUtcMs": 1795140224330.2463,
+      "endUtcMs": 1795148480138.8591,
+      "startUtc": "2026-11-20T02:03:44.330Z",
+      "endUtc": "2026-11-20T04:21:20.138Z",
+      "actions": [
+        {
+          "kind": "service"
+        },
+        {
+          "kind": "load",
+          "fuelKg": 0,
+          "foodPersonHours": 720
+        },
+        {
+          "kind": "prepare"
+        },
+        {
+          "kind": "fly",
+          "destinationId": "LYR"
+        }
+      ],
+      "outcome": "completed",
+      "airportId": "LYR",
+      "aircraft": {
+        "fuelKg": 3780.7349748686356,
+        "foodPersonHours": 1696.8321761739096
+      },
+      "warehouses": {
+        "LYR": {
+          "fuelKg": 13253,
+          "foodPersonHours": 72509
+        },
+        "OSL": {
+          "fuelKg": 7611,
+          "foodPersonHours": 3206.5
+        },
+        "TOS": {
+          "fuelKg": 8609,
+          "foodPersonHours": 16364
+        }
+      },
+      "discovered": [
+        "OSL",
+        "TOS",
+        "LYR"
+      ],
+      "events": [
+        {
+          "kind": "service_started",
+          "utcMs": 1795140224330.2463,
+          "detail": {}
+        },
+        {
+          "kind": "service_completed",
+          "utcMs": 1795141124330.2463,
+          "detail": {}
+        },
+        {
+          "kind": "loading_started",
+          "utcMs": 1795141124330.2463,
+          "detail": {
+            "fuelKg": 0,
+            "foodPersonHours": 720
+          }
+        },
+        {
+          "kind": "loading_completed",
+          "utcMs": 1795141724330.2463,
+          "detail": {
+            "fuelKg": 0,
+            "foodPersonHours": 720
+          }
+        },
+        {
+          "kind": "departure_preparation_started",
+          "utcMs": 1795141724330.2463,
+          "detail": {}
+        },
+        {
+          "kind": "departure_preparation_completed",
+          "utcMs": 1795142624330.2463,
+          "detail": {}
+        },
+        {
+          "kind": "takeoff",
+          "utcMs": 1795142624330.2463,
+          "detail": {
+            "from": "TOS",
+            "to": "LYR"
+          }
+        },
+        {
+          "kind": "landing",
+          "utcMs": 1795148480138.8591,
+          "detail": {
+            "airportId": "LYR"
+          }
+        },
+        {
+          "kind": "airport_discovered",
+          "utcMs": 1795148480138.8591,
+          "detail": {
+            "airportId": "LYR"
+          }
+        }
+      ],
+      "solarSamples": {
+        "intervalSecondsAtMost": 900,
+        "count": 16,
+        "qMin": -0.510090624331468,
+        "qMax": -0.3483767444255231,
+        "sampledMaximumAltitudeDeg": -20.388061652361362,
+        "conservativeQUpperBound": -0.3475667344255231,
+        "conservativeAltitudeUpperBoundDeg": -20.338557750777763
+      },
+      "waiting": null
+    },
+    {
+      "startUtcMs": 1795148480138.8591,
+      "endUtcMs": 1795149380138.8591,
+      "startUtc": "2026-11-20T04:21:20.138Z",
+      "endUtc": "2026-11-20T04:36:20.138Z",
+      "actions": [
+        {
+          "kind": "service"
+        }
+      ],
+      "outcome": "completed",
+      "airportId": "LYR",
+      "aircraft": {
+        "fuelKg": 3780.7349748686356,
+        "foodPersonHours": 1696.8321761739096
+      },
+      "warehouses": {
+        "LYR": {
+          "fuelKg": 13253,
+          "foodPersonHours": 72501.5
+        },
+        "OSL": {
+          "fuelKg": 7611,
+          "foodPersonHours": 3206.5
+        },
+        "TOS": {
+          "fuelKg": 8609,
+          "foodPersonHours": 16364
+        }
+      },
+      "discovered": [
+        "OSL",
+        "TOS",
+        "LYR"
+      ],
+      "events": [
+        {
+          "kind": "service_started",
+          "utcMs": 1795148480138.8591,
+          "detail": {}
+        },
+        {
+          "kind": "service_completed",
+          "utcMs": 1795149380138.8591,
+          "detail": {}
+        }
+      ],
+      "solarSamples": {
+        "intervalSecondsAtMost": 900,
+        "count": 2,
+        "qMin": -0.3483767444255231,
+        "qMax": -0.33589138850068334,
+        "sampledMaximumAltitudeDeg": -19.626751928990785,
+        "conservativeQUpperBound": -0.33508137850068337,
+        "conservativeAltitudeUpperBoundDeg": -19.577486603443084
+      },
+      "waiting": null
+    },
+    {
+      "startUtcMs": 1795149380138.8591,
+      "endUtcMs": 1802947114584.0496,
+      "startUtc": "2026-11-20T04:36:20.138Z",
+      "endUtc": "2027-02-18T10:38:34.584Z",
+      "actions": [
+        {
+          "kind": "wait",
+          "seconds": 15535419.86114087
+        }
+      ],
+      "outcome": "death",
+      "airportId": "LYR",
+      "aircraft": {
+        "fuelKg": 3780.7349748686356,
+        "foodPersonHours": 1696.8321761739096
+      },
+      "warehouses": {
+        "LYR": {
+          "fuelKg": 13253,
+          "foodPersonHours": 7520.379623413086
+        },
+        "OSL": {
+          "fuelKg": 7611,
+          "foodPersonHours": 3206.5
+        },
+        "TOS": {
+          "fuelKg": 8609,
+          "foodPersonHours": 16364
+        }
+      },
+      "discovered": [
+        "OSL",
+        "TOS",
+        "LYR"
+      ],
+      "events": [
+        {
+          "kind": "wait_started",
+          "utcMs": 1795149380138.8591,
+          "detail": {}
+        },
+        {
+          "kind": "achievement",
+          "utcMs": 1797724800000,
+          "detail": {
+            "days": 30
+          }
+        },
+        {
+          "kind": "achievement",
+          "utcMs": 1802908800000,
+          "detail": {
+            "days": 90
+          }
+        },
+        {
+          "kind": "death",
+          "utcMs": 1802947114584.0496,
+          "detail": {
+            "reason": "sun",
+            "solarBracketUtcMs": [
+              1802947114570.3167,
+              1802947114584.0496
+            ]
+          }
+        }
+      ],
+      "solarSamples": {
+        "intervalSecondsAtMost": 900,
+        "count": 8666,
+        "qMin": -0.5762618827626159,
+        "qMax": 1.8119534622718092e-8,
+        "sampledMaximumAltitudeDeg": 0.000001038172860622917,
+        "conservativeQUpperBound": 0.0008098690969125483,
+        "conservativeAltitudeUpperBoundDeg": 0.04640208628358965
+      },
+      "waiting": null
+    }
+  ]
+}

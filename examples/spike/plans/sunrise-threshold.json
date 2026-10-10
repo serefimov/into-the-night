@@ -1,0 +1,105 @@
+{
+  "planVersion": 1,
+  "input": {
+    "world": {
+      "scenarioId": "norway-autumn-spike",
+      "scenarioVersion": 1,
+      "seed": "norway-autumn-1",
+      "airports": [
+        {
+          "id": "LYR",
+          "latitudeDeg": 78.246101,
+          "longitudeDeg": 15.4656,
+          "stockBounds": {
+            "fuelKg": [
+              12000,
+              14000
+            ],
+            "foodPersonHours": [
+              72000,
+              79200
+            ]
+          }
+        },
+        {
+          "id": "OSL",
+          "latitudeDeg": 60.193901,
+          "longitudeDeg": 11.1004,
+          "stockBounds": {
+            "fuelKg": [
+              6000,
+              8000
+            ],
+            "foodPersonHours": [
+              2880,
+              3600
+            ]
+          }
+        },
+        {
+          "id": "TOS",
+          "latitudeDeg": 69.683296,
+          "longitudeDeg": 18.9189,
+          "stockBounds": {
+            "fuelKg": [
+              8000,
+              10000
+            ],
+            "foodPersonHours": [
+              14400,
+              18000
+            ]
+          }
+        }
+      ]
+    },
+    "stocks": {
+      "LYR": {
+        "fuelKg": 13253,
+        "foodPersonHours": 72509
+      },
+      "OSL": {
+        "fuelKg": 7611,
+        "foodPersonHours": 3214
+      },
+      "TOS": {
+        "fuelKg": 8609,
+        "foodPersonHours": 17104
+      }
+    },
+    "utc": "2026-11-20T00:00:00Z",
+    "airportId": "OSL",
+    "aircraft": {
+      "fuelKg": 10000,
+      "foodPersonHours": 1080
+    },
+    "serviced": true
+  },
+  "batches": [
+    {
+      "actions": [
+        {
+          "kind": "prepare"
+        },
+        {
+          "kind": "fly",
+          "destinationId": "LYR"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "kind": "service"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "kind": "auto_wait"
+        }
+      ]
+    }
+  ]
+}
