@@ -1,16 +1,16 @@
 import assert from 'node:assert/strict';
 import {spawn,spawnSync} from 'node:child_process';
-import {mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {mkdtempSync,writeFileSync,rmSync,readFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {resolve} from 'node:path';
 const directory=mkdtempSync(`${tmpdir()}/into-the-night-browser-`);
 const chromePath=process.env.SPIKE_CHROME_PATH??'google-chrome';
-let browser,server,buffer='',id=0,sessionId;const pending=new Map(),errors=[];
+let browser,server,socket,id=0,sessionId,browserLog='';const pending=new Map(),errors=[];
 function send(method,params={},session=sessionId){
  return new Promise((resolve,reject)=>{
   const call=++id,timer=setTimeout(()=>{pending.delete(call);reject(Error(`CDP timeout: ${method}`));},15000);
   pending.set(call,{resolve,reject,timer});
-  browser.stdio[3].write(JSON.stringify({id:call,method,params,...(session?{sessionId:session}:{})})+'\0');
+  socket.send(JSON.stringify({id:call,method,params,...(session?{sessionId:session}:{})}));
  });
 }
 async function evaluate(expression){
@@ -87,16 +87,28 @@ try {
  server=spawn(process.execPath,['scripts/dev-server.mjs','--built','--port','5983'],{stdio:['ignore','ignore','pipe']});
  let ready=false;for(let i=0;i<100;i++){try{ready=(await fetch('http://127.0.0.1:5983/')).ok;if(ready)break;}catch{}await new Promise(r=>setTimeout(r,50));}
  assert.ok(ready,'Local build server did not start');
- browser=spawn(chromePath,['--headless','--no-sandbox','--disable-gpu','--disable-dev-shm-usage',`--user-data-dir=${directory}/profile`,'--remote-debugging-pipe'],{stdio:['ignore','ignore','pipe','pipe','pipe']});
- browser.on('error',e=>{for(const p of pending.values()){clearTimeout(p.timer);p.reject(e);}pending.clear();});
- browser.stdio[3].on('error',()=>{});browser.stdio[4].on('error',()=>{});
- browser.stderr.on('data',b=>{if(process.env.SPIKE_BROWSER_DEBUG)process.stderr.write(b);});
- browser.stdio[4].on('data',b=>{buffer+=b.toString();let split;while((split=buffer.indexOf('\0'))>=0){const text=buffer.slice(0,split);buffer=buffer.slice(split+1);if(!text)continue;const message=JSON.parse(text);if(message.id){const p=pending.get(message.id);if(p){clearTimeout(p.timer);pending.delete(message.id);message.error?p.reject(Error(JSON.stringify(message.error))):p.resolve(message.result);}}else if(message.method==='Runtime.exceptionThrown')errors.push(message.params.exceptionDetails.exception?.description??message.params.exceptionDetails.text);}});
+ browser=spawn(chromePath,['--headless','--no-sandbox','--disable-gpu','--disable-dev-shm-usage',`--user-data-dir=${directory}/profile`,'--remote-debugging-port=0','--remote-debugging-address=127.0.0.1'],{stdio:['ignore','ignore','pipe']});
+ browser.on('error',e=>{browserLog+=e.message;});
+ browser.stderr.on('data',b=>{browserLog=(browserLog+b.toString()).slice(-6000);});
+ let endpoint=null;
+ for(let i=0;i<200;i++){
+  try{const [port,path]=readFileSync(`${directory}/profile/DevToolsActivePort`,'utf8').trim().split('\n');endpoint=`ws://127.0.0.1:${port}${path}`;break;}catch{}
+  if(browser.exitCode!==null)throw Error(`Chrome exited: ${browser.exitCode}\n${browserLog}`);
+  await new Promise(r=>setTimeout(r,50));
+ }
+ if(!endpoint)throw Error('Chrome did not open its debugging endpoint: '+browserLog);
+ socket=new WebSocket(endpoint);
+ await new Promise((resolve,reject)=>{socket.addEventListener('open',resolve,{once:true});socket.addEventListener('error',()=>reject(Error('Cannot connect to Chrome: '+browserLog)),{once:true});});
+ socket.addEventListener('message',event=>{
+  const message=JSON.parse(event.data);
+  if(message.id){const p=pending.get(message.id);if(p){clearTimeout(p.timer);pending.delete(message.id);message.error?p.reject(Error(JSON.stringify(message.error))):p.resolve(message.result);}}
+  else if(message.method==='Runtime.exceptionThrown')errors.push(message.params.exceptionDetails.exception?.description??message.params.exceptionDetails.text);
+ });
  const {targetId}=await send('Target.createTarget',{url:'about:blank'},null);
  sessionId=(await send('Target.attachToTarget',{targetId,flatten:true},null)).sessionId;
  await send('Page.enable');await send('Runtime.enable');
  const version=await send('Browser.getVersion',{},null);
  const results=[await scenarioRun(false),await scenarioRun(true)];assert.deepEqual(errors,[]);
  process.stdout.write(JSON.stringify({passed:true,browser:version.product,results},null,2)+'\n');
-}catch(e){process.stderr.write(e.stack+'\n');process.exitCode=1;}
-finally{browser?.kill();server?.kill();for(const p of pending.values())clearTimeout(p.timer);rmSync(directory,{recursive:true,force:true});}
+}catch(e){process.stderr.write(e.stack+'\n'+browserLog+'\n');process.exitCode=1;}
+finally{socket?.close();browser?.kill();server?.kill();for(const p of pending.values())clearTimeout(p.timer);rmSync(directory,{recursive:true,force:true});}
