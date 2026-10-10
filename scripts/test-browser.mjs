@@ -21,7 +21,11 @@ async function evaluate(expression){
  return r.result.value;
 }
 async function until(expression){
- for(let i=0;i<100;i++){if(await evaluate(expression))return;await new Promise(r=>setTimeout(r,50));}
+ for(let i=0;i<200;i++){
+  try{if(await evaluate(expression))return;}
+  catch(e){if(!/Inspected target navigated or closed|Execution context was destroyed|Cannot find context with specified id/.test(e.message))throw e;}
+  await new Promise(r=>setTimeout(r,50));
+ }
  throw Error(`Browser did not reach: ${expression}`);
 }
 async function click(selector,mobile){
@@ -93,7 +97,7 @@ try {
  browser.on('error',e=>{browserLog+=e.message;});
  browser.stderr.on('data',b=>{browserLog=(browserLog+b.toString()).slice(-6000);});
  let endpoint=null;
- for(let i=0;i<200;i++){
+ for(let i=0;i<600;i++){
   try{const [port,path]=readFileSync(`${directory}/profile/DevToolsActivePort`,'utf8').trim().split('\n');endpoint=`ws://127.0.0.1:${port}${path}`;break;}catch{}
   if(browser.exitCode!==null)throw Error(`Chrome exited: ${browser.exitCode}\n${browserLog}`);
   await new Promise(r=>setTimeout(r,50));
