@@ -17,9 +17,15 @@ try {
   function diff(a,b,path='journal') {
    if(differences.length>=12)return;
    if(a&&b&&typeof a==='object'&&typeof b==='object')for(const key of new Set([...Object.keys(a),...Object.keys(b)]))diff(a[key],b[key],path+'.'+key);
-   else if(a!==b)differences.push({path,replayed:a,exported:b});
+   else if(a!==b) {
+    // Chrome/Node trig implementations differ by a few final binary digits.
+    // This journal-only absolute tolerance never changes physics or event times.
+    const metric=['journal.state.aircraft.fuelKg','journal.state.distanceKm'].includes(path);
+    if(metric && typeof a==='number' && typeof b==='number' && Number.isFinite(a) && Number.isFinite(b) && Math.abs(a-b)<=1e-9)return;
+    differences.push({path,replayed:a,exported:b});
+   }
   }
-  diff(game.journal(),journal);throw Error('Replay differs from exported journal: '+JSON.stringify(differences));
+  diff(game.journal(),journal);if(differences.length)throw Error('Replay differs from exported journal: '+JSON.stringify(differences));
  }
  process.stdout.write(JSON.stringify({passed:true,state:game.current(),entries:journal.entries.length},null,2)+'\n');
 }catch(e){process.stderr.write(JSON.stringify({error:e.message})+'\n');process.exitCode=2;}

@@ -231,11 +231,21 @@ import assert from 'node:assert/strict';
 const read=p=>JSON.parse(readFileSync(p,'utf8')),journal=read(process.argv[2]),result=read(process.argv[3]);
 assert.equal(result.passed,true);assert.deepEqual(result.state,journal.state);
 assert.ok(result.state.achievements.includes(30));assert.ok(journal.entries.some(e=>e.cancelGround));
-journal.state.aircraft.fuelKg+=1;writeFileSync(process.argv[2]+'.broken',JSON.stringify(journal));
+const clone=()=>JSON.parse(JSON.stringify(journal));
+const drift=clone();drift.state.aircraft.fuelKg+=2e-12;drift.state.distanceKm+=5e-13;
+writeFileSync(process.argv[2]+'.drift',JSON.stringify(drift));
+for(const [suffix,alter] of [
+ ['broken',j=>j.state.aircraft.fuelKg+=1e-7],
+ ['time',j=>j.state.currentTimeUtc+=0.25],
+ ['event',j=>j.entries[0].events[0].utcMs+=0.25],
+]){const altered=clone();alter(altered);writeFileSync(process.argv[2]+'.'+suffix,JSON.stringify(altered));}
 JS
-if node scripts/review-cli.mjs "$solar_cli_test_dir/browser-review.json.broken" > "$solar_cli_test_dir/stdout" 2> "$solar_cli_test_dir/stderr"; then
+node scripts/review-cli.mjs "$solar_cli_test_dir/browser-review.json.drift" > "$solar_cli_test_dir/review-drift"
+for review_invalid in broken time event; do
+if node scripts/review-cli.mjs "$solar_cli_test_dir/browser-review.json.$review_invalid" > "$solar_cli_test_dir/stdout" 2> "$solar_cli_test_dir/stderr"; then
   echo 'Modified browser journal unexpectedly accepted' >&2
   exit 1
 fi
 test ! -s "$solar_cli_test_dir/stdout"
+done
 printf '%s\n' 'Browser review CLI: partial wait/stop/save/resume, two timezones and corrupted-state rejection verified.'
