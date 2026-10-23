@@ -111,7 +111,17 @@ export async function loadResearchReport() {
  const {firstFlightEnvelopeFiles,...summary}=JSON.parse(await readFile('docs/mission-research/report.json','utf8'));
  if(!Array.isArray(firstFlightEnvelopeFiles)||firstFlightEnvelopeFiles.some(f=>!/^(AF|AS|EU|NA|OC|SA)\.json$/.test(f)))throw Error('Invalid report paths');
  const firstFlightEnvelope=(await Promise.all(firstFlightEnvelopeFiles.map(f=>readFile('docs/mission-research/'+f,'utf8').then(JSON.parse)))).flat().sort((a,b)=>a.to.localeCompare(b.to));
- return {...summary,firstFlightEnvelope};
+ // The archived v1 report contains one full-tank sum 1 ULP above capacity.
+ // Keep the source artifact unchanged; adapt only that roundoff on read after the capacity fix.
+ const capacity=aircraftMetrics((await loadMissionData()).profile).fuelCapacityKg;
+ const report={...summary,firstFlightEnvelope};
+ function normalize(value) {
+  if(!value||typeof value!=='object')return;
+  const r=value.refuelling;
+  if(r&&r.fuelKg>capacity&&r.fuelKg-capacity<=Number.EPSILON*capacity)r.fuelKg=capacity;
+  for(const child of Object.values(value))normalize(child);
+ }
+ normalize(report);return report;
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
  try {
