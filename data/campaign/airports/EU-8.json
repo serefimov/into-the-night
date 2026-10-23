@@ -1,0 +1,820 @@
+[
+  {
+    "id": "LFKB",
+    "ourAirportsId": 4123,
+    "iata": "BIA",
+    "icao": "LFKB",
+    "name": "Bastia-Poretta International airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 42.5527,
+    "longitudeDeg": 9.48373,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235886,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2519.477,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFKF",
+    "ourAirportsId": 4125,
+    "iata": "FSC",
+    "icao": "LFKF",
+    "name": "Figari Sud-Corse Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 41.50185,
+    "longitudeDeg": 9.097092,
+    "elevationFt": 85,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235942,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2479.853,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFLC",
+    "ourAirportsId": 4132,
+    "iata": "CFE",
+    "icao": "LFLC",
+    "name": "Clermont-Ferrand Auvergne airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 45.786701,
+    "longitudeDeg": 3.16917,
+    "elevationFt": 1090,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236052,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3012.948,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 260346,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 900.074,
+        "widthM": 49.073,
+        "surface": "GRASS",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 314475,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 705.002,
+        "widthM": 60.046,
+        "surface": "GRASS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFLL",
+    "ourAirportsId": 4137,
+    "iata": "LYS",
+    "icao": "LFLL",
+    "name": "Lyon Saint-Exupéry Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 45.725996,
+    "longitudeDeg": 5.090139,
+    "elevationFt": 821,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235874,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 4000.195,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235875,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 2670.048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFML",
+    "ourAirportsId": 4155,
+    "iata": "MRS",
+    "icao": "LFML",
+    "name": "Marseille Provence Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 43.438088,
+    "longitudeDeg": 5.2125,
+    "elevationFt": 74,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235999,
+        "ends": [
+          "13L",
+          "31R"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235998,
+        "ends": [
+          "13R",
+          "31L"
+        ],
+        "lengthM": 2370.125,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFMN",
+    "ourAirportsId": 4156,
+    "iata": "NCE",
+    "icao": "LFMN",
+    "name": "Nice-Côte d'Azur Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 43.658401,
+    "longitudeDeg": 7.21587,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235851,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 2962.961,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235852,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 2627.986,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFMT",
+    "ourAirportsId": 4161,
+    "iata": "MPL",
+    "icao": "LFMT",
+    "name": "Montpellier-Méditerranée Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 43.576199,
+    "longitudeDeg": 3.96301,
+    "elevationFt": 17,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235861,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235860,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 1100.023,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFOB",
+    "ourAirportsId": 4169,
+    "iata": "BVA",
+    "icao": "LFOB",
+    "name": "Beauvais-Tillé airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 49.454399,
+    "longitudeDeg": 2.11278,
+    "elevationFt": 359,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235869,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2429.866,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235868,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 1104.9,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFPB",
+    "ourAirportsId": 4183,
+    "iata": "LBG",
+    "icao": "LFPB",
+    "name": "Paris-Le Bourget International Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 48.962276,
+    "longitudeDeg": 2.436539,
+    "elevationFt": 218,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235906,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235905,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2395.118,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235907,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 1847.088,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFPG",
+    "ourAirportsId": 4185,
+    "iata": "CDG",
+    "icao": "LFPG",
+    "name": "Charles de Gaulle International Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 49.00896,
+    "longitudeDeg": 2.554117,
+    "elevationFt": 392,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235946,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 4215.079,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235947,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 4200.144,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235945,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFPO",
+    "ourAirportsId": 4189,
+    "iata": "ORY",
+    "icao": "LFPO",
+    "name": "Paris-Orly Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 48.729499,
+    "longitudeDeg": 2.358963,
+    "elevationFt": 291,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236055,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3649.98,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236056,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3319.882,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236054,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFQQ",
+    "ourAirportsId": 4202,
+    "iata": "LIL",
+    "icao": "LFQQ",
+    "name": "Lille Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 50.566564,
+    "longitudeDeg": 3.102429,
+    "elevationFt": 157,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235884,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2824.886,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235883,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 1580.083,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFRB",
+    "ourAirportsId": 4206,
+    "iata": "BES",
+    "icao": "LFRB",
+    "name": "Brest Bretagne airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 48.447899,
+    "longitudeDeg": -4.41854,
+    "elevationFt": 325,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235896,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235897,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 700.126,
+        "widthM": 17.983,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFRS",
+    "ourAirportsId": 4221,
+    "iata": "NTE",
+    "icao": "LFRS",
+    "name": "Nantes Atlantique Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 47.153198,
+    "longitudeDeg": -1.61073,
+    "elevationFt": 90,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235944,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2899.867,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFSB",
+    "ourAirportsId": 4226,
+    "iata": "BSL",
+    "icao": "LFSB",
+    "name": "EuroAirport Basel–Mulhouse–Freiburg",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 47.60068,
+    "longitudeDeg": 7.521117,
+    "elevationFt": 885,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236007,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3899.916,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236006,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 1714.805,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFST",
+    "ourAirportsId": 4238,
+    "iata": "SXB",
+    "icao": "LFST",
+    "name": "Strasbourg Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 48.5383,
+    "longitudeDeg": 7.62823,
+    "elevationFt": 505,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235892,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LGAV",
+    "ourAirportsId": 4251,
+    "iata": "ATH",
+    "icao": "LGAV",
+    "name": "Athens Eleftherios Venizelos International Airport",
+    "country": "GR",
+    "continent": "EU",
+    "latitudeDeg": 37.936401,
+    "longitudeDeg": 23.9445,
+    "elevationFt": 308,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236330,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236331,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LGIR",
+    "ourAirportsId": 4258,
+    "iata": "HER",
+    "icao": "LGIR",
+    "name": "Heraklion International Nikos Kazantzakis Airport",
+    "country": "GR",
+    "continent": "EU",
+    "latitudeDeg": 35.339699,
+    "longitudeDeg": 25.1803,
+    "elevationFt": 115,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236379,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2713.939,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236380,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 1566.062,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LGKR",
+    "ourAirportsId": 4266,
+    "iata": "CFU",
+    "icao": "LGKR",
+    "name": "Corfu Ioannis Kapodistrias International Airport",
+    "country": "GR",
+    "continent": "EU",
+    "latitudeDeg": 39.60145,
+    "longitudeDeg": 19.912179,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236334,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2375.002,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LGKV",
+    "ourAirportsId": 4268,
+    "iata": "KVA",
+    "icao": "LGKV",
+    "name": "Kavala Alexander the Great International Airport",
+    "country": "GR",
+    "continent": "EU",
+    "latitudeDeg": 40.9133,
+    "longitudeDeg": 24.6192,
+    "elevationFt": 18,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236374,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3000.451,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

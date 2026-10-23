@@ -1,0 +1,710 @@
+[
+  {
+    "id": "PGRO",
+    "ourAirportsId": 5430,
+    "iata": "ROP",
+    "icao": "PGRO",
+    "name": "Rota International Airport",
+    "country": "MP",
+    "continent": "OC",
+    "latitudeDeg": 14.173267,
+    "longitudeDeg": 145.241103,
+    "elevationFt": 607,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235365,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 1828.8,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PGUM",
+    "ourAirportsId": 5433,
+    "iata": "GUM",
+    "icao": "PGUM",
+    "name": "Antonio B. Won Pat International Airport",
+    "country": "GU",
+    "continent": "OC",
+    "latitudeDeg": 13.485,
+    "longitudeDeg": 144.797282,
+    "elevationFt": 298,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236329,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3662.172,
+        "widthM": 45.72,
+        "surface": "asphalt",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236328,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 3052.267,
+        "widthM": 45.72,
+        "surface": "asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PHKO",
+    "ourAirportsId": 5448,
+    "iata": "KOA",
+    "icao": "PHKO",
+    "name": "Ellison Onizuka Kona International Airport at Keāhole",
+    "country": "US",
+    "continent": "OC",
+    "latitudeDeg": 19.738783,
+    "longitudeDeg": -156.045603,
+    "elevationFt": 47,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 241261,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PHLI",
+    "ourAirportsId": 5449,
+    "iata": "LIH",
+    "icao": "PHLI",
+    "name": "Lihue Airport",
+    "country": "US",
+    "continent": "OC",
+    "latitudeDeg": 21.974393,
+    "longitudeDeg": -159.337146,
+    "elevationFt": 153,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 242399,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 1981.2,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242400,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 1981.2,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PHNL",
+    "ourAirportsId": 5453,
+    "iata": "HNL",
+    "icao": "PHNL",
+    "name": "Daniel K. Inouye International Airport",
+    "country": "US",
+    "continent": "OC",
+    "latitudeDeg": 21.318387,
+    "longitudeDeg": -157.92567,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 253730,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3767.328,
+        "widthM": 60.96,
+        "surface": "ASPH-G",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 253731,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 60.96,
+        "surface": "ASPH-G",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 253728,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 2743.81,
+        "widthM": 45.72,
+        "surface": "ASPH-G",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PHOG",
+    "ourAirportsId": 5455,
+    "iata": "OGG",
+    "icao": "PHOG",
+    "name": "Kahului International Airport",
+    "country": "US",
+    "continent": "OC",
+    "latitudeDeg": 20.896263,
+    "longitudeDeg": -156.431837,
+    "elevationFt": 54,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240429,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2132.99,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240430,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 1517.904,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PHTO",
+    "ourAirportsId": 5457,
+    "iata": "ITO",
+    "icao": "PHTO",
+    "name": "Hilo International Airport",
+    "country": "US",
+    "continent": "OC",
+    "latitudeDeg": 19.72135,
+    "longitudeDeg": -155.045428,
+    "elevationFt": 38,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239664,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2987.04,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239663,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 1706.88,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PKMJ",
+    "ourAirportsId": 5488,
+    "iata": "MAJ",
+    "icao": "PKMJ",
+    "name": "Marshall Islands International Airport",
+    "country": "MH",
+    "continent": "OC",
+    "latitudeDeg": 7.06511,
+    "longitudeDeg": 171.271656,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238385,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2407.006,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PLCH",
+    "ourAirportsId": 5493,
+    "iata": "CXI",
+    "icao": "PLCH",
+    "name": "Cassidy International Airport",
+    "country": "KI",
+    "continent": "OC",
+    "latitudeDeg": 1.986278,
+    "longitudeDeg": -157.350011,
+    "elevationFt": 5,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237284,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2103.12,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PTKK",
+    "ourAirportsId": 5499,
+    "iata": "TKK",
+    "icao": "PTKK",
+    "name": "Chuuk International Airport",
+    "country": "FM",
+    "continent": "OC",
+    "latitudeDeg": 7.46187,
+    "longitudeDeg": 151.843002,
+    "elevationFt": 11,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235786,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 1830.629,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PTRO",
+    "ourAirportsId": 5501,
+    "iata": "ROR",
+    "icao": "PTRO",
+    "name": "Roman Tmetuchl International Airport",
+    "country": "PW",
+    "continent": "OC",
+    "latitudeDeg": 7.366965,
+    "longitudeDeg": 134.544085,
+    "elevationFt": 176,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238374,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2194.56,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PTSA",
+    "ourAirportsId": 5502,
+    "iata": "KSA",
+    "icao": "PTSA",
+    "name": "Kosrae International Airport",
+    "country": "FM",
+    "continent": "OC",
+    "latitudeDeg": 5.35698,
+    "longitudeDeg": 162.957993,
+    "elevationFt": 11,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235784,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 1752.6,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PTYA",
+    "ourAirportsId": 5503,
+    "iata": "YAP",
+    "icao": "PTYA",
+    "name": "Yap International Airport",
+    "country": "FM",
+    "continent": "OC",
+    "latitudeDeg": 9.49891,
+    "longitudeDeg": 138.082993,
+    "elevationFt": 91,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235787,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 1828.8,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YBBN",
+    "ourAirportsId": 26901,
+    "iata": "BNE",
+    "icao": "YBBN",
+    "name": "Brisbane International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -27.384199142456055,
+    "longitudeDeg": 153.11700439453125,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233169,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 3560.064,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 335162,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YBCG",
+    "ourAirportsId": 26902,
+    "iata": "OOL",
+    "icao": "YBCG",
+    "name": "Gold Coast Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -28.165962,
+    "longitudeDeg": 153.506641,
+    "elevationFt": 21,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233197,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2492.045,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233198,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 581.863,
+        "widthM": 17.983,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YBCS",
+    "ourAirportsId": 26904,
+    "iata": "CNS",
+    "icao": "YBCS",
+    "name": "Cairns International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -16.878921,
+    "longitudeDeg": 145.74948,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233142,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3197.047,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YBRM",
+    "ourAirportsId": 26927,
+    "iata": "BME",
+    "icao": "YBRM",
+    "name": "Broome International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -17.949194,
+    "longitudeDeg": 122.2283,
+    "elevationFt": 56,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233305,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2403.958,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YBSU",
+    "ourAirportsId": 26918,
+    "iata": "MCY",
+    "icao": "YBSU",
+    "name": "Sunshine Coast Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -26.593324,
+    "longitudeDeg": 153.08319,
+    "elevationFt": 15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233385,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YBWW",
+    "ourAirportsId": 315119,
+    "iata": "WTB",
+    "icao": "YBWW",
+    "name": "Toowoomba Wellcamp Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -27.558332,
+    "longitudeDeg": 151.793335,
+    "elevationFt": 1509,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 315120,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2869.997,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YMAV",
+    "ourAirportsId": 27043,
+    "iata": "AVV",
+    "icao": "YMAV",
+    "name": "Melbourne Avalon International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -38.040269,
+    "longitudeDeg": 144.467196,
+    "elevationFt": 35,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233114,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

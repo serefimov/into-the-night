@@ -1,0 +1,699 @@
+[
+  {
+    "id": "LTAZ",
+    "ourAirportsId": 4527,
+    "iata": "NAV",
+    "icao": "LTAZ",
+    "name": "Nevşehir Kapadokya Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 38.7719,
+    "longitudeDeg": 34.5345,
+    "elevationFt": 3100,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239293,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTBJ",
+    "ourAirportsId": 4533,
+    "iata": "ADB",
+    "icao": "LTBJ",
+    "name": "Adnan Menderes International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 38.2924,
+    "longitudeDeg": 27.157,
+    "elevationFt": 412,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239307,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3240.024,
+        "widthM": 44.806,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239308,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3240.024,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTBS",
+    "ourAirportsId": 4542,
+    "iata": "DLM",
+    "icao": "LTBS",
+    "name": "Dalaman International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 36.7131,
+    "longitudeDeg": 28.7925,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239285,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTBY",
+    "ourAirportsId": 4547,
+    "iata": "AOE",
+    "icao": "LTBY",
+    "name": "Hasan Polatkan Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 39.811644,
+    "longitudeDeg": 30.519268,
+    "elevationFt": 2588,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239301,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2517.953,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTCS",
+    "ourAirportsId": 44491,
+    "iata": "GNY",
+    "icao": "LTCS",
+    "name": "Şanlıurfa GAP Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 37.445663,
+    "longitudeDeg": 38.895592,
+    "elevationFt": 2708,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 354728,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTDB",
+    "ourAirportsId": 324731,
+    "iata": "COV",
+    "icao": "LTDB",
+    "name": "Çukurova International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 36.891478,
+    "longitudeDeg": 35.071235,
+    "elevationFt": 35,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 543415,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 3499.714,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 543416,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3499.714,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTFD",
+    "ourAirportsId": 4566,
+    "iata": "EDO",
+    "icao": "LTFD",
+    "name": "Balıkesir Koca Seyit Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 39.552533,
+    "longitudeDeg": 27.010192,
+    "elevationFt": 50,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239235,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 44.806,
+        "surface": "CONCRETE",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTFE",
+    "ourAirportsId": 4567,
+    "iata": "BJV",
+    "icao": "LTFE",
+    "name": "Milas Bodrum International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 37.249314,
+    "longitudeDeg": 27.66401,
+    "elevationFt": 21,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239233,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 336567,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 2940.101,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTFJ",
+    "ourAirportsId": 4569,
+    "iata": "SAW",
+    "icao": "LTFJ",
+    "name": "Istanbul Sabiha Gökçen International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 40.898602,
+    "longitudeDeg": 29.3092,
+    "elevationFt": 312,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 509411,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 3539.947,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 239239,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NP-0003",
+    "ourAirportsId": 342097,
+    "iata": "PHH",
+    "icao": "VNPR",
+    "name": "Pokhara International Airport",
+    "country": "NP",
+    "continent": "AS",
+    "latitudeDeg": 28.1838,
+    "longitudeDeg": 84.0147,
+    "elevationFt": 2595,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 603486,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "Concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OAHR",
+    "ourAirportsId": 5069,
+    "iata": "HEA",
+    "icao": "OAHR",
+    "name": "Herat - Khwaja Abdullah Ansari International Airport",
+    "country": "AF",
+    "continent": "AS",
+    "latitudeDeg": 34.209999,
+    "longitudeDeg": 62.228298,
+    "elevationFt": 3206,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232777,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3013.862,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OAKB",
+    "ourAirportsId": 5072,
+    "iata": "KBL",
+    "icao": "OAKB",
+    "name": "Kabul International Airport",
+    "country": "AF",
+    "continent": "AS",
+    "latitudeDeg": 34.565899,
+    "longitudeDeg": 69.212303,
+    "elevationFt": 5877,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232784,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OAKN",
+    "ourAirportsId": 5073,
+    "iata": "KDH",
+    "icao": "OAKN",
+    "name": "Ahmad Shah Baba International Airport",
+    "country": "AF",
+    "continent": "AS",
+    "latitudeDeg": 31.505769,
+    "longitudeDeg": 65.847963,
+    "elevationFt": 3337,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232780,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3210.154,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OAMS",
+    "ourAirportsId": 5075,
+    "iata": "MZR",
+    "icao": "OAMS",
+    "name": "Mazar-i-Sharif International Airport",
+    "country": "AF",
+    "continent": "AS",
+    "latitudeDeg": 36.70412,
+    "longitudeDeg": 67.210459,
+    "elevationFt": 1284,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 271059,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OBBI",
+    "ourAirportsId": 5079,
+    "iata": "BAH",
+    "icao": "OBBI",
+    "name": "Bahrain International Airport",
+    "country": "BH",
+    "continent": "AS",
+    "latitudeDeg": 26.267295,
+    "longitudeDeg": 50.63764,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233604,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 3955.999,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233603,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 2530.45,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEAB",
+    "ourAirportsId": 5082,
+    "iata": "AHB",
+    "icao": "OEAB",
+    "name": "Abha International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 18.2404,
+    "longitudeDeg": 42.656601,
+    "elevationFt": 6858,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238678,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3350.057,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEAH",
+    "ourAirportsId": 5083,
+    "iata": "HOF",
+    "icao": "OEAH",
+    "name": "Al-Ahsa International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 25.285299,
+    "longitudeDeg": 49.485199,
+    "elevationFt": 588,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238645,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3059.887,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEAO",
+    "ourAirportsId": 300611,
+    "iata": "ULH",
+    "icao": "OEAO",
+    "name": "Al-Ula International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 26.483634,
+    "longitudeDeg": 38.117048,
+    "elevationFt": 2050,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 355185,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 49.987,
+        "surface": "asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEDF",
+    "ourAirportsId": 5087,
+    "iata": "DMM",
+    "icao": "OEDF",
+    "name": "King Fahd International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 26.4691,
+    "longitudeDeg": 49.798209,
+    "elevationFt": 72,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238668,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 4000.195,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238669,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 4000.195,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEDR",
+    "ourAirportsId": 5089,
+    "iata": "DHA",
+    "icao": "OEDR",
+    "name": "King Abdulaziz Air Base",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 26.2654,
+    "longitudeDeg": 50.152,
+    "elevationFt": 84,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238673,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3660.038,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238674,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

@@ -1,0 +1,654 @@
+[
+  {
+    "id": "GCLP",
+    "ourAirportsId": 3081,
+    "iata": "LPA",
+    "icao": "GCLP",
+    "name": "Gran Canaria Airport",
+    "country": "ES",
+    "continent": "AF",
+    "latitudeDeg": 27.9319,
+    "longitudeDeg": -15.3866,
+    "elevationFt": 78,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238917,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238918,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GCRR",
+    "ourAirportsId": 3082,
+    "iata": "ACE",
+    "icao": "GCRR",
+    "name": "César Manrique-Lanzarote Airport",
+    "country": "ES",
+    "continent": "AF",
+    "latitudeDeg": 28.945499,
+    "longitudeDeg": -13.6052,
+    "elevationFt": 46,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238929,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GCTS",
+    "ourAirportsId": 3083,
+    "iata": "TFS",
+    "icao": "GCTS",
+    "name": "Tenerife Sur Airport",
+    "country": "ES",
+    "continent": "AF",
+    "latitudeDeg": 28.0445,
+    "longitudeDeg": -16.5725,
+    "elevationFt": 209,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238940,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GCXO",
+    "ourAirportsId": 3084,
+    "iata": "TFN",
+    "icao": "GCXO",
+    "name": "Tenerife Norte-Ciudad de La Laguna Airport",
+    "country": "ES",
+    "continent": "AF",
+    "latitudeDeg": 28.482752,
+    "longitudeDeg": -16.341707,
+    "elevationFt": 2076,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238892,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3171.139,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GFLL",
+    "ourAirportsId": 3095,
+    "iata": "FNA",
+    "icao": "GFLL",
+    "name": "Lungi International Airport",
+    "country": "SL",
+    "continent": "AF",
+    "latitudeDeg": 8.61644,
+    "longitudeDeg": -13.1955,
+    "elevationFt": 84,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238859,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3199.79,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GGOV",
+    "ourAirportsId": 3097,
+    "iata": "OXB",
+    "icao": "GGOV",
+    "name": "Osvaldo Vieira International Airport",
+    "country": "GW",
+    "continent": "AF",
+    "latitudeDeg": 11.894262,
+    "longitudeDeg": -15.653596,
+    "elevationFt": 129,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238375,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GLRB",
+    "ourAirportsId": 3099,
+    "iata": "ROB",
+    "icao": "GLRB",
+    "name": "Roberts International Airport",
+    "country": "LR",
+    "continent": "AF",
+    "latitudeDeg": 6.23379,
+    "longitudeDeg": -10.3623,
+    "elevationFt": 31,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237432,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMAD",
+    "ourAirportsId": 3101,
+    "iata": "AGA",
+    "icao": "GMAD",
+    "name": "Al Massira Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 30.322478,
+    "longitudeDeg": -9.412003,
+    "elevationFt": 250,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237612,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMAZ",
+    "ourAirportsId": 429847,
+    "iata": "OZG",
+    "icao": "GMAZ",
+    "name": "Zagora Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 30.265788,
+    "longitudeDeg": -5.860808,
+    "elevationFt": 2414,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMFF",
+    "ourAirportsId": 3103,
+    "iata": "FEZ",
+    "icao": "GMFF",
+    "name": "Fes Saïss International Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 33.927299,
+    "longitudeDeg": -4.97796,
+    "elevationFt": 1900,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237598,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMFO",
+    "ourAirportsId": 3107,
+    "iata": "OUD",
+    "icao": "GMFO",
+    "name": "Oujda Angads Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 34.789558,
+    "longitudeDeg": -1.926041,
+    "elevationFt": 1535,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237597,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "BIT",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 335278,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMMD",
+    "ourAirportsId": 29694,
+    "iata": "BEM",
+    "icao": "GMMD",
+    "name": "Beni Mellal Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 32.401895,
+    "longitudeDeg": -6.315905,
+    "elevationFt": 1694,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 260128,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2489.911,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMME",
+    "ourAirportsId": 3109,
+    "iata": "RBA",
+    "icao": "GMME",
+    "name": "Rabat-Salé Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 34.051498,
+    "longitudeDeg": -6.75152,
+    "elevationFt": 276,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237593,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMMH",
+    "ourAirportsId": 3110,
+    "iata": "VIL",
+    "icao": "GMMH",
+    "name": "Dakhla Airport",
+    "country": "EH",
+    "continent": "AF",
+    "latitudeDeg": 23.7183,
+    "longitudeDeg": -15.932,
+    "elevationFt": 36,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246221,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMML",
+    "ourAirportsId": 3112,
+    "iata": "EUN",
+    "icao": "GMML",
+    "name": "Laayoune Hassan I International Airport",
+    "country": "EH",
+    "continent": "AF",
+    "latitudeDeg": 27.142467,
+    "longitudeDeg": -13.224947,
+    "elevationFt": 207,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246219,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2700.833,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246220,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMMN",
+    "ourAirportsId": 3113,
+    "iata": "CMN",
+    "icao": "GMMN",
+    "name": "Mohammed V International Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 33.3675,
+    "longitudeDeg": -7.58997,
+    "elevationFt": 656,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237595,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3720.084,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237596,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 3720.084,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMMW",
+    "ourAirportsId": 3114,
+    "iata": "NDR",
+    "icao": "GMMW",
+    "name": "Nador Al Aaroui International Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 34.9888,
+    "longitudeDeg": -3.02821,
+    "elevationFt": 574,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237590,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMMX",
+    "ourAirportsId": 3115,
+    "iata": "RAK",
+    "icao": "GMMX",
+    "name": "Marrakesh Menara Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 31.604807,
+    "longitudeDeg": -8.035788,
+    "elevationFt": 1545,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237602,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3099.816,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMMZ",
+    "ourAirportsId": 3117,
+    "iata": "OZZ",
+    "icao": "GMMZ",
+    "name": "Ouarzazate International Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 30.9391,
+    "longitudeDeg": -6.90943,
+    "elevationFt": 3782,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237594,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMTN",
+    "ourAirportsId": 3120,
+    "iata": "TTU",
+    "icao": "GMTN",
+    "name": "Sania Ramel Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 35.594299,
+    "longitudeDeg": -5.32002,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 511679,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3286.963,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

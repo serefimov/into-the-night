@@ -1,0 +1,232 @@
+[
+  {
+    "id": "ZWWW",
+    "ourAirportsId": 27236,
+    "iata": "URC",
+    "icao": "ZWWW",
+    "name": "Ürümqi Tianshan International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 43.913584,
+    "longitudeDeg": 87.479372,
+    "elevationFt": 2125,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235185,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 598134,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 60.35,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 598133,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3199.79,
+        "widthM": 60.35,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZYCC",
+    "ourAirportsId": 27237,
+    "iata": "CGQ",
+    "icao": "ZYCC",
+    "name": "Changchun Longjia International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 43.996201,
+    "longitudeDeg": 125.684998,
+    "elevationFt": 706,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235178,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3200.4,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZYHB",
+    "ourAirportsId": 27238,
+    "iata": "HRB",
+    "icao": "ZYHB",
+    "name": "Harbin Taiping International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 45.623402,
+    "longitudeDeg": 126.25,
+    "elevationFt": 457,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 576294,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CONC",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235182,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZYQQ",
+    "ourAirportsId": 27241,
+    "iata": "NDG",
+    "icao": "ZYQQ",
+    "name": "Qiqihar Sanjiazi Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 47.229969,
+    "longitudeDeg": 123.914179,
+    "elevationFt": 477,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235170,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 49.987,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 604262,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 49.987,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZYTL",
+    "ourAirportsId": 27242,
+    "iata": "DLC",
+    "icao": "ZYTL",
+    "name": "Dalian Zhoushuizi International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 38.965719,
+    "longitudeDeg": 121.538477,
+    "elevationFt": 107,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235188,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZYTX",
+    "ourAirportsId": 27243,
+    "iata": "SHE",
+    "icao": "ZYTX",
+    "name": "Shenyang Taoxian International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 41.6398,
+    "longitudeDeg": 123.483668,
+    "elevationFt": 198,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235186,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

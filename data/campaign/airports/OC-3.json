@@ -1,0 +1,327 @@
+[
+  {
+    "id": "YMHB",
+    "ourAirportsId": 27058,
+    "iata": "HBA",
+    "icao": "YMHB",
+    "name": "Hobart International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -42.837032,
+    "longitudeDeg": 147.513022,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233439,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2727.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YMML",
+    "ourAirportsId": 27066,
+    "iata": "MEL",
+    "icao": "YMML",
+    "name": "Melbourne Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -37.670732,
+    "longitudeDeg": 144.837898,
+    "elevationFt": 434,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233384,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3656.99,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233383,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2286,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YPAD",
+    "ourAirportsId": 27096,
+    "iata": "ADL",
+    "icao": "YPAD",
+    "name": "Adelaide International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -34.947512,
+    "longitudeDeg": 138.533393,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233332,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233333,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 1652.016,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YPDN",
+    "ourAirportsId": 27101,
+    "iata": "DRW",
+    "icao": "YPDN",
+    "name": "Darwin International Airport / RAAF Darwin",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -12.41497,
+    "longitudeDeg": 130.88185,
+    "elevationFt": 103,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233105,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3354.019,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233106,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 1524,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YPPD",
+    "ourAirportsId": 27117,
+    "iata": "PHE",
+    "icao": "YPPD",
+    "name": "Port Hedland International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -20.382787,
+    "longitudeDeg": 118.629789,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233153,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233154,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 1000.049,
+        "widthM": 17.983,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YPPH",
+    "ourAirportsId": 27119,
+    "iata": "PER",
+    "icao": "YPPH",
+    "name": "Perth International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -31.94029998779297,
+    "longitudeDeg": 115.96700286865234,
+    "elevationFt": 67,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233339,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3443.935,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233340,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2162.861,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YSSY",
+    "ourAirportsId": 27145,
+    "iata": "SYD",
+    "icao": "YSSY",
+    "name": "Sydney Kingsford Smith International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -33.946098,
+    "longitudeDeg": 151.177002,
+    "elevationFt": 21,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233267,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3962.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233266,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2529.84,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233268,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 2438.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YWLM",
+    "ourAirportsId": 27175,
+    "iata": "NTL",
+    "icao": "YWLM",
+    "name": "Newcastle Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -32.796114,
+    "longitudeDeg": 151.835025,
+    "elevationFt": 31,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233282,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3058.058,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

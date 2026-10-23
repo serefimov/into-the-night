@@ -12,13 +12,14 @@ export function generateFuel(airports,seed='jfk-heathrow-research-v1') {
 }
 export function validateCatalog(catalog,airports,fuel,profile) {
  validateAircraftProfile(profile);
- if(catalog.catalogVersion!==1||catalog.source.license!=='Public Domain'||!/^[a-f0-9]{40}$/.test(catalog.source.commit)||!/^\d{4}-\d{2}-\d{2}$/.test(catalog.retrievedDate)||!Number.isFinite(Date.parse(catalog.retrievedDate)))throw Error('Invalid catalogue provenance');
+ if(![1,2].includes(catalog.catalogVersion)||catalog.source.license!=='Public Domain'||!/^[a-f0-9]{40}$/.test(catalog.source.commit)||!/^\d{4}-\d{2}-\d{2}$/.test(catalog.retrievedDate)||!Number.isFinite(Date.parse(catalog.retrievedDate)))throw Error('Invalid catalogue provenance');
  const seen=new Set(),sourceIds=new Set();
  for(const a of airports) {
   if(typeof a.id!=='string'||!a.id||seen.has(a.id)||!Number.isInteger(a.ourAirportsId)||sourceIds.has(a.ourAirportsId))throw Error('Duplicate/invalid airport ID');seen.add(a.id);sourceIds.add(a.ourAirportsId);
   if(!a.name||a.sourceId!=='ourairports'||!Number.isFinite(a.latitudeDeg)||Math.abs(a.latitudeDeg)>90||!Number.isFinite(a.longitudeDeg)||Math.abs(a.longitudeDeg)>180)throw Error('Invalid airport coordinates/source');
   if(!Array.isArray(a.runways)||a.suitability.operationalApproval!==false)throw Error('Unsupported airport approval');
-  for(const r of a.runways)if(!Number.isInteger(r.sourceRowId)||!Number.isFinite(r.lengthM)||r.lengthM<=0||!Number.isFinite(r.widthM)||r.widthM<=0||typeof r.surface!=='string'||!r.surface)throw Error('Invalid runway');
+  // Empty source surface means unknown; it must never pass the paved-runway screen below.
+  for(const r of a.runways)if(!Number.isInteger(r.sourceRowId)||!Number.isFinite(r.lengthM)||r.lengthM<=0||!Number.isFinite(r.widthM)||r.widthM<=0||typeof r.surface!=='string')throw Error('Invalid runway');
   if(!['screened-candidate','unverified'].includes(a.suitability.status))throw Error('Invalid suitability status');
   if(a.suitability.status==='screened-candidate'&&!a.runways.some(r=>r.lengthM>=profile.assumptions.runwayScreenLengthM&&r.widthM>=profile.assumptions.runwayScreenWidthM&&/ASP|CON|BIT|PEM/.test(r.surface.toUpperCase())))throw Error('Runway screening contradiction');
  }
@@ -29,11 +30,11 @@ export function validateCatalog(catalog,airports,fuel,profile) {
  const continents=new Set(airports.map(a=>a.continent));for(const c of ['AF','AS','EU','NA','OC','SA'])if(!continents.has(c))throw Error('World coverage missing: '+c);
  return {airports:airports.length,screenedCandidates:airports.filter(a=>a.suitability.status==='screened-candidate').length,unverified:airports.filter(a=>a.suitability.status==='unverified').map(a=>a.id),continents:[...continents].sort(),aircraft:aircraftMetrics(profile),missionFeasibility:'not-evaluated'};
 }
-export async function loadMissionData(root='data/mission') {
+export async function loadMissionData(root='data/mission',profilePath=resolve(root,'aircraft.json')) {
  const catalog=await read(resolve(root,'catalog.json'));
- if(!Array.isArray(catalog.regions)||catalog.regions.some(r=>!['AF','AS','EU','NA','OC','SA'].includes(r)))throw Error('Invalid catalogue region path');
+ if(!Array.isArray(catalog.regions)||new Set(catalog.regions).size!==catalog.regions.length||catalog.regions.some(r=>!/^(AF|AS|EU|NA|OC|SA)(?:-[1-9][0-9]*)?$/.test(r)))throw Error('Invalid catalogue region path');
  const airports=(await Promise.all(catalog.regions.map(r=>read(resolve(root,'airports',r+'.json'))))).flat().sort((a,b)=>a.id.localeCompare(b.id));
- return {catalog,airports,fuel:await read(resolve(root,'fuel.json')),profile:await read(resolve(root,'aircraft.json'))};
+ return {catalog,airports,fuel:await read(resolve(root,'fuel.json')),profile:await read(profilePath)};
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
  if(process.argv.includes('--write')) {

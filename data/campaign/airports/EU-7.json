@@ -1,0 +1,743 @@
+[
+  {
+    "id": "LDZA",
+    "ourAirportsId": 3993,
+    "iata": "ZAG",
+    "icao": "LDZA",
+    "name": "Zagreb Franjo Tuđman International Airport",
+    "country": "HR",
+    "continent": "EU",
+    "latitudeDeg": 45.742901,
+    "longitudeDeg": 16.0688,
+    "elevationFt": 353,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236426,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3251.911,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LDZD",
+    "ourAirportsId": 3994,
+    "iata": "ZAD",
+    "icao": "LDZD",
+    "name": "Zadar Airport",
+    "country": "HR",
+    "continent": "EU",
+    "latitudeDeg": 44.096986,
+    "longitudeDeg": 15.353565,
+    "elevationFt": 289,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236425,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236424,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 1999.793,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEAL",
+    "ourAirportsId": 3997,
+    "iata": "ALC",
+    "icao": "LEAL",
+    "name": "Alicante-Elche Miguel Hernández Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 38.2822,
+    "longitudeDeg": -0.558156,
+    "elevationFt": 142,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238942,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEAS",
+    "ourAirportsId": 3999,
+    "iata": "OVD",
+    "icao": "LEAS",
+    "name": "Asturias Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 43.563599,
+    "longitudeDeg": -6.03462,
+    "elevationFt": 416,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238932,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEBB",
+    "ourAirportsId": 4001,
+    "iata": "BIO",
+    "icao": "LEBB",
+    "name": "Bilbao Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 43.301102,
+    "longitudeDeg": -2.91061,
+    "elevationFt": 138,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238907,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238906,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 1909.877,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEBL",
+    "ourAirportsId": 4004,
+    "iata": "BCN",
+    "icao": "LEBL",
+    "name": "Josep Tarradellas Barcelona-El Prat Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 41.2971,
+    "longitudeDeg": 2.07846,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238922,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238921,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 2659.99,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238920,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2529.84,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEGE",
+    "ourAirportsId": 4010,
+    "iata": "GRO",
+    "icao": "LEGE",
+    "name": "Girona-Costa Brava Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 41.904639,
+    "longitudeDeg": 2.761774,
+    "elevationFt": 468,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238893,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEIB",
+    "ourAirportsId": 4013,
+    "iata": "IBZ",
+    "icao": "LEIB",
+    "name": "Ibiza Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 38.872898,
+    "longitudeDeg": 1.37312,
+    "elevationFt": 24,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238948,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEMD",
+    "ourAirportsId": 4019,
+    "iata": "MAD",
+    "icao": "LEMD",
+    "name": "Adolfo Suárez Madrid–Barajas Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 40.493407,
+    "longitudeDeg": -3.572249,
+    "elevationFt": 1998,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238904,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 4349.801,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238902,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3988.003,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238903,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEMG",
+    "ourAirportsId": 4020,
+    "iata": "AGP",
+    "icao": "LEMG",
+    "name": "Málaga-Costa del Sol Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 36.678234,
+    "longitudeDeg": -4.500208,
+    "elevationFt": 53,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238901,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3200.4,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 260340,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2749.906,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEMH",
+    "ourAirportsId": 4021,
+    "iata": "MAH",
+    "icao": "LEMH",
+    "name": "Menorca Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 39.862598,
+    "longitudeDeg": 4.21865,
+    "elevationFt": 302,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 336332,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2549.957,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEMI",
+    "ourAirportsId": 308134,
+    "iata": "RMU",
+    "icao": "LEMI",
+    "name": "Region of Murcia International Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 37.802852,
+    "longitudeDeg": -1.124884,
+    "elevationFt": 644,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 335773,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 44.806,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEPA",
+    "ourAirportsId": 4035,
+    "iata": "PMI",
+    "icao": "LEPA",
+    "name": "Palma de Mallorca Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 39.551701,
+    "longitudeDeg": 2.73881,
+    "elevationFt": 27,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238931,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3269.894,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238930,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LERS",
+    "ourAirportsId": 4031,
+    "iata": "REU",
+    "icao": "LERS",
+    "name": "Reus Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 41.147509,
+    "longitudeDeg": 1.168354,
+    "elevationFt": 233,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238911,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2454.859,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEST",
+    "ourAirportsId": 4038,
+    "iata": "SCQ",
+    "icao": "LEST",
+    "name": "Santiago-Rosalía de Castro Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 42.896301,
+    "longitudeDeg": -8.41514,
+    "elevationFt": 1213,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238887,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEVC",
+    "ourAirportsId": 4042,
+    "iata": "VLC",
+    "icao": "LEVC",
+    "name": "Valencia Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 39.489162,
+    "longitudeDeg": -0.480961,
+    "elevationFt": 240,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238886,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEZG",
+    "ourAirportsId": 4048,
+    "iata": "ZAZ",
+    "icao": "LEZG",
+    "name": "Zaragoza Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 41.666199,
+    "longitudeDeg": -1.04155,
+    "elevationFt": 863,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238923,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 3717.95,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238924,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEZL",
+    "ourAirportsId": 4049,
+    "iata": "SVQ",
+    "icao": "LEZL",
+    "name": "Seville Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 37.417999,
+    "longitudeDeg": -5.89311,
+    "elevationFt": 112,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238939,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3361.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFBD",
+    "ourAirportsId": 4060,
+    "iata": "BOD",
+    "icao": "LFBD",
+    "name": "Bordeaux–Mérignac Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 44.82865,
+    "longitudeDeg": -0.715356,
+    "elevationFt": 162,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235926,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235927,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2414.93,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFBO",
+    "ourAirportsId": 4070,
+    "iata": "TLS",
+    "icao": "LFBO",
+    "name": "Toulouse-Blagnac Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 43.629101,
+    "longitudeDeg": 1.36382,
+    "elevationFt": 499,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235934,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235935,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

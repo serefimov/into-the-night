@@ -1,0 +1,677 @@
+[
+  {
+    "id": "MMQT",
+    "ourAirportsId": 4747,
+    "iata": "QRO",
+    "icao": "MMQT",
+    "name": "Querétaro Intercontinental Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 20.618779,
+    "longitudeDeg": -100.186449,
+    "elevationFt": 6296,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237647,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMSD",
+    "ourAirportsId": 4750,
+    "iata": "SJD",
+    "icao": "MMSD",
+    "name": "Los Cabos International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 23.151919,
+    "longitudeDeg": -109.720731,
+    "elevationFt": 374,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237695,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMSM",
+    "ourAirportsId": 31923,
+    "iata": "NLU",
+    "icao": "MMSM",
+    "name": "Felipe Ángeles International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 19.743824,
+    "longitudeDeg": -99.01507,
+    "elevationFt": 7369,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 348716,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 4500.067,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 348717,
+        "ends": [
+          "04C",
+          "22C"
+        ],
+        "lengthM": 4500.067,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 348718,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMTJ",
+    "ourAirportsId": 4757,
+    "iata": "TIJ",
+    "icao": "MMTJ",
+    "name": "General Abelardo L. Rodriguez International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 32.541043,
+    "longitudeDeg": -116.969976,
+    "elevationFt": 489,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237700,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2959.913,
+        "widthM": 43.891,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMTL",
+    "ourAirportsId": 520012,
+    "iata": "TQO",
+    "icao": "MMTL",
+    "name": "Felipe Carrillo Puerto International Airport Tulum",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 20.172098,
+    "longitudeDeg": -87.660272,
+    "elevationFt": 66,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 525588,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMTO",
+    "ourAirportsId": 4760,
+    "iata": "TLC",
+    "icao": "MMTO",
+    "name": "Adolfo López Mateos International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 19.3369,
+    "longitudeDeg": -99.56583,
+    "elevationFt": 8466,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237747,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 4200.144,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMUN",
+    "ourAirportsId": 4762,
+    "iata": "CUN",
+    "icao": "MMUN",
+    "name": "Cancún International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 21.040817,
+    "longitudeDeg": -86.87347,
+    "elevationFt": 22,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237786,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 298622,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMVA",
+    "ourAirportsId": 4763,
+    "iata": "VSA",
+    "icao": "MMVA",
+    "name": "Carlos Rovirosa Pérez International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 17.994283,
+    "longitudeDeg": -92.818199,
+    "elevationFt": 46,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237790,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMVR",
+    "ourAirportsId": 4764,
+    "iata": "VER",
+    "icao": "MMVR",
+    "name": "General Heriberto Jara International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 19.139589,
+    "longitudeDeg": -96.188602,
+    "elevationFt": 90,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237739,
+        "ends": [
+          "19",
+          "01"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMZH",
+    "ourAirportsId": 4766,
+    "iata": "ZIH",
+    "icao": "MMZH",
+    "name": "Ixtapa-Zihuatanejo International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 17.601771,
+    "longitudeDeg": -101.460629,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237789,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2506.066,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MNMG",
+    "ourAirportsId": 4774,
+    "iata": "MGA",
+    "icao": "MNMG",
+    "name": "Augusto C. Sandino (Managua) International Airport",
+    "country": "NI",
+    "continent": "NA",
+    "latitudeDeg": 12.1415,
+    "longitudeDeg": -86.168198,
+    "elevationFt": 194,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238004,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2442.058,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MPTO",
+    "ourAirportsId": 4793,
+    "iata": "PTY",
+    "icao": "MPTO",
+    "name": "Tocumen International Airport",
+    "country": "PA",
+    "continent": "NA",
+    "latitudeDeg": 9.07136,
+    "longitudeDeg": -79.383499,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238295,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3049.829,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238296,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 2682.24,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MRLB",
+    "ourAirportsId": 4806,
+    "iata": "LIR",
+    "icao": "MRLB",
+    "name": "Daniel Oduber Quirós International Airport",
+    "country": "CR",
+    "continent": "NA",
+    "latitudeDeg": 10.5933,
+    "longitudeDeg": -85.544403,
+    "elevationFt": 270,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235375,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2749.906,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MROC",
+    "ourAirportsId": 4810,
+    "iata": "SJO",
+    "icao": "MROC",
+    "name": "Juan Santamaría International Airport",
+    "country": "CR",
+    "continent": "NA",
+    "latitudeDeg": 9.99386,
+    "longitudeDeg": -84.208801,
+    "elevationFt": 3021,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235385,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3012.034,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MSLP",
+    "ourAirportsId": 4820,
+    "iata": "SAL",
+    "icao": "MSLP",
+    "name": "El Salvador International Airport Saint Óscar Arnulfo Romero y Galdámez",
+    "country": "SV",
+    "continent": "NA",
+    "latitudeDeg": 13.44447,
+    "longitudeDeg": -89.055784,
+    "elevationFt": 101,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235662,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3200.4,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MTCH",
+    "ourAirportsId": 4823,
+    "iata": "CAP",
+    "icao": "MTCH",
+    "name": "Cap Haitien International Airport",
+    "country": "HT",
+    "continent": "NA",
+    "latitudeDeg": 19.725547,
+    "longitudeDeg": -72.20071,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236408,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2652.065,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MTPP",
+    "ourAirportsId": 4825,
+    "iata": "PAP",
+    "icao": "MTPP",
+    "name": "Toussaint Louverture International Airport",
+    "country": "HT",
+    "continent": "NA",
+    "latitudeDeg": 18.580023,
+    "longitudeDeg": -72.292596,
+    "elevationFt": 122,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236406,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3040.075,
+        "widthM": 42.977,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MUCM",
+    "ourAirportsId": 4834,
+    "iata": "CMW",
+    "icao": "MUCM",
+    "name": "Ignacio Agramonte International Airport",
+    "country": "CU",
+    "continent": "NA",
+    "latitudeDeg": 21.419909,
+    "longitudeDeg": -77.848039,
+    "elevationFt": 413,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235419,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MUCU",
+    "ourAirportsId": 4835,
+    "iata": "SCU",
+    "icao": "MUCU",
+    "name": "Antonio Maceo International Airport",
+    "country": "CU",
+    "continent": "NA",
+    "latitudeDeg": 19.97474,
+    "longitudeDeg": -75.835504,
+    "elevationFt": 249,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235410,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 4002.024,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235411,
+        "ends": [
+          "19",
+          "01"
+        ],
+        "lengthM": 1399.946,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MUHA",
+    "ourAirportsId": 4839,
+    "iata": "HAV",
+    "icao": "MUHA",
+    "name": "José Martí International Airport",
+    "country": "CU",
+    "continent": "NA",
+    "latitudeDeg": 22.989200592041016,
+    "longitudeDeg": -82.40910339355469,
+    "elevationFt": 210,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235402,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

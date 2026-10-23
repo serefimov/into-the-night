@@ -1,0 +1,829 @@
+[
+  {
+    "id": "BGGH",
+    "ourAirportsId": 114,
+    "iata": "GOH",
+    "icao": "BGGH",
+    "name": "Nuuk International Airport",
+    "country": "GL",
+    "continent": "NA",
+    "latitudeDeg": 64.191066,
+    "longitudeDeg": -51.67914,
+    "elevationFt": 283,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 504924,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2199.742,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CA-1291",
+    "ourAirportsId": 610367,
+    "iata": null,
+    "icao": null,
+    "name": "(Duplicate)YEG",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 53.3097,
+    "longitudeDeg": -113.58,
+    "elevationFt": 2371,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CA-1292",
+    "ourAirportsId": 610368,
+    "iata": null,
+    "icao": null,
+    "name": "YEG",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 50.341652,
+    "longitudeDeg": -106.699219,
+    "elevationFt": 2373,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYEG",
+    "ourAirportsId": 1717,
+    "iata": "YEG",
+    "icao": "CYEG",
+    "name": "Edmonton International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 53.3097,
+    "longitudeDeg": -113.580002,
+    "elevationFt": 2373,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234742,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234743,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3108.96,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYHM",
+    "ourAirportsId": 1763,
+    "iata": "YHM",
+    "icao": "CYHM",
+    "name": "John C. Munro Hamilton International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 43.171308,
+    "longitudeDeg": -79.929416,
+    "elevationFt": 780,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234740,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3049.829,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234739,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 1831.848,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYHZ",
+    "ourAirportsId": 1770,
+    "iata": "YHZ",
+    "icao": "CYHZ",
+    "name": "Halifax / Stanfield International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 44.8807983398,
+    "longitudeDeg": -63.5085983276,
+    "elevationFt": 477,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234672,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3200.4,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234673,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2346.96,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYLW",
+    "ourAirportsId": 1808,
+    "iata": "YLW",
+    "icao": "CYLW",
+    "name": "Kelowna International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 49.9561,
+    "longitudeDeg": -119.377998,
+    "elevationFt": 1421,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235026,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2712.72,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYOW",
+    "ourAirportsId": 1840,
+    "iata": "YOW",
+    "icao": "CYOW",
+    "name": "Ottawa Macdonald-Cartier International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 45.322498,
+    "longitudeDeg": -75.669197,
+    "elevationFt": 374,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234951,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3048,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234950,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2438.4,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234949,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 1005.84,
+        "widthM": 22.86,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYQB",
+    "ourAirportsId": 1864,
+    "iata": "YQB",
+    "icao": "CYQB",
+    "name": "Quebec Jean Lesage International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 46.7911,
+    "longitudeDeg": -71.393303,
+    "elevationFt": 244,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234547,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234548,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1737.36,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYQG",
+    "ourAirportsId": 1867,
+    "iata": "YQG",
+    "icao": "CYQG",
+    "name": "Windsor International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 42.2756,
+    "longitudeDeg": -82.955597,
+    "elevationFt": 622,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234767,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234768,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 1569.72,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYQX",
+    "ourAirportsId": 1881,
+    "iata": "YQX",
+    "icao": "CYQX",
+    "name": "Gander International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 48.936258,
+    "longitudeDeg": -54.567719,
+    "elevationFt": 496,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234811,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3108.96,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234813,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2712.72,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYUL",
+    "ourAirportsId": 1928,
+    "iata": "YUL",
+    "icao": "CYUL",
+    "name": "Montreal / Pierre Elliott Trudeau International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 45.467837,
+    "longitudeDeg": -73.742294,
+    "elevationFt": 118,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235037,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235036,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 2926.08,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYVR",
+    "ourAirportsId": 1941,
+    "iata": "YVR",
+    "icao": "CYVR",
+    "name": "Vancouver International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 49.193901,
+    "longitudeDeg": -123.183998,
+    "elevationFt": 14,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234511,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3505.2,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234512,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3029.712,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234513,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2225.04,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYWG",
+    "ourAirportsId": 1946,
+    "iata": "YWG",
+    "icao": "CYWG",
+    "name": "Winnipeg / James Armstrong Richardson International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 49.909999847399995,
+    "longitudeDeg": -97.2398986816,
+    "elevationFt": 783,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234936,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234935,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2694.737,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYXE",
+    "ourAirportsId": 1957,
+    "iata": "YXE",
+    "icao": "CYXE",
+    "name": "Saskatoon John G. Diefenbaker International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 52.170723,
+    "longitudeDeg": -106.700793,
+    "elevationFt": 1653,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234809,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2529.84,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234810,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 1889.76,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYYC",
+    "ourAirportsId": 1973,
+    "iata": "YYC",
+    "icao": "CYYC",
+    "name": "Calgary International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 51.118822,
+    "longitudeDeg": -114.009933,
+    "elevationFt": 3557,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 319574,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 4267.2,
+        "widthM": 60.96,
+        "surface": "CONC",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234695,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3863.34,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234694,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2438.4,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYYJ",
+    "ourAirportsId": 1979,
+    "iata": "YYJ",
+    "icao": "CYYJ",
+    "name": "Victoria International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 48.647201,
+    "longitudeDeg": -123.427792,
+    "elevationFt": 63,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234598,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2133.6,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234597,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 1532.23,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234599,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 1524.305,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYYR",
+    "ourAirportsId": 1985,
+    "iata": "YYR",
+    "icao": "CYYR",
+    "name": "Goose Bay Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 53.3191986084,
+    "longitudeDeg": -60.4258003235,
+    "elevationFt": 160,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234880,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3366.821,
+        "widthM": 63.703,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234881,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2919.984,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYYT",
+    "ourAirportsId": 1986,
+    "iata": "YYT",
+    "icao": "CYYT",
+    "name": "St. John's International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 47.618599,
+    "longitudeDeg": -52.7519,
+    "elevationFt": 461,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234878,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2591.41,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234879,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2135.124,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYYZ",
+    "ourAirportsId": 1990,
+    "iata": "YYZ",
+    "icao": "CYYZ",
+    "name": "Toronto Pearson International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 43.675935,
+    "longitudeDeg": -79.629421,
+    "elevationFt": 569,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234792,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3389.376,
+        "widthM": 60.96,
+        "surface": "ASP/CONC",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234796,
+        "ends": [
+          "15L",
+          "33R"
+        ],
+        "lengthM": 3368.04,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234794,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 2955.646,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

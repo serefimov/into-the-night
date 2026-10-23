@@ -1,0 +1,699 @@
+[
+  {
+    "id": "SBVT",
+    "ourAirportsId": 5998,
+    "iata": "VIX",
+    "icao": "SBVT",
+    "name": "Eurico de Aguiar Salles International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -20.258,
+    "longitudeDeg": -40.285,
+    "elevationFt": 34,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 330846,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2058.01,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234357,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 1750.162,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCCI",
+    "ourAirportsId": 6009,
+    "iata": "PUQ",
+    "icao": "SCCI",
+    "name": "President Carlos Ibáñez International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -53.002602,
+    "longitudeDeg": -70.854599,
+    "elevationFt": 139,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235242,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2790.139,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235243,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2400.3,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235241,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 1677.619,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCDA",
+    "ourAirportsId": 6012,
+    "iata": "IQQ",
+    "icao": "SCDA",
+    "name": "Diego Aracena International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -20.536273,
+    "longitudeDeg": -70.181373,
+    "elevationFt": 155,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235214,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3350.057,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCEL",
+    "ourAirportsId": 6015,
+    "iata": "SCL",
+    "icao": "SCEL",
+    "name": "Comodoro Arturo Merino Benítez International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -33.393001556396484,
+    "longitudeDeg": -70.78579711914062,
+    "elevationFt": 1555,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235227,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235228,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 54.864,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCFA",
+    "ourAirportsId": 6018,
+    "iata": "ANF",
+    "icao": "SCFA",
+    "name": "Andrés Sabella Gálvez International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -23.445274,
+    "longitudeDeg": -70.445232,
+    "elevationFt": 455,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235233,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCIE",
+    "ourAirportsId": 6025,
+    "iata": "CCP",
+    "icao": "SCIE",
+    "name": "Carriel Sur International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -36.77235,
+    "longitudeDeg": -73.062828,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235230,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 321352,
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "lengthM": 1972.056,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCIP",
+    "ourAirportsId": 6026,
+    "iata": "IPC",
+    "icao": "SCIP",
+    "name": "Mataveri International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -27.165411,
+    "longitudeDeg": -109.421027,
+    "elevationFt": 227,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235212,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCQP",
+    "ourAirportsId": 314783,
+    "iata": "ZCO",
+    "icao": "SCQP",
+    "name": "La Araucanía International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -38.9259,
+    "longitudeDeg": -72.6515,
+    "elevationFt": 333,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 356513,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2439.924,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCTE",
+    "ourAirportsId": 6043,
+    "iata": "PMC",
+    "icao": "SCTE",
+    "name": "El Tepual International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -41.443093,
+    "longitudeDeg": -73.094065,
+    "elevationFt": 294,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235245,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2649.931,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SEGU",
+    "ourAirportsId": 6056,
+    "iata": "GYE",
+    "icao": "SEGU",
+    "name": "José Joaquín de Olmedo International Airport",
+    "country": "EC",
+    "continent": "SA",
+    "latitudeDeg": -2.15742,
+    "longitudeDeg": -79.883598,
+    "elevationFt": 19,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235519,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2790.139,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SEQM",
+    "ourAirportsId": 308273,
+    "iata": "UIO",
+    "icao": "SEQM",
+    "name": "Mariscal Sucre International Airport",
+    "country": "EC",
+    "continent": "SA",
+    "latitudeDeg": -0.125399,
+    "longitudeDeg": -78.354306,
+    "elevationFt": 7841,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 308279,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 4098.036,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SESA",
+    "ourAirportsId": 6076,
+    "iata": "SNC",
+    "icao": "SESA",
+    "name": "General Ulpiano Paez International Airport",
+    "country": "EC",
+    "continent": "SA",
+    "latitudeDeg": -2.210057,
+    "longitudeDeg": -80.985067,
+    "elevationFt": 18,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235508,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2630.119,
+        "widthM": 50.292,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235507,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 1129.894,
+        "widthM": 39.929,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SETN",
+    "ourAirportsId": 6084,
+    "iata": "ESM",
+    "icao": "SETN",
+    "name": "Carlos Concha Torres International Airport",
+    "country": "EC",
+    "continent": "SA",
+    "latitudeDeg": 0.978519,
+    "longitudeDeg": -79.626602,
+    "elevationFt": 32,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235505,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SGAS",
+    "ourAirportsId": 6088,
+    "iata": "ASU",
+    "icao": "SGAS",
+    "name": "Silvio Pettirossi International Airport",
+    "country": "PY",
+    "continent": "SA",
+    "latitudeDeg": -25.240156,
+    "longitudeDeg": -57.519227,
+    "elevationFt": 292,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238115,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3351.886,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SGEN",
+    "ourAirportsId": 29851,
+    "iata": "ENO",
+    "icao": "SGEN",
+    "name": "Teniente Ramon A. Ayub Gonzalez International Airport",
+    "country": "PY",
+    "continent": "SA",
+    "latitudeDeg": -27.227537,
+    "longitudeDeg": -55.837584,
+    "elevationFt": 659,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 260218,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SGES",
+    "ourAirportsId": 6091,
+    "iata": "AGT",
+    "icao": "SGES",
+    "name": "Guaraní International Airport",
+    "country": "PY",
+    "continent": "SA",
+    "latitudeDeg": -25.4555,
+    "longitudeDeg": -54.843601,
+    "elevationFt": 846,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238122,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3399.739,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SKBO",
+    "ourAirportsId": 6104,
+    "iata": "BOG",
+    "icao": "SKBO",
+    "name": "El Dorado International Airport",
+    "country": "CO",
+    "continent": "SA",
+    "latitudeDeg": 4.70159,
+    "longitudeDeg": -74.1469,
+    "elevationFt": 8361,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235331,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235332,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SKBQ",
+    "ourAirportsId": 6105,
+    "iata": "BAQ",
+    "icao": "SKBQ",
+    "name": "Ernesto Cortissoz International Airport",
+    "country": "CO",
+    "continent": "SA",
+    "latitudeDeg": 10.8896,
+    "longitudeDeg": -74.7808,
+    "elevationFt": 98,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235339,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SKCG",
+    "ourAirportsId": 6109,
+    "iata": "CTG",
+    "icao": "SKCG",
+    "name": "Rafael Nuñez International Airport",
+    "country": "CO",
+    "continent": "SA",
+    "latitudeDeg": 10.4424,
+    "longitudeDeg": -75.513,
+    "elevationFt": 4,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235328,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SKCL",
+    "ourAirportsId": 6110,
+    "iata": "CLO",
+    "icao": "SKCL",
+    "name": "Alfonso Bonilla Aragon International Airport",
+    "country": "CO",
+    "continent": "SA",
+    "latitudeDeg": 3.542717,
+    "longitudeDeg": -76.381898,
+    "elevationFt": 3162,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235302,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

@@ -1,0 +1,699 @@
+[
+  {
+    "id": "DAAE",
+    "ourAirportsId": 2049,
+    "iata": "BJA",
+    "icao": "DAAE",
+    "name": "Soummam–Abane Ramdane Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 36.712547,
+    "longitudeDeg": 5.069909,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232790,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DAAG",
+    "ourAirportsId": 2050,
+    "iata": "ALG",
+    "icao": "DAAG",
+    "name": "Houari Boumediene Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 36.693886,
+    "longitudeDeg": 3.214531,
+    "elevationFt": 82,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232826,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232827,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DAAJ",
+    "ourAirportsId": 2051,
+    "iata": "DJG",
+    "icao": "DAAJ",
+    "name": "Tiska Djanet Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 24.285448,
+    "longitudeDeg": 9.463652,
+    "elevationFt": 3176,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232795,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232794,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DAAT",
+    "ourAirportsId": 2056,
+    "iata": "TMR",
+    "icao": "DAAT",
+    "name": "Aguenar – Hadj Bey Akhamok Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 22.810992,
+    "longitudeDeg": 5.450832,
+    "elevationFt": 4518,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232800,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232801,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DAAV",
+    "ourAirportsId": 2057,
+    "iata": "GJL",
+    "icao": "DAAV",
+    "name": "Jijel Ferhat Abbas Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 36.794125,
+    "longitudeDeg": 5.873652,
+    "elevationFt": 36,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232846,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DABB",
+    "ourAirportsId": 2060,
+    "iata": "AAE",
+    "icao": "DABB",
+    "name": "Annaba Rabah Bitat Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 36.826781,
+    "longitudeDeg": 7.81334,
+    "elevationFt": 16,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232791,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232792,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2289.962,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DABC",
+    "ourAirportsId": 2061,
+    "iata": "CZL",
+    "icao": "DABC",
+    "name": "Mohamed Boudiaf International Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 36.276001,
+    "longitudeDeg": 6.62039,
+    "elevationFt": 2265,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232829,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 232828,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DABT",
+    "ourAirportsId": 2063,
+    "iata": "BLJ",
+    "icao": "DABT",
+    "name": "Batna Mostefa Ben Boulaid Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 35.752102,
+    "longitudeDeg": 6.30859,
+    "elevationFt": 2697,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232787,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DAOI",
+    "ourAirportsId": 2068,
+    "iata": "CFK",
+    "icao": "DAOI",
+    "name": "Chlef Aboubakr Belkaid International Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 36.216614,
+    "longitudeDeg": 1.341114,
+    "elevationFt": 463,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 507543,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2680.106,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 232812,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 1649.882,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DAON",
+    "ourAirportsId": 2070,
+    "iata": "TLM",
+    "icao": "DAON",
+    "name": "Zenata – Messali El Hadj Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 35.012732,
+    "longitudeDeg": -1.457117,
+    "elevationFt": 814,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232793,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DAOO",
+    "ourAirportsId": 2071,
+    "iata": "ORN",
+    "icao": "DAOO",
+    "name": "Oran Es-Sénia (Ahmed Ben Bella) International Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 35.620648,
+    "longitudeDeg": -0.622486,
+    "elevationFt": 295,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232841,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 349210,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DAUB",
+    "ourAirportsId": 2076,
+    "iata": "BSK",
+    "icao": "DAUB",
+    "name": "Biskra - Mohamed Khider Airport",
+    "country": "DZ",
+    "continent": "AF",
+    "latitudeDeg": 34.79318,
+    "longitudeDeg": 5.738899,
+    "elevationFt": 289,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232821,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2886.151,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DBBB",
+    "ourAirportsId": 2087,
+    "iata": "COO",
+    "icao": "DBBB",
+    "name": "Cotonou Cadjehoun International Airport",
+    "country": "BJ",
+    "continent": "AF",
+    "latitudeDeg": 6.35723,
+    "longitudeDeg": 2.38435,
+    "elevationFt": 19,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233745,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2409.749,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DFFD",
+    "ourAirportsId": 2088,
+    "iata": "OUA",
+    "icao": "DFFD",
+    "name": "Ouagadougou Thomas Sankara International Airport",
+    "country": "BF",
+    "continent": "AF",
+    "latitudeDeg": 12.3532,
+    "longitudeDeg": -1.51242,
+    "elevationFt": 1037,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246024,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DFOO",
+    "ourAirportsId": 2089,
+    "iata": "BOY",
+    "icao": "DFOO",
+    "name": "Bobo Dioulasso Airport",
+    "country": "BF",
+    "continent": "AF",
+    "latitudeDeg": 11.1601,
+    "longitudeDeg": -4.33097,
+    "elevationFt": 1511,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246022,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3299.765,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DGAA",
+    "ourAirportsId": 2090,
+    "iata": "ACC",
+    "icao": "DGAA",
+    "name": "Kotoka International Airport",
+    "country": "GH",
+    "continent": "AF",
+    "latitudeDeg": 5.605189800262451,
+    "longitudeDeg": -0.16678600013256073,
+    "elevationFt": 205,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236092,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3403.092,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DGLE",
+    "ourAirportsId": 2091,
+    "iata": "TML",
+    "icao": "DGLE",
+    "name": "Yakubu Tali International Airport",
+    "country": "GH",
+    "continent": "AF",
+    "latitudeDeg": 9.553909,
+    "longitudeDeg": -0.86606,
+    "elevationFt": 553,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236093,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2438.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DGSI",
+    "ourAirportsId": 2093,
+    "iata": "KMS",
+    "icao": "DGSI",
+    "name": "Prempeh I International Airport",
+    "country": "GH",
+    "continent": "AF",
+    "latitudeDeg": 6.71456,
+    "longitudeDeg": -1.59082,
+    "elevationFt": 942,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236091,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2320.138,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DIAP",
+    "ourAirportsId": 2096,
+    "iata": "ABJ",
+    "icao": "DIAP",
+    "name": "Félix-Houphouët-Boigny International Airport",
+    "country": "CI",
+    "continent": "AF",
+    "latitudeDeg": 5.26139,
+    "longitudeDeg": -3.92629,
+    "elevationFt": 21,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237074,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DIYO",
+    "ourAirportsId": 2102,
+    "iata": "ASK",
+    "icao": "DIYO",
+    "name": "Yamoussoukro International Airport",
+    "country": "CI",
+    "continent": "AF",
+    "latitudeDeg": 6.90317,
+    "longitudeDeg": -5.36558,
+    "elevationFt": 699,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237073,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

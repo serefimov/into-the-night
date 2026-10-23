@@ -1,0 +1,742 @@
+[
+  {
+    "id": "ZBOW",
+    "ourAirportsId": 30679,
+    "iata": "BAV",
+    "icao": "ZBOW",
+    "name": "Baotou Donghe International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 40.560001,
+    "longitudeDeg": 109.997002,
+    "elevationFt": 3321,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 349122,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 60.96,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBSJ",
+    "ourAirportsId": 27191,
+    "iata": "SJW",
+    "icao": "ZBSJ",
+    "name": "Shijiazhuang Zhengding International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 38.280701,
+    "longitudeDeg": 114.696999,
+    "elevationFt": 233,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235155,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBTJ",
+    "ourAirportsId": 27192,
+    "iata": "TSN",
+    "icao": "ZBTJ",
+    "name": "Tianjin Binhai International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 39.124401092499994,
+    "longitudeDeg": 117.346000671,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235189,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 321346,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBYC",
+    "ourAirportsId": 300455,
+    "iata": "YCU",
+    "icao": "ZBYC",
+    "name": "Yuncheng Yanhu International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 35.117823,
+    "longitudeDeg": 111.034023,
+    "elevationFt": 1242,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 350734,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBYN",
+    "ourAirportsId": 27193,
+    "iata": "TYN",
+    "icao": "ZBYN",
+    "name": "Taiyuan Wusu International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 37.746899,
+    "longitudeDeg": 112.627998,
+    "elevationFt": 2575,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235190,
+        "ends": [
+          "13L",
+          "31R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 608317,
+        "ends": [
+          "13R",
+          "31L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGDY",
+    "ourAirportsId": 30958,
+    "iata": "DYG",
+    "icao": "ZGDY",
+    "name": "Zhangjiajie Hehua International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 29.104749,
+    "longitudeDeg": 110.442786,
+    "elevationFt": 8530,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 348941,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGGG",
+    "ourAirportsId": 27194,
+    "iata": "CAN",
+    "icao": "ZGGG",
+    "name": "Guangzhou Baiyun International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 23.392401,
+    "longitudeDeg": 113.299004,
+    "elevationFt": 50,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235172,
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 322334,
+        "ends": [
+          "02L",
+          "20R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235173,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGHA",
+    "ourAirportsId": 27195,
+    "iata": "CSX",
+    "icao": "ZGHA",
+    "name": "Changsha Huanghua International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 28.189199,
+    "longitudeDeg": 113.220001,
+    "elevationFt": 217,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 335156,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235193,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGKL",
+    "ourAirportsId": 27196,
+    "iata": "KWL",
+    "icao": "ZGKL",
+    "name": "Guilin Liangjiang International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 25.219828,
+    "longitudeDeg": 110.039553,
+    "elevationFt": 570,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235162,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 44.806,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGNN",
+    "ourAirportsId": 27197,
+    "iata": "NNG",
+    "icao": "ZGNN",
+    "name": "Nanning Wuxu International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 22.598071,
+    "longitudeDeg": 108.181922,
+    "elevationFt": 421,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235197,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGOW",
+    "ourAirportsId": 32400,
+    "iata": "SWA",
+    "icao": "ZGOW",
+    "name": "Jieyang Chaoshan International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 23.552,
+    "longitudeDeg": 116.5033,
+    "elevationFt": null,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 315146,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGSD",
+    "ourAirportsId": 30593,
+    "iata": "ZUH",
+    "icao": "ZGSD",
+    "name": "Zhuhai Jinwan Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 22.006399,
+    "longitudeDeg": 113.375999,
+    "elevationFt": 23,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 348406,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 4119.982,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGSZ",
+    "ourAirportsId": 27198,
+    "iata": "SZX",
+    "icao": "ZGSZ",
+    "name": "Shenzhen Bao'an International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 22.639474,
+    "longitudeDeg": 113.803262,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 329873,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 602535,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 235199,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZGZJ",
+    "ourAirportsId": 354995,
+    "iata": "ZHA",
+    "icao": "ZGZJ",
+    "name": "Zhanjiang Wuchuan International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 21.481667,
+    "longitudeDeg": 110.590278,
+    "elevationFt": null,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZHCC",
+    "ourAirportsId": 27199,
+    "iata": "CGO",
+    "icao": "ZHCC",
+    "name": "Zhengzhou Xinzheng International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 34.526497,
+    "longitudeDeg": 113.849165,
+    "elevationFt": 495,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 347965,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 60.046,
+        "surface": "",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235171,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZHEC",
+    "ourAirportsId": 347108,
+    "iata": "EHU",
+    "icao": "ZHEC",
+    "name": "Ezhou Huahu International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 30.341178,
+    "longitudeDeg": 115.03926,
+    "elevationFt": 86,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 512660,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CONC",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 512661,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CONC",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZHHH",
+    "ourAirportsId": 27200,
+    "iata": "WUH",
+    "icao": "ZHHH",
+    "name": "Wuhan Tianhe International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 30.774798,
+    "longitudeDeg": 114.213723,
+    "elevationFt": 113,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 330239,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235203,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 596489,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3199.79,
+        "widthM": 45.11,
+        "surface": "CONC",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZHLY",
+    "ourAirportsId": 31870,
+    "iata": "LYA",
+    "icao": "ZHLY",
+    "name": "Luoyang Beijiao Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 34.7411,
+    "longitudeDeg": 112.388,
+    "elevationFt": 840,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 354900,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZJHK",
+    "ourAirportsId": 27201,
+    "iata": "HAK",
+    "icao": "ZJHK",
+    "name": "Haikou Meilan International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 19.9349,
+    "longitudeDeg": 110.459,
+    "elevationFt": 75,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235157,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 354889,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZJSY",
+    "ourAirportsId": 27202,
+    "iata": "SYX",
+    "icao": "ZJSY",
+    "name": "Sanya Phoenix International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 18.3029,
+    "longitudeDeg": 109.412003,
+    "elevationFt": 92,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235165,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

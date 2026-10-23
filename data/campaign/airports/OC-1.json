@@ -1,0 +1,710 @@
+[
+  {
+    "id": "AGGH",
+    "ourAirportsId": 3,
+    "iata": "HIR",
+    "icao": "AGGH",
+    "name": "Honiara International Airport",
+    "country": "SB",
+    "continent": "OC",
+    "latitudeDeg": -9.428,
+    "longitudeDeg": 160.054993,
+    "elevationFt": 28,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233754,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "AU-0539",
+    "ourAirportsId": 507237,
+    "iata": "WSI",
+    "icao": "YSWS",
+    "name": "Western Sydney International (Nancy-Bird Walton) Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -33.883461,
+    "longitudeDeg": 150.712981,
+    "elevationFt": 262,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 507238,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 476.098,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "AYNZ",
+    "ourAirportsId": 66,
+    "iata": "LAE",
+    "icao": "AYNZ",
+    "name": "Nadzab Tomodachi International Airport",
+    "country": "PG",
+    "continent": "OC",
+    "latitudeDeg": -6.567995,
+    "longitudeDeg": 146.726544,
+    "elevationFt": 239,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238355,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2438.4,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "AYPY",
+    "ourAirportsId": 67,
+    "iata": "POM",
+    "icao": "AYPY",
+    "name": "Port Moresby Jacksons International Airport",
+    "country": "PG",
+    "continent": "OC",
+    "latitudeDeg": -9.443380355834961,
+    "longitudeDeg": 147.22000122070312,
+    "elevationFt": 146,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238362,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 2749.906,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238361,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 1409.7,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NCRG",
+    "ourAirportsId": 4958,
+    "iata": "RAR",
+    "icao": "NCRG",
+    "name": "Rarotonga International Airport",
+    "country": "CK",
+    "continent": "OC",
+    "latitudeDeg": -21.2027,
+    "longitudeDeg": -159.806,
+    "elevationFt": 19,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235439,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2328.062,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NFFN",
+    "ourAirportsId": 4959,
+    "iata": "NAN",
+    "icao": "NFFN",
+    "name": "Nadi International Airport",
+    "country": "FJ",
+    "continent": "OC",
+    "latitudeDeg": -17.761822,
+    "longitudeDeg": 177.437843,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235777,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3273.247,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235778,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2135.734,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NFNA",
+    "ourAirportsId": 4960,
+    "iata": "SUV",
+    "icao": "NFNA",
+    "name": "Nausori International Airport",
+    "country": "FJ",
+    "continent": "OC",
+    "latitudeDeg": -18.044226,
+    "longitudeDeg": 178.561486,
+    "elevationFt": 17,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235776,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2147.926,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NFTF",
+    "ourAirportsId": 4962,
+    "iata": "TBU",
+    "icao": "NFTF",
+    "name": "Fua'amotu International Airport",
+    "country": "TO",
+    "continent": "OC",
+    "latitudeDeg": -21.241438,
+    "longitudeDeg": -175.149164,
+    "elevationFt": 126,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239206,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2680.716,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239207,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 1509.065,
+        "widthM": 59.436,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NFTV",
+    "ourAirportsId": 4964,
+    "iata": "VAV",
+    "icao": "NFTV",
+    "name": "Vava'u International Airport",
+    "country": "TO",
+    "continent": "OC",
+    "latitudeDeg": -18.5853,
+    "longitudeDeg": -173.962006,
+    "elevationFt": 236,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239208,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 1704.746,
+        "widthM": 29.87,
+        "surface": "BIT",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NGTA",
+    "ourAirportsId": 4972,
+    "iata": "TRW",
+    "icao": "NGTA",
+    "name": "Bonriki International Airport",
+    "country": "KI",
+    "continent": "OC",
+    "latitudeDeg": 1.38164,
+    "longitudeDeg": 173.147003,
+    "elevationFt": 9,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237285,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2011.07,
+        "widthM": 41.148,
+        "surface": "BIT",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NLWW",
+    "ourAirportsId": 4975,
+    "iata": "WLS",
+    "icao": "NLWW",
+    "name": "Hihifo Airport",
+    "country": "WF",
+    "continent": "OC",
+    "latitudeDeg": -13.239445,
+    "longitudeDeg": -176.19865,
+    "elevationFt": 79,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246218,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2100.072,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NSFA",
+    "ourAirportsId": 4976,
+    "iata": "APW",
+    "icao": "NSFA",
+    "name": "Faleolo International Airport",
+    "country": "WS",
+    "continent": "OC",
+    "latitudeDeg": -13.83,
+    "longitudeDeg": -172.007996,
+    "elevationFt": 58,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246224,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NSTU",
+    "ourAirportsId": 4978,
+    "iata": "PPG",
+    "icao": "NSTU",
+    "name": "Pago Pago International Airport",
+    "country": "AS",
+    "continent": "OC",
+    "latitudeDeg": -14.331,
+    "longitudeDeg": -170.710007,
+    "elevationFt": 32,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232907,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232908,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 1158.24,
+        "widthM": 30.48,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NTAA",
+    "ourAirportsId": 4979,
+    "iata": "PPT",
+    "icao": "NTAA",
+    "name": "Fa'a'ā International Airport",
+    "country": "PF",
+    "continent": "OC",
+    "latitudeDeg": -17.553472,
+    "longitudeDeg": -149.606936,
+    "elevationFt": 5,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235795,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3462.528,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NVVV",
+    "ourAirportsId": 5011,
+    "iata": "VLI",
+    "icao": "NVVV",
+    "name": "Bauerfield International Airport",
+    "country": "VU",
+    "continent": "OC",
+    "latitudeDeg": -17.699301,
+    "longitudeDeg": 168.320007,
+    "elevationFt": 70,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237885,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237886,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 1008.888,
+        "widthM": 32.004,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NWWW",
+    "ourAirportsId": 5021,
+    "iata": "NOU",
+    "icao": "NWWW",
+    "name": "La Tontouta International Airport",
+    "country": "NC",
+    "continent": "OC",
+    "latitudeDeg": -22.014601,
+    "longitudeDeg": 166.212997,
+    "elevationFt": 52,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237866,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3250.082,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NZAA",
+    "ourAirportsId": 5023,
+    "iata": "AKL",
+    "icao": "NZAA",
+    "name": "Auckland International Airport",
+    "country": "NZ",
+    "continent": "OC",
+    "latitudeDeg": -37.01199,
+    "longitudeDeg": 174.786331,
+    "elevationFt": 23,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238096,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3635.045,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NZCH",
+    "ourAirportsId": 5026,
+    "iata": "CHC",
+    "icao": "NZCH",
+    "name": "Christchurch International Airport",
+    "country": "NZ",
+    "continent": "OC",
+    "latitudeDeg": -43.489029,
+    "longitudeDeg": 172.532065,
+    "elevationFt": 123,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238074,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3287.878,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238075,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1702.918,
+        "widthM": 45.11,
+        "surface": "BIT",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238073,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 515.112,
+        "widthM": 69.799,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NZQN",
+    "ourAirportsId": 5051,
+    "iata": "ZQN",
+    "icao": "NZQN",
+    "name": "Queenstown Airport",
+    "country": "NZ",
+    "continent": "OC",
+    "latitudeDeg": -45.019205,
+    "longitudeDeg": 168.746379,
+    "elevationFt": 1171,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238105,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 1890.979,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238107,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 890.016,
+        "widthM": 10.058,
+        "surface": "BITUM",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NZWN",
+    "ourAirportsId": 5063,
+    "iata": "WLG",
+    "icao": "NZWN",
+    "name": "Wellington International Airport",
+    "country": "NZ",
+    "continent": "OC",
+    "latitudeDeg": -41.326839,
+    "longitudeDeg": 174.806862,
+    "elevationFt": 41,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238043,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 1936.09,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

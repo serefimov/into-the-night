@@ -1,0 +1,732 @@
+[
+  {
+    "id": "OOMS",
+    "ourAirportsId": 5242,
+    "iata": "MCT",
+    "icao": "OOMS",
+    "name": "Muscat International Airport",
+    "country": "OM",
+    "continent": "AS",
+    "latitudeDeg": 23.600218,
+    "longitudeDeg": 58.285268,
+    "elevationFt": 48,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237632,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 4080.053,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237631,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OOSA",
+    "ourAirportsId": 5244,
+    "iata": "SLL",
+    "icao": "OOSA",
+    "name": "Salalah International Airport",
+    "country": "OM",
+    "continent": "AS",
+    "latitudeDeg": 17.0387,
+    "longitudeDeg": 54.091301,
+    "elevationFt": 73,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237634,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OOSH",
+    "ourAirportsId": 299742,
+    "iata": "OHS",
+    "icao": "OOSH",
+    "name": "Suhar International Airport",
+    "country": "OM",
+    "continent": "AS",
+    "latitudeDeg": 24.38604,
+    "longitudeDeg": 56.62541,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 327551,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 4015.13,
+        "widthM": 59.131,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPFA",
+    "ourAirportsId": 5251,
+    "iata": "LYP",
+    "icao": "OPFA",
+    "name": "Faisalabad International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 31.364923,
+    "longitudeDeg": 72.995319,
+    "elevationFt": 591,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238201,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 2841.955,
+        "widthM": 45.72,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 518631,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 2742.895,
+        "widthM": 29.87,
+        "surface": "CONC",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPGD",
+    "ourAirportsId": 342092,
+    "iata": "GWD",
+    "icao": "OPGW",
+    "name": "New Gwadar International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 25.296733,
+    "longitudeDeg": 62.498822,
+    "elevationFt": 61,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 523089,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPIS",
+    "ourAirportsId": 333692,
+    "iata": "ISB",
+    "icao": "OPIS",
+    "name": "Islamabad International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 33.549,
+    "longitudeDeg": 72.82566,
+    "elevationFt": 1761,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 333693,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3657.905,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 333694,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 3657.905,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPKC",
+    "ourAirportsId": 5255,
+    "iata": "KHI",
+    "icao": "OPKC",
+    "name": "Jinnah International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 24.9065,
+    "longitudeDeg": 67.160797,
+    "elevationFt": 100,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238186,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 46.025,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238187,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3200.4,
+        "widthM": 46.025,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPLA",
+    "ourAirportsId": 5257,
+    "iata": "LHE",
+    "icao": "OPLA",
+    "name": "Allama Iqbal International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 31.521601,
+    "longitudeDeg": 74.403603,
+    "elevationFt": 712,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238182,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 3360.115,
+        "widthM": 46.025,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238181,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPMT",
+    "ourAirportsId": 5264,
+    "iata": "MUX",
+    "icao": "OPMT",
+    "name": "Multan International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 30.203199,
+    "longitudeDeg": 71.419098,
+    "elevationFt": 403,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238191,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3765.194,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPPS",
+    "ourAirportsId": 5270,
+    "iata": "PEW",
+    "icao": "OPPS",
+    "name": "Bacha Khan International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 33.9939,
+    "longitudeDeg": 71.514603,
+    "elevationFt": 1158,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238210,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPQT",
+    "ourAirportsId": 5272,
+    "iata": "UET",
+    "icao": "OPQT",
+    "name": "Quetta International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 30.2514,
+    "longitudeDeg": 66.937798,
+    "elevationFt": 5267,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238195,
+        "ends": [
+          "13R",
+          "31L"
+        ],
+        "lengthM": 3657.905,
+        "widthM": 33.528,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238194,
+        "ends": [
+          "13L",
+          "31R"
+        ],
+        "lengthM": 3646.018,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPSD",
+    "ourAirportsId": 5277,
+    "iata": "KDU",
+    "icao": "OPSD",
+    "name": "Skardu International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 35.33866,
+    "longitudeDeg": 75.538648,
+    "elevationFt": 7316,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238215,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3656.076,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238216,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3656.076,
+        "widthM": 30.785,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPST",
+    "ourAirportsId": 41624,
+    "iata": "SKT",
+    "icao": "OPST",
+    "name": "Sialkot International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 32.535941,
+    "longitudeDeg": 74.364623,
+    "elevationFt": 837,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 307350,
+        "ends": [
+          "22L",
+          "04R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OPTU",
+    "ourAirportsId": 5283,
+    "iata": "TUK",
+    "icao": "OPTU",
+    "name": "Turbat International Airport",
+    "country": "PK",
+    "continent": "AS",
+    "latitudeDeg": 25.984767,
+    "longitudeDeg": 63.028856,
+    "elevationFt": 498,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 604634,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 2749.906,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238217,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 1828.8,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ORBI",
+    "ourAirportsId": 5289,
+    "iata": "BGW",
+    "icao": "ORBI",
+    "name": "Baghdad International Airport / New Al Muthana Air Base",
+    "country": "IQ",
+    "continent": "AS",
+    "latitudeDeg": 33.262501,
+    "longitudeDeg": 44.2346,
+    "elevationFt": 114,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237083,
+        "ends": [
+          "15L",
+          "33R"
+        ],
+        "lengthM": 4000.195,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237082,
+        "ends": [
+          "15R",
+          "33L"
+        ],
+        "lengthM": 3300.984,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ORBM",
+    "ourAirportsId": 5290,
+    "iata": "OSM",
+    "icao": "ORBM",
+    "name": "Mosul International Airport",
+    "country": "IQ",
+    "continent": "AS",
+    "latitudeDeg": 36.305801,
+    "longitudeDeg": 43.1474,
+    "elevationFt": 719,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237093,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2650.236,
+        "widthM": 44.806,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ORER",
+    "ourAirportsId": 5292,
+    "iata": "EBL",
+    "icao": "ORER",
+    "name": "Erbil International Airport",
+    "country": "IQ",
+    "continent": "AS",
+    "latitudeDeg": 36.236047,
+    "longitudeDeg": 43.946615,
+    "elevationFt": 1341,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237096,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 4799.99,
+        "widthM": 74.981,
+        "surface": "Concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ORKK",
+    "ourAirportsId": 5293,
+    "iata": "KIK",
+    "icao": "ORKK",
+    "name": "Kirkuk International Airport",
+    "country": "IQ",
+    "continent": "AS",
+    "latitudeDeg": 35.469501,
+    "longitudeDeg": 44.3489,
+    "elevationFt": 1061,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237079,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2989.783,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237080,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2601.468,
+        "widthM": 48.768,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ORMM",
+    "ourAirportsId": 5294,
+    "iata": "BSR",
+    "icao": "ORMM",
+    "name": "Basra International Airport",
+    "country": "IQ",
+    "continent": "AS",
+    "latitudeDeg": 30.549101,
+    "longitudeDeg": 47.662102,
+    "elevationFt": 11,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237090,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 4000.195,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ORNI",
+    "ourAirportsId": 311028,
+    "iata": "NJF",
+    "icao": "ORNI",
+    "name": "Al Najaf International Airport",
+    "country": "IQ",
+    "continent": "AS",
+    "latitudeDeg": 31.991116,
+    "longitudeDeg": 44.405019,
+    "elevationFt": 103,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 313027,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

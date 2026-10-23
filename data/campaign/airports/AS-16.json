@@ -1,0 +1,710 @@
+[
+  {
+    "id": "VRMM",
+    "ourAirportsId": 26636,
+    "iata": "MLE",
+    "icao": "VRMM",
+    "name": "Velana International Airport",
+    "country": "MV",
+    "continent": "AS",
+    "latitudeDeg": 4.19183,
+    "longitudeDeg": 73.529099,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237643,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTBD",
+    "ourAirportsId": 26638,
+    "iata": "DMK",
+    "icao": "VTBD",
+    "name": "Don Mueang International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 13.9126,
+    "longitudeDeg": 100.607002,
+    "elevationFt": 9,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239184,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239183,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTBS",
+    "ourAirportsId": 28118,
+    "iata": "BKK",
+    "icao": "VTBS",
+    "name": "Suvarnabhumi Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 13.6811,
+    "longitudeDeg": 100.747002,
+    "elevationFt": 5,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 249241,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 554439,
+        "ends": [
+          "02L",
+          "20R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 249240,
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTBU",
+    "ourAirportsId": 26645,
+    "iata": "UTP",
+    "icao": "VTBU",
+    "name": "U-Tapao–Rayong–Pattaya International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 12.6799,
+    "longitudeDeg": 101.004997,
+    "elevationFt": 42,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239146,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3505.2,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTCC",
+    "ourAirportsId": 26647,
+    "iata": "CNX",
+    "icao": "VTCC",
+    "name": "Chiang Mai International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 18.766799926799997,
+    "longitudeDeg": 98.962600708,
+    "elevationFt": 1036,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239167,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTCT",
+    "ourAirportsId": 26653,
+    "iata": "CEI",
+    "icao": "VTCT",
+    "name": "Mae Fah Luang - Chiang Rai International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 19.952299,
+    "longitudeDeg": 99.882896,
+    "elevationFt": 1280,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239164,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTSG",
+    "ourAirportsId": 26669,
+    "iata": "KBV",
+    "icao": "VTSG",
+    "name": "Krabi International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 8.095591,
+    "longitudeDeg": 98.988955,
+    "elevationFt": 82,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239139,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTSM",
+    "ourAirportsId": 26672,
+    "iata": "USM",
+    "icao": "VTSM",
+    "name": "Samui International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 9.54779,
+    "longitudeDeg": 100.061996,
+    "elevationFt": 64,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239161,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2060.143,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTSP",
+    "ourAirportsId": 26674,
+    "iata": "HKT",
+    "icao": "VTSP",
+    "name": "Phuket International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 8.113257,
+    "longitudeDeg": 98.3174,
+    "elevationFt": 82,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239172,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTSS",
+    "ourAirportsId": 26676,
+    "iata": "HDY",
+    "icao": "VTSS",
+    "name": "Hat Yai International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 6.93321,
+    "longitudeDeg": 100.392998,
+    "elevationFt": 90,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239178,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VTUD",
+    "ourAirportsId": 26678,
+    "iata": "UTH",
+    "icao": "VTUD",
+    "name": "Udon Thani International Airport",
+    "country": "TH",
+    "continent": "AS",
+    "latitudeDeg": 17.386186,
+    "longitudeDeg": 102.788577,
+    "elevationFt": 579,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239185,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VVCI",
+    "ourAirportsId": 26692,
+    "iata": "HPH",
+    "icao": "VVCI",
+    "name": "Cat Bi International Airport",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 20.817428,
+    "longitudeDeg": 106.724315,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246169,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VVCR",
+    "ourAirportsId": 26693,
+    "iata": "CXR",
+    "icao": "VVCR",
+    "name": "Cam Ranh International Airport / Cam Ranh Air Base",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 11.9982,
+    "longitudeDeg": 109.219002,
+    "elevationFt": 40,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246165,
+        "ends": [
+          "02L",
+          "20R"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 335528,
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VVCT",
+    "ourAirportsId": 26695,
+    "iata": "VCA",
+    "icao": "VVCT",
+    "name": "Can Tho International Airport",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 10.083397,
+    "longitudeDeg": 105.709371,
+    "elevationFt": 9,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246171,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VVDN",
+    "ourAirportsId": 26697,
+    "iata": "DAD",
+    "icao": "VVDN",
+    "name": "Da Nang International Airport",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 16.0439,
+    "longitudeDeg": 108.198997,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246164,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246163,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VVNB",
+    "ourAirportsId": 26700,
+    "iata": "HAN",
+    "icao": "VVNB",
+    "name": "Noi Bai International Airport",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 21.221201,
+    "longitudeDeg": 105.806999,
+    "elevationFt": 39,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246159,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 3799.637,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246160,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VVPB",
+    "ourAirportsId": 26702,
+    "iata": "HUI",
+    "icao": "VVPB",
+    "name": "Phu Bai International Airport",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 16.400581,
+    "longitudeDeg": 107.704094,
+    "elevationFt": 48,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246174,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2674.62,
+        "widthM": 39.624,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VVPQ",
+    "ourAirportsId": 26705,
+    "iata": "PQC",
+    "icao": "VVPQ",
+    "name": "Phú Quốc International Airport",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 10.169783,
+    "longitudeDeg": 103.99353,
+    "elevationFt": 37,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 610903,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246182,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VVTS",
+    "ourAirportsId": 26708,
+    "iata": "SGN",
+    "icao": "VVTS",
+    "name": "Tan Son Nhat International Airport",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 10.8188,
+    "longitudeDeg": 106.652,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246161,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3800.246,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246162,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VYMD",
+    "ourAirportsId": 26727,
+    "iata": "MDL",
+    "icao": "VYMD",
+    "name": "Mandalay International Airport",
+    "country": "MM",
+    "continent": "AS",
+    "latitudeDeg": 21.702199935913086,
+    "longitudeDeg": 95.97789764404297,
+    "elevationFt": 300,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233744,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 4268.114,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]
