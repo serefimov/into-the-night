@@ -16,6 +16,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: python3 scripts/test-mission-import.py
       - run: npm run check
       - run: npm run validate:solar
       - run: npm run validate:route

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-only
 """Pinned OurAirports subset. Python stdlib only; no execution from downloaded data."""
 import argparse, base64, csv, gzip, hashlib, io, json, pathlib, urllib.request
 ROOT=pathlib.Path(__file__).resolve().parents[1]
@@ -27,7 +28,7 @@ def generate(selection, downloads):
     return {'catalogVersion':1,'retrievedDate':selection['retrievedDate'],'source':{'id':'ourairports','repository':'davidmegginson/ourairports-data','commit':selection['sourceCommit'],'license':'Public Domain','termsUrl':'https://ourairports.com/data/','dictionaryUrl':'https://ourairports.com/help/data-dictionary.html','fileSha256':hashes},'airports':result}
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--source-dir',type=pathlib.Path);p.add_argument('--output',type=pathlib.Path,default=ROOT/'data/mission/airports.json');p.add_argument('--log-archive',action='store_true');args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--source-dir',type=pathlib.Path);p.add_argument('--output',type=pathlib.Path,default=ROOT/'.build/mission-import/airports.json');p.add_argument('--log-archive',action='store_true');args=p.parse_args()
     selection=json.loads((ROOT/'data/mission/selection.json').read_text())
     downloads={}
     for name in ['airports.csv','runways.csv']:

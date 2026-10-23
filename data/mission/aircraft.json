@@ -1,0 +1,59 @@
+{
+  "profileVersion": 1,
+  "id": "B788-reference-v1",
+  "name": "Boeing 787-8 Dreamliner",
+  "status": "documented-reference-approximation",
+  "checkedDate": "2026-10-23",
+  "facts": {
+    "usableTankLitres": 126206,
+    "maxTakeoffKg": 227930,
+    "maxLandingKg": 172365,
+    "maxZeroFuelKg": 161025,
+    "cruiseTasKnots": 470,
+    "cruiseMach": 0.85,
+    "publishedRangeNm": 8000,
+    "referenceTakeoffDistanceM": 2820,
+    "referenceLandingDistanceM": 1520
+  },
+  "assumptions": {
+    "fuelDensityKgPerLitre": 0.8,
+    "zeroFuelKg": 126000,
+    "cruiseBurnKgPerKm": 6.5,
+    "departureSeconds": 900,
+    "arrivalSeconds": 900,
+    "departureBurnKg": 1800,
+    "arrivalBurnKg": 200,
+    "serviceSeconds": 600,
+    "refuellingSetupSeconds": 300,
+    "refuellingLitresPerMinute": 1000,
+    "serviceBurnKgPerSecond": 0,
+    "planningReserveKg": 5000,
+    "windKmPerHour": 0,
+    "runwayScreenLengthM": 3000,
+    "runwayScreenWidthM": 45
+  },
+  "sources": [
+    {
+      "id": "boeing-acap-q",
+      "url": "https://www.boeing.com/content/dam/boeing/v2/airports/acaps/787_ACAP_Rev_Q.pdf",
+      "revision": "D6-58333 Rev Q, October 2025, 2.1.1 and 3.2.1",
+      "fields": ["usableTankLitres", "maxTakeoffKg", "maxLandingKg", "maxZeroFuelKg", "cruiseMach"],
+      "rights": "Boeing copyright; factual values and citation only, document not redistributed"
+    },
+    {
+      "id": "eurocontrol-b788",
+      "url": "https://contentzone.eurocontrol.int/aircraftperformance/details.aspx?ICAO=B788&ICAOFilter=B788",
+      "fields": ["cruiseTasKnots", "cruiseMach", "publishedRangeNm", "referenceTakeoffDistanceM", "referenceLandingDistanceM"],
+      "rights": "EUROCONTROL; factual values and citation only, no performance-database redistribution"
+    }
+  ],
+  "limitations": [
+    "Fuel consumption, fixed phase times, setup, service and reserve are explicit reference assumptions, not AFM data or regulatory dispatch minima.",
+    "Zero-fuel mass is an assumed light mission configuration, not the published operating-empty weight or a full-passenger load.",
+    "Published range is a plausibility bound, not an independently validated payload-range curve for this configuration.",
+    "No wind, variable mass-dependent burn, detailed climb path, weather, terrain, ETOPS or fuel jettison is modelled.",
+    "Full-tank short flights can exceed maximum landing mass and must not be silently accepted.",
+    "Runway geometry screening is not an operational approval: pavement strength, obstacles, altitude, temperature and services remain unverified.",
+    "The physical reference is not calibrated against JFK-Heathrow feasibility and does not establish that the mission can be completed."
+  ]
+}

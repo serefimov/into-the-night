@@ -16,7 +16,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Import public domain data at pinned commit
         run: python3 scripts/import-mission-airports.py --log-archive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Compare reproducible catalogue and stock files
+        run: |
+          node scripts/mission-data.mjs --write
+          git diff --exit-code -- data/mission/airports data/mission/catalog.json data/mission/fuel.json
       - uses: actions/upload-artifact@v4
         with:
           name: mission-airports
-          path: data/mission/airports.json
+          path: .build/mission-import/airports.json
