@@ -1,0 +1,1007 @@
+[
+  {
+    "id": "KLGB",
+    "ourAirportsId": 3644,
+    "iata": "LGB",
+    "icao": "KLGB",
+    "name": "Long Beach International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 33.816523,
+    "longitudeDeg": -118.149891,
+    "elevationFt": 60,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 242236,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3048,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242235,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 1887.322,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242234,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 1194.206,
+        "widthM": 30.48,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMCI",
+    "ourAirportsId": 3668,
+    "iata": "MCI",
+    "icao": "KMCI",
+    "name": "Kansas City International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 39.301699,
+    "longitudeDeg": -94.713893,
+    "elevationFt": 1026,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240448,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3292.145,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240449,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2895.905,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240447,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 2895.6,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMCO",
+    "ourAirportsId": 3670,
+    "iata": "MCO",
+    "icao": "KMCO",
+    "name": "Orlando International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 28.429399490356445,
+    "longitudeDeg": -81.30899810791016,
+    "elevationFt": 96,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 245954,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 3659.124,
+        "widthM": 60.96,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245953,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3658.819,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245951,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMDW",
+    "ourAirportsId": 3673,
+    "iata": "MDW",
+    "icao": "KMDW",
+    "name": "Chicago Midway International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 41.785999,
+    "longitudeDeg": -87.752403,
+    "elevationFt": 620,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244435,
+        "ends": [
+          "13L",
+          "31R"
+        ],
+        "lengthM": 1987.906,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244433,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 1964.436,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244434,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 1678.534,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMEM",
+    "ourAirportsId": 3675,
+    "iata": "MEM",
+    "icao": "KMEM",
+    "name": "Frederick W. Smith International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 35.043845,
+    "longitudeDeg": -89.97634,
+    "elevationFt": 341,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240801,
+        "ends": [
+          "18C",
+          "36C"
+        ],
+        "lengthM": 3389.376,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240802,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 2840.736,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240803,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMIA",
+    "ourAirportsId": 3685,
+    "iata": "MIA",
+    "icao": "KMIA",
+    "name": "Miami International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 25.796011,
+    "longitudeDeg": -80.289751,
+    "elevationFt": 8,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 242151,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3967.277,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242149,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3202.229,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242152,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2852.928,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMKE",
+    "ourAirportsId": 3690,
+    "iata": "MKE",
+    "icao": "KMKE",
+    "name": "General Mitchell International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 42.947201,
+    "longitudeDeg": -87.896599,
+    "elevationFt": 723,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 243985,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3044.952,
+        "widthM": 60.96,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243986,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 2529.84,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243988,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 1687.678,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMSP",
+    "ourAirportsId": 3709,
+    "iata": "MSP",
+    "icao": "KMSP",
+    "name": "Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 44.880081,
+    "longitudeDeg": -93.221741,
+    "elevationFt": 841,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 245737,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3354.629,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245738,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 3048,
+        "widthM": 60.96,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245739,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 2499.36,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMSY",
+    "ourAirportsId": 3711,
+    "iata": "MSY",
+    "icao": "KMSY",
+    "name": "Louis Armstrong New Orleans International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 29.993401,
+    "longitudeDeg": -90.264673,
+    "elevationFt": 4,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 245802,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3079.699,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245800,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2134.21,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMYR",
+    "ourAirportsId": 3717,
+    "iata": "MYR",
+    "icao": "KMYR",
+    "name": "Myrtle Beach International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 33.679699,
+    "longitudeDeg": -78.928299,
+    "elevationFt": 25,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 241262,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2896.514,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KOAK",
+    "ourAirportsId": 3744,
+    "iata": "OAK",
+    "icao": "KOAK",
+    "name": "Oakland San Francisco Bay Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 37.720085,
+    "longitudeDeg": -122.221184,
+    "elevationFt": 9,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240402,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3206.496,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240400,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 1893.722,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240401,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 1663.294,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KOKC",
+    "ourAirportsId": 3747,
+    "iata": "OKC",
+    "icao": "KOKC",
+    "name": "OKC Will Rogers World Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 35.393388,
+    "longitudeDeg": -97.598248,
+    "elevationFt": 1295,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 245815,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 2987.65,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245814,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 2987.345,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245813,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2377.44,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KOMA",
+    "ourAirportsId": 3751,
+    "iata": "OMA",
+    "icao": "KOMA",
+    "name": "Eppley Airfield",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 41.3032,
+    "longitudeDeg": -95.894096,
+    "elevationFt": 984,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240419,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 2896.21,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240420,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 2590.8,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240421,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2485.339,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KONT",
+    "ourAirportsId": 3752,
+    "iata": "ONT",
+    "icao": "KONT",
+    "name": "Ontario International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 34.056,
+    "longitudeDeg": -117.600998,
+    "elevationFt": 944,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244218,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3717.646,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244217,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3108.96,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KORD",
+    "ourAirportsId": 3754,
+    "iata": "ORD",
+    "icao": "KORD",
+    "name": "Chicago O'Hare International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 41.9786,
+    "longitudeDeg": -87.9048,
+    "elevationFt": 680,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 250468,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3962.4,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245380,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 3432.048,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 341154,
+        "ends": [
+          "09C",
+          "27C"
+        ],
+        "lengthM": 3427.476,
+        "widthM": 60.96,
+        "surface": "concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KORF",
+    "ourAirportsId": 3755,
+    "iata": "ORF",
+    "icao": "KORF",
+    "name": "Norfolk International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 36.895341,
+    "longitudeDeg": -76.201,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 242513,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2743.505,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242514,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 1486.205,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KPBI",
+    "ourAirportsId": 3766,
+    "iata": "DJT",
+    "icao": "KDJT",
+    "name": "President Donald J. Trump International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 26.683201,
+    "longitudeDeg": -80.095596,
+    "elevationFt": 19,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244100,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3048.305,
+        "widthM": 45.72,
+        "surface": "ASPH-G",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244101,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2112.569,
+        "widthM": 45.72,
+        "surface": "ASPH-G",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244099,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 979.627,
+        "widthM": 22.86,
+        "surface": "ASPH-G",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KPDX",
+    "ourAirportsId": 3768,
+    "iata": "PDX",
+    "icao": "KPDX",
+    "name": "Portland International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 45.588699,
+    "longitudeDeg": -122.598,
+    "elevationFt": 31,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244053,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244054,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 2994.66,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244052,
+        "ends": [
+          "3",
+          "21"
+        ],
+        "lengthM": 1828.8,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KPHL",
+    "ourAirportsId": 3771,
+    "iata": "PHL",
+    "icao": "KPHL",
+    "name": "Philadelphia International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 39.871899,
+    "longitudeDeg": -75.241096,
+    "elevationFt": 36,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244468,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244469,
+        "ends": [
+          "09L",
+          "27R"
+        ],
+        "lengthM": 2895.6,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244470,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 1981.2,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KPHX",
+    "ourAirportsId": 3772,
+    "iata": "PHX",
+    "icao": "KPHX",
+    "name": "Phoenix Sky Harbor International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 33.435302,
+    "longitudeDeg": -112.005905,
+    "elevationFt": 1135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240570,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3501.847,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240569,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3139.44,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240568,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 2377.44,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

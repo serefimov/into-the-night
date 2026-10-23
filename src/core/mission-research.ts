@@ -11,7 +11,7 @@ import {validateUtcMs} from './time.js';
 
 export interface ResearchAirport extends Coordinates {id: string; suitability: {status: string}}
 export interface ResearchState {airportId: string; utcMs: number; fuelKg: number; stocks: Record<string,number>; flights: number; distanceKm: number; won: boolean}
-export interface ResearchWorld {profile: AircraftProfile; airports: readonly ResearchAirport[]; targetId: string}
+export interface ResearchWorld {profile: AircraftProfile; airports: readonly ResearchAirport[]; targetId: string; targetCompletion?: 'arrival'|'after_turnaround'}
 export interface ResearchPhase {label: 'departure'|'cruise'|'arrival'|'service'|'refuelling'; route: RoutePhase}
 export interface PhaseAudit {status: SearchResult['status']; evaluations: number; phase: ResearchPhase['label']|null; eventUtcMs: number|null; bracketUtcMs: readonly [number,number]|null; safeUntilUtcMs: number; reason: SearchResult['reason']}
 export interface ResearchForecast {allowed: boolean; reasons: readonly string[]; distanceKm: number; arrivalUtcMs: number; endUtcMs: number;
@@ -22,6 +22,7 @@ function airport(world: ResearchWorld,id: string): ResearchAirport {const a=worl
 function nonnegative(n: number,name: string): void {if(!Number.isFinite(n)||n<0)throw new RangeError('Invalid '+name);}
 export function validateResearchState(world: ResearchWorld,state: ResearchState): void {
  validateAircraftProfile(world.profile);validateUtcMs(state.utcMs);airport(world,state.airportId);airport(world,world.targetId);
+ if(world.targetCompletion!==undefined&&!['arrival','after_turnaround'].includes(world.targetCompletion))throw new RangeError('Invalid target completion');
  nonnegative(state.fuelKg,'fuel');if(state.fuelKg>aircraftMetrics(world.profile).fuelCapacityKg)throw new RangeError('Overfull tank');
  nonnegative(state.flights,'flights');nonnegative(state.distanceKm,'distance');if(!Number.isInteger(state.flights)||typeof state.won!=='boolean'||(state.won&&state.airportId!==world.targetId))throw new RangeError('Invalid mission progress');
  for(const a of world.airports)nonnegative(state.stocks[a.id]!,'stock '+a.id);
@@ -50,7 +51,8 @@ export function forecastResearchFlight(world: ResearchWorld,state: ResearchState
  }
  append('departure','takeoff',from,a.departureSeconds);append('cruise','cruise',from,path.distanceKm/m.cruiseKmPerHour*3600,true);append('arrival','landing',to,a.arrivalSeconds);
  const arrivalUtcMs=cursor;let refuelling: ResearchForecast['refuelling']=null;
- if(destinationId!==world.targetId&&flight.arrivalFuelKg>=0) {
+ const terminalArrival=destinationId===world.targetId&&world.targetCompletion!=='after_turnaround';
+ if(!terminalArrival&&flight.arrivalFuelKg>=0) {
   append('service','service',to,a.serviceSeconds);const groundFuel=flight.arrivalFuelKg-a.serviceSeconds*a.serviceBurnKgPerSecond;
   if(groundFuel<0)reasons.push('ground_fuel');
   else {refuelling=aircraftRefuelling(p,groundFuel,state.stocks[destinationId]!);if(refuelling.durationSeconds>0)append('refuelling','service',to,refuelling.durationSeconds);}
@@ -59,7 +61,7 @@ export function forecastResearchFlight(world: ResearchWorld,state: ResearchState
  const allowed=reasons.length===0;
  const next=allowed?{airportId:destinationId,utcMs:cursor,fuelKg:refuelling?refuelling.fuelKg:flight.arrivalFuelKg,
   stocks:{...state.stocks,...(refuelling?{[destinationId]:refuelling.stockKg}:{})},flights:state.flights+1,distanceKm:state.distanceKm+path.distanceKm,won:destinationId===world.targetId}:null;
- return {allowed,reasons,distanceKm:path.distanceKm,arrivalUtcMs,endUtcMs:cursor,flight,refuelling,phases,solarScope:destinationId===world.targetId?'terminal_arrival':refuelling?'automatic_turnaround':'flight_only_invalid_resources',solar,next};
+ return {allowed,reasons,distanceKm:path.distanceKm,arrivalUtcMs,endUtcMs:cursor,flight,refuelling,phases,solarScope:terminalArrival?'terminal_arrival':refuelling?'automatic_turnaround':'flight_only_invalid_resources',solar,next};
 }
 /** Recompute and accept the same validated transition; rejected choices never mutate input. */
 export function executeResearchFlight(world: ResearchWorld,state: ResearchState,destinationId: string,options: SearchOptions={}): ResearchForecast {

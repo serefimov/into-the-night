@@ -14,4 +14,12 @@ class ImportTests(unittest.TestCase):
   runway['width_ft']='';result=module.generate({'idents':['TEST'],'retrievedDate':'2026-10-23','sourceCommit':'a'*40},{'airports.csv':table([airport]),'runways.csv':table([runway])});self.assertEqual(result['airports'][0]['suitability']['status'],'unverified')
  def test_duplicate_selection_rejected(self):
   with self.assertRaises(ValueError):module.generate({'idents':['TEST','TEST']},{})
+ def test_large_catalogue_includes_large_airports_and_keeps_unknown_surface_unverified(self):
+  base={'id':'1','ident':'MED','iata_code':'','gps_code':'MED','name':'Medium','type':'medium_airport','iso_country':'RU','continent':'EU','latitude_deg':'55','longitude_deg':'82','elevation_ft':'0'}
+  rows=[base,{**base,'id':'2','ident':'BIG','type':'large_airport'},{**base,'id':'3','ident':'OTHER'}]
+  runway={'id':'4','airport_ident':'BIG','closed':'0','length_ft':'11000','width_ft':'150','surface':'','lighted':'1','le_ident':'01','he_ident':'19'}
+  selection={'idents':['MED'],'includeLargeAirports':True,'catalogVersion':2,'retrievedDate':'2026-10-23','sourceCommit':'a'*40}
+  result=module.generate(selection,{'airports.csv':table(rows),'runways.csv':table([runway])})
+  self.assertEqual(result['catalogVersion'],2);self.assertEqual([a['id'] for a in result['airports']],['BIG','MED'])
+  self.assertEqual(result['airports'][0]['runways'][0]['surface'],'');self.assertEqual(result['airports'][0]['suitability']['status'],'unverified')
 if __name__=='__main__':unittest.main()

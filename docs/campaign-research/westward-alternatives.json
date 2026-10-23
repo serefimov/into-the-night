@@ -1,0 +1,288 @@
+[
+  {
+    "path": [
+      "YSSY",
+      "YPPH",
+      "FACT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -270.6098698808594,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "airportId": "FACT",
+      "utcMs": 1782191493147.1863,
+      "fuelKg": 38505.85229490175,
+      "distanceKm": 23306.7919546305,
+      "flights": 3,
+      "won": true,
+      "stockChangesKg": {
+        "FACT": 0,
+        "YPPH": 0,
+        "YSSY": 0
+      }
+    },
+    "coarse": [
+      {
+        "to": "YSSY",
+        "status": "safe",
+        "sameEnd": true
+      },
+      {
+        "to": "YPPH",
+        "status": "safe",
+        "sameEnd": true
+      },
+      {
+        "to": "FACT",
+        "status": "safe",
+        "sameEnd": true
+      }
+    ],
+    "legs": [
+      {
+        "from": "SCEL",
+        "to": "YSSY",
+        "startUtcMs": 1782079800000,
+        "arrivalUtcMs": 1782128501905.7231,
+        "endUtcMs": 1782131801905.7231,
+        "distanceKm": 11340.359671556926,
+        "initialFuelKg": 100000,
+        "flight": {
+          "durationSeconds": 48701.90572308824,
+          "burnKg": 75712.33786512002,
+          "arrivalFuelKg": 24287.66213487998,
+          "takeoffMassKg": 226000,
+          "landingMassKg": 150287.66213487997,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 56287.66213487998,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 179,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782131801905.7231,
+          "reason": null
+        }
+      },
+      {
+        "from": "YSSY",
+        "to": "YPPH",
+        "startUtcMs": 1782131801905.7231,
+        "arrivalUtcMs": 1782147155837.9707,
+        "endUtcMs": 1782150455837.9707,
+        "distanceKm": 3277.1902181923892,
+        "initialFuelKg": 56287.66213487998,
+        "flight": {
+          "durationSeconds": 15353.93224747553,
+          "burnKg": 23301.73641825053,
+          "arrivalFuelKg": 32985.925716629456,
+          "takeoffMassKg": 182287.66213487997,
+          "landingMassKg": 158985.92571662943,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 64985.925716629456,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 68,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782150455837.9707,
+          "reason": null
+        }
+      },
+      {
+        "from": "YPPH",
+        "to": "FACT",
+        "startUtcMs": 1782150455837.9707,
+        "arrivalUtcMs": 1782188193147.1863,
+        "endUtcMs": 1782191493147.1863,
+        "distanceKm": 8689.242064881186,
+        "initialFuelKg": 64985.925716629456,
+        "flight": {
+          "durationSeconds": 37737.30921553728,
+          "burnKg": 58480.073421727706,
+          "arrivalFuelKg": 6505.85229490175,
+          "takeoffMassKg": 190985.92571662946,
+          "landingMassKg": 132505.85229490174,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 38505.85229490175,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 142,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782191493147.1863,
+          "reason": null
+        }
+      }
+    ]
+  },
+  {
+    "path": [
+      "YMML",
+      "YPPH",
+      "FACT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -270.6098698808594,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "airportId": "FACT",
+      "utcMs": 1782188923170.8948,
+      "fuelKg": 42544.89842247027,
+      "distanceKm": 22685.40024269688,
+      "flights": 3,
+      "won": true,
+      "stockChangesKg": {
+        "FACT": 0,
+        "YMML": 0,
+        "YPPH": 0
+      }
+    },
+    "coarse": [
+      {
+        "to": "YMML",
+        "status": "safe",
+        "sameEnd": true
+      },
+      {
+        "to": "YPPH",
+        "status": "safe",
+        "sameEnd": true
+      },
+      {
+        "to": "FACT",
+        "status": "safe",
+        "sameEnd": true
+      }
+    ],
+    "legs": [
+      {
+        "from": "SCEL",
+        "to": "YMML",
+        "startUtcMs": 1782079800000,
+        "arrivalUtcMs": 1782128317964.8657,
+        "endUtcMs": 1782131617964.8657,
+        "distanceKm": 11295.884816052743,
+        "initialFuelKg": 100000,
+        "flight": {
+          "durationSeconds": 48517.964865803355,
+          "burnKg": 75423.25130434283,
+          "arrivalFuelKg": 24576.748695657167,
+          "takeoffMassKg": 226000,
+          "landingMassKg": 150576.74869565718,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 56576.74869565717,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 178,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782131617964.8657,
+          "reason": null
+        }
+      },
+      {
+        "from": "YMML",
+        "to": "YPPH",
+        "startUtcMs": 1782131617964.8657,
+        "arrivalUtcMs": 1782144585861.6792,
+        "endUtcMs": 1782147885861.6792,
+        "distanceKm": 2700.2733617629533,
+        "initialFuelKg": 56576.74869565717,
+        "flight": {
+          "durationSeconds": 12967.896813504241,
+          "burnKg": 19551.776851459195,
+          "arrivalFuelKg": 37024.97184419797,
+          "takeoffMassKg": 182576.74869565718,
+          "landingMassKg": 163024.97184419798,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 69024.97184419798,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 60,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782147885861.6792,
+          "reason": null
+        }
+      },
+      {
+        "from": "YPPH",
+        "to": "FACT",
+        "startUtcMs": 1782147885861.6792,
+        "arrivalUtcMs": 1782185623170.8948,
+        "endUtcMs": 1782188923170.8948,
+        "distanceKm": 8689.242064881186,
+        "initialFuelKg": 69024.97184419798,
+        "flight": {
+          "durationSeconds": 37737.30921553728,
+          "burnKg": 58480.073421727706,
+          "arrivalFuelKg": 10544.898422470273,
+          "takeoffMassKg": 195024.97184419798,
+          "landingMassKg": 136544.89842247026,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 42544.89842247027,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 142,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782188923170.8948,
+          "reason": null
+        }
+      }
+    ]
+  }
+]

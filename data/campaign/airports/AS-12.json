@@ -1,0 +1,677 @@
+[
+  {
+    "id": "USNN",
+    "ourAirportsId": 26374,
+    "iata": "NJC",
+    "icao": "USNN",
+    "name": "Nizhnevartovsk Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 60.949299,
+    "longitudeDeg": 76.483597,
+    "elevationFt": 177,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238519,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "USPP",
+    "ourAirportsId": 26375,
+    "iata": "PEE",
+    "icao": "USPP",
+    "name": "Perm International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 57.914501,
+    "longitudeDeg": 56.021198,
+    "elevationFt": 404,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238500,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3206.496,
+        "widthM": 49.073,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "USRR",
+    "ourAirportsId": 26377,
+    "iata": "SGC",
+    "icao": "USRR",
+    "name": "Surgut International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 61.340501,
+    "longitudeDeg": 73.405782,
+    "elevationFt": 200,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238518,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2790.139,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "USSS",
+    "ourAirportsId": 26378,
+    "iata": "SVX",
+    "icao": "USSS",
+    "name": "Koltsovo Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 56.743099212646,
+    "longitudeDeg": 60.802700042725,
+    "elevationFt": 764,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238601,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3025.14,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238602,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 2496.922,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "USTR",
+    "ourAirportsId": 26379,
+    "iata": "TJM",
+    "icao": "USTR",
+    "name": "Roshchino International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 57.178984,
+    "longitudeDeg": 65.327696,
+    "elevationFt": 378,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238604,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3002.89,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238605,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2703.881,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTAA",
+    "ourAirportsId": 26380,
+    "iata": "ASB",
+    "icao": "UTAA",
+    "name": "Ashgabat International Airport",
+    "country": "TM",
+    "continent": "AS",
+    "latitudeDeg": 37.986801,
+    "longitudeDeg": 58.361,
+    "elevationFt": 692,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239358,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239359,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTAT",
+    "ourAirportsId": 26383,
+    "iata": "TAZ",
+    "icao": "UTAT",
+    "name": "Dashoguz International Airport",
+    "country": "TM",
+    "continent": "AS",
+    "latitudeDeg": 41.759853,
+    "longitudeDeg": 59.836149,
+    "elevationFt": 272,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239355,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTAV",
+    "ourAirportsId": 26384,
+    "iata": "CRZ",
+    "icao": "UTAV",
+    "name": "Türkmenabat International Airport",
+    "country": "TM",
+    "continent": "AS",
+    "latitudeDeg": 38.930662,
+    "longitudeDeg": 63.563982,
+    "elevationFt": 649,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239349,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTDD",
+    "ourAirportsId": 26385,
+    "iata": "DYU",
+    "icao": "UTDD",
+    "name": "Dushanbe International Airport",
+    "country": "TJ",
+    "continent": "AS",
+    "latitudeDeg": 38.543746,
+    "longitudeDeg": 68.822977,
+    "elevationFt": 2575,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239200,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3099.816,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTDK",
+    "ourAirportsId": 6377,
+    "iata": "TJU",
+    "icao": "UTDK",
+    "name": "Kulob International Airport",
+    "country": "TJ",
+    "continent": "AS",
+    "latitudeDeg": 37.988098,
+    "longitudeDeg": 69.805,
+    "elevationFt": 2293,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239199,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 41.758,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTDL",
+    "ourAirportsId": 26386,
+    "iata": "LBD",
+    "icao": "UTDL",
+    "name": "Khujand International Airport",
+    "country": "TJ",
+    "continent": "AS",
+    "latitudeDeg": 40.215401,
+    "longitudeDeg": 69.694702,
+    "elevationFt": 1450,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239201,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3179.978,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTDT",
+    "ourAirportsId": 32556,
+    "iata": "KQT",
+    "icao": "UTDT",
+    "name": "Bokhtar International Airport",
+    "country": "TJ",
+    "continent": "AS",
+    "latitudeDeg": 37.866315,
+    "longitudeDeg": 68.864475,
+    "elevationFt": 1473,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 532967,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2285.086,
+        "widthM": 40.234,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTFN",
+    "ourAirportsId": 32038,
+    "iata": "NMA",
+    "icao": "UZFN",
+    "name": "Namangan International Airport",
+    "country": "UZ",
+    "continent": "AS",
+    "latitudeDeg": 40.984622,
+    "longitudeDeg": 71.5578,
+    "elevationFt": 1555,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 255250,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3260.75,
+        "widthM": 48.768,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTNN",
+    "ourAirportsId": 32013,
+    "iata": "NCU",
+    "icao": "UZNN",
+    "name": "Nukus International Airport",
+    "country": "UZ",
+    "continent": "AS",
+    "latitudeDeg": 42.4884,
+    "longitudeDeg": 59.623299,
+    "elevationFt": 246,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 254537,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3006.852,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 254536,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 605.028,
+        "widthM": 19.812,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTNU",
+    "ourAirportsId": 26387,
+    "iata": "UGC",
+    "icao": "UZNU",
+    "name": "Urgench International Airport",
+    "country": "UZ",
+    "continent": "AS",
+    "latitudeDeg": 41.58274,
+    "longitudeDeg": 60.64338,
+    "elevationFt": 320,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246037,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3372.612,
+        "widthM": 50.292,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTSB",
+    "ourAirportsId": 26388,
+    "iata": "BHK",
+    "icao": "UZSB",
+    "name": "Bukhara International Airport",
+    "country": "UZ",
+    "continent": "AS",
+    "latitudeDeg": 39.775319,
+    "longitudeDeg": 64.482279,
+    "elevationFt": 751,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246036,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTSS",
+    "ourAirportsId": 26390,
+    "iata": "SKD",
+    "icao": "UZSS",
+    "name": "Samarkand International Airport",
+    "country": "UZ",
+    "continent": "AS",
+    "latitudeDeg": 39.701842,
+    "longitudeDeg": 66.981467,
+    "elevationFt": 2224,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246049,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3104.998,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UTTT",
+    "ourAirportsId": 26392,
+    "iata": "TAS",
+    "icao": "UZTT",
+    "name": "Tashkent International Airport",
+    "country": "UZ",
+    "continent": "AS",
+    "latitudeDeg": 41.2579,
+    "longitudeDeg": 69.281197,
+    "elevationFt": 1417,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246047,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246046,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3905.098,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UWKD",
+    "ourAirportsId": 26404,
+    "iata": "KZN",
+    "icao": "UWKD",
+    "name": "Kazan International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 55.606201,
+    "longitudeDeg": 49.278702,
+    "elevationFt": 411,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238536,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VAAH",
+    "ourAirportsId": 26431,
+    "iata": "AMD",
+    "icao": "VAAH",
+    "name": "Sardar Vallabh Patel International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 23.0772,
+    "longitudeDeg": 72.634697,
+    "elevationFt": 189,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236759,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3504.895,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

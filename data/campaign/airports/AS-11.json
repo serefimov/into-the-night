@@ -1,0 +1,677 @@
+[
+  {
+    "id": "UHHH",
+    "ourAirportsId": 6455,
+    "iata": "KHV",
+    "icao": "UHHH",
+    "name": "Khabarovsk Novy Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 48.528338,
+    "longitudeDeg": 135.188588,
+    "elevationFt": 244,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238586,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 4000.195,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238587,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UHMA",
+    "ourAirportsId": 6456,
+    "iata": "DYR",
+    "icao": "UHMA",
+    "name": "Ugolny Yuri Ryktheu Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 64.734902,
+    "longitudeDeg": 177.740997,
+    "elevationFt": 194,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238584,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 59.741,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UHPP",
+    "ourAirportsId": 6460,
+    "iata": "PKC",
+    "icao": "UHPP",
+    "name": "Yelizovo Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 53.168716,
+    "longitudeDeg": 158.451068,
+    "elevationFt": 131,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238592,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UHSS",
+    "ourAirportsId": 6461,
+    "iata": "UUS",
+    "icao": "UHSS",
+    "name": "Yuzhno-Sakhalinsk International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 46.885461,
+    "longitudeDeg": 142.717466,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238603,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UHWW",
+    "ourAirportsId": 6462,
+    "iata": "VVO",
+    "icao": "UHWW",
+    "name": "Vladivostok International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 43.396256,
+    "longitudeDeg": 132.148155,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238612,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UIAA",
+    "ourAirportsId": 6463,
+    "iata": "HTA",
+    "icao": "UIAA",
+    "name": "Chita-Kadala International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 52.024841,
+    "longitudeDeg": 113.305839,
+    "elevationFt": 2272,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238559,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2874.264,
+        "widthM": 56.083,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 251519,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 1799.844,
+        "widthM": 74.676,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UIII",
+    "ourAirportsId": 6465,
+    "iata": "IKT",
+    "icao": "UIII",
+    "name": "Irkutsk International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 52.266707,
+    "longitudeDeg": 104.395563,
+    "elevationFt": 1675,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238562,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3564.941,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UIUU",
+    "ourAirportsId": 6466,
+    "iata": "UUD",
+    "icao": "UIUU",
+    "name": "Baikal International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 51.808614,
+    "longitudeDeg": 107.439652,
+    "elevationFt": 1690,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238545,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UNAA",
+    "ourAirportsId": 6503,
+    "iata": "ABA",
+    "icao": "UNAA",
+    "name": "Abakan International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 53.740002,
+    "longitudeDeg": 91.385002,
+    "elevationFt": 831,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238582,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3250.082,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UNBB",
+    "ourAirportsId": 6504,
+    "iata": "BAX",
+    "icao": "UNBB",
+    "name": "Barnaul Gherman Titov International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 53.361285,
+    "longitudeDeg": 83.539701,
+    "elevationFt": 837,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238607,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2849.88,
+        "widthM": 49.987,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UNEE",
+    "ourAirportsId": 6505,
+    "iata": "KEJ",
+    "icao": "UNEE",
+    "name": "Alexei Leonov Kemerovo International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 55.2701,
+    "longitudeDeg": 86.107201,
+    "elevationFt": 863,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238508,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UNKL",
+    "ourAirportsId": 6506,
+    "iata": "KJA",
+    "icao": "UNKL",
+    "name": "Krasnoyarsk International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 56.175743,
+    "longitudeDeg": 92.485788,
+    "elevationFt": 942,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238510,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UNOO",
+    "ourAirportsId": 6508,
+    "iata": "OMS",
+    "icao": "UNOO",
+    "name": "Omsk Central Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 54.963124,
+    "longitudeDeg": 73.312418,
+    "elevationFt": 311,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238497,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2875.788,
+        "widthM": 82.296,
+        "surface": "GRS",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 238498,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238499,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 725.424,
+        "widthM": 76.2,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UNTT",
+    "ourAirportsId": 32468,
+    "iata": "TOF",
+    "icao": "UNTT",
+    "name": "Tomsk Kamov Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 56.380299,
+    "longitudeDeg": 85.208298,
+    "elevationFt": 597,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 315084,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 49.987,
+        "surface": "asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UOOO",
+    "ourAirportsId": 6510,
+    "iata": "NSK",
+    "icao": "UOOO",
+    "name": "Alykel International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 69.307951,
+    "longitudeDeg": 87.325906,
+    "elevationFt": 574,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238526,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3430.219,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "URMG",
+    "ourAirportsId": 42924,
+    "iata": "GRV",
+    "icao": "URMG",
+    "name": "Akhmat Kadyrov Grozny International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 43.388106,
+    "longitudeDeg": 45.699772,
+    "elevationFt": 548,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 318099,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "Concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "URML",
+    "ourAirportsId": 6513,
+    "iata": "MCX",
+    "icao": "URML",
+    "name": "Makhachkala Uytash International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 42.816799,
+    "longitudeDeg": 47.652302,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238532,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2640.178,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "URWA",
+    "ourAirportsId": 6520,
+    "iata": "ASF",
+    "icao": "URWA",
+    "name": "Astrakhan Narimanovo Boris M. Kustodiev International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 46.282843,
+    "longitudeDeg": 48.010511,
+    "elevationFt": -65,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238506,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238507,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1551.432,
+        "widthM": 99.974,
+        "surface": "Dirt",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "USCC",
+    "ourAirportsId": 26370,
+    "iata": "CEK",
+    "icao": "USCC",
+    "name": "Kurchatov Chelyabinsk International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 55.303141,
+    "longitudeDeg": 61.504927,
+    "elevationFt": 769,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238585,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "USCM",
+    "ourAirportsId": 26371,
+    "iata": "MQF",
+    "icao": "USCM",
+    "name": "Magnitogorsk International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 53.391991,
+    "longitudeDeg": 58.755235,
+    "elevationFt": 1430,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238530,
+        "ends": [
+          "36",
+          "18"
+        ],
+        "lengthM": 3250.082,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

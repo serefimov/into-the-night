@@ -1,0 +1,666 @@
+[
+  {
+    "id": "UAOO",
+    "ourAirportsId": 31794,
+    "iata": "KZO",
+    "icao": "UAOO",
+    "name": "Korkyt Ata International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 44.706902,
+    "longitudeDeg": 65.592499,
+    "elevationFt": 433,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 355443,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UARR",
+    "ourAirportsId": 6432,
+    "iata": "URA",
+    "icao": "UARR",
+    "name": "Manshuk Mametova International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 51.151976,
+    "longitudeDeg": 51.543652,
+    "elevationFt": 125,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237391,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2798.978,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UASK",
+    "ourAirportsId": 6433,
+    "iata": "UKK",
+    "icao": "UASK",
+    "name": "Oskemen International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 50.035033,
+    "longitudeDeg": 82.496057,
+    "elevationFt": 939,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237400,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2509.723,
+        "widthM": 42.062,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237401,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 1855.622,
+        "widthM": 60.96,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UASP",
+    "ourAirportsId": 6434,
+    "iata": "PWQ",
+    "icao": "UASP",
+    "name": "Pavlodar International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 52.194982,
+    "longitudeDeg": 77.073088,
+    "elevationFt": 410,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237405,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UASS",
+    "ourAirportsId": 6435,
+    "iata": "PLX",
+    "icao": "UASS",
+    "name": "Semei International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 50.351295,
+    "longitudeDeg": 80.234398,
+    "elevationFt": 761,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237399,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3096.463,
+        "widthM": 44.196,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237398,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 996.696,
+        "widthM": 77.114,
+        "surface": "CON",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UATE",
+    "ourAirportsId": 6436,
+    "iata": "SCO",
+    "icao": "UATE",
+    "name": "Aktau International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 43.860093,
+    "longitudeDeg": 51.09086,
+    "elevationFt": 73,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237396,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3051.962,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UATG",
+    "ourAirportsId": 6437,
+    "iata": "GUW",
+    "icao": "UATG",
+    "name": "Atyrau International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 47.121318,
+    "longitudeDeg": 51.820343,
+    "elevationFt": -72,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237389,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 43.891,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UATT",
+    "ourAirportsId": 6438,
+    "iata": "AKX",
+    "icao": "UATT",
+    "name": "Aktobe International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 50.248116,
+    "longitudeDeg": 57.204144,
+    "elevationFt": 738,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237407,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3201.924,
+        "widthM": 46.025,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAUU",
+    "ourAirportsId": 6439,
+    "iata": "KSN",
+    "icao": "UAUU",
+    "name": "Kostanay International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 53.206902,
+    "longitudeDeg": 63.550301,
+    "elevationFt": 595,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237388,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2812.999,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UBBB",
+    "ourAirportsId": 6440,
+    "iata": "GYD",
+    "icao": "UBBB",
+    "name": "Heydar Aliyev International Airport",
+    "country": "AZ",
+    "continent": "AS",
+    "latitudeDeg": 40.47278,
+    "longitudeDeg": 50.050931,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232866,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232867,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UBBG",
+    "ourAirportsId": 6441,
+    "iata": "GNJ",
+    "icao": "UBBG",
+    "name": "Ganja International Airport",
+    "country": "AZ",
+    "continent": "AS",
+    "latitudeDeg": 40.738692,
+    "longitudeDeg": 46.320383,
+    "elevationFt": 1083,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232856,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UBBN",
+    "ourAirportsId": 6442,
+    "iata": "NAJ",
+    "icao": "UBBN",
+    "name": "Nakhchivan International Airport",
+    "country": "AZ",
+    "continent": "AS",
+    "latitudeDeg": 39.188801,
+    "longitudeDeg": 45.458401,
+    "elevationFt": 2863,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232862,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3299.765,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232863,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3299.765,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UCFL",
+    "ourAirportsId": 6425,
+    "iata": "IKU",
+    "icao": "UCFL",
+    "name": "Issyk-Kul International Airport",
+    "country": "KG",
+    "continent": "AS",
+    "latitudeDeg": 42.585584,
+    "longitudeDeg": 76.701181,
+    "elevationFt": 5425,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237279,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UDSG",
+    "ourAirportsId": 6444,
+    "iata": "LWN",
+    "icao": "UDSG",
+    "name": "Shirak International Airport",
+    "country": "AM",
+    "continent": "AS",
+    "latitudeDeg": 40.750401,
+    "longitudeDeg": 43.859299,
+    "elevationFt": 5000,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232880,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3219.907,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UDYZ",
+    "ourAirportsId": 6446,
+    "iata": "EVN",
+    "icao": "UDYZ",
+    "name": "Zvartnots International Airport",
+    "country": "AM",
+    "continent": "AS",
+    "latitudeDeg": 40.148941,
+    "longitudeDeg": 44.397887,
+    "elevationFt": 2838,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232879,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3849.929,
+        "widthM": 56.083,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UEEE",
+    "ourAirportsId": 6447,
+    "iata": "YKS",
+    "icao": "UEEE",
+    "name": "Platon Oyunsky Yakutsk International Airport",
+    "country": "RU",
+    "continent": "AS",
+    "latitudeDeg": 62.0933,
+    "longitudeDeg": 129.770996,
+    "elevationFt": 325,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238599,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UGKO",
+    "ourAirportsId": 6451,
+    "iata": "KUT",
+    "icao": "UGKO",
+    "name": "David the Builder Kutaisi International Airport",
+    "country": "GE",
+    "continent": "AS",
+    "latitudeDeg": 42.177448,
+    "longitudeDeg": 42.485353,
+    "elevationFt": 223,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236084,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 43.891,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UGSB",
+    "ourAirportsId": 6452,
+    "iata": "BUS",
+    "icao": "UGSB",
+    "name": "Alexander Kartveli Batumi International Airport",
+    "country": "GE",
+    "continent": "AS",
+    "latitudeDeg": 41.60939,
+    "longitudeDeg": 41.600315,
+    "elevationFt": 105,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236083,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UGSS",
+    "ourAirportsId": 3092,
+    "iata": "SUI",
+    "icao": "UGSS",
+    "name": "Vladislav Ardzinba Sukhum International Airport",
+    "country": "GE",
+    "continent": "AS",
+    "latitudeDeg": 42.8582,
+    "longitudeDeg": 41.128101,
+    "elevationFt": 53,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236090,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3661.258,
+        "widthM": 52.426,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UGTB",
+    "ourAirportsId": 6453,
+    "iata": "TBS",
+    "icao": "UGTB",
+    "name": "Tbilisi International Airport",
+    "country": "GE",
+    "continent": "AS",
+    "latitudeDeg": 41.669201,
+    "longitudeDeg": 44.9547,
+    "elevationFt": 1624,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236088,
+        "ends": [
+          "13R",
+          "31L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 44.806,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

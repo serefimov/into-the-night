@@ -1,0 +1,688 @@
+[
+  {
+    "id": "ENTC",
+    "ourAirportsId": 2599,
+    "iata": "TOS",
+    "icao": "ENTC",
+    "name": "Tromsø Airport",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 69.683296,
+    "longitudeDeg": 18.9189,
+    "elevationFt": 31,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237966,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2450.897,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENTO",
+    "ourAirportsId": 2600,
+    "iata": "TRF",
+    "icao": "ENTO",
+    "name": "Sandefjord Airport, Torp",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 59.186699,
+    "longitudeDeg": 10.2586,
+    "elevationFt": 286,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237976,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2809.037,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENVA",
+    "ourAirportsId": 2601,
+    "iata": "TRD",
+    "icao": "ENVA",
+    "name": "Trondheim Airport, Værnes",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 63.457802,
+    "longitudeDeg": 10.924,
+    "elevationFt": 56,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237948,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2759.05,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENZV",
+    "ourAirportsId": 2602,
+    "iata": "SVG",
+    "icao": "ENZV",
+    "name": "Stavanger Airport, Sola",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 58.876701,
+    "longitudeDeg": 5.63778,
+    "elevationFt": 29,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237971,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2855.671,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237970,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2449.068,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPGD",
+    "ourAirportsId": 2608,
+    "iata": "GDN",
+    "icao": "EPGD",
+    "name": "Gdańsk Lech Wałęsa Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 54.377602,
+    "longitudeDeg": 18.4662,
+    "elevationFt": 489,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238278,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPKK",
+    "ourAirportsId": 2609,
+    "iata": "KRK",
+    "icao": "EPKK",
+    "name": "Kraków John Paul II International Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 50.077702,
+    "longitudeDeg": 19.7848,
+    "elevationFt": 791,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238291,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2549.957,
+        "widthM": 59.741,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPKT",
+    "ourAirportsId": 2613,
+    "iata": "KTW",
+    "icao": "EPKT",
+    "name": "Katowice Wojciech Korfanty International Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 50.476015,
+    "longitudeDeg": 19.080705,
+    "elevationFt": 995,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238275,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPLB",
+    "ourAirportsId": 309484,
+    "iata": "LUZ",
+    "icao": "EPLB",
+    "name": "Lublin Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 51.240157,
+    "longitudeDeg": 22.713461,
+    "elevationFt": 633,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 309486,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2520.086,
+        "widthM": 45.11,
+        "surface": "ASPHALT",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPLL",
+    "ourAirportsId": 2616,
+    "iata": "LCJ",
+    "icao": "EPLL",
+    "name": "Łódź Władysław Reymont Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 51.721901,
+    "longitudeDeg": 19.3981,
+    "elevationFt": 604,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238277,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASPH-CONC",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPMO",
+    "ourAirportsId": 2622,
+    "iata": "WMI",
+    "icao": "EPMO",
+    "name": "Warsaw Modlin Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 52.451099,
+    "longitudeDeg": 20.6518,
+    "elevationFt": 341,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238269,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPPO",
+    "ourAirportsId": 2625,
+    "iata": "POZ",
+    "icao": "EPPO",
+    "name": "Poznań-Ławica Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 52.421598,
+    "longitudeDeg": 16.823359,
+    "elevationFt": 308,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238287,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2503.932,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPRZ",
+    "ourAirportsId": 2629,
+    "iata": "RZE",
+    "icao": "EPRZ",
+    "name": "Rzeszów-Jasionka Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 50.109791,
+    "longitudeDeg": 22.024155,
+    "elevationFt": 693,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238286,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3199.79,
+        "widthM": 44.806,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238285,
+        "ends": [
+          "09ES",
+          "27ES"
+        ],
+        "lengthM": 2084.832,
+        "widthM": 99.974,
+        "surface": "GRS Emergency Strip",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 351634,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 900.074,
+        "widthM": 30.175,
+        "surface": "CONC/ASPH",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPSC",
+    "ourAirportsId": 2630,
+    "iata": "SZZ",
+    "icao": "EPSC",
+    "name": "Solidarity Szczecin–Goleniów Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 53.584702,
+    "longitudeDeg": 14.9022,
+    "elevationFt": 154,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238276,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPWA",
+    "ourAirportsId": 2637,
+    "iata": "WAW",
+    "icao": "EPWA",
+    "name": "Warsaw Chopin Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 52.165699,
+    "longitudeDeg": 20.9671,
+    "elevationFt": 362,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238289,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3689.909,
+        "widthM": 59.741,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238288,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 49.987,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EPWR",
+    "ourAirportsId": 2638,
+    "iata": "WRO",
+    "icao": "EPWR",
+    "name": "Copernicus Wrocław Airport",
+    "country": "PL",
+    "continent": "EU",
+    "latitudeDeg": 51.103719,
+    "longitudeDeg": 16.882096,
+    "elevationFt": 404,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238284,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2503.018,
+        "widthM": 44.806,
+        "surface": "CONC-ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESGG",
+    "ourAirportsId": 2648,
+    "iata": "GOT",
+    "icao": "ESGG",
+    "name": "Göteborg Landvetter Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 57.6628,
+    "longitudeDeg": 12.2798,
+    "elevationFt": 506,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239020,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3298.85,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESKN",
+    "ourAirportsId": 2660,
+    "iata": "NYO",
+    "icao": "ESKN",
+    "name": "Stockholm Skavsta Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 58.789656,
+    "longitudeDeg": 16.911479,
+    "elevationFt": 140,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239045,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2877.922,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239046,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2039.112,
+        "widthM": 39.929,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESKS",
+    "ourAirportsId": 316498,
+    "iata": "SCR",
+    "icao": "ESKS",
+    "name": "Scandinavian Mountains Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 61.16508,
+    "longitudeDeg": 12.83352,
+    "elevationFt": 1608,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 332180,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESMS",
+    "ourAirportsId": 2669,
+    "iata": "MMX",
+    "icao": "ESMS",
+    "name": "Malmö Sturup Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 55.535564,
+    "longitudeDeg": 13.376327,
+    "elevationFt": 236,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239008,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239007,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 797.052,
+        "widthM": 17.983,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESNQ",
+    "ourAirportsId": 2685,
+    "iata": "KRN",
+    "icao": "ESNQ",
+    "name": "Kiruna Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 67.821999,
+    "longitudeDeg": 20.3368,
+    "elevationFt": 1508,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239065,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2502.103,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

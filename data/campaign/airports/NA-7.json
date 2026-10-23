@@ -1,0 +1,710 @@
+[
+  {
+    "id": "MKJS",
+    "ourAirportsId": 4681,
+    "iata": "MBJ",
+    "icao": "MKJS",
+    "name": "Sangster International Airport",
+    "country": "JM",
+    "continent": "NA",
+    "latitudeDeg": 18.50342,
+    "longitudeDeg": -77.91323,
+    "elevationFt": 4,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237248,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3059.887,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMAA",
+    "ourAirportsId": 4688,
+    "iata": "ACA",
+    "icao": "MMAA",
+    "name": "General Juan N. Álvarez International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 16.757126,
+    "longitudeDeg": -99.753113,
+    "elevationFt": 16,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237735,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3301.594,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237734,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 1700.479,
+        "widthM": 35.052,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMAS",
+    "ourAirportsId": 4691,
+    "iata": "AGU",
+    "icao": "MMAS",
+    "name": "Aguascalientes International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 21.699589,
+    "longitudeDeg": -102.318372,
+    "elevationFt": 6112,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237668,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMBT",
+    "ourAirportsId": 4692,
+    "iata": "HUX",
+    "icao": "MMBT",
+    "name": "Bahías de Huatulco International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 15.775437,
+    "longitudeDeg": -96.260456,
+    "elevationFt": 464,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237791,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMCL",
+    "ourAirportsId": 4697,
+    "iata": "CUL",
+    "icao": "MMCL",
+    "name": "Bachigualato Federal International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 24.76504,
+    "longitudeDeg": -107.475228,
+    "elevationFt": 108,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237730,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2244.852,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMCS",
+    "ourAirportsId": 4701,
+    "iata": "CJS",
+    "icao": "MMCS",
+    "name": "Abraham González International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 31.636673,
+    "longitudeDeg": -106.428533,
+    "elevationFt": 3904,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237750,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237751,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 1749.857,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMCU",
+    "ourAirportsId": 4703,
+    "iata": "CUU",
+    "icao": "MMCU",
+    "name": "General Roberto Fierro Villalobos International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 28.702649,
+    "longitudeDeg": -105.963764,
+    "elevationFt": 4462,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237673,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237672,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 2403.348,
+        "widthM": 22.86,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 237671,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 1100.023,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMCZ",
+    "ourAirportsId": 4706,
+    "iata": "CZM",
+    "icao": "MMCZ",
+    "name": "Cozumel International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 20.514922,
+    "longitudeDeg": -86.928538,
+    "elevationFt": 15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237781,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMGL",
+    "ourAirportsId": 4710,
+    "iata": "GDL",
+    "icao": "MMGL",
+    "name": "Guadalajara International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 20.523342,
+    "longitudeDeg": -103.310108,
+    "elevationFt": 5016,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237663,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 430676,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 3538.118,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMHO",
+    "ourAirportsId": 4713,
+    "iata": "HMO",
+    "icao": "MMHO",
+    "name": "General Ignacio L. Pesqueira International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 29.092811,
+    "longitudeDeg": -111.053015,
+    "elevationFt": 627,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237680,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2300.021,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMLO",
+    "ourAirportsId": 4722,
+    "iata": "BJX",
+    "icao": "MMLO",
+    "name": "Guanajuato International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 20.992695,
+    "longitudeDeg": -101.480284,
+    "elevationFt": 5956,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237722,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMLT",
+    "ourAirportsId": 4724,
+    "iata": "LTO",
+    "icao": "MMLT",
+    "name": "Loreto International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 25.989549,
+    "longitudeDeg": -111.348408,
+    "elevationFt": 34,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237779,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMMD",
+    "ourAirportsId": 4726,
+    "iata": "MID",
+    "icao": "MMMD",
+    "name": "Manuel Crescencio Rejón International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 20.930485,
+    "longitudeDeg": -89.645462,
+    "elevationFt": 38,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237683,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237684,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2300.021,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMMM",
+    "ourAirportsId": 4728,
+    "iata": "MLM",
+    "icao": "MMMM",
+    "name": "General Francisco J. Mujica International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 19.849899,
+    "longitudeDeg": -101.025002,
+    "elevationFt": 6033,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237761,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMMX",
+    "ourAirportsId": 4731,
+    "iata": "MEX",
+    "icao": "MMMX",
+    "name": "Mexico City Benito Juárez International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 19.435822,
+    "longitudeDeg": -99.07033,
+    "elevationFt": 7316,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237742,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3952.037,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237741,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3899.916,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMMY",
+    "ourAirportsId": 4732,
+    "iata": "MTY",
+    "icao": "MMMY",
+    "name": "Monterrey International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 25.778521,
+    "longitudeDeg": -100.106989,
+    "elevationFt": 1278,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237724,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237725,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 1801.063,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMMZ",
+    "ourAirportsId": 4733,
+    "iata": "MZT",
+    "icao": "MMMZ",
+    "name": "General Rafael Buelna International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 23.162823,
+    "longitudeDeg": -106.264517,
+    "elevationFt": 38,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237733,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2702.966,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMOX",
+    "ourAirportsId": 4736,
+    "iata": "OAX",
+    "icao": "MMOX",
+    "name": "Xoxocotlán International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 16.998773,
+    "longitudeDeg": -96.726092,
+    "elevationFt": 4989,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237728,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2449.982,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMPB",
+    "ourAirportsId": 4738,
+    "iata": "PBC",
+    "icao": "MMPB",
+    "name": "Hermanos Serdán International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 19.158465,
+    "longitudeDeg": -98.371582,
+    "elevationFt": 7361,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237726,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMPR",
+    "ourAirportsId": 4745,
+    "iata": "PVR",
+    "icao": "MMPR",
+    "name": "Puerto Vallarta International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 20.679913,
+    "longitudeDeg": -105.254391,
+    "elevationFt": 23,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237792,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

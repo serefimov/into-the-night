@@ -1,0 +1,677 @@
+[
+  {
+    "id": "FAGG",
+    "ourAirportsId": 2783,
+    "iata": "GRJ",
+    "icao": "FAGG",
+    "name": "George Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -34.0056,
+    "longitudeDeg": 22.378902,
+    "elevationFt": 648,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238833,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FAKM",
+    "ourAirportsId": 2794,
+    "iata": "KIM",
+    "icao": "FAKM",
+    "name": "Kimberley Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -28.805401,
+    "longitudeDeg": 24.764872,
+    "elevationFt": 3950,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238745,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238746,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2439.01,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FAKN",
+    "ourAirportsId": 2795,
+    "iata": "MQP",
+    "icao": "FAKN",
+    "name": "Kruger Mpumalanga International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -25.383327,
+    "longitudeDeg": 31.105325,
+    "elevationFt": 2829,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238701,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FALA",
+    "ourAirportsId": 2800,
+    "iata": "HLA",
+    "icao": "FALA",
+    "name": "Lanseria International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -25.938964,
+    "longitudeDeg": 27.926642,
+    "elevationFt": 4517,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238804,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3046.781,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FALE",
+    "ourAirportsId": 300795,
+    "iata": "DUR",
+    "icao": "FALE",
+    "name": "King Shaka International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -29.6144444444,
+    "longitudeDeg": 31.1197222222,
+    "elevationFt": 295,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 312671,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FAOR",
+    "ourAirportsId": 31055,
+    "iata": "JNB",
+    "icao": "FAOR",
+    "name": "O.R. Tambo International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -26.140081,
+    "longitudeDeg": 28.246801,
+    "elevationFt": 5558,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238744,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 4418.076,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238743,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FAPE",
+    "ourAirportsId": 2820,
+    "iata": "PLZ",
+    "icao": "FAPE",
+    "name": "Chief Dawid Stuurman International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -33.989715,
+    "longitudeDeg": 25.617353,
+    "elevationFt": 226,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238821,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2160.118,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238823,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 1677.01,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FAPP",
+    "ourAirportsId": 2827,
+    "iata": "PTG",
+    "icao": "FAPP",
+    "name": "Polokwane International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -23.845269,
+    "longitudeDeg": 29.458615,
+    "elevationFt": 4076,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238776,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2560.32,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 238777,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2320.138,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FBFT",
+    "ourAirportsId": 2860,
+    "iata": "FRW",
+    "icao": "FBPM",
+    "name": "Phillip Gaonwe Matante International Airport",
+    "country": "BW",
+    "continent": "AF",
+    "latitudeDeg": -21.159183,
+    "longitudeDeg": 27.468826,
+    "elevationFt": 3283,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 317474,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233607,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FBKE",
+    "ourAirportsId": 2862,
+    "iata": "BBK",
+    "icao": "FBKE",
+    "name": "Kasane International Airport",
+    "country": "BW",
+    "continent": "AF",
+    "latitudeDeg": -17.831653,
+    "longitudeDeg": 25.166195,
+    "elevationFt": 3289,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233611,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FBMN",
+    "ourAirportsId": 2863,
+    "iata": "MUB",
+    "icao": "FBMN",
+    "name": "Maun International Airport",
+    "country": "BW",
+    "continent": "AF",
+    "latitudeDeg": -19.970491,
+    "longitudeDeg": 23.431409,
+    "elevationFt": 3093,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233610,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FBSK",
+    "ourAirportsId": 2864,
+    "iata": "GBE",
+    "icao": "FBSK",
+    "name": "Sir Seretse Khama International Airport",
+    "country": "BW",
+    "continent": "AF",
+    "latitudeDeg": -24.555201,
+    "longitudeDeg": 25.9182,
+    "elevationFt": 3299,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233609,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FCBB",
+    "ourAirportsId": 2868,
+    "iata": "BZV",
+    "icao": "FCBB",
+    "name": "Maya-Maya International Airport",
+    "country": "CG",
+    "continent": "AF",
+    "latitudeDeg": -4.2517,
+    "longitudeDeg": 15.253,
+    "elevationFt": 1048,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235126,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FCPP",
+    "ourAirportsId": 2871,
+    "iata": "PNR",
+    "icao": "FCPP",
+    "name": "Antonio Agostinho-Neto International Airport",
+    "country": "CG",
+    "continent": "AF",
+    "latitudeDeg": -4.81603,
+    "longitudeDeg": 11.8866,
+    "elevationFt": 55,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235125,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FDSK",
+    "ourAirportsId": 308033,
+    "iata": "SHO",
+    "icao": "FDSK",
+    "name": "King Mswati III International Airport",
+    "country": "SZ",
+    "continent": "AF",
+    "latitudeDeg": -26.358611,
+    "longitudeDeg": 31.716944,
+    "elevationFt": 1092,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 323079,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FEFF",
+    "ourAirportsId": 2873,
+    "iata": "BGF",
+    "icao": "FEFF",
+    "name": "Bangui M'Poko International Airport",
+    "country": "CF",
+    "continent": "AF",
+    "latitudeDeg": 4.39848,
+    "longitudeDeg": 18.518801,
+    "elevationFt": 1208,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235390,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FGBT",
+    "ourAirportsId": 2875,
+    "iata": "BSG",
+    "icao": "FGBT",
+    "name": "Bata International Airport",
+    "country": "GQ",
+    "continent": "AF",
+    "latitudeDeg": 1.90547,
+    "longitudeDeg": 9.80568,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 260367,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3310.128,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FGSL",
+    "ourAirportsId": 2876,
+    "iata": "SSG",
+    "icao": "FGSL",
+    "name": "Malabo International Airport",
+    "country": "GQ",
+    "continent": "AF",
+    "latitudeDeg": 3.75527,
+    "longitudeDeg": 8.70872,
+    "elevationFt": 76,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235648,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2940.406,
+        "widthM": 46.025,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FIMP",
+    "ourAirportsId": 2878,
+    "iata": "MRU",
+    "icao": "FIMP",
+    "name": "Sir Seewoosagur Ramgoolam International Airport",
+    "country": "MU",
+    "continent": "AF",
+    "latitudeDeg": -20.430201,
+    "longitudeDeg": 57.683601,
+    "elevationFt": 186,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237613,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3369.869,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FKKD",
+    "ourAirportsId": 2882,
+    "iata": "DLA",
+    "icao": "FKKD",
+    "name": "Douala International Airport",
+    "country": "CM",
+    "continent": "AF",
+    "latitudeDeg": 4.00608,
+    "longitudeDeg": 9.71948,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235266,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2849.88,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

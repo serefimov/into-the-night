@@ -1,0 +1,677 @@
+[
+  {
+    "id": "FQNP",
+    "ourAirportsId": 2980,
+    "iata": "APL",
+    "icao": "FQNP",
+    "name": "Nampula Airport",
+    "country": "MZ",
+    "continent": "AF",
+    "latitudeDeg": -15.1056,
+    "longitudeDeg": 39.281799,
+    "elevationFt": 1444,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237852,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237853,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 1565.148,
+        "widthM": 45.11,
+        "surface": "GVL",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FQTT",
+    "ourAirportsId": 2984,
+    "iata": "TET",
+    "icao": "FQTT",
+    "name": "Tete Airport",
+    "country": "MZ",
+    "continent": "AF",
+    "latitudeDeg": -16.104799,
+    "longitudeDeg": 33.640202,
+    "elevationFt": 525,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237851,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2506.98,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FSIA",
+    "ourAirportsId": 2993,
+    "iata": "SEZ",
+    "icao": "FSIA",
+    "name": "Seychelles International Airport",
+    "country": "SC",
+    "continent": "AF",
+    "latitudeDeg": -4.67434,
+    "longitudeDeg": 55.521801,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238699,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2987.04,
+        "widthM": 46.025,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FTTJ",
+    "ourAirportsId": 2998,
+    "iata": "NDJ",
+    "icao": "FTTJ",
+    "name": "N'Djamena International Airport",
+    "country": "TD",
+    "continent": "AF",
+    "latitudeDeg": 12.1337,
+    "longitudeDeg": 15.034,
+    "elevationFt": 968,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235110,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FVBU",
+    "ourAirportsId": 3000,
+    "iata": "BUQ",
+    "icao": "FVJN",
+    "name": "Joshua Mqabuko Nkomo International Airport",
+    "country": "ZW",
+    "continent": "AF",
+    "latitudeDeg": -20.016284,
+    "longitudeDeg": 28.622897,
+    "elevationFt": 4359,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246271,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2588.057,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246270,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 1346.911,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FVFA",
+    "ourAirportsId": 3004,
+    "iata": "VFA",
+    "icao": "FVFA",
+    "name": "Victoria Falls International Airport",
+    "country": "ZW",
+    "continent": "AF",
+    "latitudeDeg": -18.097437,
+    "longitudeDeg": 25.836867,
+    "elevationFt": 3490,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246267,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FVHA",
+    "ourAirportsId": 3005,
+    "iata": "HRE",
+    "icao": "FVRG",
+    "name": "Robert Gabriel Mugabe International Airport",
+    "country": "ZW",
+    "continent": "AF",
+    "latitudeDeg": -17.931801,
+    "longitudeDeg": 31.0928,
+    "elevationFt": 4887,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246283,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 4725.01,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FWCL",
+    "ourAirportsId": 3015,
+    "iata": "BLZ",
+    "icao": "FWCL",
+    "name": "Chileka International Airport",
+    "country": "MW",
+    "continent": "AF",
+    "latitudeDeg": -15.677189,
+    "longitudeDeg": 34.972319,
+    "elevationFt": 2555,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237560,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2325.014,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237561,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 1371.905,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FWKI",
+    "ourAirportsId": 3018,
+    "iata": "LLW",
+    "icao": "FWKI",
+    "name": "Kamuzu International Airport",
+    "country": "MW",
+    "continent": "AF",
+    "latitudeDeg": -13.7894,
+    "longitudeDeg": 33.780998,
+    "elevationFt": 4035,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237556,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3539.947,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FXMM",
+    "ourAirportsId": 3022,
+    "iata": "MSU",
+    "icao": "FXMM",
+    "name": "Moshoeshoe I International Airport",
+    "country": "LS",
+    "continent": "AF",
+    "latitudeDeg": -29.456277,
+    "longitudeDeg": 27.554456,
+    "elevationFt": 5348,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237446,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3199.79,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237447,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1010.107,
+        "widthM": 22.86,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FYWB",
+    "ourAirportsId": 3037,
+    "iata": "WVB",
+    "icao": "FYWB",
+    "name": "Walvis Bay International Airport",
+    "country": "NA",
+    "continent": "AF",
+    "latitudeDeg": -22.979332,
+    "longitudeDeg": 14.647102,
+    "elevationFt": 299,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246190,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FYWH",
+    "ourAirportsId": 3039,
+    "iata": "WDH",
+    "icao": "FYWH",
+    "name": "Hosea Kutako International Airport",
+    "country": "NA",
+    "continent": "AF",
+    "latitudeDeg": -22.4799,
+    "longitudeDeg": 17.4709,
+    "elevationFt": 5640,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246213,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 4575.048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246214,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 1524,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FZAA",
+    "ourAirportsId": 3040,
+    "iata": "FIH",
+    "icao": "FZAA",
+    "name": "Ndjili International Airport",
+    "country": "CD",
+    "continent": "AF",
+    "latitudeDeg": -4.38575,
+    "longitudeDeg": 15.4446,
+    "elevationFt": 1027,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235140,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FZIC",
+    "ourAirportsId": 3052,
+    "iata": "FKI",
+    "icao": "FZIC",
+    "name": "Bangoka International Airport",
+    "country": "CD",
+    "continent": "AF",
+    "latitudeDeg": 0.481639,
+    "longitudeDeg": 25.337999,
+    "elevationFt": 1417,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235128,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FZNA",
+    "ourAirportsId": 3057,
+    "iata": "GOM",
+    "icao": "FZNA",
+    "name": "Goma International Airport",
+    "country": "CD",
+    "continent": "AF",
+    "latitudeDeg": -1.666758,
+    "longitudeDeg": 29.238037,
+    "elevationFt": 5089,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235146,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2955.036,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FZQA",
+    "ourAirportsId": 3059,
+    "iata": "FBM",
+    "icao": "FZQA",
+    "name": "Lubumbashi International Airport",
+    "country": "CD",
+    "continent": "AF",
+    "latitudeDeg": -11.591494,
+    "longitudeDeg": 27.530753,
+    "elevationFt": 4295,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235130,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3237.89,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GABS",
+    "ourAirportsId": 3066,
+    "iata": "BKO",
+    "icao": "GABS",
+    "name": "Modibo Keita International Airport",
+    "country": "ML",
+    "continent": "AF",
+    "latitudeDeg": 12.5335,
+    "longitudeDeg": -7.94994,
+    "elevationFt": 1247,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237587,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3199.79,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GATB",
+    "ourAirportsId": 3071,
+    "iata": "TOM",
+    "icao": "GATB",
+    "name": "Tombouktou Airport",
+    "country": "ML",
+    "continent": "AF",
+    "latitudeDeg": 16.730499,
+    "longitudeDeg": -3.00758,
+    "elevationFt": 863,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237585,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2110.13,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GBYD",
+    "ourAirportsId": 3076,
+    "iata": "BJL",
+    "icao": "GBYD",
+    "name": "Banjul International Airport",
+    "country": "GM",
+    "continent": "AF",
+    "latitudeDeg": 13.338,
+    "longitudeDeg": -16.652201,
+    "elevationFt": 95,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236067,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GCFV",
+    "ourAirportsId": 3077,
+    "iata": "FUE",
+    "icao": "GCFV",
+    "name": "Fuerteventura Airport",
+    "country": "ES",
+    "continent": "AF",
+    "latitudeDeg": 28.4527,
+    "longitudeDeg": -13.8638,
+    "elevationFt": 85,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238896,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3419.856,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

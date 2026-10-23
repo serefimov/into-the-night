@@ -1,0 +1,721 @@
+[
+  {
+    "id": "LROD",
+    "ourAirportsId": 4481,
+    "iata": "OMR",
+    "icao": "LROD",
+    "name": "Oradea International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 47.025299,
+    "longitudeDeg": 21.9025,
+    "elevationFt": 465,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238396,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2519.782,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LROP",
+    "ourAirportsId": 4482,
+    "iata": "OTP",
+    "icao": "LROP",
+    "name": "Bucharest Henri Coandă International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 44.571792,
+    "longitudeDeg": 26.103285,
+    "elevationFt": 314,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238403,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3500.323,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238404,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3500.323,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRSB",
+    "ourAirportsId": 4483,
+    "iata": "SBZ",
+    "icao": "LRSB",
+    "name": "Sibiu International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 45.785841,
+    "longitudeDeg": 24.086666,
+    "elevationFt": 1496,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238394,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2630.119,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRSV",
+    "ourAirportsId": 4485,
+    "iata": "SCV",
+    "icao": "LRSV",
+    "name": "Suceava Ștefan cel Mare International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 47.6875,
+    "longitudeDeg": 26.354099,
+    "elevationFt": 1375,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238393,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2459.736,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRTR",
+    "ourAirportsId": 4488,
+    "iata": "TSR",
+    "icao": "LRTR",
+    "name": "Timișoara Traian Vuia International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 45.809898,
+    "longitudeDeg": 21.3379,
+    "elevationFt": 348,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238402,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LSGG",
+    "ourAirportsId": 4490,
+    "iata": "GVA",
+    "icao": "LSGG",
+    "name": "Geneva International Airport",
+    "country": "CH",
+    "continent": "EU",
+    "latitudeDeg": 46.238098,
+    "longitudeDeg": 6.10895,
+    "elevationFt": 1411,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239116,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3899.916,
+        "widthM": 49.987,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LSZH",
+    "ourAirportsId": 4505,
+    "iata": "ZRH",
+    "icao": "LSZH",
+    "name": "Zürich Airport",
+    "country": "CH",
+    "continent": "EU",
+    "latitudeDeg": 47.458056,
+    "longitudeDeg": 8.548056,
+    "elevationFt": 1417,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239122,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239121,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239120,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTBA",
+    "ourAirportsId": 4528,
+    "iata": "ISL",
+    "icao": "LTBA",
+    "name": "İstanbul Atatürk Airport",
+    "country": "TR",
+    "continent": "EU",
+    "latitudeDeg": 40.971913,
+    "longitudeDeg": 28.823714,
+    "elevationFt": 163,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239260,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTFM",
+    "ourAirportsId": 317457,
+    "iata": "IST",
+    "icao": "LTFM",
+    "name": "İstanbul Airport",
+    "country": "TR",
+    "continent": "EU",
+    "latitudeDeg": 41.274874,
+    "longitudeDeg": 28.732136,
+    "elevationFt": 325,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 329987,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 4099.865,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 329988,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 4099.865,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 329985,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LUKK",
+    "ourAirportsId": 4571,
+    "iata": "RMO",
+    "icao": "LUKK",
+    "name": "Chişinău International Airport",
+    "country": "MD",
+    "continent": "EU",
+    "latitudeDeg": 46.92774,
+    "longitudeDeg": 28.931704,
+    "elevationFt": 399,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237544,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3589.934,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 346775,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2382.926,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LWOH",
+    "ourAirportsId": 4572,
+    "iata": "OHD",
+    "icao": "LWOH",
+    "name": "Ohrid St. Paul the Apostle Airport",
+    "country": "MK",
+    "continent": "EU",
+    "latitudeDeg": 41.18,
+    "longitudeDeg": 20.7423,
+    "elevationFt": 2313,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237565,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2549.957,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LWSK",
+    "ourAirportsId": 4573,
+    "iata": "SKP",
+    "icao": "LWSK",
+    "name": "Skopje International Airport",
+    "country": "MK",
+    "continent": "EU",
+    "latitudeDeg": 41.958087,
+    "longitudeDeg": 21.622581,
+    "elevationFt": 781,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237566,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2949.854,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LXGB",
+    "ourAirportsId": 4574,
+    "iata": "GIB",
+    "icao": "LXGB",
+    "name": "Gibraltar Airport",
+    "country": "GI",
+    "continent": "EU",
+    "latitudeDeg": 36.151679,
+    "longitudeDeg": -5.34978,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236097,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 1828.8,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LYBE",
+    "ourAirportsId": 4610,
+    "iata": "BEG",
+    "icao": "LYBE",
+    "name": "Belgrade Nikola Tesla Airport",
+    "country": "RS",
+    "continent": "EU",
+    "latitudeDeg": 44.818401,
+    "longitudeDeg": 20.309099,
+    "elevationFt": 335,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 506930,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246233,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LYNI",
+    "ourAirportsId": 4612,
+    "iata": "INI",
+    "icao": "LYNI",
+    "name": "Niš Constantine the Great Airport",
+    "country": "RS",
+    "continent": "EU",
+    "latitudeDeg": 43.336538,
+    "longitudeDeg": 21.856242,
+    "elevationFt": 648,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246232,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LYPG",
+    "ourAirportsId": 4613,
+    "iata": "TGD",
+    "icao": "LYPG",
+    "name": "Podgorica Airport / Podgorica Golubovci Airbase",
+    "country": "ME",
+    "continent": "EU",
+    "latitudeDeg": 42.359402,
+    "longitudeDeg": 19.2519,
+    "elevationFt": 141,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246240,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LZIB",
+    "ourAirportsId": 4617,
+    "iata": "BTS",
+    "icao": "LZIB",
+    "name": "M. R. Štefánik Airport",
+    "country": "SK",
+    "continent": "EU",
+    "latitudeDeg": 48.1702,
+    "longitudeDeg": 17.2127,
+    "elevationFt": 436,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237439,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3190.037,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237438,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2900.172,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UKBB",
+    "ourAirportsId": 6467,
+    "iata": "KBP",
+    "icao": "UKBB",
+    "name": "Boryspil International Airport",
+    "country": "UA",
+    "continent": "EU",
+    "latitudeDeg": 50.345001,
+    "longitudeDeg": 30.894699,
+    "elevationFt": 427,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239625,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239624,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 62.789,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UKFF",
+    "ourAirportsId": 6474,
+    "iata": "SIP",
+    "icao": "UKFF",
+    "name": "Simferopol International Airport",
+    "country": "UA",
+    "continent": "EU",
+    "latitudeDeg": 45.0522,
+    "longitudeDeg": 33.975101,
+    "elevationFt": 639,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239635,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3700.882,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UKLL",
+    "ourAirportsId": 6481,
+    "iata": "LWO",
+    "icao": "UKLL",
+    "name": "Lviv International Airport",
+    "country": "UA",
+    "continent": "EU",
+    "latitudeDeg": 49.8125,
+    "longitudeDeg": 23.9561,
+    "elevationFt": 1071,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239626,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3304.946,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

@@ -30,7 +30,13 @@
     "test:browser": "node scripts/test-browser.mjs",
     "validate:mission-data": "node scripts/mission-data.mjs",
     "research:mission": "node scripts/mission-research.mjs",
-    "validate:mission": "node scripts/mission-research.mjs --research --verify"
+    "validate:mission": "node scripts/mission-research.mjs --research --verify",
+    "validate:campaign-data": "node scripts/campaign-data.mjs",
+    "research:campaign": "node scripts/campaign-research.mjs",
+    "validate:campaign": "node scripts/campaign-research.mjs --verify",
+    "research:campaign-detours": "node scripts/campaign-detours.mjs",
+    "research:westward": "node scripts/westward-research.mjs",
+    "validate:westward": "node scripts/westward-research.mjs --verify"
   },
   "devDependencies": {
     "typescript": "5.9.2",

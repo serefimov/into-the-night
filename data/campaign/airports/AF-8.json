@@ -1,0 +1,721 @@
+[
+  {
+    "id": "HEAT",
+    "ourAirportsId": 3177,
+    "iata": "ATZ",
+    "icao": "HEAT",
+    "name": "Asyut International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 27.045962,
+    "longitudeDeg": 31.01276,
+    "elevationFt": 748,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235583,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3019.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HEBA",
+    "ourAirportsId": 3180,
+    "iata": "HBE",
+    "icao": "HEAX",
+    "name": "Alexandria International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 30.93249,
+    "longitudeDeg": 29.696437,
+    "elevationFt": 171,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235563,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3400.349,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235564,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HECA",
+    "ourAirportsId": 3183,
+    "iata": "CAI",
+    "icao": "HECA",
+    "name": "Cairo International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 30.111534,
+    "longitudeDeg": 31.396694,
+    "elevationFt": 322,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235592,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 4000.195,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 300957,
+        "ends": [
+          "05C",
+          "23C"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235593,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HEGN",
+    "ourAirportsId": 3186,
+    "iata": "HRG",
+    "icao": "HEGN",
+    "name": "Hurghada International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 27.176776,
+    "longitudeDeg": 33.796692,
+    "elevationFt": 32,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235546,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 4014.521,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 349785,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 4013.606,
+        "widthM": 60.046,
+        "surface": "ASPHALT",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HELX",
+    "ourAirportsId": 3191,
+    "iata": "LXR",
+    "icao": "HELX",
+    "name": "Luxor International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 25.671018,
+    "longitudeDeg": 32.706446,
+    "elevationFt": 276,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235625,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HEMA",
+    "ourAirportsId": 3192,
+    "iata": "RMF",
+    "icao": "HEMA",
+    "name": "Marsa Alam International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 25.555548,
+    "longitudeDeg": 34.59245,
+    "elevationFt": 213,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235544,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3429.914,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HEMM",
+    "ourAirportsId": 3193,
+    "iata": "MUH",
+    "icao": "HEMM",
+    "name": "Mersa Matruh International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 31.324313,
+    "longitudeDeg": 27.22227,
+    "elevationFt": 75,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235566,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 235567,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HEPS",
+    "ourAirportsId": 3196,
+    "iata": "PSD",
+    "icao": "HEPS",
+    "name": "Port Said International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 31.279285,
+    "longitudeDeg": 32.240582,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235576,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2349.094,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HESG",
+    "ourAirportsId": 300893,
+    "iata": "HMB",
+    "icao": "HESG",
+    "name": "Suhaj International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 26.342515,
+    "longitudeDeg": 31.743017,
+    "elevationFt": 322,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 350154,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "Asphalt",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HESN",
+    "ourAirportsId": 3199,
+    "iata": "ASW",
+    "icao": "HESN",
+    "name": "Aswan International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 23.961075,
+    "longitudeDeg": 32.820382,
+    "elevationFt": 650,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235624,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3401.873,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HESX",
+    "ourAirportsId": 335334,
+    "iata": "SPX",
+    "icao": "HESX",
+    "name": "Sphinx International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 30.108179,
+    "longitudeDeg": 30.895728,
+    "elevationFt": 510,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 335335,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3649.98,
+        "widthM": 60.046,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HJJJ",
+    "ourAirportsId": 3247,
+    "iata": "JUB",
+    "icao": "HJJJ",
+    "name": "Juba International Airport",
+    "country": "SS",
+    "continent": "AF",
+    "latitudeDeg": 4.87201,
+    "longitudeDeg": 31.601101,
+    "elevationFt": 1513,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238961,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HKEL",
+    "ourAirportsId": 3205,
+    "iata": "EDL",
+    "icao": "HKEL",
+    "name": "Eldoret International Airport",
+    "country": "KE",
+    "continent": "AF",
+    "latitudeDeg": 0.404458,
+    "longitudeDeg": 35.238899,
+    "elevationFt": 6941,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237276,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3499.104,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HKJK",
+    "ourAirportsId": 3206,
+    "iata": "NBO",
+    "icao": "HKJK",
+    "name": "Jomo Kenyatta International Airport",
+    "country": "KE",
+    "continent": "AF",
+    "latitudeDeg": -1.318886,
+    "longitudeDeg": 36.928233,
+    "elevationFt": 5330,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237261,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 4116.934,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HKKI",
+    "ourAirportsId": 3208,
+    "iata": "KIS",
+    "icao": "HKKI",
+    "name": "Kisumu International Airport",
+    "country": "KE",
+    "continent": "AF",
+    "latitudeDeg": -0.086139,
+    "longitudeDeg": 34.728901,
+    "elevationFt": 3734,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237260,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3298.85,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HKMO",
+    "ourAirportsId": 3213,
+    "iata": "MBA",
+    "icao": "HKMO",
+    "name": "Moi International Airport",
+    "country": "KE",
+    "continent": "AF",
+    "latitudeDeg": -4.03483,
+    "longitudeDeg": 39.5942,
+    "elevationFt": 200,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237262,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3350.057,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237263,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 1363.37,
+        "widthM": 35.966,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HLGD",
+    "ourAirportsId": 3219,
+    "iata": "SRX",
+    "icao": "HLGD",
+    "name": "Sirt International Airport / Ghardabiya Airbase",
+    "country": "LY",
+    "continent": "AF",
+    "latitudeDeg": 31.058578,
+    "longitudeDeg": 16.597095,
+    "elevationFt": 267,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237464,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3598.774,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 237465,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3598.774,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HLLB",
+    "ourAirportsId": 3223,
+    "iata": "BEN",
+    "icao": "HLLB",
+    "name": "Benina International Airport",
+    "country": "LY",
+    "continent": "AF",
+    "latitudeDeg": 32.096802,
+    "longitudeDeg": 20.269501,
+    "elevationFt": 433,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237486,
+        "ends": [
+          "15L",
+          "33R"
+        ],
+        "lengthM": 3575.914,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237485,
+        "ends": [
+          "15R",
+          "33L"
+        ],
+        "lengthM": 3575.609,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HLLM",
+    "ourAirportsId": 3224,
+    "iata": "MJI",
+    "icao": "HLLM",
+    "name": "Mitiga International Airport",
+    "country": "LY",
+    "continent": "AF",
+    "latitudeDeg": 32.89177,
+    "longitudeDeg": 13.287878,
+    "elevationFt": 36,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237450,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HLLQ",
+    "ourAirportsId": 3225,
+    "iata": "LAQ",
+    "icao": "HLLQ",
+    "name": "Al Abraq International Airport",
+    "country": "LY",
+    "continent": "AF",
+    "latitudeDeg": 32.789036,
+    "longitudeDeg": 21.954864,
+    "elevationFt": 2157,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237475,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3603.955,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 237474,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 1894.027,
+        "widthM": 57.912,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

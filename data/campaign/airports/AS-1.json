@@ -1,0 +1,720 @@
+[
+  {
+    "id": "HEAR",
+    "ourAirportsId": 3176,
+    "iata": "AAC",
+    "icao": "HEAR",
+    "name": "El Arish International Airport",
+    "country": "EG",
+    "continent": "AS",
+    "latitudeDeg": 31.055324,
+    "longitudeDeg": 33.827964,
+    "elevationFt": 118,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235603,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3019.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 514853,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3019.044,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HESH",
+    "ourAirportsId": 3198,
+    "iata": "SSH",
+    "icao": "HESH",
+    "name": "Sharm El Sheikh International Airport",
+    "country": "EG",
+    "continent": "AS",
+    "latitudeDeg": 27.977272,
+    "longitudeDeg": 34.394717,
+    "elevationFt": 191,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235572,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 3080.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235573,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 3080.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "IN-0276",
+    "ourAirportsId": 342093,
+    "iata": "NMI",
+    "icao": "VANM",
+    "name": "Navi Mumbai International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 18.984597,
+    "longitudeDeg": 73.065253,
+    "elevationFt": 184,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 530534,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 530535,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "IN-0392",
+    "ourAirportsId": 597786,
+    "iata": "DXN",
+    "icao": "VIND",
+    "name": "Noida International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 28.179868,
+    "longitudeDeg": 77.611843,
+    "elevationFt": 644,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 609284,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3954.78,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KH-0001",
+    "ourAirportsId": 339963,
+    "iata": "DSY",
+    "icao": "VDDS",
+    "name": "Dara Sakor International Airport",
+    "country": "KH",
+    "continent": "AS",
+    "latitudeDeg": 10.914244,
+    "longitudeDeg": 103.226652,
+    "elevationFt": 60,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 573980,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3199.79,
+        "widthM": 45.11,
+        "surface": "concrete",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KH-0002",
+    "ourAirportsId": 342098,
+    "iata": "KTI",
+    "icao": "VDTI",
+    "name": "Techo International Airport",
+    "country": "KH",
+    "continent": "AS",
+    "latitudeDeg": 11.359987,
+    "longitudeDeg": 104.921272,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 600468,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LCEN",
+    "ourAirportsId": 30979,
+    "iata": "ECN",
+    "icao": "LCEN",
+    "name": "Ercan International Airport",
+    "country": "CY",
+    "continent": "AS",
+    "latitudeDeg": 35.153064,
+    "longitudeDeg": 33.507352,
+    "elevationFt": 404,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 514064,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 3199.79,
+        "widthM": 45.11,
+        "surface": "",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 301852,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 2755.087,
+        "widthM": 45.11,
+        "surface": "concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LCLK",
+    "ourAirportsId": 3980,
+    "iata": "LCA",
+    "icao": "LCLK",
+    "name": "Larnaca International Airport",
+    "country": "CY",
+    "continent": "AS",
+    "latitudeDeg": 34.875099,
+    "longitudeDeg": 33.624901,
+    "elevationFt": 8,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235442,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2994.05,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LCPH",
+    "ourAirportsId": 3981,
+    "iata": "PFO",
+    "icao": "LCPH",
+    "name": "Paphos International Airport",
+    "country": "CY",
+    "continent": "AS",
+    "latitudeDeg": 34.717999,
+    "longitudeDeg": 32.485699,
+    "elevationFt": 41,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235443,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LGKF",
+    "ourAirportsId": 4261,
+    "iata": "EFL",
+    "icao": "LGKF",
+    "name": "Kefalonia International Airport \"Anna Pollatou\"",
+    "country": "GR",
+    "continent": "AS",
+    "latitudeDeg": 38.120098,
+    "longitudeDeg": 20.5005,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236358,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2435.962,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LGKO",
+    "ourAirportsId": 4264,
+    "iata": "KGS",
+    "icao": "LGKO",
+    "name": "Kos International Airport \"Ippokratis\"",
+    "country": "GR",
+    "continent": "AS",
+    "latitudeDeg": 36.794523,
+    "longitudeDeg": 27.09115,
+    "elevationFt": 412,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236341,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2389.937,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LGRP",
+    "ourAirportsId": 4279,
+    "iata": "RHO",
+    "icao": "LGRP",
+    "name": "Rhodes International Airport \"Diagoras\"",
+    "country": "GR",
+    "continent": "AS",
+    "latitudeDeg": 36.405399,
+    "longitudeDeg": 28.086201,
+    "elevationFt": 17,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236347,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3305.861,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LGZA",
+    "ourAirportsId": 4295,
+    "iata": "ZTH",
+    "icao": "LGZA",
+    "name": "Zakynthos International Airport \"Dionysios Solomos\"",
+    "country": "GR",
+    "continent": "AS",
+    "latitudeDeg": 37.7509,
+    "longitudeDeg": 20.8843,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236369,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2228.088,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LLBG",
+    "ourAirportsId": 4411,
+    "iata": "TLV",
+    "icao": "LLBG",
+    "name": "Ben Gurion International Airport",
+    "country": "IL",
+    "continent": "AS",
+    "latitudeDeg": 32.011398,
+    "longitudeDeg": 34.8867,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236954,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 4062.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236955,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3111.703,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236953,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2771.851,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LLER",
+    "ourAirportsId": 330388,
+    "iata": "ETM",
+    "icao": "LLER",
+    "name": "Ramon International Airport",
+    "country": "IL",
+    "continent": "AS",
+    "latitudeDeg": 29.727009,
+    "longitudeDeg": 35.014116,
+    "elevationFt": 288,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTAC",
+    "ourAirportsId": 4509,
+    "iata": "ESB",
+    "icao": "LTAC",
+    "name": "Esenboğa International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 40.128101,
+    "longitudeDeg": 32.995098,
+    "elevationFt": 3125,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239303,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239304,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTAI",
+    "ourAirportsId": 4515,
+    "iata": "AYT",
+    "icao": "LTAI",
+    "name": "Antalya International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 36.898701,
+    "longitudeDeg": 30.800501,
+    "elevationFt": 177,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239268,
+        "ends": [
+          "18C",
+          "36C"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239270,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239269,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 2990.393,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTAJ",
+    "ourAirportsId": 4516,
+    "iata": "GZT",
+    "icao": "LTAJ",
+    "name": "Gaziantep Oğuzeli International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 36.947201,
+    "longitudeDeg": 37.478699,
+    "elevationFt": 2315,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239291,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 47.854,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTAN",
+    "ourAirportsId": 4518,
+    "iata": "KYA",
+    "icao": "LTAN",
+    "name": "Konya Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 37.979,
+    "longitudeDeg": 32.561901,
+    "elevationFt": 3392,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239256,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 3349.752,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 271072,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3349.752,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LTAU",
+    "ourAirportsId": 4523,
+    "iata": "ASR",
+    "icao": "LTAU",
+    "name": "Kayseri Erkilet International Airport",
+    "country": "TR",
+    "continent": "AS",
+    "latitudeDeg": 38.770401,
+    "longitudeDeg": 35.495399,
+    "elevationFt": 3463,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239286,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2999.537,
+        "widthM": 44.196,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

@@ -1,0 +1,688 @@
+[
+  {
+    "id": "FKKR",
+    "ourAirportsId": 2886,
+    "iata": "GOU",
+    "icao": "FKKR",
+    "name": "Garoua International Airport",
+    "country": "CM",
+    "continent": "AF",
+    "latitudeDeg": 9.334785,
+    "longitudeDeg": 13.372129,
+    "elevationFt": 794,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235267,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3362.554,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FKYS",
+    "ourAirportsId": 2890,
+    "iata": "NSI",
+    "icao": "FKYS",
+    "name": "Yaoundé Nsimalen International Airport",
+    "country": "CM",
+    "continent": "AF",
+    "latitudeDeg": 3.72256,
+    "longitudeDeg": 11.5533,
+    "elevationFt": 2278,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235265,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FLLI",
+    "ourAirportsId": 2893,
+    "iata": "LVI",
+    "icao": "FLHN",
+    "name": "Harry Mwanga Nkumbula International Airport",
+    "country": "ZM",
+    "continent": "AF",
+    "latitudeDeg": -17.821524,
+    "longitudeDeg": 25.819642,
+    "elevationFt": 3302,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246258,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246259,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 1371.905,
+        "widthM": 29.87,
+        "surface": "Dirt",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FLLS",
+    "ourAirportsId": 2894,
+    "iata": "LUN",
+    "icao": "FLKK",
+    "name": "Kenneth Kaunda International Airport",
+    "country": "ZM",
+    "continent": "AF",
+    "latitudeDeg": -15.330833,
+    "longitudeDeg": 28.452722,
+    "elevationFt": 3779,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246255,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3961.79,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246256,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 822.96,
+        "widthM": 30.48,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FLMF",
+    "ourAirportsId": 2895,
+    "iata": "MFU",
+    "icao": "FLMF",
+    "name": "Mfuwe International Airport",
+    "country": "ZM",
+    "continent": "AF",
+    "latitudeDeg": -13.2589,
+    "longitudeDeg": 31.9366,
+    "elevationFt": 1853,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246264,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2239.975,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FLSK",
+    "ourAirportsId": 525659,
+    "iata": "NLA",
+    "icao": "FLSK",
+    "name": "Simon Mwansa Kapwepwe International Airport",
+    "country": "ZM",
+    "continent": "AF",
+    "latitudeDeg": -12.96513,
+    "longitudeDeg": 28.515624,
+    "elevationFt": 4308,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 525660,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FMCZ",
+    "ourAirportsId": 2904,
+    "iata": "DZA",
+    "icao": "FMCZ",
+    "name": "Dzaoudzi Pamandzi International Airport",
+    "country": "YT",
+    "continent": "AF",
+    "latitudeDeg": -12.809319,
+    "longitudeDeg": 45.281815,
+    "elevationFt": 23,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237545,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 1929.384,
+        "widthM": 28.042,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FMEE",
+    "ourAirportsId": 2905,
+    "iata": "RUN",
+    "icao": "FMEE",
+    "name": "Roland Garros Airport",
+    "country": "RE",
+    "continent": "AF",
+    "latitudeDeg": -20.890087,
+    "longitudeDeg": 55.518894,
+    "elevationFt": 66,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238381,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238382,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2670.048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FMEP",
+    "ourAirportsId": 2906,
+    "iata": "ZSE",
+    "icao": "FMEP",
+    "name": "Saint-Pierre Pierrefonds Airport",
+    "country": "RE",
+    "continent": "AF",
+    "latitudeDeg": -21.319362,
+    "longitudeDeg": 55.422506,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238383,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2133.6,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FMMI",
+    "ourAirportsId": 2908,
+    "iata": "TNR",
+    "icao": "FMMI",
+    "name": "Ivato International Airport",
+    "country": "MG",
+    "continent": "AF",
+    "latitudeDeg": -18.7969,
+    "longitudeDeg": 47.478802,
+    "elevationFt": 4198,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237532,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FMMT",
+    "ourAirportsId": 2911,
+    "iata": "TMM",
+    "icao": "FMMT",
+    "name": "Toamasina Ambalamanasy Airport",
+    "country": "MG",
+    "continent": "AF",
+    "latitudeDeg": -18.113537,
+    "longitudeDeg": 49.392262,
+    "elevationFt": 22,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237537,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 39.929,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FMNM",
+    "ourAirportsId": 2919,
+    "iata": "MJN",
+    "icao": "FMNM",
+    "name": "Amborovy Airport",
+    "country": "MG",
+    "continent": "AF",
+    "latitudeDeg": -15.666842,
+    "longitudeDeg": 46.351233,
+    "elevationFt": 87,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237523,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FMNN",
+    "ourAirportsId": 2920,
+    "iata": "NOS",
+    "icao": "FMNN",
+    "name": "Nosy Be International Airport",
+    "country": "MG",
+    "continent": "AF",
+    "latitudeDeg": -13.3121,
+    "longitudeDeg": 48.3148,
+    "elevationFt": 36,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237525,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2189.988,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FNBJ",
+    "ourAirportsId": 312665,
+    "iata": "NBJ",
+    "icao": "FNBJ",
+    "name": "Dr. Antonio Agostinho Neto International Airport",
+    "country": "AO",
+    "continent": "AF",
+    "latitudeDeg": -9.050734,
+    "longitudeDeg": 13.499078,
+    "elevationFt": 550,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 563423,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 563424,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FNLU",
+    "ourAirportsId": 2942,
+    "iata": "LAD",
+    "icao": "FNLU",
+    "name": "Quatro de Fevereiro International Airport",
+    "country": "AO",
+    "continent": "AF",
+    "latitudeDeg": -8.85837,
+    "longitudeDeg": 13.2312,
+    "elevationFt": 243,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232892,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3715.512,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232893,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FOOG",
+    "ourAirportsId": 2963,
+    "iata": "POG",
+    "icao": "FOOG",
+    "name": "Port Gentil International Airport",
+    "country": "GA",
+    "continent": "AF",
+    "latitudeDeg": -0.711739,
+    "longitudeDeg": 8.75438,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236069,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 1900.123,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FOOL",
+    "ourAirportsId": 2966,
+    "iata": "LBV",
+    "icao": "FOOL",
+    "name": "Libreville Leon M'ba International Airport",
+    "country": "GA",
+    "continent": "AF",
+    "latitudeDeg": 0.458951,
+    "longitudeDeg": 9.41214,
+    "elevationFt": 39,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236068,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3000.451,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FPST",
+    "ourAirportsId": 2969,
+    "iata": "TMS",
+    "icao": "FPST",
+    "name": "São Tomé International Airport",
+    "country": "ST",
+    "continent": "AF",
+    "latitudeDeg": 0.378175,
+    "longitudeDeg": 6.71215,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239213,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2219.858,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FQBR",
+    "ourAirportsId": 2970,
+    "iata": "BEW",
+    "icao": "FQBR",
+    "name": "Beira International Airport",
+    "country": "MZ",
+    "continent": "AF",
+    "latitudeDeg": -19.7964,
+    "longitudeDeg": 34.9076,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237849,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FQMA",
+    "ourAirportsId": 2975,
+    "iata": "MPM",
+    "icao": "FQMA",
+    "name": "Maputo Airport",
+    "country": "MZ",
+    "continent": "AF",
+    "latitudeDeg": -25.920799,
+    "longitudeDeg": 32.572601,
+    "elevationFt": 145,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237854,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3660.038,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237855,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 1699.87,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

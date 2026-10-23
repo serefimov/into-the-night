@@ -1,0 +1,665 @@
+[
+  {
+    "id": "VEGT",
+    "ourAirportsId": 26501,
+    "iata": "GAU",
+    "icao": "VEGT",
+    "name": "Lokpriya Gopinath Bordoloi International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 26.106654,
+    "longitudeDeg": 91.585226,
+    "elevationFt": 162,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236601,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VEIM",
+    "ourAirportsId": 26504,
+    "iata": "IMF",
+    "icao": "VEIM",
+    "name": "Bir Tikendrajit International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 24.76,
+    "longitudeDeg": 93.896698,
+    "elevationFt": 2540,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236782,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2745.943,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VGEG",
+    "ourAirportsId": 26527,
+    "iata": "CGP",
+    "icao": "VGEG",
+    "name": "Shah Amanat International Airport",
+    "country": "BD",
+    "continent": "AS",
+    "latitudeDeg": 22.249599,
+    "longitudeDeg": 91.813301,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233677,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2940.101,
+        "widthM": 45.11,
+        "surface": "Concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VGHS",
+    "ourAirportsId": 26534,
+    "iata": "DAC",
+    "icao": "VGHS",
+    "name": "Hazrat Shahjalal International Airport",
+    "country": "BD",
+    "continent": "AS",
+    "latitudeDeg": 23.843347,
+    "longitudeDeg": 90.397783,
+    "elevationFt": 30,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233681,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VGSY",
+    "ourAirportsId": 26532,
+    "iata": "ZYL",
+    "icao": "VGSY",
+    "name": "Osmany International Airport",
+    "country": "BD",
+    "continent": "AS",
+    "latitudeDeg": 24.963993,
+    "longitudeDeg": 91.864749,
+    "elevationFt": 50,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233674,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2888.894,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VHHH",
+    "ourAirportsId": 26535,
+    "iata": "HKG",
+    "icao": "VHHH",
+    "name": "Hong Kong International Airport",
+    "country": "HK",
+    "continent": "AS",
+    "latitudeDeg": 22.31184,
+    "longitudeDeg": 113.914862,
+    "elevationFt": 28,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236411,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236412,
+        "ends": [
+          "07C",
+          "25C"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 355813,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VIAR",
+    "ourAirportsId": 26540,
+    "iata": "ATQ",
+    "icao": "VIAR",
+    "name": "Sri Guru Ram Das Ji International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 31.7096,
+    "longitudeDeg": 74.797302,
+    "elevationFt": 756,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236655,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VICG",
+    "ourAirportsId": 26550,
+    "iata": "IXC",
+    "icao": "VICG",
+    "name": "Shaheed Bhagat Singh International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 30.6735,
+    "longitudeDeg": 76.788498,
+    "elevationFt": 1012,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236697,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VIDP",
+    "ourAirportsId": 26555,
+    "iata": "DEL",
+    "icao": "VIDP",
+    "name": "Indira Gandhi International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 28.55563,
+    "longitudeDeg": 77.09519,
+    "elevationFt": 777,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 271000,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 4429.963,
+        "widthM": 60.046,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 510252,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 4169.969,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 236779,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3813.048,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VIHR",
+    "ourAirportsId": 26559,
+    "iata": "HSS",
+    "icao": "VIHR",
+    "name": "Maharaja Agrasen International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 29.186065,
+    "longitudeDeg": 75.74142,
+    "elevationFt": 700,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236728,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3119.933,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VIHX",
+    "ourAirportsId": 26560,
+    "iata": "HWR",
+    "icao": "VIHX",
+    "name": "Halwara International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 30.748501,
+    "longitudeDeg": 75.629799,
+    "elevationFt": 790,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236651,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VIJP",
+    "ourAirportsId": 26563,
+    "iata": "JAI",
+    "icao": "VIJP",
+    "name": "Jaipur International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 26.8242,
+    "longitudeDeg": 75.812202,
+    "elevationFt": 1263,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236680,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2797.15,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236681,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 1591.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VILK",
+    "ourAirportsId": 26570,
+    "iata": "LKO",
+    "icao": "VILK",
+    "name": "Chaudhary Charan Singh International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 26.760599,
+    "longitudeDeg": 80.889297,
+    "elevationFt": 410,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236639,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2741.981,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VISR",
+    "ourAirportsId": 26578,
+    "iata": "SXR",
+    "icao": "VISR",
+    "name": "Srinagar International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 33.987099,
+    "longitudeDeg": 74.7742,
+    "elevationFt": 5429,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236760,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3685.032,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VLLB",
+    "ourAirportsId": 26583,
+    "iata": "LPQ",
+    "icao": "VLLB",
+    "name": "Luang Phabang International Airport",
+    "country": "LA",
+    "continent": "AS",
+    "latitudeDeg": 19.904273,
+    "longitudeDeg": 102.167191,
+    "elevationFt": 955,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237409,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VLPS",
+    "ourAirportsId": 26584,
+    "iata": "PKZ",
+    "icao": "VLPS",
+    "name": "Pakse International Airport",
+    "country": "LA",
+    "continent": "AS",
+    "latitudeDeg": 15.133973,
+    "longitudeDeg": 105.779871,
+    "elevationFt": 351,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237412,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 44.806,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VLVT",
+    "ourAirportsId": 26588,
+    "iata": "VTE",
+    "icao": "VLVT",
+    "name": "Wattay International Airport",
+    "country": "LA",
+    "continent": "AS",
+    "latitudeDeg": 17.985052,
+    "longitudeDeg": 102.566692,
+    "elevationFt": 564,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237408,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VMMC",
+    "ourAirportsId": 26589,
+    "iata": "MFM",
+    "icao": "VMMC",
+    "name": "Macau International Airport",
+    "country": "MO",
+    "continent": "AS",
+    "latitudeDeg": 22.149599,
+    "longitudeDeg": 113.592003,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237541,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3213.811,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VN-0018",
+    "ourAirportsId": 342100,
+    "iata": "LTH",
+    "icao": "VVLT",
+    "name": "Long Thanh International Airport (Under Construction)",
+    "country": "VN",
+    "continent": "AS",
+    "latitudeDeg": 10.772842,
+    "longitudeDeg": 107.040596,
+    "elevationFt": 249,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VNBW",
+    "ourAirportsId": 26593,
+    "iata": "BWA",
+    "icao": "VNBW",
+    "name": "Gautam Buddha International Airport",
+    "country": "NP",
+    "continent": "AS",
+    "latitudeDeg": 27.504636,
+    "longitudeDeg": 83.410381,
+    "elevationFt": 358,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237989,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

@@ -1,0 +1,655 @@
+[
+  {
+    "id": "ESNU",
+    "ourAirportsId": 2689,
+    "iata": "UME",
+    "icao": "ESNU",
+    "name": "Umeå Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 63.791801,
+    "longitudeDeg": 20.282801,
+    "elevationFt": 24,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239010,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2301.545,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESOW",
+    "ourAirportsId": 2696,
+    "iata": "VST",
+    "icao": "ESOW",
+    "name": "Stockholm Västerås Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 59.589401,
+    "longitudeDeg": 16.6336,
+    "elevationFt": 21,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239068,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2581.046,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESPA",
+    "ourAirportsId": 2697,
+    "iata": "LLA",
+    "icao": "ESPA",
+    "name": "Luleå Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 65.5438,
+    "longitudeDeg": 22.122,
+    "elevationFt": 65,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239061,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3349.752,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESSA",
+    "ourAirportsId": 2701,
+    "iata": "ARN",
+    "icao": "ESSA",
+    "name": "Stockholm-Arlanda Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 59.64849,
+    "longitudeDeg": 17.928829,
+    "elevationFt": 137,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239018,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3300.984,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239019,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239017,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 2499.665,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESSL",
+    "ourAirportsId": 2706,
+    "iata": "LPI",
+    "icao": "ESSL",
+    "name": "Linköping City Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 58.404909,
+    "longitudeDeg": 15.684499,
+    "elevationFt": 172,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238981,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2134.819,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESSV",
+    "ourAirportsId": 2710,
+    "iata": "VBY",
+    "icao": "ESSV",
+    "name": "Visby Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 57.6628,
+    "longitudeDeg": 18.346201,
+    "elevationFt": 164,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238989,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238990,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 1100.633,
+        "widthM": 39.929,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EVLA",
+    "ourAirportsId": 2757,
+    "iata": "LPX",
+    "icao": "EVLA",
+    "name": "Liepāja International Airport",
+    "country": "LV",
+    "continent": "EU",
+    "latitudeDeg": 56.517502,
+    "longitudeDeg": 21.096901,
+    "elevationFt": 16,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237421,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2001.926,
+        "widthM": 39.929,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EVRA",
+    "ourAirportsId": 2758,
+    "iata": "RIX",
+    "icao": "EVRA",
+    "name": "Riga International Airport",
+    "country": "LV",
+    "continent": "EU",
+    "latitudeDeg": 56.920752,
+    "longitudeDeg": 23.970711,
+    "elevationFt": 36,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237422,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EYKA",
+    "ourAirportsId": 2760,
+    "iata": "KUN",
+    "icao": "EYKA",
+    "name": "Kaunas International Airport",
+    "country": "LT",
+    "continent": "EU",
+    "latitudeDeg": 54.963965,
+    "longitudeDeg": 24.08582,
+    "elevationFt": 256,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237426,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3250.082,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EYPA",
+    "ourAirportsId": 2762,
+    "iata": "PLQ",
+    "icao": "EYPA",
+    "name": "Palanga International Airport",
+    "country": "LT",
+    "continent": "EU",
+    "latitudeDeg": 55.973202,
+    "longitudeDeg": 21.093901,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237429,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2279.904,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EYVI",
+    "ourAirportsId": 2766,
+    "iata": "VNO",
+    "icao": "EYVI",
+    "name": "Vilnius International Airport",
+    "country": "LT",
+    "continent": "EU",
+    "latitudeDeg": 54.634102,
+    "longitudeDeg": 25.285801,
+    "elevationFt": 648,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237430,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2514.905,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LATI",
+    "ourAirportsId": 3972,
+    "iata": "TIA",
+    "icao": "LATI",
+    "name": "Tirana International Airport Mother Teresa",
+    "country": "AL",
+    "continent": "EU",
+    "latitudeDeg": 41.4147,
+    "longitudeDeg": 19.7206,
+    "elevationFt": 126,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 576733,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LBBG",
+    "ourAirportsId": 3974,
+    "iata": "BOJ",
+    "icao": "LBBG",
+    "name": "Burgas Airport",
+    "country": "BG",
+    "continent": "EU",
+    "latitudeDeg": 42.569917,
+    "longitudeDeg": 27.515173,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234418,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LBPD",
+    "ourAirportsId": 3976,
+    "iata": "PDV",
+    "icao": "LBPD",
+    "name": "Plovdiv International Airport",
+    "country": "BG",
+    "continent": "EU",
+    "latitudeDeg": 42.067799,
+    "longitudeDeg": 24.8508,
+    "elevationFt": 597,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234416,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LBSF",
+    "ourAirportsId": 3977,
+    "iata": "SOF",
+    "icao": "LBSF",
+    "name": "Sofia Airport",
+    "country": "BG",
+    "continent": "EU",
+    "latitudeDeg": 42.696357,
+    "longitudeDeg": 23.417671,
+    "elevationFt": 1742,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234415,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LBWN",
+    "ourAirportsId": 3979,
+    "iata": "VAR",
+    "icao": "LBWN",
+    "name": "Varna Airport",
+    "country": "BG",
+    "continent": "EU",
+    "latitudeDeg": 43.232101,
+    "longitudeDeg": 27.8251,
+    "elevationFt": 230,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234417,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2517.038,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LDDU",
+    "ourAirportsId": 3984,
+    "iata": "DBV",
+    "icao": "LDDU",
+    "name": "Dubrovnik Ruđer Bošković Airport",
+    "country": "HR",
+    "continent": "EU",
+    "latitudeDeg": 42.562247,
+    "longitudeDeg": 18.265543,
+    "elevationFt": 527,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236423,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3229.966,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LDPL",
+    "ourAirportsId": 3987,
+    "iata": "PUY",
+    "icao": "LDPL",
+    "name": "Pula Airport",
+    "country": "HR",
+    "continent": "EU",
+    "latitudeDeg": 44.893501,
+    "longitudeDeg": 13.9222,
+    "elevationFt": 274,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236427,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2949.854,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LDRI",
+    "ourAirportsId": 3989,
+    "iata": "RJK",
+    "icao": "LDRI",
+    "name": "Rijeka Airport",
+    "country": "HR",
+    "continent": "EU",
+    "latitudeDeg": 45.216376,
+    "longitudeDeg": 14.57085,
+    "elevationFt": 278,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236422,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2488.387,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LDSP",
+    "ourAirportsId": 3991,
+    "iata": "SPU",
+    "icao": "LDSP",
+    "name": "Split Saint Jerome Airport",
+    "country": "HR",
+    "continent": "EU",
+    "latitudeDeg": 43.538898,
+    "longitudeDeg": 16.298,
+    "elevationFt": 79,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236431,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2549.957,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

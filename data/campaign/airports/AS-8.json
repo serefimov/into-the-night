@@ -1,0 +1,753 @@
+[
+  {
+    "id": "RJSS",
+    "ourAirportsId": 5615,
+    "iata": "SDJ",
+    "icao": "RJSS",
+    "name": "Sendai Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 38.139702,
+    "longitudeDeg": 140.917007,
+    "elevationFt": 15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237214,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237215,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 1200.912,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJTT",
+    "ourAirportsId": 5627,
+    "iata": "HND",
+    "icao": "RJTT",
+    "name": "Tokyo Haneda International Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 35.549678,
+    "longitudeDeg": 139.786958,
+    "elevationFt": 35,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237198,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3360.115,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237197,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237196,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RKJB",
+    "ourAirportsId": 302303,
+    "iata": "MWX",
+    "icao": "RKJB",
+    "name": "Muan International Airport",
+    "country": "KR",
+    "continent": "AS",
+    "latitudeDeg": 34.991406,
+    "longitudeDeg": 126.382814,
+    "elevationFt": 35,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RKNY",
+    "ourAirportsId": 5638,
+    "iata": "YNY",
+    "icao": "RKNY",
+    "name": "Yangyang International Airport",
+    "country": "KR",
+    "continent": "AS",
+    "latitudeDeg": 38.060481,
+    "longitudeDeg": 128.669822,
+    "elevationFt": 241,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237290,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RKPC",
+    "ourAirportsId": 5639,
+    "iata": "CJU",
+    "icao": "RKPC",
+    "name": "Jeju International Airport",
+    "country": "KR",
+    "continent": "AS",
+    "latitudeDeg": 33.512058,
+    "longitudeDeg": 126.492548,
+    "elevationFt": 118,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237295,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3179.978,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237296,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 1910.486,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RKPK",
+    "ourAirportsId": 5642,
+    "iata": "PUS",
+    "icao": "RKPK",
+    "name": "Gimhae International Airport",
+    "country": "KR",
+    "continent": "AS",
+    "latitudeDeg": 35.179501,
+    "longitudeDeg": 128.938004,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237330,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237331,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 2745.334,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RKSI",
+    "ourAirportsId": 5653,
+    "iata": "ICN",
+    "icao": "RKSI",
+    "name": "Incheon International Airport",
+    "country": "KR",
+    "continent": "AS",
+    "latitudeDeg": 37.469101,
+    "longitudeDeg": 126.450996,
+    "elevationFt": 23,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 313766,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237288,
+        "ends": [
+          "15R",
+          "33L"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 60.046,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237289,
+        "ends": [
+          "15L",
+          "33R"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 60.046,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RKSS",
+    "ourAirportsId": 5656,
+    "iata": "GMP",
+    "icao": "RKSS",
+    "name": "Seoul Gimpo International Airport",
+    "country": "KR",
+    "continent": "AS",
+    "latitudeDeg": 37.5583,
+    "longitudeDeg": 126.791,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237323,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237322,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RKTN",
+    "ourAirportsId": 5661,
+    "iata": "TAE",
+    "icao": "RKTN",
+    "name": "Daegu International Airport",
+    "country": "KR",
+    "continent": "AS",
+    "latitudeDeg": 35.894394,
+    "longitudeDeg": 128.656989,
+    "elevationFt": 116,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237313,
+        "ends": [
+          "13R",
+          "31L"
+        ],
+        "lengthM": 2755.087,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237314,
+        "ends": [
+          "13L",
+          "31R"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RKTU",
+    "ourAirportsId": 5663,
+    "iata": "CJJ",
+    "icao": "RKTU",
+    "name": "Cheongju International Airport/Cheongju Air Base (K-59/G-513)",
+    "country": "KR",
+    "continent": "AS",
+    "latitudeDeg": 36.71556,
+    "longitudeDeg": 127.500289,
+    "elevationFt": 191,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237298,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237299,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ROAH",
+    "ourAirportsId": 5671,
+    "iata": "OKA",
+    "icao": "ROAH",
+    "name": "Naha International Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 26.192437,
+    "longitudeDeg": 127.639804,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237220,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 2999.232,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 334164,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 60.046,
+        "surface": "ASPH",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RODN",
+    "ourAirportsId": 5673,
+    "iata": "DNA",
+    "icao": "RODN",
+    "name": "Kadena Air Base",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 26.351667,
+    "longitudeDeg": 127.769444,
+    "elevationFt": 143,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237217,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3688.08,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237218,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3688.08,
+        "widthM": 91.44,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPLB",
+    "ourAirportsId": 5686,
+    "iata": "SFS",
+    "icao": "RPLB",
+    "name": "Subic Bay International Airport / Naval Air Station Cubi Point",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 14.794833,
+    "longitudeDeg": 120.271883,
+    "elevationFt": 64,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238431,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2744.114,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPLC",
+    "ourAirportsId": 5687,
+    "iata": "CRK",
+    "icao": "RPLC",
+    "name": "Clark International Airport / Clark Air Base",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 15.186,
+    "longitudeDeg": 120.559998,
+    "elevationFt": 484,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238482,
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPLI",
+    "ourAirportsId": 5688,
+    "iata": "LAO",
+    "icao": "RPLI",
+    "name": "Laoag International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 18.175089,
+    "longitudeDeg": 120.531006,
+    "elevationFt": 25,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238454,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2779.776,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPLK",
+    "ourAirportsId": 336104,
+    "iata": "DRP",
+    "icao": "RPLK",
+    "name": "Bicol International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 13.111915,
+    "longitudeDeg": 123.676829,
+    "elevationFt": 319,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 604406,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPLL",
+    "ourAirportsId": 5689,
+    "iata": "MNL",
+    "icao": "RPLL",
+    "name": "Ninoy Aquino International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 14.5086,
+    "longitudeDeg": 121.019997,
+    "elevationFt": 75,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238414,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3737.153,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238415,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2257.958,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPMD",
+    "ourAirportsId": 5697,
+    "iata": "DVO",
+    "icao": "RPMD",
+    "name": "Francisco Bangoy International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 7.12552,
+    "longitudeDeg": 125.646004,
+    "elevationFt": 96,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238446,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPMR",
+    "ourAirportsId": 5709,
+    "iata": "GES",
+    "icao": "RPMR",
+    "name": "General Santos International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 6.057208,
+    "longitudeDeg": 125.096243,
+    "elevationFt": 505,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238484,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3226.918,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPMY",
+    "ourAirportsId": 308633,
+    "iata": "CGY",
+    "icao": "RPMY",
+    "name": "Laguindingan International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 8.612203,
+    "longitudeDeg": 124.456496,
+    "elevationFt": 190,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 308634,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2100.072,
+        "widthM": 45.11,
+        "surface": "Concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

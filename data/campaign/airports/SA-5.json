@@ -1,0 +1,221 @@
+[
+  {
+    "id": "SVBM",
+    "ourAirportsId": 6259,
+    "iata": "BRM",
+    "icao": "SVBM",
+    "name": "Jacinto Lara International Airport",
+    "country": "VE",
+    "continent": "SA",
+    "latitudeDeg": 10.042747,
+    "longitudeDeg": -69.35862,
+    "elevationFt": 2042,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246112,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2849.88,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SVMC",
+    "ourAirportsId": 6297,
+    "iata": "MAR",
+    "icao": "SVMC",
+    "name": "La Chinita International Airport",
+    "country": "VE",
+    "continent": "SA",
+    "latitudeDeg": 10.557542,
+    "longitudeDeg": -71.729307,
+    "elevationFt": 239,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246123,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246122,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 29.87,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SVMI",
+    "ourAirportsId": 6300,
+    "iata": "CCS",
+    "icao": "SVMI",
+    "name": "Maiquetía Simón Bolívar International Airport",
+    "country": "VE",
+    "continent": "SA",
+    "latitudeDeg": 10.602214,
+    "longitudeDeg": -66.991174,
+    "elevationFt": 234,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246098,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246097,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3026.664,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SVPR",
+    "ourAirportsId": 6315,
+    "iata": "PZO",
+    "icao": "SVPR",
+    "name": "General Manuel Carlos Piar International Airport",
+    "country": "VE",
+    "continent": "SA",
+    "latitudeDeg": 8.28853,
+    "longitudeDeg": -62.760399,
+    "elevationFt": 472,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246141,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2050.085,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SVVA",
+    "ourAirportsId": 6334,
+    "iata": "VLN",
+    "icao": "SVVA",
+    "name": "Arturo Michelena International Airport",
+    "country": "VE",
+    "continent": "SA",
+    "latitudeDeg": 10.149733,
+    "longitudeDeg": -67.928398,
+    "elevationFt": 1411,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246119,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SYCJ",
+    "ourAirportsId": 6356,
+    "iata": "GEO",
+    "icao": "SYCJ",
+    "name": "Cheddi Jagan International Airport",
+    "country": "GY",
+    "continent": "SA",
+    "latitudeDeg": 6.49855,
+    "longitudeDeg": -58.254101,
+    "elevationFt": 95,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236404,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3359.81,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236405,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1524.61,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]
