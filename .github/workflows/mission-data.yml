@@ -1,0 +1,22 @@
+name: Import pinned mission data
+on:
+  workflow_dispatch:
+  push:
+    branches: [20-aircraft-airports]
+    paths:
+      - scripts/import-mission-airports.py
+      - data/mission/selection.json
+      - .github/workflows/mission-data.yml
+permissions:
+  contents: read
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import public domain data at pinned commit
+        run: python3 scripts/import-mission-airports.py --log-archive
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mission-airports
+          path: data/mission/airports.json
