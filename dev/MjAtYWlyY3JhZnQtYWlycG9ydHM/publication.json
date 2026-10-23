@@ -1,0 +1,11 @@
+{
+  "kind": "dev",
+  "branch": "20-aircraft-airports",
+  "tag": "",
+  "version": "0.1.0-alpha.1",
+  "commit": "0555eecb4eba5319ffac4a6dd57c17482f0298db",
+  "runId": "39942877957",
+  "builtAt": "2026-10-23T10:59:44.291Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/0555eecb4eba5319ffac4a6dd57c17482f0298db",
+  "contentHash": "211759c12148696af87da1c7bb7a028d9f3dcf5425944319c2799400d7b25b49"
+}
