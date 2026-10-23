@@ -1,0 +1,400 @@
+[
+  {
+    "id": "SAEZ",
+    "ourAirportsId": 5781,
+    "iata": "EZE",
+    "icao": "SAEZ",
+    "name": "Ezeiza International Airport - Ministro Pistarini",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -34.8222,
+    "longitudeDeg": -58.5358,
+    "elevationFt": 67,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233039,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233040,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3104.998,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBEG",
+    "ourAirportsId": 5897,
+    "iata": "MAO",
+    "icao": "SBEG",
+    "name": "Eduardo Gomes International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -3.03861,
+    "longitudeDeg": -60.049702,
+    "elevationFt": 264,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234094,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASPH 71/F/C/X/T",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBGL",
+    "ourAirportsId": 5906,
+    "iata": "GIG",
+    "icao": "SBGL",
+    "name": "Rio de Janeiro Galeão – Tom Jobim International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -22.809999,
+    "longitudeDeg": -43.250557,
+    "elevationFt": 28,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234161,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234162,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3179.978,
+        "widthM": 46.939,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBGR",
+    "ourAirportsId": 5910,
+    "iata": "GRU",
+    "icao": "SBGR",
+    "name": "São Paulo/Guarulhos–Governor André Franco Montoro International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -23.431274,
+    "longitudeDeg": -46.469954,
+    "elevationFt": 2461,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234133,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234132,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SCEL",
+    "ourAirportsId": 6015,
+    "iata": "SCL",
+    "icao": "SCEL",
+    "name": "Comodoro Arturo Merino Benítez International Airport",
+    "country": "CL",
+    "continent": "SA",
+    "latitudeDeg": -33.393001556396484,
+    "longitudeDeg": -70.78579711914062,
+    "elevationFt": 1555,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235227,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235228,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 54.864,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SEQM",
+    "ourAirportsId": 308273,
+    "iata": "UIO",
+    "icao": "SEQM",
+    "name": "Mariscal Sucre International Airport",
+    "country": "EC",
+    "continent": "SA",
+    "latitudeDeg": -0.125399,
+    "longitudeDeg": -78.354306,
+    "elevationFt": 7841,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 308279,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 4098.036,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SKBO",
+    "ourAirportsId": 6104,
+    "iata": "BOG",
+    "icao": "SKBO",
+    "name": "El Dorado International Airport",
+    "country": "CO",
+    "continent": "SA",
+    "latitudeDeg": 4.70159,
+    "longitudeDeg": -74.1469,
+    "elevationFt": 8361,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235331,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235332,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPIM",
+    "ourAirportsId": 6217,
+    "iata": "LIM",
+    "icao": "SPJC",
+    "name": "Jorge Chávez International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -12.0219,
+    "longitudeDeg": -77.114305,
+    "elevationFt": 113,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238150,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3507.029,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 510595,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3479.902,
+        "widthM": 45.11,
+        "surface": "CONC",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SUMU",
+    "ourAirportsId": 6247,
+    "iata": "MVD",
+    "icao": "SUMU",
+    "name": "Carrasco General Cesáreo L. Berisso International Airport",
+    "country": "UY",
+    "continent": "SA",
+    "latitudeDeg": -34.835647,
+    "longitudeDeg": -56.026497,
+    "elevationFt": 105,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246026,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246025,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2250.034,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SVMI",
+    "ourAirportsId": 6300,
+    "iata": "CCS",
+    "icao": "SVMI",
+    "name": "Maiquetía Simón Bolívar International Airport",
+    "country": "VE",
+    "continent": "SA",
+    "latitudeDeg": 10.602214,
+    "longitudeDeg": -66.991174,
+    "elevationFt": 234,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246098,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246097,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3026.664,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

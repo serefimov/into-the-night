@@ -1,0 +1,1257 @@
+[
+  {
+    "id": "CYQX",
+    "ourAirportsId": 1881,
+    "iata": "YQX",
+    "icao": "CYQX",
+    "name": "Gander International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 48.936258,
+    "longitudeDeg": -54.567719,
+    "elevationFt": 496,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234811,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3108.96,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234813,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2712.72,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYUL",
+    "ourAirportsId": 1928,
+    "iata": "YUL",
+    "icao": "CYUL",
+    "name": "Montreal / Pierre Elliott Trudeau International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 45.467837,
+    "longitudeDeg": -73.742294,
+    "elevationFt": 118,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235037,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235036,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 2926.08,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYVR",
+    "ourAirportsId": 1941,
+    "iata": "YVR",
+    "icao": "CYVR",
+    "name": "Vancouver International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 49.193901,
+    "longitudeDeg": -123.183998,
+    "elevationFt": 14,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234511,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3505.2,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234512,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3029.712,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234513,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2225.04,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYYR",
+    "ourAirportsId": 1985,
+    "iata": "YYR",
+    "icao": "CYYR",
+    "name": "Goose Bay Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 53.3191986084,
+    "longitudeDeg": -60.4258003235,
+    "elevationFt": 160,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234880,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3366.821,
+        "widthM": 63.703,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234881,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2919.984,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "CYYZ",
+    "ourAirportsId": 1990,
+    "iata": "YYZ",
+    "icao": "CYYZ",
+    "name": "Toronto Pearson International Airport",
+    "country": "CA",
+    "continent": "NA",
+    "latitudeDeg": 43.675935,
+    "longitudeDeg": -79.629421,
+    "elevationFt": 569,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234792,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3389.376,
+        "widthM": 60.96,
+        "surface": "ASP/CONC",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234796,
+        "ends": [
+          "15L",
+          "33R"
+        ],
+        "lengthM": 3368.04,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234794,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 2955.646,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KATL",
+    "ourAirportsId": 3384,
+    "iata": "ATL",
+    "icao": "KATL",
+    "name": "Hartsfield Jackson Atlanta International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 33.6367,
+    "longitudeDeg": -84.428101,
+    "elevationFt": 1026,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 243553,
+        "ends": [
+          "09L",
+          "27R"
+        ],
+        "lengthM": 3776.472,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243550,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3047.695,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243551,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KBOS",
+    "ourAirportsId": 3422,
+    "iata": "BOS",
+    "icao": "KBOS",
+    "name": "Boston Logan International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 42.36197,
+    "longitudeDeg": -71.0079,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240224,
+        "ends": [
+          "15R",
+          "33L"
+        ],
+        "lengthM": 3073.298,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240221,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 3049.829,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240222,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 2396.947,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KDEN",
+    "ourAirportsId": 3486,
+    "iata": "DEN",
+    "icao": "KDEN",
+    "name": "Denver International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 39.860027,
+    "longitudeDeg": -104.673792,
+    "elevationFt": 5431,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244460,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 4876.8,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244458,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244459,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KDFW",
+    "ourAirportsId": 3488,
+    "iata": "DFW",
+    "icao": "KDFW",
+    "name": "Dallas Fort Worth International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 32.896801,
+    "longitudeDeg": -97.038002,
+    "elevationFt": 607,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 243415,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 4084.625,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243411,
+        "ends": [
+          "17C",
+          "35C"
+        ],
+        "lengthM": 4084.32,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243412,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 4084.32,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KIAD",
+    "ourAirportsId": 3602,
+    "iata": "IAD",
+    "icao": "KIAD",
+    "name": "Washington Dulles International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 38.9445,
+    "longitudeDeg": -77.455803,
+    "elevationFt": 312,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 243967,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 3505.2,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 250849,
+        "ends": [
+          "01C",
+          "19C"
+        ],
+        "lengthM": 3505.2,
+        "widthM": 45.72,
+        "surface": "CONC-G",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243969,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3200.705,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KJFK",
+    "ourAirportsId": 3622,
+    "iata": "JFK",
+    "icao": "KJFK",
+    "name": "John F. Kennedy International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 40.639447,
+    "longitudeDeg": -73.779317,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244969,
+        "ends": [
+          "13R",
+          "31L"
+        ],
+        "lengthM": 4422.953,
+        "widthM": 60.96,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244968,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 3681.679,
+        "widthM": 60.96,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244970,
+        "ends": [
+          "13L",
+          "31R"
+        ],
+        "lengthM": 3048,
+        "widthM": 60.96,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KLAX",
+    "ourAirportsId": 3632,
+    "iata": "LAX",
+    "icao": "KLAX",
+    "name": "Los Angeles International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 33.942501,
+    "longitudeDeg": -118.407997,
+    "elevationFt": 125,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240922,
+        "ends": [
+          "7L",
+          "25R"
+        ],
+        "lengthM": 3930.091,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240921,
+        "ends": [
+          "7R",
+          "25L"
+        ],
+        "lengthM": 3381.756,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240919,
+        "ends": [
+          "6R",
+          "24L"
+        ],
+        "lengthM": 3309.823,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KMIA",
+    "ourAirportsId": 3685,
+    "iata": "MIA",
+    "icao": "KMIA",
+    "name": "Miami International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 25.796011,
+    "longitudeDeg": -80.289751,
+    "elevationFt": 8,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 242151,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3967.277,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242149,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3202.229,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242152,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2852.928,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KORD",
+    "ourAirportsId": 3754,
+    "iata": "ORD",
+    "icao": "KORD",
+    "name": "Chicago O'Hare International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 41.9786,
+    "longitudeDeg": -87.9048,
+    "elevationFt": 680,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 250468,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3962.4,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245380,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 3432.048,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 341154,
+        "ends": [
+          "09C",
+          "27C"
+        ],
+        "lengthM": 3427.476,
+        "widthM": 60.96,
+        "surface": "concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KSEA",
+    "ourAirportsId": 3875,
+    "iata": "SEA",
+    "icao": "KSEA",
+    "name": "Seattle–Tacoma International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 47.447943,
+    "longitudeDeg": -122.310276,
+    "elevationFt": 433,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 242182,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3627.425,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 254330,
+        "ends": [
+          "16C",
+          "34C"
+        ],
+        "lengthM": 2873.045,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242181,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 2590.8,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KSFO",
+    "ourAirportsId": 3878,
+    "iata": "SFO",
+    "icao": "KSFO",
+    "name": "San Francisco International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 37.619806,
+    "longitudeDeg": -122.374821,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 240772,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3617.976,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240771,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 3468.929,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 240769,
+        "ends": [
+          "1R",
+          "19L"
+        ],
+        "lengthM": 2639.568,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MDPC",
+    "ourAirportsId": 4636,
+    "iata": "PUJ",
+    "icao": "MDPC",
+    "name": "Punta Cana International Airport",
+    "country": "DO",
+    "continent": "NA",
+    "latitudeDeg": 18.567093,
+    "longitudeDeg": -68.364558,
+    "elevationFt": 47,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235486,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 314313,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMMX",
+    "ourAirportsId": 4731,
+    "iata": "MEX",
+    "icao": "MMMX",
+    "name": "Mexico City Benito Juárez International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 19.435822,
+    "longitudeDeg": -99.07033,
+    "elevationFt": 7316,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237742,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3952.037,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237741,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3899.916,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMSD",
+    "ourAirportsId": 4750,
+    "iata": "SJD",
+    "icao": "MMSD",
+    "name": "Los Cabos International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 23.151919,
+    "longitudeDeg": -109.720731,
+    "elevationFt": 374,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237695,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MMUN",
+    "ourAirportsId": 4762,
+    "iata": "CUN",
+    "icao": "MMUN",
+    "name": "Cancún International Airport",
+    "country": "MX",
+    "continent": "NA",
+    "latitudeDeg": 21.040817,
+    "longitudeDeg": -86.87347,
+    "elevationFt": 22,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237786,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 298622,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MPTO",
+    "ourAirportsId": 4793,
+    "iata": "PTY",
+    "icao": "MPTO",
+    "name": "Tocumen International Airport",
+    "country": "PA",
+    "continent": "NA",
+    "latitudeDeg": 9.07136,
+    "longitudeDeg": -79.383499,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238295,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3049.829,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238296,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 2682.24,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MROC",
+    "ourAirportsId": 4810,
+    "iata": "SJO",
+    "icao": "MROC",
+    "name": "Juan Santamaría International Airport",
+    "country": "CR",
+    "continent": "NA",
+    "latitudeDeg": 9.99386,
+    "longitudeDeg": -84.208801,
+    "elevationFt": 3021,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235385,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3012.034,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PABE",
+    "ourAirportsId": 5338,
+    "iata": "BET",
+    "icao": "PABE",
+    "name": "Bethel Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 60.77980042,
+    "longitudeDeg": -161.8379974,
+    "elevationFt": 126,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 270892,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 1950.72,
+        "widthM": 45.72,
+        "surface": "ASPH-F",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 270893,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 1219.2,
+        "widthM": 22.86,
+        "surface": "ASPH-G",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 270894,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 566.318,
+        "widthM": 22.86,
+        "surface": "GRVL-G",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PANC",
+    "ourAirportsId": 5388,
+    "iata": "ANC",
+    "icao": "PANC",
+    "name": "Ted Stevens Anchorage International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 61.179004,
+    "longitudeDeg": -149.992561,
+    "elevationFt": 152,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244712,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3779.52,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244714,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3311.652,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244713,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3230.88,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TJSJ",
+    "ourAirportsId": 6384,
+    "iata": "SJU",
+    "icao": "TJSJ",
+    "name": "Luis Munoz Marin International Airport",
+    "country": "PR",
+    "continent": "NA",
+    "latitudeDeg": 18.4394,
+    "longitudeDeg": -66.001801,
+    "elevationFt": 9,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238489,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3048.61,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238490,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2443.277,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TNCM",
+    "ourAirportsId": 6406,
+    "iata": "SXM",
+    "icao": "TNCM",
+    "name": "Princess Juliana International Airport",
+    "country": "SX",
+    "continent": "NA",
+    "latitudeDeg": 18.041,
+    "longitudeDeg": -63.108898,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237998,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2300.021,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TTPP",
+    "ourAirportsId": 6410,
+    "iata": "POS",
+    "icao": "TTPP",
+    "name": "Piarco International Airport",
+    "country": "TT",
+    "continent": "NA",
+    "latitudeDeg": 10.59535,
+    "longitudeDeg": -61.337568,
+    "elevationFt": 58,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239134,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3200.4,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

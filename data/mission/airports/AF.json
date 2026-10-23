@@ -1,0 +1,630 @@
+[
+  {
+    "id": "DGAA",
+    "ourAirportsId": 2090,
+    "iata": "ACC",
+    "icao": "DGAA",
+    "name": "Kotoka International Airport",
+    "country": "GH",
+    "continent": "AF",
+    "latitudeDeg": 5.605189800262451,
+    "longitudeDeg": -0.16678600013256073,
+    "elevationFt": 205,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236092,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3403.092,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNMM",
+    "ourAirportsId": 2118,
+    "iata": "LOS",
+    "icao": "DNMM",
+    "name": "Murtala Muhammed International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 6.57737,
+    "longitudeDeg": 3.32116,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237902,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3899.611,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237903,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 2742.286,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FACT",
+    "ourAirportsId": 2775,
+    "iata": "CPT",
+    "icao": "FACT",
+    "name": "Cape Town International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -33.97403,
+    "longitudeDeg": 18.604333,
+    "elevationFt": 151,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238798,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3201.01,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238799,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 1701.089,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FAOR",
+    "ourAirportsId": 31055,
+    "iata": "JNB",
+    "icao": "FAOR",
+    "name": "O.R. Tambo International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -26.140081,
+    "longitudeDeg": 28.246801,
+    "elevationFt": 5558,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238744,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 4418.076,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238743,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FIMP",
+    "ourAirportsId": 2878,
+    "iata": "MRU",
+    "icao": "FIMP",
+    "name": "Sir Seewoosagur Ramgoolam International Airport",
+    "country": "MU",
+    "continent": "AF",
+    "latitudeDeg": -20.430201,
+    "longitudeDeg": 57.683601,
+    "elevationFt": 186,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237613,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3369.869,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FMEE",
+    "ourAirportsId": 2905,
+    "iata": "RUN",
+    "icao": "FMEE",
+    "name": "Roland Garros Airport",
+    "country": "RE",
+    "continent": "AF",
+    "latitudeDeg": -20.890087,
+    "longitudeDeg": 55.518894,
+    "elevationFt": 66,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238381,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238382,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2670.048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FQMA",
+    "ourAirportsId": 2975,
+    "iata": "MPM",
+    "icao": "FQMA",
+    "name": "Maputo Airport",
+    "country": "MZ",
+    "continent": "AF",
+    "latitudeDeg": -25.920799,
+    "longitudeDeg": 32.572601,
+    "elevationFt": 145,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237854,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3660.038,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237855,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 1699.87,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FYWH",
+    "ourAirportsId": 3039,
+    "iata": "WDH",
+    "icao": "FYWH",
+    "name": "Hosea Kutako International Airport",
+    "country": "NA",
+    "continent": "AF",
+    "latitudeDeg": -22.4799,
+    "longitudeDeg": 17.4709,
+    "elevationFt": 5640,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246213,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 4575.048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246214,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 1524,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GCLP",
+    "ourAirportsId": 3081,
+    "iata": "LPA",
+    "icao": "GCLP",
+    "name": "Gran Canaria Airport",
+    "country": "ES",
+    "continent": "AF",
+    "latitudeDeg": 27.9319,
+    "longitudeDeg": -15.3866,
+    "elevationFt": 78,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238917,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238918,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GMMN",
+    "ourAirportsId": 3113,
+    "iata": "CMN",
+    "icao": "GMMN",
+    "name": "Mohammed V International Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 33.3675,
+    "longitudeDeg": -7.58997,
+    "elevationFt": 656,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237595,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3720.084,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237596,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 3720.084,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GOOY",
+    "ourAirportsId": 3125,
+    "iata": "DKR",
+    "icao": "GOOY",
+    "name": "Léopold Sédar Senghor International Airport",
+    "country": "SN",
+    "continent": "AF",
+    "latitudeDeg": 14.742337,
+    "longitudeDeg": -17.479222,
+    "elevationFt": 85,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238842,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3489.96,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GVAC",
+    "ourAirportsId": 3150,
+    "iata": "SID",
+    "icao": "GVAC",
+    "name": "Amílcar Cabral International Airport",
+    "country": "CV",
+    "continent": "AF",
+    "latitudeDeg": 16.7414,
+    "longitudeDeg": -22.9494,
+    "elevationFt": 177,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235437,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3279.648,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HAAB",
+    "ourAirportsId": 3157,
+    "iata": "ADD",
+    "icao": "HAAB",
+    "name": "Addis Ababa Bole International Airport",
+    "country": "ET",
+    "continent": "AF",
+    "latitudeDeg": 8.97789,
+    "longitudeDeg": 38.799301,
+    "elevationFt": 7630,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235667,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235668,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HECA",
+    "ourAirportsId": 3183,
+    "iata": "CAI",
+    "icao": "HECA",
+    "name": "Cairo International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 30.111534,
+    "longitudeDeg": 31.396694,
+    "elevationFt": 322,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235592,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 4000.195,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 300957,
+        "ends": [
+          "05C",
+          "23C"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235593,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HKJK",
+    "ourAirportsId": 3206,
+    "iata": "NBO",
+    "icao": "HKJK",
+    "name": "Jomo Kenyatta International Airport",
+    "country": "KE",
+    "continent": "AF",
+    "latitudeDeg": -1.318886,
+    "longitudeDeg": 36.928233,
+    "elevationFt": 5330,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237261,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 4116.934,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HTDA",
+    "ourAirportsId": 3251,
+    "iata": "DAR",
+    "icao": "HTDA",
+    "name": "Julius Nyerere International Airport",
+    "country": "TZ",
+    "continent": "AF",
+    "latitudeDeg": -6.873499,
+    "longitudeDeg": 39.207288,
+    "elevationFt": 182,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239367,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239368,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 999.744,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]
