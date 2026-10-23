@@ -12,3 +12,5 @@ export * from './waiting.js';
 export { ForecastTimeline, SimulationSession, SessionError } from './sessions.js';
 export type { TimelineView, SessionAdvance, SessionOptions } from './sessions.js';
 export { serializeSession, restoreSession, SAVE_FORMAT_VERSION } from './saves.js';
+export { validateAircraftProfile, aircraftMetrics, aircraftLeg, aircraftRefuelling } from './aircraft.js';
+export type { AircraftProfile } from './aircraft.js';
