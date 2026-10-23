@@ -1,0 +1,80 @@
+{
+  "reportVersion": 1,
+  "inputs": {
+    "catalogSource": {
+      "id": "ourairports",
+      "repository": "davidmegginson/ourairports-data",
+      "commit": "11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+      "license": "Public Domain",
+      "termsUrl": "https://ourairports.com/data/",
+      "dictionaryUrl": "https://ourairports.com/help/data-dictionary.html",
+      "fileSha256": {
+        "airports.csv": "13f1f1a6298635c816b5bedfd47f8290339cc54730b38274b475fcb261daae4c",
+        "runways.csv": "e52cf06ddbc79083b4570eb4f23bb318d15aab9ad8180db55e9b931f68eef41e"
+      }
+    },
+    "profileId": "B788-reference-v1",
+    "profileVersion": 1,
+    "seed": "academic-campaign-research-v1",
+    "sha256": {
+      "catalog": "78d13ea52310bebbfbea1de0453e3b03360da207d2a416f716c2e5c31d33fbd4",
+      "airports": "445889c0bc276a6479f8d2057df1c2fb6ff34c7d7a14b3f0c8bdb828583fc066",
+      "profile": "454f1e766ebec3e66bc62ee37033dac0e6c43f3d034ddec294bb786e145d88e3",
+      "stocks": "e3b9aaebc792cd5f0204d01897941d43133e68056df9eb5f4032bf6e89c3f0b6"
+    }
+  },
+  "settings": {
+    "departures": [
+      "2026-06-21T19:40:00Z",
+      "2026-07-15T19:15:00Z",
+      "2026-08-01T18:30:00Z"
+    ],
+    "initialFuelPolicy": "floor-of-legal-maximum-for-each-first-destination",
+    "afterFirst": {
+      "maxFlights": 5,
+      "maxExpanded": 250,
+      "horizonDays": 4
+    }
+  },
+  "solarModel": "meeus-noaa-1",
+  "routeModel": "great-circle-solar-1",
+  "solarOptions": {
+    "eventToleranceSeconds": 0.05,
+    "maxIntervalSeconds": 300,
+    "maxEvaluations": 100000
+  },
+  "targetCompletion": "after_turnaround",
+  "scope": "At most 6 flights; horizon measured from end of first turnaround; one initial fuel per first destination; fixed departure samples. Not exhaustive over dates, fuel, airports or longer paths.",
+  "dates": [
+    {
+      "departure": "2026-06-21T19:40:00Z",
+      "firstMoveCount": 237,
+      "expanded": 1139,
+      "truncated": 0,
+      "remaining": 0,
+      "rootsLimited": [],
+      "solutions": [],
+      "firstMovesFile": "detours-1.json"
+    },
+    {
+      "departure": "2026-07-15T19:15:00Z",
+      "firstMoveCount": 257,
+      "expanded": 2317,
+      "truncated": 0,
+      "remaining": 0,
+      "rootsLimited": [],
+      "solutions": [],
+      "firstMovesFile": "detours-2.json"
+    },
+    {
+      "departure": "2026-08-01T18:30:00Z",
+      "firstMoveCount": 302,
+      "expanded": 4491,
+      "truncated": 0,
+      "remaining": 0,
+      "rootsLimited": [],
+      "solutions": [],
+      "firstMovesFile": "detours-3.json"
+    }
+  ]
+}
