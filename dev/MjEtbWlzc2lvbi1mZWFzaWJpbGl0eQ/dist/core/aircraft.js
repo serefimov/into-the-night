@@ -49,6 +49,7 @@ export function aircraftRefuelling(p, fuelKg, stockKg) {
     finite(stockKg, 'stock');
     if (fuelKg > m.fuelCapacityKg)
         throw new RangeError('Fuel exceeds tank capacity');
-    const transferKg = Math.min(m.fuelCapacityKg - fuelKg, stockKg);
-    return { transferKg, fuelKg: fuelKg + transferKg, stockKg: stockKg - transferKg, durationSeconds: transferKg === 0 ? 0 : p.assumptions.refuellingSetupSeconds + transferKg / m.refuellingKgPerSecond };
+    const freeKg = m.fuelCapacityKg - fuelKg, transferKg = Math.min(freeKg, stockKg);
+    // Re-adding the rounded free-space difference can overshoot capacity by one ULP.
+    return { transferKg, fuelKg: Math.min(m.fuelCapacityKg, fuelKg + transferKg), stockKg: stockKg - transferKg, durationSeconds: transferKg === 0 ? 0 : p.assumptions.refuellingSetupSeconds + transferKg / m.refuellingKgPerSecond };
 }
