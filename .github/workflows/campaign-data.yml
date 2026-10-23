@@ -1,0 +1,22 @@
+name: Import pinned campaign data
+on:
+  workflow_dispatch:
+  push:
+    branches: [21-mission-feasibility]
+    paths:
+      - scripts/import-mission-airports.py
+      - data/campaign/selection.json
+      - .github/workflows/campaign-data.yml
+permissions:
+  contents: read
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import expanded public world data
+        run: python3 scripts/import-mission-airports.py --selection data/campaign/selection.json --output .build/campaign-import/airports.json --log-archive
+      - uses: actions/upload-artifact@v4
+        with:
+          name: campaign-airports
+          path: .build/campaign-import/airports.json
