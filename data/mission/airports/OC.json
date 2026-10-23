@@ -1,0 +1,475 @@
+[
+  {
+    "id": "NFFN",
+    "ourAirportsId": 4959,
+    "iata": "NAN",
+    "icao": "NFFN",
+    "name": "Nadi International Airport",
+    "country": "FJ",
+    "continent": "OC",
+    "latitudeDeg": -17.761822,
+    "longitudeDeg": 177.437843,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235777,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3273.247,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235778,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2135.734,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NSTU",
+    "ourAirportsId": 4978,
+    "iata": "PPG",
+    "icao": "NSTU",
+    "name": "Pago Pago International Airport",
+    "country": "AS",
+    "continent": "OC",
+    "latitudeDeg": -14.331,
+    "longitudeDeg": -170.710007,
+    "elevationFt": 32,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232907,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232908,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 1158.24,
+        "widthM": 30.48,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NTAA",
+    "ourAirportsId": 4979,
+    "iata": "PPT",
+    "icao": "NTAA",
+    "name": "Fa'a'ā International Airport",
+    "country": "PF",
+    "continent": "OC",
+    "latitudeDeg": -17.553472,
+    "longitudeDeg": -149.606936,
+    "elevationFt": 5,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235795,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3462.528,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NZAA",
+    "ourAirportsId": 5023,
+    "iata": "AKL",
+    "icao": "NZAA",
+    "name": "Auckland International Airport",
+    "country": "NZ",
+    "continent": "OC",
+    "latitudeDeg": -37.01199,
+    "longitudeDeg": 174.786331,
+    "elevationFt": 23,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238096,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3635.045,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NZCH",
+    "ourAirportsId": 5026,
+    "iata": "CHC",
+    "icao": "NZCH",
+    "name": "Christchurch International Airport",
+    "country": "NZ",
+    "continent": "OC",
+    "latitudeDeg": -43.489029,
+    "longitudeDeg": 172.532065,
+    "elevationFt": 123,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238074,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3287.878,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238075,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1702.918,
+        "widthM": 45.11,
+        "surface": "BIT",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238073,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 515.112,
+        "widthM": 69.799,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PHNL",
+    "ourAirportsId": 5453,
+    "iata": "HNL",
+    "icao": "PHNL",
+    "name": "Daniel K. Inouye International Airport",
+    "country": "US",
+    "continent": "OC",
+    "latitudeDeg": 21.318387,
+    "longitudeDeg": -157.92567,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 253730,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3767.328,
+        "widthM": 60.96,
+        "surface": "ASPH-G",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 253731,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 60.96,
+        "surface": "ASPH-G",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 253728,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 2743.81,
+        "widthM": 45.72,
+        "surface": "ASPH-G",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "PHTO",
+    "ourAirportsId": 5457,
+    "iata": "ITO",
+    "icao": "PHTO",
+    "name": "Hilo International Airport",
+    "country": "US",
+    "continent": "OC",
+    "latitudeDeg": 19.72135,
+    "longitudeDeg": -155.045428,
+    "elevationFt": 38,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239664,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2987.04,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239663,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 1706.88,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YMML",
+    "ourAirportsId": 27066,
+    "iata": "MEL",
+    "icao": "YMML",
+    "name": "Melbourne Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -37.670732,
+    "longitudeDeg": 144.837898,
+    "elevationFt": 434,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233384,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3656.99,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233383,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2286,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YPDN",
+    "ourAirportsId": 27101,
+    "iata": "DRW",
+    "icao": "YPDN",
+    "name": "Darwin International Airport / RAAF Darwin",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -12.41497,
+    "longitudeDeg": 130.88185,
+    "elevationFt": 103,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233105,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3354.019,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233106,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 1524,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YPPH",
+    "ourAirportsId": 27119,
+    "iata": "PER",
+    "icao": "YPPH",
+    "name": "Perth International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -31.94029998779297,
+    "longitudeDeg": 115.96700286865234,
+    "elevationFt": 67,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233339,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3443.935,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233340,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2162.861,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YSSY",
+    "ourAirportsId": 27145,
+    "iata": "SYD",
+    "icao": "YSSY",
+    "name": "Sydney Kingsford Smith International Airport",
+    "country": "AU",
+    "continent": "OC",
+    "latitudeDeg": -33.946098,
+    "longitudeDeg": 151.177002,
+    "elevationFt": 21,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233267,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3962.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233266,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2529.84,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233268,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 2438.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

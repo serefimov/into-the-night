@@ -27,7 +27,8 @@
     "build:web": "npm run build && node scripts/build-web.mjs",
     "serve:web": "node scripts/dev-server.mjs --built",
     "review": "node scripts/review-cli.mjs",
-    "test:browser": "node scripts/test-browser.mjs"
+    "test:browser": "node scripts/test-browser.mjs",
+    "validate:mission-data": "node scripts/mission-data.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.2",

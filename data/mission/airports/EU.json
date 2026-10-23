@@ -1,0 +1,614 @@
+[
+  {
+    "id": "BIKF",
+    "ourAirportsId": 123,
+    "iata": "KEF",
+    "icao": "BIKF",
+    "name": "Keflavik International Airport",
+    "country": "IS",
+    "continent": "EU",
+    "latitudeDeg": 63.985001,
+    "longitudeDeg": -22.6056,
+    "elevationFt": 171,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236461,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3065.069,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236460,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3054.096,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDF",
+    "ourAirportsId": 2212,
+    "iata": "FRA",
+    "icao": "EDDF",
+    "name": "Frankfurt Main Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 50.026706,
+    "longitudeDeg": 8.55835,
+    "elevationFt": 364,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236133,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236134,
+        "ends": [
+          "07C",
+          "25C"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236135,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFHK",
+    "ourAirportsId": 2307,
+    "iata": "HEL",
+    "icao": "EFHK",
+    "name": "Helsinki Vantaa Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 60.318363,
+    "longitudeDeg": 24.963341,
+    "elevationFt": 179,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235755,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235756,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 3059.887,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235757,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2901.086,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGLL",
+    "ourAirportsId": 2434,
+    "iata": "LHR",
+    "icao": "EGLL",
+    "name": "London Heathrow Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 51.470748,
+    "longitudeDeg": -0.459909,
+    "elevationFt": 83,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239399,
+        "ends": [
+          "09L",
+          "27R"
+        ],
+        "lengthM": 3901.135,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239398,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 3657.905,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENGM",
+    "ourAirportsId": 2578,
+    "iata": "OSL",
+    "icao": "ENGM",
+    "name": "Oslo-Gardermoen International Airport",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 60.193901,
+    "longitudeDeg": 11.1004,
+    "elevationFt": 681,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237959,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237958,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 2949.854,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ESSA",
+    "ourAirportsId": 2701,
+    "iata": "ARN",
+    "icao": "ESSA",
+    "name": "Stockholm-Arlanda Airport",
+    "country": "SE",
+    "continent": "EU",
+    "latitudeDeg": 59.64849,
+    "longitudeDeg": 17.928829,
+    "elevationFt": 137,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239018,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3300.984,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239019,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239017,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 2499.665,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LEMD",
+    "ourAirportsId": 4019,
+    "iata": "MAD",
+    "icao": "LEMD",
+    "name": "Adolfo Suárez Madrid–Barajas Airport",
+    "country": "ES",
+    "continent": "EU",
+    "latitudeDeg": 40.493407,
+    "longitudeDeg": -3.572249,
+    "elevationFt": 1998,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238904,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 4349.801,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238902,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3988.003,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238903,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LFPG",
+    "ourAirportsId": 4185,
+    "iata": "CDG",
+    "icao": "LFPG",
+    "name": "Charles de Gaulle International Airport",
+    "country": "FR",
+    "continent": "EU",
+    "latitudeDeg": 49.00896,
+    "longitudeDeg": 2.554117,
+    "elevationFt": 392,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235946,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 4215.079,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235947,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 4200.144,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235945,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIRF",
+    "ourAirportsId": 4372,
+    "iata": "FCO",
+    "icao": "LIRF",
+    "name": "Rome–Fiumicino Leonardo da Vinci International Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 41.804532,
+    "longitudeDeg": 12.251998,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236973,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3901.745,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236974,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3901.745,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236972,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3299.765,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LPPT",
+    "ourAirportsId": 4461,
+    "iata": "LIS",
+    "icao": "LPPT",
+    "name": "Lisbon Humberto Delgado Airport",
+    "country": "PT",
+    "continent": "EU",
+    "latitudeDeg": 38.7813,
+    "longitudeDeg": -9.13592,
+    "elevationFt": 374,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238344,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3810,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ULLI",
+    "ourAirportsId": 6489,
+    "iata": "LED",
+    "icao": "ULLI",
+    "name": "Pulkovo Airport",
+    "country": "RU",
+    "continent": "EU",
+    "latitudeDeg": 59.800301,
+    "longitudeDeg": 30.262501,
+    "elevationFt": 78,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238553,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 3780.13,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238554,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3397.301,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UUEE",
+    "ourAirportsId": 26396,
+    "iata": "SVO",
+    "icao": "UUEE",
+    "name": "Sheremetyevo International Airport",
+    "country": "RU",
+    "continent": "EU",
+    "latitudeDeg": 55.977486,
+    "longitudeDeg": 37.386677,
+    "elevationFt": 622,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238543,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238544,
+        "ends": [
+          "06C",
+          "24C"
+        ],
+        "lengthM": 3550.006,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 332323,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UWWW",
+    "ourAirportsId": 26412,
+    "iata": "KUF",
+    "icao": "UWWW",
+    "name": "Kurumoch International Airport",
+    "country": "RU",
+    "continent": "EU",
+    "latitudeDeg": 53.504902,
+    "longitudeDeg": 50.164299,
+    "elevationFt": 477,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238558,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3001.061,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238557,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2553.919,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]
