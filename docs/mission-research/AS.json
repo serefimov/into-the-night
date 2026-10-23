@@ -1,0 +1,965 @@
+[
+  {
+    "to": "OERK",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 75121.73184335005,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 10480.26643743847,
+    "arrivalUtcMs": 1782075717266.7964,
+    "endUtcMs": 1782081876396.6846,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 28,
+      "phase": "cruise",
+      "eventUtcMs": 1782032954895.401,
+      "bracketUtcMs": [
+        1782032954894.2566,
+        1782032954895.401
+      ],
+      "safeUntilUtcMs": 1782032954894.2566,
+      "reason": null
+    },
+    "arrivalFuelKg": 30843.068156649955,
+    "landingMassKg": 156843.06815664994,
+    "refuelling": {
+      "transferKg": 70121.73184335005,
+      "fuelKg": 100964.8,
+      "stockKg": 284878.26815664995,
+      "durationSeconds": 5559.129888251254
+    }
+  },
+  {
+    "to": "OMDB",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 78514.600524963,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 11002.246234609693,
+    "arrivalUtcMs": 1782077876091.3792,
+    "endUtcMs": 1782084289686.4185,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 28,
+      "phase": "cruise",
+      "eventUtcMs": 1782032963605.4993,
+      "bracketUtcMs": [
+        1782032963604.355,
+        1782032963605.4993
+      ],
+      "safeUntilUtcMs": 1782032963604.355,
+      "reason": null
+    },
+    "arrivalFuelKg": 27450.199475037007,
+    "landingMassKg": 153450.199475037,
+    "refuelling": {
+      "transferKg": 73514.600524963,
+      "fuelKg": 100964.8,
+      "stockKg": 92485.399475037,
+      "durationSeconds": 5813.595039372224
+    }
+  },
+  {
+    "to": "OOMS",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 80604.09332475995,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 11323.706665347683,
+    "arrivalUtcMs": 1782079205600.0767,
+    "endUtcMs": 1782085775907.076,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 28,
+      "phase": "cruise",
+      "eventUtcMs": 1782032966223.9075,
+      "bracketUtcMs": [
+        1782032966221.6187,
+        1782032966223.9075
+      ],
+      "safeUntilUtcMs": 1782032966221.6187,
+      "reason": null
+    },
+    "arrivalFuelKg": 25360.706675240057,
+    "landingMassKg": 151360.70667524004,
+    "refuelling": {
+      "transferKg": 75604.09332475995,
+      "fuelKg": 100964.8,
+      "stockKg": 281395.90667524,
+      "durationSeconds": 5970.306999356996
+    }
+  },
+  {
+    "to": "OPKC",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 82946.90616099897,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 11684.139409384457,
+    "arrivalUtcMs": 1782080696292.001,
+    "endUtcMs": 1782087442309.9631,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 29,
+      "phase": "cruise",
+      "eventUtcMs": 1782032990674.2095,
+      "bracketUtcMs": [
+        1782032990673.0652,
+        1782032990674.2095
+      ],
+      "safeUntilUtcMs": 1782032990673.0652,
+      "reason": null
+    },
+    "arrivalFuelKg": 23017.89383900103,
+    "landingMassKg": 149017.89383900102,
+    "refuelling": {
+      "transferKg": 77946.90616099897,
+      "fuelKg": 100964.8,
+      "stockKg": 84053.09383900103,
+      "durationSeconds": 6146.017962074923
+    }
+  },
+  {
+    "to": "OTHH",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 77001.91804491455,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 10769.525853063777,
+    "arrivalUtcMs": 1782076913597.2688,
+    "endUtcMs": 1782083213741.122,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 28,
+      "phase": "cruise",
+      "eventUtcMs": 1782032958849.3347,
+      "bracketUtcMs": [
+        1782032958848.1904,
+        1782032958849.3347
+      ],
+      "safeUntilUtcMs": 1782032958848.1904,
+      "reason": null
+    },
+    "arrivalFuelKg": 28962.881955085453,
+    "landingMassKg": 154962.88195508544,
+    "refuelling": {
+      "transferKg": 72001.91804491455,
+      "fuelKg": 100964.8,
+      "stockKg": 194998.08195508545,
+      "durationSeconds": 5700.143853368591
+    }
+  },
+  {
+    "to": "RCTP",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 88540.31014413852,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 12544.663099098234,
+    "arrivalUtcMs": 1782084255279.7346,
+    "endUtcMs": 1782091420802.9954,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 31,
+      "phase": "cruise",
+      "eventUtcMs": 1782033620052.3376,
+      "bracketUtcMs": [
+        1782033620051.1934,
+        1782033620052.3376
+      ],
+      "safeUntilUtcMs": 1782033620051.1934,
+      "reason": null
+    },
+    "arrivalFuelKg": 17424.48985586148,
+    "landingMassKg": 143424.48985586147,
+    "refuelling": {
+      "transferKg": 83540.31014413852,
+      "fuelKg": 100964.8,
+      "stockKg": 184459.68985586148,
+      "durationSeconds": 6565.523260810389
+    }
+  },
+  {
+    "to": "RJAA",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 77394.98881772088,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 10829.998279649366,
+    "arrivalUtcMs": 1782077163701.51,
+    "endUtcMs": 1782083493325.6714,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 32,
+      "phase": "cruise",
+      "eventUtcMs": 1782034003530.1208,
+      "bracketUtcMs": [
+        1782034003528.9766,
+        1782034003530.1208
+      ],
+      "safeUntilUtcMs": 1782034003528.9766,
+      "reason": null
+    },
+    "arrivalFuelKg": 28569.811182279125,
+    "landingMassKg": 154569.8111822791,
+    "refuelling": {
+      "transferKg": 72394.98881772088,
+      "fuelKg": 100964.8,
+      "stockKg": 138605.01118227912,
+      "durationSeconds": 5729.624161329066
+    }
+  },
+  {
+    "to": "RJBB",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 79505.88001336408,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 11154.750771286781,
+    "arrivalUtcMs": 1782078506825.6423,
+    "endUtcMs": 1782084994766.6433,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 32,
+      "phase": "cruise",
+      "eventUtcMs": 1782033886080.5513,
+      "bracketUtcMs": [
+        1782033886079.4067,
+        1782033886080.5513
+      ],
+      "safeUntilUtcMs": 1782033886079.4067,
+      "reason": null
+    },
+    "arrivalFuelKg": 26458.919986635927,
+    "landingMassKg": 152458.9199866359,
+    "refuelling": {
+      "transferKg": 74505.88001336408,
+      "fuelKg": 100964.8,
+      "stockKg": 74494.11998663592,
+      "durationSeconds": 5887.941001002306
+    }
+  },
+  {
+    "to": "RJTT",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 77688.8403931259,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 10875.206214327061,
+    "arrivalUtcMs": 1782077350674.265,
+    "endUtcMs": 1782083702337.2944,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 32,
+      "phase": "cruise",
+      "eventUtcMs": 1782033990596.0083,
+      "bracketUtcMs": [
+        1782033990594.8638,
+        1782033990596.0083
+      ],
+      "safeUntilUtcMs": 1782033990594.8638,
+      "reason": null
+    },
+    "arrivalFuelKg": 28275.95960687411,
+    "landingMassKg": 154275.9596068741,
+    "refuelling": {
+      "transferKg": 72688.8403931259,
+      "fuelKg": 100964.8,
+      "stockKg": 120311.1596068741,
+      "durationSeconds": 5751.663029484442
+    }
+  },
+  {
+    "to": "RKSI",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 79077.4194647395,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 11088.833763806077,
+    "arrivalUtcMs": 1782078234203.4893,
+    "endUtcMs": 1782084690009.9492,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 31,
+      "phase": "cruise",
+      "eventUtcMs": 1782033656106.9487,
+      "bracketUtcMs": [
+        1782033656105.8044,
+        1782033656106.9487
+      ],
+      "safeUntilUtcMs": 1782033656105.8044,
+      "reason": null
+    },
+    "arrivalFuelKg": 26887.380535260498,
+    "landingMassKg": 152887.38053526048,
+    "refuelling": {
+      "transferKg": 74077.4194647395,
+      "fuelKg": 100964.8,
+      "stockKg": 225922.5805352605,
+      "durationSeconds": 5855.806459855463
+    }
+  },
+  {
+    "to": "RPLL",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 96021.49656523309,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 13695.614856189706,
+    "arrivalUtcMs": 1782089015431.2966,
+    "endUtcMs": 1782096742043.539,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 31,
+      "phase": "cruise",
+      "eventUtcMs": 1782033682819.748,
+      "bracketUtcMs": [
+        1782033682818.6035,
+        1782033682819.748
+      ],
+      "safeUntilUtcMs": 1782033682818.6035,
+      "reason": null
+    },
+    "arrivalFuelKg": 9943.303434766916,
+    "landingMassKg": 135943.3034347669,
+    "refuelling": {
+      "transferKg": 91021.49656523309,
+      "fuelKg": 100964.8,
+      "stockKg": 198978.5034347669,
+      "durationSeconds": 7126.612242392481
+    }
+  },
+  {
+    "to": "UAAA",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 73483.29887304234,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 10228.199826621898,
+    "arrivalUtcMs": 1782074674759.7898,
+    "endUtcMs": 1782080711007.2053,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 29,
+      "phase": "cruise",
+      "eventUtcMs": 1782033083356.4758,
+      "bracketUtcMs": [
+        1782033083355.3315,
+        1782033083356.4758
+      ],
+      "safeUntilUtcMs": 1782033083355.3315,
+      "reason": null
+    },
+    "arrivalFuelKg": 32481.501126957664,
+    "landingMassKg": 158481.50112695765,
+    "refuelling": {
+      "transferKg": 68483.29887304234,
+      "fuelKg": 100964.8,
+      "stockKg": 330516.70112695766,
+      "durationSeconds": 5436.247415478175
+    }
+  },
+  {
+    "to": "UEEE",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 61585.893965924064,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 8397.829840911394,
+    "arrivalUtcMs": 1782067104643.5857,
+    "endUtcMs": 1782072248585.633,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 30,
+      "phase": "cruise",
+      "eventUtcMs": 1782033535301.9714,
+      "bracketUtcMs": [
+        1782033535300.8271,
+        1782033535301.9714
+      ],
+      "safeUntilUtcMs": 1782033535300.8271,
+      "reason": null
+    },
+    "arrivalFuelKg": 44378.90603407594,
+    "landingMassKg": 170378.90603407592,
+    "refuelling": {
+      "transferKg": 56585.893965924064,
+      "fuelKg": 100964.8,
+      "stockKg": 328414.10603407596,
+      "durationSeconds": 4543.942047444305
+    }
+  },
+  {
+    "to": "UHHH",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 70046.23305826969,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 9699.42047050303,
+    "arrivalUtcMs": 1782072487813.3235,
+    "endUtcMs": 1782078266280.803,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 31,
+      "phase": "cruise",
+      "eventUtcMs": 1782033725209.8083,
+      "bracketUtcMs": [
+        1782033725208.664,
+        1782033725209.8083
+      ],
+      "safeUntilUtcMs": 1782033725208.664,
+      "reason": null
+    },
+    "arrivalFuelKg": 35918.56694173031,
+    "landingMassKg": 161918.5669417303,
+    "refuelling": {
+      "transferKg": 65046.233058269696,
+      "fuelKg": 100964.8,
+      "stockKg": 68953.76694173031,
+      "durationSeconds": 5178.467479370227
+    }
+  },
+  {
+    "to": "UHMA",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 51016.41866585276,
+    "maximumKg": 92381.41866585276,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 6771.756717823502,
+    "arrivalUtcMs": 1782060379466.3845,
+    "endUtcMs": 1782065374451.3845,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 32,
+      "phase": "cruise",
+      "eventUtcMs": 1782034012552.6428,
+      "bracketUtcMs": [
+        1782034012550.354,
+        1782034012552.6428
+      ],
+      "safeUntilUtcMs": 1782034012550.354,
+      "reason": null
+    },
+    "arrivalFuelKg": 46365,
+    "landingMassKg": 172365,
+    "refuelling": {
+      "transferKg": 54599.8,
+      "fuelKg": 100964.8,
+      "stockKg": 221400.2,
+      "durationSeconds": 4394.985000000001
+    }
+  },
+  {
+    "to": "UHPP",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 61897.61240983504,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 8445.786524590007,
+    "arrivalUtcMs": 1782067302984.725,
+    "endUtcMs": 1782072470305.6558,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 32,
+      "phase": "cruise",
+      "eventUtcMs": 1782034075382.9956,
+      "bracketUtcMs": [
+        1782034075381.851,
+        1782034075382.9956
+      ],
+      "safeUntilUtcMs": 1782034075381.851,
+      "reason": null
+    },
+    "arrivalFuelKg": 44067.18759016496,
+    "landingMassKg": 170067.18759016495,
+    "refuelling": {
+      "transferKg": 56897.61240983504,
+      "fuelKg": 100964.8,
+      "stockKg": 275102.38759016496,
+      "durationSeconds": 4567.320930737628
+    }
+  },
+  {
+    "to": "UIII",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 69938.87806724285,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 9682.904318037363,
+    "arrivalUtcMs": 1782072419505.1704,
+    "endUtcMs": 1782078189921.0254,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 30,
+      "phase": "cruise",
+      "eventUtcMs": 1782033307879.2573,
+      "bracketUtcMs": [
+        1782033307878.1128,
+        1782033307879.2573
+      ],
+      "safeUntilUtcMs": 1782033307878.1128,
+      "reason": null
+    },
+    "arrivalFuelKg": 36025.92193275715,
+    "landingMassKg": 162025.92193275713,
+    "refuelling": {
+      "transferKg": 64938.878067242855,
+      "fuelKg": 100964.8,
+      "stockKg": 202061.12193275715,
+      "durationSeconds": 5170.415855043214
+    }
+  },
+  {
+    "to": "VABB",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 88460.09498919756,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 12532.322306030394,
+    "arrivalUtcMs": 1782084204240.1973,
+    "endUtcMs": 1782091363747.3215,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 29,
+      "phase": "cruise",
+      "eventUtcMs": 1782032999276.7334,
+      "bracketUtcMs": [
+        1782032999275.5889,
+        1782032999276.7334
+      ],
+      "safeUntilUtcMs": 1782032999275.5889,
+      "reason": null
+    },
+    "arrivalFuelKg": 17504.70501080244,
+    "landingMassKg": 143504.70501080243,
+    "refuelling": {
+      "transferKg": 83460.09498919756,
+      "fuelKg": 100964.8,
+      "stockKg": 248539.90501080244,
+      "durationSeconds": 6559.507124189817
+    }
+  },
+  {
+    "to": "VCBI",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 98352.46949410555,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 14054.226076016239,
+    "arrivalUtcMs": 1782090498589.6895,
+    "endUtcMs": 1782098400024.9016,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 29,
+      "phase": "cruise",
+      "eventUtcMs": 1782033004524.994,
+      "bracketUtcMs": [
+        1782033004523.8496,
+        1782033004524.994
+      ],
+      "safeUntilUtcMs": 1782033004523.8496,
+      "reason": null
+    },
+    "arrivalFuelKg": 7612.330505894453,
+    "landingMassKg": 133612.33050589444,
+    "refuelling": {
+      "transferKg": 93352.46949410555,
+      "fuelKg": 100964.8,
+      "stockKg": 264647.53050589445,
+      "durationSeconds": 7301.435212057916
+    }
+  },
+  {
+    "to": "VHHH",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 91305.71516092695,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 12970.110024757993,
+    "arrivalUtcMs": 1782086014859.8694,
+    "endUtcMs": 1782093387788.5063,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 30,
+      "phase": "cruise",
+      "eventUtcMs": 1782033468162.918,
+      "bracketUtcMs": [
+        1782033468161.7737,
+        1782033468162.918
+      ],
+      "safeUntilUtcMs": 1782033468161.7737,
+      "reason": null
+    },
+    "arrivalFuelKg": 14659.084839073053,
+    "landingMassKg": 140659.08483907304,
+    "refuelling": {
+      "transferKg": 86305.71516092695,
+      "fuelKg": 100964.8,
+      "stockKg": 195694.28483907305,
+      "durationSeconds": 6772.928637069521
+    }
+  },
+  {
+    "to": "VIDP",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 83409.9098441111,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 11755.370745247861,
+    "arrivalUtcMs": 1782080990893.3625,
+    "endUtcMs": 1782087771636.6008,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 29,
+      "phase": "cruise",
+      "eventUtcMs": 1782033042680.7402,
+      "bracketUtcMs": [
+        1782033042679.596,
+        1782033042680.7402
+      ],
+      "safeUntilUtcMs": 1782033042679.596,
+      "reason": null
+    },
+    "arrivalFuelKg": 22554.890155888905,
+    "landingMassKg": 148554.8901558889,
+    "refuelling": {
+      "transferKg": 78409.9098441111,
+      "fuelKg": 100964.8,
+      "stockKg": 309590.09015588893,
+      "durationSeconds": 6180.743238308332
+    }
+  },
+  {
+    "to": "VOMM",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 94592.46302793873,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 13475.763542759805,
+    "arrivalUtcMs": 1782088106161.5845,
+    "endUtcMs": 1782095725596.3115,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 29,
+      "phase": "cruise",
+      "eventUtcMs": 1782033020700.0732,
+      "bracketUtcMs": [
+        1782033020698.9287,
+        1782033020700.0732
+      ],
+      "safeUntilUtcMs": 1782033020698.9287,
+      "reason": null
+    },
+    "arrivalFuelKg": 11372.336972061268,
+    "landingMassKg": 137372.33697206125,
+    "refuelling": {
+      "transferKg": 89592.46302793873,
+      "fuelKg": 100964.8,
+      "stockKg": 54407.536972061265,
+      "durationSeconds": 7019.434727095405
+    }
+  },
+  {
+    "to": "VRMM",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 98146.48640859543,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 14022.536370553144,
+    "arrivalUtcMs": 1782090367526.1587,
+    "endUtcMs": 1782098253512.6394,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 28,
+      "phase": "cruise",
+      "eventUtcMs": 1782032971863.556,
+      "bracketUtcMs": [
+        1782032971862.4116,
+        1782032971863.556
+      ],
+      "safeUntilUtcMs": 1782032971862.4116,
+      "reason": null
+    },
+    "arrivalFuelKg": 7818.313591404571,
+    "landingMassKg": 133818.31359140456,
+    "refuelling": {
+      "transferKg": 93146.48640859543,
+      "fuelKg": 100964.8,
+      "stockKg": 211853.51359140457,
+      "durationSeconds": 7285.986480644657
+    }
+  },
+  {
+    "to": "VTBS",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 97665.94628994793,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 13948.607121530451,
+    "arrivalUtcMs": 1782090061766.6619,
+    "endUtcMs": 1782097911712.6335,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 29,
+      "phase": "cruise",
+      "eventUtcMs": 1782033231406.4026,
+      "bracketUtcMs": [
+        1782033231405.2583,
+        1782033231406.4026
+      ],
+      "safeUntilUtcMs": 1782033231405.2583,
+      "reason": null
+    },
+    "arrivalFuelKg": 8298.853710052077,
+    "landingMassKg": 134298.85371005206,
+    "refuelling": {
+      "transferKg": 92665.94628994793,
+      "fuelKg": 100964.8,
+      "stockKg": 222334.05371005207,
+      "durationSeconds": 7249.945971746094
+    }
+  },
+  {
+    "to": "WADD",
+    "classification": "unverified_airport"
+  },
+  {
+    "to": "WIII",
+    "classification": "empty_legal_fuel_interval",
+    "minimumKg": 112151.12575904718,
+    "maximumKg": 100964.8,
+    "feasible": false
+  },
+  {
+    "to": "WSSS",
+    "classification": "empty_legal_fuel_interval",
+    "minimumKg": 106714.03673104444,
+    "maximumKg": 100964.8,
+    "feasible": false
+  },
+  {
+    "to": "ZBAA",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 78360.60533666857,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 10978.55466717978,
+    "arrivalUtcMs": 1782077778106.8625,
+    "endUtcMs": 1782084180152.2627,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 30,
+      "phase": "cruise",
+      "eventUtcMs": 1782033469160.8428,
+      "bracketUtcMs": [
+        1782033469159.6985,
+        1782033469160.8428
+      ],
+      "safeUntilUtcMs": 1782033469159.6985,
+      "reason": null
+    },
+    "arrivalFuelKg": 27604.194663331436,
+    "landingMassKg": 153604.19466333144,
+    "refuelling": {
+      "transferKg": 73360.60533666857,
+      "fuelKg": 100964.8,
+      "stockKg": 239639.39466333145,
+      "durationSeconds": 5802.045400250142
+    }
+  },
+  {
+    "to": "ZMCK",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 73286.52594880904,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 10197.927069047544,
+    "arrivalUtcMs": 1782074549556.5278,
+    "endUtcMs": 1782080571045.9739,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 30,
+      "phase": "cruise",
+      "eventUtcMs": 1782033331760.788,
+      "bracketUtcMs": [
+        1782033331759.6436,
+        1782033331760.788
+      ],
+      "safeUntilUtcMs": 1782033331759.6436,
+      "reason": null
+    },
+    "arrivalFuelKg": 32678.274051190965,
+    "landingMassKg": 158678.27405119094,
+    "refuelling": {
+      "transferKg": 68286.52594880904,
+      "fuelKg": 100964.8,
+      "stockKg": 206713.47405119095,
+      "durationSeconds": 5421.489446160677
+    }
+  },
+  {
+    "to": "ZSPD",
+    "classification": "sun_even_at_fastest_ground_turn",
+    "minimumKg": 84179.12021136333,
+    "maximumKg": 100964.8,
+    "feasible": true,
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 11873.710801748204,
+    "arrivalUtcMs": 1782081480328.8242,
+    "endUtcMs": 1782088318762.84,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 31,
+      "phase": "cruise",
+      "eventUtcMs": 1782033599265.2893,
+      "bracketUtcMs": [
+        1782033599264.145,
+        1782033599265.2893
+      ],
+      "safeUntilUtcMs": 1782033599264.145,
+      "reason": null
+    },
+    "arrivalFuelKg": 21785.67978863667,
+    "landingMassKg": 147785.67978863665,
+    "refuelling": {
+      "transferKg": 79179.12021136333,
+      "fuelKg": 100964.8,
+      "stockKg": 83820.87978863667,
+      "durationSeconds": 6238.43401585225
+    }
+  }
+]

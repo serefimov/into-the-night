@@ -23,6 +23,7 @@ jobs:
       - run: npm run validate:waiting
       - run: npm run validate:sessions
       - run: npm run validate:spike
+      - run: npm run validate:mission
       - run: npm run build:web
       - run: npm run test:browser
       - name: Проверить вложенный путь Pages

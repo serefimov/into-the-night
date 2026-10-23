@@ -28,7 +28,9 @@
     "serve:web": "node scripts/dev-server.mjs --built",
     "review": "node scripts/review-cli.mjs",
     "test:browser": "node scripts/test-browser.mjs",
-    "validate:mission-data": "node scripts/mission-data.mjs"
+    "validate:mission-data": "node scripts/mission-data.mjs",
+    "research:mission": "node scripts/mission-research.mjs",
+    "validate:mission": "node scripts/mission-research.mjs --research --verify"
   },
   "devDependencies": {
     "typescript": "5.9.2",
