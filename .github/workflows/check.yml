@@ -25,6 +25,7 @@ jobs:
       - run: npm run validate:spike
       - run: npm run validate:mission
       - run: npm run validate:campaign
+      - run: npm run validate:westward
       - run: npm run build:web
       - run: npm run test:browser
       - name: Проверить вложенный путь Pages
