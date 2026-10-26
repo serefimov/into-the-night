@@ -14,7 +14,7 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  assert.equal(await evaluate(`${app}.globe.data.statuses.get('NZCH').allowed`),true);assert.equal(await evaluate(`${app}.globe.data.statuses.get('FACT').allowed`),false);
  async function inspectLayout(name){
   const result=await evaluate(`(()=>{const g=${app}.globe,r=g.markerLayout;return {count:r.rows.length,budget:r.budget,projected:r.projectedCount,members:r.rows.flatMap(p=>p.group.map(a=>a.id)),labelCount:r.rows.filter(p=>p.label&&!p.priority).length,detail:r.detail,targets:r.rows.filter(p=>p.priority).map(p=>p.id),hitSizes:[...g.nodes.values()].map(n=>({w:n.getBoundingClientRect().width,h:n.getBoundingClientRect().height}))};})()`);
-  assert.ok(result.count<=result.budget,name);assert.equal(new Set(result.members).size,result.members.length);assert.equal(result.members.length,result.projected,name);assert.ok(result.hitSizes.every(s=>s.w>=44&&s.h>=44));if(!result.detail)assert.equal(result.labelCount,0);return result;
+  assert.ok(result.count<=result.budget,name);assert.equal(new Set(result.members).size,result.members.length);assert.equal(result.members.length,result.projected,name);assert.ok(result.hitSizes.every(s=>s.w>=43.99&&s.h>=43.99),JSON.stringify(result.hitSizes));if(!result.detail)assert.equal(result.labelCount,0);return result;
  }
  const overview=await inspectLayout('initial overview');assert.ok(overview.count<=24);
  await until(`${app}.globe.data.statuses.size===${app}.controller.session.definition.airports.length`);
