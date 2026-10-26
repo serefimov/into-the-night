@@ -5,3 +5,19 @@
 @media(max-width:760px){.map-controls{left:12px;right:auto}.playback{left:70px;right:12px}}
 
 .dispatch-summary{font-size:.8rem;line-height:1.4;color:var(--muted);margin:.5rem 0}
+
+/* #43: a small overview layer, with detail revealed by zoom. Hit areas remain 44 px. */
+.map-marker.cluster{width:44px;height:44px;min-height:44px;margin:0;background:none;border:0;border-radius:50%}
+.map-marker .marker-label{position:absolute;display:block;margin:0;max-width:125px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;line-height:15px;font-size:10px}
+.map-marker .marker-dot{width:16px;height:16px;font-size:12px;background:#0a1b27e8;border-color:#647b8399;color:#9bb0b6}
+.map-marker.cluster .marker-dot{border-style:dashed;font-size:10px;color:#91a5ad}
+.map-marker.overview.cluster .marker-dot{width:14px;height:14px;font-size:11px;opacity:.75}
+.map-marker.has-safe .marker-dot{border-color:#8bb69e;color:var(--safe);border-style:solid}
+.map-marker.safe .marker-dot{color:var(--safe);border-color:#88b69c}
+.map-marker.blocked:not(.selected):not(.goal):not(.current):not(.has-safe) .marker-dot{color:#89999e;border-color:#64778088;opacity:.55}
+.map-marker.overview.blocked:not(.cluster):not(.selected):not(.goal):not(.current) .marker-dot{width:6px;height:6px;font-size:0;background:#81959d;border:0}
+.map-marker.goal .marker-dot,.map-marker.current .marker-dot,.map-marker.selected .marker-dot{width:23px;height:23px;opacity:1;border-style:solid;font-size:15px}
+.map-marker.goal .marker-dot,.map-marker.selected .marker-dot{border-color:var(--accent);color:var(--accent)}
+.map-marker.current .marker-dot{border-color:#e8efea;color:#e8efea}
+.map-detail-hint{position:absolute;left:28px;bottom:40px;margin:0;color:#91a5ada8;font-size:10px;pointer-events:none}
+@media(max-width:760px){.map-detail-hint{left:16px;bottom:31px;font-size:9px}.map-marker .marker-label{font-size:9px}}

@@ -29,6 +29,8 @@ jobs:
       - run: npm run validate:departure
       - run: npm run build:web
       - run: npm run test:browser
+        env:
+          GLOBE_PREVIEW_LOG: "1"
       - name: Проверить вложенный путь Pages
         run: npm run test:browser
         env:
