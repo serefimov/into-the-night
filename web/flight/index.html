@@ -19,13 +19,14 @@
   <div><span class="eyebrow">Следующая посадка</span><h1 id="destination-title">Куда летим?</h1><p id="destination-subtitle">Выберите аэродром на глобусе.</p></div>
   <div id="empty-card" class="empty-card"><span class="compass">↶</span><p>До цели — через весь мир.</p><p class="muted">Прямой путь встречает Солнце. Ищите тёмные участки и аэродромы для дозаправки.</p></div>
   <dl id="destination-metrics" class="metrics" hidden>
-   <div><dt>Расстояние</dt><dd id="distance-value">—</dd></div><div><dt>Топливо аэродрома</dt><dd id="stock-value">—</dd></div>
+   <div><dt>Расстояние</dt><dd id="distance-value">—</dd></div><div><dt>Топливо в назначении</dt><dd id="stock-value">—</dd></div>
    <div><dt>В пути</dt><dd id="duration-value">—</dd></div><div><dt>Прибытие, UTC</dt><dd id="arrival-value">—</dd></div>
-   <div><dt>После посадки</dt><dd id="arrival-fuel-value">—</dd></div><div><dt>После заправки</dt><dd id="end-fuel-value">—</dd></div>
+   <div><dt>После посадки</dt><dd id="arrival-fuel-value">—</dd></div><div><dt>Перед вылетом</dt><dd id="end-fuel-value">—</dd></div>
   </dl>
   <div id="route-verdict" class="verdict" aria-live="polite"><strong id="verdict-title">Время стоит, пока вы выбираете.</strong><p id="verdict-detail">Метки выбирают аэродром. Кнопка «Полёт» подтверждает вылет.</p></div>
   <button id="fly" class="fly-button" disabled>Полёт <span aria-hidden="true">↗</span></button>
-  <p class="footnote" id="ground-note">Посадка, обслуживание и заправка выполняются автоматически.</p>
+  <p id="dispatch-summary" class="dispatch-summary" hidden></p>
+  <p class="footnote" id="ground-note">Заправка — перед выбранным рейсом, с резервом 5 т.</p>
  </aside>
 </main>
 <script type="module" src="./app.mjs"></script>

@@ -32,5 +32,5 @@ test('UI selection/navigation is separate from confirmation; playback pauses wit
  const end=c.session.endUtcMs,start=definition.initial.utcMs,rate=(end-start)/45000;c.tick(10000);assert.ok(Math.abs(c.view.state.utcMs-(start+10000*rate))<.001);
  c.pause(10000);const saved=c.session.save();c.tick(20000);c.select('YPPH');assert.equal(c.session.save(),saved);
  c.play(30000);c.tick(35000);assert.ok(Math.abs(c.view.state.utcMs-(start+15000*rate))<.001);
- c.advanceTo(end,35000);assert.equal(c.view.state.airportId,'NZCH');assert.equal(c.view.state.stocks.NZCH,0);assert.equal(c.playing,false);assert.equal(c.view.state.phase,'planning');
+ c.advanceTo(end,35000);assert.equal(c.view.state.airportId,'NZCH');assert.equal(c.view.state.stocks.NZCH,64000);assert.equal(c.playing,false);assert.equal(c.view.state.phase,'planning');
 });

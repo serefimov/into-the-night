@@ -1,0 +1,21 @@
+{
+  "scenarioId": "westward-control",
+  "scenarioVersion": 2,
+  "purpose": "Control for destination-based refuelling before departure; not the approved science campaign",
+  "seed": "westward-control-v2",
+  "refuelingPolicy": "route-before-departure-v2",
+  "stockVersion": "departure-stocks-v2",
+  "stockKgPerAirport": 64000,
+  "stockOverridesKg": { "SCEL": 100000 },
+  "profileId": "B788-reference-v1",
+  "profileVersion": 1,
+  "catalogVersion": 2,
+  "catalogSourceCommit": "11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+  "targetId": "FACT",
+  "targetCompletion": "after_service",
+  "initial": {
+    "airportId": "SCEL",
+    "utcMs": 1782078600000,
+    "fuelKg": 30000
+  }
+}
