@@ -22,6 +22,7 @@ export interface ResearchWorld {
     profile: AircraftProfile;
     airports: readonly ResearchAirport[];
     targetId: string;
+    targetCompletion?: 'arrival' | 'after_turnaround';
 }
 export interface ResearchPhase {
     label: 'departure' | 'cruise' | 'arrival' | 'service' | 'refuelling';

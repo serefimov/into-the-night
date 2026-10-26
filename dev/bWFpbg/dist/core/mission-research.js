@@ -14,6 +14,8 @@ export function validateResearchState(world, state) {
     validateUtcMs(state.utcMs);
     airport(world, state.airportId);
     airport(world, world.targetId);
+    if (world.targetCompletion !== undefined && !['arrival', 'after_turnaround'].includes(world.targetCompletion))
+        throw new RangeError('Invalid target completion');
     nonnegative(state.fuelKg, 'fuel');
     if (state.fuelKg > aircraftMetrics(world.profile).fuelCapacityKg)
         throw new RangeError('Overfull tank');
@@ -65,7 +67,8 @@ export function forecastResearchFlight(world, state, destinationId, options = {}
     append('arrival', 'landing', to, a.arrivalSeconds);
     const arrivalUtcMs = cursor;
     let refuelling = null;
-    if (destinationId !== world.targetId && flight.arrivalFuelKg >= 0) {
+    const terminalArrival = destinationId === world.targetId && world.targetCompletion !== 'after_turnaround';
+    if (!terminalArrival && flight.arrivalFuelKg >= 0) {
         append('service', 'service', to, a.serviceSeconds);
         const groundFuel = flight.arrivalFuelKg - a.serviceSeconds * a.serviceBurnKgPerSecond;
         if (groundFuel < 0)
@@ -82,7 +85,7 @@ export function forecastResearchFlight(world, state, destinationId, options = {}
     const allowed = reasons.length === 0;
     const next = allowed ? { airportId: destinationId, utcMs: cursor, fuelKg: refuelling ? refuelling.fuelKg : flight.arrivalFuelKg,
         stocks: { ...state.stocks, ...(refuelling ? { [destinationId]: refuelling.stockKg } : {}) }, flights: state.flights + 1, distanceKm: state.distanceKm + path.distanceKm, won: destinationId === world.targetId } : null;
-    return { allowed, reasons, distanceKm: path.distanceKm, arrivalUtcMs, endUtcMs: cursor, flight, refuelling, phases, solarScope: destinationId === world.targetId ? 'terminal_arrival' : refuelling ? 'automatic_turnaround' : 'flight_only_invalid_resources', solar, next };
+    return { allowed, reasons, distanceKm: path.distanceKm, arrivalUtcMs, endUtcMs: cursor, flight, refuelling, phases, solarScope: terminalArrival ? 'terminal_arrival' : refuelling ? 'automatic_turnaround' : 'flight_only_invalid_resources', solar, next };
 }
 /** Recompute and accept the same validated transition; rejected choices never mutate input. */
 export function executeResearchFlight(world, state, destinationId, options = {}) {
