@@ -10,4 +10,5 @@ export { serializeSession, restoreSession, SAVE_FORMAT_VERSION } from './saves.j
 export { validateAircraftProfile, aircraftMetrics, aircraftLeg, aircraftRefuelling } from './aircraft.js';
 export { RESEARCH_MODEL, forecastResearchFlight, executeResearchFlight, firstFlightFuelEnvelope, auditResearchPhases } from './mission-research.js';
 export { MISSION_MODEL, MissionSession } from './mission.js';
+export { forecastMissionFlight } from './mission-flight.js';
 export * from './globe.js';

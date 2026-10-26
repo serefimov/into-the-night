@@ -3,3 +3,5 @@
 @media(max-width:760px){.map-controls button{width:44px;min-height:44px}.playback{right:70px}}
 .map-marker.selected,.map-marker.current,.map-marker.goal{z-index:2}.map-marker.selected{z-index:3}.map-marker.selected .marker-label,.map-marker.current .marker-label,.map-marker.goal .marker-label{max-width:125px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#f5dfb7;font-size:10px;font-weight:600}.map-marker.selected .marker-dot{width:23px;height:23px}.map-controls svg{vertical-align:middle}@media(max-width:760px){.world-caption{display:none}.map-legend .availability-key{display:none}}
 @media(max-width:760px){.map-controls{left:12px;right:auto}.playback{left:70px;right:12px}}
+
+.dispatch-summary{font-size:.8rem;line-height:1.4;color:var(--muted);margin:.5rem 0}

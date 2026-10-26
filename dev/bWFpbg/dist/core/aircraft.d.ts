@@ -49,7 +49,7 @@ export declare function aircraftLeg(p: AircraftProfile, distanceKm: number, init
     dispatchable: boolean;
     reasons: string[];
 };
-export declare function aircraftRefuelling(p: AircraftProfile, fuelKg: number, stockKg: number): {
+export declare function aircraftRefuelling(p: AircraftProfile, fuelKg: number, stockKg: number, targetFuelKg?: number): {
     transferKg: number;
     fuelKg: number;
     stockKg: number;

@@ -1,20 +1,21 @@
-import type { ResearchWorld, ResearchForecast, ResearchPhase } from './mission-research.js';
+import type { MissionWorld, MissionForecast } from './mission-flight.js';
+import type { ResearchPhase } from './mission-research.js';
 import type { Coordinates } from './solar.js';
 import type { SearchOptions } from './interval-search.js';
 export declare const MISSION_MODEL: Readonly<{
-    readonly mode: "airport-flight-v1";
-    readonly simulationVersion: "flight-cycle-1";
-    readonly schemaVersion: 1;
-    readonly eventVersion: 1;
-    readonly saveVersion: 1;
+    readonly mode: "airport-flight-v2";
+    readonly simulationVersion: "flight-cycle-2";
+    readonly schemaVersion: 2;
+    readonly eventVersion: 2;
+    readonly saveVersion: 2;
 }>;
-export interface MissionDefinition extends ResearchWorld {
+export interface MissionDefinition extends MissionWorld {
     scenarioId: string;
     scenarioVersion: number;
     seed: string;
     stockVersion: string;
     worldVersion: string;
-    targetCompletion: 'arrival' | 'after_turnaround';
+    targetCompletion: 'arrival' | 'after_service';
     initial: {
         airportId: string;
         utcMs: number;
@@ -23,16 +24,16 @@ export interface MissionDefinition extends ResearchWorld {
     };
 }
 export interface MissionEvent {
-    version: 1;
+    version: 2;
     sequence: number;
     utcMs: number;
     flightIndex: number;
     airportId: string;
-    kind: 'mission_started' | 'flight_started' | 'arrived' | 'refuelling_started' | 'flight_completed' | 'mission_won' | 'mission_died';
+    kind: 'mission_started' | 'flight_committed' | 'flight_started' | 'arrived' | 'refuelling_started' | 'flight_completed' | 'mission_won' | 'mission_died';
 }
 export interface MissionState {
     mode: typeof MISSION_MODEL.mode;
-    schemaVersion: 1;
+    schemaVersion: 2;
     simulationVersion: string;
     scenarioId: string;
     scenarioVersion: number;
@@ -57,6 +58,7 @@ export interface MissionState {
         fromId: string;
         toId: string;
         startUtcMs: number;
+        departureUtcMs: number;
         arrivalUtcMs: number;
         endUtcMs: number;
         phaseStartUtcMs: number;
@@ -73,9 +75,9 @@ export interface MissionAdvance extends MissionView {
 export interface MissionChoice {
     allowed: boolean;
     reasons: readonly string[];
-    forecast: ResearchForecast | null;
+    forecast: MissionForecast | null;
 }
-/** A no-food, no-wait session. The existing research transition supplies every accepted physical plan. */
+/** A no-food, no-wait session. The shared departure-fuel transition supplies every accepted physical plan. */
 export declare class MissionSession {
     #private;
     constructor(definition: MissionDefinition, options?: SearchOptions);

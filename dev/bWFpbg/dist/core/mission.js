@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import { forecastResearchFlight, validateResearchState } from './mission-research.js';
+import { validateResearchState } from './mission-research.js';
+import { forecastMissionFlight } from './mission-flight.js';
 import { aircraftMetrics } from './aircraft.js';
 import { routePhasePosition } from './route.js';
 import { solarExposure, validateCoordinates } from './solar.js';
 import { searchLimits } from './interval-search.js';
 import { validateUtcMs } from './time.js';
 import { canonicalJson, saveChecksum } from './serialization.js';
-export const MISSION_MODEL = Object.freeze({ mode: 'airport-flight-v1', simulationVersion: 'flight-cycle-1', schemaVersion: 1, eventVersion: 1, saveVersion: 1 });
+export const MISSION_MODEL = Object.freeze({ mode: 'airport-flight-v2', simulationVersion: 'flight-cycle-2', schemaVersion: 2, eventVersion: 2, saveVersion: 2 });
 function copy(value) {
     if (Array.isArray(value))
         return value.map(copy);
@@ -20,7 +21,7 @@ function validateDefinition(d) {
     for (const key of ['scenarioId', 'seed', 'stockVersion', 'worldVersion'])
         if (typeof d[key] !== 'string' || !d[key])
             throw new RangeError('Missing mission ' + key);
-    if (!Number.isInteger(d.scenarioVersion) || d.scenarioVersion < 1 || !['arrival', 'after_turnaround'].includes(d.targetCompletion))
+    if (!Number.isInteger(d.scenarioVersion) || d.scenarioVersion < 1 || !['arrival', 'after_service'].includes(d.targetCompletion))
         throw new RangeError('Invalid mission version or completion');
     if (!Array.isArray(d.airports) || d.airports.length < 2)
         throw new RangeError('Mission needs airports');
@@ -33,14 +34,14 @@ function validateDefinition(d) {
     }
     if (Object.keys(d.initial.stocks).length !== ids.size || Object.keys(d.initial.stocks).some(id => !ids.has(id)) || d.initial.airportId === d.targetId || d.airports.find(a => a.id === d.initial.airportId)?.suitability.status !== 'screened-candidate')
         throw new RangeError('Invalid mission stock coverage or endpoints');
-    validateResearchState(d, initialResearch(d));
+    validateResearchState({ profile: d.profile, airports: d.airports, targetId: d.targetId }, initialResearch(d));
 }
 function validateOptions(options) {
     if (!options || typeof options !== 'object' || Array.isArray(options) || Object.keys(options).some(k => !['eventToleranceSeconds', 'maxIntervalSeconds', 'maxEvaluations'].includes(k)))
         throw new RangeError('Invalid mission search options');
     searchLimits(options);
 }
-/** A no-food, no-wait session. The existing research transition supplies every accepted physical plan. */
+/** A no-food, no-wait session. The shared departure-fuel transition supplies every accepted physical plan. */
 export class MissionSession {
     #definition;
     #options;
@@ -75,7 +76,7 @@ export class MissionSession {
         if (destinationId === view.airportId)
             return blocked('same_airport');
         try {
-            const forecast = forecastResearchFlight(this.#definition, this.#ready(), destinationId, this.#options);
+            const forecast = forecastMissionFlight(this.#definition, this.#ready(), destinationId, this.#options);
             return { allowed: forecast.allowed, reasons: forecast.reasons, forecast };
         }
         catch (error) {
@@ -110,17 +111,18 @@ export class MissionSession {
     }
     #events() {
         const events = [];
-        const append = (kind, utcMs, flightIndex, airportId) => events.push({ version: 1, sequence: events.length, kind, utcMs, flightIndex, airportId });
+        const append = (kind, utcMs, flightIndex, airportId) => events.push({ version: 2, sequence: events.length, kind, utcMs, flightIndex, airportId });
         append('mission_started', this.#initial.utcMs, 0, this.#initial.airportId);
         if (this.#initialSun)
             append('mission_died', this.#initial.utcMs, 0, this.#initial.airportId);
         for (const plan of this.#plans) {
             const f = plan.forecast, index = plan.origin.flights + 1;
-            append('flight_started', plan.origin.utcMs, index, plan.origin.airportId);
-            append('arrived', f.arrivalUtcMs, index, plan.toId);
+            append('flight_committed', plan.origin.utcMs, index, plan.origin.airportId);
             const refuel = f.phases.find(p => p.label === 'refuelling');
             if (refuel)
-                append('refuelling_started', refuel.route.startUtcMs, index, plan.toId);
+                append('refuelling_started', refuel.route.startUtcMs, index, plan.origin.airportId);
+            append('flight_started', f.departureUtcMs, index, plan.origin.airportId);
+            append('arrived', f.arrivalUtcMs, index, plan.toId);
             append('flight_completed', f.endUtcMs, index, plan.toId);
             if (f.next.won)
                 append('mission_won', f.endUtcMs, index, plan.toId);
@@ -129,7 +131,7 @@ export class MissionSession {
     }
     #base(r) {
         const d = this.#definition, status = this.#initialSun ? 'dead' : r.won ? 'won' : 'running';
-        return { mode: MISSION_MODEL.mode, schemaVersion: 1, simulationVersion: MISSION_MODEL.simulationVersion, scenarioId: d.scenarioId, scenarioVersion: d.scenarioVersion, seed: d.seed, stockVersion: d.stockVersion, worldVersion: d.worldVersion,
+        return { mode: MISSION_MODEL.mode, schemaVersion: 2, simulationVersion: MISSION_MODEL.simulationVersion, scenarioId: d.scenarioId, scenarioVersion: d.scenarioVersion, seed: d.seed, stockVersion: d.stockVersion, worldVersion: d.worldVersion,
             startUtcMs: this.#initial.utcMs, utcMs: r.utcMs, airportId: r.airportId, position: { latitudeDeg: this.#airport(r.airportId).latitudeDeg, longitudeDeg: this.#airport(r.airportId).longitudeDeg },
             fuelKg: r.fuelKg, stocks: copy(r.stocks), flights: r.flights, distanceKm: r.distanceKm, status, phase: status === 'running' ? 'planning' : status,
             death: this.#initialSun ? { kind: 'sun', utcMs: this.#initial.utcMs } : null, activeFlight: null };
@@ -161,16 +163,20 @@ export class MissionSession {
                     break;
                 case 'refuelling': {
                     const transfer = Math.min(f.refuelling.transferKg, Math.max(0, elapsed - a.refuellingSetupSeconds) * m.refuellingKgPerSecond);
-                    fuel = Math.min(f.refuelling.fuelKg, f.flight.arrivalFuelKg - a.serviceSeconds * a.serviceBurnKgPerSecond + transfer);
-                    state.stocks[plan.toId] = plan.origin.stocks[plan.toId] - transfer;
+                    fuel = Math.min(f.refuelling.fuelKg, plan.origin.fuelKg + transfer);
+                    state.stocks[plan.origin.airportId] = plan.origin.stocks[plan.origin.airportId] - transfer;
+                    if (time >= p.endUtcMs) {
+                        fuel = f.refuelling.fuelKg;
+                        state.stocks[plan.origin.airportId] = f.refuelling.stockKg;
+                    }
                     break;
                 }
             }
             if (time < p.endUtcMs) {
                 state.phase = phase.label;
                 state.position = routePhasePosition(p, time);
-                state.airportId = phase.label === 'departure' ? plan.origin.airportId : time >= f.arrivalUtcMs ? plan.toId : null;
-                state.activeFlight = { fromId: plan.origin.airportId, toId: plan.toId, startUtcMs: plan.origin.utcMs, arrivalUtcMs: f.arrivalUtcMs, endUtcMs: f.endUtcMs, phaseStartUtcMs: p.startUtcMs, phaseEndUtcMs: p.endUtcMs };
+                state.airportId = (phase.label === 'departure' || phase.label === 'refuelling') ? plan.origin.airportId : time >= f.arrivalUtcMs ? plan.toId : null;
+                state.activeFlight = { fromId: plan.origin.airportId, toId: plan.toId, startUtcMs: plan.origin.utcMs, departureUtcMs: f.departureUtcMs, arrivalUtcMs: f.arrivalUtcMs, endUtcMs: f.endUtcMs, phaseStartUtcMs: p.startUtcMs, phaseEndUtcMs: p.endUtcMs };
                 break;
             }
         }
@@ -204,19 +210,19 @@ export class MissionSession {
     }
     resume() { return this.stopAt(this.endUtcMs); }
     save() {
-        const payload = { mode: MISSION_MODEL.mode, simulationVersion: MISSION_MODEL.simulationVersion, eventVersion: 1, definition: copy(this.#definition), options: copy(this.#options),
+        const payload = { mode: MISSION_MODEL.mode, simulationVersion: MISSION_MODEL.simulationVersion, eventVersion: 2, definition: copy(this.#definition), options: copy(this.#options),
             choices: this.#plans.map(p => p.toId), cursorUtcMs: this.#cursor, consumedEvents: this.#consumedEvents, snapshot: this.current() };
-        return canonicalJson({ format: 'into-the-night-mission', version: 1, checksum: saveChecksum(payload), payload });
+        return canonicalJson({ format: 'into-the-night-mission', version: 2, checksum: saveChecksum(payload), payload });
     }
     /** Separate format: historical survival saves are rejected rather than reinterpreted as food-free missions. */
     static restore(serialized, expectedDefinition) {
         if (typeof serialized !== 'string' || serialized.length > 16 * 1024 * 1024)
             throw new RangeError('Invalid mission save size');
         const envelope = JSON.parse(serialized);
-        if (!envelope || envelope.format !== 'into-the-night-mission' || envelope.version !== 1 || !envelope.payload || envelope.checksum !== saveChecksum(envelope.payload))
+        if (!envelope || envelope.format !== 'into-the-night-mission' || envelope.version !== 2 || !envelope.payload || envelope.checksum !== saveChecksum(envelope.payload))
             throw new RangeError('Unsupported or damaged mission save');
         const p = envelope.payload;
-        if (p.mode !== MISSION_MODEL.mode || p.simulationVersion !== MISSION_MODEL.simulationVersion || p.eventVersion !== 1)
+        if (p.mode !== MISSION_MODEL.mode || p.simulationVersion !== MISSION_MODEL.simulationVersion || p.eventVersion !== 2)
             throw new RangeError('Incompatible mission save version');
         if (expectedDefinition && canonicalJson(p.definition) !== canonicalJson(expectedDefinition))
             throw new RangeError('Mission definition differs');
