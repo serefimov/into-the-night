@@ -26,6 +26,11 @@ test('dense detail groups keep distinct choices, priorities and labels clear of 
  const labels=r.rows.filter(p=>p.label).map(p=>p.label);for(let i=0;i<labels.length;i++)for(let j=i+1;j<labels.length;j++)assert.equal(intersects(labels[i],labels[j]),false);
  assert.ok(r.rows.length<=r.budget);assert.ok(r.detail);
 });
+test('mobile priority names reserve space before ordinary airport groups and avoid the aircraft glyph',()=>{
+ const width=390,height=369,frame=globeFrame({latitudeDeg:-42,longitudeDeg:-140},width,height),labels={SCEL:'Сантьяго',NZCH:'Крайстчерч',FACT:'Кейптаун'},airports=definition.airports.map(a=>({...a,label:labels[a.id]??a.name})),p=globePoint(airports.find(a=>a.id==='SCEL'),frame);
+ const r=layoutAirportMarkers({airports,frame,width,height,zoom:1,priorityIds:['NZCH','SCEL','FACT'],obstacles:[{left:7,top:181,right:61,bottom:331},{left:11,top:8,right:111,bottom:51},{left:11,top:323,right:270,bottom:341},{left:11,top:341,right:380,bottom:359}],plane:{...p,y:p.y-13}});
+ for(const id of ['SCEL','NZCH']){const row=r.rows.find(r=>r.id===id);assert.ok(row.label,id);assert.equal(row.label.right-row.label.left,125);for(const other of r.rows)if(other!==row)assert.ok(!intersects(row.label,{left:other.x-17,right:other.x+17,top:other.y-17,bottom:other.y+17}));}
+});
 test('focusing any airport reveals it as a selectable member, including blocked/unverified and coincident neighbors',()=>{
  // All real catalog entries, even those absent from the overview, remain discoverable.
  for(const airport of definition.airports){const r=layout(airport,5,390,350,{priorityIds:[]});assert.ok(r.rows.some(p=>p.group.some(a=>a.id===airport.id)),airport.id);}

@@ -45,7 +45,7 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  assert.match(await evaluate(`document.getElementById('dispatch-summary').textContent`),/37,6 т/);assert.equal(await evaluate(`document.getElementById('dispatch-summary').getBoundingClientRect().height>0`),true);
  await evaluate(`${app}.globe.focus({latitudeDeg:-42,longitudeDeg:-140},1);${app}.render()`);
  await inspectLayout('selected overview');
- assert.equal(await evaluate(`['SCEL','NZCH'].every(id=>{const n=${app}.globe.nodes.get(id)?.querySelector('.marker-label');return n&&!n.hidden&&n.scrollWidth<=n.clientWidth;})()`),true,'Current and selected names must fit without ellipsis');
+ assert.equal(await evaluate(`['SCEL','NZCH'].every(id=>{const n=${app}.globe.nodes.get(id)?.querySelector('.marker-label');return n&&!n.hidden&&n.scrollWidth<=n.clientWidth;})`),true,'Current and selected names must fit without ellipsis');
  const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await mkdir('.build/previews',{recursive:true});await writeFile(`.build/previews/flight-${mobile?'mobile':'desktop'}.png`,Buffer.from(shot.data,'base64'));
  if(process.env.GLOBE_PREVIEW_LOG==='1')console.log(`GLOBE_PREVIEW_${mobile?'MOBILE':'DESKTOP'} ${shot.data}`);
  await evaluate(`${app}.globe.focus({latitudeDeg:50,longitudeDeg:10},1);${app}.render()`);
