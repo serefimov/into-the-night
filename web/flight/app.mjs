@@ -14,9 +14,9 @@ async function json(url){const r=await fetch(url);if(!r.ok)throw Error('Не у�
 export let app=null;
 export async function createFlightApp(definition,land) {
  const controller=new FlightController(definition),airports=new Map(definition.airports.map(a=>[a.id,a])),statuses=new Map();
- globe.focus(controller.view.state.position,1);
  let follow=false,generation=0,planningKey=null,worker=null,lastDraw=0,destroyed=false;
  const globe=new GlobeView($('globe'),$('globe-markers'),land,{onSelect:select,onInteraction:()=>{follow=false;}});
+ globe.focus(controller.view.state.position,1);
  try{worker=new Worker(new URL('./forecast-worker.mjs',import.meta.url),{type:'module'});worker.onmessage=({data})=>{if(data.generation!==generation||data.error)return;for(const item of data.batch)statuses.set(item.id,item);globe.dirty=true;};worker.onerror=()=>{worker?.terminate();worker=null;};}catch{}
  function scheduleForecasts(){const s=controller.view.state,key=s.phase==='planning'?`${s.utcMs}:${s.flights}`:s.status==='running'?'busy':s.status;
   if(key===planningKey)return;planningKey=key;generation++;statuses.clear();worker?.postMessage({cancel:true});
