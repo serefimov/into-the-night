@@ -3,9 +3,9 @@
   "branch": "main",
   "tag": "",
   "version": "0.1.0-alpha.1",
-  "commit": "f9920773120dde46dfcfb8631c0cd4d50153cdc3",
-  "runId": "40400263980",
-  "builtAt": "2026-10-26T20:58:40.608Z",
-  "source": "https://github.com/serefimov/into-the-night/tree/f9920773120dde46dfcfb8631c0cd4d50153cdc3",
-  "contentHash": "21df4cb51896410d802d39e6f3e442029ee14ce88def5410ccc278c2d47ec72a"
+  "commit": "e98595479d10ff442ece2ce62b09a354bb3910e4",
+  "runId": "40403849890",
+  "builtAt": "2026-10-26T21:23:36.744Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/e98595479d10ff442ece2ce62b09a354bb3910e4",
+  "contentHash": "938e1cefa1359bfff948006c5295c1ec7a87827a16f9c9681773b6d0001ee3a0"
 }

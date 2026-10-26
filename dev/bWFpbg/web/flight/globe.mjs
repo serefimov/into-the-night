@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import {globeFrame,globePoint,globeNormal,globeLocation,globeLines,globeRoute} from '../../dist/core/globe.js';
+import {globeFrame,globePoint,globeNormal,globeLines,globeRoute} from '../../dist/core/globe.js';
+import {layoutAirportMarkers} from './marker-layout.mjs';
 import {solarDirection} from '../../dist/core/solar.js';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const longitude=v=>((v+180)%360+360)%360-180;
@@ -41,7 +42,7 @@ export class GlobeView {
   if(hit)this.activate(hit);
  }
  activate(hit){if(!hit.cluster){this.picker.hidden=true;this.onSelect(hit.id);return;}
-  if(this.camera.zoom<4.8){const location=globeLocation(hit.x,hit.y,this.frame);if(location)this.focus(location,this.camera.zoom*1.7);return;}
+  if(this.camera.zoom<4.8){this.focus(hit.airport,this.camera.zoom*1.7);return;}
   this.picker.replaceChildren();this.picker.style.left=clamp(hit.x-110,12,this.geometry.width-232)+'px';this.picker.style.top=clamp(hit.y+20,80,this.geometry.height-180)+'px';
   for(const row of hit.group){const button=document.createElement('button');button.textContent=row.airport.label??row.airport.name??row.id;button.dataset.airportId=row.id;button.addEventListener('click',()=>{this.picker.hidden=true;this.onSelect(row.id);});this.picker.append(button);}this.picker.hidden=false;
  }
@@ -79,20 +80,24 @@ export class GlobeView {
   this.dirty=false;
  }
  drawMarkers() {
-  const {airports,state,selectedId,targetId,startId,statuses}=this.data,priority=new Set([selectedId,targetId,startId,state.airportId]),rows=[],bins=new Map();
-  for(const airport of airports){const p=globePoint(airport,this.frame);if(p.depth<.025||p.x<-22||p.x>this.geometry.width+22||p.y<-22||p.y>this.geometry.height+22)continue;
-   const row={...p,id:airport.id,airport};if(priority.has(airport.id))rows.push(row);else{const bucket=this.camera.zoom<1.5?52:40,key=Math.floor(p.x/bucket)+':'+Math.floor(p.y/bucket);if(!bins.has(key))bins.set(key,[]);bins.get(key).push(row);}}
-  for(const [key,group] of bins){if(group.length===1)rows.push(group[0]);else rows.push({id:'cluster:'+key,cluster:true,group,count:group.length,x:group.reduce((a,p)=>a+p.x,0)/group.length,y:group.reduce((a,p)=>a+p.y,0)/group.length});}
+  const {airports,state,selectedId,targetId,statuses}=this.data,canvasRect=this.canvas.getBoundingClientRect();
+  const obstacles=[...this.canvas.parentElement.querySelectorAll('.map-controls,.map-legend,.world-caption,.playback,.map-detail-hint'),document.getElementById('goal-focus')].filter(e=>e&&!e.hidden&&e.getBoundingClientRect().width>0).map(e=>{const r=e.getBoundingClientRect();return {left:r.left-canvasRect.left-5,right:r.right-canvasRect.left+5,top:r.top-canvasRect.top-5,bottom:r.bottom-canvasRect.top+5};});
+  const plane=globePoint(state.position,this.frame),active=state.activeFlight;
+  this.markerLayout=layoutAirportMarkers({airports,frame:this.frame,width:this.geometry.width,height:this.geometry.height,zoom:this.camera.zoom,priorityIds:[selectedId,state.airportId,targetId,active?.fromId,active?.toId],obstacles,plane:{...plane,y:plane.y-13}});
+  const {rows,detail}=this.markerLayout;
+  for(const row of rows)if(Math.hypot(row.x-row.anchorX,row.y-row.anchorY)>1){this.ctx.strokeStyle='#c4cfc280';this.ctx.lineWidth=1;this.ctx.beginPath();this.ctx.moveTo(row.anchorX,row.anchorY);this.ctx.lineTo(row.x,row.y);this.ctx.stroke();}
   this.hits=rows;const live=new Set();
   for(const row of rows){live.add(row.id);let node=this.nodes.get(row.id);
    if(!node){node=document.createElement('button');node.type='button';node.className='map-marker';node.addEventListener('click',()=>this.activate(this.hits.find(h=>h.id===row.id)??row));this.markers.append(node);this.nodes.set(row.id,node);}
    node.style.transform=`translate(${row.x-22}px,${row.y-22}px)`;
-   if(row.cluster){const safe=row.group.some(r=>statuses.get(r.id)?.allowed),blocked=row.group.every(r=>statuses.has(r.id)&&!statuses.get(r.id).allowed);node.className='map-marker cluster'+(safe?' has-safe':'');node.textContent=(safe?'✓':blocked?'×':'')+row.count;node.setAttribute('aria-label',`${row.count} аэродромов${safe?', есть доступные':''}: приблизить`);node.removeAttribute('data-airport-id');continue;}
    const info=statuses.get(row.id),safe=info?.allowed,blocked=info&&!safe,uncertain=blocked&&info.reasons.every(r=>r==='solar_indeterminate'),goal=row.id===targetId,current=row.id===state.airportId,selected=row.id===selectedId;
-   node.dataset.airportId=row.id;node.dataset.status=current?'current':safe?'safe':blocked?'blocked':'unknown';node.className=`map-marker airport ${safe?'safe':blocked?'blocked':''} ${goal?'goal':''} ${selected?'selected':''} ${current?'current':''}`;
-   const glyph=goal?'⚑':current?'◆':safe?'✓':uncertain?'?':blocked?'×':'·',label=selected||goal||current?(row.airport.label??row.airport.iata??row.id):(row.airport.iata??row.id);
-   node.replaceChildren(Object.assign(document.createElement('span'),{className:'marker-dot',textContent:glyph}),Object.assign(document.createElement('span'),{className:'marker-label',textContent:label}));
-   node.setAttribute('aria-label',`${row.airport.label??row.airport.name??row.id}${goal?', цель':''}${current?', вы здесь':safe?', полёт доступен':blocked?', полёт недоступен':', выбрать для проверки'}`);
+   node.dataset.airportId=row.id;node.dataset.status=current?'current':safe?'safe':blocked?'blocked':'unknown';node.className=`map-marker airport ${row.cluster?'cluster':''} ${row.cluster&&row.group.some(r=>statuses.get(r.id)?.allowed)?'has-safe':''} ${detail?'detail':'overview'} ${safe?'safe':blocked?'blocked':''} ${goal?'goal':''} ${selected?'selected':''} ${current?'current':''}`;
+   const groupSafe=row.cluster&&row.group.some(r=>statuses.get(r.id)?.allowed);
+   const glyph=goal?'⚑':current?'◆':row.cluster?(groupSafe?'✓':detail?String(row.count):'+'):safe?'✓':uncertain&&detail?'?':blocked&&detail?'×':'·';
+   node.replaceChildren(Object.assign(document.createElement('span'),{className:'marker-dot',textContent:glyph}),Object.assign(document.createElement('span'),{className:'marker-label',textContent:row.label?.text??''}));
+   const labelNode=node.querySelector('.marker-label');labelNode.hidden=!row.label;if(row.label){labelNode.style.left=(row.label.left-row.x+22)+'px';labelNode.style.top=(row.label.top-row.y+22)+'px';labelNode.style.width=(row.label.right-row.label.left)+'px';}
+   node.title=row.cluster?`${row.count} аэродромов — приблизьте или выберите из группы`:row.airport.name;
+   node.setAttribute('aria-label',row.cluster?`${row.count} аэродромов${goal?', включая цель':''}${current?', вы здесь':''}${groupSafe?', есть доступные':''}: ${this.camera.zoom>=4.8?'выбрать из группы':'приблизить'}`:`${row.airport.label??row.airport.name??row.id}${goal?', цель':''}${current?', вы здесь':safe?', полёт доступен':blocked?', полёт недоступен':', выбрать для проверки'}`);
   }
   for(const [id,node] of this.nodes)if(!live.has(id)){node.remove();this.nodes.delete(id);}
  }
