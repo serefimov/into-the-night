@@ -1,0 +1,51 @@
+// SPDX-License-Identifier: GPL-3.0-only
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobile}) {
+ await send('Emulation.setDeviceMetricsOverride',{width:mobile?390:1280,height:mobile?844:900,deviceScaleFactor:1,mobile});await send('Emulation.setTouchEmulationEnabled',{enabled:mobile});
+ await send('Page.navigate',{url:rootUrl});await until(`location.pathname.endsWith('/web/flight/index.html') && document.body.dataset.ready==='true'`);
+ await evaluate(`import('./app.mjs').then(module=>{window.flightModule=module;return true;})`);
+ const app='window.flightModule.app';
+ const snapshot=()=>evaluate(`${app}.controller.session.save()`);
+ const initial=await snapshot();assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
+ assert.equal(await evaluate(`document.querySelectorAll('input,select,dialog').length`),0);
+ assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);
+ await until(`${app}.globe.data.statuses.has('NZCH') && ${app}.globe.data.statuses.has('FACT')`);
+ assert.equal(await evaluate(`${app}.globe.data.statuses.get('NZCH').allowed`),true);assert.equal(await evaluate(`${app}.globe.data.statuses.get('FACT').allowed`),false);
+ const land=await evaluate(`(()=>{const g=${app}.globe;const at=(lat,lon)=>g.landPixels[(Math.floor((90-lat)/180*512)*1024+Math.floor((lon+180)/360*1024))*4+3]>90;return [at(-25,134),at(20,15),at(-88,0),at(0,-140)];})()`);
+ assert.deepEqual(land,[true,true,true,false],'Coastline texture must contain real continents and ocean');
+ const bounds=await evaluate(`(()=>{const r=document.getElementById('globe').getBoundingClientRect();return {x:r.x+r.width*.35,y:r.y+r.height*.6};})()`);
+ if(mobile){await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...bounds,id:1}]});await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:bounds.x+65,y:bounds.y+15,id:1}]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
+ else{await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...bounds});await send('Input.dispatchMouseEvent',{type:'mouseMoved',buttons:1,x:bounds.x+65,y:bounds.y+15});await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:bounds.x+65,y:bounds.y+15});}
+ assert.equal(await evaluate(`${app}.controller.selectedId`),null,'Dragging must not select a marker');assert.equal(await snapshot(),initial);
+ const zoom=await evaluate(`${app}.globe.camera.zoom`);
+ if(mobile){const p=[{x:bounds.x-30,y:bounds.y,id:1},{x:bounds.x+30,y:bounds.y,id:2}];await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:p});await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{...p[0],x:bounds.x-60},{...p[1],x:bounds.x+60}]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
+ else await send('Input.dispatchMouseEvent',{type:'mouseWheel',x:bounds.x,y:bounds.y,deltaY:-200,deltaX:0});
+ await until(`${app}.globe.camera.zoom>${zoom}`);assert.equal(await snapshot(),initial);
+ async function select(id) {
+  await evaluate(`(()=>{const a=${app};a.globe.focus(a.controller.session.definition.airports.find(p=>p.id===${JSON.stringify(id)}),5);a.render();})()`);
+  const hit=await evaluate(`(()=>{const a=${app},h=a.globe.hits.find(h=>h.id===${JSON.stringify(id)}||h.group?.some(p=>p.id===${JSON.stringify(id)})),r=document.getElementById('globe').getBoundingClientRect();if(!h)throw Error('Marker not found');return {x:r.x+h.x,y:r.y+h.y,cluster:!!h.cluster};})()`);
+  if(mobile){await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:hit.x,y:hit.y}]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
+  else{await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,x:hit.x,y:hit.y});await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:hit.x,y:hit.y});}
+  if(hit.cluster)await click(`.cluster-picker [data-airport-id="${id}"]`,mobile);
+  await until(`${app}.controller.selectedId===${JSON.stringify(id)}`);
+ }
+ await select('FACT');assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);assert.match(await evaluate(`document.getElementById('verdict-detail').textContent`),/Солнце/);assert.equal(await snapshot(),initial);
+ await select('NZCH');assert.equal(await evaluate(`document.getElementById('fly').disabled`),false);assert.equal(await snapshot(),initial);
+ assert.match(await evaluate(`document.getElementById('stock-value').textContent`),/32/);assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Весь переход безопасен/);
+ await evaluate(`${app}.globe.focus({latitudeDeg:-42,longitudeDeg:-140},1);${app}.render()`);
+ const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await mkdir('.build/previews',{recursive:true});await writeFile(`.build/previews/flight-${mobile?'mobile':'desktop'}.png`,Buffer.from(shot.data,'base64'));
+ if(process.env.GLOBE_PREVIEW_LOG==='1')console.log(`GLOBE_PREVIEW_${mobile?'MOBILE':'DESKTOP'} ${shot.data}`);
+ await click('#fly',mobile);await until(`${app}.controller.playing`);await click('#play-pause',mobile);await until(`!${app}.controller.playing`);
+ const paused=await snapshot();await evaluate('new Promise(r=>setTimeout(r,80))');assert.equal(await snapshot(),paused,'Paused animation must not advance');
+ assert.equal(await evaluate(`document.getElementById('flight-clock').dateTime===new Date(${app}.controller.view.state.utcMs).toISOString() && ${app}.globe.lastUtcMs===${app}.controller.view.state.utcMs`),true);
+ await click('#play-pause',mobile);await until(`${app}.controller.playing`);await click('#play-pause',mobile);
+ await evaluate(`(()=>{const a=${app},p=a.controller.activeForecast.phases.find(p=>p.label==='refuelling').route;a.advanceTo(p.startUtcMs+300000+1200000);})()`);
+ assert.match(await evaluate(`document.getElementById('flight-status').textContent`),/Автозаправка/);assert.equal(await evaluate(`${app}.controller.view.state.stocks.NZCH`),16000);
+ assert.equal(await evaluate(`${app}.controller.view.state.status`),'running');assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);
+ await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);await until(`${app}.controller.view.state.phase==='planning'`);assert.equal(await evaluate(`${app}.controller.view.state.stocks.NZCH`),0);
+ await select('YPPH');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
+ await select('FACT');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
+ assert.equal(await evaluate(`${app}.controller.view.state.status`),'won');assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Цель достигнута/);assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
+ return {viewport:mobile?'390x844 touch':'1280x900 mouse',passed:true,steps:['real land texture','worker forecasts','drag/pinch/wheel without mutation','map marker selection','blocked eastern direct route','single flight confirmation','pause/resume','one displayed UTC','partial automatic refuelling','full western route','no numeric forms or overflow']};
+}

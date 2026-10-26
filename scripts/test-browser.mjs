@@ -3,9 +3,11 @@ import {spawn,spawnSync} from 'node:child_process';
 import {mkdtempSync,writeFileSync,rmSync,readFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {resolve} from 'node:path';
+import {flightScenarioRun} from './test-flight-browser.mjs';
 const directory=mkdtempSync(`${tmpdir()}/into-the-night-browser-`);
 const base=process.env.SPIKE_TEST_BASE??'/';
-const gameUrl='http://127.0.0.1:5983'+base;
+const rootUrl='http://127.0.0.1:5983'+base;
+const gameUrl=rootUrl+'web/index.html';
 const chromePath=process.env.SPIKE_CHROME_PATH??'google-chrome';
 let browser,server,socket,id=0,sessionId,browserLog='';const pending=new Map(),errors=[];
 function send(method,params={},session=sessionId){
@@ -114,7 +116,7 @@ try {
  sessionId=(await send('Target.attachToTarget',{targetId,flatten:true},null)).sessionId;
  await send('Page.enable');await send('Runtime.enable');
  const version=await send('Browser.getVersion',{},null);
- const results=[await scenarioRun(false),await scenarioRun(true)];assert.deepEqual(errors,[]);
+ const results=[await scenarioRun(false),await scenarioRun(true),await flightScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await flightScenarioRun({send,evaluate,until,click,rootUrl,mobile:true})];assert.deepEqual(errors,[]);
  process.stdout.write(JSON.stringify({passed:true,browser:version.product,base,results},null,2)+'\n');
 }catch(e){process.stderr.write(e.stack+'\n'+browserLog+'\n');process.exitCode=1;}
 finally{socket?.close();browser?.kill();server?.kill();for(const p of pending.values())clearTimeout(p.timer);rmSync(directory,{recursive:true,force:true});}
