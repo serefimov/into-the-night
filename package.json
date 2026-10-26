@@ -36,7 +36,8 @@
     "validate:campaign": "node scripts/campaign-research.mjs --verify",
     "research:campaign-detours": "node scripts/campaign-detours.mjs",
     "research:westward": "node scripts/westward-research.mjs",
-    "validate:westward": "node scripts/westward-research.mjs --verify"
+    "validate:westward": "node scripts/westward-research.mjs --verify",
+    "mission:cycle": "node scripts/mission-cycle-cli.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.2",
