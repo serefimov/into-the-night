@@ -1,0 +1,19 @@
+{
+  "scenarioId": "westward-control",
+  "scenarioVersion": 1,
+  "purpose": "Numerically verified control for the generic flight cycle; does not settle the campaign's first scenario",
+  "seed": "westward-control-v1",
+  "stockVersion": "fixed-32000-research-1",
+  "stockKgPerAirport": 32000,
+  "profileId": "B788-reference-v1",
+  "profileVersion": 1,
+  "catalogVersion": 2,
+  "catalogSourceCommit": "11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+  "targetId": "FACT",
+  "targetCompletion": "after_turnaround",
+  "initial": {
+    "airportId": "SCEL",
+    "utcMs": 1782079800000,
+    "fuelKg": 100000
+  }
+}
