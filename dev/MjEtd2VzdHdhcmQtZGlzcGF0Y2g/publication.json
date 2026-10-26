@@ -3,9 +3,9 @@
   "branch": "21-westward-dispatch",
   "tag": "",
   "version": "0.1.0-alpha.1",
-  "commit": "2c6eaf208b92ccf8508dedf2d89e20a5f8851c6b",
-  "runId": "40408847857",
-  "builtAt": "2026-10-26T21:59:58.266Z",
-  "source": "https://github.com/serefimov/into-the-night/tree/2c6eaf208b92ccf8508dedf2d89e20a5f8851c6b",
+  "commit": "0b4de183f7b27885f12ba3aa7393165c3ec0b41b",
+  "runId": "40409316707",
+  "builtAt": "2026-10-26T22:03:28.415Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/0b4de183f7b27885f12ba3aa7393165c3ec0b41b",
   "contentHash": "bd110431ad11aedd3c055c41bfa8243f46a582f9ed82fb2773da32f868cee77e"
 }
