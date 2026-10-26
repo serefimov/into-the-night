@@ -1,0 +1,655 @@
+[
+  {
+    "id": "RJCH",
+    "ourAirportsId": 5545,
+    "iata": "HKD",
+    "icao": "RJCH",
+    "name": "Hakodate Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 41.77,
+    "longitudeDeg": 140.822006,
+    "elevationFt": 151,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237145,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJFF",
+    "ourAirportsId": 5564,
+    "iata": "FUK",
+    "icao": "RJFF",
+    "name": "Fukuoka Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 33.585899353027344,
+    "longitudeDeg": 130.4510040283203,
+    "elevationFt": 32,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237205,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 596486,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 60.046,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJFK",
+    "ourAirportsId": 5566,
+    "iata": "KOJ",
+    "icao": "RJFK",
+    "name": "Kagoshima Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 31.8034,
+    "longitudeDeg": 130.718994,
+    "elevationFt": 906,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237219,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2999.232,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJFM",
+    "ourAirportsId": 5567,
+    "iata": "KMI",
+    "icao": "RJFM",
+    "name": "Miyazaki Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 31.877199,
+    "longitudeDeg": 131.449005,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237200,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2499.36,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJFR",
+    "ourAirportsId": 5570,
+    "iata": "KKJ",
+    "icao": "RJFR",
+    "name": "Kitakyushu Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 33.845901,
+    "longitudeDeg": 131.035004,
+    "elevationFt": 21,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237115,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJFS",
+    "ourAirportsId": 5571,
+    "iata": "HSG",
+    "icao": "RJFS",
+    "name": "Kyushu Saga International Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 33.1497,
+    "longitudeDeg": 130.302002,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237110,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJFT",
+    "ourAirportsId": 5572,
+    "iata": "KMJ",
+    "icao": "RJFT",
+    "name": "Kumamoto Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 32.837299,
+    "longitudeDeg": 130.854996,
+    "elevationFt": 642,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237230,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2999.232,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJFU",
+    "ourAirportsId": 5573,
+    "iata": "NGS",
+    "icao": "RJFU",
+    "name": "Nagasaki Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 32.916901,
+    "longitudeDeg": 129.914001,
+    "elevationFt": 15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237194,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2999.232,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJGG",
+    "ourAirportsId": 5576,
+    "iata": "NGO",
+    "icao": "RJGG",
+    "name": "Chubu Centrair International Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.858398,
+    "longitudeDeg": 136.804993,
+    "elevationFt": 15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237114,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJNK",
+    "ourAirportsId": 5585,
+    "iata": "KMQ",
+    "icao": "RJNK",
+    "name": "Komatsu Airport / JASDF Komatsu Air Base",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 36.393407,
+    "longitudeDeg": 136.406895,
+    "elevationFt": 36,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237233,
+        "ends": [
+          "06T",
+          "24T"
+        ],
+        "lengthM": 2705.405,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJNS",
+    "ourAirportsId": 299238,
+    "iata": "FSZ",
+    "icao": "RJNS",
+    "name": "Mount Fuji Shizuoka Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.795022,
+    "longitudeDeg": 138.190976,
+    "elevationFt": 433,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 330022,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 60.046,
+        "surface": "asphalt concrete",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJOA",
+    "ourAirportsId": 5590,
+    "iata": "HIJ",
+    "icao": "RJOA",
+    "name": "Hiroshima Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.4361,
+    "longitudeDeg": 132.919006,
+    "elevationFt": 1088,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237148,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJOB",
+    "ourAirportsId": 5591,
+    "iata": "OKJ",
+    "icao": "RJOB",
+    "name": "Okayama Momotaro Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.756901,
+    "longitudeDeg": 133.854996,
+    "elevationFt": 806,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237153,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJOK",
+    "ourAirportsId": 5596,
+    "iata": "KCZ",
+    "icao": "RJOK",
+    "name": "Kochi Ryoma Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 33.545217,
+    "longitudeDeg": 133.670166,
+    "elevationFt": 42,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237199,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2500.274,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJOM",
+    "ourAirportsId": 5597,
+    "iata": "MYJ",
+    "icao": "RJOM",
+    "name": "Matsuyama Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 33.826893,
+    "longitudeDeg": 132.700114,
+    "elevationFt": 25,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237146,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2499.36,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJOO",
+    "ourAirportsId": 5598,
+    "iata": "ITM",
+    "icao": "RJOO",
+    "name": "Osaka Itami International Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.780853,
+    "longitudeDeg": 135.440829,
+    "elevationFt": 50,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237185,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 2999.232,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237186,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 1827.886,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJOS",
+    "ourAirportsId": 5600,
+    "iata": "TKS",
+    "icao": "RJOS",
+    "name": "Tokushima Awaodori Airport / JMSDF Tokushima Air Base",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.132559,
+    "longitudeDeg": 134.607816,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237172,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1999.488,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJOT",
+    "ourAirportsId": 5601,
+    "iata": "TAK",
+    "icao": "RJOT",
+    "name": "Takamatsu Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.214963,
+    "longitudeDeg": 134.015454,
+    "elevationFt": 607,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237154,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2499.36,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJSA",
+    "ourAirportsId": 5605,
+    "iata": "AOJ",
+    "icao": "RJSA",
+    "name": "Aomori Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 40.733777,
+    "longitudeDeg": 140.689477,
+    "elevationFt": 664,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237138,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3001.061,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJSN",
+    "ourAirportsId": 5613,
+    "iata": "KIJ",
+    "icao": "RJSN",
+    "name": "Niigata Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 37.954166,
+    "longitudeDeg": 139.112189,
+    "elevationFt": 29,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237166,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2499.36,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237165,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 1310.64,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

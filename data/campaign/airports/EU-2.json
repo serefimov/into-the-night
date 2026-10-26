@@ -1,0 +1,677 @@
+[
+  {
+    "id": "EDFH",
+    "ourAirportsId": 2227,
+    "iata": "HHN",
+    "icao": "EDFH",
+    "name": "Frankfurt-Hahn Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 49.946353,
+    "longitudeDeg": 7.261734,
+    "elevationFt": 1649,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236254,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDJA",
+    "ourAirportsId": 2237,
+    "iata": "FMM",
+    "icao": "EDJA",
+    "name": "Memmingen Allgau Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 47.988092,
+    "longitudeDeg": 10.238248,
+    "elevationFt": 2077,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236231,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2630.119,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDLP",
+    "ourAirportsId": 2244,
+    "iata": "PAD",
+    "icao": "EDLP",
+    "name": "Paderborn Lippstadt Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 51.612527,
+    "longitudeDeg": 8.617459,
+    "elevationFt": 699,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236196,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2179.93,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDLV",
+    "ourAirportsId": 2246,
+    "iata": "NRN",
+    "icao": "EDLV",
+    "name": "Weeze (Niederrhein) Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 51.601362,
+    "longitudeDeg": 6.141228,
+    "elevationFt": 106,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236113,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2439.924,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDLW",
+    "ourAirportsId": 2247,
+    "iata": "DTM",
+    "icao": "EDLW",
+    "name": "Dortmund Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 51.518299,
+    "longitudeDeg": 7.61224,
+    "elevationFt": 425,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236267,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDNY",
+    "ourAirportsId": 2256,
+    "iata": "FDH",
+    "icao": "EDNY",
+    "name": "Bodensee Airport Friedrichshafen",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 47.671299,
+    "longitudeDeg": 9.51149,
+    "elevationFt": 1367,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236263,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2355.799,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 608380,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 659.282,
+        "widthM": 29.87,
+        "surface": "GRASS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDSB",
+    "ourAirportsId": 2270,
+    "iata": "FKB",
+    "icao": "EDSB",
+    "name": "Karlsruhe Baden-Baden Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 48.7794,
+    "longitudeDeg": 8.0805,
+    "elevationFt": 408,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236109,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2983.078,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDVK",
+    "ourAirportsId": 2285,
+    "iata": "KSF",
+    "icao": "EDVK",
+    "name": "Kassel Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 51.418395,
+    "longitudeDeg": 9.391638,
+    "elevationFt": 820,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 326801,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 44.806,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EETN",
+    "ourAirportsId": 2301,
+    "iata": "TLL",
+    "icao": "EETN",
+    "name": "Lennart Meri Tallinn Airport",
+    "country": "EE",
+    "continent": "EU",
+    "latitudeDeg": 59.413246,
+    "longitudeDeg": 24.83264,
+    "elevationFt": 131,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235653,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3479.902,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFHK",
+    "ourAirportsId": 2307,
+    "iata": "HEL",
+    "icao": "EFHK",
+    "name": "Helsinki Vantaa Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 60.318363,
+    "longitudeDeg": 24.963341,
+    "elevationFt": 179,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235755,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235756,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 3059.887,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235757,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2901.086,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFIV",
+    "ourAirportsId": 2314,
+    "iata": "IVL",
+    "icao": "EFIV",
+    "name": "Ivalo Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 68.6073,
+    "longitudeDeg": 27.4053,
+    "elevationFt": 481,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235765,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2499.055,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235766,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 800.1,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFKT",
+    "ourAirportsId": 2325,
+    "iata": "KTT",
+    "icao": "EFKT",
+    "name": "Kittilä International Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 67.700996,
+    "longitudeDeg": 24.8468,
+    "elevationFt": 644,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235733,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFKU",
+    "ourAirportsId": 2326,
+    "iata": "KUO",
+    "icao": "EFKU",
+    "name": "Kuopio Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 63.007099,
+    "longitudeDeg": 27.7978,
+    "elevationFt": 323,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235740,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFLP",
+    "ourAirportsId": 2329,
+    "iata": "LPP",
+    "icao": "EFLP",
+    "name": "Lappeenranta Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 61.044601,
+    "longitudeDeg": 28.144743,
+    "elevationFt": 349,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235772,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFOU",
+    "ourAirportsId": 2334,
+    "iata": "OUL",
+    "icao": "EFOU",
+    "name": "Oulu Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 64.930099,
+    "longitudeDeg": 25.354601,
+    "elevationFt": 47,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235769,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2500.884,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFRO",
+    "ourAirportsId": 2341,
+    "iata": "RVN",
+    "icao": "EFRO",
+    "name": "Rovaniemi Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 66.563327,
+    "longitudeDeg": 25.829751,
+    "elevationFt": 642,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235718,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3001.975,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFTP",
+    "ourAirportsId": 2347,
+    "iata": "TMP",
+    "icao": "EFTP",
+    "name": "Tampere-Pirkkala Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 61.414101,
+    "longitudeDeg": 23.604401,
+    "elevationFt": 390,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235749,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFTU",
+    "ourAirportsId": 2349,
+    "iata": "TKU",
+    "icao": "EFTU",
+    "name": "Turku Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 60.514099,
+    "longitudeDeg": 22.2628,
+    "elevationFt": 161,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235722,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EFVA",
+    "ourAirportsId": 2351,
+    "iata": "VAA",
+    "icao": "EFVA",
+    "name": "Vaasa Airport",
+    "country": "FI",
+    "continent": "EU",
+    "latitudeDeg": 63.05023,
+    "longitudeDeg": 21.762543,
+    "elevationFt": 19,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235732,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2659.99,
+        "widthM": 47.854,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGAA",
+    "ourAirportsId": 2385,
+    "iata": "BFS",
+    "icao": "EGAA",
+    "name": "Belfast International Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 54.6575012207,
+    "longitudeDeg": -6.2158298492399995,
+    "elevationFt": 268,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239418,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2780.081,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239419,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 1890.979,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

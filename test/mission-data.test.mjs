@@ -7,6 +7,12 @@ import {loadMissionData,generateFuel,validateCatalog} from '../scripts/mission-d
 const profile=JSON.parse(readFileSync('data/mission/aircraft.json','utf8'));
 const data=await loadMissionData();
 
+test('rounding of a full refuelling never exceeds capacity and cannot invalidate the next flight',()=>{
+ const initial=12350.6178,r=aircraftRefuelling(profile,initial,200000),capacity=aircraftMetrics(profile).fuelCapacityKg;
+ assert.equal(r.fuelKg,capacity);assert.doesNotThrow(()=>aircraftLeg(profile,9000,r.fuelKg));
+ assert.ok(Math.abs(initial+r.transferKg-r.fuelKg)<1e-8);assert.ok(Math.abs(r.stockKg+r.transferKg-200000)<1e-8);
+});
+
 test('B788 reference uses source units and a physically plausible long-range envelope',()=>{
  const m=aircraftMetrics(profile);assert.equal(m.fuelCapacityKg,100964.8);assert.equal(m.cruiseKmPerHour,870.44);
  assert.ok(m.fullFuelRangeKm>14000&&m.fullFuelRangeKm<profile.facts.publishedRangeNm*1.852);

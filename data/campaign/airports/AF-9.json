@@ -1,0 +1,322 @@
+[
+  {
+    "id": "HRYR",
+    "ourAirportsId": 3237,
+    "iata": "KGL",
+    "icao": "HRYR",
+    "name": "Kigali International Airport",
+    "country": "RW",
+    "continent": "AF",
+    "latitudeDeg": -1.96863,
+    "longitudeDeg": 30.1395,
+    "elevationFt": 4859,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238617,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HSPN",
+    "ourAirportsId": 3246,
+    "iata": "PZU",
+    "icao": "HSPN",
+    "name": "Port Sudan New International Airport",
+    "country": "SD",
+    "continent": "AF",
+    "latitudeDeg": 19.434558,
+    "longitudeDeg": 37.234125,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238962,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HSSK",
+    "ourAirportsId": 3249,
+    "iata": "KRT",
+    "icao": "HSSK",
+    "name": "Khartoum International Airport",
+    "country": "SD",
+    "continent": "AF",
+    "latitudeDeg": 15.5895,
+    "longitudeDeg": 32.5532,
+    "elevationFt": 1265,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238964,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2972.105,
+        "widthM": 45.11,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HTDA",
+    "ourAirportsId": 3251,
+    "iata": "DAR",
+    "icao": "HTDA",
+    "name": "Julius Nyerere International Airport",
+    "country": "TZ",
+    "continent": "AF",
+    "latitudeDeg": -6.873499,
+    "longitudeDeg": 39.207288,
+    "elevationFt": 182,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239367,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239368,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 999.744,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HTKJ",
+    "ourAirportsId": 3254,
+    "iata": "JRO",
+    "icao": "HTKJ",
+    "name": "Kilimanjaro International Airport",
+    "country": "TZ",
+    "continent": "AF",
+    "latitudeDeg": -3.427049,
+    "longitudeDeg": 37.07353,
+    "elevationFt": 2932,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239371,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HTMW",
+    "ourAirportsId": 3257,
+    "iata": "MWZ",
+    "icao": "HTMW",
+    "name": "Mwanza International Airport",
+    "country": "TZ",
+    "continent": "AF",
+    "latitudeDeg": -2.446563,
+    "longitudeDeg": 32.936049,
+    "elevationFt": 3763,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239361,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3112.618,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HTZA",
+    "ourAirportsId": 3260,
+    "iata": "ZNZ",
+    "icao": "HTZA",
+    "name": "Abeid Amani Karume International Airport",
+    "country": "TZ",
+    "continent": "AF",
+    "latitudeDeg": -6.22202,
+    "longitudeDeg": 39.224899,
+    "elevationFt": 54,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239362,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3022.092,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HUEN",
+    "ourAirportsId": 3263,
+    "iata": "EBB",
+    "icao": "HUEN",
+    "name": "Entebbe International Airport",
+    "country": "UG",
+    "continent": "AF",
+    "latitudeDeg": 0.042386,
+    "longitudeDeg": 32.443501,
+    "elevationFt": 3782,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239375,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239374,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2407.92,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "NG-0005",
+    "ourAirportsId": 313797,
+    "iata": null,
+    "icao": "DNBK",
+    "name": "Sir Ahmadu Bello International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 12.479048,
+    "longitudeDeg": 4.369132,
+    "elevationFt": 775,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 355290,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 60.046,
+        "surface": "concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OCS",
+    "ourAirportsId": 316826,
+    "iata": "OCS",
+    "icao": "FGCO",
+    "name": "Corisco International Airport",
+    "country": "GQ",
+    "continent": "AF",
+    "latitudeDeg": 0.910937,
+    "longitudeDeg": 9.33027,
+    "elevationFt": 55,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

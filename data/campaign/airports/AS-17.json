@@ -1,0 +1,655 @@
+[
+  {
+    "id": "VYNT",
+    "ourAirportsId": 26717,
+    "iata": "NYT",
+    "icao": "VYNT",
+    "name": "Nay Pyi Taw International Airport",
+    "country": "MM",
+    "continent": "AS",
+    "latitudeDeg": 19.623501,
+    "longitudeDeg": 96.200996,
+    "elevationFt": 302,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233712,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 152.4,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VYYY",
+    "ourAirportsId": 26744,
+    "iata": "RGN",
+    "icao": "VYYY",
+    "name": "Yangon International Airport",
+    "country": "MM",
+    "continent": "AS",
+    "latitudeDeg": 16.907300949099998,
+    "longitudeDeg": 96.1332015991,
+    "elevationFt": 109,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233724,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3413.76,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WAAA",
+    "ourAirportsId": 26745,
+    "iata": "UPG",
+    "icao": "WAAA",
+    "name": "Sultan Hasanuddin International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -5.075539,
+    "longitudeDeg": 119.553702,
+    "elevationFt": 47,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 299650,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236580,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WADD",
+    "ourAirportsId": 26751,
+    "iata": "DPS",
+    "icao": "WADD",
+    "name": "Denpasar I Gusti Ngurah Rai International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -8.748409,
+    "longitudeDeg": 115.167123,
+    "elevationFt": 14,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236518,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2983.992,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WADL",
+    "ourAirportsId": 299629,
+    "iata": "LOP",
+    "icao": "WADL",
+    "name": "Lombok International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -8.759962,
+    "longitudeDeg": 116.278169,
+    "elevationFt": 319,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 299630,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3299.765,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WAHI",
+    "ourAirportsId": 332202,
+    "iata": "YIA",
+    "icao": "WAHI",
+    "name": "Yogyakarta International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -7.905338,
+    "longitudeDeg": 110.057264,
+    "elevationFt": 24,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 332203,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3250.082,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WAJJ",
+    "ourAirportsId": 26755,
+    "iata": "DJJ",
+    "icao": "WAJJ",
+    "name": "Dortheys Hiyo Eluay International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -2.579627,
+    "longitudeDeg": 140.519857,
+    "elevationFt": 289,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236534,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WALL",
+    "ourAirportsId": 26760,
+    "iata": "BPN",
+    "icao": "WALL",
+    "name": "Sultan Aji Muhammad Sulaiman Sepinggan International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -1.268342,
+    "longitudeDeg": 116.89452,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236566,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WAMM",
+    "ourAirportsId": 26770,
+    "iata": "MDC",
+    "icao": "WAMM",
+    "name": "Sam Ratulangi International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": 1.548591,
+    "longitudeDeg": 124.92625,
+    "elevationFt": 264,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236506,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2649.626,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WAOO",
+    "ourAirportsId": 26779,
+    "iata": "BDJ",
+    "icao": "WAOO",
+    "name": "Syamsudin Noor International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -3.440112,
+    "longitudeDeg": 114.761209,
+    "elevationFt": 66,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236502,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WAPP",
+    "ourAirportsId": 26784,
+    "iata": "AMQ",
+    "icao": "WAPP",
+    "name": "Pattimura International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -3.71026,
+    "longitudeDeg": 128.089005,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236567,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WARQ",
+    "ourAirportsId": 26788,
+    "iata": "SOC",
+    "icao": "WAHQ",
+    "name": "Adisoemarmo International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -7.516044,
+    "longitudeDeg": 110.757492,
+    "elevationFt": 421,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236578,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WARR",
+    "ourAirportsId": 26789,
+    "iata": "SUB",
+    "icao": "WARR",
+    "name": "Juanda International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -7.37983,
+    "longitudeDeg": 112.787003,
+    "elevationFt": 9,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236575,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WARS",
+    "ourAirportsId": 26790,
+    "iata": "SRG",
+    "icao": "WAHS",
+    "name": "Jenderal Ahmad Yani Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -6.970732,
+    "longitudeDeg": 110.373244,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236556,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2560.015,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WBGG",
+    "ourAirportsId": 26808,
+    "iata": "KCH",
+    "icao": "WBGG",
+    "name": "Kuching International Airport",
+    "country": "MY",
+    "continent": "AS",
+    "latitudeDeg": 1.487364,
+    "longitudeDeg": 110.352859,
+    "elevationFt": 89,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237827,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3780.13,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WBKK",
+    "ourAirportsId": 26814,
+    "iata": "BKI",
+    "icao": "WBKK",
+    "name": "Kota Kinabalu International Airport",
+    "country": "MY",
+    "continent": "AS",
+    "latitudeDeg": 5.932743,
+    "longitudeDeg": 116.049324,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237830,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3780.13,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WBSB",
+    "ourAirportsId": 26819,
+    "iata": "BWN",
+    "icao": "WBSB",
+    "name": "Brunei International Airport",
+    "country": "BN",
+    "continent": "AS",
+    "latitudeDeg": 4.9442,
+    "longitudeDeg": 114.928001,
+    "elevationFt": 73,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234429,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WIDD",
+    "ourAirportsId": 26828,
+    "iata": "BTH",
+    "icao": "WIDD",
+    "name": "Hang Nadim International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": 1.12103,
+    "longitudeDeg": 104.119003,
+    "elevationFt": 126,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236508,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 4028.846,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WIHH",
+    "ourAirportsId": 26832,
+    "iata": "HLP",
+    "icao": "WIHH",
+    "name": "Halim Perdanakusuma International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -6.266989,
+    "longitudeDeg": 106.890318,
+    "elevationFt": 84,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236558,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WIII",
+    "ourAirportsId": 26835,
+    "iata": "CGK",
+    "icao": "WIII",
+    "name": "Soekarno-Hatta International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -6.12557,
+    "longitudeDeg": 106.655998,
+    "elevationFt": 34,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236529,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3660.038,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236530,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 341268,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 60.046,
+        "surface": "CONC",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

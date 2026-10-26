@@ -1,0 +1,699 @@
+[
+  {
+    "id": "SBFI",
+    "ourAirportsId": 5900,
+    "iata": "IGU",
+    "icao": "SBFI",
+    "name": "Cataratas International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -25.594167,
+    "longitudeDeg": -54.489444,
+    "elevationFt": 786,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234159,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2705.1,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBFL",
+    "ourAirportsId": 5901,
+    "iata": "FLN",
+    "icao": "SBFL",
+    "name": "Hercílio Luz International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -27.670279,
+    "longitudeDeg": -48.552502,
+    "elevationFt": 16,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234240,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234239,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 1320.089,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBFZ",
+    "ourAirportsId": 5905,
+    "iata": "FOR",
+    "icao": "SBFZ",
+    "name": "Pinto Martins International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -3.775833,
+    "longitudeDeg": -38.532222,
+    "elevationFt": 83,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234350,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2755.087,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBGL",
+    "ourAirportsId": 5906,
+    "iata": "GIG",
+    "icao": "SBGL",
+    "name": "Rio de Janeiro Galeão – Tom Jobim International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -22.809999,
+    "longitudeDeg": -43.250557,
+    "elevationFt": 28,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234161,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234162,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3179.978,
+        "widthM": 46.939,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBGO",
+    "ourAirportsId": 5908,
+    "iata": "GYN",
+    "icao": "SBGO",
+    "name": "Santa Genoveva International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -16.632,
+    "longitudeDeg": -49.220699,
+    "elevationFt": 2450,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234115,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2286,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBGR",
+    "ourAirportsId": 5910,
+    "iata": "GRU",
+    "icao": "SBGR",
+    "name": "São Paulo/Guarulhos–Governor André Franco Montoro International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -23.431274,
+    "longitudeDeg": -46.469954,
+    "elevationFt": 2461,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234133,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234132,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBJP",
+    "ourAirportsId": 5923,
+    "iata": "JPA",
+    "icao": "SBJP",
+    "name": "Presidente Castro Pinto International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -7.148691,
+    "longitudeDeg": -34.950554,
+    "elevationFt": 217,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234373,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2514.905,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBKP",
+    "ourAirportsId": 5927,
+    "iata": "VCP",
+    "icao": "SBKP",
+    "name": "Viracopos International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -23.007404,
+    "longitudeDeg": -47.134502,
+    "elevationFt": 2170,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234355,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3240.024,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBMO",
+    "ourAirportsId": 5942,
+    "iata": "MCZ",
+    "icao": "SBMO",
+    "name": "Zumbi dos Palmares International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -9.512559,
+    "longitudeDeg": -35.791839,
+    "elevationFt": 387,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234076,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2602.078,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBNF",
+    "ourAirportsId": 5947,
+    "iata": "NVT",
+    "icao": "SBNF",
+    "name": "Ministro Victor Konder International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -26.879431,
+    "longitudeDeg": -48.650979,
+    "elevationFt": 18,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234118,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 1800.149,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBPA",
+    "ourAirportsId": 5951,
+    "iata": "POA",
+    "icao": "SBPA",
+    "name": "Porto Alegre-Salgado Filho International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -29.993984,
+    "longitudeDeg": -51.167482,
+    "elevationFt": 11,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234351,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBPS",
+    "ourAirportsId": 5961,
+    "iata": "BPS",
+    "icao": "SBPS",
+    "name": "Porto Seguro International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -16.438426,
+    "longitudeDeg": -39.080584,
+    "elevationFt": 169,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234148,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBPV",
+    "ourAirportsId": 5962,
+    "iata": "PVH",
+    "icao": "SBPV",
+    "name": "Governador Jorge Teixeira de Oliveira International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -8.708491,
+    "longitudeDeg": -63.902338,
+    "elevationFt": 295,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234311,
+        "ends": [
+          "1",
+          "19"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBRB",
+    "ourAirportsId": 5964,
+    "iata": "RBR",
+    "icao": "SBRB",
+    "name": "Rio Branco-Plácido de Castro International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -9.869031,
+    "longitudeDeg": -67.893984,
+    "elevationFt": 633,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233810,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2157.984,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBRF",
+    "ourAirportsId": 5965,
+    "iata": "REC",
+    "icao": "SBRF",
+    "name": "Recife/Guararapes - Gilberto Freyre International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -8.12747,
+    "longitudeDeg": -34.922961,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234038,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3006.852,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBRJ",
+    "ourAirportsId": 5967,
+    "iata": "SDU",
+    "icao": "SBRJ",
+    "name": "Santos Dumont Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -22.910397,
+    "longitudeDeg": -43.16282,
+    "elevationFt": 11,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234258,
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "lengthM": 1323.137,
+        "widthM": 42.062,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234259,
+        "ends": [
+          "02L",
+          "20R"
+        ],
+        "lengthM": 1260.043,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBSG",
+    "ourAirportsId": 313262,
+    "iata": "NAT",
+    "icao": "SBSG",
+    "name": "Rio Grande do Norte/São Gonçalo do Amarante–Governador Aluízio Alves International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -5.769822,
+    "longitudeDeg": -35.36661,
+    "elevationFt": 273,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 313263,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBSL",
+    "ourAirportsId": 5971,
+    "iata": "SLZ",
+    "icao": "SBSL",
+    "name": "Marechal Cunha Machado International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -2.586386,
+    "longitudeDeg": -44.235008,
+    "elevationFt": 178,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234052,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2385.974,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234053,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 1463.954,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBSP",
+    "ourAirportsId": 5974,
+    "iata": "CGH",
+    "icao": "SBSP",
+    "name": "Congonhas–Deputado Freitas Nobre Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -23.627657,
+    "longitudeDeg": -46.654601,
+    "elevationFt": 2631,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234371,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 1940.052,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234372,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 1495.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBSV",
+    "ourAirportsId": 5977,
+    "iata": "SSA",
+    "icao": "SBSV",
+    "name": "Deputado Luiz Eduardo Magalhães International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -12.908611,
+    "longitudeDeg": -38.322498,
+    "elevationFt": 64,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234184,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3005.023,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234185,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 1520.038,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

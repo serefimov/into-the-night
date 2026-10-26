@@ -1,0 +1,721 @@
+[
+  {
+    "id": "EHGG",
+    "ourAirportsId": 2519,
+    "iata": "GRQ",
+    "icao": "EHGG",
+    "name": "Groningen Airport Eelde",
+    "country": "NL",
+    "continent": "EU",
+    "latitudeDeg": 53.119107,
+    "longitudeDeg": 6.577652,
+    "elevationFt": 17,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237936,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EHRD",
+    "ourAirportsId": 2524,
+    "iata": "RTM",
+    "icao": "EHRD",
+    "name": "Rotterdam The Hague Airport",
+    "country": "NL",
+    "continent": "EU",
+    "latitudeDeg": 51.956902,
+    "longitudeDeg": 4.43722,
+    "elevationFt": -15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237940,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EICK",
+    "ourAirportsId": 2530,
+    "iata": "ORK",
+    "icao": "EICK",
+    "name": "Cork International Airport",
+    "country": "IE",
+    "continent": "EU",
+    "latitudeDeg": 51.841301,
+    "longitudeDeg": -8.49111,
+    "elevationFt": 502,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235645,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2132.99,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235644,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 1310.03,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EIDW",
+    "ourAirportsId": 2533,
+    "iata": "DUB",
+    "icao": "EIDW",
+    "name": "Dublin Airport",
+    "country": "IE",
+    "continent": "EU",
+    "latitudeDeg": 53.428713,
+    "longitudeDeg": -6.262121,
+    "elevationFt": 242,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 356512,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 3109.874,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235634,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 2637.13,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235636,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2072.03,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EIKN",
+    "ourAirportsId": 2534,
+    "iata": "NOC",
+    "icao": "EIKN",
+    "name": "Ireland West Airport Knock",
+    "country": "IE",
+    "continent": "EU",
+    "latitudeDeg": 53.910439,
+    "longitudeDeg": -8.817002,
+    "elevationFt": 665,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235637,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2300.021,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EINN",
+    "ourAirportsId": 2537,
+    "iata": "SNN",
+    "icao": "EINN",
+    "name": "Shannon Airport",
+    "country": "IE",
+    "continent": "EU",
+    "latitudeDeg": 52.702,
+    "longitudeDeg": -8.92482,
+    "elevationFt": 46,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235639,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3198.876,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EKAH",
+    "ourAirportsId": 2540,
+    "iata": "AAR",
+    "icao": "EKAH",
+    "name": "Aarhus Airport",
+    "country": "DK",
+    "continent": "EU",
+    "latitudeDeg": 56.303331,
+    "longitudeDeg": 10.618286,
+    "elevationFt": 82,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235465,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 2777.033,
+        "widthM": 22.86,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235464,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 2702.052,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EKBI",
+    "ourAirportsId": 2541,
+    "iata": "BLL",
+    "icao": "EKBI",
+    "name": "Billund Airport",
+    "country": "DK",
+    "continent": "EU",
+    "latitudeDeg": 55.740335,
+    "longitudeDeg": 9.157019,
+    "elevationFt": 247,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235466,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3100.426,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EKCH",
+    "ourAirportsId": 2542,
+    "iata": "CPH",
+    "icao": "EKCH",
+    "name": "Copenhagen Kastrup Airport",
+    "country": "DK",
+    "continent": "EU",
+    "latitudeDeg": 55.617900848389,
+    "longitudeDeg": 12.656000137329,
+    "elevationFt": 17,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235449,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235448,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235450,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EKOD",
+    "ourAirportsId": 2549,
+    "iata": "ODE",
+    "icao": "EKOD",
+    "name": "Odense Hans Christian Andersen Airport",
+    "country": "DK",
+    "continent": "EU",
+    "latitudeDeg": 55.475307,
+    "longitudeDeg": 10.327206,
+    "elevationFt": 56,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235451,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 1844.954,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235452,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 694.944,
+        "widthM": 29.87,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EKVG",
+    "ourAirportsId": 2559,
+    "iata": "FAE",
+    "icao": "EKVG",
+    "name": "Vágar Airport",
+    "country": "FO",
+    "continent": "EU",
+    "latitudeDeg": 62.063256,
+    "longitudeDeg": -7.275782,
+    "elevationFt": 280,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235788,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 1799.844,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EKYT",
+    "ourAirportsId": 2562,
+    "iata": "AAL",
+    "icao": "EKYT",
+    "name": "Aalborg Airport",
+    "country": "DK",
+    "continent": "EU",
+    "latitudeDeg": 57.094763,
+    "longitudeDeg": 9.84993,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235461,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 2653.894,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235460,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 2549.042,
+        "widthM": 22.555,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ELLX",
+    "ourAirportsId": 2563,
+    "iata": "LUX",
+    "icao": "ELLX",
+    "name": "Luxembourg-Findel International Airport",
+    "country": "LU",
+    "continent": "EU",
+    "latitudeDeg": 49.626845,
+    "longitudeDeg": 6.212134,
+    "elevationFt": 1234,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237448,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "ASPHALT",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENAL",
+    "ourAirportsId": 2564,
+    "iata": "AES",
+    "icao": "ENAL",
+    "name": "Ålesund Airport",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 62.560443,
+    "longitudeDeg": 6.110845,
+    "elevationFt": 69,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237982,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2314.042,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENBO",
+    "ourAirportsId": 2569,
+    "iata": "BOO",
+    "icao": "ENBO",
+    "name": "Bodø Airport",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 67.269203,
+    "longitudeDeg": 14.3653,
+    "elevationFt": 42,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237964,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2794.102,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENBR",
+    "ourAirportsId": 2570,
+    "iata": "BGO",
+    "icao": "ENBR",
+    "name": "Bergen Airport, Flesland",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 60.2934,
+    "longitudeDeg": 5.21814,
+    "elevationFt": 170,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237980,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2990.088,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENCN",
+    "ourAirportsId": 2572,
+    "iata": "KRS",
+    "icao": "ENCN",
+    "name": "Kristiansand Airport",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 58.204201,
+    "longitudeDeg": 8.08537,
+    "elevationFt": 57,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237947,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2035.15,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENEV",
+    "ourAirportsId": 2575,
+    "iata": "EVE",
+    "icao": "ENEV",
+    "name": "Harstad/Narvik Airport",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 68.491302,
+    "longitudeDeg": 16.678101,
+    "elevationFt": 84,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237963,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2815.133,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENGM",
+    "ourAirportsId": 2578,
+    "iata": "OSL",
+    "icao": "ENGM",
+    "name": "Oslo-Gardermoen International Airport",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 60.193901,
+    "longitudeDeg": 11.1004,
+    "elevationFt": 681,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237959,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237958,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 2949.854,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ENSB",
+    "ourAirportsId": 2593,
+    "iata": "LYR",
+    "icao": "ENSB",
+    "name": "Svalbard Airport, Longyear",
+    "country": "NO",
+    "continent": "EU",
+    "latitudeDeg": 78.246101,
+    "longitudeDeg": 15.4656,
+    "elevationFt": 88,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238973,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2318.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

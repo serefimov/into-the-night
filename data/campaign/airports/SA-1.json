@@ -1,0 +1,688 @@
+[
+  {
+    "id": "SAAR",
+    "ourAirportsId": 5769,
+    "iata": "ROS",
+    "icao": "SAAR",
+    "name": "Rosario Islas Malvinas International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -32.9036,
+    "longitudeDeg": -60.785,
+    "elevationFt": 85,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233052,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SABE",
+    "ourAirportsId": 5771,
+    "iata": "AEP",
+    "icao": "SABE",
+    "name": "Aeroparque Jorge Newbery",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -34.559419,
+    "longitudeDeg": -58.415536,
+    "elevationFt": 18,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233011,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2350.008,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SACO",
+    "ourAirportsId": 5773,
+    "iata": "COR",
+    "icao": "SACO",
+    "name": "Ingeniero Aeronáutico Ambrosio L.V. Taravella International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -31.312346,
+    "longitudeDeg": -64.208329,
+    "elevationFt": 1604,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232955,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 232954,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SAEZ",
+    "ourAirportsId": 5781,
+    "iata": "EZE",
+    "icao": "SAEZ",
+    "name": "Ezeiza International Airport - Ministro Pistarini",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -34.8222,
+    "longitudeDeg": -58.5358,
+    "elevationFt": 67,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233039,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233040,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3104.998,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SAME",
+    "ourAirportsId": 5786,
+    "iata": "MDZ",
+    "icao": "SAME",
+    "name": "Governor Francisco Gabrielli International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -32.831699,
+    "longitudeDeg": -68.7929,
+    "elevationFt": 2310,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232947,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2834.945,
+        "widthM": 53.95,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SANT",
+    "ourAirportsId": 5794,
+    "iata": "TUC",
+    "icao": "SANT",
+    "name": "Teniente Benjamín Matienzo International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -26.837397,
+    "longitudeDeg": -65.104195,
+    "elevationFt": 1493,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233038,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SARE",
+    "ourAirportsId": 5804,
+    "iata": "RES",
+    "icao": "SARE",
+    "name": "Resistencia International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -27.44991,
+    "longitudeDeg": -59.056125,
+    "elevationFt": 173,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233046,
+        "ends": [
+          "3",
+          "21"
+        ],
+        "lengthM": 2770.022,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SASA",
+    "ourAirportsId": 5811,
+    "iata": "SLA",
+    "icao": "SASA",
+    "name": "Martín Miguel de Güemes International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -24.856001,
+    "longitudeDeg": -65.486198,
+    "elevationFt": 4088,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233003,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233004,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SASJ",
+    "ourAirportsId": 5812,
+    "iata": "JUJ",
+    "icao": "SASJ",
+    "name": "Gobernador Horacio Guzman International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -24.392799,
+    "longitudeDeg": -65.097801,
+    "elevationFt": 3019,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232939,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2955.95,
+        "widthM": 39.929,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SAVC",
+    "ourAirportsId": 5822,
+    "iata": "CRD",
+    "icao": "SAVC",
+    "name": "General Enrique Mosconi International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -45.786941,
+    "longitudeDeg": -67.463355,
+    "elevationFt": 189,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233057,
+        "ends": [
+          "7",
+          "25"
+        ],
+        "lengthM": 2809.951,
+        "widthM": 49.987,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SAWG",
+    "ourAirportsId": 5834,
+    "iata": "RGL",
+    "icao": "SAWG",
+    "name": "Piloto Civil Norberto Fernández International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -51.608791,
+    "longitudeDeg": -69.308948,
+    "elevationFt": 61,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232969,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2749.906,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SAZN",
+    "ourAirportsId": 5848,
+    "iata": "NQN",
+    "icao": "SAZN",
+    "name": "Presidente Perón International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -38.949001,
+    "longitudeDeg": -68.155701,
+    "elevationFt": 895,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233002,
+        "ends": [
+          "9",
+          "27"
+        ],
+        "lengthM": 2570.074,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SAZS",
+    "ourAirportsId": 5852,
+    "iata": "BRC",
+    "icao": "SAZS",
+    "name": "Teniente Luis Candelaria International Airport",
+    "country": "AR",
+    "continent": "SA",
+    "latitudeDeg": -41.151199,
+    "longitudeDeg": -71.157501,
+    "elevationFt": 2774,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233027,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2347.874,
+        "widthM": 47.854,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBBE",
+    "ourAirportsId": 5867,
+    "iata": "BEL",
+    "icao": "SBBE",
+    "name": "Val de Cans/Júlio Cezar Ribeiro International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -1.379279,
+    "longitudeDeg": -48.476207,
+    "elevationFt": 54,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233992,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 324528,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 1830.019,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBBR",
+    "ourAirportsId": 5872,
+    "iata": "BSB",
+    "icao": "SBBR",
+    "name": "Presidente Juscelino Kubitschek International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -15.869167,
+    "longitudeDeg": -47.920834,
+    "elevationFt": 3497,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234070,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234071,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBBV",
+    "ourAirportsId": 5875,
+    "iata": "BVB",
+    "icao": "SBBV",
+    "name": "Atlas Brasil Cantanhede International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": 2.84615,
+    "longitudeDeg": -60.690648,
+    "elevationFt": 276,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234236,
+        "ends": [
+          "8",
+          "26"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBCF",
+    "ourAirportsId": 5882,
+    "iata": "CNF",
+    "icao": "SBCF",
+    "name": "Tancredo Neves International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -19.63571,
+    "longitudeDeg": -43.966928,
+    "elevationFt": 2721,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234190,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBCT",
+    "ourAirportsId": 5891,
+    "iata": "CWB",
+    "icao": "SBCT",
+    "name": "Curitiba-Afonso Pena International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -25.5285,
+    "longitudeDeg": -49.1758,
+    "elevationFt": 2988,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234164,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2218.03,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 234163,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1798.015,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBCY",
+    "ourAirportsId": 5894,
+    "iata": "CGB",
+    "icao": "SBCY",
+    "name": "Várzea Grande–Marechal Rondon International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -15.6529,
+    "longitudeDeg": -56.116699,
+    "elevationFt": 617,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234047,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2300.021,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SBEG",
+    "ourAirportsId": 5897,
+    "iata": "MAO",
+    "icao": "SBEG",
+    "name": "Eduardo Gomes International Airport",
+    "country": "BR",
+    "continent": "SA",
+    "latitudeDeg": -3.03861,
+    "longitudeDeg": -60.049702,
+    "elevationFt": 264,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234094,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASPH 71/F/C/X/T",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

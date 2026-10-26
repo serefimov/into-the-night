@@ -1,0 +1,710 @@
+[
+  {
+    "id": "WIMM",
+    "ourAirportsId": 309577,
+    "iata": "KNO",
+    "icao": "WIMM",
+    "name": "Kualanamu International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": 3.637847,
+    "longitudeDeg": 98.870566,
+    "elevationFt": 23,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 318100,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3749.954,
+        "widthM": 60.046,
+        "surface": "asphalt/concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WIOO",
+    "ourAirportsId": 26847,
+    "iata": "PNK",
+    "icao": "WIOO",
+    "name": "Supadio International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -0.152258,
+    "longitudeDeg": 109.404493,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236584,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WIPT",
+    "ourAirportsId": 26858,
+    "iata": "PDG",
+    "icao": "WIEE",
+    "name": "Minangkabau International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": -0.785964,
+    "longitudeDeg": 100.280384,
+    "elevationFt": 18,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236497,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WITT",
+    "ourAirportsId": 26862,
+    "iata": "BTJ",
+    "icao": "WITT",
+    "name": "Sultan Iskandar Muda International Airport",
+    "country": "ID",
+    "continent": "AS",
+    "latitudeDeg": 5.525087,
+    "longitudeDeg": 95.41997,
+    "elevationFt": 65,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236492,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WMKI",
+    "ourAirportsId": 26872,
+    "iata": "IPH",
+    "icao": "WMKI",
+    "name": "Sultan Azlan Shah Airport",
+    "country": "MY",
+    "continent": "AS",
+    "latitudeDeg": 4.56733,
+    "longitudeDeg": 101.091643,
+    "elevationFt": 130,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237821,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 1919.935,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WMKJ",
+    "ourAirportsId": 26873,
+    "iata": "JHB",
+    "icao": "WMKJ",
+    "name": "Senai International Airport",
+    "country": "MY",
+    "continent": "AS",
+    "latitudeDeg": 1.64131,
+    "longitudeDeg": 103.669998,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237812,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WMKK",
+    "ourAirportsId": 26874,
+    "iata": "KUL",
+    "icao": "WMKK",
+    "name": "Kuala Lumpur International Airport",
+    "country": "MY",
+    "continent": "AS",
+    "latitudeDeg": 2.74558,
+    "longitudeDeg": 101.709999,
+    "elevationFt": 69,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237836,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 4123.944,
+        "widthM": 60.046,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237835,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 4050.182,
+        "widthM": 60.046,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 313641,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3960.266,
+        "widthM": 60.046,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WMKL",
+    "ourAirportsId": 26875,
+    "iata": "LGK",
+    "icao": "WMKL",
+    "name": "Langkawi International Airport",
+    "country": "MY",
+    "continent": "AS",
+    "latitudeDeg": 6.32973,
+    "longitudeDeg": 99.728699,
+    "elevationFt": 29,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237813,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3810,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WMKP",
+    "ourAirportsId": 26878,
+    "iata": "PEN",
+    "icao": "WMKP",
+    "name": "Penang International Airport",
+    "country": "MY",
+    "continent": "AS",
+    "latitudeDeg": 5.296303,
+    "longitudeDeg": 100.276185,
+    "elevationFt": 11,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237823,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3351.886,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WMSA",
+    "ourAirportsId": 26879,
+    "iata": "SZB",
+    "icao": "WMSA",
+    "name": "Sultan Abdul Aziz Shah International Airport",
+    "country": "MY",
+    "continent": "AS",
+    "latitudeDeg": 3.13058,
+    "longitudeDeg": 101.549004,
+    "elevationFt": 90,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237815,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3781.958,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WPDL",
+    "ourAirportsId": 26881,
+    "iata": "DIL",
+    "icao": "WPDL",
+    "name": "Presidente Nicolau Lobato International Airport",
+    "country": "TL",
+    "continent": "AS",
+    "latitudeDeg": -8.546562,
+    "longitudeDeg": 125.524507,
+    "elevationFt": 154,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239231,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 1848.612,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WPOC",
+    "ourAirportsId": 35138,
+    "iata": "OEC",
+    "icao": "WPOC",
+    "name": "Oecusse Route of the Sandalwood International Airport",
+    "country": "TL",
+    "continent": "AS",
+    "latitudeDeg": -9.198419,
+    "longitudeDeg": 124.337873,
+    "elevationFt": null,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 310241,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2200.046,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "WSSS",
+    "ourAirportsId": 26887,
+    "iata": "SIN",
+    "icao": "WSSS",
+    "name": "Singapore Changi Airport",
+    "country": "SG",
+    "continent": "AS",
+    "latitudeDeg": 1.35019,
+    "longitudeDeg": 103.994003,
+    "elevationFt": 22,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238866,
+        "ends": [
+          "02C",
+          "20C"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238867,
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238868,
+        "ends": [
+          "02L",
+          "20R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "YPCC",
+    "ourAirportsId": 27100,
+    "iata": "CCK",
+    "icao": "YPCC",
+    "name": "Cocos (Keeling) Islands Airport",
+    "country": "CC",
+    "continent": "AS",
+    "latitudeDeg": -12.192218,
+    "longitudeDeg": 96.834103,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235263,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2438.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBAA",
+    "ourAirportsId": 27188,
+    "iata": "PEK",
+    "icao": "ZBAA",
+    "name": "Beijing Capital International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 40.077349,
+    "longitudeDeg": 116.596702,
+    "elevationFt": 116,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235180,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 269343,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235179,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 49.987,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBAD",
+    "ourAirportsId": 330820,
+    "iata": "PKX",
+    "icao": "ZBAD",
+    "name": "Beijing Daxing International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 39.501289,
+    "longitudeDeg": 116.413967,
+    "elevationFt": 98,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 330822,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 330823,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 330824,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBDS",
+    "ourAirportsId": 300513,
+    "iata": "DSN",
+    "icao": "ZBDS",
+    "name": "Ordos Ejin Horo International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 39.493514,
+    "longitudeDeg": 109.8599,
+    "elevationFt": 4557,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 348405,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBDT",
+    "ourAirportsId": 30876,
+    "iata": "DAT",
+    "icao": "ZBDT",
+    "name": "Datong Yungang International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 40.06139,
+    "longitudeDeg": 113.480509,
+    "elevationFt": 3442,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 355446,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBHH",
+    "ourAirportsId": 27189,
+    "iata": "HET",
+    "icao": "ZBHH",
+    "name": "Hohhot Baita International Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 40.849658,
+    "longitudeDeg": 111.824598,
+    "elevationFt": 3556,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235183,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "ZBLA",
+    "ourAirportsId": 27190,
+    "iata": "HLD",
+    "icao": "ZBLA",
+    "name": "Hulunbuir Hailar Airport",
+    "country": "CN",
+    "continent": "AS",
+    "latitudeDeg": 49.208616,
+    "longitudeDeg": 119.822301,
+    "elevationFt": 2169,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235153,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

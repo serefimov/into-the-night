@@ -1,0 +1,171 @@
+{
+  "initial": {
+    "airportId": "ULLI",
+    "utcMs": 1787247300000,
+    "fuelKg": 65000,
+    "flights": 0,
+    "distanceKm": 0,
+    "won": false,
+    "stocksReference": "data/campaign/fuel.json",
+    "stockChangesKg": {}
+  },
+  "allowed": true,
+  "reasons": [],
+  "distanceKm": 3095.4512565336554,
+  "arrivalUtcMs": 1787261902289.099,
+  "endUtcMs": 1787267158681.5867,
+  "solarScope": "automatic_turnaround",
+  "solar": {
+    "status": "safe",
+    "evaluations": 72,
+    "phase": null,
+    "eventUtcMs": null,
+    "bracketUtcMs": null,
+    "safeUntilUtcMs": 1787267158681.5867,
+    "reason": null
+  },
+  "flight": {
+    "durationSeconds": 14602.289099215523,
+    "burnKg": 22120.43316746876,
+    "arrivalFuelKg": 42879.56683253124,
+    "takeoffMassKg": 191000,
+    "landingMassKg": 168879.56683253124,
+    "dispatchable": true,
+    "reasons": []
+  },
+  "refuelling": {
+    "transferKg": 58085.23316746876,
+    "fuelKg": 100964.8,
+    "stockKg": 288914.76683253126,
+    "durationSeconds": 4656.392487560157
+  },
+  "next": {
+    "airportId": "UNNT",
+    "utcMs": 1787267158681.5867,
+    "fuelKg": 100964.8,
+    "flights": 1,
+    "distanceKm": 3095.4512565336554,
+    "won": true,
+    "stocksReference": "data/campaign/fuel.json",
+    "stockChangesKg": {
+      "UNNT": 288914.76683253126
+    }
+  },
+  "phases": [
+    {
+      "label": "departure",
+      "route": {
+        "kind": "takeoff",
+        "legIndex": 0,
+        "startUtcMs": 1787247300000,
+        "endUtcMs": 1787248200000,
+        "location": {
+          "latitudeDeg": 59.800301,
+          "longitudeDeg": 30.262501
+        },
+        "path": null
+      }
+    },
+    {
+      "label": "cruise",
+      "route": {
+        "kind": "cruise",
+        "legIndex": 0,
+        "startUtcMs": 1787248200000,
+        "endUtcMs": 1787261002289.099,
+        "location": {
+          "latitudeDeg": 59.800301,
+          "longitudeDeg": 30.262501
+        },
+        "path": {
+          "from": {
+            "latitudeDeg": 59.800301,
+            "longitudeDeg": 30.262501
+          },
+          "to": {
+            "latitudeDeg": 55.019756,
+            "longitudeDeg": 82.618675
+          },
+          "start": [
+            0.43446726815249526,
+            0.2535008713698443,
+            0.8642774445274142
+          ],
+          "tangent": [
+            -0.6649937146434208,
+            0.7374712332598753,
+            0.11798109848150809
+          ],
+          "angleRad": 0.48586516730814366,
+          "distanceKm": 3095.4512565336554
+        }
+      }
+    },
+    {
+      "label": "arrival",
+      "route": {
+        "kind": "landing",
+        "legIndex": 0,
+        "startUtcMs": 1787261002289.099,
+        "endUtcMs": 1787261902289.099,
+        "location": {
+          "latitudeDeg": 55.019756,
+          "longitudeDeg": 82.618675
+        },
+        "path": null
+      }
+    },
+    {
+      "label": "service",
+      "route": {
+        "kind": "service",
+        "legIndex": 0,
+        "startUtcMs": 1787261902289.099,
+        "endUtcMs": 1787262502289.099,
+        "location": {
+          "latitudeDeg": 55.019756,
+          "longitudeDeg": 82.618675
+        },
+        "path": null
+      }
+    },
+    {
+      "label": "refuelling",
+      "route": {
+        "kind": "service",
+        "legIndex": 0,
+        "startUtcMs": 1787262502289.099,
+        "endUtcMs": 1787267158681.5867,
+        "location": {
+          "latitudeDeg": 55.019756,
+          "longitudeDeg": 82.618675
+        },
+        "path": null
+      }
+    }
+  ],
+  "nextSunrise": {
+    "status": "found",
+    "startUtcMs": 1787267158681.5867,
+    "requestedEndUtcMs": 1819235158681.5867,
+    "searchedUntilUtcMs": 1787268054710.4868,
+    "safeUntilUtcMs": 1787268054709.3423,
+    "horizonEndUtcMs": 1819235158681.5867,
+    "rangeLimited": false,
+    "eventUtcMs": 1787268054710.4868,
+    "bracketUtcMs": [
+      1787268054709.3423,
+      1787268054710.4868
+    ],
+    "timeErrorBoundSeconds": 0.00114453125,
+    "evaluations": 22,
+    "segments": 1,
+    "reason": null
+  },
+  "postTurnaroundNightSeconds": 896.0289001464844,
+  "refinement": {
+    "coarseStatus": "safe",
+    "refinedStatus": "safe",
+    "sameEnd": true
+  }
+}

@@ -1,0 +1,798 @@
+[
+  {
+    "id": "KSLC",
+    "ourAirportsId": 3887,
+    "iata": "SLC",
+    "icao": "KSLC",
+    "name": "Salt Lake City International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 40.78886,
+    "longitudeDeg": -111.979866,
+    "elevationFt": 4227,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 241554,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3658.21,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 241553,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 241555,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2924.861,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KSMF",
+    "ourAirportsId": 3892,
+    "iata": "SMF",
+    "icao": "KSMF",
+    "name": "Sacramento International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 38.6954,
+    "longitudeDeg": -121.591003,
+    "elevationFt": 27,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 245194,
+        "ends": [
+          "17L",
+          "35R"
+        ],
+        "lengthM": 2622.804,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245193,
+        "ends": [
+          "17R",
+          "35L"
+        ],
+        "lengthM": 2620.67,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KSNA",
+    "ourAirportsId": 3894,
+    "iata": "SNA",
+    "icao": "KSNA",
+    "name": "John Wayne Orange County International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 33.675063,
+    "longitudeDeg": -117.869281,
+    "elevationFt": 56,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 245859,
+        "ends": [
+          "02L",
+          "20R"
+        ],
+        "lengthM": 1737.36,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245858,
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "lengthM": 879.653,
+        "widthM": 22.86,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KSRQ",
+    "ourAirportsId": 3899,
+    "iata": "SRQ",
+    "icao": "KSRQ",
+    "name": "Sarasota Bradenton International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 27.394631,
+    "longitudeDeg": -82.554359,
+    "elevationFt": 30,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244057,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2895.6,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244056,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 1525.829,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KSTL",
+    "ourAirportsId": 3905,
+    "iata": "STL",
+    "icao": "KSTL",
+    "name": "St. Louis Lambert International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 38.748697,
+    "longitudeDeg": -90.370003,
+    "elevationFt": 618,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 243532,
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "lengthM": 3358.896,
+        "widthM": 60.96,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243533,
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "lengthM": 2747.162,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243531,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KSYR",
+    "ourAirportsId": 3913,
+    "iata": "SYR",
+    "icao": "KSYR",
+    "name": "Syracuse Hancock International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 43.11119842529297,
+    "longitudeDeg": -76.1063003540039,
+    "elevationFt": 421,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 244405,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2747.162,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 244406,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2285.695,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KTPA",
+    "ourAirportsId": 3926,
+    "iata": "TPA",
+    "icao": "KTPA",
+    "name": "Tampa International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 27.9755,
+    "longitudeDeg": -82.533203,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 243030,
+        "ends": [
+          "19R",
+          "01L"
+        ],
+        "lengthM": 3353.41,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243031,
+        "ends": [
+          "19L",
+          "01R"
+        ],
+        "lengthM": 2529.84,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243029,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2133.295,
+        "widthM": 45.72,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KTUL",
+    "ourAirportsId": 3930,
+    "iata": "TUL",
+    "icao": "KTUL",
+    "name": "Tulsa International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 36.197084,
+    "longitudeDeg": -95.886225,
+    "elevationFt": 677,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 245715,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245713,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2248.205,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 245714,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 1859.585,
+        "widthM": 30.48,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KTUS",
+    "ourAirportsId": 3932,
+    "iata": "TUS",
+    "icao": "KTUS",
+    "name": "Tucson International Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 32.115004,
+    "longitudeDeg": -110.938053,
+    "elevationFt": 2643,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 242913,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3351.581,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 242912,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2133.6,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "KTYS",
+    "ourAirportsId": 3938,
+    "iata": "TYS",
+    "icao": "KTYS",
+    "name": "McGhee Tyson Airport",
+    "country": "US",
+    "continent": "NA",
+    "latitudeDeg": 35.811001,
+    "longitudeDeg": -83.994003,
+    "elevationFt": 981,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 243473,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 243472,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MBPV",
+    "ourAirportsId": 4628,
+    "iata": "PLS",
+    "icao": "MBPV",
+    "name": "Providenciales International Airport",
+    "country": "TC",
+    "continent": "NA",
+    "latitudeDeg": 21.773697,
+    "longitudeDeg": -72.268321,
+    "elevationFt": 15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239203,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2803.855,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MDLR",
+    "ourAirportsId": 4635,
+    "iata": "LRM",
+    "icao": "MDLR",
+    "name": "Casa De Campo International Airport",
+    "country": "DO",
+    "continent": "NA",
+    "latitudeDeg": 18.452222,
+    "longitudeDeg": -68.911111,
+    "elevationFt": 213,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235483,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2949.854,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MDPC",
+    "ourAirportsId": 4636,
+    "iata": "PUJ",
+    "icao": "MDPC",
+    "name": "Punta Cana International Airport",
+    "country": "DO",
+    "continent": "NA",
+    "latitudeDeg": 18.567093,
+    "longitudeDeg": -68.364558,
+    "elevationFt": 47,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235486,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 314313,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MDSD",
+    "ourAirportsId": 4638,
+    "iata": "SDQ",
+    "icao": "MDSD",
+    "name": "Las Américas International Airport",
+    "country": "DO",
+    "continent": "NA",
+    "latitudeDeg": 18.42970085144,
+    "longitudeDeg": -69.668899536133,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235489,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3352.8,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 603748,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2991.002,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MDST",
+    "ourAirportsId": 4640,
+    "iata": "STI",
+    "icao": "MDST",
+    "name": "Cibao International Airport",
+    "country": "DO",
+    "continent": "NA",
+    "latitudeDeg": 19.40406,
+    "longitudeDeg": -70.604431,
+    "elevationFt": 565,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235484,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2619.756,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MGGT",
+    "ourAirportsId": 4644,
+    "iata": "GUA",
+    "icao": "MGGT",
+    "name": "La Aurora International Airport",
+    "country": "GT",
+    "continent": "NA",
+    "latitudeDeg": 14.582896,
+    "longitudeDeg": -90.527515,
+    "elevationFt": 4952,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236389,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2987.04,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MHLM",
+    "ourAirportsId": 4661,
+    "iata": "SAP",
+    "icao": "MHLM",
+    "name": "Ramón Villeda Morales International Airport",
+    "country": "HN",
+    "continent": "NA",
+    "latitudeDeg": 15.4526,
+    "longitudeDeg": -87.923599,
+    "elevationFt": 91,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236413,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2805.074,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MHRO",
+    "ourAirportsId": 4663,
+    "iata": "RTB",
+    "icao": "MHRO",
+    "name": "Juan Manuel Gálvez International Airport",
+    "country": "HN",
+    "continent": "NA",
+    "latitudeDeg": 16.316799,
+    "longitudeDeg": -86.523003,
+    "elevationFt": 39,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236414,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2239.975,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MHSC",
+    "ourAirportsId": 4664,
+    "iata": "XPL",
+    "icao": "MHPR",
+    "name": "Palmerola International Airport",
+    "country": "HN",
+    "continent": "NA",
+    "latitudeDeg": 14.3824,
+    "longitudeDeg": -87.621201,
+    "elevationFt": 2061,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236416,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 2457.907,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "MKJP",
+    "ourAirportsId": 4680,
+    "iata": "KIN",
+    "icao": "MKJP",
+    "name": "Norman Manley International Airport",
+    "country": "JM",
+    "continent": "NA",
+    "latitudeDeg": 17.935699462890625,
+    "longitudeDeg": -76.7874984741211,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 576756,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2712.72,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

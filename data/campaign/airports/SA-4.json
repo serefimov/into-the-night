@@ -1,0 +1,688 @@
+[
+  {
+    "id": "SKRG",
+    "ourAirportsId": 6158,
+    "iata": "MDE",
+    "icao": "SKRG",
+    "name": "Jose Maria Córdova International Airport",
+    "country": "CO",
+    "continent": "SA",
+    "latitudeDeg": 6.16454,
+    "longitudeDeg": -75.4231,
+    "elevationFt": 6955,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235296,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3439.973,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SLAL",
+    "ourAirportsId": 333229,
+    "iata": "SRE",
+    "icao": "SLAL",
+    "name": "Alcantarí International Airport",
+    "country": "BO",
+    "continent": "SA",
+    "latitudeDeg": -19.246835,
+    "longitudeDeg": -65.149611,
+    "elevationFt": 10184,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 333230,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SLCB",
+    "ourAirportsId": 6180,
+    "iata": "CBB",
+    "icao": "SLCB",
+    "name": "Jorge Wilsterman International Airport",
+    "country": "BO",
+    "continent": "SA",
+    "latitudeDeg": -17.421105,
+    "longitudeDeg": -66.177102,
+    "elevationFt": 8360,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233690,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3797.808,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233689,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2649.322,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SLLP",
+    "ourAirportsId": 6184,
+    "iata": "LPB",
+    "icao": "SLLP",
+    "name": "El Alto International Airport",
+    "country": "BO",
+    "continent": "SA",
+    "latitudeDeg": -16.510272,
+    "longitudeDeg": -68.189416,
+    "elevationFt": 13355,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233698,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 46.025,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233699,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 2049.78,
+        "widthM": 91.44,
+        "surface": "GRE",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SLOR",
+    "ourAirportsId": 6185,
+    "iata": "ORU",
+    "icao": "SLOR",
+    "name": "Juan Mendoza International Airport",
+    "country": "BO",
+    "continent": "SA",
+    "latitudeDeg": -17.956151,
+    "longitudeDeg": -67.075829,
+    "elevationFt": 12152,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233703,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 2461.26,
+        "widthM": 22.86,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 233702,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 1866.9,
+        "widthM": 36.576,
+        "surface": "GRE",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SLUY",
+    "ourAirportsId": 39473,
+    "iata": "UYU",
+    "icao": "SLUY",
+    "name": "Joya Andina International Airport",
+    "country": "BO",
+    "continent": "SA",
+    "latitudeDeg": -20.441304,
+    "longitudeDeg": -66.857553,
+    "elevationFt": 11136,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 508591,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SLVR",
+    "ourAirportsId": 6193,
+    "iata": "VVI",
+    "icao": "SLVR",
+    "name": "Viru Viru International Airport",
+    "country": "BO",
+    "continent": "SA",
+    "latitudeDeg": -17.6448,
+    "longitudeDeg": -63.135399,
+    "elevationFt": 1224,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233696,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SMJP",
+    "ourAirportsId": 6195,
+    "iata": "PBM",
+    "icao": "SMJP",
+    "name": "Johan Adolf Pengel International Airport",
+    "country": "SR",
+    "continent": "SA",
+    "latitudeDeg": 5.45283,
+    "longitudeDeg": -55.187801,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237997,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3479.902,
+        "widthM": 45.11,
+        "surface": "ASPHALT",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SOCA",
+    "ourAirportsId": 6198,
+    "iata": "CAY",
+    "icao": "SOCA",
+    "name": "Cayenne – Félix Eboué Airport",
+    "country": "GF",
+    "continent": "SA",
+    "latitudeDeg": 4.819964,
+    "longitudeDeg": -52.361326,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235705,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3196.133,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPCL",
+    "ourAirportsId": 6205,
+    "iata": "PCL",
+    "icao": "SPCL",
+    "name": "Cap FAP David Abenzur Rengifo International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -8.378064,
+    "longitudeDeg": -74.574495,
+    "elevationFt": 513,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238148,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPHI",
+    "ourAirportsId": 6213,
+    "iata": "CIX",
+    "icao": "SPHI",
+    "name": "Capitán FAP José A. Quiñones González International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -6.789223,
+    "longitudeDeg": -79.828254,
+    "elevationFt": 97,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238140,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2519.477,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPIM",
+    "ourAirportsId": 6217,
+    "iata": "LIM",
+    "icao": "SPJC",
+    "name": "Jorge Chávez International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -12.0219,
+    "longitudeDeg": -77.114305,
+    "elevationFt": 113,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238150,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3507.029,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 510595,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3479.902,
+        "widthM": 45.11,
+        "surface": "CONC",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPJL",
+    "ourAirportsId": 6222,
+    "iata": "JUL",
+    "icao": "SPJL",
+    "name": "Inca Manco Capac International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -15.467689,
+    "longitudeDeg": -70.15653,
+    "elevationFt": 12552,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238143,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 4200.144,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPQT",
+    "ourAirportsId": 6232,
+    "iata": "IQT",
+    "icao": "SPQT",
+    "name": "Coronel FAP Francisco Secada Vignetta International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -3.78474,
+    "longitudeDeg": -73.3088,
+    "elevationFt": 306,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238139,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPQU",
+    "ourAirportsId": 6233,
+    "iata": "AQP",
+    "icao": "SPQU",
+    "name": "Rodríguez Ballón International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -16.340786,
+    "longitudeDeg": -71.569485,
+    "elevationFt": 8405,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238129,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2980.03,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPRU",
+    "ourAirportsId": 6235,
+    "iata": "TRU",
+    "icao": "SPRU",
+    "name": "Capitán FAP Carlos Martínez de Pinillos International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -8.082382,
+    "longitudeDeg": -79.108821,
+    "elevationFt": 106,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238137,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3023.616,
+        "widthM": 44.196,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPSO",
+    "ourAirportsId": 6236,
+    "iata": "PIO",
+    "icao": "SPSO",
+    "name": "Captain Renán Elías Olivera International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -13.7449,
+    "longitudeDeg": -76.220299,
+    "elevationFt": 39,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238133,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3019.958,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SPZO",
+    "ourAirportsId": 6243,
+    "iata": "CUZ",
+    "icao": "SPZO",
+    "name": "Alejandro Velasco Astete International Airport",
+    "country": "PE",
+    "continent": "SA",
+    "latitudeDeg": -13.535699844400002,
+    "longitudeDeg": -71.9387969971,
+    "elevationFt": 10860,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238138,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3397.301,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SUMU",
+    "ourAirportsId": 6247,
+    "iata": "MVD",
+    "icao": "SUMU",
+    "name": "Carrasco General Cesáreo L. Berisso International Airport",
+    "country": "UY",
+    "continent": "SA",
+    "latitudeDeg": -34.835647,
+    "longitudeDeg": -56.026497,
+    "elevationFt": 105,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246026,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246025,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2250.034,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "SVBC",
+    "ourAirportsId": 6255,
+    "iata": "BLA",
+    "icao": "SVBC",
+    "name": "General José Antonio Anzoategui International Airport",
+    "country": "VE",
+    "continent": "SA",
+    "latitudeDeg": 10.111111,
+    "longitudeDeg": -64.692222,
+    "elevationFt": 30,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246131,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 39.929,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 246130,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 39.929,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

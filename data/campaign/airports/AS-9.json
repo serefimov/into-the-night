@@ -1,0 +1,632 @@
+[
+  {
+    "id": "RPMZ",
+    "ourAirportsId": 5712,
+    "iata": "ZAM",
+    "icao": "RPMZ",
+    "name": "Zamboanga International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 6.92242,
+    "longitudeDeg": 122.059998,
+    "elevationFt": 33,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238427,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2609.088,
+        "widthM": 43.891,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPSP",
+    "ourAirportsId": 336116,
+    "iata": "TAG",
+    "icao": "RPSP",
+    "name": "Bohol-Panglao International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 9.573045,
+    "longitudeDeg": 123.770143,
+    "elevationFt": 42,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPVB",
+    "ourAirportsId": 35178,
+    "iata": "BCD",
+    "icao": "RPVB",
+    "name": "Bacolod-Silay International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 10.776237,
+    "longitudeDeg": 123.018879,
+    "elevationFt": 82,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 271131,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPVI",
+    "ourAirportsId": 5739,
+    "iata": "ILO",
+    "icao": "RPVI",
+    "name": "Iloilo International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 10.833017,
+    "longitudeDeg": 122.493358,
+    "elevationFt": 27,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238437,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPVK",
+    "ourAirportsId": 5741,
+    "iata": "KLO",
+    "icao": "RPVK",
+    "name": "Kalibo International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 11.6794,
+    "longitudeDeg": 122.375999,
+    "elevationFt": 14,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238421,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2186.94,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPVM",
+    "ourAirportsId": 5742,
+    "iata": "CEB",
+    "icao": "RPVM",
+    "name": "Mactan Cebu International Airport",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 10.309261,
+    "longitudeDeg": 123.97974,
+    "elevationFt": 31,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238434,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 3310.128,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 602537,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 2560.015,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RPVP",
+    "ourAirportsId": 5744,
+    "iata": "PPS",
+    "icao": "RPVP",
+    "name": "Puerto Princesa International Airport / PAF Antonio Bautista Air Base",
+    "country": "PH",
+    "continent": "AS",
+    "latitudeDeg": 9.742044,
+    "longitudeDeg": 118.75911,
+    "elevationFt": 71,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238413,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RSI",
+    "ourAirportsId": 350214,
+    "iata": "RSI",
+    "icao": "OERS",
+    "name": "Red Sea International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 25.627975,
+    "longitudeDeg": 37.088914,
+    "elevationFt": 140,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 536354,
+        "ends": [
+          "15L",
+          "33R"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAAA",
+    "ourAirportsId": 6421,
+    "iata": "ALA",
+    "icao": "UAAA",
+    "name": "Almaty International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 43.354267,
+    "longitudeDeg": 77.042828,
+    "elevationFt": 2234,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 347234,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 4500.067,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237406,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 4400.093,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UACC",
+    "ourAirportsId": 6423,
+    "iata": "NQZ",
+    "icao": "UACC",
+    "name": "Nursultan Nazarbayev International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 51.027035,
+    "longitudeDeg": 71.467094,
+    "elevationFt": 1165,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237393,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3500.323,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UACK",
+    "ourAirportsId": 31768,
+    "iata": "KOV",
+    "icao": "UACK",
+    "name": "Kokshetau International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 53.329102,
+    "longitudeDeg": 69.594597,
+    "elevationFt": 900,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 252295,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2537.46,
+        "widthM": 38.1,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UACP",
+    "ourAirportsId": 32495,
+    "iata": "PPK",
+    "icao": "UACP",
+    "name": "Petropavl International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 54.775622,
+    "longitudeDeg": 69.187415,
+    "elevationFt": 453,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 249992,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2496.312,
+        "widthM": 39.014,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UADD",
+    "ourAirportsId": 6424,
+    "iata": "DMB",
+    "icao": "UADD",
+    "name": "Taraz International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 42.8536,
+    "longitudeDeg": 71.303596,
+    "elevationFt": 2184,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237404,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 2899.867,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAFM",
+    "ourAirportsId": 6426,
+    "iata": "BSZ",
+    "icao": "UCFM",
+    "name": "Manas International Airport",
+    "country": "KG",
+    "continent": "AS",
+    "latitudeDeg": 43.061298,
+    "longitudeDeg": 74.4776,
+    "elevationFt": 2058,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237280,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 4200.144,
+        "widthM": 54.864,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAFO",
+    "ourAirportsId": 6427,
+    "iata": "OSS",
+    "icao": "UCFO",
+    "name": "Osh International Airport",
+    "country": "KG",
+    "continent": "AS",
+    "latitudeDeg": 40.609001,
+    "longitudeDeg": 72.793297,
+    "elevationFt": 2927,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237281,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3211.982,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAII",
+    "ourAirportsId": 6429,
+    "iata": "CIT",
+    "icao": "UAII",
+    "name": "Shymkent International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 42.365021,
+    "longitudeDeg": 69.47564,
+    "elevationFt": 1385,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237392,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2799.893,
+        "widthM": 43.891,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAIT",
+    "ourAirportsId": 337747,
+    "iata": "HSA",
+    "icao": "UAIT",
+    "name": "Hazrat Sultan International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 43.311087,
+    "longitudeDeg": 68.550352,
+    "elevationFt": 951,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 337748,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAKD",
+    "ourAirportsId": 6430,
+    "iata": "DZN",
+    "icao": "UAKD",
+    "name": "Zhezkazgan National Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 47.708953,
+    "longitudeDeg": 67.738094,
+    "elevationFt": 1250,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237387,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 42.062,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAKK",
+    "ourAirportsId": 6431,
+    "iata": "KGF",
+    "icao": "UAKK",
+    "name": "Sary-Arka Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 49.670799,
+    "longitudeDeg": 73.334396,
+    "elevationFt": 1765,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237390,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3301.289,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UAOL",
+    "ourAirportsId": 44336,
+    "iata": "BXY",
+    "icao": "UAOL",
+    "name": "Baikonur Krayniy International Airport",
+    "country": "KZ",
+    "continent": "AS",
+    "latitudeDeg": 45.621994,
+    "longitudeDeg": 63.210773,
+    "elevationFt": 317,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 309650,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3200.4,
+        "widthM": 60.046,
+        "surface": "asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

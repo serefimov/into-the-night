@@ -1,0 +1,643 @@
+[
+  {
+    "id": "VNKT",
+    "ourAirportsId": 26596,
+    "iata": "KTM",
+    "icao": "VNKT",
+    "name": "Tribhuvan International Airport",
+    "country": "NP",
+    "continent": "AS",
+    "latitudeDeg": 27.6966,
+    "longitudeDeg": 85.3591,
+    "elevationFt": 4390,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237990,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3350.057,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOBL",
+    "ourAirportsId": 35145,
+    "iata": "BLR",
+    "icao": "VOBL",
+    "name": "Kempegowda International Airport Bengaluru",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 13.1979,
+    "longitudeDeg": 77.706299,
+    "elevationFt": 3000,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 298669,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 336915,
+        "ends": [
+          "09L",
+          "27R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOBZ",
+    "ourAirportsId": 26606,
+    "iata": "VGA",
+    "icao": "VOBZ",
+    "name": "Vijayawada International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 16.530011,
+    "longitudeDeg": 80.804888,
+    "elevationFt": 82,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236753,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3359.81,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOCB",
+    "ourAirportsId": 26607,
+    "iata": "CJB",
+    "icao": "VOCB",
+    "name": "Coimbatore International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 11.03,
+    "longitudeDeg": 77.043404,
+    "elevationFt": 1324,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236783,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2584.704,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOCI",
+    "ourAirportsId": 26609,
+    "iata": "COK",
+    "icao": "VOCI",
+    "name": "Cochin International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 10.151047,
+    "longitudeDeg": 76.400838,
+    "elevationFt": 30,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236597,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOCL",
+    "ourAirportsId": 26610,
+    "iata": "CCJ",
+    "icao": "VOCL",
+    "name": "Calicut International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 11.135996,
+    "longitudeDeg": 75.955152,
+    "elevationFt": 342,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236649,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2859.938,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOGA",
+    "ourAirportsId": 342094,
+    "iata": "GOX",
+    "icao": "VOGA",
+    "name": "Manohar International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 15.744257,
+    "longitudeDeg": 73.860625,
+    "elevationFt": 552,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 352588,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOGO",
+    "ourAirportsId": 26444,
+    "iata": "GOI",
+    "icao": "VOGO",
+    "name": "Goa Dabolim International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 15.380062,
+    "longitudeDeg": 73.833328,
+    "elevationFt": 150,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236704,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3457.956,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOHS",
+    "ourAirportsId": 35141,
+    "iata": "HYD",
+    "icao": "VOHS",
+    "name": "Rajiv Gandhi International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 17.231318,
+    "longitudeDeg": 78.429855,
+    "elevationFt": 2024,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 322333,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 4259.885,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 298675,
+        "ends": [
+          "09L",
+          "27R"
+        ],
+        "lengthM": 3706.978,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOKN",
+    "ourAirportsId": 329504,
+    "iata": "CNN",
+    "icao": "VOKN",
+    "name": "Kannur International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 11.916343,
+    "longitudeDeg": 75.544979,
+    "elevationFt": 330,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 348252,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOML",
+    "ourAirportsId": 26617,
+    "iata": "IXE",
+    "icao": "VOML",
+    "name": "Mangaluru International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 12.95471,
+    "longitudeDeg": 74.886812,
+    "elevationFt": 337,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 260371,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2449.068,
+        "widthM": 46.025,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOMM",
+    "ourAirportsId": 26618,
+    "iata": "MAA",
+    "icao": "VOMM",
+    "name": "Chennai International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 12.990005,
+    "longitudeDeg": 80.169296,
+    "elevationFt": 52,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236617,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3660.953,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236618,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2890.114,
+        "widthM": 45.11,
+        "surface": "Concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOPB",
+    "ourAirportsId": 26620,
+    "iata": "IXZ",
+    "icao": "VOPB",
+    "name": "Veer Savarkar International Airport / INS Utkrosh",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 11.640194,
+    "longitudeDeg": 92.72902,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236784,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3290.316,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOTP",
+    "ourAirportsId": 26627,
+    "iata": "TIR",
+    "icao": "VOTP",
+    "name": "Tirupati International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 13.631988,
+    "longitudeDeg": 79.539869,
+    "elevationFt": 350,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236711,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3810,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOTR",
+    "ourAirportsId": 26628,
+    "iata": "TRZ",
+    "icao": "VOTR",
+    "name": "Tiruchirappalli International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 10.762915,
+    "longitudeDeg": 78.717741,
+    "elevationFt": 288,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236790,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 1863.852,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOTV",
+    "ourAirportsId": 26629,
+    "iata": "TRV",
+    "icao": "VOTV",
+    "name": "Thiruvananthapuram International Airport",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 8.481889,
+    "longitudeDeg": 76.920029,
+    "elevationFt": 15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236767,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 3397.91,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VOVI",
+    "ourAirportsId": 610317,
+    "iata": "VTZ",
+    "icao": "VOVI",
+    "name": "Alluri Sitarama Raju International Airport (Vizag)",
+    "country": "IN",
+    "continent": "AS",
+    "latitudeDeg": 17.971512,
+    "longitudeDeg": 83.503617,
+    "elevationFt": 188,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VQPR",
+    "ourAirportsId": 26632,
+    "iata": "PBH",
+    "icao": "VQPR",
+    "name": "Paro International Airport",
+    "country": "BT",
+    "continent": "AS",
+    "latitudeDeg": 27.4032,
+    "longitudeDeg": 89.424599,
+    "elevationFt": 7364,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234387,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2264.969,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VRMG",
+    "ourAirportsId": 26633,
+    "iata": "GAN",
+    "icao": "VRMG",
+    "name": "Gan International Airport",
+    "country": "MV",
+    "continent": "AS",
+    "latitudeDeg": -0.692975,
+    "longitudeDeg": 73.152627,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237644,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 50.292,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "VRMH",
+    "ourAirportsId": 26634,
+    "iata": "HAQ",
+    "icao": "VRMH",
+    "name": "Hanimaadhoo International Airport",
+    "country": "MV",
+    "continent": "AS",
+    "latitudeDeg": 6.743235,
+    "longitudeDeg": 73.167072,
+    "elevationFt": 4,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237642,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2464.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

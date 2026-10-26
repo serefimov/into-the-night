@@ -1,0 +1,829 @@
+{
+  "reportVersion": 1,
+  "settings": {
+    "version": "westward-campaign-research-1",
+    "dates": [
+      "2026-06-21",
+      "2026-07-15"
+    ],
+    "sunsetOffsetsMinutes": [
+      5,
+      30,
+      60
+    ],
+    "initialFuelFractions": [
+      0,
+      0.5,
+      1
+    ],
+    "maxFlights": 12,
+    "maxExpanded": 1200,
+    "maxForecasts": 15000,
+    "horizonDays": 7,
+    "startId": "ULLI",
+    "targetId": "UNNT",
+    "targetCompletion": "after_turnaround",
+    "stockPolicy": "unchanged-academic-campaign-research-v1",
+    "scope": "Bounded heuristic search; all screened destinations eligible, no gameplay direction lock. Three initial fuel samples per first destination; no waits. A safe shortcut invalidates the scenario, not the physical flight."
+  },
+  "inputs": {
+    "catalogSource": {
+      "id": "ourairports",
+      "repository": "davidmegginson/ourairports-data",
+      "commit": "11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+      "license": "Public Domain",
+      "termsUrl": "https://ourairports.com/data/",
+      "dictionaryUrl": "https://ourairports.com/help/data-dictionary.html",
+      "fileSha256": {
+        "airports.csv": "13f1f1a6298635c816b5bedfd47f8290339cc54730b38274b475fcb261daae4c",
+        "runways.csv": "e52cf06ddbc79083b4570eb4f23bb318d15aab9ad8180db55e9b931f68eef41e"
+      }
+    },
+    "profileId": "B788-reference-v1",
+    "profileVersion": 1,
+    "seed": "academic-campaign-research-v1",
+    "sha256": {
+      "catalog": "78d13ea52310bebbfbea1de0453e3b03360da207d2a416f716c2e5c31d33fbd4",
+      "airports": "445889c0bc276a6479f8d2057df1c2fb6ff34c7d7a14b3f0c8bdb828583fc066",
+      "profile": "454f1e766ebec3e66bc62ee37033dac0e6c43f3d034ddec294bb786e145d88e3",
+      "stocks": "e3b9aaebc792cd5f0204d01897941d43133e68056df9eb5f4032bf6e89c3f0b6"
+    }
+  },
+  "results": [
+    {
+      "date": "2026-06-21",
+      "polarDay": {
+        "status": "safe",
+        "safeUntilUtcMs": 1782086400000,
+        "bracket": null,
+        "witnessUtcMs": null,
+        "evaluations": 289,
+        "reason": null
+      },
+      "sunset": {
+        "status": "unsafe",
+        "safeUntilUtcMs": 1782069205953.5981,
+        "bracket": [
+          1782069205953.5981,
+          1782069205954.7424
+        ],
+        "witnessUtcMs": 1782069205954.7424,
+        "evaluations": 106,
+        "reason": null
+      },
+      "starts": [
+        {
+          "offsetMinutes": 5,
+          "direct": {
+            "allowed": false,
+            "reasons": [
+              "sun"
+            ],
+            "solar": {
+              "status": "unsafe",
+              "evaluations": 56,
+              "phase": "cruise",
+              "eventUtcMs": 1782080252133.1787,
+              "bracketUtcMs": [
+                1782080252132.0342,
+                1782080252133.1787
+              ],
+              "safeUntilUtcMs": 1782080252132.0342,
+              "reason": null
+            }
+          },
+          "search": {
+            "startUtcMs": 1782069505954.7424,
+            "firstMoves": 693,
+            "counts": {
+              "expanded": 45,
+              "forecasts": 15000,
+              "resourceRejected": 16087,
+              "solarRejected": 14307,
+              "indeterminate": 0,
+              "depthTruncated": 0,
+              "horizonTruncated": 0
+            },
+            "remaining": 648,
+            "budgetReached": true,
+            "exhausted": false,
+            "witnesses": [],
+            "shortcuts": []
+          }
+        },
+        {
+          "offsetMinutes": 30,
+          "direct": {
+            "allowed": false,
+            "reasons": [
+              "sun"
+            ],
+            "solar": {
+              "status": "unsafe",
+              "evaluations": 53,
+              "phase": "cruise",
+              "eventUtcMs": 1782080758535.3853,
+              "bracketUtcMs": [
+                1782080758534.2407,
+                1782080758535.3853
+              ],
+              "safeUntilUtcMs": 1782080758534.2407,
+              "reason": null
+            }
+          },
+          "search": {
+            "startUtcMs": 1782071005954.7424,
+            "firstMoves": 660,
+            "counts": {
+              "expanded": 43,
+              "forecasts": 15000,
+              "resourceRejected": 14532,
+              "solarRejected": 14340,
+              "indeterminate": 0,
+              "depthTruncated": 0,
+              "horizonTruncated": 0
+            },
+            "remaining": 617,
+            "budgetReached": true,
+            "exhausted": false,
+            "witnesses": [],
+            "shortcuts": []
+          }
+        },
+        {
+          "offsetMinutes": 60,
+          "direct": {
+            "allowed": false,
+            "reasons": [
+              "sun"
+            ],
+            "solar": {
+              "status": "unsafe",
+              "evaluations": 49,
+              "phase": "cruise",
+              "eventUtcMs": 1782081428298.5688,
+              "bracketUtcMs": [
+                1782081428297.4243,
+                1782081428298.5688
+              ],
+              "safeUntilUtcMs": 1782081428297.4243,
+              "reason": null
+            }
+          },
+          "search": {
+            "startUtcMs": 1782072805954.7424,
+            "firstMoves": 614,
+            "counts": {
+              "expanded": 39,
+              "forecasts": 15000,
+              "resourceRejected": 12238,
+              "solarRejected": 14386,
+              "indeterminate": 0,
+              "depthTruncated": 0,
+              "horizonTruncated": 0
+            },
+            "remaining": 575,
+            "budgetReached": true,
+            "exhausted": false,
+            "witnesses": [],
+            "shortcuts": []
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "polarDay": {
+        "status": "safe",
+        "safeUntilUtcMs": 1784160000000,
+        "bracket": null,
+        "witnessUtcMs": null,
+        "evaluations": 289,
+        "reason": null
+      },
+      "sunset": {
+        "status": "unsafe",
+        "safeUntilUtcMs": 1784141675012.97,
+        "bracket": [
+          1784141675012.97,
+          1784141675014.1143
+        ],
+        "witnessUtcMs": 1784141675014.1143,
+        "evaluations": 102,
+        "reason": null
+      },
+      "starts": [
+        {
+          "offsetMinutes": 5,
+          "direct": {
+            "allowed": false,
+            "reasons": [
+              "sun"
+            ],
+            "solar": {
+              "status": "unsafe",
+              "evaluations": 62,
+              "phase": "cruise",
+              "eventUtcMs": 1784154461128.2349,
+              "bracketUtcMs": [
+                1784154461127.0903,
+                1784154461128.2349
+              ],
+              "safeUntilUtcMs": 1784154461127.0903,
+              "reason": null
+            }
+          },
+          "search": {
+            "startUtcMs": 1784141975014.1143,
+            "firstMoves": 751,
+            "counts": {
+              "expanded": 44,
+              "forecasts": 15000,
+              "resourceRejected": 15271,
+              "solarRejected": 14249,
+              "indeterminate": 0,
+              "depthTruncated": 0,
+              "horizonTruncated": 0
+            },
+            "remaining": 707,
+            "budgetReached": true,
+            "exhausted": false,
+            "witnesses": [],
+            "shortcuts": []
+          }
+        },
+        {
+          "offsetMinutes": 30,
+          "direct": {
+            "allowed": false,
+            "reasons": [
+              "sun"
+            ],
+            "solar": {
+              "status": "unsafe",
+              "evaluations": 59,
+              "phase": "cruise",
+              "eventUtcMs": 1784154941480.255,
+              "bracketUtcMs": [
+                1784154941479.1106,
+                1784154941480.255
+              ],
+              "safeUntilUtcMs": 1784154941479.1106,
+              "reason": null
+            }
+          },
+          "search": {
+            "startUtcMs": 1784143475014.1143,
+            "firstMoves": 720,
+            "counts": {
+              "expanded": 41,
+              "forecasts": 15000,
+              "resourceRejected": 13220,
+              "solarRejected": 14280,
+              "indeterminate": 0,
+              "depthTruncated": 0,
+              "horizonTruncated": 0
+            },
+            "remaining": 679,
+            "budgetReached": true,
+            "exhausted": false,
+            "witnesses": [],
+            "shortcuts": []
+          }
+        },
+        {
+          "offsetMinutes": 60,
+          "direct": {
+            "allowed": false,
+            "reasons": [
+              "sun"
+            ],
+            "solar": {
+              "status": "unsafe",
+              "evaluations": 55,
+              "phase": "cruise",
+              "eventUtcMs": 1784155570854.9497,
+              "bracketUtcMs": [
+                1784155570853.8054,
+                1784155570854.9497
+              ],
+              "safeUntilUtcMs": 1784155570853.8054,
+              "reason": null
+            }
+          },
+          "search": {
+            "startUtcMs": 1784145275014.1143,
+            "firstMoves": 715,
+            "counts": {
+              "expanded": 37,
+              "forecasts": 15000,
+              "resourceRejected": 11058,
+              "solarRejected": 14285,
+              "indeterminate": 0,
+              "depthTruncated": 0,
+              "horizonTruncated": 0
+            },
+            "remaining": 678,
+            "budgetReached": true,
+            "exhausted": false,
+            "witnesses": [],
+            "shortcuts": []
+          }
+        }
+      ]
+    }
+  ],
+  "southernWitness": {
+    "settings": {
+      "status": "experimental-alternative-endpoints-not-owner-approved-playable-scenario",
+      "startId": "SCEL",
+      "targetId": "FACT",
+      "startUtc": "2026-06-21T22:10:00Z",
+      "initialFuelKg": 100000,
+      "path": [
+        "NZCH",
+        "YPPH",
+        "FACT"
+      ],
+      "stockVersion": "fixed-32000-research-1",
+      "stockKgPerAirport": 32000,
+      "stockProvenance": "Finite experimental game stocks; no change to the canonical campaign stock file or physical aircraft profile",
+      "targetCompletion": "after_turnaround"
+    },
+    "stockSha256": "a17a3803b608c1b1c5f7d5acedc1c5fa1172b3f8d28d6714c6153fdfc2c0854b",
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -270.6098698808594,
+      "westwardAroundWorld": true
+    },
+    "polarDays": [
+      {
+        "date": "2026-06-21",
+        "certificate": {
+          "status": "safe",
+          "safeUntilUtcMs": 1782086400000,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 289,
+          "reason": null
+        }
+      },
+      {
+        "date": "2026-06-22",
+        "certificate": {
+          "status": "safe",
+          "safeUntilUtcMs": 1782172800000,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 289,
+          "reason": null
+        }
+      },
+      {
+        "date": "2026-06-23",
+        "certificate": {
+          "status": "safe",
+          "safeUntilUtcMs": 1782259200000,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 289,
+          "reason": null
+        }
+      }
+    ],
+    "direct": {
+      "allowed": false,
+      "reasons": [
+        "sun"
+      ],
+      "arrivalUtcMs": 1782114547706.1016,
+      "solar": {
+        "status": "unsafe",
+        "evaluations": 122,
+        "phase": "cruise",
+        "eventUtcMs": 1782110237849.8076,
+        "bracketUtcMs": [
+          1782110237848.6633,
+          1782110237849.8076
+        ],
+        "safeUntilUtcMs": 1782110237848.6633,
+        "reason": null
+      },
+      "solarIndependentOfInitialFuel": true
+    },
+    "legs": [
+      {
+        "from": "SCEL",
+        "to": "NZCH",
+        "startUtcMs": 1782079800000,
+        "arrivalUtcMs": 1782120170697.0422,
+        "endUtcMs": 1782123470697.0422,
+        "distanceKm": 9325.965981538486,
+        "initialFuelKg": 100000,
+        "flight": {
+          "durationSeconds": 40370.697042344735,
+          "burnKg": 62618.77888000016,
+          "arrivalFuelKg": 37381.22111999984,
+          "takeoffMassKg": 226000,
+          "landingMassKg": 163381.22111999983,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 69381.22111999984,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 151,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782123470697.0422,
+          "reason": null
+        },
+        "phases": [
+          {
+            "label": "departure",
+            "route": {
+              "kind": "takeoff",
+              "legIndex": 0,
+              "startUtcMs": 1782079800000,
+              "endUtcMs": 1782080700000,
+              "location": {
+                "latitudeDeg": -33.393001556396484,
+                "longitudeDeg": -70.78579711914062
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "cruise",
+            "route": {
+              "kind": "cruise",
+              "legIndex": 0,
+              "startUtcMs": 1782080700000,
+              "endUtcMs": 1782119270697.0422,
+              "location": {
+                "latitudeDeg": -33.393001556396484,
+                "longitudeDeg": -70.78579711914062
+              },
+              "path": {
+                "from": {
+                  "latitudeDeg": -33.393001556396484,
+                  "longitudeDeg": -70.78579711914062
+                },
+                "to": {
+                  "latitudeDeg": -43.489029,
+                  "longitudeDeg": 172.532065
+                },
+                "start": [
+                  0.2747711719953786,
+                  -0.7884059998218917,
+                  -0.5503787627490083
+                ],
+                "tangent": [
+                  -0.7529971874607155,
+                  0.17950671218209416,
+                  -0.633066012322433
+                ],
+                "angleRad": 1.4638130748679057,
+                "distanceKm": 9325.965981538486
+              }
+            }
+          },
+          {
+            "label": "arrival",
+            "route": {
+              "kind": "landing",
+              "legIndex": 0,
+              "startUtcMs": 1782119270697.0422,
+              "endUtcMs": 1782120170697.0422,
+              "location": {
+                "latitudeDeg": -43.489029,
+                "longitudeDeg": 172.532065
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "service",
+            "route": {
+              "kind": "service",
+              "legIndex": 0,
+              "startUtcMs": 1782120170697.0422,
+              "endUtcMs": 1782120770697.0422,
+              "location": {
+                "latitudeDeg": -43.489029,
+                "longitudeDeg": 172.532065
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "refuelling",
+            "route": {
+              "kind": "service",
+              "legIndex": 0,
+              "startUtcMs": 1782120770697.0422,
+              "endUtcMs": 1782123470697.0422,
+              "location": {
+                "latitudeDeg": -43.489029,
+                "longitudeDeg": 172.532065
+              },
+              "path": null
+            }
+          }
+        ]
+      },
+      {
+        "from": "NZCH",
+        "to": "YPPH",
+        "startUtcMs": 1782123470697.0422,
+        "arrivalUtcMs": 1782146106435.8235,
+        "endUtcMs": 1782149406435.8235,
+        "distanceKm": 5037.850129088065,
+        "initialFuelKg": 69381.22111999984,
+        "flight": {
+          "durationSeconds": 22635.73878121069,
+          "burnKg": 34746.02583907242,
+          "arrivalFuelKg": 34635.19528092742,
+          "takeoffMassKg": 195381.22111999983,
+          "landingMassKg": 160635.1952809274,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 66635.19528092742,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 92,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782149406435.8235,
+          "reason": null
+        },
+        "phases": [
+          {
+            "label": "departure",
+            "route": {
+              "kind": "takeoff",
+              "legIndex": 1,
+              "startUtcMs": 1782123470697.0422,
+              "endUtcMs": 1782124370697.0422,
+              "location": {
+                "latitudeDeg": -43.489029,
+                "longitudeDeg": 172.532065
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "cruise",
+            "route": {
+              "kind": "cruise",
+              "legIndex": 1,
+              "startUtcMs": 1782124370697.0422,
+              "endUtcMs": 1782145206435.8235,
+              "location": {
+                "latitudeDeg": -43.489029,
+                "longitudeDeg": 172.532065
+              },
+              "path": {
+                "from": {
+                  "latitudeDeg": -43.489029,
+                  "longitudeDeg": 172.532065
+                },
+                "to": {
+                  "latitudeDeg": -31.94029998779297,
+                  "longitudeDeg": 115.96700286865234
+                },
+                "start": [
+                  -0.719352241971604,
+                  0.09429499363062288,
+                  -0.6882156683385141
+                ],
+                "tangent": [
+                  0.18901829597628644,
+                  0.979930832977171,
+                  -0.06330597418007429
+                ],
+                "angleRad": 0.7907460634943818,
+                "distanceKm": 5037.850129088065
+              }
+            }
+          },
+          {
+            "label": "arrival",
+            "route": {
+              "kind": "landing",
+              "legIndex": 1,
+              "startUtcMs": 1782145206435.8235,
+              "endUtcMs": 1782146106435.8235,
+              "location": {
+                "latitudeDeg": -31.94029998779297,
+                "longitudeDeg": 115.96700286865234
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "service",
+            "route": {
+              "kind": "service",
+              "legIndex": 1,
+              "startUtcMs": 1782146106435.8235,
+              "endUtcMs": 1782146706435.8235,
+              "location": {
+                "latitudeDeg": -31.94029998779297,
+                "longitudeDeg": 115.96700286865234
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "refuelling",
+            "route": {
+              "kind": "service",
+              "legIndex": 1,
+              "startUtcMs": 1782146706435.8235,
+              "endUtcMs": 1782149406435.8235,
+              "location": {
+                "latitudeDeg": -31.94029998779297,
+                "longitudeDeg": 115.96700286865234
+              },
+              "path": null
+            }
+          }
+        ]
+      },
+      {
+        "from": "YPPH",
+        "to": "FACT",
+        "startUtcMs": 1782149406435.8235,
+        "arrivalUtcMs": 1782187143745.039,
+        "endUtcMs": 1782190443745.039,
+        "distanceKm": 8689.242064881186,
+        "initialFuelKg": 66635.19528092742,
+        "flight": {
+          "durationSeconds": 37737.30921553728,
+          "burnKg": 58480.073421727706,
+          "arrivalFuelKg": 8155.121859199717,
+          "takeoffMassKg": 192635.1952809274,
+          "landingMassKg": 134155.12185919972,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 32000,
+          "fuelKg": 40155.12185919972,
+          "stockKg": 0,
+          "durationSeconds": 2700
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 142,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1782190443745.039,
+          "reason": null
+        },
+        "phases": [
+          {
+            "label": "departure",
+            "route": {
+              "kind": "takeoff",
+              "legIndex": 2,
+              "startUtcMs": 1782149406435.8235,
+              "endUtcMs": 1782150306435.8235,
+              "location": {
+                "latitudeDeg": -31.94029998779297,
+                "longitudeDeg": 115.96700286865234
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "cruise",
+            "route": {
+              "kind": "cruise",
+              "legIndex": 2,
+              "startUtcMs": 1782150306435.8235,
+              "endUtcMs": 1782186243745.039,
+              "location": {
+                "latitudeDeg": -31.94029998779297,
+                "longitudeDeg": 115.96700286865234
+              },
+              "path": {
+                "from": {
+                  "latitudeDeg": -31.94029998779297,
+                  "longitudeDeg": 115.96700286865234
+                },
+                "to": {
+                  "latitudeDeg": -33.97403,
+                  "longitudeDeg": 18.604333
+                },
+                "start": [
+                  -0.3715623470720612,
+                  0.7629305525823891,
+                  -0.5290353430297747
+                ],
+                "tangent": [
+                  0.8810893004975744,
+                  0.11017530010291038,
+                  -0.4599380912643881
+                ],
+                "angleRad": 1.3638722434163308,
+                "distanceKm": 8689.242064881186
+              }
+            }
+          },
+          {
+            "label": "arrival",
+            "route": {
+              "kind": "landing",
+              "legIndex": 2,
+              "startUtcMs": 1782186243745.039,
+              "endUtcMs": 1782187143745.039,
+              "location": {
+                "latitudeDeg": -33.97403,
+                "longitudeDeg": 18.604333
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "service",
+            "route": {
+              "kind": "service",
+              "legIndex": 2,
+              "startUtcMs": 1782187143745.039,
+              "endUtcMs": 1782187743745.039,
+              "location": {
+                "latitudeDeg": -33.97403,
+                "longitudeDeg": 18.604333
+              },
+              "path": null
+            }
+          },
+          {
+            "label": "refuelling",
+            "route": {
+              "kind": "service",
+              "legIndex": 2,
+              "startUtcMs": 1782187743745.039,
+              "endUtcMs": 1782190443745.039,
+              "location": {
+                "latitudeDeg": -33.97403,
+                "longitudeDeg": 18.604333
+              },
+              "path": null
+            }
+          }
+        ]
+      }
+    ],
+    "coarse": [
+      {
+        "to": "NZCH",
+        "status": "safe",
+        "sameEnd": true
+      },
+      {
+        "to": "YPPH",
+        "status": "safe",
+        "sameEnd": true
+      },
+      {
+        "to": "FACT",
+        "status": "safe",
+        "sameEnd": true
+      }
+    ],
+    "final": {
+      "airportId": "FACT",
+      "utcMs": 1782190443745.039,
+      "fuelKg": 40155.12185919972,
+      "distanceKm": 23053.058175507736,
+      "flights": 3,
+      "won": true,
+      "stockChangesKg": {
+        "FACT": 0,
+        "NZCH": 0,
+        "YPPH": 0
+      }
+    },
+    "interpretation": "Full western multi-refuelling numerical witness with alternative southern endpoints and explicitly different finite game stocks. Not SPB–Novosibirsk, not the science campaign, not an approved playable mission. No food/waiting; shared unchanged physics."
+  },
+  "goal": "A physically safe multi-refuelling westward route around Earth; direct eastern flight must be solar-unsafe. Longitude is research evidence, never an artificial flight/mission lock.",
+  "playableScenarioApproved": false,
+  "southernAlternativesFile": "westward-alternatives.json"
+}

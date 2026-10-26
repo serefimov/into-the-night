@@ -1,0 +1,809 @@
+[
+  {
+    "id": "BIAR",
+    "ourAirportsId": 117,
+    "iata": "AEY",
+    "icao": "BIAR",
+    "name": "Akureyri International Airport",
+    "country": "IS",
+    "continent": "EU",
+    "latitudeDeg": 65.656573,
+    "longitudeDeg": -18.072018,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236462,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "BIKF",
+    "ourAirportsId": 123,
+    "iata": "KEF",
+    "icao": "BIKF",
+    "name": "Keflavik International Airport",
+    "country": "IS",
+    "continent": "EU",
+    "latitudeDeg": 63.985001,
+    "longitudeDeg": -22.6056,
+    "elevationFt": 171,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236461,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3065.069,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236460,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3054.096,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "BKPR",
+    "ourAirportsId": 4614,
+    "iata": "PRN",
+    "icao": "BKPR",
+    "name": "Priština Adem Jashari International Airport",
+    "country": "XK",
+    "continent": "EU",
+    "latitudeDeg": 42.5728,
+    "longitudeDeg": 21.035801,
+    "elevationFt": 1789,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246235,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3040.075,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EBBR",
+    "ourAirportsId": 2155,
+    "iata": "BRU",
+    "icao": "EBBR",
+    "name": "Brussels Airport",
+    "country": "BE",
+    "continent": "EU",
+    "latitudeDeg": 50.901402,
+    "longitudeDeg": 4.48444,
+    "elevationFt": 175,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233637,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3638.093,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233636,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3211.068,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233635,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2987.04,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EBCI",
+    "ourAirportsId": 2157,
+    "iata": "CRL",
+    "icao": "EBCI",
+    "name": "Brussels South Charleroi Airport",
+    "country": "BE",
+    "continent": "EU",
+    "latitudeDeg": 50.461963,
+    "longitudeDeg": 4.459562,
+    "elevationFt": 614,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233634,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3055.01,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EBOS",
+    "ourAirportsId": 2163,
+    "iata": "OST",
+    "icao": "EBOS",
+    "name": "Ostend-Bruges International Airport",
+    "country": "BE",
+    "continent": "EU",
+    "latitudeDeg": 51.1998,
+    "longitudeDeg": 2.874673,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233628,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDB",
+    "ourAirportsId": 301881,
+    "iata": "BER",
+    "icao": "EDDB",
+    "name": "Berlin Brandenburg Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 52.361738,
+    "longitudeDeg": 13.502341,
+    "elevationFt": 157,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 337087,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "concrete",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 337086,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDC",
+    "ourAirportsId": 2210,
+    "iata": "DRS",
+    "icao": "EDDC",
+    "name": "Dresden Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 51.134123,
+    "longitudeDeg": 13.767831,
+    "elevationFt": 755,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236227,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2849.88,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDE",
+    "ourAirportsId": 2211,
+    "iata": "ERF",
+    "icao": "EDDE",
+    "name": "Erfurt-Weimar Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 50.978281,
+    "longitudeDeg": 10.960713,
+    "elevationFt": 1036,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236244,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2599.944,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDF",
+    "ourAirportsId": 2212,
+    "iata": "FRA",
+    "icao": "EDDF",
+    "name": "Frankfurt Main Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 50.026706,
+    "longitudeDeg": 8.55835,
+    "elevationFt": 364,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236133,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236134,
+        "ends": [
+          "07C",
+          "25C"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236135,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDG",
+    "ourAirportsId": 2213,
+    "iata": "FMO",
+    "icao": "EDDG",
+    "name": "Münster Osnabrück Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 52.133816,
+    "longitudeDeg": 7.688482,
+    "elevationFt": 160,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236199,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2169.871,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDH",
+    "ourAirportsId": 2214,
+    "iata": "HAM",
+    "icao": "EDDH",
+    "name": "Hamburg Helmut Schmidt Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 53.630402,
+    "longitudeDeg": 9.98823,
+    "elevationFt": 53,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236259,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3666.134,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236258,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3250.082,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDK",
+    "ourAirportsId": 2216,
+    "iata": "CGN",
+    "icao": "EDDK",
+    "name": "Cologne Bonn Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 50.865898,
+    "longitudeDeg": 7.14274,
+    "elevationFt": 302,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236187,
+        "ends": [
+          "13L",
+          "31R"
+        ],
+        "lengthM": 3814.877,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236185,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2458.822,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236186,
+        "ends": [
+          "13R",
+          "31L"
+        ],
+        "lengthM": 1862.938,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDL",
+    "ourAirportsId": 2217,
+    "iata": "DUS",
+    "icao": "EDDL",
+    "name": "Düsseldorf Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 51.289501,
+    "longitudeDeg": 6.76678,
+    "elevationFt": 147,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236211,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236212,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDM",
+    "ourAirportsId": 2218,
+    "iata": "MUC",
+    "icao": "EDDM",
+    "name": "Munich Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 48.353802,
+    "longitudeDeg": 11.7861,
+    "elevationFt": 1487,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236228,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236229,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDN",
+    "ourAirportsId": 2219,
+    "iata": "NUE",
+    "icao": "EDDN",
+    "name": "Nuremberg Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 49.498699,
+    "longitudeDeg": 11.078056,
+    "elevationFt": 1046,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236280,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDP",
+    "ourAirportsId": 2220,
+    "iata": "LEJ",
+    "icao": "EDDP",
+    "name": "Leipzig/Halle Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 51.420657,
+    "longitudeDeg": 12.232705,
+    "elevationFt": 465,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236156,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236157,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 60.35,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDS",
+    "ourAirportsId": 2222,
+    "iata": "STR",
+    "icao": "EDDS",
+    "name": "Stuttgart Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 48.689899,
+    "longitudeDeg": 9.22196,
+    "elevationFt": 1276,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236230,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3344.875,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 608377,
+        "ends": [
+          "H-NORTH",
+          ""
+        ],
+        "lengthM": 29.87,
+        "widthM": 29.87,
+        "surface": "ASPH",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 608378,
+        "ends": [
+          "H-SOUTH",
+          ""
+        ],
+        "lengthM": 29.87,
+        "widthM": 29.87,
+        "surface": "ASPH",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDV",
+    "ourAirportsId": 2224,
+    "iata": "HAJ",
+    "icao": "EDDV",
+    "name": "Hannover Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 52.461102,
+    "longitudeDeg": 9.68508,
+    "elevationFt": 183,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236235,
+        "ends": [
+          "09L",
+          "27R"
+        ],
+        "lengthM": 3789.883,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236234,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 2339.95,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236233,
+        "ends": [
+          "09C",
+          "27C"
+        ],
+        "lengthM": 776.63,
+        "widthM": 22.86,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EDDW",
+    "ourAirportsId": 2225,
+    "iata": "BRE",
+    "icao": "EDDW",
+    "name": "Bremen Airport",
+    "country": "DE",
+    "continent": "EU",
+    "latitudeDeg": 53.046786,
+    "longitudeDeg": 8.78932,
+    "elevationFt": 14,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236162,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2634.082,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236161,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 700.126,
+        "widthM": 22.86,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

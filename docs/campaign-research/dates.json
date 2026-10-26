@@ -1,0 +1,444 @@
+[
+  {
+    "date": "2026-06-21",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1782086400000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1781999285007.4768,
+      "sunriseUtcMs": 1782002885007.4768,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 241
+      },
+      "safeCount": 0,
+      "firstUtcMs": null,
+      "lastUtcMs": null,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-07-15",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1784160000000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1784074444747.9248,
+      "sunriseUtcMs": 1784078044747.9248,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 241
+      },
+      "safeCount": 0,
+      "firstUtcMs": null,
+      "lastUtcMs": null,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-01",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1785628800000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1785545352631.7598,
+      "sunriseUtcMs": 1785548952631.7598,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 241
+      },
+      "safeCount": 0,
+      "firstUtcMs": null,
+      "lastUtcMs": null,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-10",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1786406400000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1786324188959.8848,
+      "sunriseUtcMs": 1786327788959.8848,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 241
+      },
+      "safeCount": 0,
+      "firstUtcMs": null,
+      "lastUtcMs": null,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-15",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1786838400000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1786756886850.357,
+      "sunriseUtcMs": 1786760486850.357,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 241
+      },
+      "safeCount": 0,
+      "firstUtcMs": null,
+      "lastUtcMs": null,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-16",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1786924800000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1786843426756.668,
+      "sunriseUtcMs": 1786847026756.668,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 240,
+        "safe": 1
+      },
+      "safeCount": 1,
+      "firstUtcMs": 1786902120000,
+      "lastUtcMs": 1786902120000,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1787011200000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1786929966703.0334,
+      "sunriseUtcMs": 1786933566703.0334,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 235,
+        "safe": 6
+      },
+      "safeCount": 6,
+      "firstUtcMs": 1786988340000,
+      "lastUtcMs": 1786988640000,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1787097600000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1787016506667.7095,
+      "sunriseUtcMs": 1787020106667.7095,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 230,
+        "safe": 11
+      },
+      "safeCount": 11,
+      "firstUtcMs": 1787074560000,
+      "lastUtcMs": 1787075160000,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1787184000000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1787103046626.663,
+      "sunriseUtcMs": 1787106646626.663,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 225,
+        "safe": 16
+      },
+      "safeCount": 16,
+      "firstUtcMs": 1787160780000,
+      "lastUtcMs": 1787161680000,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-20",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1787270400000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1787189586561.5845,
+      "sunriseUtcMs": 1787193186561.5845,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 222,
+        "safe": 19
+      },
+      "safeCount": 19,
+      "firstUtcMs": 1787247060000,
+      "lastUtcMs": 1787248140000,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-21",
+    "polarDay": {
+      "status": "safe",
+      "safeUntilUtcMs": 1787356800000,
+      "bracket": null,
+      "witnessUtcMs": null,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1787276126455.3071,
+      "sunriseUtcMs": 1787279726455.3071,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 217,
+        "safe": 24
+      },
+      "safeCount": 24,
+      "firstUtcMs": 1787333280000,
+      "lastUtcMs": 1787334660000,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  },
+  {
+    "date": "2026-08-22",
+    "polarDay": {
+      "status": "unsafe",
+      "safeUntilUtcMs": 1787436927049.2554,
+      "bracket": [
+        1787436927049.2554,
+        1787436927053.833
+      ],
+      "witnessUtcMs": 1787436927053.833,
+      "evaluations": 289,
+      "reason": null
+    },
+    "originalOneHourStart": {
+      "utcMs": 1787362666295.2422,
+      "sunriseUtcMs": 1787366266295.2422,
+      "counts": {
+        "unverified_airport": 528,
+        "empty_legal_fuel_interval": 13,
+        "sun_even_at_fastest_ground_turn": 641
+      },
+      "firstMoveRuledOutWithinCatalog": true,
+      "potentialOrUnresolved": []
+    },
+    "directDepartureSamples": {
+      "counts": {
+        "unsafe": 212,
+        "safe": 29
+      },
+      "safeCount": 29,
+      "firstUtcMs": 1787419500000,
+      "lastUtcMs": 1787421180000,
+      "continuousDepartureWindowCertified": false,
+      "grid": {
+        "startUtcHour": 16,
+        "endUtcHour": 20,
+        "stepMinutes": 1
+      }
+    }
+  }
+]

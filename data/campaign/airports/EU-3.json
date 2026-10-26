@@ -1,0 +1,699 @@
+[
+  {
+    "id": "EGBB",
+    "ourAirportsId": 2389,
+    "iata": "BHX",
+    "icao": "EGBB",
+    "name": "Birmingham Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 52.453899,
+    "longitudeDeg": -1.74803,
+    "elevationFt": 327,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239421,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3051.962,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGCC",
+    "ourAirportsId": 2398,
+    "iata": "MAN",
+    "icao": "EGCC",
+    "name": "Manchester Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 53.349375,
+    "longitudeDeg": -2.279521,
+    "elevationFt": 257,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239539,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239540,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3048,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGFF",
+    "ourAirportsId": 2415,
+    "iata": "CWL",
+    "icao": "EGFF",
+    "name": "Cardiff International Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 51.396702,
+    "longitudeDeg": -3.34333,
+    "elevationFt": 220,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239594,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2353.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGGD",
+    "ourAirportsId": 2417,
+    "iata": "BRS",
+    "icao": "EGGD",
+    "name": "Bristol Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 51.382326,
+    "longitudeDeg": -2.716453,
+    "elevationFt": 622,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239538,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2011.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGGP",
+    "ourAirportsId": 2418,
+    "iata": "LPL",
+    "icao": "EGGP",
+    "name": "Liverpool John Lennon Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 53.334863,
+    "longitudeDeg": -2.849637,
+    "elevationFt": 80,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239580,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2285.086,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGGW",
+    "ourAirportsId": 2419,
+    "iata": "LTN",
+    "icao": "EGGW",
+    "name": "London Luton Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 51.874699,
+    "longitudeDeg": -0.368333,
+    "elevationFt": 526,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239402,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2161.946,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGKK",
+    "ourAirportsId": 2429,
+    "iata": "LGW",
+    "icao": "EGKK",
+    "name": "London Gatwick Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 51.148744,
+    "longitudeDeg": -0.185739,
+    "elevationFt": 202,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239573,
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "lengthM": 3317.138,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239574,
+        "ends": [
+          "08L",
+          "26R"
+        ],
+        "lengthM": 2560.93,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGLL",
+    "ourAirportsId": 2434,
+    "iata": "LHR",
+    "icao": "EGLL",
+    "name": "London Heathrow Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 51.470748,
+    "longitudeDeg": -0.459909,
+    "elevationFt": 83,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239399,
+        "ends": [
+          "09L",
+          "27R"
+        ],
+        "lengthM": 3901.135,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239398,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 3657.905,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGNM",
+    "ourAirportsId": 2444,
+    "iata": "LBA",
+    "icao": "EGNM",
+    "name": "Leeds Bradford Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 53.865898,
+    "longitudeDeg": -1.66057,
+    "elevationFt": 681,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239428,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2249.729,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGNS",
+    "ourAirportsId": 2447,
+    "iata": "IOM",
+    "icao": "EGNS",
+    "name": "Isle of Man Airport",
+    "country": "IM",
+    "continent": "EU",
+    "latitudeDeg": 54.083081,
+    "longitudeDeg": -4.623871,
+    "elevationFt": 52,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236593,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2110.13,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236592,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 1199.083,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGNT",
+    "ourAirportsId": 2448,
+    "iata": "NCL",
+    "icao": "EGNT",
+    "name": "Newcastle International Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 55.037958,
+    "longitudeDeg": -1.689577,
+    "elevationFt": 266,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239604,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2329.891,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGNX",
+    "ourAirportsId": 2450,
+    "iata": "EMA",
+    "icao": "EGNX",
+    "name": "East Midlands Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 52.8311,
+    "longitudeDeg": -1.32806,
+    "elevationFt": 306,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239595,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2894.076,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGPD",
+    "ourAirportsId": 2459,
+    "iata": "ABZ",
+    "icao": "EGPD",
+    "name": "Aberdeen International Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 57.2019,
+    "longitudeDeg": -2.19778,
+    "elevationFt": 215,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239523,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 1952.854,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGPF",
+    "ourAirportsId": 2461,
+    "iata": "GLA",
+    "icao": "EGPF",
+    "name": "Glasgow Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 55.871899,
+    "longitudeDeg": -4.43306,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239535,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2660.904,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGPH",
+    "ourAirportsId": 2462,
+    "iata": "EDI",
+    "icao": "EGPH",
+    "name": "Edinburgh Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 55.950145,
+    "longitudeDeg": -3.372288,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239588,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2557.882,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGPK",
+    "ourAirportsId": 2464,
+    "iata": "PIK",
+    "icao": "EGPK",
+    "name": "Glasgow Prestwick Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 55.501499,
+    "longitudeDeg": -4.577182,
+    "elevationFt": 65,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239465,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2987.04,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239464,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 1905.914,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EGSS",
+    "ourAirportsId": 2476,
+    "iata": "STN",
+    "icao": "EGSS",
+    "name": "London Stansted Airport",
+    "country": "GB",
+    "continent": "EU",
+    "latitudeDeg": 51.884998,
+    "longitudeDeg": 0.235,
+    "elevationFt": 348,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239531,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3048.914,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EHAM",
+    "ourAirportsId": 2513,
+    "iata": "AMS",
+    "icao": "EHAM",
+    "name": "Amsterdam Airport Schiphol",
+    "country": "NL",
+    "continent": "EU",
+    "latitudeDeg": 52.308601,
+    "longitudeDeg": 4.76389,
+    "elevationFt": -11,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237928,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.35,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237926,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3453.079,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237925,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3439.058,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EHBK",
+    "ourAirportsId": 2515,
+    "iata": "MST",
+    "icao": "EHBK",
+    "name": "Maastricht Aachen Airport",
+    "country": "NL",
+    "continent": "EU",
+    "latitudeDeg": 50.911087,
+    "longitudeDeg": 5.769401,
+    "elevationFt": 375,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237921,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2749.906,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EHEH",
+    "ourAirportsId": 2518,
+    "iata": "EIN",
+    "icao": "EHEH",
+    "name": "Eindhoven Airport",
+    "country": "NL",
+    "continent": "EU",
+    "latitudeDeg": 51.4500999451,
+    "longitudeDeg": 5.37452983856,
+    "elevationFt": 74,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237941,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

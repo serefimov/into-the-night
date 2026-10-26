@@ -1,0 +1,655 @@
+[
+  {
+    "id": "LOWK",
+    "ourAirportsId": 4435,
+    "iata": "KLU",
+    "icao": "LOWK",
+    "name": "Klagenfurt Airport",
+    "country": "AT",
+    "continent": "EU",
+    "latitudeDeg": 46.642502,
+    "longitudeDeg": 14.3377,
+    "elevationFt": 1472,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233585,
+        "ends": [
+          "10L",
+          "28R"
+        ],
+        "lengthM": 2720.035,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233584,
+        "ends": [
+          "10R",
+          "28L"
+        ],
+        "lengthM": 739.75,
+        "widthM": 27.432,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LOWL",
+    "ourAirportsId": 4432,
+    "iata": "LNZ",
+    "icao": "LOWL",
+    "name": "Linz-Hörsching Airport",
+    "country": "AT",
+    "continent": "EU",
+    "latitudeDeg": 48.235362,
+    "longitudeDeg": 14.188128,
+    "elevationFt": 980,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233586,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233587,
+        "ends": [
+          "08E",
+          "26E"
+        ],
+        "lengthM": 659.892,
+        "widthM": 45.11,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LOWS",
+    "ourAirportsId": 4433,
+    "iata": "SZG",
+    "icao": "LOWS",
+    "name": "Salzburg Airport",
+    "country": "AT",
+    "continent": "EU",
+    "latitudeDeg": 47.793301,
+    "longitudeDeg": 13.0043,
+    "elevationFt": 1411,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233581,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2749.906,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LOWW",
+    "ourAirportsId": 4434,
+    "iata": "VIE",
+    "icao": "LOWW",
+    "name": "Vienna International Airport",
+    "country": "AT",
+    "continent": "EU",
+    "latitudeDeg": 48.110298,
+    "longitudeDeg": 16.5697,
+    "elevationFt": 600,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233578,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233577,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LPFR",
+    "ourAirportsId": 4448,
+    "iata": "FAO",
+    "icao": "LPFR",
+    "name": "Faro - Gago Coutinho International Airport",
+    "country": "PT",
+    "continent": "EU",
+    "latitudeDeg": 37.015909,
+    "longitudeDeg": -7.970939,
+    "elevationFt": 24,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238348,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2489.911,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LPMA",
+    "ourAirportsId": 4452,
+    "iata": "FNC",
+    "icao": "LPMA",
+    "name": "Cristiano Ronaldo International Airport",
+    "country": "PT",
+    "continent": "EU",
+    "latitudeDeg": 32.697812,
+    "longitudeDeg": -16.774613,
+    "elevationFt": 192,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238328,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2776.728,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LPPD",
+    "ourAirportsId": 4456,
+    "iata": "PDL",
+    "icao": "LPPD",
+    "name": "João Paulo II Airport",
+    "country": "PT",
+    "continent": "EU",
+    "latitudeDeg": 37.7411994934,
+    "longitudeDeg": -25.6979007721,
+    "elevationFt": 259,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238329,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2496.922,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LPPR",
+    "ourAirportsId": 4459,
+    "iata": "OPO",
+    "icao": "LPPR",
+    "name": "Francisco de Sá Carneiro Airport",
+    "country": "PT",
+    "continent": "EU",
+    "latitudeDeg": 41.2481002808,
+    "longitudeDeg": -8.68138980865,
+    "elevationFt": 228,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238322,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3479.902,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LPPT",
+    "ourAirportsId": 4461,
+    "iata": "LIS",
+    "icao": "LPPT",
+    "name": "Lisbon Humberto Delgado Airport",
+    "country": "PT",
+    "continent": "EU",
+    "latitudeDeg": 38.7813,
+    "longitudeDeg": -9.13592,
+    "elevationFt": 374,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238344,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3810,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LQBK",
+    "ourAirportsId": 4467,
+    "iata": "BNX",
+    "icao": "LQBK",
+    "name": "Banja Luka International Airport",
+    "country": "BA",
+    "continent": "EU",
+    "latitudeDeg": 44.941399,
+    "longitudeDeg": 17.297501,
+    "elevationFt": 400,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233685,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LQMO",
+    "ourAirportsId": 4468,
+    "iata": "OMO",
+    "icao": "LQMO",
+    "name": "Mostar International Airport",
+    "country": "BA",
+    "continent": "EU",
+    "latitudeDeg": 43.282489,
+    "longitudeDeg": 17.846101,
+    "elevationFt": 156,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233688,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 48.158,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LQSA",
+    "ourAirportsId": 4469,
+    "iata": "SJJ",
+    "icao": "LQSA",
+    "name": "Sarajevo International Airport",
+    "country": "BA",
+    "continent": "EU",
+    "latitudeDeg": 43.8246,
+    "longitudeDeg": 18.331499,
+    "elevationFt": 1708,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233686,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2641.397,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LQTZ",
+    "ourAirportsId": 4470,
+    "iata": "TZL",
+    "icao": "LQTZ",
+    "name": "Tuzla International Airport",
+    "country": "BA",
+    "continent": "EU",
+    "latitudeDeg": 44.459858,
+    "longitudeDeg": 18.723627,
+    "elevationFt": 784,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233687,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2484.73,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRBC",
+    "ourAirportsId": 4472,
+    "iata": "BCM",
+    "icao": "LRBC",
+    "name": "Bacău George Enescu International  Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 46.5219,
+    "longitudeDeg": 26.910299,
+    "elevationFt": 607,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238398,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 2500.274,
+        "widthM": 79.858,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRBS",
+    "ourAirportsId": 4474,
+    "iata": "BBU",
+    "icao": "LRBS",
+    "name": "Bucharest Băneasa Aurel Vlaicu International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 44.503133,
+    "longitudeDeg": 26.102944,
+    "elevationFt": 297,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238399,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRBV",
+    "ourAirportsId": 333670,
+    "iata": "GHV",
+    "icao": "LRBV",
+    "name": "Brașov-Ghimbav International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 45.70558,
+    "longitudeDeg": 25.522871,
+    "elevationFt": 1740,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 510727,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2820.01,
+        "widthM": 45.11,
+        "surface": "CONC",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRCK",
+    "ourAirportsId": 4475,
+    "iata": "CND",
+    "icao": "LRCK",
+    "name": "Mihail Kogălniceanu International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 44.362202,
+    "longitudeDeg": 28.4883,
+    "elevationFt": 353,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238409,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRCL",
+    "ourAirportsId": 4476,
+    "iata": "CLJ",
+    "icao": "LRCL",
+    "name": "Avram Iancu Cluj International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 46.786042,
+    "longitudeDeg": 23.685733,
+    "elevationFt": 1039,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238395,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2040.026,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRCV",
+    "ourAirportsId": 4479,
+    "iata": "CRA",
+    "icao": "LRCV",
+    "name": "Craiova International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 44.3181,
+    "longitudeDeg": 23.888599,
+    "elevationFt": 626,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238406,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2500.274,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LRIA",
+    "ourAirportsId": 4480,
+    "iata": "IAS",
+    "icao": "LRIA",
+    "name": "Iaşi International Airport",
+    "country": "RO",
+    "continent": "EU",
+    "latitudeDeg": 47.179633,
+    "longitudeDeg": 27.621431,
+    "elevationFt": 411,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238410,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

@@ -1,0 +1,710 @@
+[
+  {
+    "id": "OSAP",
+    "ourAirportsId": 5302,
+    "iata": "ALP",
+    "icao": "OSAP",
+    "name": "Aleppo International Airport",
+    "country": "SY",
+    "continent": "AS",
+    "latitudeDeg": 36.181262,
+    "longitudeDeg": 37.226869,
+    "elevationFt": 1276,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239077,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2909.926,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OSDI",
+    "ourAirportsId": 5303,
+    "iata": "DAM",
+    "icao": "OSDI",
+    "name": "Damascus International Airport",
+    "country": "SY",
+    "continent": "AS",
+    "latitudeDeg": 33.4114990234375,
+    "longitudeDeg": 36.51559829711914,
+    "elevationFt": 2020,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239085,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OTBD",
+    "ourAirportsId": 5308,
+    "iata": "DIA",
+    "icao": "OTBD",
+    "name": "Doha International Airport",
+    "country": "QA",
+    "continent": "AS",
+    "latitudeDeg": 25.259431,
+    "longitudeDeg": 51.565528,
+    "elevationFt": 35,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238379,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 4572,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OTHH",
+    "ourAirportsId": 44686,
+    "iata": "DOH",
+    "icao": "OTHH",
+    "name": "Hamad International Airport",
+    "country": "QA",
+    "continent": "AS",
+    "latitudeDeg": 25.273056,
+    "longitudeDeg": 51.608056,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 312710,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 4849.978,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 312712,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 4250.131,
+        "widthM": 60.046,
+        "surface": "Asphalt",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OYAA",
+    "ourAirportsId": 5311,
+    "iata": "ADE",
+    "icao": "OYAA",
+    "name": "Aden International Airport",
+    "country": "YE",
+    "continent": "AS",
+    "latitudeDeg": 12.829564,
+    "longitudeDeg": 45.029976,
+    "elevationFt": 7,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246245,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OYRN",
+    "ourAirportsId": 5317,
+    "iata": "RIY",
+    "icao": "OYRN",
+    "name": "Riyan International Airport",
+    "country": "YE",
+    "continent": "AS",
+    "latitudeDeg": 14.662241,
+    "longitudeDeg": 49.375289,
+    "elevationFt": 54,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246242,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OYSN",
+    "ourAirportsId": 5318,
+    "iata": "SAH",
+    "icao": "OYSN",
+    "name": "Sanaa International Airport",
+    "country": "YE",
+    "continent": "AS",
+    "latitudeDeg": 15.4763,
+    "longitudeDeg": 44.2197,
+    "elevationFt": 7216,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246248,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3251.911,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OYSY",
+    "ourAirportsId": 5320,
+    "iata": "GXF",
+    "icao": "OYSY",
+    "name": "Seiyun Hadhramaut International Airport",
+    "country": "YE",
+    "continent": "AS",
+    "latitudeDeg": 15.965887,
+    "longitudeDeg": 48.788146,
+    "elevationFt": 2097,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246251,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 36.576,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RCKH",
+    "ourAirportsId": 5516,
+    "iata": "KHH",
+    "icao": "RCKH",
+    "name": "Kaohsiung International Airport",
+    "country": "TW",
+    "continent": "AS",
+    "latitudeDeg": 22.577101,
+    "longitudeDeg": 120.349998,
+    "elevationFt": 31,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239315,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3150.108,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RCMQ",
+    "ourAirportsId": 5520,
+    "iata": "RMQ",
+    "icao": "RCMQ",
+    "name": "Taichung International Airport / Ching Chuang Kang Air Base",
+    "country": "TW",
+    "continent": "AS",
+    "latitudeDeg": 24.2647,
+    "longitudeDeg": 120.621002,
+    "elevationFt": 663,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239321,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3657.6,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RCNN",
+    "ourAirportsId": 5522,
+    "iata": "TNN",
+    "icao": "RCNN",
+    "name": "Tainan International Airport / Tainan Air Base",
+    "country": "TW",
+    "continent": "AS",
+    "latitudeDeg": 22.950399,
+    "longitudeDeg": 120.206001,
+    "elevationFt": 63,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239333,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239334,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RCQC",
+    "ourAirportsId": 5524,
+    "iata": "MZG",
+    "icao": "RCQC",
+    "name": "Penghu Magong Airport",
+    "country": "TW",
+    "continent": "AS",
+    "latitudeDeg": 23.568701,
+    "longitudeDeg": 119.627998,
+    "elevationFt": 103,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239320,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RCSS",
+    "ourAirportsId": 5527,
+    "iata": "TSA",
+    "icao": "RCSS",
+    "name": "Taipei Songshan International Airport",
+    "country": "TW",
+    "continent": "AS",
+    "latitudeDeg": 25.067244,
+    "longitudeDeg": 121.552822,
+    "elevationFt": 18,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239322,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2605.126,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RCTP",
+    "ourAirportsId": 5528,
+    "iata": "TPE",
+    "icao": "RCTP",
+    "name": "Taiwan Taoyuan International Airport",
+    "country": "TW",
+    "continent": "AS",
+    "latitudeDeg": 25.0777,
+    "longitudeDeg": 121.233002,
+    "elevationFt": 106,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239327,
+        "ends": [
+          "05L",
+          "23R"
+        ],
+        "lengthM": 3660.038,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239328,
+        "ends": [
+          "05R",
+          "23L"
+        ],
+        "lengthM": 3350.057,
+        "widthM": 60.046,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RCYU",
+    "ourAirportsId": 5530,
+    "iata": "HUN",
+    "icao": "RCYU",
+    "name": "Hualien Chiashan Airport",
+    "country": "TW",
+    "continent": "AS",
+    "latitudeDeg": 24.023163,
+    "longitudeDeg": 121.617991,
+    "elevationFt": 52,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 255979,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2749.906,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 239323,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 2744.724,
+        "widthM": 22.86,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJAA",
+    "ourAirportsId": 5531,
+    "iata": "NRT",
+    "icao": "RJAA",
+    "name": "Narita International Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 35.76858,
+    "longitudeDeg": 140.388714,
+    "elevationFt": 141,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237142,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237143,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJAH",
+    "ourAirportsId": 5533,
+    "iata": "IBR",
+    "icao": "RJAH",
+    "name": "Ibaraki Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 36.181456,
+    "longitudeDeg": 140.414434,
+    "elevationFt": 105,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237157,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.72,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 606090,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 2699.918,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJBB",
+    "ourAirportsId": 5536,
+    "iata": "KIX",
+    "icao": "RJBB",
+    "name": "Kansai International Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.427299,
+    "longitudeDeg": 135.244003,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 308417,
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237239,
+        "ends": [
+          "06R",
+          "24L"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJBE",
+    "ourAirportsId": 5538,
+    "iata": "UKB",
+    "icao": "RJBE",
+    "name": "Kobe Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 34.632801,
+    "longitudeDeg": 135.223999,
+    "elevationFt": 22,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237119,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "RJCC",
+    "ourAirportsId": 5544,
+    "iata": "CTS",
+    "icao": "RJCC",
+    "name": "New Chitose Airport",
+    "country": "JP",
+    "continent": "AS",
+    "latitudeDeg": 42.774753,
+    "longitudeDeg": 141.690414,
+    "elevationFt": 82,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237177,
+        "ends": [
+          "01R",
+          "19L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237178,
+        "ends": [
+          "01L",
+          "19R"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

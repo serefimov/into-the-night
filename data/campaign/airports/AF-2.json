@@ -1,0 +1,721 @@
+[
+  {
+    "id": "DNAA",
+    "ourAirportsId": 2104,
+    "iata": "ABV",
+    "icao": "DNAA",
+    "name": "Nnamdi Azikiwe International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 9.00679,
+    "longitudeDeg": 7.26317,
+    "elevationFt": 1123,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237894,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3609.442,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNAS",
+    "ourAirportsId": 300781,
+    "iata": "ABB",
+    "icao": "DNAS",
+    "name": "Asaba International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 6.204167,
+    "longitudeDeg": 6.665278,
+    "elevationFt": 305,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 327493,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 57.912,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNBC",
+    "ourAirportsId": 323056,
+    "iata": "BCU",
+    "icao": "DNBC",
+    "name": "Sir Abubakar Tafawa Balewa Bauchi State International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 10.482833,
+    "longitudeDeg": 9.744,
+    "elevationFt": 1965,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 323057,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3399.739,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNEN",
+    "ourAirportsId": 2108,
+    "iata": "ENU",
+    "icao": "DNEN",
+    "name": "Akanu Ibiam International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 6.473718,
+    "longitudeDeg": 7.560463,
+    "elevationFt": 466,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237913,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2401.519,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNIL",
+    "ourAirportsId": 2111,
+    "iata": "ILR",
+    "icao": "DNIL",
+    "name": "General Tunde Idiagbon International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 8.44021,
+    "longitudeDeg": 4.49392,
+    "elevationFt": 1126,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237915,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3099.511,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNKA",
+    "ourAirportsId": 2114,
+    "iata": "KAD",
+    "icao": "DNKA",
+    "name": "Kaduna International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 10.696,
+    "longitudeDeg": 7.32011,
+    "elevationFt": 2073,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237905,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNKN",
+    "ourAirportsId": 2115,
+    "iata": "KAN",
+    "icao": "DNKN",
+    "name": "Mallam Aminu Kano International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 12.045613,
+    "longitudeDeg": 8.523566,
+    "elevationFt": 1562,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237892,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3301.289,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237891,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2450.592,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNMA",
+    "ourAirportsId": 2116,
+    "iata": "MIU",
+    "icao": "DNMA",
+    "name": "Maiduguri International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 11.854163,
+    "longitudeDeg": 13.080702,
+    "elevationFt": 1099,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237896,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3001.061,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNMM",
+    "ourAirportsId": 2118,
+    "iata": "LOS",
+    "icao": "DNMM",
+    "name": "Murtala Muhammed International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 6.57737,
+    "longitudeDeg": 3.32116,
+    "elevationFt": 135,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237902,
+        "ends": [
+          "18R",
+          "36L"
+        ],
+        "lengthM": 3899.611,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237903,
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "lengthM": 2742.286,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNPO",
+    "ourAirportsId": 2120,
+    "iata": "PHC",
+    "icao": "DNPO",
+    "name": "Port Harcourt International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 5.01549,
+    "longitudeDeg": 6.94959,
+    "elevationFt": 87,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237904,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DNSO",
+    "ourAirportsId": 2121,
+    "iata": "SKO",
+    "icao": "DNSO",
+    "name": "Sadiq Abubakar III International Airport",
+    "country": "NG",
+    "continent": "AF",
+    "latitudeDeg": 12.915729,
+    "longitudeDeg": 5.207547,
+    "elevationFt": 1010,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237893,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 3000.451,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DRRN",
+    "ourAirportsId": 2125,
+    "iata": "NIM",
+    "icao": "DRRN",
+    "name": "Diori Hamani International Airport",
+    "country": "NE",
+    "continent": "AF",
+    "latitudeDeg": 13.4815,
+    "longitudeDeg": 2.18361,
+    "elevationFt": 732,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237877,
+        "ends": [
+          "09L",
+          "27R"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 29.87,
+        "surface": "LAT",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 237876,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "BITUM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DTTA",
+    "ourAirportsId": 2133,
+    "iata": "TUN",
+    "icao": "DTTA",
+    "name": "Tunis Carthage International Airport",
+    "country": "TN",
+    "continent": "AF",
+    "latitudeDeg": 36.851002,
+    "longitudeDeg": 10.2272,
+    "elevationFt": 22,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239215,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3200.095,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 239216,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2840.126,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DTTJ",
+    "ourAirportsId": 2139,
+    "iata": "DJE",
+    "icao": "DTTJ",
+    "name": "Djerba Zarzis International Airport",
+    "country": "TN",
+    "continent": "AF",
+    "latitudeDeg": 33.873719,
+    "longitudeDeg": 10.7773,
+    "elevationFt": 19,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239226,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3100.121,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DXNG",
+    "ourAirportsId": 2143,
+    "iata": "LRL",
+    "icao": "DXNG",
+    "name": "Niamtougou International Airport",
+    "country": "TG",
+    "continent": "AF",
+    "latitudeDeg": 9.766675,
+    "longitudeDeg": 1.090944,
+    "elevationFt": 1515,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239211,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "DXXX",
+    "ourAirportsId": 2144,
+    "iata": "LFW",
+    "icao": "DXXX",
+    "name": "Lomé–Tokoin International Airport",
+    "country": "TG",
+    "continent": "AF",
+    "latitudeDeg": 6.16561,
+    "longitudeDeg": 1.25451,
+    "elevationFt": 72,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239210,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3001.366,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "EES",
+    "ourAirportsId": 2357,
+    "iata": "EES",
+    "icao": "HEBR",
+    "name": "Berenice International Airport / Banas Cape Air Base",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 23.980437,
+    "longitudeDeg": 35.460277,
+    "elevationFt": 108,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235552,
+        "ends": [
+          "13L",
+          "31R"
+        ],
+        "lengthM": 3026.664,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 235551,
+        "ends": [
+          "13R",
+          "31L"
+        ],
+        "lengthM": 2999.232,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 235553,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2904.744,
+        "widthM": 39.929,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FABL",
+    "ourAirportsId": 2772,
+    "iata": "BFN",
+    "icao": "FABL",
+    "name": "Bram Fischer International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -29.092699,
+    "longitudeDeg": 26.302401,
+    "elevationFt": 4457,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238817,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2559.101,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238818,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2195.17,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FACT",
+    "ourAirportsId": 2775,
+    "iata": "CPT",
+    "icao": "FACT",
+    "name": "Cape Town International Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -33.97403,
+    "longitudeDeg": 18.604333,
+    "elevationFt": 151,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238798,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3201.01,
+        "widthM": 60.96,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238799,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 1701.089,
+        "widthM": 46.025,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "FAEL",
+    "ourAirportsId": 2779,
+    "iata": "ELS",
+    "icao": "FAEL",
+    "name": "King Phalo Airport",
+    "country": "ZA",
+    "continent": "AF",
+    "latitudeDeg": -33.035599,
+    "longitudeDeg": 27.825899,
+    "elevationFt": 435,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238753,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 1939.138,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238752,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 1584.96,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

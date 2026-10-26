@@ -1,0 +1,22 @@
+{
+  "state": {
+    "airportId": "UNNT",
+    "utcMs": 1787267158681.5867,
+    "fuelKg": 100964.8,
+    "flights": 1,
+    "distanceKm": 3095.4512565336554,
+    "won": false,
+    "stocksReference": "data/campaign/fuel.json",
+    "stockChangesKg": {
+      "UNNT": 288914.76683253126
+    }
+  },
+  "testedDestinations": 654,
+  "counts": {
+    "sun": 191,
+    "landing_mass+sun": 442,
+    "fuel_or_reference_reserve+sun": 21
+  },
+  "allowed": [],
+  "scope": "single-next-flight-only; no waiting; same full-tank rules; no knowledge transfer time or later campaign proven"
+}

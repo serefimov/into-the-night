@@ -1,0 +1,721 @@
+[
+  {
+    "id": "LIPH",
+    "ourAirportsId": 4355,
+    "iata": "TSF",
+    "icao": "LIPH",
+    "name": "Treviso Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 45.648399,
+    "longitudeDeg": 12.1944,
+    "elevationFt": 59,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237008,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 2420.417,
+        "widthM": 43.891,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIPQ",
+    "ourAirportsId": 4361,
+    "iata": "TRS",
+    "icao": "LIPQ",
+    "name": "Trieste Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 45.827862,
+    "longitudeDeg": 13.466672,
+    "elevationFt": 39,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237059,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIPR",
+    "ourAirportsId": 4362,
+    "iata": "RMI",
+    "icao": "LIPR",
+    "name": "Federico Fellini International Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 44.020024,
+    "longitudeDeg": 12.612198,
+    "elevationFt": 40,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236997,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2995.574,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIPX",
+    "ourAirportsId": 4366,
+    "iata": "VRN",
+    "icao": "LIPX",
+    "name": "Verona Villafranca Valerio Catullo Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 45.394955,
+    "longitudeDeg": 10.887303,
+    "elevationFt": 239,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236994,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3067.507,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIPZ",
+    "ourAirportsId": 4368,
+    "iata": "VCE",
+    "icao": "LIPZ",
+    "name": "Venice Marco Polo Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 45.505299,
+    "longitudeDeg": 12.3519,
+    "elevationFt": 7,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237023,
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237024,
+        "ends": [
+          "04L",
+          "22R"
+        ],
+        "lengthM": 2780.081,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIRA",
+    "ourAirportsId": 4370,
+    "iata": "CIA",
+    "icao": "LIRA",
+    "name": "Ciampino–G. B. Pastine International Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 41.798769,
+    "longitudeDeg": 12.595331,
+    "elevationFt": 427,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236988,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2202.485,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIRF",
+    "ourAirportsId": 4372,
+    "iata": "FCO",
+    "icao": "LIRF",
+    "name": "Rome–Fiumicino Leonardo da Vinci International Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 41.804532,
+    "longitudeDeg": 12.251998,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236973,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3901.745,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236974,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3901.745,
+        "widthM": 59.741,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236972,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3299.765,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIRN",
+    "ourAirportsId": 4378,
+    "iata": "NAP",
+    "icao": "LIRN",
+    "name": "Naples International Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 40.886002,
+    "longitudeDeg": 14.2908,
+    "elevationFt": 294,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237034,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2627.986,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIRP",
+    "ourAirportsId": 4379,
+    "iata": "PSA",
+    "icao": "LIRP",
+    "name": "Pisa International Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 43.683899,
+    "longitudeDeg": 10.3927,
+    "elevationFt": 6,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237004,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 2993.136,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237005,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 2791.968,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIRQ",
+    "ourAirportsId": 4380,
+    "iata": "FLR",
+    "icao": "LIRQ",
+    "name": "Florence Airport, Peretola",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 43.808558,
+    "longitudeDeg": 11.202822,
+    "elevationFt": 142,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236979,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 1559.966,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LIRZ",
+    "ourAirportsId": 4384,
+    "iata": "PEG",
+    "icao": "LIRZ",
+    "name": "Perugia San Francesco d'Assisi – Umbria International Airport",
+    "country": "IT",
+    "continent": "EU",
+    "latitudeDeg": 43.095901,
+    "longitudeDeg": 12.5132,
+    "elevationFt": 697,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 576853,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 2199.132,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LJLJ",
+    "ourAirportsId": 4386,
+    "iata": "LJU",
+    "icao": "LJLJ",
+    "name": "Ljubljana Jože Pučnik Airport",
+    "country": "SI",
+    "continent": "EU",
+    "latitudeDeg": 46.223701,
+    "longitudeDeg": 14.4576,
+    "elevationFt": 1273,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238858,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3300.07,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LKCS",
+    "ourAirportsId": 4393,
+    "iata": "JCL",
+    "icao": "LKCS",
+    "name": "České Budějovice South Bohemian Airport",
+    "country": "CZ",
+    "continent": "EU",
+    "latitudeDeg": 48.948171,
+    "longitudeDeg": 14.42832,
+    "elevationFt": 1417,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235697,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2499.97,
+        "widthM": 79.858,
+        "surface": "CON",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LKKV",
+    "ourAirportsId": 4399,
+    "iata": "KLV",
+    "icao": "LKKV",
+    "name": "Karlovy Vary Airport",
+    "country": "CZ",
+    "continent": "EU",
+    "latitudeDeg": 50.202999,
+    "longitudeDeg": 12.915,
+    "elevationFt": 1989,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235687,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2150.059,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LKMT",
+    "ourAirportsId": 4402,
+    "iata": "OSR",
+    "icao": "LKMT",
+    "name": "Leoš Janáček Airport Ostrava",
+    "country": "CZ",
+    "continent": "EU",
+    "latitudeDeg": 49.696301,
+    "longitudeDeg": 18.111099,
+    "elevationFt": 844,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235686,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 3500.323,
+        "widthM": 63.094,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LKPD",
+    "ourAirportsId": 4405,
+    "iata": "PED",
+    "icao": "LKPD",
+    "name": "Pardubice Airport",
+    "country": "CZ",
+    "continent": "EU",
+    "latitudeDeg": 50.015049,
+    "longitudeDeg": 15.73981,
+    "elevationFt": 741,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235696,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2500.274,
+        "widthM": 74.981,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LKPR",
+    "ourAirportsId": 4408,
+    "iata": "PRG",
+    "icao": "LKPR",
+    "name": "Václav Havel Airport Prague",
+    "country": "CZ",
+    "continent": "EU",
+    "latitudeDeg": 50.100874,
+    "longitudeDeg": 14.259911,
+    "elevationFt": 1247,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235690,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3715.207,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235691,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3250.082,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LMML",
+    "ourAirportsId": 4427,
+    "iata": "MLA",
+    "icao": "LMML",
+    "name": "Malta International Airport",
+    "country": "MT",
+    "continent": "EU",
+    "latitudeDeg": 35.845932,
+    "longitudeDeg": 14.491546,
+    "elevationFt": 300,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237628,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3350.057,
+        "widthM": 57.912,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 237627,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2372.868,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LOWG",
+    "ourAirportsId": 4430,
+    "iata": "GRZ",
+    "icao": "LOWG",
+    "name": "Graz Airport",
+    "country": "AT",
+    "continent": "EU",
+    "latitudeDeg": 46.9911,
+    "longitudeDeg": 15.4396,
+    "elevationFt": 1115,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233574,
+        "ends": [
+          "16C",
+          "34C"
+        ],
+        "lengthM": 2999.842,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 233575,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 759.866,
+        "widthM": 24.994,
+        "surface": "GRS",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 233576,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 640.08,
+        "widthM": 29.87,
+        "surface": "GRS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "LOWI",
+    "ourAirportsId": 4431,
+    "iata": "INN",
+    "icao": "LOWI",
+    "name": "Innsbruck Airport",
+    "country": "AT",
+    "continent": "EU",
+    "latitudeDeg": 47.260201,
+    "longitudeDeg": 11.344,
+    "elevationFt": 1907,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233580,
+        "ends": [
+          "08",
+          "26"
+        ],
+        "lengthM": 2000.098,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 608401,
+        "ends": [
+          "08G",
+          "28G"
+        ],
+        "lengthM": 349.91,
+        "widthM": 47.244,
+        "surface": "GRASS",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

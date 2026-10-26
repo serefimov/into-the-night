@@ -1,0 +1,261 @@
+[
+  {
+    "to": "SBGR",
+    "initialFuelKg": 100964,
+    "envelope": {
+      "minimumKg": 81990.22069685356,
+      "maximumKg": 100964.8,
+      "feasible": true
+    },
+    "allowed": true,
+    "reasons": [],
+    "distanceKm": 11536.957030285164,
+    "arrivalUtcMs": 1787296815000.8145,
+    "endUtcMs": 1787303489327.3667,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "safe",
+      "evaluations": 194,
+      "phase": null,
+      "eventUtcMs": null,
+      "bracketUtcMs": null,
+      "safeUntilUtcMs": 1787303489327.3667,
+      "reason": null
+    },
+    "flight": {
+      "durationSeconds": 49515.00081456113,
+      "burnKg": 76990.22069685356,
+      "arrivalFuelKg": 23973.77930314644,
+      "takeoffMassKg": 226964,
+      "landingMassKg": 149973.77930314644,
+      "dispatchable": true,
+      "reasons": []
+    },
+    "refuelling": {
+      "transferKg": 76991.02069685356,
+      "fuelKg": 100964.8,
+      "stockKg": 286008.9793031464,
+      "durationSeconds": 6074.326552264017
+    }
+  },
+  {
+    "to": "SAEZ",
+    "initialFuelKg": 100964,
+    "envelope": {
+      "minimumKg": 93012.23530958118,
+      "maximumKg": 100964.8,
+      "feasible": true
+    },
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 13232.651586089412,
+    "arrivalUtcMs": 1787303828121.0767,
+    "endUtcMs": 1787311329098.7249,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 227,
+      "phase": "refuelling",
+      "eventUtcMs": 1787308284671.2935,
+      "bracketUtcMs": [
+        1787308284670.149,
+        1787308284671.2935
+      ],
+      "safeUntilUtcMs": 1787308284670.149,
+      "reason": null
+    },
+    "flight": {
+      "durationSeconds": 56528.121076607094,
+      "burnKg": 88012.23530958118,
+      "arrivalFuelKg": 12951.764690418815,
+      "takeoffMassKg": 226964,
+      "landingMassKg": 138951.76469041882,
+      "dispatchable": true,
+      "reasons": []
+    },
+    "refuelling": {
+      "transferKg": 88013.03530958119,
+      "fuelKg": 100964.8,
+      "stockKg": 310986.9646904188,
+      "durationSeconds": 6900.977648218589
+    }
+  },
+  {
+    "to": "SUMU",
+    "initialFuelKg": 100964,
+    "envelope": {
+      "minimumKg": 92169.55691636464,
+      "maximumKg": 100964.8,
+      "feasible": true
+    },
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 13103.008756363792,
+    "arrivalUtcMs": 1787303291939.1606,
+    "endUtcMs": 1787310729715.9294,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 225,
+      "phase": "refuelling",
+      "eventUtcMs": 1787307683983.6094,
+      "bracketUtcMs": [
+        1787307683982.465,
+        1787307683983.6094
+      ],
+      "safeUntilUtcMs": 1787307683982.465,
+      "reason": null
+    },
+    "flight": {
+      "durationSeconds": 55991.93916055058,
+      "burnKg": 87169.55691636464,
+      "arrivalFuelKg": 13794.443083635357,
+      "takeoffMassKg": 226964,
+      "landingMassKg": 139794.44308363536,
+      "dispatchable": true,
+      "reasons": []
+    },
+    "refuelling": {
+      "transferKg": 87170.35691636465,
+      "fuelKg": 100964.8,
+      "stockKg": 212829.64308363537,
+      "durationSeconds": 6837.776768727348
+    }
+  },
+  {
+    "to": "SCEL",
+    "initialFuelKg": 100964,
+    "envelope": {
+      "minimumKg": 96472.04660481217,
+      "maximumKg": 100964.8,
+      "feasible": true
+    },
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 13764.93024689418,
+    "arrivalUtcMs": 1787306029540.1047,
+    "endUtcMs": 1787313790003.6,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 237,
+      "phase": "refuelling",
+      "eventUtcMs": 1787311114597.5542,
+      "bracketUtcMs": [
+        1787311114595.2651,
+        1787311114597.5542
+      ],
+      "safeUntilUtcMs": 1787311114595.2651,
+      "reason": null
+    },
+    "flight": {
+      "durationSeconds": 58729.54010479648,
+      "burnKg": 91472.04660481217,
+      "arrivalFuelKg": 9491.953395187826,
+      "takeoffMassKg": 226964,
+      "landingMassKg": 135491.95339518783,
+      "dispatchable": true,
+      "reasons": []
+    },
+    "refuelling": {
+      "transferKg": 91472.84660481218,
+      "fuelKg": 100964.8,
+      "stockKg": 245527.1533951878,
+      "durationSeconds": 7160.463495360913
+    }
+  },
+  {
+    "to": "FACT",
+    "initialFuelKg": 100964,
+    "envelope": {
+      "minimumKg": 75134.33437590337,
+      "maximumKg": 100964.8,
+      "feasible": true
+    },
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 10482.205288600519,
+    "arrivalUtcMs": 1787292452717.0615,
+    "endUtcMs": 1787298612852.1396,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 160,
+      "phase": "cruise",
+      "eventUtcMs": 1787289220401.764,
+      "bracketUtcMs": [
+        1787289220399.475,
+        1787289220401.764
+      ],
+      "safeUntilUtcMs": 1787289220399.475,
+      "reason": null
+    },
+    "flight": {
+      "durationSeconds": 45152.71706144233,
+      "burnKg": 70134.33437590337,
+      "arrivalFuelKg": 30829.665624096626,
+      "takeoffMassKg": 226964,
+      "landingMassKg": 156829.66562409664,
+      "dispatchable": true,
+      "reasons": []
+    },
+    "refuelling": {
+      "transferKg": 70135.13437590338,
+      "fuelKg": 100964.8,
+      "stockKg": 63864.86562409662,
+      "durationSeconds": 5560.135078192753
+    }
+  },
+  {
+    "to": "FAOR",
+    "initialFuelKg": 100964,
+    "envelope": {
+      "minimumKg": 69126.55997449867,
+      "maximumKg": 100964.8,
+      "feasible": true
+    },
+    "allowed": false,
+    "reasons": [
+      "sun"
+    ],
+    "distanceKm": 9557.932303769026,
+    "arrivalUtcMs": 1787288630072.4846,
+    "endUtcMs": 1787294339624.4827,
+    "solarScope": "automatic_turnaround",
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 152,
+      "phase": "cruise",
+      "eventUtcMs": 1787286716472.2441,
+      "bracketUtcMs": [
+        1787286716471.0999,
+        1787286716472.2441
+      ],
+      "safeUntilUtcMs": 1787286716471.0999,
+      "reason": null
+    },
+    "flight": {
+      "durationSeconds": 41330.07248468418,
+      "burnKg": 64126.55997449867,
+      "arrivalFuelKg": 36837.44002550133,
+      "takeoffMassKg": 226964,
+      "landingMassKg": 162837.44002550133,
+      "dispatchable": true,
+      "reasons": []
+    },
+    "refuelling": {
+      "transferKg": 64127.35997449867,
+      "fuelKg": 100964.8,
+      "stockKg": 153872.6400255013,
+      "durationSeconds": 5109.5519980874005
+    }
+  }
+]

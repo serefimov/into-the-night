@@ -1,0 +1,86 @@
+[
+  {
+    "id": "UWUU",
+    "ourAirportsId": 26411,
+    "iata": "UFA",
+    "icao": "UWUU",
+    "name": "Ufa International Airport",
+    "country": "RU",
+    "continent": "EU",
+    "latitudeDeg": 54.557499,
+    "longitudeDeg": 55.874401,
+    "elevationFt": 449,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238597,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3760.927,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238596,
+        "ends": [
+          "14",
+          "32"
+        ],
+        "lengthM": 644.652,
+        "widthM": 96.012,
+        "surface": "GRE",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "UWWW",
+    "ourAirportsId": 26412,
+    "iata": "KUF",
+    "icao": "UWWW",
+    "name": "Kurumoch International Airport",
+    "country": "RU",
+    "continent": "EU",
+    "latitudeDeg": 53.504902,
+    "longitudeDeg": 50.164299,
+    "elevationFt": 477,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238558,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3001.061,
+        "widthM": 45.11,
+        "surface": "CON",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238557,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 2553.919,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

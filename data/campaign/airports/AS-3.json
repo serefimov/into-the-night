@@ -1,0 +1,754 @@
+[
+  {
+    "id": "OEGS",
+    "ourAirportsId": 5091,
+    "iata": "ELQ",
+    "icao": "OEGS",
+    "name": "Prince Naif bin Abdulaziz International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 26.302799,
+    "longitudeDeg": 43.774399,
+    "elevationFt": 2126,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238675,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEHL",
+    "ourAirportsId": 5093,
+    "iata": "HAS",
+    "icao": "OEHL",
+    "name": "Hail International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 27.437901,
+    "longitudeDeg": 41.686298,
+    "elevationFt": 3331,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238679,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3719.779,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEJN",
+    "ourAirportsId": 5097,
+    "iata": "JED",
+    "icao": "OEJN",
+    "name": "King Abdulaziz International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 21.680241,
+    "longitudeDeg": 39.157436,
+    "elevationFt": 48,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238622,
+        "ends": [
+          "16C",
+          "34C"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238624,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3999.89,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238623,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEMA",
+    "ourAirportsId": 5101,
+    "iata": "MED",
+    "icao": "OEMA",
+    "name": "Prince Mohammad Bin Abdulaziz Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 24.5534,
+    "longitudeDeg": 39.705101,
+    "elevationFt": 2151,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238676,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 4334.866,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238677,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3059.887,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OENN",
+    "ourAirportsId": 332512,
+    "iata": "NUM",
+    "icao": "OENN",
+    "name": "Neom Bay Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 27.924261,
+    "longitudeDeg": 35.29358,
+    "elevationFt": 29,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 332513,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 3756.965,
+        "widthM": 49.987,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEPA",
+    "ourAirportsId": 5103,
+    "iata": "AQI",
+    "icao": "OEPA",
+    "name": "Qaisumah–Hafar Al-Batin International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 28.335726,
+    "longitudeDeg": 46.127108,
+    "elevationFt": 1174,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238659,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OERK",
+    "ourAirportsId": 5112,
+    "iata": "RUH",
+    "icao": "OERK",
+    "name": "King Khalid International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 24.9576,
+    "longitudeDeg": 46.698799,
+    "elevationFt": 2049,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238653,
+        "ends": [
+          "15R",
+          "33L"
+        ],
+        "lengthM": 4205.021,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238654,
+        "ends": [
+          "15L",
+          "33R"
+        ],
+        "lengthM": 4205.021,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OESK",
+    "ourAirportsId": 5119,
+    "iata": "AJF",
+    "icao": "OESK",
+    "name": "Al-Jawf International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 29.783301,
+    "longitudeDeg": 40.100905,
+    "elevationFt": 2261,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238634,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3660.953,
+        "widthM": 44.806,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OETB",
+    "ourAirportsId": 5121,
+    "iata": "TUU",
+    "icao": "OETB",
+    "name": "Prince Sultan bin Abdulaziz International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 28.3711,
+    "longitudeDeg": 36.624865,
+    "elevationFt": 2551,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238631,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3350.057,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238632,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3050.134,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OETF",
+    "ourAirportsId": 5122,
+    "iata": "TIF",
+    "icao": "OETF",
+    "name": "Taif International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 21.484739,
+    "longitudeDeg": 40.544074,
+    "elevationFt": 4848,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238637,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 3735.019,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 238638,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3350.057,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OEYN",
+    "ourAirportsId": 5129,
+    "iata": "YNB",
+    "icao": "OEYN",
+    "name": "Prince Abdulmohsen Bin Abdulaziz International Airport",
+    "country": "SA",
+    "continent": "AS",
+    "latitudeDeg": 24.144199,
+    "longitudeDeg": 38.0634,
+    "elevationFt": 26,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238650,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3210.154,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIAA",
+    "ourAirportsId": 5130,
+    "iata": "ABD",
+    "icao": "OIAA",
+    "name": "Abadan Ayatollah Jami International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 30.367887,
+    "longitudeDeg": 48.230075,
+    "elevationFt": 10,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236831,
+        "ends": [
+          "14R",
+          "32L"
+        ],
+        "lengthM": 3099.511,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236832,
+        "ends": [
+          "14L",
+          "32R"
+        ],
+        "lengthM": 2266.798,
+        "widthM": 35.052,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIAW",
+    "ourAirportsId": 5137,
+    "iata": "AWZ",
+    "icao": "OIAW",
+    "name": "Qasem Soleimani International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 31.3364,
+    "longitudeDeg": 48.763789,
+    "elevationFt": 66,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236889,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3398.215,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIBK",
+    "ourAirportsId": 5143,
+    "iata": "KIH",
+    "icao": "OIBK",
+    "name": "Kish International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 26.525427,
+    "longitudeDeg": 53.980462,
+    "elevationFt": 101,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236880,
+        "ends": [
+          "09R",
+          "27L"
+        ],
+        "lengthM": 3658.819,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIFM",
+    "ourAirportsId": 5156,
+    "iata": "IFN",
+    "icao": "OIFM",
+    "name": "Isfahan Shahid Beheshti International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 32.755142,
+    "longitudeDeg": 51.883877,
+    "elevationFt": 5059,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236892,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 4396.74,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236893,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 4396.74,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIIE",
+    "ourAirportsId": 5166,
+    "iata": "IKA",
+    "icao": "OIIE",
+    "name": "Imam Khomeini International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 35.416099548339844,
+    "longitudeDeg": 51.152198791503906,
+    "elevationFt": 3305,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236932,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 4197.706,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236931,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 4091.94,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIII",
+    "ourAirportsId": 5168,
+    "iata": "THR",
+    "icao": "OIII",
+    "name": "Mehrabad International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 35.689175,
+    "longitudeDeg": 51.314392,
+    "elevationFt": 3962,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236884,
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "lengthM": 4041.038,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236885,
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "lengthM": 3988.918,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIIP",
+    "ourAirportsId": 5171,
+    "iata": "PYK",
+    "icao": "OIIP",
+    "name": "Payam International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 35.7761,
+    "longitudeDeg": 50.826698,
+    "elevationFt": 4170,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236911,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 3659.124,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIKB",
+    "ourAirportsId": 5172,
+    "iata": "BND",
+    "icao": "OIKB",
+    "name": "Bandar Abbas International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 27.2183,
+    "longitudeDeg": 56.3778,
+    "elevationFt": 22,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236886,
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "lengthM": 3660.038,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236887,
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "lengthM": 3456.737,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "OIKK",
+    "ourAirportsId": 5174,
+    "iata": "KER",
+    "icao": "OIKK",
+    "name": "Ayatollah Hashemi Rafsanjani International Airport",
+    "country": "IR",
+    "continent": "AS",
+    "latitudeDeg": 30.271276,
+    "longitudeDeg": 56.949692,
+    "elevationFt": 5741,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236872,
+        "ends": [
+          "16L",
+          "34R"
+        ],
+        "lengthM": 3851.148,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 236871,
+        "ends": [
+          "16R",
+          "34L"
+        ],
+        "lengthM": 3849.929,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

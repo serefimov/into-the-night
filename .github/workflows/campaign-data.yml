@@ -1,0 +1,35 @@
+name: Import pinned campaign data
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/import-mission-airports.py
+      - scripts/campaign-data.mjs
+      - scripts/mission-data.mjs
+      - data/campaign/**
+      - .github/workflows/campaign-data.yml
+  pull_request:
+    paths:
+      - scripts/import-mission-airports.py
+      - scripts/campaign-data.mjs
+      - scripts/mission-data.mjs
+      - data/campaign/**
+      - .github/workflows/campaign-data.yml
+permissions:
+  contents: read
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Import expanded public world data
+        run: python3 scripts/import-mission-airports.py --selection data/campaign/selection.json --output .build/campaign-import/airports.json
+      - run: node scripts/campaign-data.mjs --write
+      - run: git diff --exit-code -- data/campaign
+      - uses: actions/upload-artifact@v4
+        with:
+          name: campaign-airports
+          path: .build/campaign-import/airports.json

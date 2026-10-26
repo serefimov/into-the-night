@@ -1,0 +1,331 @@
+[
+  {
+    "id": "TLPL",
+    "ourAirportsId": 6389,
+    "iata": "UVF",
+    "icao": "TLPL",
+    "name": "Hewanorra International Airport",
+    "country": "LC",
+    "continent": "NA",
+    "latitudeDeg": 13.7332,
+    "longitudeDeg": -60.952599,
+    "elevationFt": 14,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238960,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2744.114,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TNCA",
+    "ourAirportsId": 6402,
+    "iata": "AUA",
+    "icao": "TNCA",
+    "name": "Queen Beatrix International Airport",
+    "country": "AW",
+    "continent": "NA",
+    "latitudeDeg": 12.501056,
+    "longitudeDeg": -70.014281,
+    "elevationFt": 60,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 232758,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TNCB",
+    "ourAirportsId": 6403,
+    "iata": "BON",
+    "icao": "TNCB",
+    "name": "Flamingo International Airport",
+    "country": "BQ",
+    "continent": "NA",
+    "latitudeDeg": 12.131,
+    "longitudeDeg": -68.268501,
+    "elevationFt": 20,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238000,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2880.055,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TNCC",
+    "ourAirportsId": 6404,
+    "iata": "CUR",
+    "icao": "TNCC",
+    "name": "Hato International Airport",
+    "country": "CW",
+    "continent": "NA",
+    "latitudeDeg": 12.1889,
+    "longitudeDeg": -68.959801,
+    "elevationFt": 29,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238001,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 3410.102,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TNCM",
+    "ourAirportsId": 6406,
+    "iata": "SXM",
+    "icao": "TNCM",
+    "name": "Princess Juliana International Airport",
+    "country": "SX",
+    "continent": "NA",
+    "latitudeDeg": 18.041,
+    "longitudeDeg": -63.108898,
+    "elevationFt": 13,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237998,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 2300.021,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TRPG",
+    "ourAirportsId": 43074,
+    "iata": "MNI",
+    "icao": "TRPG",
+    "name": "John A. Osborne Airport",
+    "country": "MS",
+    "continent": "NA",
+    "latitudeDeg": 16.791835,
+    "longitudeDeg": -62.193204,
+    "elevationFt": 550,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TTCP",
+    "ourAirportsId": 6409,
+    "iata": "TAB",
+    "icao": "TTCP",
+    "name": "A.N.R. Robinson International Airport",
+    "country": "TT",
+    "continent": "NA",
+    "latitudeDeg": 11.149571,
+    "longitudeDeg": -60.831298,
+    "elevationFt": 38,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239135,
+        "ends": [
+          "11",
+          "29"
+        ],
+        "lengthM": 2743.81,
+        "widthM": 48.463,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TTPP",
+    "ourAirportsId": 6410,
+    "iata": "POS",
+    "icao": "TTPP",
+    "name": "Piarco International Airport",
+    "country": "TT",
+    "continent": "NA",
+    "latitudeDeg": 10.59535,
+    "longitudeDeg": -61.337568,
+    "elevationFt": 58,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 239134,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3200.4,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TUPJ",
+    "ourAirportsId": 6411,
+    "iata": "EIS",
+    "icao": "TUPJ",
+    "name": "Terrance B. Lettsome International Airport",
+    "country": "VG",
+    "continent": "NA",
+    "latitudeDeg": 18.445492,
+    "longitudeDeg": -64.541707,
+    "elevationFt": 15,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 246158,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 1414.882,
+        "widthM": 27.127,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TVSA",
+    "ourAirportsId": 322383,
+    "iata": "SVD",
+    "icao": "TVSA",
+    "name": "Argyle International Airport",
+    "country": "VC",
+    "continent": "NA",
+    "latitudeDeg": 13.159725,
+    "longitudeDeg": -61.148801,
+    "elevationFt": 136,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 322384,
+        "ends": [
+          "04",
+          "22"
+        ],
+        "lengthM": 2743.2,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "TXKF",
+    "ourAirportsId": 6416,
+    "iata": "BDA",
+    "icao": "TXKF",
+    "name": "L.F. Wade International Airport",
+    "country": "BM",
+    "continent": "NA",
+    "latitudeDeg": 32.363802,
+    "longitudeDeg": -64.67824,
+    "elevationFt": 12,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 233616,
+        "ends": [
+          "12",
+          "30"
+        ],
+        "lengthM": 2958.084,
+        "widthM": 45.72,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]

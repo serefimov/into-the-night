@@ -1,0 +1,643 @@
+[
+  {
+    "id": "GMTT",
+    "ourAirportsId": 3121,
+    "iata": "TNG",
+    "icao": "GMTT",
+    "name": "Tangier Ibn Battuta Airport",
+    "country": "MA",
+    "continent": "AF",
+    "latitudeDeg": 35.731741,
+    "longitudeDeg": -5.921459,
+    "elevationFt": 62,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237609,
+        "ends": [
+          "10",
+          "28"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GOBD",
+    "ourAirportsId": 325736,
+    "iata": "DSS",
+    "icao": "GOBD",
+    "name": "Blaise Diagne International Airport",
+    "country": "SN",
+    "continent": "AF",
+    "latitudeDeg": 14.670878,
+    "longitudeDeg": -17.072829,
+    "elevationFt": 290,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 325737,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3500.018,
+        "widthM": 60.046,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GOOY",
+    "ourAirportsId": 3125,
+    "iata": "DKR",
+    "icao": "GOOY",
+    "name": "Léopold Sédar Senghor International Airport",
+    "country": "SN",
+    "continent": "AF",
+    "latitudeDeg": 14.742337,
+    "longitudeDeg": -17.479222,
+    "elevationFt": 85,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238842,
+        "ends": [
+          "18",
+          "36"
+        ],
+        "lengthM": 3489.96,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GQNO",
+    "ourAirportsId": 323315,
+    "iata": "NKC",
+    "icao": "GQNO",
+    "name": "Nouakchott–Oumtounsy International Airport",
+    "country": "MR",
+    "continent": "AF",
+    "latitudeDeg": 18.31,
+    "longitudeDeg": -15.969722,
+    "elevationFt": 9,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 323318,
+        "ends": [
+          "16",
+          "34"
+        ],
+        "lengthM": 3400.044,
+        "widthM": 60.046,
+        "surface": "concrete",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 323316,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 2400.3,
+        "widthM": 45.11,
+        "surface": "concrete",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GQPP",
+    "ourAirportsId": 3138,
+    "iata": "NDB",
+    "icao": "GQPP",
+    "name": "Nouadhibou International Airport",
+    "country": "MR",
+    "continent": "AF",
+    "latitudeDeg": 20.932404,
+    "longitudeDeg": -17.030199,
+    "elevationFt": 24,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 237617,
+        "ends": [
+          "02",
+          "20"
+        ],
+        "lengthM": 2426.513,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GUCY",
+    "ourAirportsId": 3146,
+    "iata": "CKY",
+    "icao": "GUCY",
+    "name": "Ahmed Sékou Touré International Airport",
+    "country": "GN",
+    "continent": "AF",
+    "latitudeDeg": 9.57689,
+    "longitudeDeg": -13.612,
+    "elevationFt": 72,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 236400,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3299.765,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GVAC",
+    "ourAirportsId": 3150,
+    "iata": "SID",
+    "icao": "GVAC",
+    "name": "Amílcar Cabral International Airport",
+    "country": "CV",
+    "continent": "AF",
+    "latitudeDeg": 16.7414,
+    "longitudeDeg": -22.9494,
+    "elevationFt": 177,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235437,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3279.648,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GVBA",
+    "ourAirportsId": 3151,
+    "iata": "BVC",
+    "icao": "GVBA",
+    "name": "Aristides Pereira International Airport",
+    "country": "CV",
+    "continent": "AF",
+    "latitudeDeg": 16.136499,
+    "longitudeDeg": -22.888901,
+    "elevationFt": 69,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235431,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2100.072,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GVNP",
+    "ourAirportsId": 3153,
+    "iata": "RAI",
+    "icao": "GVNP",
+    "name": "Nelson Mandela International Airport",
+    "country": "CV",
+    "continent": "AF",
+    "latitudeDeg": 14.941126,
+    "longitudeDeg": -23.484728,
+    "elevationFt": 230,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 260337,
+        "ends": [
+          "03",
+          "21"
+        ],
+        "lengthM": 2100.072,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "GVSV",
+    "ourAirportsId": 3155,
+    "iata": "VXE",
+    "icao": "GVSV",
+    "name": "Cesaria Evora International Airport",
+    "country": "CV",
+    "continent": "AF",
+    "latitudeDeg": 16.833363,
+    "longitudeDeg": -25.055308,
+    "elevationFt": 66,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235433,
+        "ends": [
+          "07",
+          "25"
+        ],
+        "lengthM": 1999.793,
+        "widthM": 29.87,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HAAB",
+    "ourAirportsId": 3157,
+    "iata": "ADD",
+    "icao": "HAAB",
+    "name": "Addis Ababa Bole International Airport",
+    "country": "ET",
+    "continent": "AF",
+    "latitudeDeg": 8.97789,
+    "longitudeDeg": 38.799301,
+    "elevationFt": 7630,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235667,
+        "ends": [
+          "07R",
+          "25L"
+        ],
+        "lengthM": 3799.942,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      },
+      {
+        "sourceRowId": 235668,
+        "ends": [
+          "07L",
+          "25R"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HADR",
+    "ourAirportsId": 3162,
+    "iata": "DIR",
+    "icao": "HADR",
+    "name": "Aba Tenna Dejazmach Yilma International Airport",
+    "country": "ET",
+    "continent": "AF",
+    "latitudeDeg": 9.623549,
+    "longitudeDeg": 41.855027,
+    "elevationFt": 3827,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235672,
+        "ends": [
+          "15",
+          "33"
+        ],
+        "lengthM": 2679.497,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HAJJ",
+    "ourAirportsId": 313314,
+    "iata": "JIJ",
+    "icao": "HAJJ",
+    "name": "Gerad Wilwal International Airport",
+    "country": "ET",
+    "continent": "AF",
+    "latitudeDeg": 9.331907,
+    "longitudeDeg": 42.911811,
+    "elevationFt": 5954,
+    "sourceId": "ourairports",
+    "runways": [],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HALA",
+    "ourAirportsId": 30664,
+    "iata": "AWA",
+    "icao": "HALA",
+    "name": "Hawassa International Airport",
+    "country": "ET",
+    "continent": "AF",
+    "latitudeDeg": 7.100611,
+    "longitudeDeg": 38.396455,
+    "elevationFt": 5450,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 342521,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 3000.146,
+        "widthM": 45.11,
+        "surface": "ASPH",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HBBA",
+    "ourAirportsId": 3170,
+    "iata": "BJM",
+    "icao": "HBBA",
+    "name": "Bujumbura Melchior Ndadaye International Airport",
+    "country": "BI",
+    "continent": "AF",
+    "latitudeDeg": -3.32402,
+    "longitudeDeg": 29.318501,
+    "elevationFt": 2582,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 234430,
+        "ends": [
+          "17",
+          "35"
+        ],
+        "lengthM": 3599.993,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HCMF",
+    "ourAirportsId": 30792,
+    "iata": "BSA",
+    "icao": "HCMF",
+    "name": "Bender Qassim International Airport",
+    "country": "SO",
+    "continent": "AF",
+    "latitudeDeg": 11.275235,
+    "longitudeDeg": 49.139231,
+    "elevationFt": 3,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 323018,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 2399.995,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      },
+      {
+        "sourceRowId": 323019,
+        "ends": [
+          "01",
+          "19"
+        ],
+        "lengthM": 1082.04,
+        "widthM": 35.052,
+        "surface": "SAN",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "unverified",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HCMH",
+    "ourAirportsId": 3171,
+    "iata": "HGA",
+    "icao": "HCMH",
+    "name": "Egal International Airport",
+    "country": "SO",
+    "continent": "AF",
+    "latitudeDeg": 9.514082,
+    "longitudeDeg": 44.083469,
+    "elevationFt": 4471,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 238870,
+        "ends": [
+          "06",
+          "24"
+        ],
+        "lengthM": 3699.967,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HCMM",
+    "ourAirportsId": 31899,
+    "iata": "MGQ",
+    "icao": "HCMM",
+    "name": "Aden Adde International Airport",
+    "country": "SO",
+    "continent": "AF",
+    "latitudeDeg": 2.01444,
+    "longitudeDeg": 45.304699,
+    "elevationFt": 29,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 260240,
+        "ends": [
+          "05",
+          "23"
+        ],
+        "lengthM": 3183.941,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": false
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HDAM",
+    "ourAirportsId": 3174,
+    "iata": "JIB",
+    "icao": "HDAM",
+    "name": "Djibouti-Ambouli Airport",
+    "country": "DJ",
+    "continent": "AF",
+    "latitudeDeg": 11.5473,
+    "longitudeDeg": 43.1595,
+    "elevationFt": 49,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235480,
+        "ends": [
+          "09",
+          "27"
+        ],
+        "lengthM": 3150.108,
+        "widthM": 45.11,
+        "surface": "PEM",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  },
+  {
+    "id": "HEAL",
+    "ourAirportsId": 3175,
+    "iata": "DBB",
+    "icao": "HEAL",
+    "name": "El Alamein International Airport",
+    "country": "EG",
+    "continent": "AF",
+    "latitudeDeg": 30.924324,
+    "longitudeDeg": 28.46161,
+    "elevationFt": 154,
+    "sourceId": "ourairports",
+    "runways": [
+      {
+        "sourceRowId": 235541,
+        "ends": [
+          "13",
+          "31"
+        ],
+        "lengthM": 3498.799,
+        "widthM": 45.11,
+        "surface": "ASP",
+        "lighted": true
+      }
+    ],
+    "suitability": {
+      "status": "screened-candidate",
+      "rule": "paved-open-3000m-by-45m-v1",
+      "operationalApproval": false
+    }
+  }
+]
