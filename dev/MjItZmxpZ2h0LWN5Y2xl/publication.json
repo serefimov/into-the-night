@@ -1,0 +1,11 @@
+{
+  "kind": "dev",
+  "branch": "22-flight-cycle",
+  "tag": "",
+  "version": "0.1.0-alpha.1",
+  "commit": "fd11c784ec5cbb370ff10ac270384b2bc465c8e9",
+  "runId": "40320300873",
+  "builtAt": "2026-10-26T12:09:38.697Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/fd11c784ec5cbb370ff10ac270384b2bc465c8e9",
+  "contentHash": "05c297527c316c1791458d91f551804dc4ebc353902837e603e7242ba95b6057"
+}
