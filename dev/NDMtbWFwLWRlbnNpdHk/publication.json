@@ -1,0 +1,11 @@
+{
+  "kind": "dev",
+  "branch": "43-map-density",
+  "tag": "",
+  "version": "0.1.0-alpha.1",
+  "commit": "71a328bb7bcb22e664615911cb61662a446f6ae9",
+  "runId": "40401878114",
+  "builtAt": "2026-10-26T21:09:32.283Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/71a328bb7bcb22e664615911cb61662a446f6ae9",
+  "contentHash": "f3abcbc84d9452b1081fd7647e907b904a5cfe360bec198ea2135c8540410709"
+}
