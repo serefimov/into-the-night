@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081520"><title>Into the Night — западный маршрут</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<main class="flight-shell">
+ <header class="topbar"><div class="brand"><span class="brand-symbol">◑</span><span>INTO THE NIGHT<small>Держаться в темноте</small></span></div>
+ <div class="telemetry"><time id="flight-clock">Загрузка мира…</time><span id="flight-fuel"></span></div>
+ <button id="goal-focus" class="goal-chip" title="Показать цель на глобусе">⚑ <span id="goal-name">Кейптаун</span></button>
+ </header>
+ <section class="world" aria-label="Глобус и маршрут">
+  <div class="world-caption"><span class="eyebrow">Восточная цель. Западный путь.</span><p id="flight-status" role="status">Поверните глобус и выберите следующую посадку.</p></div>
+  <canvas id="globe" tabindex="0" aria-label="Вращаемый глобус: перетаскивание, колесо или щипок для масштаба; стрелки и плюс/минус с клавиатуры"></canvas>
+  <div id="globe-markers" class="markers" aria-label="Аэродромы на видимой стороне глобуса"></div>
+  <div class="map-controls"><button id="zoom-in" aria-label="Приблизить">+</button><button id="zoom-out" aria-label="Отдалить">−</button><button id="plane-focus" aria-label="Показать самолёт" title="К самолёту">⌖</button></div>
+  <div class="playback" id="playback" hidden><button id="play-pause">Пауза</button><div><span id="phase-name"></span><progress id="flight-progress" max="1" value="0" aria-label="Ход принятого перелёта"></progress></div></div>
+  <div class="map-legend"><span><i class="night"></i>Тень сейчас</span><span><i class="day"></i>Солнце сейчас</span><span class="availability-key">✓ доступен &nbsp; × заблокирован</span></div>
+ </section>
+ <aside class="destination" aria-labelledby="destination-title">
+  <div><span class="eyebrow">Следующая посадка</span><h1 id="destination-title">Куда летим?</h1><p id="destination-subtitle">Выберите аэродром на глобусе.</p></div>
+  <div id="empty-card" class="empty-card"><span class="compass">↶</span><p>До цели — через весь мир.</p><p class="muted">Прямой путь встречает Солнце. Ищите тёмные участки и аэродромы для дозаправки.</p></div>
+  <dl id="destination-metrics" class="metrics" hidden>
+   <div><dt>Расстояние</dt><dd id="distance-value">—</dd></div><div><dt>Топливо аэродрома</dt><dd id="stock-value">—</dd></div>
+   <div><dt>В пути</dt><dd id="duration-value">—</dd></div><div><dt>Прибытие, UTC</dt><dd id="arrival-value">—</dd></div>
+   <div><dt>После посадки</dt><dd id="arrival-fuel-value">—</dd></div><div><dt>После заправки</dt><dd id="end-fuel-value">—</dd></div>
+  </dl>
+  <div id="route-verdict" class="verdict" aria-live="polite"><strong id="verdict-title">Время стоит, пока вы выбираете.</strong><p id="verdict-detail">Метки выбирают аэродром. Кнопка «Полёт» подтверждает вылет.</p></div>
+  <button id="fly" class="fly-button" disabled>Полёт <span aria-hidden="true">↗</span></button>
+  <p class="footnote" id="ground-note">Посадка, обслуживание и заправка выполняются автоматически.</p>
+ </aside>
+</main>
+<script type="module" src="./app.mjs"></script>
+</body></html>

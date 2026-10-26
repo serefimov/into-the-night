@@ -20,3 +20,4 @@ export { RESEARCH_MODEL, forecastResearchFlight, executeResearchFlight, firstFli
 export type { ResearchAirport, ResearchState, ResearchWorld, ResearchPhase, PhaseAudit, ResearchForecast } from './mission-research.js';
 export { MISSION_MODEL, MissionSession } from './mission.js';
 export type { MissionDefinition, MissionEvent, MissionState, MissionView, MissionAdvance, MissionChoice } from './mission.js';
+export * from './globe.js';

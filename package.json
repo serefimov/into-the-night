@@ -23,7 +23,7 @@
     "validate:sessions": "node scripts/validate-sessions.mjs",
     "spike": "node scripts/spike-cli.mjs",
     "validate:spike": "node scripts/spike-cli.mjs --research --verify-report",
-    "dev": "npm run build && node scripts/dev-server.mjs",
+    "dev": "npm run build && node scripts/build-flight-data.mjs && node scripts/dev-server.mjs",
     "build:web": "npm run build && node scripts/build-web.mjs",
     "serve:web": "node scripts/dev-server.mjs --built",
     "review": "node scripts/review-cli.mjs",

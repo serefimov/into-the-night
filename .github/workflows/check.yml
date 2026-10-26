@@ -28,9 +28,18 @@ jobs:
       - run: npm run validate:westward
       - run: npm run build:web
       - run: npm run test:browser
+        env:
+          GLOBE_PREVIEW_LOG: '1'
       - name: Проверить вложенный путь Pages
         run: npm run test:browser
         env:
           SPIKE_TEST_BASE: /into-the-night/release/0.1.0/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: globe-previews
+          path: .build/previews/*.png
+          if-no-files-found: ignore
+          retention-days: 7
       - run: npm run fixtures:solar
       - run: git diff --exit-code -- test/fixtures/solar-reference.json
