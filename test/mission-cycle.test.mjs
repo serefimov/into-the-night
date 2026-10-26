@@ -9,7 +9,7 @@ import {routePhasePosition} from '../dist/core/route.js';
 import {saveChecksum} from '../dist/core/serialization.js';
 import {loadCycleDefinition} from '../scripts/mission-cycle-data.mjs';
 import {loadDepartureReport} from '../scripts/research-departure-fuel.mjs';
-const definition=await loadCycleDefinition(),reference=await loadDepartureReport();
+const definition=await loadCycleDefinition('data/scenarios/westward-control-v2.json'),reference=await loadDepartureReport();
 function polar() {
  const d=structuredClone(definition);d.scenarioId='synthetic-polar-cycle-test';d.worldVersion='synthetic-polar-v1';d.profile.assumptions.zeroFuelKg=60000;
  d.airports=['A','B','C'].map((id,i)=>({id,latitudeDeg:-80,longitudeDeg:i*90,suitability:{status:'screened-candidate'}}));d.targetId='C';
@@ -106,8 +106,8 @@ test('cycle CLI replays in two timezones, rejects direct flight, and resumes a p
   const run=(args,tz='UTC')=>{const out=openSync(dir+'/out','w'),err=openSync(dir+'/err','w');let r;
    try{r=spawnSync(process.execPath,['scripts/mission-cycle-cli.mjs',...args],{stdio:['ignore',out,err],env:{...process.env,TZ:tz}});}finally{closeSync(out);closeSync(err);}
    return {status:r.status,out:readFileSync(dir+'/out','utf8'),err:readFileSync(dir+'/err','utf8')};};
-  const args=['--path','examples/mission-cycle/christchurch.json'],a=run(args),b=run(args,'Pacific/Auckland');assert.equal(a.status,0,a.err);assert.equal(a.out,b.out);assert.equal(JSON.parse(a.out).state.status,'won');
-  const bad=run(['--path','examples/mission-cycle/direct-blocked.json']);assert.equal(bad.status,2);assert.deepEqual(JSON.parse(bad.out).blocked.reasons,['sun']);
+  const args=['--definition','data/scenarios/westward-control-v2.json','--path','examples/mission-cycle/christchurch.json'],a=run(args),b=run(args,'Pacific/Auckland');assert.equal(a.status,0,a.err);assert.equal(a.out,b.out);assert.equal(JSON.parse(a.out).state.status,'won');
+  const bad=run(['--definition','data/scenarios/westward-control-v2.json','--path','examples/mission-cycle/direct-blocked.json']);assert.equal(bad.status,2);assert.deepEqual(JSON.parse(bad.out).blocked.reasons,['sun']);
   const path=dir+'/save.json',paused=run([...args,'--stop-at','2026-06-21T22:20:00Z','--save',path]);assert.equal(paused.status,0,paused.err);assert.equal(JSON.parse(paused.out).state.phase,'refuelling');
   writeFileSync(dir+'/tail.json','["YPPH","FACT"]');const resumed=run(['--load',path,'--resume','--path',dir+'/tail.json']);assert.equal(resumed.status,0,resumed.err);assert.equal(resumed.out,a.out);
   const invalid=run(['--unknown']);assert.equal(invalid.status,1);assert.equal(invalid.out,'');

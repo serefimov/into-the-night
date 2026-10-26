@@ -5,7 +5,7 @@ import {MissionSession} from '../dist/core/mission.js';
 import {aircraftLeg,aircraftMetrics} from '../dist/core/aircraft.js';
 import {searchStationarySunrise} from '../dist/core/waiting.js';
 import {loadCycleDefinition} from '../scripts/mission-cycle-data.mjs';
-const definition=await loadCycleDefinition();
+const definition=await loadCycleDefinition('data/scenarios/westward-control-v2.json');
 function polar(){const d=structuredClone(definition);d.profile.assumptions.zeroFuelKg=60000;d.airports=['A','B','C'].map((id,i)=>({id,latitudeDeg:-80,longitudeDeg:i*40,suitability:{status:'screened-candidate'}}));d.targetId='C';d.initial={airportId:'A',utcMs:Date.parse('2026-06-21T00:00:00Z'),fuelKg:5000,stocks:{A:100000,B:100000,C:100000}};return d;}
 test('long flight leaves nearby destinations usable; forecasts load only what the selected route needs',()=>{
  const s=new MissionSession(definition);s.fly('NZCH');s.resume();const before=s.save(),near=s.forecast('NZAA').forecast,far=s.forecast('YPPH').forecast;

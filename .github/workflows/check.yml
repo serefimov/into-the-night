@@ -27,8 +27,11 @@ jobs:
       - run: npm run validate:campaign
       - run: npm run validate:westward
       - run: npm run validate:departure
+      - run: npm run validate:academic
       - run: npm run build:web
       - run: npm run test:browser
+        env:
+          GLOBE_PREVIEW_LOG: "1"
       - name: Проверить вложенный путь Pages
         run: npm run test:browser
         env:

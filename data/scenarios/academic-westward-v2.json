@@ -1,0 +1,21 @@
+{
+  "scenarioId": "academic-westward",
+  "scenarioVersion": 2,
+  "purpose": "First playable airport stage: westward circumnavigation from Saint Petersburg to Novosibirsk; knowledge transfer and Japan are separate stages",
+  "seed": "academic-westward-v2",
+  "refuelingPolicy": "route-before-departure-v2",
+  "stockVersion": "departure-stocks-v2",
+  "stockKgPerAirport": 64000,
+  "stockOverridesKg": {},
+  "profileId": "B788-reference-v1",
+  "profileVersion": 1,
+  "catalogVersion": 2,
+  "catalogSourceCommit": "11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+  "targetId": "UNNT",
+  "targetCompletion": "after_service",
+  "initial": {
+    "airportId": "ULLI",
+    "utcMs": 1785614400000,
+    "fuelKg": 30000
+  }
+}
