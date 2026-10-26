@@ -12,7 +12,7 @@
 .map-marker .marker-dot{width:16px;height:16px;font-size:12px;background:#0a1b27e8;border-color:#647b8399;color:#9bb0b6}
 .map-marker.cluster .marker-dot{border-style:dashed;font-size:10px;color:#91a5ad}
 .map-marker.overview.cluster .marker-dot{width:14px;height:14px;font-size:11px;opacity:.75}
-.map-marker.has-safe .marker-dot{border-color:#8bb69e;color:var(--safe);border-style:solid}
+.map-marker.has-safe .marker-dot{border-color:#8bb69e;color:var(--safe)}
 .map-marker.safe .marker-dot{color:var(--safe);border-color:#88b69c}
 .map-marker.blocked:not(.selected):not(.goal):not(.current):not(.has-safe) .marker-dot{color:#89999e;border-color:#64778088;opacity:.55}
 .map-marker.overview.blocked:not(.cluster):not(.selected):not(.goal):not(.current) .marker-dot{width:6px;height:6px;font-size:0;background:#81959d;border:0}

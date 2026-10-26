@@ -3,9 +3,9 @@
   "branch": "43-map-density",
   "tag": "",
   "version": "0.1.0-alpha.1",
-  "commit": "71a328bb7bcb22e664615911cb61662a446f6ae9",
-  "runId": "40401886581",
-  "builtAt": "2026-10-26T21:09:42.513Z",
-  "source": "https://github.com/serefimov/into-the-night/tree/71a328bb7bcb22e664615911cb61662a446f6ae9",
-  "contentHash": "f3abcbc84d9452b1081fd7647e907b904a5cfe360bec198ea2135c8540410709"
+  "commit": "a88459913bbb1665d71b39b30a05e2fb1e0e893f",
+  "runId": "40402788792",
+  "builtAt": "2026-10-26T21:16:03.325Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/a88459913bbb1665d71b39b30a05e2fb1e0e893f",
+  "contentHash": "938e1cefa1359bfff948006c5295c1ec7a87827a16f9c9681773b6d0001ee3a0"
 }
