@@ -40,9 +40,10 @@ export function aircraftLeg(p: AircraftProfile,distanceKm: number,initialFuelKg:
  return {durationSeconds:a.departureSeconds+distanceKm/m.cruiseKmPerHour*3600+a.arrivalSeconds,burnKg:burn,arrivalFuelKg:initialFuelKg-burn,
    takeoffMassKg:takeoffMass,landingMassKg:landingMass,dispatchable:reasons.length===0,reasons};
 }
-export function aircraftRefuelling(p: AircraftProfile,fuelKg: number,stockKg: number): {transferKg: number; fuelKg: number; stockKg: number; durationSeconds: number} {
+export function aircraftRefuelling(p: AircraftProfile,fuelKg: number,stockKg: number,targetFuelKg?: number): {transferKg: number; fuelKg: number; stockKg: number; durationSeconds: number} {
  const m=aircraftMetrics(p);finite(fuelKg,'fuel');finite(stockKg,'stock');if(fuelKg>m.fuelCapacityKg)throw new RangeError('Fuel exceeds tank capacity');
- const freeKg=m.fuelCapacityKg-fuelKg,transferKg=Math.min(freeKg,stockKg);
+ const target=targetFuelKg===undefined?m.fuelCapacityKg:targetFuelKg;finite(target,'target fuel');if(target>m.fuelCapacityKg)throw new RangeError('Target exceeds tank capacity');
+ const freeKg=Math.max(0,target-fuelKg),transferKg=Math.min(freeKg,stockKg);
  // Re-adding the rounded free-space difference can overshoot capacity by one ULP.
- return {transferKg,fuelKg:Math.min(m.fuelCapacityKg,fuelKg+transferKg),stockKg:stockKg-transferKg,durationSeconds:transferKg===0?0:p.assumptions.refuellingSetupSeconds+transferKg/m.refuellingKgPerSecond};
+ return {transferKg,fuelKg:targetFuelKg!==undefined&&transferKg===freeKg?Math.max(fuelKg,target):Math.min(m.fuelCapacityKg,fuelKg+transferKg),stockKg:stockKg-transferKg,durationSeconds:transferKg===0?0:p.assumptions.refuellingSetupSeconds+transferKg/m.refuellingKgPerSecond};
 }

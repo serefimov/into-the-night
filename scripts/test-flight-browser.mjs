@@ -32,7 +32,8 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  }
  await select('FACT');assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);assert.match(await evaluate(`document.getElementById('verdict-detail').textContent`),/Солнце/);assert.equal(await snapshot(),initial);
  await select('NZCH');assert.equal(await evaluate(`document.getElementById('fly').disabled`),false);assert.equal(await snapshot(),initial);
- assert.match(await evaluate(`document.getElementById('stock-value').textContent`),/32/);assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Весь переход безопасен/);
+ assert.match(await evaluate(`document.getElementById('stock-value').textContent`),/64/);assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Весь переход безопасен/);
+ assert.match(await evaluate(`document.getElementById('dispatch-summary').textContent`),/37,6 т/);assert.equal(await evaluate(`document.getElementById('dispatch-summary').getBoundingClientRect().height>0`),true);
  await evaluate(`${app}.globe.focus({latitudeDeg:-42,longitudeDeg:-140},1);${app}.render()`);
  const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await mkdir('.build/previews',{recursive:true});await writeFile(`.build/previews/flight-${mobile?'mobile':'desktop'}.png`,Buffer.from(shot.data,'base64'));
  if(process.env.GLOBE_PREVIEW_LOG==='1')console.log(`GLOBE_PREVIEW_${mobile?'MOBILE':'DESKTOP'} ${shot.data}`);
@@ -41,9 +42,9 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  assert.equal(await evaluate(`document.getElementById('flight-clock').dateTime===new Date(${app}.controller.view.state.utcMs).toISOString() && ${app}.globe.lastUtcMs===${app}.controller.view.state.utcMs`),true);
  await click('#play-pause',mobile);await until(`${app}.controller.playing`);await click('#play-pause',mobile);
  await evaluate(`(()=>{const a=${app},p=a.controller.activeForecast.phases.find(p=>p.label==='refuelling').route;a.advanceTo(p.startUtcMs+300000+1200000);})()`);
- assert.match(await evaluate(`document.getElementById('flight-status').textContent`),/Автозаправка/);assert.equal(await evaluate(`${app}.controller.view.state.stocks.NZCH`),16000);
+ assert.match(await evaluate(`document.getElementById('flight-status').textContent`),/Дозаправка перед вылетом/);assert.equal(await evaluate(`${app}.controller.view.state.stocks.SCEL`),84000);
  assert.equal(await evaluate(`${app}.controller.view.state.status`),'running');assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);
- await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);await until(`${app}.controller.view.state.phase==='planning'`);assert.equal(await evaluate(`${app}.controller.view.state.stocks.NZCH`),0);
+ await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);await until(`${app}.controller.view.state.phase==='planning'`);assert.equal(await evaluate(`${app}.controller.view.state.stocks.NZCH`),64000);
  await select('YPPH');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  await select('FACT');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  assert.equal(await evaluate(`${app}.controller.view.state.status`),'won');assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Цель достигнута/);assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);

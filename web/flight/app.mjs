@@ -6,9 +6,9 @@ const time=new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'short',hour:'2-
 const clock=new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'UTC'});
 const tonnes=kg=>decimal.format(kg/1000)+' т';
 const duration=ms=>{const minutes=Math.round(ms/60000);return `${Math.floor(minutes/60)} ч ${minutes%60} мин`;};
-const phases={departure:'Отправление',cruise:'В полёте',arrival:'Посадка',service:'Обслуживание',refuelling:'Автозаправка',planning:'Выбор следующего аэродрома',won:'Цель достигнута',dead:'Партия завершена'};
+const phases={departure:'Отправление',cruise:'В полёте',arrival:'Посадка',service:'Обслуживание',refuelling:'Дозаправка перед вылетом',planning:'Выбор следующего аэродрома',won:'Цель достигнута',dead:'Партия завершена'};
 const plural=new Intl.PluralRules('ru-RU'),landings=n=>`${n} ${{one:'посадка',few:'посадки',many:'посадок',other:'посадки'}[plural.select(n)]}`;
-const reasonNames={fuel_or_reference_reserve:'Не хватает топлива с необходимым резервом.',takeoff_mass:'Превышена взлётная масса.',landing_mass:'После рейса самолёт слишком тяжёлый для посадки.',unverified_airport:'Пригодность полосы для этого самолёта не подтверждена.',ground_fuel:'Не хватает топлива на наземные операции.',solar_indeterminate:'Безопасность не определена. Такой вылет пока нельзя подтвердить.',same_airport:'Самолёт уже на этом аэродроме.',unknown_airport:'Аэродром не найден.',ambiguous_route:'Нельзя однозначно построить этот маршрут.',mission_busy:'Сначала завершится принятый перелёт и автоматическая заправка.',mission_won:'Вы добрались до цели.',mission_dead:'Партия завершена.'};
+const reasonNames={fuel_stock:'На текущем аэродроме не хватает топлива для выбранного рейса.',fuel_capacity:'Для выбранного рейса требуется больше ёмкости бака.',fuel_or_reference_reserve:'Не хватает топлива с необходимым резервом.',takeoff_mass:'Превышена взлётная масса.',landing_mass:'После рейса самолёт слишком тяжёлый для посадки.',unverified_airport:'Пригодность полосы для этого самолёта не подтверждена.',ground_fuel:'Не хватает топлива на наземные операции.',solar_indeterminate:'Безопасность не определена. Такой вылет пока нельзя подтвердить.',same_airport:'Самолёт уже на этом аэродроме.',unknown_airport:'Аэродром не найден.',ambiguous_route:'Нельзя однозначно построить этот маршрут.',mission_busy:'Сначала завершится принятый рейс.',mission_won:'Вы добрались до цели.',mission_dead:'Партия завершена.'};
 function text(id,value){const el=$(id);if(el.textContent!==value)el.textContent=value;}
 async function json(url){const r=await fetch(url);if(!r.ok)throw Error('Не удалось загрузить данные мира');return r.json();}
 export let app=null;
@@ -33,18 +33,20 @@ export async function createFlightApp(definition,land) {
   text('destination-title',airport?(airport.label??airport.name):'Куда летим?');text('destination-subtitle',airport?`${airport.iata?airport.iata+' · ':''}${airport.id} · ${airport.country}`:'Выберите аэродром на глобусе.');
   $('empty-card').hidden=!!airport;$('destination-metrics').hidden=!airport;
   if(airport){text('stock-value',tonnes(s.stocks[airport.id]));text('distance-value',forecast?integer.format(forecast.distanceKm)+' км':airport.id===s.airportId?'Вы здесь':'—');
-   text('duration-value',forecast?duration(forecast.arrivalUtcMs-forecast.phases[0].route.startUtcMs):'—');text('arrival-value',forecast?time.format(forecast.arrivalUtcMs):'—');
+   text('duration-value',forecast?duration(forecast.arrivalUtcMs-forecast.departureUtcMs):'—');text('arrival-value',forecast?time.format(forecast.arrivalUtcMs):'—');
    text('arrival-fuel-value',forecast&&forecast.flight.arrivalFuelKg>=0?tonnes(forecast.flight.arrivalFuelKg):'—');text('end-fuel-value',forecast?.refuelling?tonnes(forecast.refuelling.fuelKg):forecast?.next?tonnes(forecast.next.fuelKg):'—');
   }
   let title='Время стоит, пока вы выбираете.',detail='Метки выбирают аэродром. Кнопка «Полёт» подтверждает вылет.',kind='';
   if(s.status==='won'){title='✓ Цель достигнута';detail=`${integer.format(s.distanceKm)} км позади. Место назначения — ${goal.label??goal.name}.`;kind='safe';}
-  else if(busy){title=controller.playing?'Выполняется принятый рейс':'Рейс на паузе';detail='Посадка и заправка пройдут автоматически. Следующее назначение — после их завершения.';}
-  else if(choice?.allowed){title='✓ Весь переход безопасен';detail=`Полёт и наземные операции проверены. Готовность к следующему вылету — ${time.format(forecast.endUtcMs)} UTC.`;kind='safe';}
+  else if(busy){title=controller.playing?'Выполняется принятый рейс':'Рейс на паузе';detail='Дозаправка перед вылетом, полёт и обслуживание проходят автоматически. Затем можно выбрать новое назначение.';}
+  else if(choice?.allowed){title='✓ Весь переход безопасен';detail=`Заправка перед вылетом, полёт и обслуживание проверены. Завершение — ${time.format(forecast.endUtcMs)} UTC.`;kind='safe';}
   else if(choice){kind='blocked';title=choice.reasons.includes('solar_indeterminate')?'? Безопасность не подтверждена':'× Вылет недоступен';
    detail=choice.reasons.map(r=>r==='sun'?`Солнце на этапе «${phases[choice.forecast.solar.phase]??'полёт'}»${choice.forecast.solar.eventUtcMs!==null?' — '+time.format(choice.forecast.solar.eventUtcMs)+' UTC':''}.`:reasonNames[r]??'Полёт не подтверждён.').join(' ');}
   text('verdict-title',title);text('verdict-detail',detail);$('route-verdict').className='verdict '+kind;
   $('fly').disabled=!choice?.allowed||busy||s.status!=='running';$('fly').setAttribute('aria-label',airport?`Полёт в ${airport.label??airport.name}`:'Полёт');
-  text('ground-note',forecast?.refuelling?`Автозаправка ${tonnes(forecast.refuelling.transferKg)} · наземные операции включены в прогноз.`:'Посадка, обслуживание и заправка выполняются автоматически.');
+  $('dispatch-summary').hidden=!forecast;
+  text('dispatch-summary',forecast?`Здесь нужно добавить ${tonnes(forecast.refuelling.neededKg)} · в наличии ${tonnes(s.stocks[forecast.refuelling.airportId])}. ${forecast.refuelling.sufficient?`Дозаправка ${duration(forecast.refuelling.durationSeconds*1000)} · отправление ${time.format(forecast.departureUtcMs)} UTC.`:'Дозаправка не обеспечит рейс.'}`:'');
+  text('ground-note','Заправляемся под выбранный рейс с резервом 5 т. После посадки топливо остаётся на складе до следующего выбора.');
   globe.update({airports:definition.airports,state:s,statuses,selectedId:controller.selectedId,targetId:definition.targetId,startId:definition.initial.airportId,forecast:accepted??choice?.forecast,tracks:controller.tracks});globe.draw(s.utcMs);
  }
  $('fly').addEventListener('click',()=>{if(controller.fly()){follow=true;render();}});
