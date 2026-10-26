@@ -7,6 +7,7 @@ const clock=new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'short',hour:'2
 const tonnes=kg=>decimal.format(kg/1000)+' т';
 const duration=ms=>{const minutes=Math.round(ms/60000);return `${Math.floor(minutes/60)} ч ${minutes%60} мин`;};
 const phases={departure:'Отправление',cruise:'В полёте',arrival:'Посадка',service:'Обслуживание',refuelling:'Автозаправка',planning:'Выбор следующего аэродрома',won:'Цель достигнута',dead:'Партия завершена'};
+const plural=new Intl.PluralRules('ru-RU'),landings=n=>`${n} ${{one:'посадка',few:'посадки',many:'посадок',other:'посадки'}[plural.select(n)]}`;
 const reasonNames={fuel_or_reference_reserve:'Не хватает топлива с необходимым резервом.',takeoff_mass:'Превышена взлётная масса.',landing_mass:'После рейса самолёт слишком тяжёлый для посадки.',unverified_airport:'Пригодность полосы для этого самолёта не подтверждена.',ground_fuel:'Не хватает топлива на наземные операции.',solar_indeterminate:'Безопасность не определена. Такой вылет пока нельзя подтвердить.',same_airport:'Самолёт уже на этом аэродроме.',unknown_airport:'Аэродром не найден.',ambiguous_route:'Нельзя однозначно построить этот маршрут.',mission_busy:'Сначала завершится принятый перелёт и автоматическая заправка.',mission_won:'Вы добрались до цели.',mission_dead:'Партия завершена.'};
 function text(id,value){const el=$(id);if(el.textContent!==value)el.textContent=value;}
 async function json(url){const r=await fetch(url);if(!r.ok)throw Error('Не удалось загрузить данные мира');return r.json();}
@@ -24,9 +25,9 @@ export async function createFlightApp(definition,land) {
  function render() {
   scheduleForecasts();const s=controller.view.state,airport=airports.get(controller.selectedId),choice=controller.choice,accepted=controller.activeForecast;
   const forecast=choice?.forecast??(s.activeFlight?.toId===controller.selectedId?accepted:null),busy=s.status==='running'&&s.phase!=='planning';
-  const goal=airports.get(definition.targetId);text('goal-name',goal.label??goal.name);text('flight-clock',clock.format(s.utcMs)+' UTC');$('flight-clock').dateTime=new Date(s.utcMs).toISOString();
+  const goal=airports.get(definition.targetId),start=airports.get(definition.initial.airportId);text('goal-name',goal.label??goal.name);text('route-name',`${start.label??start.name} → ${goal.label??goal.name}`);text('flight-clock',clock.format(s.utcMs)+' UTC');$('flight-clock').dateTime=new Date(s.utcMs).toISOString();
   text('flight-fuel',tonnes(s.fuelKg)+' топлива');
-  text('flight-status',s.status==='won'?`Цель достигнута · ${integer.format(s.distanceKm)} км · ${s.flights} посадки`:busy?`${phases[s.phase]} · ${controller.playing?'выполняется':'пауза'}`:'Время стоит. Выберите следующую посадку.');
+  text('flight-status',s.status==='won'?`Цель достигнута · ${integer.format(s.distanceKm)} км · ${landings(s.flights)}`:busy?`${phases[s.phase]} · ${controller.playing?'выполняется':'пауза'}`:'Время стоит. Выберите следующую посадку.');
   $('playback').hidden=!busy;text('play-pause',controller.playing?'Пауза':'Продолжить');text('phase-name',phases[s.phase]);
   if(s.activeFlight)$('flight-progress').value=(s.utcMs-s.activeFlight.startUtcMs)/(s.activeFlight.endUtcMs-s.activeFlight.startUtcMs);
   text('destination-title',airport?(airport.label??airport.name):'Куда летим?');text('destination-subtitle',airport?`${airport.iata?airport.iata+' · ':''}${airport.id} · ${airport.country}`:'Выберите аэродром на глобусе.');
@@ -36,7 +37,7 @@ export async function createFlightApp(definition,land) {
    text('arrival-fuel-value',forecast&&forecast.flight.arrivalFuelKg>=0?tonnes(forecast.flight.arrivalFuelKg):'—');text('end-fuel-value',forecast?.refuelling?tonnes(forecast.refuelling.fuelKg):forecast?.next?tonnes(forecast.next.fuelKg):'—');
   }
   let title='Время стоит, пока вы выбираете.',detail='Метки выбирают аэродром. Кнопка «Полёт» подтверждает вылет.',kind='';
-  if(s.status==='won'){title='✓ Цель достигнута';detail=`${integer.format(s.distanceKm)} км позади. Вы добрались до ${goal.label??goal.name}.`;kind='safe';}
+  if(s.status==='won'){title='✓ Цель достигнута';detail=`${integer.format(s.distanceKm)} км позади. Место назначения — ${goal.label??goal.name}.`;kind='safe';}
   else if(busy){title=controller.playing?'Выполняется принятый рейс':'Рейс на паузе';detail='Посадка и заправка пройдут автоматически. Следующее назначение — после их завершения.';}
   else if(choice?.allowed){title='✓ Весь переход безопасен';detail=`Полёт и наземные операции проверены. Готовность к следующему вылету — ${time.format(forecast.endUtcMs)} UTC.`;kind='safe';}
   else if(choice){kind='blocked';title=choice.reasons.includes('solar_indeterminate')?'? Безопасность не подтверждена':'× Вылет недоступен';

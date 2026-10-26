@@ -28,6 +28,7 @@ export function globeLines(points:readonly Coordinates[],f:GlobeFrame):{x:number
  const lines:{x:number;y:number}[][]=[];let line:{x:number;y:number}[]=[],previous:GlobePoint|null=null;
  for(const location of points){const point=globePoint(location,f);
   if(previous&&previous.visible!==point.visible){const t=previous.depth/(previous.depth-point.depth),x=previous.x+(point.x-previous.x)*t-f.cx,y=previous.y+(point.y-previous.y)*t-f.cy,length=Math.hypot(x,y);
+   if(length<1e-12){if(line.length>1)lines.push(line);line=[];previous=point;if(point.visible)line.push(point);continue;}
    const limb={x:f.cx+x*f.radius/length,y:f.cy+y*f.radius/length};
    if(previous.visible){line.push(limb);if(line.length>1)lines.push(line);line=[];}else line=[limb];
   }

@@ -27,7 +27,7 @@ export class GlobeView {
  zoom(factor){this.picker.hidden=true;this.camera.zoom=clamp(this.camera.zoom*factor,.75,5);this.invalidate();}
  update(data){this.data=data;this.dirty=true;}
  pointer(e){const r=this.canvas.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top};}
- down(e){if(e.pointerType==='mouse'&&e.button!==0)return;this.picker.hidden=true;this.canvas.setPointerCapture(e.pointerId);this.canvas.focus({preventScroll:true});this.pointers.set(e.pointerId,{...this.pointer(e),start:this.pointer(e)});
+ down(e){if(e.pointerType==='mouse'&&e.button!==0)return;this.picker.hidden=true;this.canvas.setPointerCapture(e.pointerId);this.pointers.set(e.pointerId,{...this.pointer(e),start:this.pointer(e)});
   if(this.pointers.size===1)this.gestureMoved=false;else this.gestureMoved=true;this.onInteraction();}
  move(e){const old=this.pointers.get(e.pointerId);if(!old)return;const point=this.pointer(e),before=[...this.pointers.values()];
   if(this.pointers.size===2){const distance=a=>Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y),previous=distance(before);this.pointers.set(e.pointerId,{...point,start:old.start});const current=distance([...this.pointers.values()]);if(previous>0)this.zoom(current/previous);this.gestureMoved=true;return;}
@@ -81,7 +81,7 @@ export class GlobeView {
  drawMarkers() {
   const {airports,state,selectedId,targetId,startId,statuses}=this.data,priority=new Set([selectedId,targetId,startId,state.airportId]),rows=[],bins=new Map();
   for(const airport of airports){const p=globePoint(airport,this.frame);if(p.depth<.025||p.x<-22||p.x>this.geometry.width+22||p.y<-22||p.y>this.geometry.height+22)continue;
-   const row={...p,id:airport.id,airport};if(priority.has(airport.id))rows.push(row);else{const key=Math.floor(p.x/40)+':'+Math.floor(p.y/40);if(!bins.has(key))bins.set(key,[]);bins.get(key).push(row);}}
+   const row={...p,id:airport.id,airport};if(priority.has(airport.id))rows.push(row);else{const bucket=this.camera.zoom<1.5?52:40,key=Math.floor(p.x/bucket)+':'+Math.floor(p.y/bucket);if(!bins.has(key))bins.set(key,[]);bins.get(key).push(row);}}
   for(const [key,group] of bins){if(group.length===1)rows.push(group[0]);else rows.push({id:'cluster:'+key,cluster:true,group,count:group.length,x:group.reduce((a,p)=>a+p.x,0)/group.length,y:group.reduce((a,p)=>a+p.y,0)/group.length});}
   this.hits=rows;const live=new Set();
   for(const row of rows){live.add(row.id);let node=this.nodes.get(row.id);
@@ -90,7 +90,7 @@ export class GlobeView {
    if(row.cluster){const safe=row.group.some(r=>statuses.get(r.id)?.allowed),blocked=row.group.every(r=>statuses.has(r.id)&&!statuses.get(r.id).allowed);node.className='map-marker cluster'+(safe?' has-safe':'');node.textContent=(safe?'✓':blocked?'×':'')+row.count;node.setAttribute('aria-label',`${row.count} аэродромов${safe?', есть доступные':''}: приблизить`);node.removeAttribute('data-airport-id');continue;}
    const info=statuses.get(row.id),safe=info?.allowed,blocked=info&&!safe,uncertain=blocked&&info.reasons.every(r=>r==='solar_indeterminate'),goal=row.id===targetId,current=row.id===state.airportId,selected=row.id===selectedId;
    node.dataset.airportId=row.id;node.dataset.status=current?'current':safe?'safe':blocked?'blocked':'unknown';node.className=`map-marker airport ${safe?'safe':blocked?'blocked':''} ${goal?'goal':''} ${selected?'selected':''} ${current?'current':''}`;
-   const glyph=goal?'⚑':current?'◆':safe?'✓':uncertain?'?':blocked?'×':'·',label=row.airport.iata??row.id;
+   const glyph=goal?'⚑':current?'◆':safe?'✓':uncertain?'?':blocked?'×':'·',label=selected||goal||current?(row.airport.label??row.airport.iata??row.id):(row.airport.iata??row.id);
    node.replaceChildren(Object.assign(document.createElement('span'),{className:'marker-dot',textContent:glyph}),Object.assign(document.createElement('span'),{className:'marker-label',textContent:label}));
    node.setAttribute('aria-label',`${row.airport.label??row.airport.name??row.id}${goal?', цель':''}${current?', вы здесь':safe?', полёт доступен':blocked?', полёт недоступен':', выбрать для проверки'}`);
   }

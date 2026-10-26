@@ -24,6 +24,7 @@ test('world routes share core geometry and clip at the globe limb without a date
  }
  assert.throws(()=>globeRoute({latitudeDeg:0,longitudeDeg:0},{latitudeDeg:0,longitudeDeg:180}),/antipodal/);
  assert.throws(()=>globeRoute({latitudeDeg:0,longitudeDeg:0},{latitudeDeg:0,longitudeDeg:0}),/Coincident/);
+ assert.deepEqual(globeLines([{latitudeDeg:0,longitudeDeg:0},{latitudeDeg:0,longitudeDeg:180}],globeFrame({latitudeDeg:0,longitudeDeg:0},1000,700)),[]);
 });
 test('UI selection/navigation is separate from confirmation; playback pauses without changing its physical rate',()=>{
  const c=new FlightController(definition),initial=c.session.save();c.select('NZCH');assert.equal(c.choice.allowed,true);assert.equal(c.session.save(),initial);
