@@ -38,7 +38,7 @@ export function layoutAirportMarkers({airports,frame,width,height,zoom,priorityI
  let ordinaryLabels=0;
  for(const row of rows){
   if(!row.priority&&(row.cluster||ordinaryLabels>=labelLimit))continue;
-  const label=row.priority?(row.airport.label??row.airport.iata??row.id):(row.airport.iata??row.id),w=Math.min(125,label.length*6.2+4),h=15;
+  const label=row.priority?(row.airport.label??row.airport.iata??row.id):(row.airport.iata??row.id),w=row.priority?125:Math.min(125,label.length*7+6),h=15;
   const candidates=[{left:row.x-w/2,top:row.y+17},{left:row.x-w/2,top:row.y-32},{left:row.x+19,top:row.y-h/2},{left:row.x-w-19,top:row.y-h/2}].map(p=>({...p,right:p.left+w,bottom:p.top+h}));
   const rect=candidates.find(r=>r.left>=4&&r.right<=width-4&&r.top>=4&&r.bottom<=height-4&&!obstacles.some(o=>intersects(r,o))&&!labels.some(o=>intersects(r,o))&&!rows.some(p=>p!==row&&intersects(r,box(p,17)))&&(!plane?.visible||!intersects(r,box(plane,17))));
   if(rect){row.label={text:label,...rect};labels.push(rect);if(!row.priority)ordinaryLabels++;}
