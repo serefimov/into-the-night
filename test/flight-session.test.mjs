@@ -2,6 +2,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {FlightController} from '../web/flight/controller.mjs';
+import {MissionSession} from '../dist/core/mission.js';
 import {loadCycleDefinition} from '../scripts/mission-cycle-data.mjs';
 
 const definition = await loadCycleDefinition();
@@ -38,9 +39,12 @@ for (const phase of ['cruise', 'refuelling']) {
   assert.equal(restored.selectedId, original.view.state.activeFlight.toId);
   assert.equal(restored.playing, false);
   assert.equal(restored.rate, original.rate);
+  const totalDuration = restored.session.endUtcMs - restored.view.state.activeFlight.startUtcMs;
+  const expectedUtc = restored.view.state.utcMs + totalDuration * 1000 / 22500;
 
   restored.play(0);
   restored.tick(1000);
+  assert.ok(Math.abs(restored.view.state.utcMs-expectedUtc)<.001, 'Restored flights must advance at the new tempo');
   original.advanceTo(restored.view.state.utcMs, 1000);
   assert.deepEqual(restored.view, original.view);
   restored.advanceTo(restored.session.endUtcMs, 1000);
@@ -78,6 +82,37 @@ test('invalid or incompatible restore leaves a playing party and its selection i
   assert.equal(controller.anchorUtc, before.anchor);
   assert.equal(controller.playing, true);
  }
+});
+
+test('22.5-second transitions preserve physical results across pauses and the complete western route', () => {
+ const controller = new FlightController(definition);
+ const reference = new MissionSession(definition);
+
+ for (const destination of ['BIKF', 'CYEG', 'UHMA', 'UNNT']) {
+  controller.select(destination);
+  assert.equal(controller.fly(0), true);
+  assert.equal(reference.fly(destination).allowed, true);
+  const start = reference.currentTimeUtc;
+  const end = reference.endUtcMs;
+
+  controller.tick(11250);
+  reference.stopAt(start + (end-start)/2);
+  assert.deepEqual(controller.view, reference.current(), 'Half the screen time must show half the physical transition');
+
+  controller.pause(11250);
+  const paused = controller.session.save();
+  controller.tick(100000);
+  assert.equal(controller.session.save(), paused);
+
+  controller.play(200000);
+  controller.tick(211249);
+  assert.ok(controller.view.state.utcMs < end, 'Resume must keep the tempo instead of jumping to the end');
+  controller.tick(211251);
+  reference.resume();
+  assert.deepEqual(controller.view, reference.current());
+  assert.equal(controller.playing, false);
+ }
+ assert.equal(controller.view.state.status, 'won');
 });
 
 test('restoring a finished mission preserves its result and restart begins a genuinely new party', () => {
