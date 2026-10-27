@@ -2,10 +2,11 @@
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {loadCycleDefinition} from './mission-cycle-data.mjs';
+import {openFlightPage} from './browser-navigation.mjs';
 const base=await loadCycleDefinition();
 export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobile}){
  const app='window.centerApp';
- async function open(){await send('Page.navigate',{url:rootUrl});await until(`document.body.dataset.ready==='true'`);await evaluate(`import('./app.mjs').then(m=>{window.centerApp=m.app;return true;})`);}
+ async function open(){await openFlightPage({send,evaluate,until,rootUrl});await evaluate(`import('./app.mjs').then(m=>{window.centerApp=m.app;return true;})`);}
  async function metrics(width=mobile?390:1280){await send('Emulation.setDeviceMetricsOverride',{width,height:mobile?844:900,deviceScaleFactor:1,mobile});await send('Emulation.setTouchEmulationEnabled',{enabled:mobile});}
  async function key(key,code,windowsVirtualKeyCode){const params={key,code,windowsVirtualKeyCode,nativeVirtualKeyCode:windowsVirtualKeyCode},text=key==='Enter'?String.fromCharCode(13):key===' '?' ':null;await send('Input.dispatchKeyEvent',{type:'keyDown',...params,...(text===null?{}:{text})});await send('Input.dispatchKeyEvent',{type:'keyUp',...params});}
  async function inspect(){return evaluate(`(()=>{const a=${app},g=a.globe,s=a.controller.view.state,b=document.getElementById('plane-focus'),r=b.getBoundingClientRect(),canvas=g.canvas.getBoundingClientRect(),p=g.planePose;

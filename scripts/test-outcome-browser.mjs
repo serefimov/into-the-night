@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {SOLAR_MODEL} from '../dist/core/config.js';
 import {loadCycleDefinition} from './mission-cycle-data.mjs';
+import {openFlightPage} from './browser-navigation.mjs';
 const base=await loadCycleDefinition();
 function fixture(kind){const d=structuredClone(base);d.scenarioId='synthetic-browser-outcome';d.worldVersion='synthetic-outcome-world-v1';d.profile.id='synthetic-outcome-profile';d.seed='browser-outcome-42';d.profile.assumptions.zeroFuelKg=60000;
  d.airports=['A','B','C','D'].map((id,i)=>({id,name:'Аэродром '+id,label:'Аэродром '+id,country:'Тест',latitudeDeg:['sun','failed'].includes(kind)?80:-80,longitudeDeg:i===3?90:i*90,suitability:{status:i>=2?'unverified':'screened-candidate'}}));
@@ -15,7 +16,7 @@ export async function outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobi
   const script=`(()=>{const original=window.fetch.bind(window);window.fetch=(input,...args)=>String(input).endsWith('/data/runtime/mission.json')?Promise.resolve(new Response(${JSON.stringify(JSON.stringify(fixture(kind)))},{headers:{'Content-Type':'application/json'}})):original(input,...args);
    ${fake?`window.outcomeWorkers=[];window.Worker=class{constructor(){this.requests=[];window.outcomeWorkers.push(this);}postMessage(data){this.requests.push(data);}terminate(){this.terminated=true;}};`:''}})()`;
   scriptId=(await send('Page.addScriptToEvaluateOnNewDocument',{source:script})).identifier;
-  await send('Page.navigate',{url:rootUrl});await until(`document.body.dataset.ready==='true'`);
+  await openFlightPage({send,evaluate,until,rootUrl});
   await evaluate(`import('./app.mjs').then(m=>{window.outcomeApp=m.app;return true;})`);
  }
  const app='window.outcomeApp';
@@ -29,6 +30,11 @@ export async function outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobi
  assert.equal(await evaluate(`${app}.controller.view.state.result.kind`),'no_routes');assert.equal(await evaluate(`${app}.controller.view.state.death`),null);assert.equal(await evaluate(`${app}.controller.view.state.utcMs`),fixture('lost').initial.utcMs);assert.equal(await evaluate(`${app}.controller.view.state.fuelKg`),1);
  assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/Поражение: маршрут оборвался/);assert.match(await evaluate(`document.getElementById('availability-detail').textContent`),/Нет доступных перелётов/);assert.match(await evaluate(`document.getElementById('availability-reasons').textContent`),/Топливо: 1/);assert.equal(await evaluate(`document.getElementById('flight-planning-card').hidden`),true);assert.equal(await evaluate(`document.getElementById('restart-mission').hidden`),false);
  await mkdir('.build/previews',{recursive:true});const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await writeFile(`.build/previews/no-routes-${mobile?'mobile':'desktop'}.png`,Buffer.from(shot.data,'base64'));if(process.env.GLOBE_PREVIEW_LOG==='1')console.log(`NO_ROUTES_${mobile?'MOBILE':'DESKTOP'} ${shot.data}`);
+ const lostSave=await evaluate(`${app}.controller.session.save()`);
+ await openFlightPage({send,evaluate,until,rootUrl,preserveSave:true});
+ await evaluate(`import('./app.mjs').then(m=>{window.outcomeApp=m.app;return true;})`);
+ assert.equal(await evaluate(`${app}.controller.session.save()`),lostSave,'Reload must retain a confirmed no-routes result');
+ assert.equal(await evaluate(`document.getElementById('mission-summary').hidden`),false);
  const generation=await evaluate(`${app}.planner.generation`);await click('#restart-mission',mobile);await until(`${app}.controller.view.state.status==='lost'`);assert.ok(await evaluate(`${app}.planner.generation`)>generation);assert.equal(await evaluate(`${app}.controller.view.events.filter(e=>e.kind==='mission_lost').length`),1);assert.equal(await evaluate(`${app}.controller.view.state.flights`),0);
  await open('sun');await until(`${app}.controller.view.state.status==='dead'`);assert.equal(await evaluate(`${app}.controller.view.state.result.kind`),'sun');assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/самолёт встретил Солнце/);assert.equal(await evaluate(`${app}.controller.view.events.some(e=>e.kind==='mission_lost')`),false);
  await open('failed');await until(`${app}.planner.summary().status==='failed'`);assert.equal(await evaluate(`${app}.controller.view.state.status`),'running');assert.equal(await evaluate(`${app}.controller.view.state.result`),null);assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/Проверка не завершена/);assert.equal(await evaluate(`document.getElementById('retry-scan').hidden`),false);
