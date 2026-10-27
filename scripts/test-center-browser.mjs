@@ -15,7 +15,7 @@ export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobil
   await evaluate(`import('./app.mjs').then(m=>{window.centerApp=m.app;return true;})`);
   // Capture on either side of the actual click handler, within the same event.
   // This avoids confusing normal playback progress with a navigation mutation.
-  await evaluate(`(()=>{window.centerTouches=0;document.addEventListener('touchstart',e=>{if(e.target.closest('#plane-focus'))window.centerTouches++;},{capture:true,passive:true});document.addEventListener('pointerdown',e=>{if(e.target.closest('#plane-focus')){window.centerPointer=e.pointerType;window.centerPrimary=e.isPrimary;}},true);const a=${app},snapshot=()=>JSON.stringify({save:a.controller.session.save(),selected:a.controller.selectedId,choice:a.controller.choice,forecast:a.controller.activeForecast,tracks:a.controller.tracks,playing:a.controller.playing,rate:a.controller.rate});document.addEventListener('click',e=>{if(e.target.closest('#plane-focus'))window.centerBefore=snapshot();},true);document.addEventListener('click',e=>{if(e.target.closest('#plane-focus')){window.centerAfter=snapshot();window.centerClicks=(window.centerClicks??0)+1;}});})()`);
+  await evaluate(`(()=>{window.centerTouches=0;window.centerContact=[];for(const type of ['pointerdown','pointerup','touchstart','touchend'])document.addEventListener(type,e=>{if(e.target.closest('#plane-focus')){const b=document.getElementById('plane-focus'),r=b.getBoundingClientRect();window.centerContact.push({type,target:e.target.localName,rect:[r.x,r.y,r.width,r.height],time:e.timeStamp,scale:visualViewport.scale,offset:visualViewport.offsetTop,prevented:e.defaultPrevented});}},{capture:false,passive:true});document.addEventListener('touchstart',e=>{if(e.target.closest('#plane-focus'))window.centerTouches++;},{capture:true,passive:true});document.addEventListener('pointerdown',e=>{if(e.target.closest('#plane-focus')){window.centerPointer=e.pointerType;window.centerPrimary=e.isPrimary;}},true);const a=${app},snapshot=()=>JSON.stringify({save:a.controller.session.save(),selected:a.controller.selectedId,choice:a.controller.choice,forecast:a.controller.activeForecast,tracks:a.controller.tracks,playing:a.controller.playing,rate:a.controller.rate});document.addEventListener('click',e=>{if(e.target.closest('#plane-focus'))window.centerBefore=snapshot();},true);document.addEventListener('click',e=>{if(e.target.closest('#plane-focus')){window.centerAfter=snapshot();window.centerClicks=(window.centerClicks??0)+1;}});})()`);
  }
  async function check(name,run){try{await run();results.push(name);if(process.env.CENTER_TRACE)console.log('PASS',mobile,name);}catch(error){failures.push(`${name}: ${error.message}`);if(process.env.CENTER_TRACE)console.log('FAIL',mobile,name,error.message);}}
  async function key(key,code,keyCode){await send('Input.dispatchKeyEvent',{type:'keyDown',key,code,windowsVirtualKeyCode:keyCode,...(key==='Enter'?{text:'\r'}:key===' '?{text:' '}:{} )});await send('Input.dispatchKeyEvent',{type:'keyUp',key,code,windowsVirtualKeyCode:keyCode});}
@@ -43,7 +43,7 @@ export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobil
    await evaluate('new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))');
    await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
   }else await click('#plane-focus',false);
-  try{await until(`(window.centerClicks??0)>${before}`);}catch(error){throw Error(error.message+' '+JSON.stringify(await evaluate(`({primary:window.centerPrimary,pointer:window.centerPointer,touches:window.centerTouches,focus:document.hasFocus(),scrollY,disabled:document.getElementById('plane-focus').disabled})`)));}
+  try{await until(`(window.centerClicks??0)>${before}`);}catch(error){throw Error(error.message+' '+JSON.stringify(await evaluate(`({primary:window.centerPrimary,pointer:window.centerPointer,touches:window.centerTouches,focus:document.hasFocus(),scrollY,disabled:document.getElementById('plane-focus').disabled,contacts:window.centerContact})`)));}
   assert.equal(await evaluate('window.centerPointer'),mobile?'touch':'mouse');assert.equal(await evaluate('window.centerPrimary'),true);
   if(mobile)assert.equal(await evaluate('window.centerTouches'),touches+1);
  }
@@ -89,15 +89,16 @@ export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobil
  await check('manual mouse/touch rotation releases following and the button restores it',async()=>{
   await evaluate(`${app}.globe.zoom(3);${app}.render()`);
   const b=await evaluate(`(()=>{const r=${app}.globe.canvas.getBoundingClientRect();return {x:r.x+r.width*.55,y:r.y+r.height*.45};})()`);
-  if(mobile){await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...b,id:0}]});await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:b.x+70,y:b.y+12,id:0}]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
+  if(mobile){
+   await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...b,id:0}]});
+   for(let step=1;step<=5;step++){await evaluate('new Promise(r=>setTimeout(r,40))');await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:b.x+70*step/5,y:b.y+12*step/5,id:0}]});}
+   await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+  }
   else{await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...b});await send('Input.dispatchMouseEvent',{type:'mouseMoved',buttons:1,x:b.x+70,y:b.y+12});await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:b.x+70,y:b.y+12});}
   const camera=await evaluate(`JSON.stringify(${app}.globe.camera)`),utc=await evaluate(`${app}.controller.view.state.utcMs`);
   await until(`${app}.controller.view.state.utcMs>${utc}`);
   await until(`${app}.globe.pointers.size===0`);
-  if(mobile){await send('Emulation.setTouchEmulationEnabled',{enabled:false});await send('Emulation.setTouchEmulationEnabled',{enabled:true});}
-  // Reset the synthetic input device between completed contacts; no game state changes.
-  // Headless Chrome can otherwise suppress the compatibility click after a drag.
-  await evaluate('new Promise(r=>setTimeout(r,1000))');assert.equal(await evaluate(`JSON.stringify(${app}.globe.camera)`),camera);
+  await evaluate('new Promise(r=>setTimeout(r,250))');assert.equal(await evaluate(`JSON.stringify(${app}.globe.camera)`),camera);
   await activate();await centered(3);await click('#play-pause',mobile);
  });
  await evaluate(`${app}.controller.pause();${app}.advanceTo(${app}.controller.session.endUtcMs);${app}.select('CYEG')`);await click('#fly',mobile);await click('#play-pause',mobile);
