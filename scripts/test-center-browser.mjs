@@ -34,6 +34,8 @@ export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobil
  // Freeze wall-clock playback only in the test, then allow one real state advance
  // through RAF: this proves following without racing screenshots against time.
  await evaluate(`(()=>{const c=${app}.controller;window.centerOriginalTick=c.tick;c.tick=()=>false;c.play(performance.now());})()`);
+ await tickOnce();assert.equal((await inspect()).centered,true,'Centering on pause must arm following for resume');
+ await evaluate(`(()=>{const a=${app},c=a.controller,p=c.view.state.position;c.tick=()=>false;c.play(performance.now());a.globe.onInteraction();a.globe.focus({latitudeDeg:-p.latitudeDeg,longitudeDeg:((p.longitudeDeg+360)%360)-180},5);a.render();})()`);
  await click('#plane-focus',mobile);
  assert.equal(await evaluate(`${app}.controller.playing`),true);
  const unchanged=await evaluate(`(()=>{const a=${app},before=a.controller.session.save(),selected=a.controller.selectedId,zoom=a.globe.camera.zoom;document.getElementById('plane-focus').click();return before===a.controller.session.save()&&selected===a.controller.selectedId&&zoom===a.globe.camera.zoom;})()`);assert.equal(unchanged,true);
