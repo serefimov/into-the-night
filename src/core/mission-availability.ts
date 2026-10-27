@@ -34,9 +34,9 @@ export class MissionAvailabilityScan {
   if(key!==this.key)return false;
   if(!Array.isArray(batch)||typeof done!=='boolean')throw new RangeError('Invalid availability batch');
   const next=new Map(this.#records);
-  for(const item of batch){
-   if(!item||!this.#ids.has(item.id)||typeof item.allowed!=='boolean'||!Array.isArray(item.reasons)||item.reasons.some(r=>typeof r!=='string'||!r)||item.allowed&&item.reasons.length||!item.allowed&&!item.reasons.length)throw new RangeError('Invalid availability choice');
-   const normalized={id:item.id,allowed:item.allowed,reasons:[...new Set(item.reasons)].sort()},previous=next.get(item.id);
+  for(const item of batch as readonly AvailabilityChoice[]){
+   if(!item||!this.#ids.has(item.id)||typeof item.allowed!=='boolean'||!Array.isArray(item.reasons)||item.reasons.some((r:unknown)=>typeof r!=='string'||!r)||item.allowed&&item.reasons.length||!item.allowed&&!item.reasons.length)throw new RangeError('Invalid availability choice');
+   const normalized:AvailabilityChoice={id:item.id,allowed:item.allowed,reasons:[...new Set<string>(item.reasons)].sort()},previous=next.get(item.id);
    if(previous&&canonicalJson(previous)!==canonicalJson(normalized))throw new RangeError('Conflicting availability choice');
    next.set(item.id,normalized);
   }
