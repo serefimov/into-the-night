@@ -123,4 +123,4 @@ try {
  const results=process.env.CENTER_ONLY==='1'?centers:[...centers,await scenarioRun(false),await scenarioRun(true),await flightScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await flightScenarioRun({send,evaluate,until,click,rootUrl,mobile:true}),await outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobile:true})];assert.deepEqual(errors,[]);
  process.stdout.write(JSON.stringify({passed:true,browser:version.product,base,results},null,2)+'\n');
 }catch(e){process.stderr.write(e.stack+'\n'+browserLog+'\n');process.exitCode=1;}
-finally{socket?.close();browser?.kill();server?.kill();for(const p of pending.values())clearTimeout(p.timer);rmSync(directory,{recursive:true,force:true});}
+finally{socket?.close();browser?.kill();server?.kill();for(const p of pending.values())clearTimeout(p.timer);rmSync(directory,{recursive:true,force:true,maxRetries:5,retryDelay:50});}
