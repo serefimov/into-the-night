@@ -16,7 +16,13 @@
   <p class="map-detail-hint">Приблизьте, чтобы увидеть больше аэродромов</p>
   <div class="map-legend"><span><i class="night"></i>Тень сейчас</span><span><i class="day"></i>Солнце сейчас</span><span class="availability-key">✓ доступен &nbsp; × заблокирован</span></div>
  </section>
- <aside class="destination" aria-labelledby="destination-title">
+ <aside class="destination" aria-label="Маршрут и выбор аэродрома">
+  <section id="availability-panel" class="availability-panel" aria-live="polite" aria-atomic="true" aria-labelledby="availability-title">
+   <span class="eyebrow" id="availability-scope">По всему каталогу</span><strong id="availability-title">Проверяем направления</strong>
+   <p id="availability-detail"></p><p id="availability-reasons" hidden></p>
+   <button id="retry-scan" hidden>Повторить проверку</button><button id="restart-mission" hidden>Начать заново</button>
+  </section>
+  <div id="flight-planning-card" class="planning-card">
   <div><span class="eyebrow">Следующая посадка</span><h1 id="destination-title">Куда летим?</h1><p id="destination-subtitle">Выберите аэродром на глобусе.</p></div>
   <div id="empty-card" class="empty-card"><span class="compass">↶</span><p>До цели — через весь мир.</p><p class="muted">Прямой путь встречает Солнце. Ищите тёмные участки и аэродромы для дозаправки.</p></div>
   <dl id="destination-metrics" class="metrics" hidden>
@@ -28,6 +34,7 @@
   <button id="fly" class="fly-button" disabled>Полёт <span aria-hidden="true">↗</span></button>
   <p id="dispatch-summary" class="dispatch-summary" hidden></p>
   <p class="footnote" id="ground-note">Заправка — перед выбранным рейсом, с резервом 5 т.</p>
+  </div>
  </aside>
 </main>
 <script type="module" src="./app.mjs"></script>

@@ -12,3 +12,4 @@ export { RESEARCH_MODEL, forecastResearchFlight, executeResearchFlight, firstFli
 export { MISSION_MODEL, MissionSession } from './mission.js';
 export { forecastMissionFlight } from './mission-flight.js';
 export * from './globe.js';
+export * from './mission-availability.js';

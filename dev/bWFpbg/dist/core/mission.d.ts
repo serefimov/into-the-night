@@ -2,12 +2,13 @@ import type { MissionWorld, MissionForecast } from './mission-flight.js';
 import type { ResearchPhase } from './mission-research.js';
 import type { Coordinates } from './solar.js';
 import type { SearchOptions } from './interval-search.js';
+import type { MissionAvailability, AvailabilityReason } from './mission-availability.js';
 export declare const MISSION_MODEL: Readonly<{
-    readonly mode: "airport-flight-v2";
-    readonly simulationVersion: "flight-cycle-2";
-    readonly schemaVersion: 2;
-    readonly eventVersion: 2;
-    readonly saveVersion: 2;
+    readonly mode: "airport-flight-v3";
+    readonly simulationVersion: "flight-cycle-3";
+    readonly schemaVersion: 3;
+    readonly eventVersion: 3;
+    readonly saveVersion: 3;
 }>;
 export interface MissionDefinition extends MissionWorld {
     scenarioId: string;
@@ -24,16 +25,16 @@ export interface MissionDefinition extends MissionWorld {
     };
 }
 export interface MissionEvent {
-    version: 2;
+    version: 3;
     sequence: number;
     utcMs: number;
     flightIndex: number;
     airportId: string;
-    kind: 'mission_started' | 'flight_committed' | 'flight_started' | 'arrived' | 'refuelling_started' | 'flight_completed' | 'mission_won' | 'mission_died';
+    kind: 'mission_started' | 'flight_committed' | 'flight_started' | 'arrived' | 'refuelling_started' | 'flight_completed' | 'mission_won' | 'mission_died' | 'mission_lost';
 }
 export interface MissionState {
     mode: typeof MISSION_MODEL.mode;
-    schemaVersion: 2;
+    schemaVersion: 3;
     simulationVersion: string;
     scenarioId: string;
     scenarioVersion: number;
@@ -48,12 +49,13 @@ export interface MissionState {
     stocks: Record<string, number>;
     flights: number;
     distanceKm: number;
-    status: 'running' | 'won' | 'dead';
-    phase: 'planning' | 'won' | 'dead' | ResearchPhase['label'];
+    status: 'running' | 'won' | 'dead' | 'lost';
+    phase: 'planning' | 'won' | 'dead' | 'lost' | ResearchPhase['label'];
     death: null | {
         kind: 'sun';
         utcMs: number;
     };
+    result: MissionResult | null;
     activeFlight: null | {
         fromId: string;
         toId: string;
@@ -65,6 +67,16 @@ export interface MissionState {
         phaseEndUtcMs: number;
     };
 }
+export type MissionResult = {
+    kind: 'goal' | 'sun';
+    utcMs: number;
+} | {
+    kind: 'no_routes';
+    utcMs: number;
+    checked: number;
+    total: number;
+    reasons: Record<AvailabilityReason, number>;
+};
 export interface MissionView {
     state: MissionState;
     events: MissionEvent[];
@@ -84,13 +96,15 @@ export declare class MissionSession {
     get definition(): MissionDefinition;
     get currentTimeUtc(): number;
     get endUtcMs(): number;
+    get planningKey(): string | null;
     forecast(destinationId: string): MissionChoice;
     fly(destinationId: string): MissionChoice;
-    /** Explicit analysis for UI/CLI. A planning dead end never advances UTC or causes an invented death. */
-    availability(): {
-        status: 'available' | 'no_safe_choices' | 'unresolved' | 'busy' | 'terminal';
-        availableIds: string[];
-        unresolvedIds: string[];
+    /** Pure, complete analysis: it never changes time, resources, result or event delivery. */
+    availability(): MissionAvailability;
+    /** Only the session's own full-catalog forecasts can commit a no-routes result.
+     * Worker counts are progress, never authority to end a party. No-wait policy (#25 revises it). */
+    resolvePlanning(): MissionAdvance & {
+        availability: MissionAvailability;
     };
     /** Preview may inspect accepted history/future, but never commits time, fuel or event delivery. */
     stateAt(utcMs: number): MissionView;

@@ -21,3 +21,6 @@
 .map-marker.current .marker-dot{border-color:#e8efea;color:#e8efea}
 .map-detail-hint{position:absolute;left:28px;bottom:40px;margin:0;color:#91a5ada8;font-size:10px;pointer-events:none}
 @media(max-width:760px){.map-detail-hint{left:16px;bottom:31px;font-size:9px}.map-marker .marker-label{font-size:9px}}
+
+.planning-card{display:contents}.availability-panel{flex-shrink:0;padding-bottom:15px;border-bottom:1px solid var(--line)}.availability-panel strong{display:block;font-size:14px;line-height:1.4;margin-top:6px}.availability-panel p{font-size:11px;line-height:1.5;color:var(--muted);margin:7px 0 0}.availability-panel.safe strong{color:var(--safe)}.availability-panel.blocked strong{color:var(--danger)}.availability-panel.terminal strong{font-size:23px;margin-top:14px}.availability-panel button{margin-top:16px;padding:10px 15px;min-height:44px;font-size:12px}.availability-panel.terminal{border-bottom:0}.availability-panel.terminal p{font-size:13px;line-height:1.7}.availability-panel #availability-reasons{font-size:11px}
+@media(max-width:760px){.availability-panel{padding-bottom:10px}.availability-panel strong{font-size:12px}.availability-panel p{font-size:10px;margin-top:4px}.availability-panel.terminal strong{font-size:21px}}
