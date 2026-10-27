@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import {globeFrame,globePoint,globeNormal,globeLines,globeRoute} from '../../dist/core/globe.js';
+import {globeFrame,globeNormal,globeLines,globeRoute} from '../../dist/core/globe.js';
 import {layoutAirportMarkers} from './marker-layout.mjs';
+import {flightPlanePose,drawFlightPlane} from './plane.mjs';
 import {solarDirection} from '../../dist/core/solar.js';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const longitude=v=>((v+180)%360+360)%360-180;
@@ -75,15 +76,15 @@ export class GlobeView {
   for(const path of this.data.tracks??[])stroke(globeRoute(path.from,path.to),'#debd8155',2);
   const forecast=this.data.forecast;
   if(forecast){const cruise=forecast.phases.find(p=>p.label==='cruise');if(cruise)stroke(globeRoute(cruise.route.path.from,cruise.route.path.to),forecast.allowed?'#e7c58c':'#ef847e',2.5,forecast.allowed?[]:[5,5]);}
-  this.drawMarkers();
-  const plane=globePoint(this.data.state.position,this.frame);if(plane.visible){ctx.save();ctx.translate(plane.x,plane.y);ctx.fillStyle='#fff4dd';ctx.strokeStyle='#07131e';ctx.lineWidth=3;ctx.font='24px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.strokeText('✈',0,-13);ctx.fillText('✈',0,-13);ctx.restore();}
+  this.planePose=flightPlanePose(this.data.state,this.data.acceptedForecast,this.frame);
+  this.drawMarkers();drawFlightPlane(ctx,this.planePose);
   this.dirty=false;
  }
  drawMarkers() {
   const {airports,state,selectedId,targetId,statuses}=this.data,canvasRect=this.canvas.getBoundingClientRect();
   const obstacles=[...this.canvas.parentElement.querySelectorAll('.map-controls,.map-legend,.world-caption,.playback,.map-detail-hint'),document.getElementById('goal-focus')].filter(e=>e&&!e.hidden&&e.getBoundingClientRect().width>0).map(e=>{const r=e.getBoundingClientRect();return {left:r.left-canvasRect.left-5,right:r.right-canvasRect.left+5,top:r.top-canvasRect.top-5,bottom:r.bottom-canvasRect.top+5};});
-  const plane=globePoint(state.position,this.frame),active=state.activeFlight;
-  this.markerLayout=layoutAirportMarkers({airports,frame:this.frame,width:this.geometry.width,height:this.geometry.height,zoom:this.camera.zoom,priorityIds:[selectedId,state.airportId,targetId,active?.fromId,active?.toId],obstacles,plane:{...plane,y:plane.y-13}});
+  const plane=this.planePose,active=state.activeFlight;
+  this.markerLayout=layoutAirportMarkers({airports,frame:this.frame,width:this.geometry.width,height:this.geometry.height,zoom:this.camera.zoom,priorityIds:[selectedId,state.airportId,targetId,active?.fromId,active?.toId],obstacles,plane});
   const {rows,detail}=this.markerLayout;
   for(const row of rows)if(Math.hypot(row.x-row.anchorX,row.y-row.anchorY)>1){this.ctx.strokeStyle='#c4cfc280';this.ctx.lineWidth=1;this.ctx.beginPath();this.ctx.moveTo(row.anchorX,row.anchorY);this.ctx.lineTo(row.x,row.y);this.ctx.stroke();}
   this.hits=rows;const live=new Set();

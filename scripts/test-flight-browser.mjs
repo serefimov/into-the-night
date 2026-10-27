@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
+import {inspectPausedPlane} from './test-plane-browser.mjs';
 export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobile}) {
  await send('Emulation.setDeviceMetricsOverride',{width:mobile?390:1280,height:mobile?844:900,deviceScaleFactor:1,mobile});await send('Emulation.setTouchEmulationEnabled',{enabled:mobile});
  await send('Page.navigate',{url:rootUrl});await until(`location.pathname.endsWith('/web/flight/index.html') && document.body.dataset.ready==='true'`);
@@ -57,6 +58,8 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  await click('#fly',mobile);await until(`${app}.controller.playing`);await click('#play-pause',mobile);await until(`!${app}.controller.playing`);
  const paused=await snapshot();await evaluate('new Promise(r=>setTimeout(r,80))');assert.equal(await snapshot(),paused,'Paused animation must not advance');
  assert.equal(await evaluate(`document.getElementById('flight-clock').dateTime===new Date(${app}.controller.view.state.utcMs).toISOString() && ${app}.globe.lastUtcMs===${app}.controller.view.state.utcMs`),true);
+ await evaluate(`(()=>{const a=${app},p=a.controller.activeForecast.phases.find(p=>p.label==='cruise').route;a.advanceTo(p.startUtcMs+(p.endUtcMs-p.startUtcMs)*.4);})()`);
+ await inspectPausedPlane({app,evaluate,send,mobile,label:'first-cruise'});
  await click('#play-pause',mobile);await until(`${app}.controller.playing`);await click('#play-pause',mobile);
  await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);await until(`${app}.controller.view.state.phase==='planning'`);assert.equal(await evaluate(`${app}.controller.view.state.stocks.BIKF`),64000);
  await select('CYEG');await click('#fly',mobile);await click('#play-pause',mobile);
@@ -66,7 +69,10 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  assert.equal(await evaluate(`${app}.controller.view.state.airportId`),'BIKF');assert.equal(await evaluate(`${app}.controller.view.state.stocks.CYEG`),64000);
  assert.equal(await evaluate(`${app}.controller.view.state.status`),'running');assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);
  await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);await until(`${app}.controller.view.state.phase==='planning'`);assert.equal(await evaluate(`${app}.controller.view.state.stocks.CYEG`),64000);
- await select('UHMA');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
+ await select('UHMA');await click('#fly',mobile);await click('#play-pause',mobile);
+ await evaluate(`(()=>{const a=${app},p=a.controller.activeForecast.phases.find(p=>p.label==='cruise').route;a.advanceTo(p.startUtcMs+(p.endUtcMs-p.startUtcMs)*.98);})()`);
+ await inspectPausedPlane({app,evaluate,send,mobile,label:'westward-date-line'});
+ await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  await select('UNNT');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  assert.equal(await evaluate(`${app}.controller.view.state.status`),'won');assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/Цель достигнута/);assert.equal(await evaluate(`document.getElementById('restart-mission').hidden`),false);assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Цель достигнута/);assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
  return {viewport:mobile?'390x844 touch':'1280x900 mouse',passed:true,steps:['viewport marker budget','all-catalog worker independent of visibility','dense region zoom and touch targets','real land texture','worker forecasts','drag/pinch/wheel without mutation','map marker selection','blocked eastern direct route','single flight confirmation','pause/resume','one displayed UTC','partial automatic refuelling','SPB-Novosibirsk western circuit','no numeric forms or overflow']};
