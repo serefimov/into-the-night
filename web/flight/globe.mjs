@@ -82,7 +82,7 @@ export class GlobeView {
  }
  drawMarkers() {
   const {airports,state,selectedId,targetId,statuses}=this.data,canvasRect=this.canvas.getBoundingClientRect();
-  const obstacles=[...this.canvas.parentElement.querySelectorAll('.map-controls,.map-legend,.world-caption,.playback,.map-detail-hint'),document.getElementById('goal-focus')].filter(e=>e&&!e.hidden&&e.getBoundingClientRect().width>0).map(e=>{const r=e.getBoundingClientRect();return {left:r.left-canvasRect.left-5,right:r.right-canvasRect.left+5,top:r.top-canvasRect.top-5,bottom:r.bottom-canvasRect.top+5};});
+  const obstacles=[...this.canvas.parentElement.querySelectorAll('.map-controls,.plane-focus,.map-legend,.world-caption,.playback,.map-detail-hint'),document.getElementById('goal-focus')].filter(e=>e&&!e.hidden&&e.getBoundingClientRect().width>0).map(e=>{const r=e.getBoundingClientRect();return {left:r.left-canvasRect.left-5,right:r.right-canvasRect.left+5,top:r.top-canvasRect.top-5,bottom:r.bottom-canvasRect.top+5};});
   const plane=this.planePose,active=state.activeFlight;
   this.markerLayout=layoutAirportMarkers({airports,frame:this.frame,width:this.geometry.width,height:this.geometry.height,zoom:this.camera.zoom,priorityIds:[selectedId,state.airportId,targetId,active?.fromId,active?.toId],obstacles,plane});
   const {rows,detail}=this.markerLayout;
