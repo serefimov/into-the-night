@@ -11,7 +11,8 @@ export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobil
  await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile});
  await send('Emulation.setTouchEmulationEnabled',{enabled:mobile});
  async function open(){
-  await send('Page.navigate',{url:rootUrl});await until(`document.body.dataset.ready==='true'`);
+  await evaluate('window.__centerLeaving=true');
+  await send('Page.navigate',{url:rootUrl});await until(`!window.__centerLeaving && document.body?.dataset.ready==='true' && location.pathname.endsWith('/web/flight/index.html')`);
   await evaluate(`import('./app.mjs').then(m=>{window.centerApp=m.app;return true;})`);
   // Capture on either side of the actual click handler, within the same event.
   // This avoids confusing normal playback progress with a navigation mutation.
