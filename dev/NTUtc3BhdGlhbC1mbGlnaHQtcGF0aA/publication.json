@@ -1,0 +1,11 @@
+{
+  "kind": "dev",
+  "branch": "55-spatial-flight-path",
+  "tag": "",
+  "version": "0.1.0-alpha.1",
+  "commit": "c6af97722d2d05a2fd90ec4f24026e72a15c6f8b",
+  "runId": "40596643230",
+  "builtAt": "2026-10-27T22:42:31.218Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/c6af97722d2d05a2fd90ec4f24026e72a15c6f8b",
+  "contentHash": "f62e81fe9bc0f19844f02bfb4ceec35a722ce4e7606b14cf2cc33864a5ed3126"
+}
