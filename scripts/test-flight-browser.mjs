@@ -24,8 +24,18 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  const catalogCount=await evaluate(`${app}.globe.data.statuses.size`);assert.equal(catalogCount,1182);assert.ok(catalogCount>overview.count);
  for(const zoom of [1,5,1]){await evaluate(`${app}.globe.focus({latitudeDeg:50,longitudeDeg:10},${zoom});${app}.render()`);await inspectLayout('dense Europe '+zoom);assert.equal(await snapshot(),initial);}
  await evaluate(`${app}.globe.focus(${app}.controller.view.state.position,1);${app}.render()`);
- const land=await evaluate(`(()=>{const g=${app}.globe;const at=(lat,lon)=>g.landPixels[(Math.floor((90-lat)/180*512)*1024+Math.floor((lon+180)/360*1024))*4+3]>90;return [at(-25,134),at(20,15),at(-88,0),at(0,-140)];})()`);
- assert.deepEqual(land,[true,true,true,false],'Coastline texture must contain real continents and ocean');
+ const land=await evaluate(`(()=>{
+  const a=${app},g=a.globe,camera={...g.camera};
+  const at=(lat,lon)=>{
+   g.focus({latitudeDeg:lat,longitudeDeg:lon});a.render();
+   g.ctx.save();g.ctx.resetTransform();
+   const inside=g.ctx.isPointInPath(g.landPath,g.frame.cx,g.frame.cy);
+   g.ctx.restore();return inside;
+  };
+  const result=[at(-25,134),at(20,15),at(-88,0),at(0,-140)];
+  g.focus(camera,camera.zoom);a.render();return result;
+ })()`);
+ assert.deepEqual(land,[true,true,true,false],'Projected coastlines must contain real continents and ocean');
  const bounds=await evaluate(`(()=>{const r=document.getElementById('globe').getBoundingClientRect();return {x:r.x+r.width*.65,y:r.y+r.height*.45};})()`);
  assert.equal(await evaluate(`document.elementFromPoint(${bounds.x},${bounds.y}).id`),'globe','Navigation gestures must start on the map, outside controls');
  if(mobile){await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...bounds,id:1}]});await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:bounds.x+65,y:bounds.y+15,id:1}]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
@@ -77,5 +87,5 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  await select('UNNT');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  assert.equal(await evaluate(`${app}.controller.view.state.status`),'won');assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/Цель достигнута/);assert.equal(await evaluate(`document.getElementById('restart-mission').hidden`),false);assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Цель достигнута/);assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
- return {viewport:mobile?'390x844 touch':'1280x900 mouse',passed:true,steps:['viewport marker budget','all-catalog worker independent of visibility','dense region zoom and touch targets','real land texture','worker forecasts','drag/pinch/wheel without mutation','map marker selection','blocked eastern direct route','single flight confirmation','pause/resume','one displayed UTC','partial automatic refuelling','SPB-Novosibirsk western circuit','no numeric forms or overflow']};
+ return {viewport:mobile?'390x844 touch':'1280x900 mouse',passed:true,steps:['viewport marker budget','all-catalog worker independent of visibility','dense region zoom and touch targets','vector coastlines','worker forecasts','drag/pinch/wheel without mutation','map marker selection','blocked eastern direct route','single flight confirmation','pause/resume','one displayed UTC','partial automatic refuelling','SPB-Novosibirsk western circuit','no numeric forms or overflow']};
 }

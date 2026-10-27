@@ -161,8 +161,8 @@ export async function createFlightApp(definition,land) {
  };
 }
 try {
- const [definition,index]=await Promise.all([json(new URL('../../data/runtime/mission.json',import.meta.url)),json(new URL('../../data/geography/land-110m.json',import.meta.url))]);
- if(!Array.isArray(index.parts)||index.parts.some(p=>!/^land-[1-9][0-9]*\.json$/.test(p)))throw Error('Некорректные данные карты');
+ const [definition,index]=await Promise.all([json(new URL('../../data/runtime/mission.json',import.meta.url)),json(new URL('../../data/geography/land-50m.json',import.meta.url))]);
+ if(!Array.isArray(index.parts)||index.parts.some(p=>!/^coast-50m-[1-9][0-9]*\.json$/.test(p)))throw Error('Некорректные данные карты');
  const parts=await Promise.all(index.parts.map(p=>json(new URL('../../data/geography/'+p,import.meta.url))));
  app=await createFlightApp(definition,{type:'MultiPolygon',coordinates:parts.flat()});
 }catch(error){text('flight-status','Не удалось загрузить мир. Обновите страницу.');text('verdict-detail',error.message);throw error;}

@@ -7,6 +7,7 @@ import {flightScenarioRun} from './test-flight-browser.mjs';
 import {outcomeScenarioRun} from './test-outcome-browser.mjs';
 import {centerScenarioRun} from './test-center-browser.mjs';
 import {sessionScenarioRun} from './test-session-browser.mjs';
+import {coastScenarioRun} from './test-coast-browser.mjs';
 const directory=mkdtempSync(`${tmpdir()}/into-the-night-browser-`);
 const base=process.env.SPIKE_TEST_BASE??'/';
 const rootUrl='http://127.0.0.1:5983'+base;
@@ -119,7 +120,7 @@ try {
  sessionId=(await send('Target.attachToTarget',{targetId,flatten:true},null)).sessionId;
  await send('Page.enable');await send('Runtime.enable');
  const version=await send('Browser.getVersion',{},null);
- const results=[await scenarioRun(false),await scenarioRun(true),await flightScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await flightScenarioRun({send,evaluate,until,click,rootUrl,mobile:true}),await outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobile:true}),await centerScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await centerScenarioRun({send,evaluate,until,click,rootUrl,mobile:true}),await sessionScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await sessionScenarioRun({send,evaluate,until,click,rootUrl,mobile:true})];assert.deepEqual(errors,[]);
+ const results=process.env.COAST_ONLY==='1'?[await coastScenarioRun({send,evaluate,until,rootUrl})]:[await scenarioRun(false),await scenarioRun(true),await flightScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await flightScenarioRun({send,evaluate,until,click,rootUrl,mobile:true}),await outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobile:true}),await centerScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await centerScenarioRun({send,evaluate,until,click,rootUrl,mobile:true}),await sessionScenarioRun({send,evaluate,until,click,rootUrl,mobile:false}),await sessionScenarioRun({send,evaluate,until,click,rootUrl,mobile:true}),await coastScenarioRun({send,evaluate,until,rootUrl})];assert.deepEqual(errors,[]);
  process.stdout.write(JSON.stringify({passed:true,browser:version.product,base,results},null,2)+'\n');
 }catch(e){process.stderr.write(e.stack+'\n'+browserLog+'\n');process.exitCode=1;}
 finally{socket?.close();browser?.kill();server?.kill();for(const p of pending.values())clearTimeout(p.timer);rmSync(directory,{recursive:true,force:true});}

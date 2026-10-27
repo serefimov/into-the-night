@@ -38,7 +38,9 @@ jobs:
         if: always()
         with:
           name: globe-previews
-          path: .build/previews/*.png
+          path: |
+            .build/previews/*.png
+            .build/coast-metrics.json
           if-no-files-found: ignore
           retention-days: 7
       - run: npm run fixtures:solar
