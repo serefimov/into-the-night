@@ -37,6 +37,7 @@ export interface MissionView {state:MissionState;events:MissionEvent[]}
 export interface MissionAdvance extends MissionView {newEvents:MissionEvent[]}
 export interface MissionChoice {allowed:boolean; reasons:readonly string[]; forecast:MissionForecast|null}
 interface AcceptedFlight {origin:ResearchState;toId:string;forecast:MissionForecast}
+export interface MissionAcceptedFlight {fromId:string;toId:string;forecast:MissionForecast}
 interface MissionPayload {
  mode:string;simulationVersion:string;eventVersion:number;definition:MissionDefinition;options:SearchOptions;
  choices:string[];noRoutesAt:number|null;cursorUtcMs:number;consumedEvents:number;snapshot:MissionView;
@@ -96,6 +97,10 @@ export class MissionSession {
  }
  get definition():MissionDefinition{return copy(this.#definition);}
  get currentTimeUtc():number{return this.#cursor;}
+ /** Read-only-by-copy accepted plans, for presenting history and resuming playback. */
+ get acceptedFlights():MissionAcceptedFlight[] {
+  return this.#plans.map(plan=>({fromId:plan.origin.airportId,toId:plan.toId,forecast:copy(plan.forecast)}));
+ }
  get endUtcMs():number{return this.#plans.at(-1)?.forecast.endUtcMs??this.#initial.utcMs;}
  get planningKey():string|null {const state=this.current().state;return state.status==='running'&&state.phase==='planning'?saveChecksum({definition:this.#definitionHash,options:this.#options,state:this.#ready()}):null;}
  #airport(id:string) {return this.#definition.airports.find(a=>a.id===id)!;}

@@ -28,3 +28,33 @@
 /* #40: keep the labelled return control clear of the centred plane and playback. */
 .map-controls{touch-action:none}.plane-focus{position:absolute;top:24px;right:24px;z-index:2;display:flex;align-items:center;justify-content:center;gap:8px;width:146px;min-height:44px;padding:0 10px;font-size:12px;white-space:nowrap;color:var(--accent);background:#17313ced;border-color:#627875;touch-action:none}.plane-focus svg{flex-shrink:0}
 @media(max-width:760px){.plane-focus{top:12px;right:12px;width:min(136px,calc(50vw - 34px));padding:0 6px;gap:5px;font-size:10.5px}}
+
+/* Session controls stay secondary; the map and flight card remain the main flow. */
+.session-menu { position:relative; flex-shrink:0; z-index:10; }
+.session-menu summary {
+ display:flex; align-items:center; justify-content:center; gap:8px;
+ min-width:44px; min-height:44px; padding:0 10px; cursor:pointer;
+ border:1px solid var(--line); border-radius:10px; font-size:12px; list-style:none;
+}
+.session-menu summary::-webkit-details-marker { display:none; }
+.session-menu summary:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.session-panel {
+ position:absolute; top:calc(100% + 8px); right:0;
+ width:min(290px,calc(100vw - 24px)); padding:10px;
+ background:#0e202b; border:1px solid var(--line); border-radius:12px;
+ box-shadow:0 10px 30px #0008;
+}
+.session-panel button { display:block; width:100%; margin:4px 0; padding:8px 10px; text-align:left; font-size:12px; }
+.session-panel p { margin:12px 6px 4px; font-size:11px; line-height:1.5; color:var(--muted); }
+.mission-summary h2 { margin:0 0 16px; font-size:15px; }
+.summary-metrics { display:grid; grid-template-columns:1fr 1fr; gap:16px 12px; margin:0; }
+.summary-metrics div { min-width:0; }
+.summary-metrics dt { font-size:10px; color:var(--muted); }
+.summary-metrics dd { margin:5px 0 0; font-size:13px; overflow-wrap:anywhere; }
+#summary-route { padding-left:20px; margin:20px 0 0; font-size:12px; line-height:1.8; }
+@media(max-width:760px) {
+ .session-menu summary span { display:none; }
+ .session-menu summary { padding:0; }
+ .mission-summary h2 { margin-bottom:12px; }
+}
+@media(max-width:440px) { .brand small { display:none; } }

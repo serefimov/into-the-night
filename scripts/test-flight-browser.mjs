@@ -2,14 +2,15 @@
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {inspectPausedPlane} from './test-plane-browser.mjs';
+import {openFlightPage} from './browser-navigation.mjs';
 export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobile}) {
  await send('Emulation.setDeviceMetricsOverride',{width:mobile?390:1280,height:mobile?844:900,deviceScaleFactor:1,mobile});await send('Emulation.setTouchEmulationEnabled',{enabled:mobile});
- await send('Page.navigate',{url:rootUrl});await until(`location.pathname.endsWith('/web/flight/index.html') && document.body.dataset.ready==='true'`);
+ await openFlightPage({send,evaluate,until,rootUrl});
  await evaluate(`import('./app.mjs').then(module=>{window.flightModule=module;return true;})`);
  const app='window.flightModule.app';
  const snapshot=()=>evaluate(`${app}.controller.session.save()`);
  const initial=await snapshot();assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
- assert.equal(await evaluate(`document.querySelectorAll('input,select,dialog').length`),0);
+ assert.equal(await evaluate(`document.querySelectorAll('input:not([type="file"]),select,dialog').length`),0);
  assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);
  await until(`${app}.globe.data.statuses.has('BIKF') && ${app}.globe.data.statuses.has('UNNT')`);
  assert.equal(await evaluate(`${app}.globe.data.statuses.get('BIKF').allowed`),true);assert.equal(await evaluate(`${app}.globe.data.statuses.get('UNNT').allowed`),false);

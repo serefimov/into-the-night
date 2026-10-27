@@ -1,8 +1,36 @@
 // SPDX-License-Identifier: GPL-3.0-only
 import {MissionSession} from '../../dist/core/mission.js';
 export class FlightController {
- constructor(definition,options={}){this.options=Object.freeze({...options});this.session=new MissionSession(definition,options);this.selectedId=null;this.playing=false;this.choice=null;this.activeForecast=null;this.tracks=[];this.anchorUtc=this.session.currentTimeUtc;this.anchorReal=0;this.rate=1;this.view=this.session.current();}
- restart(){const definition=this.session.definition;this.session=new MissionSession(definition,this.options);this.selectedId=null;this.playing=false;this.choice=null;this.activeForecast=null;this.tracks=[];this.anchorUtc=this.session.currentTimeUtc;this.anchorReal=0;this.rate=1;this.view=this.session.current();}
+ constructor(definition, options = {}) {
+  this.options = Object.freeze({...options});
+  this.#replaceSession(new MissionSession(definition, options));
+ }
+
+ #replaceSession(session) {
+  const history = session.acceptedFlights;
+  const view = session.current();
+  const active = view.state.activeFlight ? history.at(-1) : null;
+
+  this.session = session;
+  this.playing = false;
+  this.selectedId = active?.toId ?? null;
+  this.activeForecast = active?.forecast ?? null;
+  this.tracks = history.map(flight => flight.forecast.phases.find(p => p.label === 'cruise').route.path);
+  this.anchorUtc = view.state.utcMs;
+  this.anchorReal = 0;
+  this.rate = active ? (session.endUtcMs - view.state.activeFlight.startUtcMs) / 45000 : 1;
+  this.refresh();
+ }
+
+ restore(serialized) {
+  // Validate before replacing any part of the live party, including playback.
+  const session = MissionSession.restore(serialized, this.session.definition);
+  this.#replaceSession(session);
+ }
+
+ restart() {
+  this.#replaceSession(new MissionSession(this.session.definition, this.options));
+ }
  resolvePlanning(){const result=this.session.resolvePlanning();this.refresh();return result;}
  select(id){this.selectedId=id;this.refresh();}
  refresh(){this.view=this.session.current();this.choice=this.selectedId?this.session.forecast(this.selectedId):null;}

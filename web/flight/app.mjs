@@ -2,6 +2,7 @@
 import {FlightController} from './controller.mjs';
 import {FlightPlanningScan} from './planning-scan.mjs';
 import {GlobeView} from './globe.mjs';
+import {bindSessionMenu} from './session-menu.mjs';
 const $=id=>document.getElementById(id),integer=new Intl.NumberFormat('ru-RU',{maximumFractionDigits:0}),decimal=new Intl.NumberFormat('ru-RU',{maximumFractionDigits:1});
 const time=new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',timeZone:'UTC'});
 const clock=new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'UTC'});
@@ -17,8 +18,48 @@ export async function createFlightApp(definition,land) {
  const controller=new FlightController(definition),airports=new Map(definition.airports.map(a=>[a.id,a]));
  let follow=false,lastDraw=0,destroyed=false;
  const globe=new GlobeView($('globe'),$('globe-markers'),land,{onSelect:select,onInteraction:()=>{follow=false;}});
- globe.focus(controller.view.state.position,1);
  const planner=new FlightPlanningScan(controller,()=>render()),statuses=planner.statuses;
+ const sessionMenu = bindSessionMenu(controller, {onRestore:restoreView, onRestart:restart});
+ follow = Boolean(controller.view.state.activeFlight);
+ globe.focus(controller.view.state.position,1);
+
+ function restoreView() {
+  planner.reset();
+  follow = Boolean(controller.view.state.activeFlight);
+  globe.focus(controller.view.state.position);
+  render();
+ }
+
+ function restart() {
+  planner.reset();
+  controller.restart();
+  follow = false;
+  globe.focus(controller.view.state.position,1);
+  render();
+  sessionMenu.restart();
+ }
+
+ function renderMissionSummary(state) {
+  $('mission-summary').hidden = state.status === 'running';
+  if (state.status === 'running') return;
+
+  const goal = airports.get(definition.targetId);
+  text('summary-goal',goal.label ?? goal.name);
+  text('summary-utc',clock.format(state.utcMs)+' UTC');
+  text('summary-duration',duration(state.utcMs-state.startUtcMs));
+  text('summary-distance',integer.format(state.distanceKm)+' км');
+  text('summary-landings',landings(state.flights));
+  text('summary-fuel',tonnes(state.fuelKg));
+  const visited = [definition.initial.airportId,
+   ...controller.view.events.filter(event=>event.kind==='arrived').map(event=>event.airportId)];
+  const stops = visited.map(id=>{
+   const item = document.createElement('li');
+   const airport = airports.get(id);
+   item.textContent = airport.label ?? airport.name;
+   return item;
+  });
+  $('summary-route').replaceChildren(...stops);
+ }
  function renderAvailability(s){
   const report=planner.summary(),terminal=s.status!=='running',busy=s.status==='running'&&s.phase!=='planning';
   let title='',detail='',kind='';
@@ -47,6 +88,7 @@ export async function createFlightApp(definition,land) {
   planner.update();const s=controller.view.state,airport=airports.get(controller.selectedId),choice=controller.choice,accepted=controller.activeForecast;
   const forecast=choice?.forecast??(s.activeFlight?.toId===controller.selectedId?accepted:null),busy=s.status==='running'&&s.phase!=='planning';
   renderAvailability(s);
+  renderMissionSummary(s);
   const goal=airports.get(definition.targetId),start=airports.get(definition.initial.airportId);text('goal-name',goal.label??goal.name);text('route-name',`${start.label??start.name} → ${goal.label??goal.name}`);text('flight-clock',clock.format(s.utcMs)+' UTC');$('flight-clock').dateTime=new Date(s.utcMs).toISOString();
   text('flight-fuel',tonnes(s.fuelKg)+' топлива');
   text('flight-status',s.status==='lost'?'Маршрут оборвался: нет доступных перелётов.':s.status==='dead'?'Партия завершена: самолёт встретил Солнце.':s.status==='won'?`Цель достигнута · ${integer.format(s.distanceKm)} км · ${landings(s.flights)}`:busy?`${phases[s.phase]} · ${controller.playing?'выполняется':'пауза'}`:'Время стоит. Выберите следующую посадку.');
@@ -71,17 +113,52 @@ export async function createFlightApp(definition,land) {
   text('dispatch-summary',forecast&&forecast.refuelling.neededKg===0?`Дозаправка не нужна · отправление ${time.format(forecast.departureUtcMs)} UTC.`:forecast?`Здесь нужно добавить ${tonnes(forecast.refuelling.neededKg)} · в наличии ${tonnes(s.stocks[forecast.refuelling.airportId])}. ${forecast.refuelling.sufficient?`Дозаправка ${duration(forecast.refuelling.durationSeconds*1000)} · отправление ${time.format(forecast.departureUtcMs)} UTC.`:'Дозаправка не обеспечит рейс.'}`:'');
   text('ground-note','Заправляемся под выбранный рейс с резервом 5 т. После посадки топливо остаётся на складе до следующего выбора.');
   globe.update({airports:definition.airports,state:s,statuses,selectedId:controller.selectedId,targetId:definition.targetId,startId:definition.initial.airportId,forecast:accepted??choice?.forecast,acceptedForecast:accepted,tracks:controller.tracks});globe.draw(s.utcMs);
+  if (s.status !== 'running') sessionMenu.checkpoint(performance.now(),true);
  }
- $('restart-mission').addEventListener('click',()=>{planner.reset();controller.restart();follow=false;globe.focus(controller.view.state.position,1);render();});
+ $('restart-mission').addEventListener('click',restart);
  $('retry-scan').addEventListener('click',()=>planner.retry());
- $('fly').addEventListener('click',()=>{if(controller.fly()){follow=true;render();}});
- $('play-pause').addEventListener('click',()=>{controller.playing?controller.pause():controller.play();render();});
+ $('fly').addEventListener('click',()=>{
+  if (!controller.fly()) return;
+  follow = true;
+  render();
+  sessionMenu.checkpoint(performance.now(),true);
+ });
+ $('play-pause').addEventListener('click',()=>{
+  controller.playing ? controller.pause() : controller.play();
+  render();
+  sessionMenu.checkpoint(performance.now(),true);
+ });
  $('zoom-in').addEventListener('click',()=>{follow=false;globe.zoom(1.3);});$('zoom-out').addEventListener('click',()=>{follow=false;globe.zoom(1/1.3);});
  $('plane-focus').addEventListener('click',()=>{follow=true;globe.focus(controller.view.state.position);});
  $('goal-focus').addEventListener('click',()=>{follow=false;globe.focus(airports.get(definition.targetId),1);});
- function frame(now){if(destroyed)return;if(now-lastDraw>=32){const changed=controller.tick(now);if(changed){if(follow)globe.focus(controller.view.state.position,globe.camera.zoom);render();}if(globe.dirty)globe.draw(controller.view.state.utcMs);lastDraw=now;}requestAnimationFrame(frame);}
+ function frame(now) {
+  if (destroyed) return;
+  if (now-lastDraw>=32) {
+   if (controller.tick(now)) {
+    if (follow) globe.focus(controller.view.state.position);
+    render();
+    sessionMenu.checkpoint(now,!controller.playing);
+   }
+   if (globe.dirty) globe.draw(controller.view.state.utcMs);
+   lastDraw = now;
+  }
+  requestAnimationFrame(frame);
+ }
  render();requestAnimationFrame(frame);document.body.dataset.ready='true';
- return {controller,globe,planner,select,render,advanceTo(utcMs){controller.advanceTo(utcMs);render();},destroy(){destroyed=true;planner.destroy();globe.destroy();}};
+ return {
+  controller,globe,planner,select,render,
+  advanceTo(utcMs) {
+   controller.advanceTo(utcMs);
+   render();
+   sessionMenu.checkpoint(performance.now(),true);
+  },
+  destroy() {
+   destroyed = true;
+   planner.destroy();
+   globe.destroy();
+   sessionMenu.destroy();
+  },
+ };
 }
 try {
  const [definition,index]=await Promise.all([json(new URL('../../data/runtime/mission.json',import.meta.url)),json(new URL('../../data/geography/land-110m.json',import.meta.url))]);
