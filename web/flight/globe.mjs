@@ -3,6 +3,7 @@ import {globeFrame,globeNormal,globeLines,globeRoute} from '../../dist/core/glob
 import {layoutAirportMarkers} from './marker-layout.mjs';
 import {flightPlanePose,drawFlightPlane} from './plane.mjs';
 import {solarDirection} from '../../dist/core/solar.js';
+import {traceCoastline} from './coastline.mjs';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const longitude=v=>((v+180)%360+360)%360-180;
 const colors={nightLand:[28,56,61],nightSea:[8,22,34],dayLand:[127,163,158],daySea:[29,64,79]};
@@ -10,10 +11,9 @@ export class GlobeView {
  constructor(canvas,markers,land,{onSelect,onInteraction}) {
   this.canvas=canvas;this.markers=markers;this.ctx=canvas.getContext('2d');this.onSelect=onSelect;this.onInteraction=onInteraction;
   this.camera={latitudeDeg:-42,longitudeDeg:-140,zoom:1};this.pointers=new Map();this.nodes=new Map();this.hits=[];this.data=null;this.dirty=true;this.geometry=null;
-  this.texture=document.createElement('canvas');this.texture.width=1024;this.texture.height=512;const ctx=this.texture.getContext('2d');
-  ctx.fillStyle='#fff';ctx.strokeStyle='#fff';ctx.lineWidth=.6;
-  for(const polygon of land.coordinates){ctx.beginPath();for(const ring of polygon){ring.forEach(([lon,lat],i)=>{const x=(lon+180)/360*1024,y=(90-lat)/180*512;i?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.closePath();}ctx.fill('evenodd');ctx.stroke();}
-  this.landPixels=ctx.getImageData(0,0,1024,512).data;this.surface=document.createElement('canvas');
+  this.land=land;
+  this.surface=document.createElement('canvas');
+  this.landSurface=document.createElement('canvas');
   this.picker=document.createElement('div');this.picker.className='cluster-picker';this.picker.hidden=true;canvas.parentElement.append(this.picker);
   this.resizeObserver=new ResizeObserver(()=>{this.geometry=null;this.dirty=true;});this.resizeObserver.observe(canvas);
   canvas.addEventListener('pointerdown',e=>this.down(e));canvas.addEventListener('pointermove',e=>this.move(e));canvas.addEventListener('pointerup',e=>this.up(e));
@@ -49,12 +49,23 @@ export class GlobeView {
  }
  prepare(width,height) {
   const scale=Math.min(1,560/Math.max(width,height)),w=Math.max(1,Math.round(width*scale)),h=Math.max(1,Math.round(height*scale));
-  this.surface.width=w;this.surface.height=h;const frame=globeFrame(this.camera,w,h,this.camera.zoom),ctx=this.surface.getContext('2d'),image=ctx.createImageData(w,h),samples=[];
-  for(let y=0;y<h;y++)for(let x=0;x<w;x++){const n=globeNormal(x+.5,y+.5,frame);if(!n)continue;
-   const lon=Math.atan2(n[1],n[0]),lat=Math.asin(clamp(n[2],-1,1)),tx=clamp(Math.floor((lon/Math.PI+1)*512),0,1023),ty=clamp(Math.floor((.5-lat/Math.PI)*512),0,511);
-   samples.push({index:(y*w+x)*4,n,land:this.landPixels[(ty*1024+tx)*4+3]>90,depth:Math.sqrt(Math.max(0,1-((x+.5-frame.cx)**2+(y+.5-frame.cy)**2)/frame.radius**2))});
+  this.surface.width=w;this.surface.height=h;
+  this.landSurface.width=w;this.landSurface.height=h;
+  const frame=globeFrame(this.camera,w,h,this.camera.zoom);
+  const ctx=this.surface.getContext('2d'),landCtx=this.landSurface.getContext('2d');
+  const image=ctx.createImageData(w,h),landImage=landCtx.createImageData(w,h);
+  const samples=new Float64Array(w*h*4);
+  this.landPath=new Path2D();
+  traceCoastline(this.land,this.frame,this.landPath,Math.min(devicePixelRatio||1,2));
+  this.spherePath=new Path2D();
+  this.spherePath.arc(this.frame.cx,this.frame.cy,this.frame.radius,0,Math.PI*2);
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+   const index=(y*w+x)*4,n=globeNormal(x+.5,y+.5,frame);
+   if(!n){samples[index+3]=-1;continue;}
+   samples[index]=n[0];samples[index+1]=n[1];samples[index+2]=n[2];
+   samples[index+3]=Math.sqrt(Math.max(0,1-((x+.5-frame.cx)**2+(y+.5-frame.cy)**2)/frame.radius**2));
   }
-  this.geometry={width,height,ctx,image,samples};
+  this.geometry={width,height,ctx,landCtx,image,landImage,samples};
  }
  draw(utcMs) {
   if(!this.data)return;
@@ -64,11 +75,25 @@ export class GlobeView {
   this.frame=globeFrame(this.camera,width,height,this.camera.zoom);
   if(!this.geometry||this.geometry.width!==width||this.geometry.height!==height)this.prepare(width,height);
   const sun=solarDirection(utcMs),g=this.geometry;
-  for(const {index,n,land,depth} of g.samples){const q=n[0]*sun[0]+n[1]*sun[1]+n[2]*sun[2],day=clamp((q+.025)/.05,0,1),shade=.6+.4*depth;
-   const night=land?colors.nightLand:colors.nightSea,light=land?colors.dayLand:colors.daySea;
-   for(let c=0;c<3;c++)g.image.data[index+c]=Math.round((night[c]+(light[c]-night[c])*day)*shade);g.image.data[index+3]=255;
+  for(let index=0;index<g.samples.length;index+=4){
+   const depth=g.samples[index+3];if(depth<0)continue;
+   const q=g.samples[index]*sun[0]+g.samples[index+1]*sun[1]+g.samples[index+2]*sun[2];
+   const day=clamp((q+.025)/.05,0,1),shade=.6+.4*depth;
+   for(let c=0;c<3;c++){
+    g.image.data[index+c]=Math.round((colors.nightSea[c]+(colors.daySea[c]-colors.nightSea[c])*day)*shade);
+    g.landImage.data[index+c]=Math.round((colors.nightLand[c]+(colors.dayLand[c]-colors.nightLand[c])*day)*shade);
+   }
+   g.image.data[index+3]=255;g.landImage.data[index+3]=255;
   }
-  g.ctx.putImageData(g.image,0,0);const ctx=this.ctx;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,width,height);ctx.drawImage(this.surface,0,0,width,height);
+  g.ctx.putImageData(g.image,0,0);g.landCtx.putImageData(g.landImage,0,0);
+  const ctx=this.ctx;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,width,height);
+  // Only smooth illumination is rasterized. Coast boundaries are native-resolution paths.
+  ctx.save();ctx.clip(this.spherePath);
+  ctx.fillStyle='rgb('+colors.nightSea.join(',')+')';ctx.fill(this.spherePath);
+  ctx.drawImage(this.surface,0,0,width,height);
+  ctx.fillStyle='rgb('+colors.nightLand.join(',')+')';ctx.fill(this.landPath);
+  ctx.save();ctx.clip(this.landPath);ctx.drawImage(this.landSurface,0,0,width,height);ctx.restore();
+  ctx.restore();
   ctx.strokeStyle='#5b8d9355';ctx.lineWidth=1;ctx.beginPath();ctx.arc(this.frame.cx,this.frame.cy,this.frame.radius,0,Math.PI*2);ctx.stroke();
   const stroke=(points,color,lineWidth=1,dash=[])=>{ctx.strokeStyle=color;ctx.lineWidth=lineWidth;ctx.setLineDash(dash);for(const line of globeLines(points,this.frame)){ctx.beginPath();line.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.stroke();}ctx.setLineDash([]);};
   for(let lat=-60;lat<=60;lat+=30)stroke(Array.from({length:73},(_,i)=>({latitudeDeg:lat,longitudeDeg:i*5-180})),'#68919220');
