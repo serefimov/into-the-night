@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 import {MissionSession} from '../../dist/core/mission.js';
+const FLIGHT_PLAYBACK_MS = 22500;
 export class FlightController {
  constructor(definition, options = {}) {
   this.options = Object.freeze({...options});
@@ -18,7 +19,7 @@ export class FlightController {
   this.tracks = history.map(flight => flight.forecast.phases.find(p => p.label === 'cruise').route.path);
   this.anchorUtc = view.state.utcMs;
   this.anchorReal = 0;
-  this.rate = active ? (session.endUtcMs - view.state.activeFlight.startUtcMs) / 45000 : 1;
+  this.rate = active ? (session.endUtcMs - view.state.activeFlight.startUtcMs) / FLIGHT_PLAYBACK_MS : 1;
   this.refresh();
  }
 
@@ -37,7 +38,7 @@ export class FlightController {
  fly(now=performance.now()) {
   if(!this.selectedId)return false;const choice=this.session.fly(this.selectedId);if(!choice.allowed){this.refresh();return false;}
   this.activeForecast=choice.forecast;const cruise=choice.forecast.phases.find(p=>p.label==='cruise');this.tracks.push(cruise.route.path);
-  this.rate=(this.session.endUtcMs-this.session.currentTimeUtc)/45000;this.play(now);this.refresh();return true;
+  this.rate=(this.session.endUtcMs-this.session.currentTimeUtc)/FLIGHT_PLAYBACK_MS;this.play(now);this.refresh();return true;
  }
  play(now=performance.now()){if(this.session.currentTimeUtc>=this.session.endUtcMs)return;this.anchorUtc=this.session.currentTimeUtc;this.anchorReal=now;this.playing=true;}
  pause(now=performance.now()){if(this.playing)this.tick(now);this.playing=false;}
