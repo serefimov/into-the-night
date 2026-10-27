@@ -29,7 +29,7 @@ test('world routes share core geometry and clip at the globe limb without a date
 test('UI selection/navigation is separate from confirmation; playback pauses without changing its physical rate',()=>{
  const c=new FlightController(definition),initial=c.session.save();c.select('NZCH');assert.equal(c.choice.allowed,true);assert.equal(c.session.save(),initial);
  c.select('FACT');assert.equal(c.fly(0),false);assert.equal(c.session.save(),initial);c.select('NZCH');assert.equal(c.fly(0),true);
- const end=c.session.endUtcMs,start=definition.initial.utcMs,rate=(end-start)/45000;c.tick(10000);assert.ok(Math.abs(c.view.state.utcMs-(start+10000*rate))<.001);
+ const end=c.session.endUtcMs,start=definition.initial.utcMs,rate=(end-start)/22500;c.tick(10000);assert.ok(Math.abs(c.view.state.utcMs-(start+10000*rate))<.001);
  c.pause(10000);const saved=c.session.save();c.tick(20000);c.select('YPPH');assert.equal(c.session.save(),saved);
  c.play(30000);c.tick(35000);assert.ok(Math.abs(c.view.state.utcMs-(start+15000*rate))<.001);
  c.advanceTo(end,35000);assert.equal(c.view.state.airportId,'NZCH');assert.equal(c.view.state.stocks.NZCH,64000);assert.equal(c.playing,false);assert.equal(c.view.state.phase,'planning');
