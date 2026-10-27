@@ -5,7 +5,7 @@ import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {loadCycleDefinition} from './mission-cycle-data.mjs';
 import {forecastMissionFlight} from '../dist/core/mission-flight.js';
-import {MissionSession,MISSION_MODEL} from '../dist/core/mission.js';
+import {MissionSession} from '../dist/core/mission.js';
 import {canonicalJson} from '../dist/core/serialization.js';
 import {solarExposure} from '../dist/core/solar.js';
 import {searchStationarySunrise} from '../dist/core/waiting.js';
@@ -19,6 +19,9 @@ export const ACADEMIC_SETTINGS=Object.freeze({definition:'data/scenarios/academi
  refined:{eventToleranceSeconds:.05,maxIntervalSeconds:300,maxEvaluations:100000},
  scope:'Finite candidate-chain/date grid, not an exhaustive search or a ban on other airports, directions, dates or longer paths. No waits, fuel unloading, manual fuel choices or new airports.'});
 const hash=value=>createHash('sha256').update(canonicalJson(value)).digest('hex');
+// Preserve the archived v2 report format. V3 changes planning outcomes, not accepted flight physics.
+const REPORT_MODEL_V2={mode:'airport-flight-v2',simulationVersion:'flight-cycle-2',schemaVersion:2,eventVersion:2,saveVersion:2};
+function reportEventsV2(events){if(events.some(e=>e.kind==='mission_lost'))throw Error('No-routes outcome cannot be represented by a v2 flight witness');return events.map(e=>({...e,version:2}));}
 const directory='docs/academic-westward';
 const parts=['report','routes','witness','continuation'];
 export async function loadAcademicReport(){return Object.fromEntries(await Promise.all(parts.map(async name=>[name,JSON.parse(await readFile(`${directory}/${name}.json`,'utf8'))])));}
@@ -76,13 +79,13 @@ export async function researchAcademic(){
  const polarDays=[];for(let utc=Math.floor(initial.utcMs/86400000)*86400000;utc<=latest;utc+=86400000){const svalbard=certifyPolarDay(d.airports.find(a=>a.id==='ENSB'),utc),northPole=certifyPolarDay({latitudeDeg:90,longitudeDeg:0},utc);if(svalbard.status!=='safe'||northPole.status!=='safe')throw Error('Northern polar day absent');polarDays.push({date:new Date(utc).toISOString().slice(0,10),svalbard,northPole});}
  const dateGrid=ACADEMIC_SETTINGS.dates.map(date=>{const r=date===new Date(initial.utcMs).toISOString().slice(0,10)?selected:enumerate(d,Date.parse(date+'T20:00:00Z'));return {date,utcHour:20,fullChains:r.routes.length,firstIds:[...new Set(r.routes.map(p=>p.path[0]))],counts:r.counts};});
  const onward=continuation(d,primary.state);if(!onward.allowedIds.length)throw Error('Primary airport arrival is a dead end');
- return {report:{reportVersion:1,model:MISSION_MODEL,scenarioId:d.scenarioId,scenarioVersion:d.scenarioVersion,seed:d.seed,stockVersion:d.stockVersion,worldVersion:d.worldVersion,
+ return {report:{reportVersion:1,model:REPORT_MODEL_V2,scenarioId:d.scenarioId,scenarioVersion:d.scenarioVersion,seed:d.seed,stockVersion:d.stockVersion,worldVersion:d.worldVersion,
   profileId:d.profile.id,profileVersion:d.profile.profileVersion,inputsSha256:{definition:hash(d),profile:hash(d.profile),airports:hash(d.airports),stocks:hash(d.initial.stocks)},settings:ACADEMIC_SETTINGS,
   initial:{airportId:initial.airportId,utcMs:initial.utcMs,fuelKg:initial.fuelKg,stockKgPerAirport:64000},targetId:d.targetId,targetCompletion:d.targetCompletion,
   direct:{allowed:direct.allowed,reasons:direct.reasons,solar:direct.solar},shortcuts,polarDays,dateGrid,fullChainCount:routes.length,firstIds:[...new Set(routes.map(p=>p.path[0]))],
   scope:'Airport-stage witness only. Knowledge transfer, trip to Akademgorodok, a complete Japan route, food, waiting and the full campaign are not certified. Historical reports are unchanged.'},
  routes,witness:{initial:{airportId:initial.airportId,utcMs:initial.utcMs,fuelKg:initial.fuelKg},path:primary.path,legs:primary.legs,ordinary,
-  final:{airportId:primary.state.airportId,utcMs:primary.state.utcMs,fuelKg:primary.state.fuelKg,distanceKm:primary.state.distanceKm,flights:primary.state.flights,stockChangesKg:changedStocks(d,primary.state)},events:session.current().events},
+  final:{airportId:primary.state.airportId,utcMs:primary.state.utcMs,fuelKg:primary.state.fuelKg,distanceKm:primary.state.distanceKm,flights:primary.state.flights,stockChangesKg:changedStocks(d,primary.state)},events:reportEventsV2(session.current().events)},
  continuation:{fromId:primary.state.airportId,utcMs:primary.state.utcMs,fuelKg:primary.state.fuelKg,stockChangesKg:changedStocks(d,primary.state),targetId:'RJTT',...onward,
   sunrise:searchStationarySunrise(d.airports.find(a=>a.id===primary.state.airportId),primary.state.utcMs,ACADEMIC_SETTINGS.refined),knowledgeTransferSeconds:null,
   scope:'Immediate onward flights from actual inherited state without additional laboratory time. Does not certify a Japan chain or knowledge collection.'}};

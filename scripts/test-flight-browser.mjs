@@ -17,8 +17,9 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
   assert.ok(result.count<=result.budget,name);assert.equal(new Set(result.members).size,result.members.length);assert.equal(result.members.length,result.projected,name);assert.ok(result.hitSizes.every(s=>s.w>=43.99&&s.h>=43.99),JSON.stringify(result.hitSizes));if(!result.detail)assert.equal(result.labelCount,0);return result;
  }
  const overview=await inspectLayout('initial overview');assert.ok(overview.count<=24);
- await until(`${app}.globe.data.statuses.size===${app}.controller.session.definition.airports.length`);
- const catalogCount=await evaluate(`${app}.globe.data.statuses.size`);assert.equal(catalogCount,1183);assert.ok(catalogCount>overview.count);
+ await until(`${app}.globe.data.statuses.size===${app}.controller.session.definition.airports.length-1`);
+ assert.equal(await evaluate(`${app}.planner.summary().complete`),true);assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/Доступно перелётов/);
+ const catalogCount=await evaluate(`${app}.globe.data.statuses.size`);assert.equal(catalogCount,1182);assert.ok(catalogCount>overview.count);
  for(const zoom of [1,5,1]){await evaluate(`${app}.globe.focus({latitudeDeg:50,longitudeDeg:10},${zoom});${app}.render()`);await inspectLayout('dense Europe '+zoom);assert.equal(await snapshot(),initial);}
  await evaluate(`${app}.globe.focus(${app}.controller.view.state.position,1);${app}.render()`);
  const land=await evaluate(`(()=>{const g=${app}.globe;const at=(lat,lon)=>g.landPixels[(Math.floor((90-lat)/180*512)*1024+Math.floor((lon+180)/360*1024))*4+3]>90;return [at(-25,134),at(20,15),at(-88,0),at(0,-140)];})()`);
@@ -61,11 +62,12 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  await select('CYEG');await click('#fly',mobile);await click('#play-pause',mobile);
  await evaluate(`(()=>{const a=${app},p=a.controller.activeForecast.phases.find(p=>p.label==='refuelling').route;a.advanceTo(p.startUtcMs+300000+1200000);})()`);
  assert.match(await evaluate(`document.getElementById('flight-status').textContent`),/Дозаправка перед вылетом/);assert.equal(await evaluate(`${app}.controller.view.state.stocks.BIKF`),48000);
+ assert.equal(await evaluate(`${app}.planner.summary().status`),'busy');assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/Рейс на паузе/);
  assert.equal(await evaluate(`${app}.controller.view.state.airportId`),'BIKF');assert.equal(await evaluate(`${app}.controller.view.state.stocks.CYEG`),64000);
  assert.equal(await evaluate(`${app}.controller.view.state.status`),'running');assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);
  await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);await until(`${app}.controller.view.state.phase==='planning'`);assert.equal(await evaluate(`${app}.controller.view.state.stocks.CYEG`),64000);
  await select('UHMA');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  await select('UNNT');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
- assert.equal(await evaluate(`${app}.controller.view.state.status`),'won');assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Цель достигнута/);assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
+ assert.equal(await evaluate(`${app}.controller.view.state.status`),'won');assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/Цель достигнута/);assert.equal(await evaluate(`document.getElementById('restart-mission').hidden`),false);assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Цель достигнута/);assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
  return {viewport:mobile?'390x844 touch':'1280x900 mouse',passed:true,steps:['viewport marker budget','all-catalog worker independent of visibility','dense region zoom and touch targets','real land texture','worker forecasts','drag/pinch/wheel without mutation','map marker selection','blocked eastern direct route','single flight confirmation','pause/resume','one displayed UTC','partial automatic refuelling','SPB-Novosibirsk western circuit','no numeric forms or overflow']};
 }
