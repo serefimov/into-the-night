@@ -26,5 +26,5 @@
 @media(max-width:760px){.availability-panel{padding-bottom:10px}.availability-panel strong{font-size:12px}.availability-panel p{font-size:10px;margin-top:4px}.availability-panel.terminal strong{font-size:21px}}
 
 /* #40: one labelled return control; keep the lower zoom buttons clear of playback. */
-.map-controls{align-items:flex-start}.map-controls #plane-focus{display:flex;align-items:center;justify-content:center;gap:8px;width:146px;min-height:44px;padding:0 10px;font-size:12px;white-space:nowrap;color:var(--accent);background:#17313ced;border-color:#627875}.map-controls #plane-focus svg{flex-shrink:0}
+.map-controls{align-items:flex-start;touch-action:none}.map-controls #plane-focus{display:flex;align-items:center;justify-content:center;gap:8px;width:146px;min-height:44px;padding:0 10px;font-size:12px;white-space:nowrap;color:var(--accent);background:#17313ced;border-color:#627875}.map-controls #plane-focus svg{flex-shrink:0}
 @media(max-width:760px){.map-controls #plane-focus{width:min(136px,calc(50vw - 34px));padding:0 6px;gap:5px;font-size:10.5px}}
