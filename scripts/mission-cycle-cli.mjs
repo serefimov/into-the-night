@@ -23,8 +23,9 @@ try {
   session.resume();
  }
  if(!path.length&&stop!==null)session.stopAt(stop);
+ const availability=session.resolvePlanning().availability;
  if(flags['--save'])await writeFile(flags['--save'],session.save()+'\n');
  const {state,events}=session.current(),visited=new Set([session.definition.initial.airportId,...events.filter(e=>e.kind==='arrived').map(e=>e.airportId)]);
- console.log(JSON.stringify({blocked,state:{...state,stocks:Object.fromEntries([...visited].map(id=>[id,state.stocks[id]]))},events},null,2));
- if(blocked)process.exitCode=2;
+ console.log(JSON.stringify({blocked,availability,state:{...state,stocks:Object.fromEntries([...visited].map(id=>[id,state.stocks[id]]))},events},null,2));
+ if(state.status==='lost')process.exitCode=3;else if(blocked)process.exitCode=2;
 } catch(error){console.error(JSON.stringify({error:error.message}));process.exitCode=1;}

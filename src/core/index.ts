@@ -23,3 +23,6 @@ export { forecastMissionFlight } from './mission-flight.js';
 export type { MissionWorld, MissionForecast } from './mission-flight.js';
 export type { MissionDefinition, MissionEvent, MissionState, MissionView, MissionAdvance, MissionChoice } from './mission.js';
 export * from './globe.js';
+
+export * from './mission-availability.js';
+export type {MissionResult} from './mission.js';

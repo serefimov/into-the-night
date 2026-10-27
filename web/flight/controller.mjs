@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-only
 import {MissionSession} from '../../dist/core/mission.js';
 export class FlightController {
- constructor(definition){this.session=new MissionSession(definition);this.selectedId=null;this.playing=false;this.choice=null;this.activeForecast=null;this.tracks=[];this.anchorUtc=this.session.currentTimeUtc;this.anchorReal=0;this.rate=1;this.view=this.session.current();}
+ constructor(definition,options={}){this.options=Object.freeze({...options});this.session=new MissionSession(definition,options);this.selectedId=null;this.playing=false;this.choice=null;this.activeForecast=null;this.tracks=[];this.anchorUtc=this.session.currentTimeUtc;this.anchorReal=0;this.rate=1;this.view=this.session.current();}
+ restart(){const definition=this.session.definition;this.session=new MissionSession(definition,this.options);this.selectedId=null;this.playing=false;this.choice=null;this.activeForecast=null;this.tracks=[];this.anchorUtc=this.session.currentTimeUtc;this.anchorReal=0;this.rate=1;this.view=this.session.current();}
+ resolvePlanning(){const result=this.session.resolvePlanning();this.refresh();return result;}
  select(id){this.selectedId=id;this.refresh();}
  refresh(){this.view=this.session.current();this.choice=this.selectedId?this.session.forecast(this.selectedId):null;}
  fly(now=performance.now()) {

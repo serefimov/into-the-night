@@ -10,32 +10,36 @@ import type {Coordinates} from './solar.js';
 import {searchLimits} from './interval-search.js';
 import type {SearchOptions} from './interval-search.js';
 import {validateUtcMs} from './time.js';
+import {MissionAvailabilityScan,inactiveAvailability} from './mission-availability.js';
+import type {MissionAvailability,AvailabilityReason,AvailabilityChoice} from './mission-availability.js';
 import {canonicalJson,saveChecksum} from './serialization.js';
 
-export const MISSION_MODEL=Object.freeze({mode:'airport-flight-v2',simulationVersion:'flight-cycle-2',schemaVersion:2,eventVersion:2,saveVersion:2} as const);
+export const MISSION_MODEL=Object.freeze({mode:'airport-flight-v3',simulationVersion:'flight-cycle-3',schemaVersion:3,eventVersion:3,saveVersion:3} as const);
 export interface MissionDefinition extends MissionWorld {
  scenarioId:string; scenarioVersion:number; seed:string; stockVersion:string; worldVersion:string;
  targetCompletion:'arrival'|'after_service';
  initial:{airportId:string; utcMs:number; fuelKg:number; stocks:Record<string,number>};
 }
 export interface MissionEvent {
- version:2; sequence:number; utcMs:number; flightIndex:number; airportId:string;
- kind:'mission_started'|'flight_committed'|'flight_started'|'arrived'|'refuelling_started'|'flight_completed'|'mission_won'|'mission_died';
+ version:3; sequence:number; utcMs:number; flightIndex:number; airportId:string;
+ kind:'mission_started'|'flight_committed'|'flight_started'|'arrived'|'refuelling_started'|'flight_completed'|'mission_won'|'mission_died'|'mission_lost';
 }
 export interface MissionState {
- mode:typeof MISSION_MODEL.mode; schemaVersion:2; simulationVersion:string; scenarioId:string; scenarioVersion:number; seed:string; stockVersion:string; worldVersion:string;
+ mode:typeof MISSION_MODEL.mode; schemaVersion:3; simulationVersion:string; scenarioId:string; scenarioVersion:number; seed:string; stockVersion:string; worldVersion:string;
  startUtcMs:number; utcMs:number; airportId:string|null; position:Coordinates; fuelKg:number; stocks:Record<string,number>;
- flights:number; distanceKm:number; status:'running'|'won'|'dead';
- phase:'planning'|'won'|'dead'|ResearchPhase['label']; death:null|{kind:'sun';utcMs:number};
+ flights:number; distanceKm:number; status:'running'|'won'|'dead'|'lost';
+ phase:'planning'|'won'|'dead'|'lost'|ResearchPhase['label']; death:null|{kind:'sun';utcMs:number};
+ result:MissionResult|null;
  activeFlight:null|{fromId:string;toId:string;startUtcMs:number;departureUtcMs:number;arrivalUtcMs:number;endUtcMs:number;phaseStartUtcMs:number;phaseEndUtcMs:number};
 }
+export type MissionResult={kind:'goal'|'sun';utcMs:number}|{kind:'no_routes';utcMs:number;checked:number;total:number;reasons:Record<AvailabilityReason,number>};
 export interface MissionView {state:MissionState;events:MissionEvent[]}
 export interface MissionAdvance extends MissionView {newEvents:MissionEvent[]}
 export interface MissionChoice {allowed:boolean; reasons:readonly string[]; forecast:MissionForecast|null}
 interface AcceptedFlight {origin:ResearchState;toId:string;forecast:MissionForecast}
 interface MissionPayload {
  mode:string;simulationVersion:string;eventVersion:number;definition:MissionDefinition;options:SearchOptions;
- choices:string[];cursorUtcMs:number;consumedEvents:number;snapshot:MissionView;
+ choices:string[];noRoutesAt:number|null;cursorUtcMs:number;consumedEvents:number;snapshot:MissionView;
 }
 function copy<T>(value:T):T {
  if(Array.isArray(value))return value.map(copy) as T;
@@ -60,15 +64,17 @@ function validateOptions(options:SearchOptions):void {
 /** A no-food, no-wait session. The shared departure-fuel transition supplies every accepted physical plan. */
 export class MissionSession {
  #definition:MissionDefinition; #options:SearchOptions; #initial:ResearchState; #plans:AcceptedFlight[]=[];
- #cursor:number; #consumedEvents=0; #initialSun:boolean;
+ #cursor:number; #consumedEvents=0; #initialSun:boolean; #definitionHash:string; #noRoutes:null|{utcMs:number;report:MissionAvailability}=null;
  constructor(definition:MissionDefinition,options:SearchOptions={}) {
   this.#definition=copy(definition);this.#options=copy(options);validateDefinition(this.#definition);validateOptions(this.#options);
+  this.#definitionHash=saveChecksum(this.#definition);
   this.#initial=initialResearch(this.#definition);this.#cursor=this.#initial.utcMs;
   this.#initialSun=!solarExposure(this.#airport(this.#initial.airportId),this.#cursor).safe;
  }
  get definition():MissionDefinition{return copy(this.#definition);}
  get currentTimeUtc():number{return this.#cursor;}
  get endUtcMs():number{return this.#plans.at(-1)?.forecast.endUtcMs??this.#initial.utcMs;}
+ get planningKey():string|null {const state=this.current().state;return state.status==='running'&&state.phase==='planning'?saveChecksum({definition:this.#definitionHash,options:this.#options,state:this.#ready()}):null;}
  #airport(id:string) {return this.#definition.airports.find(a=>a.id===id)!;}
  #ready():ResearchState {return this.#plans.at(-1)?.forecast.next??this.#initial;}
  forecast(destinationId:string):MissionChoice {
@@ -78,6 +84,10 @@ export class MissionSession {
   if(view.phase!=='planning')return blocked('mission_busy');
   if(!this.#definition.airports.some(a=>a.id===destinationId))return blocked('unknown_airport');
   if(destinationId===view.airportId)return blocked('same_airport');
+  return this.#forecastReady(destinationId);
+ }
+ #forecastReady(destinationId:string):MissionChoice {
+  const blocked=(reason:string):MissionChoice=>({allowed:false,reasons:[reason],forecast:null});
   try {const forecast=forecastMissionFlight(this.#definition,this.#ready(),destinationId,this.#options);return {allowed:forecast.allowed,reasons:forecast.reasons,forecast};}
   catch(error){if(error instanceof RangeError&&/Coincident|antipodal/.test(error.message))return blocked('ambiguous_route');throw error;}
  }
@@ -86,17 +96,32 @@ export class MissionSession {
   if(choice.allowed)this.#plans.push({origin:copy(this.#ready()),toId:destinationId,forecast:copy(choice.forecast!)});
   return choice;
  }
- /** Explicit analysis for UI/CLI. A planning dead end never advances UTC or causes an invented death. */
- availability():{status:'available'|'no_safe_choices'|'unresolved'|'busy'|'terminal';availableIds:string[];unresolvedIds:string[]} {
-  const state=this.current().state,availableIds:string[]=[],unresolvedIds:string[]=[];
-  if(state.status!=='running')return {status:'terminal',availableIds,unresolvedIds};
-  if(state.phase!=='planning')return {status:'busy',availableIds,unresolvedIds};
-  for(const a of this.#definition.airports){if(a.id===state.airportId)continue;const f=this.forecast(a.id);if(f.allowed)availableIds.push(a.id);else if(f.reasons.length&&f.reasons.every(r=>r==='solar_indeterminate'))unresolvedIds.push(a.id);}
-  return {status:availableIds.length?'available':unresolvedIds.length?'unresolved':'no_safe_choices',availableIds,unresolvedIds};
+ /** Pure, complete analysis: it never changes time, resources, result or event delivery. */
+ availability():MissionAvailability {
+  if(this.#noRoutes)return copy(this.#noRoutes.report);
+  const state=this.current().state;
+  if(state.status!=='running')return inactiveAvailability('terminal');
+  if(state.phase!=='planning')return inactiveAvailability('busy');
+  const ids=this.#definition.airports.filter(a=>a.id!==state.airportId).map(a=>a.id);
+  const scan=new MissionAvailabilityScan(this.planningKey!,ids);
+  const choices:AvailabilityChoice[]=[];
+  try{for(const id of ids){const f=this.#forecastReady(id);choices.push({id,allowed:f.allowed,reasons:f.reasons});}}
+  catch{scan.accept(scan.key,choices);scan.fail();return scan.summary();}
+  scan.accept(scan.key,choices,true);return scan.summary();
+ }
+ /** Only the session's own full-catalog forecasts can commit a no-routes result.
+  * Worker counts are progress, never authority to end a party. No-wait policy (#25 revises it). */
+ resolvePlanning():MissionAdvance&{availability:MissionAvailability} {
+  const availability=this.availability();
+  if(!this.#noRoutes&&this.current().state.phase==='planning'&&availability.status==='no_safe_choices'&&availability.complete){
+   this.#noRoutes={utcMs:this.#cursor,report:copy(availability)};
+   return {...this.stopAt(this.#cursor),availability};
+  }
+  return {...this.current(),newEvents:[],availability};
  }
  #events():MissionEvent[] {
   const events:MissionEvent[]=[];
-  const append=(kind:MissionEvent['kind'],utcMs:number,flightIndex:number,airportId:string)=>events.push({version:2,sequence:events.length,kind,utcMs,flightIndex,airportId});
+  const append=(kind:MissionEvent['kind'],utcMs:number,flightIndex:number,airportId:string)=>events.push({version:3,sequence:events.length,kind,utcMs,flightIndex,airportId});
   append('mission_started',this.#initial.utcMs,0,this.#initial.airportId);
   if(this.#initialSun)append('mission_died',this.#initial.utcMs,0,this.#initial.airportId);
   for(const plan of this.#plans){const f=plan.forecast,index=plan.origin.flights+1;
@@ -105,14 +130,15 @@ export class MissionSession {
    append('flight_started',f.departureUtcMs,index,plan.origin.airportId);append('arrived',f.arrivalUtcMs,index,plan.toId);
    append('flight_completed',f.endUtcMs,index,plan.toId);if(f.next!.won)append('mission_won',f.endUtcMs,index,plan.toId);
   }
+  if(this.#noRoutes)append('mission_lost',this.#noRoutes.utcMs,this.#ready().flights,this.#ready().airportId);
   return events;
  }
  #base(r:ResearchState):MissionState {
-  const d=this.#definition,status=this.#initialSun?'dead':r.won?'won':'running';
-  return {mode:MISSION_MODEL.mode,schemaVersion:2,simulationVersion:MISSION_MODEL.simulationVersion,scenarioId:d.scenarioId,scenarioVersion:d.scenarioVersion,seed:d.seed,stockVersion:d.stockVersion,worldVersion:d.worldVersion,
+  const d=this.#definition,status=this.#initialSun?'dead':r.won?'won':this.#noRoutes&&r.utcMs>=this.#noRoutes.utcMs?'lost':'running';
+  return {mode:MISSION_MODEL.mode,schemaVersion:3,simulationVersion:MISSION_MODEL.simulationVersion,scenarioId:d.scenarioId,scenarioVersion:d.scenarioVersion,seed:d.seed,stockVersion:d.stockVersion,worldVersion:d.worldVersion,
    startUtcMs:this.#initial.utcMs,utcMs:r.utcMs,airportId:r.airportId,position:{latitudeDeg:this.#airport(r.airportId).latitudeDeg,longitudeDeg:this.#airport(r.airportId).longitudeDeg},
    fuelKg:r.fuelKg,stocks:copy(r.stocks),flights:r.flights,distanceKm:r.distanceKm,status,phase:status==='running'?'planning':status,
-   death:this.#initialSun?{kind:'sun',utcMs:this.#initial.utcMs}:null,activeFlight:null};
+   death:this.#initialSun?{kind:'sun',utcMs:this.#initial.utcMs}:null,result:status==='dead'?{kind:'sun',utcMs:this.#initial.utcMs}:status==='won'?{kind:'goal',utcMs:r.utcMs}:status==='lost'?{kind:'no_routes',utcMs:this.#noRoutes!.utcMs,checked:this.#noRoutes!.report.checked,total:this.#noRoutes!.report.total,reasons:copy(this.#noRoutes!.report.reasons)}:null,activeFlight:null};
  }
  #during(plan:AcceptedFlight,time:number):MissionState {
   const f=plan.forecast,a=this.#definition.profile.assumptions,m=aircraftMetrics(this.#definition.profile),state=this.#base(plan.origin);
@@ -154,17 +180,17 @@ export class MissionSession {
  }
  resume():MissionAdvance{return this.stopAt(this.endUtcMs);}
  save():string {
-  const payload:MissionPayload={mode:MISSION_MODEL.mode,simulationVersion:MISSION_MODEL.simulationVersion,eventVersion:2,definition:copy(this.#definition),options:copy(this.#options),
-   choices:this.#plans.map(p=>p.toId),cursorUtcMs:this.#cursor,consumedEvents:this.#consumedEvents,snapshot:this.current()};
-  return canonicalJson({format:'into-the-night-mission',version:2,checksum:saveChecksum(payload),payload});
+  const payload:MissionPayload={mode:MISSION_MODEL.mode,simulationVersion:MISSION_MODEL.simulationVersion,eventVersion:3,definition:copy(this.#definition),options:copy(this.#options),
+   choices:this.#plans.map(p=>p.toId),noRoutesAt:this.#noRoutes?.utcMs??null,cursorUtcMs:this.#cursor,consumedEvents:this.#consumedEvents,snapshot:this.current()};
+  return canonicalJson({format:'into-the-night-mission',version:3,checksum:saveChecksum(payload),payload});
  }
  /** Separate format: historical survival saves are rejected rather than reinterpreted as food-free missions. */
  static restore(serialized:string,expectedDefinition?:MissionDefinition):MissionSession {
   if(typeof serialized!=='string'||serialized.length>16*1024*1024)throw new RangeError('Invalid mission save size');
   const envelope=JSON.parse(serialized) as {format:string;version:number;checksum:string;payload:MissionPayload};
-  if(!envelope||envelope.format!=='into-the-night-mission'||envelope.version!==2||!envelope.payload||envelope.checksum!==saveChecksum(envelope.payload))throw new RangeError('Unsupported or damaged mission save');
+  if(!envelope||envelope.format!=='into-the-night-mission'||envelope.version!==3||!envelope.payload||envelope.checksum!==saveChecksum(envelope.payload))throw new RangeError('Unsupported or damaged mission save');
   const p=envelope.payload;
-  if(p.mode!==MISSION_MODEL.mode||p.simulationVersion!==MISSION_MODEL.simulationVersion||p.eventVersion!==2)throw new RangeError('Incompatible mission save version');
+  if(p.mode!==MISSION_MODEL.mode||p.simulationVersion!==MISSION_MODEL.simulationVersion||p.eventVersion!==3)throw new RangeError('Incompatible mission save version');
   if(expectedDefinition&&canonicalJson(p.definition)!==canonicalJson(expectedDefinition))throw new RangeError('Mission definition differs');
   if(!Array.isArray(p.choices)||p.choices.length>1000||p.choices.some(id=>typeof id!=='string'))throw new RangeError('Invalid mission choices');
   const session=new MissionSession(p.definition,p.options);
@@ -173,6 +199,10 @@ export class MissionSession {
   const lastStart=session.#plans.at(-1)?.origin.utcMs??session.#initial.utcMs;
   if(p.cursorUtcMs<lastStart||p.cursorUtcMs>session.endUtcMs)throw new RangeError('Invalid mission cursor');
   session.#cursor=p.cursorUtcMs;
+  if(p.noRoutesAt!==null){
+   if(p.noRoutesAt!==p.cursorUtcMs||session.current().state.phase!=='planning')throw new RangeError('Invalid no-routes cursor');
+   session.resolvePlanning();if(session.current().state.status!=='lost')throw new RangeError('Saved no-routes result is not confirmed');
+  }
   const actual=session.current();
   if(!Number.isInteger(p.consumedEvents)||p.consumedEvents<0||p.consumedEvents>actual.events.length||canonicalJson(p.snapshot)!==canonicalJson(actual))throw new RangeError('Mission save snapshot or journal differs');
   session.#consumedEvents=p.consumedEvents;return session;
