@@ -70,7 +70,7 @@ export async function createFlightApp(definition,land) {
   $('dispatch-summary').hidden=!forecast;
   text('dispatch-summary',forecast&&forecast.refuelling.neededKg===0?`Дозаправка не нужна · отправление ${time.format(forecast.departureUtcMs)} UTC.`:forecast?`Здесь нужно добавить ${tonnes(forecast.refuelling.neededKg)} · в наличии ${tonnes(s.stocks[forecast.refuelling.airportId])}. ${forecast.refuelling.sufficient?`Дозаправка ${duration(forecast.refuelling.durationSeconds*1000)} · отправление ${time.format(forecast.departureUtcMs)} UTC.`:'Дозаправка не обеспечит рейс.'}`:'');
   text('ground-note','Заправляемся под выбранный рейс с резервом 5 т. После посадки топливо остаётся на складе до следующего выбора.');
-  globe.update({airports:definition.airports,state:s,statuses,selectedId:controller.selectedId,targetId:definition.targetId,startId:definition.initial.airportId,forecast:accepted??choice?.forecast,tracks:controller.tracks});globe.draw(s.utcMs);
+  globe.update({airports:definition.airports,state:s,statuses,selectedId:controller.selectedId,targetId:definition.targetId,startId:definition.initial.airportId,forecast:accepted??choice?.forecast,acceptedForecast:accepted,tracks:controller.tracks});globe.draw(s.utcMs);
  }
  $('restart-mission').addEventListener('click',()=>{planner.reset();controller.restart();follow=false;globe.focus(controller.view.state.position,1);render();});
  $('retry-scan').addEventListener('click',()=>planner.retry());
