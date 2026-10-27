@@ -3,9 +3,9 @@
   "branch": "41-plane-heading",
   "tag": "",
   "version": "0.1.0-alpha.1",
-  "commit": "c03ebf96a8147ddacf27e67bd005fb15a30970a3",
-  "runId": "40475770383",
-  "builtAt": "2026-10-27T08:46:53.366Z",
-  "source": "https://github.com/serefimov/into-the-night/tree/c03ebf96a8147ddacf27e67bd005fb15a30970a3",
+  "commit": "f0bdb775f920bff512eb33a019efe1bcb43b5594",
+  "runId": "40476040601",
+  "builtAt": "2026-10-27T08:48:51.234Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/f0bdb775f920bff512eb33a019efe1bcb43b5594",
   "contentHash": "ff911710fa206e080d007d596d28ee47c4ef67f0e03f905da5a75f88618bbc4f"
 }
