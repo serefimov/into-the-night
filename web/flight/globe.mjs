@@ -1,12 +1,20 @@
 // SPDX-License-Identifier: GPL-3.0-only
 import {globeFrame,globeNormal,globeLines,globeRoute} from '../../dist/core/globe.js';
+import {globeFlightLines} from '../../dist/core/globe-flight.js';
 import {layoutAirportMarkers} from './marker-layout.mjs';
-import {flightPlanePose,drawFlightPlane} from './plane.mjs';
+import {acceptedCruiseRoute,flightPlanePose,drawFlightPlane} from './plane.mjs';
 import {solarDirection} from '../../dist/core/solar.js';
 import {traceCoastline} from './coastline.mjs';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const longitude=v=>((v+180)%360+360)%360-180;
 const colors={nightLand:[28,56,61],nightSea:[8,22,34],dayLand:[127,163,158],daySea:[29,64,79]};
+function strokeLines(ctx,lines,color,width=1,dash=[]) {
+ ctx.strokeStyle=color;ctx.lineWidth=width;ctx.setLineDash(dash);
+ for(const line of lines){
+  ctx.beginPath();line.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.stroke();
+ }
+ ctx.setLineDash([]);
+}
 export class GlobeView {
  constructor(canvas,markers,land,{onSelect,onInteraction}) {
   this.canvas=canvas;this.markers=markers;this.ctx=canvas.getContext('2d');this.onSelect=onSelect;this.onInteraction=onInteraction;
@@ -87,6 +95,15 @@ export class GlobeView {
   }
   g.ctx.putImageData(g.image,0,0);g.landCtx.putImageData(g.landImage,0,0);
   const ctx=this.ctx;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,width,height);
+  const accepted=acceptedCruiseRoute(this.data.state,this.data.acceptedForecast);
+  const route=accepted??this.data.forecast?.phases.find(p=>p.label==='cruise')?.route;
+  const fraction=accepted&&this.data.state.phase==='cruise'
+   ?(this.data.state.utcMs-accepted.startUtcMs)/(accepted.endUtcMs-accepted.startUtcMs):undefined;
+  const trajectory=route?globeFlightLines(route.path,this.frame,fraction):null;
+  const routeColor=this.data.forecast?.allowed?'#e7c58c':'#ef847e',routeDash=accepted?[]:[5,5];
+  this.planePose=flightPlanePose(this.data.state,this.data.acceptedForecast,this.frame);
+  // The opaque Earth covers rear lines, preserving their parts above the limb.
+  if(trajectory)strokeLines(ctx,trajectory.back,routeColor,2.5,routeDash);
   // Only smooth illumination is rasterized. Coast boundaries are native-resolution paths.
   ctx.save();ctx.clip(this.spherePath);
   ctx.fillStyle='rgb('+colors.nightSea.join(',')+')';ctx.fill(this.spherePath);
@@ -95,14 +112,16 @@ export class GlobeView {
   ctx.save();ctx.clip(this.landPath);ctx.drawImage(this.landSurface,0,0,width,height);ctx.restore();
   ctx.restore();
   ctx.strokeStyle='#5b8d9355';ctx.lineWidth=1;ctx.beginPath();ctx.arc(this.frame.cx,this.frame.cy,this.frame.radius,0,Math.PI*2);ctx.stroke();
-  const stroke=(points,color,lineWidth=1,dash=[])=>{ctx.strokeStyle=color;ctx.lineWidth=lineWidth;ctx.setLineDash(dash);for(const line of globeLines(points,this.frame)){ctx.beginPath();line.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.stroke();}ctx.setLineDash([]);};
+  const stroke=(points,color,width=1)=>strokeLines(ctx,globeLines(points,this.frame),color,width);
   for(let lat=-60;lat<=60;lat+=30)stroke(Array.from({length:73},(_,i)=>({latitudeDeg:lat,longitudeDeg:i*5-180})),'#68919220');
   for(let lon=-180;lon<180;lon+=30)stroke(Array.from({length:37},(_,i)=>({latitudeDeg:i*5-90,longitudeDeg:lon})),'#68919220');
-  for(const path of this.data.tracks??[])stroke(globeRoute(path.from,path.to),'#debd8155',2);
-  const forecast=this.data.forecast;
-  if(forecast){const cruise=forecast.phases.find(p=>p.label==='cruise');if(cruise)stroke(globeRoute(cruise.route.path.from,cruise.route.path.to),forecast.allowed?'#e7c58c':'#ef847e',2.5,forecast.allowed?[]:[5,5]);}
-  this.planePose=flightPlanePose(this.data.state,this.data.acceptedForecast,this.frame);
-  this.drawMarkers();drawFlightPlane(ctx,this.planePose);
+  const tracks=this.data.tracks??[];
+  // The current accepted path is already drawn in space, not as a second
+  // surface trace of a flight which has not yet been completed.
+  for(const path of accepted?tracks.slice(0,-1):tracks)stroke(globeRoute(path.from,path.to),'#debd8155',2);
+  if(trajectory)strokeLines(ctx,trajectory.front,routeColor,2.5,routeDash);
+  this.drawMarkers();
+  drawFlightPlane(ctx,this.planePose,this.frame);
   this.dirty=false;
  }
  drawMarkers() {

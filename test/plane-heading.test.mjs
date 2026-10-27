@@ -2,7 +2,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {greatCircle,greatCirclePosition} from '../dist/core/geometry.js';
-import {globeFrame,globePoint,globeRouteHeading} from '../dist/core/globe.js';
+import {globeFrame,globePoint} from '../dist/core/globe.js';
+import {globeFlightPoint,globeFlightHeading} from '../dist/core/globe-flight.js';
 import {flightPlanePose} from '../web/flight/plane.mjs';
 import {FlightController} from '../web/flight/controller.mjs';
 import {loadCycleDefinition} from '../scripts/mission-cycle-data.mjs';
@@ -11,30 +12,30 @@ const close=(a,b)=>assert.ok(Math.abs(Math.atan2(Math.sin(a-b),Math.cos(a-b)))<1
 test('projected nose follows the local great-circle tangent in every direction, including a destination behind the globe',()=>{
  const f=globeFrame(at(0,0),1000,700);
  for(const [to,angle] of [[at(0,70),Math.PI/2],[at(0,-70),-Math.PI/2],[at(70,0),0],[at(-70,0),Math.PI]]){
-  const path=greatCircle(at(0,0),to);for(const fraction of [0,.3,1])close(globeRouteHeading(path,greatCirclePosition(path,fraction),f),angle);
+  const path=greatCircle(at(0,0),to);for(const fraction of [0,.3,1])close(globeFlightHeading(path,fraction,f),angle);
  }
  const path=greatCircle(at(0,0),at(0,170)),position=greatCirclePosition(path,60/170);
  assert.equal(globePoint(path.to,f).visible,false);
  assert.ok(globePoint(path.to,f).x<globePoint(position,f).x,'A projected destination chord would point backwards');
- close(globeRouteHeading(path,position,f),Math.PI/2);
+ close(globeFlightHeading(path,60/170,f),Math.PI/2);
 });
 test('westward date-line and exact polar crossings keep continuous headings, independent of scale',()=>{
  for(const [path,center] of [[greatCircle(at(0,-150),at(0,150)),at(0,180)],[greatCircle(at(80,0),at(80,180)),at(90,0)]]){
   let previous=null;
   for(const fraction of [0,.1,.49999999,.5,.50000001,.9,1]){
-   const p=greatCirclePosition(path,fraction),angle=globeRouteHeading(path,p,globeFrame(center,1000,700));
+   const angle=globeFlightHeading(path,fraction,globeFrame(center,1000,700));
    assert.ok(Number.isFinite(angle));if(previous!==null)close(angle,previous);previous=angle;
-   for(const zoom of [.75,1.5,5])close(globeRouteHeading(path,p,globeFrame(center,390,290,zoom)),angle);
+   for(const zoom of [.75,1.5,5])close(globeFlightHeading(path,fraction,globeFrame(center,390,290,zoom)),angle);
   }
  }
- const path=greatCircle(at(80,0),at(80,180)),p=greatCirclePosition(path,.5);
- close(globeRouteHeading(path,p,globeFrame(at(90,0),1000,700)),0);
- close(globeRouteHeading(path,p,globeFrame(at(90,90),1000,700)),Math.PI/2);
+ const path=greatCircle(at(80,0),at(80,180));
+ close(globeFlightHeading(path,.5,globeFrame(at(90,0),1000,700)),0);
+ close(globeFlightHeading(path,.5,globeFrame(at(90,90),1000,700)),Math.PI/2);
 });
 test('a radial or almost zero projected tangent has an explicit neutral fallback, with no NaN or cached camera angle',()=>{
  const path=greatCircle(at(0,0),at(0,120)),frame=globeFrame(at(0,0),1000,700);
- for(const lon of [90-1e-8,90,90+1e-8])assert.equal(globeRouteHeading(path,at(0,lon),frame),null);
- assert.ok(Number.isFinite(globeRouteHeading(path,at(0,89),frame)));
+ for(const lon of [90-1e-8,90,90+1e-8])assert.equal(globeFlightHeading(path,lon/120,frame),null);
+ assert.ok(Number.isFinite(globeFlightHeading(path,89/120,frame)));
 });
 test('real accepted cruise poses follow a paused camera without mutating the party; ground phases and previews never invent movement',async()=>{
  const c=new FlightController(await loadCycleDefinition());
@@ -47,7 +48,8 @@ test('real accepted cruise poses follow a paused camera without mutating the par
   let previous=null;
   for(const longitudeDeg of [state.position.longitudeDeg-35,state.position.longitudeDeg+35]){
    const frame=globeFrame({...state.position,longitudeDeg},1000,700),pose=flightPlanePose(state,accepted,frame);
-   assert.equal(pose.visible,true);assert.equal(pose.directional,true);assert.equal(pose.x,globePoint(state.position,frame).x);assert.equal(pose.y,globePoint(state.position,frame).y-13);
+   const fraction=(state.utcMs-cruise.startUtcMs)/(cruise.endUtcMs-cruise.startUtcMs),point=globeFlightPoint(cruise.path,fraction,frame);
+   assert.equal(pose.visible,true);assert.equal(pose.directional,true);assert.equal(pose.x,point.x);assert.equal(pose.y,point.y);
    if(previous!==null)assert.ok(Math.abs(pose.angleRad-previous)>.01);previous=pose.angleRad;
    c.select('UNNT');assert.equal(c.session.save(),before);assert.equal(JSON.stringify(accepted),forecast);
   }
