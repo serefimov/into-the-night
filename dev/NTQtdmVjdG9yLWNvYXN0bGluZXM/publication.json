@@ -1,0 +1,11 @@
+{
+  "kind": "dev",
+  "branch": "54-vector-coastlines",
+  "tag": "",
+  "version": "0.1.0-alpha.1",
+  "commit": "43a0742bc44264dd6064b0d810950e665707f4f1",
+  "runId": "40590508338",
+  "builtAt": "2026-10-27T21:55:49.262Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/43a0742bc44264dd6064b0d810950e665707f4f1",
+  "contentHash": "2c31c484d80275ceb1c40a0b15a32ec5175166f13a428d2f5202706db8555c29"
+}
