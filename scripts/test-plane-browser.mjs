@@ -9,7 +9,7 @@ export async function inspectPausedPlane({app,evaluate,send,mobile,label}){
  const angles=[];
  for(const [offset,zoom] of [[-35,1],[35,1],[35,3]]){
   const result=await evaluate(`(async()=>{const a=${app},g=a.globe,s=a.controller.view.state;
-   g.focus({...s.position,longitudeDeg:s.position.longitudeDeg+${offset}},${zoom});a.render();
+   g.focus({...s.position,longitudeDeg:((s.position.longitudeDeg+${offset}+180)%360+360)%360-180},${zoom});a.render();
    const {globePoint}=await import('../../dist/core/globe.js'),{greatCirclePosition}=await import('../../dist/core/geometry.js');
    const p=a.controller.activeForecast.phases.find(p=>p.label==='cruise').route,f=(s.utcMs-p.startUtcMs)/(p.endUtcMs-p.startUtcMs);
    const before=globePoint(greatCirclePosition(p.path,Math.max(0,f-1e-6)),g.frame),after=globePoint(greatCirclePosition(p.path,Math.min(1,f+1e-6)),g.frame);
