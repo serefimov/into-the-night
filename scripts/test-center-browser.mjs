@@ -7,7 +7,7 @@ export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobil
  const app='window.centerApp';
  async function open(){await send('Page.navigate',{url:rootUrl});await until(`document.body.dataset.ready==='true'`);await evaluate(`import('./app.mjs').then(m=>{window.centerApp=m.app;return true;})`);}
  async function metrics(width=mobile?390:1280){await send('Emulation.setDeviceMetricsOverride',{width,height:mobile?844:900,deviceScaleFactor:1,mobile});await send('Emulation.setTouchEmulationEnabled',{enabled:mobile});}
- async function key(key,code,windowsVirtualKeyCode){for(const type of ['keyDown','keyUp'])await send('Input.dispatchKeyEvent',{type,key,code,windowsVirtualKeyCode});}
+ async function key(key,code,windowsVirtualKeyCode){const params={key,code,windowsVirtualKeyCode,nativeVirtualKeyCode:windowsVirtualKeyCode},text=key==='Enter'?String.fromCharCode(13):key===' '?' ':null;await send('Input.dispatchKeyEvent',{type:'keyDown',...params,...(text===null?{}:{text})});await send('Input.dispatchKeyEvent',{type:'keyUp',...params});}
  async function inspect(){return evaluate(`(()=>{const a=${app},g=a.globe,s=a.controller.view.state,b=document.getElementById('plane-focus'),r=b.getBoundingClientRect(),canvas=g.canvas.getBoundingClientRect(),p=g.planePose;
   const overlaps=(x,y,w,h)=>r.left<x+w&&r.right>x&&r.top<y+h&&r.bottom>y;
   const selected=g.nodes.get(a.controller.selectedId),sr=selected?.getBoundingClientRect();
@@ -17,7 +17,7 @@ export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobil
   await evaluate(`(()=>{const a=${app},p=a.controller.view.state.position;a.globe.focus({latitudeDeg:-p.latitudeDeg,longitudeDeg:((p.longitudeDeg+360)%360)-180},${zoom});a.globe.onInteraction();a.render();})()`);
   assert.equal(await evaluate(`${app}.globe.planePose.visible`),false,'Move the plane behind the globe before returning');
   if(keyboard){await evaluate(`document.getElementById('plane-focus').focus()`);await key(...keyboard);}else await click('#plane-focus',mobile);
-  await until(`!${app}.globe.dirty && Math.abs(${app}.globe.camera.latitudeDeg-${app}.controller.view.state.position.latitudeDeg)<1e-9`);
+  try{await until(`!${app}.globe.dirty && Math.abs(${app}.globe.camera.latitudeDeg-${app}.controller.view.state.position.latitudeDeg)<1e-9`);}catch(error){throw Error(`Center failed at ${zoom}x (${keyboard?.[1]??'pointer'}): ${JSON.stringify(await inspect())}; ${error.message}`);}
   const r=await inspect();assert.equal(r.zoom,zoom);assert.deepEqual({latitudeDeg:r.camera.latitudeDeg,longitudeDeg:r.camera.longitudeDeg},r.position);assert.equal(r.visible,true);assert.equal(r.centered,true);assert.equal(r.planeBlocked,false);assert.equal(r.selectedBlocked,false);assert.equal(r.playing,false);
   assert.ok(r.button.w>=44&&r.button.h>=44);assert.equal(r.button.shown,true);assert.equal(r.button.label,'Центрировать');assert.match(r.button.aria,/Центрировать.*самолёте/);assert.equal(r.button.svg,1);assert.equal(r.button.clipped,false);
   assert.deepEqual(await evaluate(`({save:${app}.controller.session.save(),selected:${app}.controller.selectedId,tracks:JSON.stringify(${app}.controller.tracks)})`),before);
