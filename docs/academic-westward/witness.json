@@ -1,0 +1,473 @@
+{
+  "initial": {
+    "airportId": "ULLI",
+    "utcMs": 1785614400000,
+    "fuelKg": 30000
+  },
+  "path": [
+    "BIKF",
+    "CYEG",
+    "UHMA",
+    "UNNT"
+  ],
+  "legs": [
+    {
+      "from": "ULLI",
+      "to": "BIKF",
+      "startUtcMs": 1785614400000,
+      "departureUtcMs": 1785614400000,
+      "arrivalUtcMs": 1785627471748.169,
+      "endUtcMs": 1785628071748.169,
+      "distanceKm": 2725.383465632939,
+      "flight": {
+        "durationSeconds": 13071.74816906229,
+        "burnKg": 19714.992526614104,
+        "arrivalFuelKg": 10285.007473385896,
+        "takeoffMassKg": 156000,
+        "landingMassKg": 136285.0074733859,
+        "dispatchable": true,
+        "reasons": []
+      },
+      "refuelling": {
+        "transferKg": 0,
+        "fuelKg": 30000,
+        "stockKg": 64000,
+        "durationSeconds": 0,
+        "airportId": "ULLI",
+        "neededKg": 0,
+        "requiredFuelKg": 24714.992526614104,
+        "sufficient": true
+      },
+      "solar": {
+        "status": "safe",
+        "evaluations": 50,
+        "phase": null,
+        "eventUtcMs": null,
+        "bracketUtcMs": null,
+        "safeUntilUtcMs": 1785628071748.169,
+        "reason": null
+      },
+      "phases": [
+        {
+          "label": "departure",
+          "kind": "takeoff",
+          "startUtcMs": 1785614400000,
+          "endUtcMs": 1785615300000
+        },
+        {
+          "label": "cruise",
+          "kind": "cruise",
+          "startUtcMs": 1785615300000,
+          "endUtcMs": 1785626571748.169
+        },
+        {
+          "label": "arrival",
+          "kind": "landing",
+          "startUtcMs": 1785626571748.169,
+          "endUtcMs": 1785627471748.169
+        },
+        {
+          "label": "service",
+          "kind": "service",
+          "startUtcMs": 1785627471748.169,
+          "endUtcMs": 1785628071748.169
+        }
+      ]
+    },
+    {
+      "from": "BIKF",
+      "to": "CYEG",
+      "startUtcMs": 1785628071748.169,
+      "departureUtcMs": 1785630524630.6494,
+      "arrivalUtcMs": 1785652679391.2766,
+      "endUtcMs": 1785653279391.2766,
+      "distanceKm": 4921.554955666717,
+      "flight": {
+        "durationSeconds": 22154.760627269177,
+        "burnKg": 33990.10721183366,
+        "arrivalFuelKg": 5000,
+        "takeoffMassKg": 164990.10721183365,
+        "landingMassKg": 130999.99999999999,
+        "dispatchable": true,
+        "reasons": []
+      },
+      "refuelling": {
+        "transferKg": 28705.099738447763,
+        "fuelKg": 38990.10721183366,
+        "stockKg": 35294.90026155223,
+        "durationSeconds": 2452.8824803835823,
+        "airportId": "BIKF",
+        "neededKg": 28705.099738447763,
+        "requiredFuelKg": 38990.10721183366,
+        "sufficient": true
+      },
+      "solar": {
+        "status": "safe",
+        "evaluations": 90,
+        "phase": null,
+        "eventUtcMs": null,
+        "bracketUtcMs": null,
+        "safeUntilUtcMs": 1785653279391.2766,
+        "reason": null
+      },
+      "phases": [
+        {
+          "label": "refuelling",
+          "kind": "service",
+          "startUtcMs": 1785628071748.169,
+          "endUtcMs": 1785630524630.6494
+        },
+        {
+          "label": "departure",
+          "kind": "takeoff",
+          "startUtcMs": 1785630524630.6494,
+          "endUtcMs": 1785631424630.6494
+        },
+        {
+          "label": "cruise",
+          "kind": "cruise",
+          "startUtcMs": 1785631424630.6494,
+          "endUtcMs": 1785651779391.2766
+        },
+        {
+          "label": "arrival",
+          "kind": "landing",
+          "startUtcMs": 1785651779391.2766,
+          "endUtcMs": 1785652679391.2766
+        },
+        {
+          "label": "service",
+          "kind": "service",
+          "startUtcMs": 1785652679391.2766,
+          "endUtcMs": 1785653279391.2766
+        }
+      ]
+    },
+    {
+      "from": "CYEG",
+      "to": "UHMA",
+      "startUtcMs": 1785653279391.2766,
+      "departureUtcMs": 1785655633468.662,
+      "arrivalUtcMs": 1785673587229.007,
+      "endUtcMs": 1785674187229.007,
+      "distanceKm": 3905.799765166397,
+      "flight": {
+        "durationSeconds": 17953.76034488193,
+        "burnKg": 27387.69847358158,
+        "arrivalFuelKg": 5000,
+        "takeoffMassKg": 158387.69847358158,
+        "landingMassKg": 131000,
+        "dispatchable": true,
+        "reasons": []
+      },
+      "refuelling": {
+        "transferKg": 27387.69847358158,
+        "fuelKg": 32387.69847358158,
+        "stockKg": 36612.30152641842,
+        "durationSeconds": 2354.0773855186185,
+        "airportId": "CYEG",
+        "neededKg": 27387.69847358158,
+        "requiredFuelKg": 32387.69847358158,
+        "sufficient": true
+      },
+      "solar": {
+        "status": "safe",
+        "evaluations": 75,
+        "phase": null,
+        "eventUtcMs": null,
+        "bracketUtcMs": null,
+        "safeUntilUtcMs": 1785674187229.007,
+        "reason": null
+      },
+      "phases": [
+        {
+          "label": "refuelling",
+          "kind": "service",
+          "startUtcMs": 1785653279391.2766,
+          "endUtcMs": 1785655633468.662
+        },
+        {
+          "label": "departure",
+          "kind": "takeoff",
+          "startUtcMs": 1785655633468.662,
+          "endUtcMs": 1785656533468.662
+        },
+        {
+          "label": "cruise",
+          "kind": "cruise",
+          "startUtcMs": 1785656533468.662,
+          "endUtcMs": 1785672687229.007
+        },
+        {
+          "label": "arrival",
+          "kind": "landing",
+          "startUtcMs": 1785672687229.007,
+          "endUtcMs": 1785673587229.007
+        },
+        {
+          "label": "service",
+          "kind": "service",
+          "startUtcMs": 1785673587229.007,
+          "endUtcMs": 1785674187229.007
+        }
+      ]
+    },
+    {
+      "from": "UHMA",
+      "to": "UNNT",
+      "startUtcMs": 1785674187229.007,
+      "departureUtcMs": 1785677023315.4011,
+      "arrivalUtcMs": 1785699066330.7654,
+      "endUtcMs": 1785699666330.7654,
+      "distanceKm": 4894.536192675454,
+      "flight": {
+        "durationSeconds": 22043.015364219973,
+        "burnKg": 33814.485252390456,
+        "arrivalFuelKg": 5000,
+        "takeoffMassKg": 164814.48525239044,
+        "landingMassKg": 130999.99999999999,
+        "dispatchable": true,
+        "reasons": []
+      },
+      "refuelling": {
+        "transferKg": 33814.485252390456,
+        "fuelKg": 38814.485252390456,
+        "stockKg": 30185.514747609544,
+        "durationSeconds": 2836.086393929284,
+        "airportId": "UHMA",
+        "neededKg": 33814.485252390456,
+        "requiredFuelKg": 38814.485252390456,
+        "sufficient": true
+      },
+      "solar": {
+        "status": "safe",
+        "evaluations": 91,
+        "phase": null,
+        "eventUtcMs": null,
+        "bracketUtcMs": null,
+        "safeUntilUtcMs": 1785699666330.7654,
+        "reason": null
+      },
+      "phases": [
+        {
+          "label": "refuelling",
+          "kind": "service",
+          "startUtcMs": 1785674187229.007,
+          "endUtcMs": 1785677023315.4011
+        },
+        {
+          "label": "departure",
+          "kind": "takeoff",
+          "startUtcMs": 1785677023315.4011,
+          "endUtcMs": 1785677923315.4011
+        },
+        {
+          "label": "cruise",
+          "kind": "cruise",
+          "startUtcMs": 1785677923315.4011,
+          "endUtcMs": 1785698166330.7654
+        },
+        {
+          "label": "arrival",
+          "kind": "landing",
+          "startUtcMs": 1785698166330.7654,
+          "endUtcMs": 1785699066330.7654
+        },
+        {
+          "label": "service",
+          "kind": "service",
+          "startUtcMs": 1785699066330.7654,
+          "endUtcMs": 1785699666330.7654
+        }
+      ]
+    }
+  ],
+  "ordinary": [
+    "safe",
+    "safe",
+    "safe",
+    "safe"
+  ],
+  "final": {
+    "airportId": "UNNT",
+    "utcMs": 1785699666330.7654,
+    "fuelKg": 5000,
+    "distanceKm": 16447.274379141505,
+    "flights": 4,
+    "stockChangesKg": {
+      "BIKF": 35294.90026155223,
+      "CYEG": 36612.30152641842,
+      "UHMA": 30185.514747609544
+    }
+  },
+  "events": [
+    {
+      "version": 2,
+      "sequence": 0,
+      "kind": "mission_started",
+      "utcMs": 1785614400000,
+      "flightIndex": 0,
+      "airportId": "ULLI"
+    },
+    {
+      "version": 2,
+      "sequence": 1,
+      "kind": "flight_committed",
+      "utcMs": 1785614400000,
+      "flightIndex": 1,
+      "airportId": "ULLI"
+    },
+    {
+      "version": 2,
+      "sequence": 2,
+      "kind": "flight_started",
+      "utcMs": 1785614400000,
+      "flightIndex": 1,
+      "airportId": "ULLI"
+    },
+    {
+      "version": 2,
+      "sequence": 3,
+      "kind": "arrived",
+      "utcMs": 1785627471748.169,
+      "flightIndex": 1,
+      "airportId": "BIKF"
+    },
+    {
+      "version": 2,
+      "sequence": 4,
+      "kind": "flight_completed",
+      "utcMs": 1785628071748.169,
+      "flightIndex": 1,
+      "airportId": "BIKF"
+    },
+    {
+      "version": 2,
+      "sequence": 5,
+      "kind": "flight_committed",
+      "utcMs": 1785628071748.169,
+      "flightIndex": 2,
+      "airportId": "BIKF"
+    },
+    {
+      "version": 2,
+      "sequence": 6,
+      "kind": "refuelling_started",
+      "utcMs": 1785628071748.169,
+      "flightIndex": 2,
+      "airportId": "BIKF"
+    },
+    {
+      "version": 2,
+      "sequence": 7,
+      "kind": "flight_started",
+      "utcMs": 1785630524630.6494,
+      "flightIndex": 2,
+      "airportId": "BIKF"
+    },
+    {
+      "version": 2,
+      "sequence": 8,
+      "kind": "arrived",
+      "utcMs": 1785652679391.2766,
+      "flightIndex": 2,
+      "airportId": "CYEG"
+    },
+    {
+      "version": 2,
+      "sequence": 9,
+      "kind": "flight_completed",
+      "utcMs": 1785653279391.2766,
+      "flightIndex": 2,
+      "airportId": "CYEG"
+    },
+    {
+      "version": 2,
+      "sequence": 10,
+      "kind": "flight_committed",
+      "utcMs": 1785653279391.2766,
+      "flightIndex": 3,
+      "airportId": "CYEG"
+    },
+    {
+      "version": 2,
+      "sequence": 11,
+      "kind": "refuelling_started",
+      "utcMs": 1785653279391.2766,
+      "flightIndex": 3,
+      "airportId": "CYEG"
+    },
+    {
+      "version": 2,
+      "sequence": 12,
+      "kind": "flight_started",
+      "utcMs": 1785655633468.662,
+      "flightIndex": 3,
+      "airportId": "CYEG"
+    },
+    {
+      "version": 2,
+      "sequence": 13,
+      "kind": "arrived",
+      "utcMs": 1785673587229.007,
+      "flightIndex": 3,
+      "airportId": "UHMA"
+    },
+    {
+      "version": 2,
+      "sequence": 14,
+      "kind": "flight_completed",
+      "utcMs": 1785674187229.007,
+      "flightIndex": 3,
+      "airportId": "UHMA"
+    },
+    {
+      "version": 2,
+      "sequence": 15,
+      "kind": "flight_committed",
+      "utcMs": 1785674187229.007,
+      "flightIndex": 4,
+      "airportId": "UHMA"
+    },
+    {
+      "version": 2,
+      "sequence": 16,
+      "kind": "refuelling_started",
+      "utcMs": 1785674187229.007,
+      "flightIndex": 4,
+      "airportId": "UHMA"
+    },
+    {
+      "version": 2,
+      "sequence": 17,
+      "kind": "flight_started",
+      "utcMs": 1785677023315.4011,
+      "flightIndex": 4,
+      "airportId": "UHMA"
+    },
+    {
+      "version": 2,
+      "sequence": 18,
+      "kind": "arrived",
+      "utcMs": 1785699066330.7654,
+      "flightIndex": 4,
+      "airportId": "UNNT"
+    },
+    {
+      "version": 2,
+      "sequence": 19,
+      "kind": "flight_completed",
+      "utcMs": 1785699666330.7654,
+      "flightIndex": 4,
+      "airportId": "UNNT"
+    },
+    {
+      "version": 2,
+      "sequence": 20,
+      "kind": "mission_won",
+      "utcMs": 1785699666330.7654,
+      "flightIndex": 4,
+      "airportId": "UNNT"
+    }
+  ]
+}

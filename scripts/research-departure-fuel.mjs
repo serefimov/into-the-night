@@ -12,7 +12,7 @@ export const DISPATCH_RESEARCH_OPTIONS={eventToleranceSeconds:.05,maxIntervalSec
 export const loadDepartureReport=async()=>JSON.parse(await readFile('docs/departure-fuel/report.json','utf8'));
 const hash=value=>createHash('sha256').update(canonicalJson(value)).digest('hex');
 export async function researchDepartureFuel(){
- const d=await loadCycleDefinition(),initial={...structuredClone(d.initial),flights:0,distanceKm:0,won:false},routes=[];
+ const d=await loadCycleDefinition('data/scenarios/westward-control-v2.json'),initial={...structuredClone(d.initial),flights:0,distanceKm:0,won:false},routes=[];
  for(const first of ['NZCH','YSSY','YMML']){
   let state=structuredClone(initial);const legs=[];
   for(const to of [first,'YPPH','FACT']){

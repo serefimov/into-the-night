@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {layoutAirportMarkers} from '../web/flight/marker-layout.mjs';
 import {globeFrame,globePoint} from '../dist/core/globe.js';
 import {loadCycleDefinition} from '../scripts/mission-cycle-data.mjs';
-const definition=await loadCycleDefinition();
+const definition=await loadCycleDefinition('data/scenarios/westward-control-v2.json');
 const intersects=(a,b)=>a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;
 function layout(center,zoom,width,height,extra={}){const frame=globeFrame(center,width,height,zoom);return layoutAirportMarkers({airports:definition.airports,frame,width,height,zoom,priorityIds:['SCEL','FACT','NZCH'],...extra});}
 test('overview budgets scale to viewport; groups retain every visible airport and do not depend on forecast completion',()=>{

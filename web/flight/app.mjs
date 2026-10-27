@@ -16,6 +16,7 @@ export async function createFlightApp(definition,land) {
  const controller=new FlightController(definition),airports=new Map(definition.airports.map(a=>[a.id,a])),statuses=new Map();
  let follow=false,generation=0,planningKey=null,worker=null,lastDraw=0,destroyed=false;
  const globe=new GlobeView($('globe'),$('globe-markers'),land,{onSelect:select,onInteraction:()=>{follow=false;}});
+ globe.focus(controller.view.state.position,1);
  try{worker=new Worker(new URL('./forecast-worker.mjs',import.meta.url),{type:'module'});worker.onmessage=({data})=>{if(data.generation!==generation||data.error)return;for(const item of data.batch)statuses.set(item.id,item);globe.dirty=true;};worker.onerror=()=>{worker?.terminate();worker=null;};}catch{}
  function scheduleForecasts(){const s=controller.view.state,key=s.phase==='planning'?`${s.utcMs}:${s.flights}`:s.status==='running'?'busy':s.status;
   if(key===planningKey)return;planningKey=key;generation++;statuses.clear();worker?.postMessage({cancel:true});
@@ -45,7 +46,7 @@ export async function createFlightApp(definition,land) {
   text('verdict-title',title);text('verdict-detail',detail);$('route-verdict').className='verdict '+kind;
   $('fly').disabled=!choice?.allowed||busy||s.status!=='running';$('fly').setAttribute('aria-label',airport?`Полёт в ${airport.label??airport.name}`:'Полёт');
   $('dispatch-summary').hidden=!forecast;
-  text('dispatch-summary',forecast?`Здесь нужно добавить ${tonnes(forecast.refuelling.neededKg)} · в наличии ${tonnes(s.stocks[forecast.refuelling.airportId])}. ${forecast.refuelling.sufficient?`Дозаправка ${duration(forecast.refuelling.durationSeconds*1000)} · отправление ${time.format(forecast.departureUtcMs)} UTC.`:'Дозаправка не обеспечит рейс.'}`:'');
+  text('dispatch-summary',forecast&&forecast.refuelling.neededKg===0?`Дозаправка не нужна · отправление ${time.format(forecast.departureUtcMs)} UTC.`:forecast?`Здесь нужно добавить ${tonnes(forecast.refuelling.neededKg)} · в наличии ${tonnes(s.stocks[forecast.refuelling.airportId])}. ${forecast.refuelling.sufficient?`Дозаправка ${duration(forecast.refuelling.durationSeconds*1000)} · отправление ${time.format(forecast.departureUtcMs)} UTC.`:'Дозаправка не обеспечит рейс.'}`:'');
   text('ground-note','Заправляемся под выбранный рейс с резервом 5 т. После посадки топливо остаётся на складе до следующего выбора.');
   globe.update({airports:definition.airports,state:s,statuses,selectedId:controller.selectedId,targetId:definition.targetId,startId:definition.initial.airportId,forecast:accepted??choice?.forecast,tracks:controller.tracks});globe.draw(s.utcMs);
  }

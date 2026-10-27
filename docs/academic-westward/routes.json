@@ -1,0 +1,702 @@
+[
+  {
+    "path": [
+      "BIKF",
+      "CYEG",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785705963130.1333,
+      "fuelKg": 5000,
+      "distanceKm": 17809.23353843541,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 35294.90026155223,
+      "CYEG": 26499.975064670303,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 17,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYEG",
+      "UHMA",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785699666330.7654,
+      "fuelKg": 5000,
+      "distanceKm": 16447.274379141505,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 35294.90026155223,
+      "CYEG": 36612.30152641842,
+      "UHMA": 30185.514747609544
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 247,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYEG",
+      "UHHH",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785707886869.4006,
+      "fuelKg": 5000,
+      "distanceKm": 18225.326566287247,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 35294.90026155223,
+      "CYEG": 16630.779969906624,
+      "UHHH": 38609.69708767404
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYEG",
+      "UHSS",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785709484438.0696,
+      "fuelKg": 5000,
+      "distanceKm": 18570.87089033344,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 35294.90026155223,
+      "CYEG": 18092.187186188887,
+      "UHSS": 34902.251765091525
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYYC",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785707522723.4722,
+      "fuelKg": 5000,
+      "distanceKm": 18146.564031054964,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 33932.48859930466,
+      "CYYC": 25669.738524890723,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 1,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYYC",
+      "UHMA",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.6438260000001,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785701371217.1304,
+      "fuelKg": 5000,
+      "distanceKm": 16816.030863941545,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 33932.48859930466,
+      "CYYC": 35577.79603746574,
+      "UHMA": 30185.514747609544
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 199,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYYC",
+      "UHHH",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785709576562.2576,
+      "fuelKg": 5000,
+      "distanceKm": 18590.796788265663,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 33932.48859930466,
+      "CYYC": 15617.63518929448,
+      "UHHH": 38609.69708767404
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYWG",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785708956876.2388,
+      "fuelKg": 5000,
+      "distanceKm": 18456.7624956839,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 38138.07179216531,
+      "CYWG": 19447.86531194204,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYWG",
+      "UHMA",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785702359470.407,
+      "fuelKg": 5000,
+      "distanceKm": 17029.783998359093,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 38138.07179216531,
+      "CYWG": 29982.817470891037,
+      "UHMA": 30185.514747609544
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 166,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYWG",
+      "UHHH",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785710479884.9395,
+      "fuelKg": 5000,
+      "distanceKm": 18786.179954934298,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 38138.07179216531,
+      "CYWG": 10142.061413087722,
+      "UHHH": 38609.69708767404
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYVR",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785708289072.3777,
+      "fuelKg": 5000,
+      "distanceKm": 18312.32060824448,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 30332.965940421913,
+      "CYVR": 28191.84343204165,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYVR",
+      "UHMA",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785702678869.4546,
+      "fuelKg": 5000,
+      "distanceKm": 17098.86805723408,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 30332.965940421913,
+      "CYVR": 37338.87693994699,
+      "UHMA": 30185.514747609544
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 156,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "BIKF",
+      "CYVR",
+      "UHHH",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.6438260000001,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785710669714.2935,
+      "fuelKg": 5000,
+      "distanceKm": 18827.238882190642,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "BIKF": 30332.965940421913,
+      "CYVR": 17680.284237664877,
+      "UHHH": 38609.69708767404
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "EIDW",
+      "CYEG",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000005,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785710825479.9426,
+      "fuelKg": 5000,
+      "distanceKm": 18860.93003867742,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYEG": 26499.975064670303,
+      "EIDW": 28458.873009979172,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "EGCC",
+      "CYEG",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785710659732.8682,
+      "fuelKg": 5000,
+      "distanceKm": 18825.079961076415,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYEG": 26499.975064670303,
+      "EGCC": 28691.898514385677,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "ENGM",
+      "CYWG",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785709187559.673,
+      "fuelKg": 5000,
+      "distanceKm": 18506.65791046011,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYWG": 19447.86531194204,
+      "ENGM": 37813.751596119895,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "ENGM",
+      "CYWG",
+      "UHMA",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382599999993,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785702590153.8413,
+      "fuelKg": 5000,
+      "distanceKm": 17079.67941313531,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYWG": 29982.817470891037,
+      "ENGM": 37813.751596119895,
+      "UHMA": 30185.514747609544
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 158,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "ENGM",
+      "CYWG",
+      "UHHH",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785710710568.3738,
+      "fuelKg": 5000,
+      "distanceKm": 18836.075369710514,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYWG": 10142.061413087722,
+      "ENGM": 37813.751596119895,
+      "UHHH": 38609.69708767404
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "ESSA",
+      "CYWG",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785708916810.0894,
+      "fuelKg": 5000,
+      "distanceKm": 18448.096432785977,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYWG": 19447.86531194204,
+      "ESSA": 38194.4012010018,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "ESSA",
+      "CYWG",
+      "UHMA",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382599999993,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785702319404.2576,
+      "fuelKg": 5000,
+      "distanceKm": 17021.117935461174,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYWG": 29982.817470891037,
+      "ESSA": 38194.4012010018,
+      "UHMA": 30185.514747609544
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 167,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "ESSA",
+      "CYWG",
+      "UHHH",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785710439818.79,
+      "fuelKg": 5000,
+      "distanceKm": 18777.513892036375,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYWG": 10142.061413087722,
+      "ESSA": 38194.4012010018,
+      "UHHH": 38609.69708767404
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "EKCH",
+      "CYYC",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.6438260000001,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785709620775.4265,
+      "fuelKg": 5000,
+      "distanceKm": 18600.359826128348,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYYC": 25669.738524890723,
+      "EKCH": 30982.815931327685,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "EKCH",
+      "CYYC",
+      "UHMA",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382600000016,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785703469269.0847,
+      "fuelKg": 5000,
+      "distanceKm": 17269.82665901493,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYYC": 35577.79603746574,
+      "EKCH": 30982.815931327685,
+      "UHMA": 30185.514747609544
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 137,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "EDDH",
+      "CYEG",
+      "UHPP",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.643826,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785709638977.3552,
+      "fuelKg": 5000,
+      "distanceKm": 18604.296791908237,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYEG": 26499.975064670303,
+      "EDDH": 30126.989113978816,
+      "UHPP": 31445.106673947324
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 0,
+    "onwardUnresolvedCount": 0
+  },
+  {
+    "path": [
+      "EDDH",
+      "CYEG",
+      "UHMA",
+      "UNNT"
+    ],
+    "evidence": {
+      "status": "resolved",
+      "longitudeChangeDeg": -307.64382599999993,
+      "westwardAroundWorld": true
+    },
+    "final": {
+      "utcMs": 1785703342177.9873,
+      "fuelKg": 5000,
+      "distanceKm": 17242.33763261434,
+      "flights": 4
+    },
+    "stockChangesKg": {
+      "CYEG": 36612.30152641842,
+      "EDDH": 30126.989113978816,
+      "UHMA": 30185.514747609544
+    },
+    "refined": "safe",
+    "ordinary": "safe",
+    "onwardSafeCount": 139,
+    "onwardUnresolvedCount": 0
+  }
+]

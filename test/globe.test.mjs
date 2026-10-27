@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {globeFrame,globePoint,globeLocation,globeLines,globeRoute} from '../dist/core/globe.js';
 import {FlightController} from '../web/flight/controller.mjs';
 import {loadCycleDefinition} from '../scripts/mission-cycle-data.mjs';
-const definition=await loadCycleDefinition();
+const definition=await loadCycleDefinition('data/scenarios/westward-control-v2.json');
 test('orthographic projection/inverse stays continuous at the date line and under polar cameras',()=>{
  for(const center of [{latitudeDeg:0,longitudeDeg:179},{latitudeDeg:90,longitudeDeg:15},{latitudeDeg:-90,longitudeDeg:-170}]){
   const frame=globeFrame(center,1000,700,1.4),point=center.latitudeDeg===0?{latitudeDeg:10,longitudeDeg:-179}:{latitudeDeg:center.latitudeDeg>0?80:-80,longitudeDeg:45};
