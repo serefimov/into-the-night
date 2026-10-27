@@ -25,7 +25,8 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  await evaluate(`${app}.globe.focus(${app}.controller.view.state.position,1);${app}.render()`);
  const land=await evaluate(`(()=>{const g=${app}.globe;const at=(lat,lon)=>g.landPixels[(Math.floor((90-lat)/180*512)*1024+Math.floor((lon+180)/360*1024))*4+3]>90;return [at(-25,134),at(20,15),at(-88,0),at(0,-140)];})()`);
  assert.deepEqual(land,[true,true,true,false],'Coastline texture must contain real continents and ocean');
- const bounds=await evaluate(`(()=>{const r=document.getElementById('globe').getBoundingClientRect();return {x:r.x+r.width*.35,y:r.y+r.height*.6};})()`);
+ const bounds=await evaluate(`(()=>{const r=document.getElementById('globe').getBoundingClientRect();return {x:r.x+r.width*.65,y:r.y+r.height*.45};})()`);
+ assert.equal(await evaluate(`document.elementFromPoint(${bounds.x},${bounds.y}).id`),'globe','Navigation gestures must start on the map, outside controls');
  if(mobile){await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...bounds,id:1}]});await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:bounds.x+65,y:bounds.y+15,id:1}]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
  else{await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...bounds});await send('Input.dispatchMouseEvent',{type:'mouseMoved',buttons:1,x:bounds.x+65,y:bounds.y+15});await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:bounds.x+65,y:bounds.y+15});}
  assert.equal(await evaluate(`${app}.controller.selectedId`),null,'Dragging must not select a marker');assert.equal(await snapshot(),initial);

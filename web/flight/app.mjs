@@ -77,7 +77,7 @@ export async function createFlightApp(definition,land) {
  $('fly').addEventListener('click',()=>{if(controller.fly()){follow=true;render();}});
  $('play-pause').addEventListener('click',()=>{controller.playing?controller.pause():controller.play();render();});
  $('zoom-in').addEventListener('click',()=>{follow=false;globe.zoom(1.3);});$('zoom-out').addEventListener('click',()=>{follow=false;globe.zoom(1/1.3);});
- $('plane-focus').addEventListener('click',()=>{follow=controller.playing;globe.focus(controller.view.state.position,Math.min(globe.camera.zoom,1.5));});
+ $('plane-focus').addEventListener('click',()=>{follow=true;globe.focus(controller.view.state.position);});
  $('goal-focus').addEventListener('click',()=>{follow=false;globe.focus(airports.get(definition.targetId),1);});
  function frame(now){if(destroyed)return;if(now-lastDraw>=32){const changed=controller.tick(now);if(changed){if(follow)globe.focus(controller.view.state.position,globe.camera.zoom);render();}if(globe.dirty)globe.draw(controller.view.state.utcMs);lastDraw=now;}requestAnimationFrame(frame);}
  render();requestAnimationFrame(frame);document.body.dataset.ready='true';
