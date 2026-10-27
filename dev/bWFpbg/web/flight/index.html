@@ -6,6 +6,18 @@
  <header class="topbar"><div class="brand"><span class="brand-symbol">◑</span><span>INTO THE NIGHT<small id="route-name">Пробный маршрут</small></span></div>
  <div class="telemetry"><time id="flight-clock">Загрузка мира…</time><span id="flight-fuel"></span></div>
  <button id="goal-focus" class="goal-chip" title="Показать цель на глобусе">⚑ <span id="goal-name">Новосибирск</span></button>
+ <details id="session-menu" class="session-menu">
+  <summary aria-label="Меню партии" title="Сохранение и журнал"><span>Партия</span><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></summary>
+  <div class="session-panel">
+   <button id="save-mission" type="button">Сохранить в браузере</button>
+   <button id="restore-mission" type="button" disabled>Восстановить из браузера</button>
+   <button id="export-mission" type="button">Экспорт журнала</button>
+   <button id="import-mission-button" type="button">Загрузить из файла</button>
+   <input id="import-mission" type="file" accept="application/json,.json" aria-label="Файл сохранения партии" hidden>
+   <button id="new-mission" type="button">Новая партия</button>
+   <p id="session-message" role="status">Прогресс сохраняется автоматически в этом браузере.</p>
+  </div>
+ </details>
  </header>
  <section class="world" aria-label="Глобус и маршрут">
   <div class="world-caption"><span class="eyebrow">Восточная цель. Западный путь.</span><p id="flight-status" role="status">Поверните глобус и выберите следующую посадку.</p></div>
@@ -24,6 +36,18 @@
    <span class="eyebrow" id="availability-scope">По всему каталогу</span><strong id="availability-title">Проверяем направления</strong>
    <p id="availability-detail"></p><p id="availability-reasons" hidden></p>
    <button id="retry-scan" hidden>Повторить проверку</button><button id="restart-mission" hidden>Начать заново</button>
+  </section>
+  <section id="mission-summary" class="mission-summary" aria-labelledby="summary-title" hidden>
+   <h2 id="summary-title">Маршрут партии</h2>
+   <dl class="summary-metrics">
+    <div><dt>Цель</dt><dd id="summary-goal"></dd></div>
+    <div><dt>Время окончания</dt><dd id="summary-utc"></dd></div>
+    <div><dt>Длительность</dt><dd id="summary-duration"></dd></div>
+    <div><dt>Пройдено</dt><dd id="summary-distance"></dd></div>
+    <div><dt>Посадки</dt><dd id="summary-landings"></dd></div>
+    <div><dt>Топливо на борту</dt><dd id="summary-fuel"></dd></div>
+   </dl>
+   <ol id="summary-route" aria-label="Посещённые аэродромы"></ol>
   </section>
   <div id="flight-planning-card" class="planning-card">
   <div><span class="eyebrow">Следующая посадка</span><h1 id="destination-title">Куда летим?</h1><p id="destination-subtitle">Выберите аэродром на глобусе.</p></div>

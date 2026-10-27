@@ -16,6 +16,31 @@ function copy(value) {
         return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, copy(v)]));
     return value;
 }
+/** Chrome and Node can disagree in the final digits of physical metrics.
+ * Only snapshot comparison uses these absolute bounds: kg/km 1e-9, degrees 1e-10.
+ * UTC, events, versions and all simulation/safety decisions remain exact. */
+function matchesSnapshot(stored, actual) {
+    if (!stored?.state?.position || !stored.state.stocks)
+        return false;
+    const normalized = copy(stored);
+    const near = (a, b, tolerance) => typeof a === 'number' && Number.isFinite(a) && Math.abs(a - b) <= tolerance;
+    for (const key of ['fuelKg', 'distanceKm']) {
+        if (!near(stored.state[key], actual.state[key], 1e-9))
+            return false;
+        normalized.state[key] = actual.state[key];
+    }
+    for (const key of ['latitudeDeg', 'longitudeDeg']) {
+        if (!near(stored.state.position[key], actual.state.position[key], 1e-10))
+            return false;
+        normalized.state.position[key] = actual.state.position[key];
+    }
+    for (const [id, fuel] of Object.entries(actual.state.stocks)) {
+        if (!near(stored.state.stocks[id], fuel, 1e-9))
+            return false;
+        normalized.state.stocks[id] = fuel;
+    }
+    return canonicalJson(normalized) === canonicalJson(actual);
+}
 function initialResearch(d) { return { ...copy(d.initial), flights: 0, distanceKm: 0, won: false }; }
 function validateDefinition(d) {
     canonicalJson(d);
@@ -65,6 +90,10 @@ export class MissionSession {
     }
     get definition() { return copy(this.#definition); }
     get currentTimeUtc() { return this.#cursor; }
+    /** Read-only-by-copy accepted plans, for presenting history and resuming playback. */
+    get acceptedFlights() {
+        return this.#plans.map(plan => ({ fromId: plan.origin.airportId, toId: plan.toId, forecast: copy(plan.forecast) }));
+    }
     get endUtcMs() { return this.#plans.at(-1)?.forecast.endUtcMs ?? this.#initial.utcMs; }
     get planningKey() { const state = this.current().state; return state.status === 'running' && state.phase === 'planning' ? saveChecksum({ definition: this.#definitionHash, options: this.#options, state: this.#ready() }) : null; }
     #airport(id) { return this.#definition.airports.find(a => a.id === id); }
@@ -277,7 +306,7 @@ export class MissionSession {
                 throw new RangeError('Saved no-routes result is not confirmed');
         }
         const actual = session.current();
-        if (!Number.isInteger(p.consumedEvents) || p.consumedEvents < 0 || p.consumedEvents > actual.events.length || canonicalJson(p.snapshot) !== canonicalJson(actual))
+        if (!Number.isInteger(p.consumedEvents) || p.consumedEvents < 0 || p.consumedEvents > actual.events.length || !matchesSnapshot(p.snapshot, actual))
             throw new RangeError('Mission save snapshot or journal differs');
         session.#consumedEvents = p.consumedEvents;
         return session;

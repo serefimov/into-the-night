@@ -89,12 +89,19 @@ export interface MissionChoice {
     reasons: readonly string[];
     forecast: MissionForecast | null;
 }
+export interface MissionAcceptedFlight {
+    fromId: string;
+    toId: string;
+    forecast: MissionForecast;
+}
 /** A no-food, no-wait session. The shared departure-fuel transition supplies every accepted physical plan. */
 export declare class MissionSession {
     #private;
     constructor(definition: MissionDefinition, options?: SearchOptions);
     get definition(): MissionDefinition;
     get currentTimeUtc(): number;
+    /** Read-only-by-copy accepted plans, for presenting history and resuming playback. */
+    get acceptedFlights(): MissionAcceptedFlight[];
     get endUtcMs(): number;
     get planningKey(): string | null;
     forecast(destinationId: string): MissionChoice;
