@@ -1,0 +1,11 @@
+{
+  "kind": "dev",
+  "branch": "51-engineering-quality-center",
+  "tag": "",
+  "version": "0.1.0-alpha.1",
+  "commit": "bf434699cb9abc9eaf88864137756ab0477bb8b3",
+  "runId": "40534683481",
+  "builtAt": "2026-10-27T15:49:42.514Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/bf434699cb9abc9eaf88864137756ab0477bb8b3",
+  "contentHash": "16238cc2db60ba13c980a33a25502add1b2b09fd77e838b8aad9acc32a17d15a"
+}
