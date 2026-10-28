@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081520"><title>Into the Night — западный маршрут</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<main class="flight-shell">
+ <header class="topbar"><div class="brand"><span class="brand-symbol">◑</span><span>INTO THE NIGHT<small id="route-name">Пробный маршрут</small></span></div>
+ <div class="telemetry"><time id="flight-clock">Загрузка мира…</time><span id="flight-fuel"></span></div>
+ <button id="goal-focus" class="goal-chip" title="Показать цель на глобусе">⚑ <span id="goal-name">Новосибирск</span></button>
+ <details id="session-menu" class="session-menu">
+  <summary aria-label="Меню партии" title="Сохранение и журнал"><span>Партия</span><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></summary>
+  <div class="session-panel">
+   <button id="save-mission" type="button">Сохранить в браузере</button>
+   <button id="restore-mission" type="button" disabled>Восстановить из браузера</button>
+   <button id="export-mission" type="button">Экспорт журнала</button>
+   <button id="import-mission-button" type="button">Загрузить из файла</button>
+   <input id="import-mission" type="file" accept="application/json,.json" aria-label="Файл сохранения партии" hidden>
+   <button id="new-mission" type="button">Новая партия</button>
+   <p id="session-message" role="status">Прогресс сохраняется автоматически в этом браузере.</p>
+  </div>
+ </details>
+ </header>
+ <section class="world" aria-label="Глобус и маршрут">
+  <div class="world-caption"><span class="eyebrow">Восточная цель. Западный путь.</span><p id="flight-status" role="status">Поверните глобус и выберите следующую посадку.</p></div>
+  <canvas id="globe" tabindex="0" aria-label="Вращаемый глобус: перетаскивание, колесо или щипок для масштаба; стрелки и плюс/минус с клавиатуры"></canvas>
+  <div id="globe-markers" class="markers" aria-label="Аэродромы на видимой стороне глобуса"></div>
+  <button id="plane-focus" class="plane-focus" type="button" aria-label="Центрировать на самолёте" title="Центрировать на текущей позиции самолёта"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg><span>Центрировать</span></button>
+  <div class="map-controls">
+   <button id="zoom-in" aria-label="Приблизить">+</button><button id="zoom-out" aria-label="Отдалить">−</button>
+  </div>
+  <div class="playback" id="playback" hidden><button id="play-pause">Пауза</button><button id="stop-wait" aria-label="Остановить ожидание" title="Остановить ожидание" hidden>Стоп</button><div><span id="phase-name"></span><progress id="flight-progress" max="1" value="0" aria-label="Ход принятого перелёта"></progress></div></div>
+  <p class="map-detail-hint">Приблизьте, чтобы увидеть больше аэродромов</p>
+  <div class="map-legend"><span><i class="night"></i>Тень сейчас</span><span><i class="day"></i>Солнце сейчас</span><span class="availability-key">✓ сейчас &nbsp; ◷ после ожидания &nbsp; × запрет</span></div>
+ </section>
+ <aside class="destination" aria-label="Маршрут и выбор аэродрома">
+  <section id="availability-panel" class="availability-panel" aria-live="polite" aria-atomic="true" aria-labelledby="availability-title">
+   <span class="eyebrow" id="availability-scope">По всему каталогу</span><strong id="availability-title">Проверяем направления</strong>
+   <p id="availability-detail"></p><p id="availability-reasons" hidden></p>
+   <button id="retry-scan" hidden>Повторить проверку</button><button id="restart-mission" hidden>Начать заново</button>
+  </section>
+  <section id="campaign-panel" class="campaign-panel" aria-label="Кампания" hidden>
+   <span class="eyebrow">Кампания · знание <span id="knowledge-count">0</span>/3</span>
+   <h2 id="campaign-objective"></h2><p id="campaign-location"></p>
+   <div id="expedition-card" hidden>
+    <h3>Толмачёво → Академгородок → самолёт</h3>
+    <p id="expedition-budget"></p><p id="expedition-verdict" role="status"></p>
+    <p id="expedition-times"></p><p id="expedition-margin"></p>
+    <p class="footnote">Дорога: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a></p>
+    <button id="expedition-start" class="fly-button" type="button" hidden>В Академгородок</button>
+   </div>
+  </section>
+  <section id="mission-summary" class="mission-summary" aria-labelledby="summary-title" hidden>
+   <h2 id="summary-title">Маршрут партии</h2>
+   <dl class="summary-metrics">
+    <div><dt>Цель</dt><dd id="summary-goal"></dd></div>
+    <div><dt>Время окончания</dt><dd id="summary-utc"></dd></div>
+    <div><dt>Длительность</dt><dd id="summary-duration"></dd></div>
+    <div><dt>Пройдено</dt><dd id="summary-distance"></dd></div>
+    <div><dt>Посадки</dt><dd id="summary-landings"></dd></div>
+    <div><dt>Топливо на борту</dt><dd id="summary-fuel"></dd></div>
+   </dl>
+   <ol id="summary-route" aria-label="Посещённые аэродромы"></ol>
+  </section>
+  <div id="flight-planning-card" class="planning-card">
+  <div><span class="eyebrow">Следующая посадка</span><h1 id="destination-title">Куда летим?</h1><p id="destination-subtitle">Выберите аэродром на глобусе.</p></div>
+  <div id="empty-card" class="empty-card"><span class="compass">↶</span><p>До цели — через весь мир.</p><p class="muted">Прямой путь встречает Солнце. Ищите тёмные участки и аэродромы для дозаправки.</p></div>
+  <dl id="destination-metrics" class="metrics" hidden>
+   <div><dt>Расстояние</dt><dd id="distance-value">—</dd></div><div><dt>Топливо в назначении</dt><dd id="stock-value">—</dd></div>
+   <div><dt>В пути</dt><dd id="duration-value">—</dd></div><div><dt>Прибытие, UTC</dt><dd id="arrival-value">—</dd></div>
+   <div><dt>После посадки</dt><dd id="arrival-fuel-value">—</dd></div><div><dt>Перед вылетом</dt><dd id="end-fuel-value">—</dd></div>
+  </dl>
+  <div id="route-verdict" class="verdict" aria-live="polite"><strong id="verdict-title">Время стоит, пока вы выбираете.</strong><p id="verdict-detail">Метки выбирают аэродром. Кнопка «Полёт» подтверждает вылет.</p></div>
+  <p id="window-detail" class="footnote" hidden></p>
+  <button id="fly" class="fly-button" disabled>Полёт <span aria-hidden="true">↗</span></button>
+  <button id="wait-departure" class="fly-button" hidden>Ждать до вылета</button>
+  <p id="dispatch-summary" class="dispatch-summary" hidden></p>
+  <p class="footnote" id="ground-note">Заправка — перед выбранным рейсом, с резервом 5 т.</p>
+  </div>
+ </aside>
+</main>
+<script type="importmap">{"imports":{"d3-geo":"../../data/runtime/vendor/d3-geo/index.js","d3-array":"../../data/runtime/vendor/d3-array/index.js","internmap":"../../data/runtime/vendor/internmap/index.js"}}</script>
+<script type="module" src="./app.mjs"></script>
+</body></html>
