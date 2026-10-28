@@ -121,7 +121,7 @@ export class GlobeView {
   for(const path of accepted?tracks.slice(0,-1):tracks)stroke(globeRoute(path.from,path.to),'#debd8155',2);
   if(trajectory)strokeLines(ctx,trajectory.front,routeColor,2.5,routeDash);
   this.drawMarkers();
-  drawFlightPlane(ctx,this.planePose,this.frame);
+  drawFlightPlane(ctx,this.planePose);
   this.dirty=false;
  }
  drawMarkers() {
