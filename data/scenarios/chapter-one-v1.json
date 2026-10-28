@@ -1,0 +1,22 @@
+{
+  "scenarioId": "campaign-chapter-one",
+  "scenarioVersion": 1,
+  "purpose": "Chapter one: western flight, Akademgorodok expedition, return and continuing flight",
+  "seed": "campaign-chapter-one-v1",
+  "refuelingPolicy": "route-before-departure-v2",
+  "stockVersion": "departure-stocks-v2",
+  "stockKgPerAirport": 64000,
+  "stockOverridesKg": {},
+  "profileId": "B788-reference-v1",
+  "profileVersion": 1,
+  "catalogVersion": 2,
+  "catalogSourceCommit": "11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+  "targetId": "UNNT",
+  "targetCompletion": "after_service",
+  "initial": {
+    "airportId": "ULLI",
+    "utcMs": 1786388400000,
+    "fuelKg": 65000
+  },
+  "chapterOne": "data/campaign/chapter-one/expedition.json"
+}
