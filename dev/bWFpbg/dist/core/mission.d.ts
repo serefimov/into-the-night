@@ -8,7 +8,8 @@ export declare const MISSION_MODEL: Readonly<{
     readonly simulationVersion: "flight-cycle-3";
     readonly schemaVersion: 3;
     readonly eventVersion: 3;
-    readonly saveVersion: 3;
+    readonly saveVersion: 4;
+    readonly waitingVersion: 1;
 }>;
 export interface MissionDefinition extends MissionWorld {
     scenarioId: string;
@@ -30,7 +31,7 @@ export interface MissionEvent {
     utcMs: number;
     flightIndex: number;
     airportId: string;
-    kind: 'mission_started' | 'flight_committed' | 'flight_started' | 'arrived' | 'refuelling_started' | 'flight_completed' | 'mission_won' | 'mission_died' | 'mission_lost';
+    kind: 'mission_started' | 'flight_committed' | 'flight_started' | 'arrived' | 'refuelling_started' | 'flight_completed' | 'mission_won' | 'mission_died' | 'mission_lost' | 'waiting_started' | 'waiting_completed';
 }
 export interface MissionState {
     mode: typeof MISSION_MODEL.mode;
@@ -50,12 +51,16 @@ export interface MissionState {
     flights: number;
     distanceKm: number;
     status: 'running' | 'won' | 'dead' | 'lost';
-    phase: 'planning' | 'won' | 'dead' | 'lost' | ResearchPhase['label'];
+    phase: 'waiting' | 'planning' | 'won' | 'dead' | 'lost' | ResearchPhase['label'];
     death: null | {
         kind: 'sun';
         utcMs: number;
     };
     result: MissionResult | null;
+    activeWait?: {
+        startUtcMs: number;
+        endUtcMs: number;
+    };
     activeFlight: null | {
         fromId: string;
         toId: string;
@@ -94,7 +99,7 @@ export interface MissionAcceptedFlight {
     toId: string;
     forecast: MissionForecast;
 }
-/** A no-food, no-wait session. The shared departure-fuel transition supplies every accepted physical plan. */
+/** A food-free session with explicitly certified parked waits. The shared departure-fuel transition supplies every accepted physical plan. */
 export declare class MissionSession {
     #private;
     constructor(definition: MissionDefinition, options?: SearchOptions);
@@ -104,12 +109,19 @@ export declare class MissionSession {
     get acceptedFlights(): MissionAcceptedFlight[];
     get endUtcMs(): number;
     get planningKey(): string | null;
+    waitingLimit(): import("./waiting.js").SunriseSearch;
+    /** Read-only solar certification; accepting and executing a wait is separate. */
+    forecastWait(endUtcMs: number): import("./interval-search.js").SearchResult;
+    /** Accept only an entirely certified interval. No resources change on a parked wait. */
+    waitUntil(endUtcMs: number): import("./interval-search.js").SearchResult;
+    /** End a wait at the actual cursor; the discarded remainder is not executed. */
+    cancelWait(): MissionAdvance;
     forecast(destinationId: string): MissionChoice;
     fly(destinationId: string): MissionChoice;
     /** Pure, complete analysis: it never changes time, resources, result or event delivery. */
     availability(): MissionAvailability;
     /** Only the session's own full-catalog forecasts can commit a no-routes result.
-     * Worker counts are progress, never authority to end a party. No-wait policy (#25 revises it). */
+     * Worker counts are progress, never authority to end a party. Only time-independent blocks establish a dead end without departure-window analysis. */
     resolvePlanning(): MissionAdvance & {
         availability: MissionAvailability;
     };
