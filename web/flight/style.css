@@ -58,3 +58,12 @@
  .mission-summary h2 { margin-bottom:12px; }
 }
 @media(max-width:440px) { .brand small { display:none; } }
+
+.map-marker.waiting .marker-dot{border-style:dashed;border-color:#e7c58c;color:#e7c58c} #wait-departure{margin-top:8px} #stop-wait{font-size:12px;min-width:44px;padding:8px} .playback{flex-wrap:wrap}
+
+.wait-badge{position:absolute;right:1px;top:1px;color:#e7c58c;background:#081520;border-radius:50%;font-size:14px;line-height:16px;width:16px;height:16px}
+
+#window-detail{display:block;font-size:11px;line-height:1.5;margin:0}
+#window-detail[hidden]{display:none}
+/* Keep touch targets stationary while asynchronous card details arrive. */
+@media(max-width:760px){.flight-shell{grid-template-rows:70px clamp(290px,36dvh,380px) auto}}
