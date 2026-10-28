@@ -18,6 +18,7 @@ export async function chapterOneScenarioRun({send,evaluate,until,click,rootUrl,m
   for(const to of ['BIKF','CYEG','UHMA'])await fly(to);
   const before=await save();await evaluate(`${app}.select('UNNT')`);
   assert.equal(await save(),before,'Preflight ground preview must be free');
+  assert.notEqual(await evaluate(`getComputedStyle(document.querySelector('#expedition-card .footnote')).display`),'none');
   const preview=await evaluate(`document.getElementById('expedition-card').textContent`);
   assert.match(preview,/Дорога 1 ч 30 мин.*данные 1 ч 0 мин.*обратно 1 ч 30 мин/s);
   assert.match(preview,/Ночи хватает.*После обслуживания.*Данные:.*У самолёта:.*После возвращения до рассвета.*1 ч 12 мин/s);
