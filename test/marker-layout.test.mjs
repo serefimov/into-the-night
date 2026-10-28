@@ -47,3 +47,14 @@ test('a ground airplane keeps its real airport anchor while the clickable marker
   assert.ok(Math.hypot(row.x-plane.x,row.y-plane.y)>=36,'The airport touch target must not cover the ground airplane');
  }
 });
+test('deep zoom separates the real catalogue except physically duplicated airport coordinates',()=>{
+ for(const width of [320,390,1280])for(const airport of definition.airports){
+  const zoom=512,frame=globeFrame(airport,width,304,zoom);
+  const result=layoutAirportMarkers({airports:definition.airports,frame,width,height:304,zoom});
+  const row=result.rows.find(p=>p.group.some(a=>a.id===airport.id));
+  assert.ok(row,airport.id);
+  if(row.cluster)for(const member of row.group){
+   assert.ok(Math.abs(member.airport.latitudeDeg-airport.latitudeDeg)<1e-5&&Math.abs(member.airport.longitudeDeg-airport.longitudeDeg)<1e-5,`${airport.id} remains grouped with ${member.id}`);
+  }
+ }
+});
