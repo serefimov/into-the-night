@@ -1,5 +1,4 @@
 import type { Coordinates, Vector3 } from './solar.js';
-import type { GreatCircle } from './geometry.js';
 export interface GlobeFrame {
     center: Coordinates;
     cx: number;
@@ -17,11 +16,9 @@ export interface GlobePoint {
 }
 /** Orthographic display only. It does not determine route distance, time or safety. */
 export declare function globeFrame(center: Coordinates, width: number, height: number, zoom?: number): GlobeFrame;
-export declare function globePoint(location: Coordinates, frame: GlobeFrame): GlobePoint;
-/** Clockwise radians from screen-up, using the accepted path's tangent at the
- * actual position. No target projection, longitude difference or time step.
- * A nearly radial tangent has no stable screen heading (null). */
-export declare function globeRouteHeading(path: GreatCircle, location: Coordinates, frame: GlobeFrame): number | null;
+/** Radius is relative to Earth. A point behind the centre plane can still be
+ * visible above the limb; only the unit Earth sphere occludes it. */
+export declare function globePoint(location: Coordinates, frame: GlobeFrame, radius?: number): GlobePoint;
 export declare function globeNormal(x: number, y: number, f: GlobeFrame): Vector3 | null;
 export declare function globeLocation(x: number, y: number, f: GlobeFrame): Coordinates | null;
 /** Clip sampled display lines at the visible hemisphere; there is no longitude seam in this projection. */

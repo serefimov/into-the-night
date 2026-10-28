@@ -12,23 +12,27 @@ export function layoutAirportMarkers({airports,frame,width,height,zoom,priorityI
  const projected=airports.map(airport=>({...globePoint(airport,frame),id:airport.id,airport})).filter(p=>p.depth>=.025&&p.x>=22&&p.x<=width-22&&p.y>=22&&p.y<=height-22);
  const labels=[];
  const inside=p=>p.x>=22&&p.x<=width-22&&p.y>=22&&p.y<=height-22;
- const clear=(p,placed,protectPlane=true)=>inside(p)&&!obstacles.some(r=>intersects(box(p),r))&&!placed.some(q=>distance(p,q)<44)&&(!protectPlane||(!labels.some(r=>intersects(box(p),r))&&(!plane?.visible||distance(p,plane)>=36)));
+ const clear=(p,placed)=>inside(p)&&!obstacles.some(r=>intersects(box(p),r))&&!placed.some(q=>distance(p,q)<44)&&!labels.some(r=>intersects(box(p),r))&&(!plane?.visible||distance(p,plane)>=36);
  const pins=projected.filter(p=>priorities.has(p.id)).sort((a,b)=>priorities.get(a.id)-priorities.get(b.id)),ordinary=projected.filter(p=>!priorities.has(p.id)).sort((a,b)=>a.id.localeCompare(b.id));
  const rows=[];
  for(const p of pins){
   const candidates=[p];
   for(let radius=44;radius<=176;radius+=44)for(let i=0;i<16;i++){const angle=i*Math.PI/8;candidates.push({x:p.x+Math.cos(angle)*radius,y:p.y+Math.sin(angle)*radius});}
-  const at=candidates.find(q=>clear(q,rows,false))??p;
-  rows.push({...p,x:at.x,y:at.y,anchorX:p.x,anchorY:p.y,priority:true,group:[p]});
+  const available=candidates.filter(q=>clear(q,rows));
+  const at=available.find(q=>labelFor({...p,...q,priority:true},rows))??available[0]??p;
+  const row={...p,x:at.x,y:at.y,anchorX:p.x,anchorY:p.y,priority:true,group:[p]};
+  rows.push(row);placeLabel(row,rows);
  }
- function placeLabel(row,placed){
+ function labelFor(row,placed){
   const label=row.priority?(row.airport.label??row.airport.iata??row.id):(row.airport.iata??row.id),w=row.priority?125:Math.min(125,label.length*7+6),h=15;
   const candidates=[{left:row.x-w/2,top:row.y+17},{left:row.x-w/2,top:row.y-32},{left:row.x+19,top:row.y+17},{left:row.x-w-19,top:row.y+17}].map(p=>({...p,right:p.left+w,bottom:p.top+h}));
   const rect=candidates.find(r=>r.left>=4&&r.right<=width-4&&r.top>=4&&r.bottom<=height-4&&!obstacles.some(o=>intersects(r,o))&&!labels.some(o=>intersects(r,o))&&!placed.some(p=>p!==row&&intersects(r,box(p,17)))&&(!plane?.visible||!intersects(r,box(plane,17))));
-  if(rect){row.label={text:label,...rect};labels.push(rect);}
+  return rect?{text:label,...rect}:null;
  }
- // Reserve important names before ordinary markers compete for their space.
- for(const row of rows)placeLabel(row,rows);
+ function placeLabel(row,placed){
+  const label=labelFor(row,placed);
+  if(label){row.label=label;labels.push(label);}
+ }
  const ungrouped=[];
  for(const p of ordinary){const pin=rows.find(q=>Math.hypot(p.x-q.anchorX,p.y-q.anchorY)<44);if(pin)pin.group.push(p);else ungrouped.push(p);}
  const slots=Math.max(1,budget-rows.length);let groups=[],spacing=detail?44:76;

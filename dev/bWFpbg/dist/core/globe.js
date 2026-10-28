@@ -11,18 +11,14 @@ export function globeFrame(center, width, height, zoom = 1) {
     return { center: { ...center }, cx: width / 2, cy: height / 2, radius: Math.min(width, height) * .44 * zoom, forward,
         east: [-Math.sin(lon), Math.cos(lon), 0], north: [-Math.sin(lat) * Math.cos(lon), -Math.sin(lat) * Math.sin(lon), Math.cos(lat)] };
 }
-export function globePoint(location, frame) {
-    const n = surfaceNormal(location), depth = dot(n, frame.forward);
-    return { x: frame.cx + frame.radius * dot(n, frame.east), y: frame.cy - frame.radius * dot(n, frame.north), depth, visible: depth >= 0 };
-}
-/** Clockwise radians from screen-up, using the accepted path's tangent at the
- * actual position. No target projection, longitude difference or time step.
- * A nearly radial tangent has no stable screen heading (null). */
-export function globeRouteHeading(path, location, frame) {
-    const n = surfaceNormal(location), c = dot(n, path.start), s = dot(n, path.tangent);
-    const tangent = [path.tangent[0] * c - path.start[0] * s, path.tangent[1] * c - path.start[1] * s, path.tangent[2] * c - path.start[2] * s];
-    const right = dot(tangent, frame.east), up = dot(tangent, frame.north);
-    return Math.hypot(right, up) < 1e-6 ? null : Math.atan2(right, up);
+/** Radius is relative to Earth. A point behind the centre plane can still be
+ * visible above the limb; only the unit Earth sphere occludes it. */
+export function globePoint(location, frame, radius = 1) {
+    if (!Number.isFinite(radius) || radius < 1)
+        throw new RangeError('Display radius must be at least one');
+    const n = surfaceNormal(location), depth = radius * dot(n, frame.forward);
+    return { x: frame.cx + frame.radius * radius * dot(n, frame.east), y: frame.cy - frame.radius * radius * dot(n, frame.north), depth,
+        visible: depth >= -Math.sqrt(radius * radius - 1) };
 }
 export function globeNormal(x, y, f) {
     const east = (x - f.cx) / f.radius, north = (f.cy - y) / f.radius, r2 = east * east + north * north;
