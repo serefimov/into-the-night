@@ -17,18 +17,11 @@ export function flightPlanePose(state,acceptedForecast,frame){
  return {...point,angleRad:heading??0,directional:heading!==null};
 }
 
-/** Fixed billboard at the anchor's depth, nose at (0,-13). Each pixel is
- * occluded by the sphere's front surface, even if the anchor itself is visible.
- * A hidden anchor can still have a wing protruding above the limb. */
-export function drawFlightPlane(ctx,pose,frame){
- ctx.save();
- if(pose.depth<1){
-  const radius=frame.radius*Math.sqrt(1-Math.max(0,pose.depth)**2);
-  ctx.beginPath();ctx.rect(0,0,frame.cx*2,frame.cy*2);
-  ctx.moveTo(frame.cx+radius,frame.cy);
-  ctx.arc(frame.cx,frame.cy,radius,0,Math.PI*2);ctx.clip('evenodd');
- }
- ctx.translate(pose.x,pose.y);ctx.rotate(pose.angleRad);
+/** Screen symbol anchored to the spatial path, not a 3D aircraft mesh.
+ * Keep the silhouette whole; the anchor determines visibility behind Earth. */
+export function drawFlightPlane(ctx,pose){
+ if(!pose.visible)return;
+ ctx.save();ctx.translate(pose.x,pose.y);ctx.rotate(pose.angleRad);
  ctx.beginPath();
  const contour=[[0,-13],[2,-10],[2,-3],[11,3],[11,6],[2,3],[2,9],[5,11],[5,13],[0,11],[-5,13],[-5,11],[-2,9],[-2,3],[-11,6],[-11,3],[-2,-3],[-2,-10]];
  contour.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.closePath();

@@ -1,6 +1,60 @@
 // SPDX-License-Identifier: GPL-3.0-only
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
+/** A map symbol keeps its complete silhouette at a visible anchor. Compare
+ * native Canvas pixels across rotations, zoom and DPR, including Halifax. */
+export async function inspectGroundPlane({app,evaluate,send,mobile}){
+ const result=await evaluate(`(async()=>{
+  const a=${app},before=a.controller.session.save();
+  const {globeFrame}=await import('../../dist/core/globe.js');
+  const {surfaceNormal}=await import('../../dist/core/solar.js');
+  const {normalCoordinates}=await import('../../dist/core/geometry.js');
+  const {flightPlanePose,drawFlightPlane}=await import('./plane.mjs');
+  const halifax=a.controller.session.definition.airports.find(p=>p.id==='CYHZ');
+  if(!halifax)throw Error('Halifax fixture is missing');
+  const failures=[];let samples=0;
+  function pixels(pose,dpr){
+   const canvas=new OffscreenCanvas(64*dpr,64*dpr),ctx=canvas.getContext('2d');
+   ctx.setTransform(dpr,0,0,dpr,(32-pose.x)*dpr,(32-pose.y)*dpr);
+   drawFlightPlane(ctx,pose);
+   return ctx.getImageData(0,0,canvas.width,canvas.height).data;
+  }
+  for(const location of [halifax,{latitudeDeg:89,longitudeDeg:30},{latitudeDeg:0,longitudeDeg:179}]){
+   const normal=surfaceNormal(location),lon=location.longitudeDeg*Math.PI/180,east=[-Math.sin(lon),Math.cos(lon),0];
+   for(const angle of [0,35,65,85,95,180])for(const zoom of [.75,1,5])for(const dpr of [1,2]){
+    const radians=angle*Math.PI/180;
+    const center=normalCoordinates(normal.map((n,i)=>n*Math.cos(radians)+east[i]*Math.sin(radians)));
+    const frame=globeFrame(center,1000,700,zoom),state={...a.controller.view.state,phase:'planning',activeFlight:null,position:location};
+    const pose=flightPlanePose(state,null,frame),image=pixels(pose,dpr);
+    // An unobstructed symbol supplies the expected full contour without copying it.
+    const reference=pixels({x:32,y:32,angleRad:pose.angleRad,visible:true},dpr);
+    const expectedVisible=angle<90;
+    let different=0;
+    for(let i=0;i<image.length;i++)if(image[i]!== (expectedVisible?reference[i]:0))different++;
+    if(pose.visible!==expectedVisible||different)failures.push({location:location.id??location,angle,zoom,dpr,different});
+    samples++;
+   }
+  }
+  return {failures,samples,unchanged:a.controller.session.save()===before};
+ })()`);
+ assert.deepEqual(result.failures,[],'A ground airplane must stay whole at visible anchors and disappear at hidden anchors');
+ assert.equal(result.unchanged,true);
+ const camera=await evaluate(`({...${app}.globe.camera})`);
+ try{
+  for(const angle of [35,65]){
+   await evaluate(`(async()=>{
+    const a=${app},p=a.controller.view.state.position,{surfaceNormal}=await import('../../dist/core/solar.js');
+    const {normalCoordinates}=await import('../../dist/core/geometry.js');
+    const n=surfaceNormal(p),lon=p.longitudeDeg*Math.PI/180,east=[-Math.sin(lon),Math.cos(lon),0],radians=${angle}*Math.PI/180;
+    a.globe.focus(normalCoordinates(n.map((v,i)=>v*Math.cos(radians)+east[i]*Math.sin(radians))),1);a.render();
+   })()`);
+   const shot=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
+   await mkdir('.build/previews',{recursive:true});
+   await writeFile(`.build/previews/plane-ground-${mobile?'mobile':'desktop'}-${angle}.png`,Buffer.from(shot.data,'base64'));
+  }
+ }finally{await evaluate(`${app}.globe.focus(${JSON.stringify(camera)},${camera.zoom});${app}.render()`);}
+}
+
 /** Check the rendered pose against a short forward step of the accepted arc.
  * Camera/selection changes must preserve the complete saved physical state. */
 export async function inspectPausedPlane({app,evaluate,send,mobile,label}){
@@ -37,8 +91,6 @@ async function inspectSpatialOcclusion({app,evaluate,send,mobile}){
  const result=await evaluate(`(async()=>{
   const a=${app},g=a.globe,data=g.data,camera={...g.camera},saved=a.controller.session.save();
   const {greatCircle}=await import('../../dist/core/geometry.js');
-  const {globeFrame,globePoint}=await import('../../dist/core/globe.js');
-  const {drawFlightPlane}=await import('./plane.mjs');
   const at=longitudeDeg=>({latitudeDeg:0,longitudeDeg});
   const original={...data,airports:[],tracks:[],forecast:null,acceptedForecast:null,
    state:{...data.state,phase:'planning',activeFlight:null,position:at(180)}};
@@ -57,40 +109,29 @@ async function inspectSpatialOcclusion({app,evaluate,send,mobile}){
     const image=pixels(),pose=g.planePose;
     // Hide only the airplane; the accepted route must still paint above the limb.
     g.update({...fixture,state:{...fixture.state,phase:'departure',position:at(180)}});g.draw(data.state.utcMs);
-    const lineOnly=pixels();let interiorChanges=0,exteriorChanges=0,lineExteriorChanges=0,planeExteriorChanges=0;
+    const lineOnly=pixels();let lineInteriorChanges=0,exteriorChanges=0,lineExteriorChanges=0,planeExteriorChanges=0;
     for(let y=0;y<g.canvas.height;y++)for(let x=0;x<g.canvas.width;x++){
      const i=(y*g.canvas.width+x)*4;
      const changed=[0,1,2,3].some(c=>image[i+c]!==baseline[i+c]);
      const distance=Math.hypot((x+.5)/dpr-g.frame.cx,(y+.5)/dpr-g.frame.cy);
-     if(changed&&distance<g.frame.radius-3)interiorChanges++;
+     const lineChanged=[0,1,2,3].some(c=>lineOnly[i+c]!==baseline[i+c]);
+     if(lineChanged&&distance<g.frame.radius-3)lineInteriorChanges++;
      if(changed&&distance>g.frame.radius+3)exteriorChanges++;
-     if(distance>g.frame.radius+1&&[0,1,2,3].some(c=>lineOnly[i+c]!==baseline[i+c]))lineExteriorChanges++;
+     if(lineChanged&&distance>g.frame.radius+1)lineExteriorChanges++;
      if(distance>g.frame.radius+1&&[0,1,2,3].some(c=>image[i+c]!==lineOnly[i+c]))planeExteriorChanges++;
     }
-    counts.push({longitude,interiorChanges,exteriorChanges,lineExteriorChanges,planeExteriorChanges,pose});
+    counts.push({longitude,lineInteriorChanges,exteriorChanges,lineExteriorChanges,planeExteriorChanges,pose});
    }
-   // A front billboard also needs per-pixel depth clipping: its inner wing can
-   // intersect Earth's front surface while its centre remains visible.
-   const canvas=new OffscreenCanvas(300,300),ctx=canvas.getContext('2d'),frame=globeFrame(at(0),300,300);
-   const pose={...globePoint(at(65),frame,1.025),angleRad:0};
-   drawFlightPlane(ctx,pose,frame);
-   const image=ctx.getImageData(0,0,300,300).data,occluder=frame.radius*Math.sqrt(1-pose.depth**2);
-   let hiddenPixels=0,visiblePixels=0;
-   for(let y=0;y<300;y++)for(let x=0;x<300;x++)if(image[(y*300+x)*4+3]){
-    if(Math.hypot(x+.5-frame.cx,y+.5-frame.cy)<occluder-1)hiddenPixels++;else visiblePixels++;
-   }
-   return {counts,hiddenPixels,visiblePixels,unchanged:a.controller.session.save()===saved};
+   return {counts,unchanged:a.controller.session.save()===saved};
   }finally{g.update(data);g.focus(camera,camera.zoom);a.render();}
  })()`);
  assert.equal(result.unchanged,true);
- assert.equal(result.hiddenPixels,0,'The front billboard must not show through the sphere surface');
- assert.ok(result.visiblePixels>0);
- for(const row of result.counts)assert.equal(row.interiorChanges,0,'Rear line and silhouette must not leak through the Earth');
+ for(const row of result.counts)assert.equal(row.lineInteriorChanges,0,'The rear route must not leak through the Earth');
  assert.equal(result.counts[0].pose.visible,true,'A plane behind the centre plane but above the limb remains visible');
  assert.ok(result.counts[0].exteriorChanges>0,'Rear geometry outside the limb is actually painted');
  assert.ok(result.counts[0].lineExteriorChanges>0,'The rear route itself remains visible above the limb without an airplane');
  assert.equal(result.counts[1].pose.visible,false,'The sphere hides the anchor below the limb');
- assert.ok(result.counts[1].planeExteriorChanges>0,'A protruding part of the silhouette remains visible when its anchor is hidden');
+ assert.equal(result.counts[1].planeExteriorChanges,0,'The entire symbol disappears when its anchor is hidden');
  assert.equal(result.counts[2].exteriorChanges,0,'A fully occluded route and airplane leave no pixels outside Earth');
  // Photograph a real paused flight from beside its route, not the synthetic fixture.
  await evaluate(`(async()=>{

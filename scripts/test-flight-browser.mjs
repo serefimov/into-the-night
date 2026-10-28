@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
-import {inspectPausedPlane} from './test-plane-browser.mjs';
+import {inspectGroundPlane,inspectPausedPlane} from './test-plane-browser.mjs';
 import {openFlightPage} from './browser-navigation.mjs';
 export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobile}) {
  await send('Emulation.setDeviceMetricsOverride',{width:mobile?390:1280,height:mobile?844:900,deviceScaleFactor:1,mobile});await send('Emulation.setTouchEmulationEnabled',{enabled:mobile});
@@ -67,6 +67,7 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  if(process.env.GLOBE_PREVIEW_LOG==='1')console.log(`GLOBE_DENSE_${mobile?'MOBILE':'DESKTOP'} ${dense.data}`);
  await evaluate(`${app}.globe.focus(${app}.controller.view.state.position,1);${app}.render()`);
  assert.equal(await snapshot(),initial);
+ await inspectGroundPlane({app,evaluate,send,mobile});
  await click('#fly',mobile);await until(`${app}.controller.playing`);await click('#play-pause',mobile);await until(`!${app}.controller.playing`);
  const paused=await snapshot();await evaluate('new Promise(r=>setTimeout(r,80))');assert.equal(await snapshot(),paused,'Paused animation must not advance');
  assert.equal(await evaluate(`document.getElementById('flight-clock').dateTime===new Date(${app}.controller.view.state.utcMs).toISOString() && ${app}.globe.lastUtcMs===${app}.controller.view.state.utcMs`),true);
