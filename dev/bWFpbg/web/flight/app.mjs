@@ -66,7 +66,7 @@ export async function createFlightApp(definition,land) {
   let title='',detail='',kind='';
   if(s.status==='won'){title='Цель достигнута';detail=`${integer.format(s.distanceKm)} км · ${landings(s.flights)} · ${time.format(s.utcMs)} UTC.`;kind='safe';}
   else if(s.status==='dead'){title='Поражение: самолёт встретил Солнце';detail=`Солнце в текущей точке — ${time.format(s.death.utcMs)} UTC.`;kind='blocked';}
-  else if(s.status==='lost'){title='Поражение: маршрут оборвался';detail=`Нет доступных перелётов. Проверены все ${s.result.total} направления текущего каталога. В этой версии нет ожидания — партия завершена.`;kind='blocked';}
+  else if(s.status==='lost'){title='Поражение: маршрут оборвался';detail=`Нет доступных перелётов. Проверены все ${s.result.total} направления текущего каталога. Ожидание не устраняет подтверждённые постоянные ограничения этих направлений.`;kind='blocked';}
   else if(busy){title=s.phase==='waiting'?(controller.playing?'Ожидание выполняется':'Ожидание на паузе'):controller.playing?'Рейс выполняется':'Рейс на паузе';detail=s.phase==='waiting'?'Можно поставить ожидание на паузу или остановить его. Полёт подтверждается отдельно.':'Следующие направления проверим после завершения полёта и обслуживания.';}
   else {
    if(report.availableIds.length){title=`Доступно перелётов: ${report.availableIds.length}`;kind='safe';}

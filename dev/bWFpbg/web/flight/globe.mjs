@@ -5,6 +5,7 @@ import {layoutAirportMarkers} from './marker-layout.mjs';
 import {acceptedCruiseRoute,flightPlanePose,drawFlightPlane} from './plane.mjs';
 import {solarDirection} from '../../dist/core/solar.js';
 import {traceCoastline} from './coastline.mjs';
+export const MAX_GLOBE_ZOOM=512;
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const longitude=v=>((v+180)%360+360)%360-180;
 const colors={nightLand:[28,56,61],nightSea:[8,22,34],dayLand:[127,163,158],daySea:[29,64,79]};
@@ -28,13 +29,13 @@ export class GlobeView {
   canvas.addEventListener('pointercancel',e=>{this.pointers.delete(e.pointerId);this.gestureMoved=true;});
   canvas.addEventListener('wheel',e=>{e.preventDefault();this.onInteraction();this.zoom(Math.exp(-e.deltaY*.0015));},{passive:false});
   canvas.addEventListener('keydown',e=>{const step={ArrowLeft:[-12,0],ArrowRight:[12,0],ArrowUp:[0,10],ArrowDown:[0,-10]}[e.key];
-   if(step){e.preventDefault();this.onInteraction();this.camera.longitudeDeg=longitude(this.camera.longitudeDeg+step[0]);this.camera.latitudeDeg=clamp(this.camera.latitudeDeg+step[1],-90,90);this.invalidate();}
+   if(step){e.preventDefault();this.onInteraction();this.camera.longitudeDeg=longitude(this.camera.longitudeDeg+step[0]/this.camera.zoom);this.camera.latitudeDeg=clamp(this.camera.latitudeDeg+step[1]/this.camera.zoom,-90,90);this.invalidate();}
    if(e.key==='+'||e.key==='='||e.key==='-'){e.preventDefault();this.onInteraction();this.zoom(e.key==='-' ? .8 : 1.25);}
   });
  }
  invalidate(){this.geometry=null;this.dirty=true;}
- focus(location,zoom=this.camera.zoom){this.picker.hidden=true;this.camera={latitudeDeg:location.latitudeDeg,longitudeDeg:location.longitudeDeg,zoom:clamp(zoom,.75,5)};this.invalidate();}
- zoom(factor){this.picker.hidden=true;this.camera.zoom=clamp(this.camera.zoom*factor,.75,5);this.invalidate();}
+ focus(location,zoom=this.camera.zoom){this.picker.hidden=true;this.camera={latitudeDeg:location.latitudeDeg,longitudeDeg:location.longitudeDeg,zoom:clamp(zoom,.75,MAX_GLOBE_ZOOM)};this.invalidate();}
+ zoom(factor){this.picker.hidden=true;this.camera.zoom=clamp(this.camera.zoom*factor,.75,MAX_GLOBE_ZOOM);this.invalidate();}
  update(data){this.data=data;this.dirty=true;}
  pointer(e){const r=this.canvas.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top};}
  down(e){if(e.pointerType==='mouse'&&e.button!==0)return;this.picker.hidden=true;this.canvas.setPointerCapture(e.pointerId);this.pointers.set(e.pointerId,{...this.pointer(e),start:this.pointer(e)});
@@ -51,7 +52,7 @@ export class GlobeView {
   if(hit)this.activate(hit);
  }
  activate(hit){if(!hit.cluster){this.picker.hidden=true;this.onSelect(hit.id);return;}
-  if(this.camera.zoom<4.8){this.focus(hit.airport,this.camera.zoom*1.7);return;}
+  if(this.camera.zoom<MAX_GLOBE_ZOOM){this.focus(hit.airport,this.camera.zoom*3);return;}
   this.picker.replaceChildren();this.picker.style.left=clamp(hit.x-110,12,this.geometry.width-232)+'px';this.picker.style.top=clamp(hit.y+20,80,this.geometry.height-180)+'px';
   for(const row of hit.group){const button=document.createElement('button');button.textContent=row.airport.label??row.airport.name??row.id;button.dataset.airportId=row.id;
    // Opening the picker on pointerup can retarget the following touch click
@@ -150,7 +151,7 @@ export class GlobeView {
    const badge=node.querySelector('.wait-badge');badge.textContent='◷';badge.hidden=!groupWaiting;
    const labelNode=node.querySelector('.marker-label');labelNode.hidden=!row.label;if(row.label){labelNode.style.left=(row.label.left-row.x+22)+'px';labelNode.style.top=(row.label.top-row.y+22)+'px';labelNode.style.width=(row.label.right-row.label.left)+'px';}
    node.title=row.cluster?`${row.count} аэродромов — приблизьте или выберите из группы`:row.airport.name;
-   node.setAttribute('aria-label',row.cluster?`${row.count} аэродромов${goal?', включая цель':''}${current?', вы здесь':''}${groupSafe?', есть доступные':''}${groupWaiting?', есть направления после ожидания':''}: ${this.camera.zoom>=4.8?'выбрать из группы':'приблизить'}`:`${row.airport.label??row.airport.name??row.id}${goal?', цель':''}${current?', вы здесь':safe?', полёт доступен':waiting?', доступно после ожидания':blocked?', полёт недоступен':', выбрать для проверки'}`);
+   node.setAttribute('aria-label',row.cluster?`${row.count} аэродромов${goal?', включая цель':''}${current?', вы здесь':''}${groupSafe?', есть доступные':''}${groupWaiting?', есть направления после ожидания':''}: ${this.camera.zoom>=MAX_GLOBE_ZOOM?'выбрать из группы':'приблизить'}`:`${row.airport.label??row.airport.name??row.id}${goal?', цель':''}${current?', вы здесь':safe?', полёт доступен':waiting?', доступно после ожидания':blocked?', полёт недоступен':', выбрать для проверки'}`);
   }
   for(const [id,node] of this.nodes)if(!live.has(id)){node.remove();this.nodes.delete(id);}
  }
