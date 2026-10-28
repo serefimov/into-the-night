@@ -53,7 +53,7 @@ export async function centerScenarioRun({send,evaluate,until,click,rootUrl,mobil
  // Explicit synthetic winter polar fixture: same real aircraft/physics, tiny
  // catalogue for navigation near 89 degrees; it is not a campaign witness.
  const polar=structuredClone(base);polar.scenarioId='synthetic-center-polar';polar.worldVersion='synthetic-center-world';polar.seed='center-polar-40';polar.airports=[{id:'A',name:'Полярный тест A',latitudeDeg:89,longitudeDeg:179,suitability:{status:'screened-candidate'}},{id:'B',name:'Полярный тест B',latitudeDeg:88,longitudeDeg:-179,suitability:{status:'screened-candidate'}}];polar.targetId='B';polar.initial={airportId:'A',utcMs:Date.parse('2026-12-21T00:00:00Z'),fuelKg:30000,stocks:{A:64000,B:64000}};
- const source=`(()=>{const original=window.fetch.bind(window);window.fetch=(input,...args)=>String(input).endsWith('/data/runtime/mission.json')?Promise.resolve(new Response(${JSON.stringify(JSON.stringify(polar))},{headers:{'Content-Type':'application/json'}})):original(input,...args);})()`;
+ const source=`(()=>{const original=window.fetch.bind(window);window.fetch=(input,...args)=>(String(input).endsWith('/data/runtime/mission.json')||String(input).endsWith('/data/runtime/airport-spike.json'))?Promise.resolve(new Response(${JSON.stringify(JSON.stringify(polar))},{headers:{'Content-Type':'application/json'}})):original(input,...args);})()`;
  const script=(await send('Page.addScriptToEvaluateOnNewDocument',{source})).identifier;
  try{await open();await center(.75);await center(5,[' ','Space',32]);await fly('B',.5);await center(3);assert.equal(await evaluate(`document.documentElement.scrollWidth<=innerWidth`),true);}
  finally{await send('Page.removeScriptToEvaluateOnNewDocument',{identifier:script});}

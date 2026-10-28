@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import {globeFrame,globeNormal,globeLines,globeRoute} from '../../dist/core/globe.js';
+import {globePoint,globeFrame,globeNormal,globeLines,globeRoute} from '../../dist/core/globe.js';
 import {globeFlightLines} from '../../dist/core/globe-flight.js';
 import {layoutAirportMarkers} from './marker-layout.mjs';
 import {acceptedCruiseRoute,flightPlanePose,drawFlightPlane} from './plane.mjs';
@@ -129,13 +129,18 @@ export class GlobeView {
   if(trajectory)strokeLines(ctx,trajectory.front,routeColor,2.5,routeDash);
   this.drawMarkers();
   drawFlightPlane(ctx,this.planePose);
+  if(this.data.state.activeGround){
+   const player=globePoint(this.data.state.position,this.frame);
+   this.playerPose=player;
+   if(player.visible){ctx.beginPath();ctx.arc(player.x,player.y,5,0,2*Math.PI);ctx.fillStyle='#ffd595';ctx.strokeStyle='#081520';ctx.lineWidth=2;ctx.fill();ctx.stroke();ctx.fillStyle='#ffd595';ctx.font='12px sans-serif';ctx.fillText('Группа',player.x+9,player.y-8);}
+  }else this.playerPose=null;
   this.dirty=false;
  }
  drawMarkers() {
   const {airports,state,selectedId,targetId,statuses}=this.data,canvasRect=this.canvas.getBoundingClientRect();
   const obstacles=[...this.canvas.parentElement.querySelectorAll('.map-controls,.map-legend,.world-caption,.playback,.map-detail-hint,#plane-focus'),document.getElementById('goal-focus')].filter(e=>e&&!e.hidden&&e.getBoundingClientRect().width>0).map(e=>{const r=e.getBoundingClientRect();return {left:r.left-canvasRect.left-5,right:r.right-canvasRect.left+5,top:r.top-canvasRect.top-5,bottom:r.bottom-canvasRect.top+5};});
   const plane=this.planePose,active=state.activeFlight;
-  this.markerLayout=layoutAirportMarkers({airports,frame:this.frame,width:this.geometry.width,height:this.geometry.height,zoom:this.camera.zoom,priorityIds:[selectedId,state.airportId,targetId,active?.fromId,active?.toId],obstacles,plane});
+  this.markerLayout=layoutAirportMarkers({airports,frame:this.frame,width:this.geometry.width,height:this.geometry.height,zoom:this.camera.zoom,priorityIds:[selectedId,state.airportId,state.aircraft?.airportId,targetId,active?.fromId,active?.toId],obstacles,plane});
   const {rows,detail}=this.markerLayout;
   for(const row of rows)if(Math.hypot(row.x-row.anchorX,row.y-row.anchorY)>1){this.ctx.strokeStyle='#c4cfc280';this.ctx.lineWidth=1;this.ctx.beginPath();this.ctx.moveTo(row.anchorX,row.anchorY);this.ctx.lineTo(row.x,row.y);this.ctx.stroke();}
   this.hits=rows;const live=new Set();
