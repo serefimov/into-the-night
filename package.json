@@ -41,7 +41,9 @@
     "validate:academic": "node scripts/academic-westward-research.mjs --verify",
     "research:departure": "node scripts/research-departure-fuel.mjs",
     "validate:departure": "node scripts/research-departure-fuel.mjs --verify",
-    "mission:cycle": "node scripts/mission-cycle-cli.mjs"
+    "mission:cycle": "node scripts/mission-cycle-cli.mjs",
+    "research:chapter-one": "node scripts/chapter-one-research.mjs",
+    "validate:chapter-one": "node scripts/chapter-one-research.mjs --verify"
   },
   "devDependencies": {
     "typescript": "5.9.2",

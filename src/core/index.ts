@@ -18,7 +18,7 @@ export type { AircraftProfile } from './aircraft.js';
 
 export { RESEARCH_MODEL, forecastResearchFlight, executeResearchFlight, firstFlightFuelEnvelope, auditResearchPhases } from './mission-research.js';
 export type { ResearchAirport, ResearchState, ResearchWorld, ResearchPhase, PhaseAudit, ResearchForecast } from './mission-research.js';
-export { MISSION_MODEL, MissionSession } from './mission.js';
+export { MISSION_MODEL, CAMPAIGN_MODEL, MissionSession } from './mission.js';
 export { forecastMissionFlight } from './mission-flight.js';
 export type { MissionWorld, MissionForecast } from './mission-flight.js';
 export type { MissionDefinition, MissionEvent, MissionState, MissionView, MissionAdvance, MissionChoice } from './mission.js';
@@ -26,3 +26,6 @@ export * from './globe.js';
 
 export * from './mission-availability.js';
 export type {MissionResult} from './mission.js';
+
+export {forecastChapterOne,validateChapterOne} from './mission-ground.js';
+export type {ChapterOneDefinition,GroundStage,GroundForecast,GroundPhase} from './mission-ground.js';

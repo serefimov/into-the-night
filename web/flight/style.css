@@ -67,3 +67,10 @@
 #window-detail[hidden]{display:none}
 /* Keep touch targets stationary while asynchronous card details arrive. */
 @media(max-width:760px){.flight-shell{grid-template-rows:70px clamp(290px,36dvh,380px) auto}}
+
+.campaign-panel{flex-shrink:0;border-bottom:1px solid var(--line);padding-bottom:16px;overflow-wrap:anywhere}
+.campaign-panel h2{font-size:15px;line-height:1.4;margin:8px 0}.campaign-panel h3{font-size:13px;margin:14px 0 8px}
+.campaign-panel p{font-size:12px;line-height:1.5;margin:7px 0;color:var(--muted)}
+#expedition-verdict.safe{color:var(--safe)}#expedition-verdict.blocked{color:var(--danger)}
+#expedition-start{margin-top:10px}#expedition-times,#expedition-margin{font-size:11px}
+.campaign-panel .footnote{display:block;font-size:10px}.campaign-panel .footnote a{text-decoration:underline}

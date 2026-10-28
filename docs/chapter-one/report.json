@@ -1,0 +1,2009 @@
+{
+  "reportVersion": 1,
+  "model": {
+    "mode": "campaign-ground-v1",
+    "simulationVersion": "flight-ground-1",
+    "schemaVersion": 4,
+    "eventVersion": 4,
+    "saveVersion": 6
+  },
+  "settings": {
+    "definition": "data/scenarios/chapter-one-v1.json",
+    "path": [
+      "BIKF",
+      "CYEG",
+      "UHMA",
+      "UNNT"
+    ],
+    "onward": "UACC",
+    "budgetsHours": [
+      3,
+      4,
+      5
+    ],
+    "selectedHours": 4,
+    "solar": {
+      "eventToleranceSeconds": 0.05,
+      "maxIntervalSeconds": 300,
+      "maxEvaluations": 100000
+    },
+    "startGrid": {
+      "dates": [
+        "2026-08-01",
+        "2026-08-10",
+        "2026-08-15",
+        "2026-08-20"
+      ],
+      "utcMinutes": [
+        1140,
+        1155,
+        1170,
+        1185,
+        1200
+      ],
+      "fuelKg": [
+        30000,
+        65000
+      ]
+    },
+    "scope": "Finite routes/start/fuel grid, not global impossibility. No plane/solar changes, fuel unloading, stock resets, protection or road shortening."
+  },
+  "scenarioId": "campaign-chapter-one",
+  "scenarioVersion": 1,
+  "inputsSha256": {
+    "definition": "02a028210cca2f3647b91e52c7c90adde1fccfb18fd5ec3be3c665df7e01f605",
+    "profile": "454f1e766ebec3e66bc62ee37033dac0e6c43f3d034ddec294bb786e145d88e3",
+    "outbound": "7837ecf861b33fa0470511db5f419c16cff26cc737da2d4804a7f2a48163655a",
+    "inbound": "c685194bc769291a35145430b9c03db5b899c913b6b4f7528203d4a0d1407bc2"
+  },
+  "historical": {
+    "airportReadyUtcMs": 1785699666330.7654,
+    "budgets": [
+      {
+        "hours": 3,
+        "ground": {
+          "allowed": true,
+          "reasons": [],
+          "startUtcMs": 1785699666330.7654,
+          "acquiredUtcMs": 1785706866330.7654,
+          "endUtcMs": 1785710466330.7654,
+          "solar": {
+            "status": "safe",
+            "safeUntilUtcMs": 1785710466330.7654,
+            "bracket": null,
+            "witnessUtcMs": null,
+            "evaluations": 3015,
+            "reason": null,
+            "stage": null,
+            "position": null
+          },
+          "parkedSolar": {
+            "status": "safe",
+            "safeUntilUtcMs": 1785710466330.7654,
+            "bracket": null,
+            "witnessUtcMs": null,
+            "evaluations": 37,
+            "reason": null
+          },
+          "airportSunriseUtcMs": 1785710892576.2642,
+          "siteSunriseUtcMs": 1785710823933.457,
+          "returnMarginSeconds": 426.2454987792969,
+          "phases": [
+            {
+              "label": "ground_outbound",
+              "startUtcMs": 1785699666330.7654,
+              "endUtcMs": 1785703266330.7654,
+              "segments": 792
+            },
+            {
+              "label": "ground_acquisition",
+              "startUtcMs": 1785703266330.7654,
+              "endUtcMs": 1785706866330.7654,
+              "segments": 1
+            },
+            {
+              "label": "ground_return",
+              "startUtcMs": 1785706866330.7654,
+              "endUtcMs": 1785710466330.7654,
+              "segments": 709
+            }
+          ]
+        },
+        "onwardSafeIds": []
+      },
+      {
+        "hours": 4,
+        "ground": {
+          "allowed": false,
+          "reasons": [
+            "ground_sun",
+            "parked_plane_sun"
+          ],
+          "startUtcMs": 1785699666330.7654,
+          "acquiredUtcMs": 1785708666330.7654,
+          "endUtcMs": 1785714066330.7654,
+          "solar": {
+            "status": "unsafe",
+            "safeUntilUtcMs": 1785710809890.359,
+            "bracket": [
+              1785710809890.359,
+              1785710809891.3228
+            ],
+            "witnessUtcMs": 1785710809891.3228,
+            "evaluations": 2108,
+            "reason": null,
+            "stage": "ground_return",
+            "position": {
+              "latitudeDeg": 54.984103553888055,
+              "longitudeDeg": 83.0012302211288
+            }
+          },
+          "parkedSolar": {
+            "status": "unsafe",
+            "safeUntilUtcMs": 1785710892575.1196,
+            "bracket": [
+              1785710892575.1196,
+              1785710892576.2642
+            ],
+            "witnessUtcMs": 1785710892576.2642,
+            "evaluations": 57,
+            "reason": null
+          },
+          "airportSunriseUtcMs": 1785710892576.2642,
+          "siteSunriseUtcMs": 1785710823933.457,
+          "returnMarginSeconds": -3173.7545012207033,
+          "phases": [
+            {
+              "label": "ground_outbound",
+              "startUtcMs": 1785699666330.7654,
+              "endUtcMs": 1785705066330.7654,
+              "segments": 792
+            },
+            {
+              "label": "ground_acquisition",
+              "startUtcMs": 1785705066330.7654,
+              "endUtcMs": 1785708666330.7654,
+              "segments": 1
+            },
+            {
+              "label": "ground_return",
+              "startUtcMs": 1785708666330.7654,
+              "endUtcMs": 1785714066330.7654,
+              "segments": 709
+            }
+          ]
+        },
+        "onwardSafeIds": []
+      },
+      {
+        "hours": 5,
+        "ground": {
+          "allowed": false,
+          "reasons": [
+            "ground_sun",
+            "parked_plane_sun"
+          ],
+          "startUtcMs": 1785699666330.7654,
+          "acquiredUtcMs": 1785710466330.7654,
+          "endUtcMs": 1785717666330.7654,
+          "solar": {
+            "status": "unsafe",
+            "safeUntilUtcMs": 1785710830211.7593,
+            "bracket": [
+              1785710830211.7593,
+              1785710830212.5542
+            ],
+            "witnessUtcMs": 1785710830212.5542,
+            "evaluations": 1712,
+            "reason": null,
+            "stage": "ground_return",
+            "position": {
+              "latitudeDeg": 54.84532328455127,
+              "longitudeDeg": 83.0655863994675
+            }
+          },
+          "parkedSolar": {
+            "status": "unsafe",
+            "safeUntilUtcMs": 1785710892575.1196,
+            "bracket": [
+              1785710892575.1196,
+              1785710892576.2642
+            ],
+            "witnessUtcMs": 1785710892576.2642,
+            "evaluations": 57,
+            "reason": null
+          },
+          "airportSunriseUtcMs": 1785710892576.2642,
+          "siteSunriseUtcMs": 1785710823933.457,
+          "returnMarginSeconds": -6773.754501220703,
+          "phases": [
+            {
+              "label": "ground_outbound",
+              "startUtcMs": 1785699666330.7654,
+              "endUtcMs": 1785706866330.7654,
+              "segments": 792
+            },
+            {
+              "label": "ground_acquisition",
+              "startUtcMs": 1785706866330.7654,
+              "endUtcMs": 1785710466330.7654,
+              "segments": 1
+            },
+            {
+              "label": "ground_return",
+              "startUtcMs": 1785710466330.7654,
+              "endUtcMs": 1785717666330.7654,
+              "segments": 709
+            }
+          ]
+        },
+        "onwardSafeIds": []
+      }
+    ],
+    "alternatives": [
+      {
+        "path": [
+          "BIKF",
+          "CYEG",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785705963130.1333,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -9470.553588867188
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYEG",
+          "UHMA",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785699666330.7654,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -3173.7545012207033
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYEG",
+          "UHHH",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785707886869.4006,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -11394.292831298828
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYEG",
+          "UHSS",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785709484438.0696,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -12991.861724853516
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYYC",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785707522723.4722,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -11030.147552490234
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYYC",
+          "UHMA",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785701371217.1304,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -4878.641510009766
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYYC",
+          "UHHH",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785709576562.2576,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -13083.98666381836
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYWG",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785708956876.2388,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -12464.300537109375
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYWG",
+          "UHMA",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785702359470.407,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -5866.893768310547
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYWG",
+          "UHHH",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785710479884.9395,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -13987.308883789063
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYVR",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785708289072.3777,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -11796.49658203125
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYVR",
+          "UHMA",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785702678869.4546,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -6186.293792724609
+      },
+      {
+        "path": [
+          "BIKF",
+          "CYVR",
+          "UHHH",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785710669714.2935,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -14177.137756347656
+      },
+      {
+        "path": [
+          "EIDW",
+          "CYEG",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785710825479.9426,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -14332.903289794922
+      },
+      {
+        "path": [
+          "EGCC",
+          "CYEG",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785710659732.8682,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -14167.156219482422
+      },
+      {
+        "path": [
+          "ENGM",
+          "CYWG",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785709187559.673,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -12694.983673095703
+      },
+      {
+        "path": [
+          "ENGM",
+          "CYWG",
+          "UHMA",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785702590153.8413,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -6097.578048828125
+      },
+      {
+        "path": [
+          "ENGM",
+          "CYWG",
+          "UHHH",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785710710568.3738,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -14217.99201977539
+      },
+      {
+        "path": [
+          "ESSA",
+          "CYWG",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785708916810.0894,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -12424.233627441406
+      },
+      {
+        "path": [
+          "ESSA",
+          "CYWG",
+          "UHMA",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785702319404.2576,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -5826.8280029296875
+      },
+      {
+        "path": [
+          "ESSA",
+          "CYWG",
+          "UHHH",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785710439818.79,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -13947.243118164062
+      },
+      {
+        "path": [
+          "EKCH",
+          "CYYC",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785709620775.4265,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -13128.199768066406
+      },
+      {
+        "path": [
+          "EKCH",
+          "CYYC",
+          "UHMA",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785703469269.0847,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -6976.692581298828
+      },
+      {
+        "path": [
+          "EDDH",
+          "CYEG",
+          "UHPP",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785709638977.3552,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -13146.401595947265
+      },
+      {
+        "path": [
+          "EDDH",
+          "CYEG",
+          "UHMA",
+          "UNNT"
+        ],
+        "readyUtcMs": 1785703342177.9873,
+        "expeditionAllowed": false,
+        "reason": [
+          "ground_sun",
+          "parked_plane_sun"
+        ],
+        "returnMarginSeconds": -6849.601364257813
+      }
+    ]
+  },
+  "startGrid": [
+    {
+      "date": "2026-08-01",
+      "minute": 1140,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": null,
+      "flightBlock": [
+        "sun"
+      ],
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1140,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": null,
+      "flightBlock": [
+        "sun"
+      ],
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1155,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1785696966330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1155,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": null,
+      "flightBlock": [
+        "sun"
+      ],
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1170,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1785697866330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1170,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": null,
+      "flightBlock": [
+        "sun"
+      ],
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1185,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1785698766330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1185,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1785695841330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1200,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1785699666330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-01",
+      "minute": 1200,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1785696741330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1140,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786473666330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1140,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786470741330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 8
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1155,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786474566330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1155,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786471641330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 1
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1170,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786475466330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1170,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786472541330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1185,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786476366330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1185,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786473441330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1200,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786477266330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-10",
+      "minute": 1200,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786474341330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1140,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786905666330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1140,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786902741330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 14
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1155,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786906566330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1155,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786903641330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 2
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1170,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786907466330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1170,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786904541330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1185,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786908366330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1185,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786905441330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1200,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786909266330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-15",
+      "minute": 1200,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1786906341330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1140,
+      "fuelKg": 30000,
+      "directSolar": "safe",
+      "airportReadyUtcMs": 1787337666330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1140,
+      "fuelKg": 65000,
+      "directSolar": "safe",
+      "airportReadyUtcMs": 1787334741330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 20
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1155,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1787338566330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1155,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1787335641330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 9
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1170,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1787339466330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1170,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1787336541330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 1
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1185,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1787340366330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1185,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1787337441330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1200,
+      "fuelKg": 30000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1787341266330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": false,
+      "onwardSafeCount": 0
+    },
+    {
+      "date": "2026-08-20",
+      "minute": 1200,
+      "fuelKg": 65000,
+      "directSolar": "unsafe",
+      "airportReadyUtcMs": 1787338341330.7654,
+      "flightBlock": null,
+      "expeditionAllowed": true,
+      "onwardSafeCount": 0
+    }
+  ],
+  "direct": {
+    "allowed": false,
+    "solar": {
+      "status": "unsafe",
+      "evaluations": 70,
+      "phase": "arrival",
+      "eventUtcMs": 1786402952992.5293,
+      "bracketUtcMs": [
+        1786402952990.2405,
+        1786402952992.5293
+      ],
+      "safeUntilUtcMs": 1786402952990.2405,
+      "reason": null
+    }
+  },
+  "polarDays": [
+    {
+      "utcMs": 1786320000000,
+      "solar": {
+        "status": "safe",
+        "safeUntilUtcMs": 1786406400000,
+        "bracket": null,
+        "witnessUtcMs": null,
+        "evaluations": 289,
+        "reason": null
+      }
+    },
+    {
+      "utcMs": 1786406400000,
+      "solar": {
+        "status": "safe",
+        "safeUntilUtcMs": 1786492800000,
+        "bracket": null,
+        "witnessUtcMs": null,
+        "evaluations": 289,
+        "reason": null
+      }
+    }
+  ],
+  "evidence": {
+    "status": "resolved",
+    "longitudeChangeDeg": -307.643826,
+    "westwardAroundWorld": true
+  },
+  "budgets": [
+    {
+      "hours": 3,
+      "ground": {
+        "allowed": true,
+        "reasons": [],
+        "startUtcMs": 1786470741330.7654,
+        "acquiredUtcMs": 1786477941330.7654,
+        "endUtcMs": 1786481541330.7654,
+        "solar": {
+          "status": "safe",
+          "safeUntilUtcMs": 1786481541330.7654,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 3015,
+          "reason": null,
+          "stage": null,
+          "position": null
+        },
+        "parkedSolar": {
+          "status": "safe",
+          "safeUntilUtcMs": 1786481541330.7654,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 37,
+          "reason": null
+        },
+        "airportSunriseUtcMs": 1786489462293.6714,
+        "siteSunriseUtcMs": 1786489385440.8728,
+        "returnMarginSeconds": 7920.96290600586,
+        "phases": [
+          {
+            "label": "ground_outbound",
+            "startUtcMs": 1786470741330.7654,
+            "endUtcMs": 1786474341330.7654,
+            "segments": 792
+          },
+          {
+            "label": "ground_acquisition",
+            "startUtcMs": 1786474341330.7654,
+            "endUtcMs": 1786477941330.7654,
+            "segments": 1
+          },
+          {
+            "label": "ground_return",
+            "startUtcMs": 1786477941330.7654,
+            "endUtcMs": 1786481541330.7654,
+            "segments": 709
+          }
+        ]
+      },
+      "onwardSafeIds": [
+        "BKPR",
+        "EBBR",
+        "EBCI",
+        "EBOS",
+        "EDDB",
+        "EDDF",
+        "EDDH",
+        "EDDK",
+        "EDDM",
+        "EDDP",
+        "EDDS",
+        "EDDV",
+        "EDFH",
+        "EETN",
+        "EFHK",
+        "EFRO",
+        "EGBB",
+        "EGCC",
+        "EGKK",
+        "EGLL",
+        "EGSS",
+        "EHAM",
+        "EHEH",
+        "EIDW",
+        "EINN",
+        "EKBI",
+        "EKCH",
+        "ELLX",
+        "ENGM",
+        "EPKT",
+        "EPWA",
+        "ESGG",
+        "ESPA",
+        "ESSA",
+        "EVRA",
+        "EYKA",
+        "LATI",
+        "LBBG",
+        "LDDU",
+        "LDZA",
+        "LFBD",
+        "LFBO",
+        "LFLC",
+        "LFLL",
+        "LFML",
+        "LFPB",
+        "LFPG",
+        "LFPO",
+        "LFRB",
+        "LFSB",
+        "LGKV",
+        "LGTS",
+        "LHBP",
+        "LIBD",
+        "LIBR",
+        "LIMC",
+        "LIMF",
+        "LIPQ",
+        "LIPX",
+        "LIPZ",
+        "LIRF",
+        "LJLJ",
+        "LKMT",
+        "LKPR",
+        "LOWL",
+        "LOWW",
+        "LRBS",
+        "LRCK",
+        "LROP",
+        "LRTR",
+        "LSGG",
+        "LSZH",
+        "LTAC",
+        "LTAI",
+        "LTAN",
+        "LTCS",
+        "LTDB",
+        "LTFJ",
+        "LTFM",
+        "LUKK",
+        "LYBE",
+        "LZIB",
+        "OIIE",
+        "OIII",
+        "OIIP",
+        "OIMM",
+        "OITT",
+        "ORER",
+        "UAAA",
+        "UACC",
+        "UAFM",
+        "UAFO",
+        "UAIT",
+        "UAKK",
+        "UAOL",
+        "UATE",
+        "UATT",
+        "UBBB",
+        "UBBG",
+        "UBBN",
+        "UCFL",
+        "UDYZ",
+        "UGSS",
+        "UKBB",
+        "UKFF",
+        "UKLL",
+        "ULLI",
+        "UMKK",
+        "UMMS",
+        "UNAA",
+        "UNEE",
+        "URMM",
+        "URRP",
+        "URWA",
+        "USCC",
+        "USCM",
+        "USNN",
+        "USPP",
+        "USSS",
+        "USTR",
+        "UTAA",
+        "UTAT",
+        "UTAV",
+        "UTDL",
+        "UTFN",
+        "UTNN",
+        "UTNU",
+        "UTSS",
+        "UTTT",
+        "UUBW",
+        "UUDD",
+        "UUEE",
+        "UUWW",
+        "UWGG",
+        "UWKD",
+        "UWSG",
+        "UWUU",
+        "UWWW"
+      ]
+    },
+    {
+      "hours": 4,
+      "ground": {
+        "allowed": true,
+        "reasons": [],
+        "startUtcMs": 1786470741330.7654,
+        "acquiredUtcMs": 1786479741330.7654,
+        "endUtcMs": 1786485141330.7654,
+        "solar": {
+          "status": "safe",
+          "safeUntilUtcMs": 1786485141330.7654,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 3015,
+          "reason": null,
+          "stage": null,
+          "position": null
+        },
+        "parkedSolar": {
+          "status": "safe",
+          "safeUntilUtcMs": 1786485141330.7654,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 49,
+          "reason": null
+        },
+        "airportSunriseUtcMs": 1786489462293.6714,
+        "siteSunriseUtcMs": 1786489385440.8728,
+        "returnMarginSeconds": 4320.96290600586,
+        "phases": [
+          {
+            "label": "ground_outbound",
+            "startUtcMs": 1786470741330.7654,
+            "endUtcMs": 1786476141330.7654,
+            "segments": 792
+          },
+          {
+            "label": "ground_acquisition",
+            "startUtcMs": 1786476141330.7654,
+            "endUtcMs": 1786479741330.7654,
+            "segments": 1
+          },
+          {
+            "label": "ground_return",
+            "startUtcMs": 1786479741330.7654,
+            "endUtcMs": 1786485141330.7654,
+            "segments": 709
+          }
+        ]
+      },
+      "onwardSafeIds": [
+        "UACC",
+        "UAKK",
+        "UATT",
+        "USCC",
+        "USCM",
+        "USSS",
+        "USTR",
+        "UWUU"
+      ]
+    },
+    {
+      "hours": 5,
+      "ground": {
+        "allowed": true,
+        "reasons": [],
+        "startUtcMs": 1786470741330.7654,
+        "acquiredUtcMs": 1786481541330.7654,
+        "endUtcMs": 1786488741330.7654,
+        "solar": {
+          "status": "safe",
+          "safeUntilUtcMs": 1786488741330.7654,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 3015,
+          "reason": null,
+          "stage": null,
+          "position": null
+        },
+        "parkedSolar": {
+          "status": "safe",
+          "safeUntilUtcMs": 1786488741330.7654,
+          "bracket": null,
+          "witnessUtcMs": null,
+          "evaluations": 61,
+          "reason": null
+        },
+        "airportSunriseUtcMs": 1786489462293.6714,
+        "siteSunriseUtcMs": 1786489385440.8728,
+        "returnMarginSeconds": 720.9629060058594,
+        "phases": [
+          {
+            "label": "ground_outbound",
+            "startUtcMs": 1786470741330.7654,
+            "endUtcMs": 1786477941330.7654,
+            "segments": 792
+          },
+          {
+            "label": "ground_acquisition",
+            "startUtcMs": 1786477941330.7654,
+            "endUtcMs": 1786481541330.7654,
+            "segments": 1
+          },
+          {
+            "label": "ground_return",
+            "startUtcMs": 1786481541330.7654,
+            "endUtcMs": 1786488741330.7654,
+            "segments": 709
+          }
+        ]
+      },
+      "onwardSafeIds": []
+    }
+  ],
+  "witness": {
+    "initial": {
+      "mode": "campaign-ground-v1",
+      "schemaVersion": 4,
+      "simulationVersion": "flight-ground-1",
+      "scenarioId": "campaign-chapter-one",
+      "scenarioVersion": 1,
+      "seed": "campaign-chapter-one-v1",
+      "stockVersion": "departure-stocks-v2",
+      "worldVersion": "ourairports-v2@11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+      "startUtcMs": 1786388400000,
+      "utcMs": 1786388400000,
+      "airportId": "ULLI",
+      "position": {
+        "latitudeDeg": 59.800301,
+        "longitudeDeg": 30.262501
+      },
+      "fuelKg": 65000,
+      "flights": 0,
+      "distanceKm": 0,
+      "status": "running",
+      "phase": "planning",
+      "death": null,
+      "result": null,
+      "activeFlight": null,
+      "campaign": {
+        "chapterOneCompleted": false,
+        "knowledgeIds": [],
+        "objective": "akademgorodok",
+        "playerLocation": "aircraft"
+      },
+      "aircraft": {
+        "airportId": "ULLI",
+        "position": {
+          "latitudeDeg": 59.800301,
+          "longitudeDeg": 30.262501
+        }
+      },
+      "stockChangesKg": {}
+    },
+    "path": [
+      "BIKF",
+      "CYEG",
+      "UHMA",
+      "UNNT"
+    ],
+    "legs": [
+      {
+        "from": "ULLI",
+        "to": "BIKF",
+        "allowed": true,
+        "reasons": [],
+        "startUtcMs": 1786388400000,
+        "departureUtcMs": 1786388400000,
+        "arrivalUtcMs": 1786401471748.169,
+        "endUtcMs": 1786402071748.169,
+        "distanceKm": 2725.383465632939,
+        "flight": {
+          "durationSeconds": 13071.74816906229,
+          "burnKg": 19714.992526614104,
+          "arrivalFuelKg": 45285.00747338589,
+          "takeoffMassKg": 191000,
+          "landingMassKg": 171285.0074733859,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 0,
+          "fuelKg": 65000,
+          "stockKg": 64000,
+          "durationSeconds": 0,
+          "airportId": "ULLI",
+          "neededKg": 0,
+          "requiredFuelKg": 24714.992526614104,
+          "sufficient": true
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 50,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1786402071748.169,
+          "reason": null
+        }
+      },
+      {
+        "from": "BIKF",
+        "to": "CYEG",
+        "allowed": true,
+        "reasons": [],
+        "startUtcMs": 1786402071748.169,
+        "departureUtcMs": 1786402071748.169,
+        "arrivalUtcMs": 1786424226508.7961,
+        "endUtcMs": 1786424826508.7961,
+        "distanceKm": 4921.554955666717,
+        "flight": {
+          "durationSeconds": 22154.760627269177,
+          "burnKg": 33990.10721183366,
+          "arrivalFuelKg": 11294.900261552233,
+          "takeoffMassKg": 171285.0074733859,
+          "landingMassKg": 137294.90026155225,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 0,
+          "fuelKg": 45285.00747338589,
+          "stockKg": 64000,
+          "durationSeconds": 0,
+          "airportId": "BIKF",
+          "neededKg": 0,
+          "requiredFuelKg": 38990.10721183366,
+          "sufficient": true
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 80,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1786424826508.7961,
+          "reason": null
+        }
+      },
+      {
+        "from": "CYEG",
+        "to": "UHMA",
+        "allowed": true,
+        "reasons": [],
+        "startUtcMs": 1786424826508.7961,
+        "departureUtcMs": 1786426708468.662,
+        "arrivalUtcMs": 1786444662229.007,
+        "endUtcMs": 1786445262229.007,
+        "distanceKm": 3905.799765166397,
+        "flight": {
+          "durationSeconds": 17953.76034488193,
+          "burnKg": 27387.69847358158,
+          "arrivalFuelKg": 5000,
+          "takeoffMassKg": 158387.69847358158,
+          "landingMassKg": 131000,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 21092.798212029345,
+          "fuelKg": 32387.69847358158,
+          "stockKg": 42907.201787970655,
+          "durationSeconds": 1881.9598659022008,
+          "airportId": "CYEG",
+          "neededKg": 21092.798212029345,
+          "requiredFuelKg": 32387.69847358158,
+          "sufficient": true
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 74,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1786445262229.007,
+          "reason": null
+        }
+      },
+      {
+        "from": "UHMA",
+        "to": "UNNT",
+        "allowed": true,
+        "reasons": [],
+        "startUtcMs": 1786445262229.007,
+        "departureUtcMs": 1786448098315.4011,
+        "arrivalUtcMs": 1786470141330.7654,
+        "endUtcMs": 1786470741330.7654,
+        "distanceKm": 4894.536192675454,
+        "flight": {
+          "durationSeconds": 22043.015364219973,
+          "burnKg": 33814.485252390456,
+          "arrivalFuelKg": 5000,
+          "takeoffMassKg": 164814.48525239044,
+          "landingMassKg": 130999.99999999999,
+          "dispatchable": true,
+          "reasons": []
+        },
+        "refuelling": {
+          "transferKg": 33814.485252390456,
+          "fuelKg": 38814.485252390456,
+          "stockKg": 30185.514747609544,
+          "durationSeconds": 2836.086393929284,
+          "airportId": "UHMA",
+          "neededKg": 33814.485252390456,
+          "requiredFuelKg": 38814.485252390456,
+          "sufficient": true
+        },
+        "solar": {
+          "status": "safe",
+          "evaluations": 91,
+          "phase": null,
+          "eventUtcMs": null,
+          "bracketUtcMs": null,
+          "safeUntilUtcMs": 1786470741330.7654,
+          "reason": null
+        }
+      }
+    ],
+    "airportState": {
+      "mode": "campaign-ground-v1",
+      "schemaVersion": 4,
+      "simulationVersion": "flight-ground-1",
+      "scenarioId": "campaign-chapter-one",
+      "scenarioVersion": 1,
+      "seed": "campaign-chapter-one-v1",
+      "stockVersion": "departure-stocks-v2",
+      "worldVersion": "ourairports-v2@11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+      "startUtcMs": 1786388400000,
+      "utcMs": 1786470741330.7654,
+      "airportId": "UNNT",
+      "position": {
+        "latitudeDeg": 55.019756,
+        "longitudeDeg": 82.618675
+      },
+      "fuelKg": 5000,
+      "flights": 4,
+      "distanceKm": 16447.274379141505,
+      "status": "running",
+      "phase": "planning",
+      "death": null,
+      "result": null,
+      "activeFlight": null,
+      "campaign": {
+        "chapterOneCompleted": false,
+        "knowledgeIds": [],
+        "objective": "akademgorodok",
+        "playerLocation": "aircraft"
+      },
+      "aircraft": {
+        "airportId": "UNNT",
+        "position": {
+          "latitudeDeg": 55.019756,
+          "longitudeDeg": 82.618675
+        }
+      },
+      "stockChangesKg": {
+        "CYEG": 42907.201787970655,
+        "UHMA": 30185.514747609544
+      }
+    },
+    "expedition": {
+      "allowed": true,
+      "reasons": [],
+      "startUtcMs": 1786470741330.7654,
+      "acquiredUtcMs": 1786479741330.7654,
+      "endUtcMs": 1786485141330.7654,
+      "solar": {
+        "status": "safe",
+        "safeUntilUtcMs": 1786485141330.7654,
+        "bracket": null,
+        "witnessUtcMs": null,
+        "evaluations": 3007,
+        "reason": null,
+        "stage": null,
+        "position": null
+      },
+      "parkedSolar": {
+        "status": "safe",
+        "safeUntilUtcMs": 1786485141330.7654,
+        "bracket": null,
+        "witnessUtcMs": null,
+        "evaluations": 17,
+        "reason": null
+      },
+      "airportSunriseUtcMs": 1786489462294.8157,
+      "siteSunriseUtcMs": 1786489385445.4504,
+      "returnMarginSeconds": 4320.964050292969,
+      "phases": [
+        {
+          "label": "ground_outbound",
+          "startUtcMs": 1786470741330.7654,
+          "endUtcMs": 1786476141330.7654,
+          "segments": 792
+        },
+        {
+          "label": "ground_acquisition",
+          "startUtcMs": 1786476141330.7654,
+          "endUtcMs": 1786479741330.7654,
+          "segments": 1
+        },
+        {
+          "label": "ground_return",
+          "startUtcMs": 1786479741330.7654,
+          "endUtcMs": 1786485141330.7654,
+          "segments": 709
+        }
+      ]
+    },
+    "returned": {
+      "mode": "campaign-ground-v1",
+      "schemaVersion": 4,
+      "simulationVersion": "flight-ground-1",
+      "scenarioId": "campaign-chapter-one",
+      "scenarioVersion": 1,
+      "seed": "campaign-chapter-one-v1",
+      "stockVersion": "departure-stocks-v2",
+      "worldVersion": "ourairports-v2@11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+      "startUtcMs": 1786388400000,
+      "utcMs": 1786485141330.7654,
+      "airportId": "UNNT",
+      "position": {
+        "latitudeDeg": 55.019756,
+        "longitudeDeg": 82.618675
+      },
+      "fuelKg": 5000,
+      "flights": 4,
+      "distanceKm": 16447.274379141505,
+      "status": "running",
+      "phase": "planning",
+      "death": null,
+      "result": null,
+      "activeFlight": null,
+      "campaign": {
+        "chapterOneCompleted": true,
+        "knowledgeIds": [
+          "akademgorodok"
+        ],
+        "objective": "tsukuba",
+        "playerLocation": "aircraft"
+      },
+      "aircraft": {
+        "airportId": "UNNT",
+        "position": {
+          "latitudeDeg": 55.019756,
+          "longitudeDeg": 82.618675
+        }
+      },
+      "stockChangesKg": {
+        "CYEG": 42907.201787970655,
+        "UHMA": 30185.514747609544
+      }
+    },
+    "onward": {
+      "to": "UACC",
+      "departureUtcMs": 1786486013760.3245,
+      "arrivalUtcMs": 1786491397556.8196,
+      "endUtcMs": 1786491997556.8196,
+      "solar": {
+        "status": "safe",
+        "evaluations": 13,
+        "phase": null,
+        "eventUtcMs": null,
+        "bracketUtcMs": null,
+        "safeUntilUtcMs": 1786491997556.8196,
+        "reason": null
+      },
+      "refuelling": {
+        "transferKg": 7632.394121508376,
+        "fuelKg": 12632.394121508376,
+        "stockKg": 56367.605878491624,
+        "durationSeconds": 872.4295591131282,
+        "airportId": "UNNT",
+        "neededKg": 7632.394121508376,
+        "requiredFuelKg": 12632.394121508376,
+        "sufficient": true
+      }
+    },
+    "final": {
+      "mode": "campaign-ground-v1",
+      "schemaVersion": 4,
+      "simulationVersion": "flight-ground-1",
+      "scenarioId": "campaign-chapter-one",
+      "scenarioVersion": 1,
+      "seed": "campaign-chapter-one-v1",
+      "stockVersion": "departure-stocks-v2",
+      "worldVersion": "ourairports-v2@11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+      "startUtcMs": 1786388400000,
+      "utcMs": 1786491997556.8196,
+      "airportId": "UACC",
+      "position": {
+        "latitudeDeg": 51.027035,
+        "longitudeDeg": 71.467094
+      },
+      "fuelKg": 4999.999999999999,
+      "flights": 5,
+      "distanceKm": 17313.796551681255,
+      "status": "running",
+      "phase": "planning",
+      "death": null,
+      "result": null,
+      "activeFlight": null,
+      "campaign": {
+        "chapterOneCompleted": true,
+        "knowledgeIds": [
+          "akademgorodok"
+        ],
+        "objective": "tsukuba",
+        "playerLocation": "aircraft"
+      },
+      "aircraft": {
+        "airportId": "UACC",
+        "position": {
+          "latitudeDeg": 51.027035,
+          "longitudeDeg": 71.467094
+        }
+      },
+      "stockChangesKg": {
+        "CYEG": 42907.201787970655,
+        "UHMA": 30185.514747609544,
+        "UNNT": 56367.605878491624
+      }
+    },
+    "events": [
+      {
+        "version": 4,
+        "sequence": 0,
+        "kind": "mission_started",
+        "utcMs": 1786388400000,
+        "flightIndex": 0,
+        "airportId": "ULLI"
+      },
+      {
+        "version": 4,
+        "sequence": 1,
+        "kind": "flight_committed",
+        "utcMs": 1786388400000,
+        "flightIndex": 1,
+        "airportId": "ULLI"
+      },
+      {
+        "version": 4,
+        "sequence": 2,
+        "kind": "flight_started",
+        "utcMs": 1786388400000,
+        "flightIndex": 1,
+        "airportId": "ULLI"
+      },
+      {
+        "version": 4,
+        "sequence": 3,
+        "kind": "arrived",
+        "utcMs": 1786401471748.169,
+        "flightIndex": 1,
+        "airportId": "BIKF"
+      },
+      {
+        "version": 4,
+        "sequence": 4,
+        "kind": "flight_completed",
+        "utcMs": 1786402071748.169,
+        "flightIndex": 1,
+        "airportId": "BIKF"
+      },
+      {
+        "version": 4,
+        "sequence": 5,
+        "kind": "flight_committed",
+        "utcMs": 1786402071748.169,
+        "flightIndex": 2,
+        "airportId": "BIKF"
+      },
+      {
+        "version": 4,
+        "sequence": 6,
+        "kind": "flight_started",
+        "utcMs": 1786402071748.169,
+        "flightIndex": 2,
+        "airportId": "BIKF"
+      },
+      {
+        "version": 4,
+        "sequence": 7,
+        "kind": "arrived",
+        "utcMs": 1786424226508.7961,
+        "flightIndex": 2,
+        "airportId": "CYEG"
+      },
+      {
+        "version": 4,
+        "sequence": 8,
+        "kind": "flight_completed",
+        "utcMs": 1786424826508.7961,
+        "flightIndex": 2,
+        "airportId": "CYEG"
+      },
+      {
+        "version": 4,
+        "sequence": 9,
+        "kind": "flight_committed",
+        "utcMs": 1786424826508.7961,
+        "flightIndex": 3,
+        "airportId": "CYEG"
+      },
+      {
+        "version": 4,
+        "sequence": 10,
+        "kind": "refuelling_started",
+        "utcMs": 1786424826508.7961,
+        "flightIndex": 3,
+        "airportId": "CYEG"
+      },
+      {
+        "version": 4,
+        "sequence": 11,
+        "kind": "flight_started",
+        "utcMs": 1786426708468.662,
+        "flightIndex": 3,
+        "airportId": "CYEG"
+      },
+      {
+        "version": 4,
+        "sequence": 12,
+        "kind": "arrived",
+        "utcMs": 1786444662229.007,
+        "flightIndex": 3,
+        "airportId": "UHMA"
+      },
+      {
+        "version": 4,
+        "sequence": 13,
+        "kind": "flight_completed",
+        "utcMs": 1786445262229.007,
+        "flightIndex": 3,
+        "airportId": "UHMA"
+      },
+      {
+        "version": 4,
+        "sequence": 14,
+        "kind": "flight_committed",
+        "utcMs": 1786445262229.007,
+        "flightIndex": 4,
+        "airportId": "UHMA"
+      },
+      {
+        "version": 4,
+        "sequence": 15,
+        "kind": "refuelling_started",
+        "utcMs": 1786445262229.007,
+        "flightIndex": 4,
+        "airportId": "UHMA"
+      },
+      {
+        "version": 4,
+        "sequence": 16,
+        "kind": "flight_started",
+        "utcMs": 1786448098315.4011,
+        "flightIndex": 4,
+        "airportId": "UHMA"
+      },
+      {
+        "version": 4,
+        "sequence": 17,
+        "kind": "arrived",
+        "utcMs": 1786470141330.7654,
+        "flightIndex": 4,
+        "airportId": "UNNT"
+      },
+      {
+        "version": 4,
+        "sequence": 18,
+        "kind": "flight_completed",
+        "utcMs": 1786470741330.7654,
+        "flightIndex": 4,
+        "airportId": "UNNT"
+      },
+      {
+        "version": 4,
+        "sequence": 19,
+        "kind": "expedition_started",
+        "utcMs": 1786470741330.7654,
+        "flightIndex": 4,
+        "airportId": "UNNT"
+      },
+      {
+        "version": 4,
+        "sequence": 20,
+        "kind": "knowledge_acquired",
+        "utcMs": 1786479741330.7654,
+        "flightIndex": 4,
+        "airportId": "UNNT"
+      },
+      {
+        "version": 4,
+        "sequence": 21,
+        "kind": "chapter_completed",
+        "utcMs": 1786485141330.7654,
+        "flightIndex": 4,
+        "airportId": "UNNT"
+      },
+      {
+        "version": 4,
+        "sequence": 22,
+        "kind": "flight_committed",
+        "utcMs": 1786485141330.7654,
+        "flightIndex": 5,
+        "airportId": "UNNT"
+      },
+      {
+        "version": 4,
+        "sequence": 23,
+        "kind": "refuelling_started",
+        "utcMs": 1786485141330.7654,
+        "flightIndex": 5,
+        "airportId": "UNNT"
+      },
+      {
+        "version": 4,
+        "sequence": 24,
+        "kind": "flight_started",
+        "utcMs": 1786486013760.3245,
+        "flightIndex": 5,
+        "airportId": "UNNT"
+      },
+      {
+        "version": 4,
+        "sequence": 25,
+        "kind": "arrived",
+        "utcMs": 1786491397556.8196,
+        "flightIndex": 5,
+        "airportId": "UACC"
+      },
+      {
+        "version": 4,
+        "sequence": 26,
+        "kind": "flight_completed",
+        "utcMs": 1786491997556.8196,
+        "flightIndex": 5,
+        "airportId": "UACC"
+      }
+    ]
+  },
+  "scope": "Chapter one and one inherited safe onward flight only; not a Japan chain, food model, completed campaign, real road-time guarantee or operational aircraft clearance."
+}

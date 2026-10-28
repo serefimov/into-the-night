@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-only
+import type {ChapterOneDefinition} from './mission-ground.js';
 import {aircraftLeg,aircraftMetrics,aircraftRefuelling} from './aircraft.js';
 import {greatCircle} from './geometry.js';
 import {validateResearchState,auditResearchPhases} from './mission-research.js';
@@ -8,7 +9,7 @@ import type {RoutePhase} from './route.js';
 import type {Coordinates} from './solar.js';
 import {validateUtcMs} from './time.js';
 
-export interface MissionWorld extends Omit<ResearchWorld,'targetCompletion'> {targetCompletion:'arrival'|'after_service'}
+export interface MissionWorld extends Omit<ResearchWorld,'targetCompletion'> {targetCompletion:'arrival'|'after_service';chapterOne?:ChapterOneDefinition}
 export interface MissionForecast {
  allowed:boolean;reasons:readonly string[];distanceKm:number;departureUtcMs:number;arrivalUtcMs:number;endUtcMs:number;
  flight:ReturnType<typeof aircraftLeg>;
@@ -44,6 +45,6 @@ export function forecastMissionFlight(world:MissionWorld,state:ResearchState,des
  const invalidResources=reasons.length>0,solar=auditResearchPhases(phases,options);
  if(solar.status!=='safe')reasons.push(solar.status==='unsafe'?'sun':'solar_indeterminate');
  const allowed=reasons.length===0;
- const next=allowed?{airportId:destinationId,utcMs:cursor,fuelKg,stocks:{...state.stocks,[from.id]:refuelling.stockKg},flights:state.flights+1,distanceKm:state.distanceKm+path.distanceKm,won:destinationId===world.targetId}:null;
+ const next=allowed?{airportId:destinationId,utcMs:cursor,fuelKg,stocks:{...state.stocks,[from.id]:refuelling.stockKg},flights:state.flights+1,distanceKm:state.distanceKm+path.distanceKm,won:destinationId===world.targetId&&!world.chapterOne}:null;
  return {allowed,reasons,distanceKm:path.distanceKm,departureUtcMs,arrivalUtcMs,endUtcMs:cursor,flight,refuelling,phases,solar,solarScope:invalidResources?'invalid_resources':terminalArrival?'departure_and_flight':'departure_flight_service',next};
 }
