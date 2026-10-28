@@ -19,7 +19,7 @@ export class FlightController {
   this.tracks = history.map(flight => flight.forecast.phases.find(p => p.label === 'cruise').route.path);
   this.anchorUtc = view.state.utcMs;
   this.anchorReal = 0;
-  this.rate = active ? (session.endUtcMs - view.state.activeFlight.startUtcMs) / FLIGHT_PLAYBACK_MS : 1;
+  this.rate = view.state.activeWait ? (session.endUtcMs-view.state.activeWait.startUtcMs)/FLIGHT_PLAYBACK_MS : active ? (session.endUtcMs - view.state.activeFlight.startUtcMs) / FLIGHT_PLAYBACK_MS : 1;
   this.refresh();
  }
 
@@ -31,6 +31,14 @@ export class FlightController {
 
  restart() {
   this.#replaceSession(new MissionSession(this.session.definition, this.options));
+ }
+ waitUntil(utcMs,now=performance.now()) {
+  const result=this.session.waitUntil(utcMs);
+  if(result.status==='safe'){this.rate=(this.session.endUtcMs-this.session.currentTimeUtc)/FLIGHT_PLAYBACK_MS;this.play(now);}
+  this.refresh();return result;
+ }
+ cancelWait(now=performance.now()) {
+  this.pause(now);if(this.view.state.phase==='waiting')this.session.cancelWait();this.refresh();
  }
  resolvePlanning(){const result=this.session.resolvePlanning();this.refresh();return result;}
  select(id){this.selectedId=id;this.refresh();}
