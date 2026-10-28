@@ -3,9 +3,9 @@
   "branch": "64-akademgorodok-expedition",
   "tag": "",
   "version": "0.1.0-alpha.1",
-  "commit": "84e80600fa77413bdd67dc3bba2b41fc9ad0e101",
-  "runId": "40743646244",
-  "builtAt": "2026-10-28T18:19:59.917Z",
-  "source": "https://github.com/serefimov/into-the-night/tree/84e80600fa77413bdd67dc3bba2b41fc9ad0e101",
-  "contentHash": "99280be01766c08c21cc82d179cd0bb1e07c4eb8abc68a409510ec40c4821140"
+  "commit": "27b13c37e3ecfd217e914eb2e6efd788d5e6d4bd",
+  "runId": "40743883731",
+  "builtAt": "2026-10-28T18:20:29.227Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/27b13c37e3ecfd217e914eb2e6efd788d5e6d4bd",
+  "contentHash": "a5b27ffb6af7a00741beba04edafee014ebb122128627898e4a79481d4e7b373"
 }
