@@ -61,14 +61,16 @@ export async function createFlightApp(definition,land) {
   $('summary-route').replaceChildren(...stops);
  }
  function renderAvailability(s){
+  const waitingCount=[...statuses.values()].filter(v=>v.window?.status==='waiting').length;
   const report=planner.summary(),terminal=s.status!=='running',busy=s.status==='running'&&s.phase!=='planning';
   let title='',detail='',kind='';
   if(s.status==='won'){title='Цель достигнута';detail=`${integer.format(s.distanceKm)} км · ${landings(s.flights)} · ${time.format(s.utcMs)} UTC.`;kind='safe';}
   else if(s.status==='dead'){title='Поражение: самолёт встретил Солнце';detail=`Солнце в текущей точке — ${time.format(s.death.utcMs)} UTC.`;kind='blocked';}
   else if(s.status==='lost'){title='Поражение: маршрут оборвался';detail=`Нет доступных перелётов. Проверены все ${s.result.total} направления текущего каталога. В этой версии нет ожидания — партия завершена.`;kind='blocked';}
-  else if(busy){title=s.phase==='waiting'?(controller.playing?'Ожидание выполняется':'Ожидание на паузе'):controller.playing?'Рейс выполняется':'Рейс на паузе';detail='Следующие направления проверим после завершения полёта и обслуживания.';}
+  else if(busy){title=s.phase==='waiting'?(controller.playing?'Ожидание выполняется':'Ожидание на паузе'):controller.playing?'Рейс выполняется':'Рейс на паузе';detail=s.phase==='waiting'?'Можно поставить ожидание на паузу или остановить его. Полёт подтверждается отдельно.':'Следующие направления проверим после завершения полёта и обслуживания.';}
   else {
    if(report.availableIds.length){title=`Доступно перелётов: ${report.availableIds.length}`;kind='safe';}
+   else if(waitingCount){title=`Есть перелёты после ожидания: ${waitingCount}`;kind='safe';}
    else if(report.status==='unresolved')title='Безопасность ещё не определена';
    else if(report.status==='failed')title='Проверка не завершена';
    else if(report.status==='no_safe_choices')title='Сейчас нет доступных перелётов';
@@ -78,22 +80,23 @@ export async function createFlightApp(definition,land) {
    if(report.status==='failed')detail+=' Проверку всего каталога завершить не удалось. Партия продолжается.';
 
   }
-  text('availability-scope',terminal?'Итог партии':busy?'Выполнение рейса':'По всему каталогу');
-  text('availability-title',title);text('availability-detail',detail);$('availability-panel').className='availability-panel '+kind+(terminal?' terminal':'');
+  text('availability-scope',terminal?'Итог партии':busy?(s.phase==='waiting'?'Ожидание':'Выполнение рейса'):'По всему каталогу');
+  text('availability-title',title);text('availability-detail',detail+(s.phase==='planning'?` Окна: ${planner.windowsChecked} из ${planner.windowsTotal||report.total}; после ожидания — ${waitingCount}.`:''));$('availability-panel').className='availability-panel '+kind+(terminal?' terminal':'');
   const names={airport:'Полосы',mass:'Масса',fuel:'Топливо',sun:'Солнце',geometry:'Геометрия'},reasons=s.result?.kind==='no_routes'?Object.entries(s.result.reasons).filter(([,n])=>n>0).map(([key,n])=>`${names[key]}: ${n}`).join(' · '):'';
   text('availability-reasons',reasons);$('availability-reasons').hidden=!reasons;
   $('restart-mission').hidden=!terminal;$('retry-scan').hidden=terminal||busy||!['failed','unresolved'].includes(report.status);
  }
- function select(id){controller.select(id);if(controller.view.state.phase==='planning')planner.record(id,controller.choice);render();}
+ function select(id){controller.select(id);planner.prioritize(id);if(controller.view.state.phase==='planning')planner.record(id,controller.choice);render();}
  function render() {
   planner.update();const s=controller.view.state,airport=airports.get(controller.selectedId),choice=controller.choice,accepted=controller.activeForecast;
-  const forecast=choice?.forecast??(s.activeFlight?.toId===controller.selectedId?accepted:null),busy=s.status==='running'&&s.phase!=='planning';
+  const window=statuses.get(controller.selectedId)?.window;
+  const forecast=(window?.status==='waiting'?window.forecast:choice?.forecast)??(s.activeFlight?.toId===controller.selectedId?accepted:null),busy=s.status==='running'&&s.phase!=='planning';
   renderAvailability(s);
   renderMissionSummary(s);
   const goal=airports.get(definition.targetId),start=airports.get(definition.initial.airportId);text('goal-name',goal.label??goal.name);text('route-name',`${start.label??start.name} → ${goal.label??goal.name}`);text('flight-clock',clock.format(s.utcMs)+' UTC');$('flight-clock').dateTime=new Date(s.utcMs).toISOString();
   text('flight-fuel',tonnes(s.fuelKg)+' топлива');
   text('flight-status',s.status==='lost'?'Маршрут оборвался: нет доступных перелётов.':s.status==='dead'?'Партия завершена: самолёт встретил Солнце.':s.status==='won'?`Цель достигнута · ${integer.format(s.distanceKm)} км · ${landings(s.flights)}`:busy?`${phases[s.phase]} · ${controller.playing?'выполняется':'пауза'}`:'Время стоит. Выберите следующую посадку.');
-  $('playback').hidden=!busy;text('play-pause',controller.playing?'Пауза':'Продолжить');text('phase-name',phases[s.phase]);
+  $('playback').hidden=!busy;$('flight-progress').setAttribute('aria-label',s.activeWait?'Ход ожидания':'Ход принятого перелёта');text('play-pause',controller.playing?'Пауза':'Продолжить');text('phase-name',phases[s.phase]);
   if(s.activeWait)$('flight-progress').value=(s.utcMs-s.activeWait.startUtcMs)/(s.activeWait.endUtcMs-s.activeWait.startUtcMs);
   if(s.activeFlight)$('flight-progress').value=(s.utcMs-s.activeFlight.startUtcMs)/(s.activeFlight.endUtcMs-s.activeFlight.startUtcMs);
   text('destination-title',airport?(airport.label??airport.name):'Куда летим?');text('destination-subtitle',airport?`${airport.iata?airport.iata+' · ':''}${airport.id} · ${airport.country}`:'Выберите аэродром на глобусе.');
@@ -104,18 +107,32 @@ export async function createFlightApp(definition,land) {
   }
   let title='Время стоит, пока вы выбираете.',detail='Метки выбирают аэродром. Кнопка «Полёт» подтверждает вылет.',kind='';
   if(s.status==='won'){title='✓ Цель достигнута';detail=`${integer.format(s.distanceKm)} км позади. Место назначения — ${goal.label??goal.name}.`;kind='safe';}
-  else if(busy&&s.phase==='waiting'){title=controller.playing?'Ожидание выполняется':'Ожидание на паузе';detail='Время стоянки изменяется только при воспроизведении. После ожидания полёт подтверждается отдельно.';}
+  else if(busy&&s.phase==='waiting'){title=controller.playing?'Ожидание выполняется':'Ожидание на паузе';detail=`Ждём до ${clock.format(s.activeWait.endUtcMs)} UTC. После ожидания полёт подтверждается отдельно.`;}
   else if(busy){title=controller.playing?'Выполняется принятый рейс':'Рейс на паузе';detail='Дозаправка перед вылетом, полёт и обслуживание проходят автоматически. Затем можно выбрать новое назначение.';}
   else if(choice?.allowed){title='✓ Весь переход безопасен';detail=`Заправка перед вылетом, полёт и обслуживание проверены. Завершение — ${time.format(forecast.endUtcMs)} UTC.`;kind='safe';}
   else if(choice){kind='blocked';title=choice.reasons.includes('solar_indeterminate')?'? Безопасность не подтверждена':'× Вылет недоступен';
    detail=choice.reasons.map(r=>r==='sun'?`Солнце на этапе «${phases[choice.forecast.solar.phase]??'полёт'}»${choice.forecast.solar.eventUtcMs!==null?' — '+time.format(choice.forecast.solar.eventUtcMs)+' UTC':''}.`:reasonNames[r]??'Полёт не подтверждён.').join(' ');}
+  if(!busy&&window?.status==='waiting'){
+   title='◷ Доступно после ожидания';kind='safe';
+   detail=(choice?.reasons.includes('sun')?'Сейчас переход блокирует Солнце.':'Сейчас безопасность перехода не подтверждена.')+' Стоянка и весь будущий переход проверены. После ожидания нажмите «Полёт» отдельно.';
+  }
+  $('fly').hidden=!busy&&window?.status==='waiting'&&!choice?.allowed;
+  $('wait-departure').hidden=busy||s.status!=='running'||window?.status!=='waiting';
+  $('stop-wait').hidden=s.phase!=='waiting';
+  $('window-detail').hidden=!airport||airport.id===s.airportId||busy||choice?.allowed;
+  let windowText=planner.summary().status==='failed'?'Поиск окна не завершён. Повторите проверку.':'Поиск безопасного окна… Время стоит.';
+  if(window?.status==='waiting')windowText=`Ожидание ${duration(window.startUtcMs-s.utcMs)} · начало перехода ${clock.format(window.startUtcMs)} UTC · вылет ${clock.format(window.forecast.departureUtcMs)} UTC · прибытие ${time.format(window.forecast.arrivalUtcMs)} UTC. Первое подтверждённое время на сетке 15 минут; более узкие окна могут быть пропущены.${window.earlierUncertain?' Более ранние варианты требуют уточнения.':''}`;
+  if(window?.status==='blocked')windowText='Ожидание не устраняет ограничения этого направления.';
+  if(window?.status==='not_found')windowText=window.limit==='range'?'Поиск ограничен поддерживаемым диапазоном UTC.':window.limit==='sunrise'?'Безопасное окно не найдено до солнечной границы стоянки.':'Окно не найдено в пределах 24 часов на сетке 15 минут. Это не доказательство невозможности будущего рейса.';
+  if(window?.status==='indeterminate')windowText='Поиск окна ограничен или безопасность требует уточнения. Ожидание не разрешено.';
+  text('window-detail',windowText);
   text('verdict-title',title);text('verdict-detail',detail);$('route-verdict').className='verdict '+kind;
   $('flight-planning-card').hidden=s.status!=='running';
   $('fly').disabled=!choice?.allowed||busy||s.status!=='running';$('fly').setAttribute('aria-label',airport?`Полёт в ${airport.label??airport.name}`:'Полёт');
   $('dispatch-summary').hidden=!forecast;
   text('dispatch-summary',forecast&&forecast.refuelling.neededKg===0?`Дозаправка не нужна · отправление ${time.format(forecast.departureUtcMs)} UTC.`:forecast?`Здесь нужно добавить ${tonnes(forecast.refuelling.neededKg)} · в наличии ${tonnes(s.stocks[forecast.refuelling.airportId])}. ${forecast.refuelling.sufficient?`Дозаправка ${duration(forecast.refuelling.durationSeconds*1000)} · отправление ${time.format(forecast.departureUtcMs)} UTC.`:'Дозаправка не обеспечит рейс.'}`:'');
   text('ground-note','Заправляемся под выбранный рейс с резервом 5 т. После посадки топливо остаётся на складе до следующего выбора.');
-  globe.update({airports:definition.airports,state:s,statuses,selectedId:controller.selectedId,targetId:definition.targetId,startId:definition.initial.airportId,forecast:accepted??choice?.forecast,acceptedForecast:accepted,tracks:controller.tracks});globe.draw(s.utcMs);
+  globe.update({airports:definition.airports,state:s,statuses,selectedId:controller.selectedId,targetId:definition.targetId,startId:definition.initial.airportId,forecast:accepted??forecast,acceptedForecast:accepted,tracks:controller.tracks});globe.draw(s.utcMs);
   if (s.status !== 'running') sessionMenu.checkpoint(performance.now(),true);
  }
  $('restart-mission').addEventListener('click',restart);
@@ -126,6 +143,12 @@ export async function createFlightApp(definition,land) {
   render();
   sessionMenu.checkpoint(performance.now(),true);
  });
+ $('wait-departure').addEventListener('click',()=>{
+  const window=statuses.get(controller.selectedId)?.window;
+  if(window?.status!=='waiting'||!controller.waitForDeparture(window.startUtcMs))return;
+  planner.reset();render();sessionMenu.checkpoint(performance.now(),true);
+ });
+ $('stop-wait').addEventListener('click',()=>{controller.cancelWait();planner.reset();render();sessionMenu.checkpoint(performance.now(),true);});
  $('play-pause').addEventListener('click',()=>{
   controller.playing ? controller.pause() : controller.play();
   render();

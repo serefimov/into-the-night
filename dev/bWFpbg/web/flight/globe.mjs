@@ -53,7 +53,13 @@ export class GlobeView {
  activate(hit){if(!hit.cluster){this.picker.hidden=true;this.onSelect(hit.id);return;}
   if(this.camera.zoom<4.8){this.focus(hit.airport,this.camera.zoom*1.7);return;}
   this.picker.replaceChildren();this.picker.style.left=clamp(hit.x-110,12,this.geometry.width-232)+'px';this.picker.style.top=clamp(hit.y+20,80,this.geometry.height-180)+'px';
-  for(const row of hit.group){const button=document.createElement('button');button.textContent=row.airport.label??row.airport.name??row.id;button.dataset.airportId=row.id;button.addEventListener('click',()=>{this.picker.hidden=true;this.onSelect(row.id);});this.picker.append(button);}this.picker.hidden=false;
+  for(const row of hit.group){const button=document.createElement('button');button.textContent=row.airport.label??row.airport.name??row.id;button.dataset.airportId=row.id;
+   // Opening the picker on pointerup can retarget the following touch click
+   // onto a new button. Require a press on that button, or keyboard activation.
+   let pressed=false;
+   button.addEventListener('pointerdown',()=>{pressed=true;});
+   button.addEventListener('pointercancel',()=>{pressed=false;});
+   button.addEventListener('click',e=>{if(e.detail!==0&&!pressed)return;pressed=false;this.picker.hidden=true;this.onSelect(row.id);});this.picker.append(button);}this.picker.hidden=false;
  }
  prepare(width,height) {
   const scale=Math.min(1,560/Math.max(width,height)),w=Math.max(1,Math.round(width*scale)),h=Math.max(1,Math.round(height*scale));
@@ -133,16 +139,18 @@ export class GlobeView {
   for(const row of rows)if(Math.hypot(row.x-row.anchorX,row.y-row.anchorY)>1){this.ctx.strokeStyle='#c4cfc280';this.ctx.lineWidth=1;this.ctx.beginPath();this.ctx.moveTo(row.anchorX,row.anchorY);this.ctx.lineTo(row.x,row.y);this.ctx.stroke();}
   this.hits=rows;const live=new Set();
   for(const row of rows){live.add(row.id);let node=this.nodes.get(row.id);
-   if(!node){node=document.createElement('button');node.type='button';node.className='map-marker';node.addEventListener('click',()=>this.activate(this.hits.find(h=>h.id===row.id)??row));this.markers.append(node);this.nodes.set(row.id,node);}
+   if(!node){node=document.createElement('button');node.type='button';node.className='map-marker';node.addEventListener('click',()=>this.activate(this.hits.find(h=>h.id===row.id)??row));node.append(...['marker-dot','marker-label','wait-badge'].map(className=>Object.assign(document.createElement('span'),{className})));this.markers.append(node);this.nodes.set(row.id,node);}
    node.style.transform=`translate(${row.x-22}px,${row.y-22}px)`;
-   const info=statuses.get(row.id),safe=info?.allowed,blocked=info&&!safe,uncertain=blocked&&info.reasons.every(r=>r==='solar_indeterminate'),goal=row.id===targetId,current=row.id===state.airportId,selected=row.id===selectedId;
-   node.dataset.airportId=row.id;node.dataset.status=current?'current':safe?'safe':blocked?'blocked':'unknown';node.className=`map-marker airport ${row.cluster?'cluster':''} ${row.cluster&&row.group.some(r=>statuses.get(r.id)?.allowed)?'has-safe':''} ${detail?'detail':'overview'} ${safe?'safe':blocked?'blocked':''} ${goal?'goal':''} ${selected?'selected':''} ${current?'current':''}`;
+   const info=statuses.get(row.id),safe=info?.allowed,waiting=info?.window?.status==='waiting',blocked=info&&!safe&&!waiting,uncertain=blocked&&(!info.window&&info.reasons.every(r=>['sun','solar_indeterminate'].includes(r))||info.window?.status==='indeterminate'),goal=row.id===targetId,current=row.id===state.airportId,selected=row.id===selectedId;
+   node.dataset.airportId=row.id;node.dataset.status=current?'current':safe?'safe':waiting?'waiting':blocked?'blocked':'unknown';node.className=`map-marker airport ${row.cluster?'cluster':''} ${row.cluster&&row.group.some(r=>statuses.get(r.id)?.allowed)?'has-safe':''} ${detail?'detail':'overview'} ${safe?'safe':waiting?'waiting':blocked?'blocked':''} ${goal?'goal':''} ${selected?'selected':''} ${current?'current':''}`;
+   const groupWaiting=row.cluster&&row.group.some(r=>statuses.get(r.id)?.window?.status==='waiting');
    const groupSafe=row.cluster&&row.group.some(r=>statuses.get(r.id)?.allowed);
-   const glyph=goal?'⚑':current?'◆':row.cluster?(groupSafe?'✓':detail?String(row.count):'+'):safe?'✓':uncertain&&detail?'?':blocked&&detail?'×':'·';
-   node.replaceChildren(Object.assign(document.createElement('span'),{className:'marker-dot',textContent:glyph}),Object.assign(document.createElement('span'),{className:'marker-label',textContent:row.label?.text??''}));
+   const glyph=goal?'⚑':current?'◆':row.cluster?(groupSafe?'✓':groupWaiting?'◷':detail?String(row.count):'+'):safe?'✓':waiting?'◷':info?.window?.status==='not_found'&&detail?'–':uncertain&&detail?(info?.window?'?':'…'):blocked&&detail?'×':'·';
+   node.querySelector('.marker-dot').textContent=glyph;node.querySelector('.marker-label').textContent=row.label?.text??'';
+   const badge=node.querySelector('.wait-badge');badge.textContent='◷';badge.hidden=!groupWaiting;
    const labelNode=node.querySelector('.marker-label');labelNode.hidden=!row.label;if(row.label){labelNode.style.left=(row.label.left-row.x+22)+'px';labelNode.style.top=(row.label.top-row.y+22)+'px';labelNode.style.width=(row.label.right-row.label.left)+'px';}
    node.title=row.cluster?`${row.count} аэродромов — приблизьте или выберите из группы`:row.airport.name;
-   node.setAttribute('aria-label',row.cluster?`${row.count} аэродромов${goal?', включая цель':''}${current?', вы здесь':''}${groupSafe?', есть доступные':''}: ${this.camera.zoom>=4.8?'выбрать из группы':'приблизить'}`:`${row.airport.label??row.airport.name??row.id}${goal?', цель':''}${current?', вы здесь':safe?', полёт доступен':blocked?', полёт недоступен':', выбрать для проверки'}`);
+   node.setAttribute('aria-label',row.cluster?`${row.count} аэродромов${goal?', включая цель':''}${current?', вы здесь':''}${groupSafe?', есть доступные':''}${groupWaiting?', есть направления после ожидания':''}: ${this.camera.zoom>=4.8?'выбрать из группы':'приблизить'}`:`${row.airport.label??row.airport.name??row.id}${goal?', цель':''}${current?', вы здесь':safe?', полёт доступен':waiting?', доступно после ожидания':blocked?', полёт недоступен':', выбрать для проверки'}`);
   }
   for(const [id,node] of this.nodes)if(!live.has(id)){node.remove();this.nodes.delete(id);}
  }

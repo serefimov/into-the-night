@@ -8,7 +8,7 @@ export declare const MISSION_MODEL: Readonly<{
     readonly simulationVersion: "flight-cycle-3";
     readonly schemaVersion: 3;
     readonly eventVersion: 3;
-    readonly saveVersion: 4;
+    readonly saveVersion: 5;
     readonly waitingVersion: 1;
 }>;
 export interface MissionDefinition extends MissionWorld {
@@ -112,6 +112,10 @@ export declare class MissionSession {
     waitingLimit(): import("./waiting.js").SunriseSearch;
     /** Read-only solar certification; accepting and executing a wait is separate. */
     forecastWait(endUtcMs: number): import("./interval-search.js").SearchResult;
+    departureWindowSteps(destinationId: string): Generator<void, import("./departure-window.js").DepartureWindow, any>;
+    departureWindow(destinationId: string): import("./departure-window.js").DepartureWindow;
+    get waitingDestinationId(): string | null;
+    waitForDeparture(destinationId: string, startUtcMs: number): boolean;
     /** Accept only an entirely certified interval. No resources change on a parked wait. */
     waitUntil(endUtcMs: number): import("./interval-search.js").SearchResult;
     /** End a wait at the actual cursor; the discarded remainder is not executed. */
