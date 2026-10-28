@@ -1,17 +1,24 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import {globePoint,globeRouteHeading} from '../../dist/core/globe.js';
+import {globePoint} from '../../dist/core/globe.js';
+import {globeFlightPoint,globeFlightHeading} from '../../dist/core/globe-flight.js';
+
+export function acceptedCruiseRoute(state,acceptedForecast){
+ const active=state.activeFlight;
+ return active&&acceptedForecast?.refuelling?.airportId===active.fromId&&acceptedForecast?.next?.airportId===active.toId
+  ?acceptedForecast.phases.find(p=>p.label==='cruise')?.route:null;
+}
 
 /** Display pose only: selection/preview must never steer an executing plane. */
 export function flightPlanePose(state,acceptedForecast,frame){
- const point=globePoint(state.position,frame),active=state.activeFlight;
- const cruise=state.phase==='cruise'&&active&&acceptedForecast?.refuelling?.airportId===active.fromId&&acceptedForecast?.next?.airportId===active.toId
-  ?acceptedForecast.phases.find(p=>p.label==='cruise'):null;
- const heading=cruise?.route.path?globeRouteHeading(cruise.route.path,state.position,frame):null;
- // Preserve the existing 13 px lift above the position/airport marker.
- return {...point,y:point.y-13,angleRad:heading??0,directional:heading!==null};
+ const cruise=state.phase==='cruise'?acceptedCruiseRoute(state,acceptedForecast):null;
+ const fraction=cruise?(state.utcMs-cruise.startUtcMs)/(cruise.endUtcMs-cruise.startUtcMs):null;
+ const point=cruise?globeFlightPoint(cruise.path,fraction,frame):globePoint(state.position,frame);
+ const heading=cruise?globeFlightHeading(cruise.path,fraction,frame):null;
+ return {...point,angleRad:heading??0,directional:heading!==null};
 }
 
-/** Fixed silhouette, nose at (0,-13); the position is the centre of the symbol. */
+/** Screen symbol anchored to the spatial path, not a 3D aircraft mesh.
+ * Keep the silhouette whole; the anchor determines visibility behind Earth. */
 export function drawFlightPlane(ctx,pose){
  if(!pose.visible)return;
  ctx.save();ctx.translate(pose.x,pose.y);ctx.rotate(pose.angleRad);
