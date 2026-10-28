@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
+import {inspectAirportDetail} from './test-cluster-browser.mjs';
 import {inspectGroundPlane,inspectPausedPlane} from './test-plane-browser.mjs';
 import {openFlightPage} from './browser-navigation.mjs';
 export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobile}) {
@@ -47,12 +48,18 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  await until(`${app}.globe.camera.zoom>${zoom}`);assert.equal(await snapshot(),initial);
  async function select(id) {
   await evaluate(`(()=>{const a=${app};a.globe.focus(a.controller.session.definition.airports.find(p=>p.id===${JSON.stringify(id)}),5);a.render();})()`);
-  const hit=await evaluate(`(()=>{const a=${app},h=a.globe.hits.find(h=>h.id===${JSON.stringify(id)}||h.group?.some(p=>p.id===${JSON.stringify(id)})),r=document.getElementById('globe').getBoundingClientRect();if(!h)throw Error('Marker not found');return {x:r.x+h.x,y:r.y+h.y,cluster:!!h.cluster};})()`);
-  if(mobile){await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:hit.x,y:hit.y}]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
-  else{await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,x:hit.x,y:hit.y});await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:hit.x,y:hit.y});}
-  if(hit.cluster)await click(`.cluster-picker [data-airport-id="${id}"]`,mobile);
-  await until(`${app}.controller.selectedId===${JSON.stringify(id)}`);
+  for(let attempt=0;attempt<8;attempt++){
+   const hit=await evaluate(`(()=>{const a=${app},h=a.globe.hits.find(h=>h.id===${JSON.stringify(id)}||h.group?.some(p=>p.id===${JSON.stringify(id)})),r=document.getElementById('globe').getBoundingClientRect();if(!h)throw Error('Marker not found');return {x:r.x+h.x,y:r.y+h.y};})()`);
+   if(mobile){await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[hit]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
+   else{await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...hit});await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...hit});}
+   if(await evaluate(`!${app}.globe.picker.hidden`))await click(`.cluster-picker [data-airport-id="${id}"]`,mobile);
+   if(await evaluate(`${app}.controller.selectedId===${JSON.stringify(id)}`))return;
+   // Keep the test's requested region in view as the real cluster action zooms.
+   await evaluate(`(()=>{const a=${app};a.globe.focus(a.controller.session.definition.airports.find(p=>p.id===${JSON.stringify(id)}));a.render();})()`);
+  }
+  assert.fail('Airport did not separate or become selectable: '+id);
  }
+ await inspectAirportDetail({app,send,evaluate,until,click,mobile});
  await select('UNNT');assert.equal(await evaluate(`document.getElementById('fly').disabled`),true);assert.match(await evaluate(`document.getElementById('verdict-detail').textContent`),/Солнце/);assert.equal(await snapshot(),initial);
  await select('BIKF');assert.equal(await evaluate(`document.getElementById('fly').disabled`),false);assert.equal(await snapshot(),initial);
  assert.match(await evaluate(`document.getElementById('stock-value').textContent`),/64/);assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Весь переход безопасен/);
@@ -88,5 +95,5 @@ export async function flightScenarioRun({send,evaluate,until,click,rootUrl,mobil
  await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  await select('UNNT');await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
  assert.equal(await evaluate(`${app}.controller.view.state.status`),'won');assert.match(await evaluate(`document.getElementById('availability-title').textContent`),/Цель достигнута/);assert.equal(await evaluate(`document.getElementById('restart-mission').hidden`),false);assert.match(await evaluate(`document.getElementById('verdict-title').textContent`),/Цель достигнута/);assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
- return {viewport:mobile?'390x844 touch':'1280x900 mouse',passed:true,steps:['viewport marker budget','all-catalog worker independent of visibility','dense region zoom and touch targets','vector coastlines','worker forecasts','drag/pinch/wheel without mutation','map marker selection','blocked eastern direct route','single flight confirmation','pause/resume','one displayed UTC','partial automatic refuelling','SPB-Novosibirsk western circuit','no numeric forms or overflow']};
+ return {viewport:mobile?'390x844 touch':'1280x900 mouse',passed:true,steps:['viewport marker budget','all-catalog worker independent of visibility','dense region zoom and touch targets','cluster zoom, direct nearby airport choice and duplicate fallback','deep zoom keyboard pan and center without mutation','vector coastlines','worker forecasts','drag/pinch/wheel without mutation','map marker selection','blocked eastern direct route','single flight confirmation','pause/resume','one displayed UTC','partial automatic refuelling','SPB-Novosibirsk western circuit','no numeric forms or overflow']};
 }
