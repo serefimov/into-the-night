@@ -14,9 +14,10 @@ import {MissionAvailabilityScan,inactiveAvailability} from './mission-availabili
 import type {MissionAvailability,AvailabilityReason,AvailabilityChoice} from './mission-availability.js';
 import {canonicalJson,saveChecksum} from './serialization.js';
 import {searchStationarySunrise} from './waiting.js';
+import {departureWindowSteps} from './departure-window.js';
 import {forecastMissionWait} from './mission-wait.js';
 
-export const MISSION_MODEL=Object.freeze({mode:'airport-flight-v3',simulationVersion:'flight-cycle-3',schemaVersion:3,eventVersion:3,saveVersion:4,waitingVersion:1} as const);
+export const MISSION_MODEL=Object.freeze({mode:'airport-flight-v3',simulationVersion:'flight-cycle-3',schemaVersion:3,eventVersion:3,saveVersion:5,waitingVersion:1} as const);
 export interface MissionDefinition extends MissionWorld {
  scenarioId:string; scenarioVersion:number; seed:string; stockVersion:string; worldVersion:string;
  targetCompletion:'arrival'|'after_service';
@@ -40,12 +41,12 @@ export interface MissionView {state:MissionState;events:MissionEvent[]}
 export interface MissionAdvance extends MissionView {newEvents:MissionEvent[]}
 export interface MissionChoice {allowed:boolean; reasons:readonly string[]; forecast:MissionForecast|null}
 interface AcceptedFlight {origin:ResearchState;toId:string;forecast:MissionForecast}
-interface AcceptedWait {origin:ResearchState;waitUntil:number;requestedUntil:number;forecast:{endUtcMs:number;next:ResearchState}}
+interface AcceptedWait {origin:ResearchState;waitUntil:number;requestedUntil:number;destinationId?:string;forecast:{endUtcMs:number;next:ResearchState}}
 type AcceptedPlan=AcceptedFlight|AcceptedWait;
 export interface MissionAcceptedFlight {fromId:string;toId:string;forecast:MissionForecast}
 interface MissionPayload {
  mode:string;simulationVersion:string;eventVersion:number;definition:MissionDefinition;options:SearchOptions;
- choices:(string|{waitUntil:number;stopUtcMs:number})[];noRoutesAt:number|null;cursorUtcMs:number;consumedEvents:number;snapshot:MissionView;
+ choices:(string|{waitUntil:number;stopUtcMs:number;destinationId?:string})[];noRoutesAt:number|null;cursorUtcMs:number;consumedEvents:number;snapshot:MissionView;
 }
 function copy<T>(value:T):T {
  if(Array.isArray(value))return value.map(copy) as T;
@@ -121,14 +122,41 @@ export class MissionSession {
   if(state.status!=='running'||state.phase!=='planning')throw new RangeError('Mission is not planning');
   return forecastMissionWait({position:state.position,startUtcMs:state.utcMs,endUtcMs},this.#options);
  }
+ departureWindowSteps(destinationId:string) {
+  let immediate:MissionChoice;
+  try{immediate=this.forecast(destinationId);}
+  catch(error){
+   if(!(error instanceof RangeError)||!error.message.startsWith('UTC must'))throw error;
+   immediate={allowed:false,reasons:['simulation_horizon'],forecast:null};
+  }
+  return departureWindowSteps(this.#definition,copy(this.#ready()),destinationId,immediate,this.#options);
+ }
+ departureWindow(destinationId:string) {
+  const steps=this.departureWindowSteps(destinationId);
+  let step=steps.next();while(!step.done)step=steps.next();return step.value;
+ }
+ get waitingDestinationId():string|null {
+  const last=this.#plans.at(-1);return last&&'waitUntil' in last?last.destinationId??null:null;
+ }
+ waitForDeparture(destinationId:string,startUtcMs:number) {
+  const standing=this.forecastWait(startUtcMs);
+  if(standing.status!=='safe')return false;
+  const flight=forecastMissionFlight(this.#definition,{...copy(this.#ready()),utcMs:startUtcMs},destinationId,this.#options);
+  if(!flight.allowed)return false;
+  this.#acceptWait(startUtcMs).destinationId=destinationId;
+  return true;
+ }
  /** Accept only an entirely certified interval. No resources change on a parked wait. */
  waitUntil(endUtcMs:number) {
   const forecast=this.forecastWait(endUtcMs);
-  if(forecast.status==='safe'){
-   const origin=copy(this.#ready());
-   this.#plans.push({origin,waitUntil:endUtcMs,requestedUntil:endUtcMs,forecast:{endUtcMs,next:{...copy(origin),utcMs:endUtcMs}}});
-  }
+  if(forecast.status==='safe')this.#acceptWait(endUtcMs);
   return forecast;
+ }
+ #acceptWait(endUtcMs:number):AcceptedWait {
+  const origin=copy(this.#ready());
+  const plan:AcceptedWait={origin,waitUntil:endUtcMs,requestedUntil:endUtcMs,
+   forecast:{endUtcMs,next:{...copy(origin),utcMs:endUtcMs}}};
+  this.#plans.push(plan);return plan;
  }
  /** End a wait at the actual cursor; the discarded remainder is not executed. */
  cancelWait():MissionAdvance {
@@ -244,22 +272,41 @@ export class MissionSession {
  resume():MissionAdvance{return this.stopAt(this.endUtcMs);}
  save():string {
   const payload:MissionPayload={mode:MISSION_MODEL.mode,simulationVersion:MISSION_MODEL.simulationVersion,eventVersion:3,definition:copy(this.#definition),options:copy(this.#options),
-   choices:this.#plans.map(p=>'toId' in p?p.toId:{waitUntil:p.requestedUntil,stopUtcMs:p.waitUntil}),noRoutesAt:this.#noRoutes?.utcMs??null,cursorUtcMs:this.#cursor,consumedEvents:this.#consumedEvents,snapshot:this.current()};
-  return canonicalJson({format:'into-the-night-mission',version:this.#plans.some(p=>'waitUntil' in p)?4:3,checksum:saveChecksum(payload),payload});
+   choices:this.#plans.map(p=>'toId' in p?p.toId:{waitUntil:p.requestedUntil,stopUtcMs:p.waitUntil,...(p.destinationId?{destinationId:p.destinationId}:{})}),noRoutesAt:this.#noRoutes?.utcMs??null,cursorUtcMs:this.#cursor,consumedEvents:this.#consumedEvents,snapshot:this.current()};
+  return canonicalJson({format:'into-the-night-mission',version:this.#plans.some(p=>'waitUntil' in p&&p.destinationId)?5:this.#plans.some(p=>'waitUntil' in p)?4:3,checksum:saveChecksum(payload),payload});
  }
  /** Separate format: historical survival saves are rejected rather than reinterpreted as food-free missions. */
  static restore(serialized:string,expectedDefinition?:MissionDefinition):MissionSession {
   if(typeof serialized!=='string'||serialized.length>16*1024*1024)throw new RangeError('Invalid mission save size');
   const envelope=JSON.parse(serialized) as {format:string;version:number;checksum:string;payload:MissionPayload};
-  if(!envelope||envelope.format!=='into-the-night-mission'||![3,4].includes(envelope.version)||!envelope.payload||envelope.checksum!==saveChecksum(envelope.payload))throw new RangeError('Unsupported or damaged mission save');
+  if(!envelope||envelope.format!=='into-the-night-mission'||![3,4,5].includes(envelope.version)||!envelope.payload||envelope.checksum!==saveChecksum(envelope.payload))throw new RangeError('Unsupported or damaged mission save');
   const p=envelope.payload;
   if(p.mode!==MISSION_MODEL.mode||p.simulationVersion!==MISSION_MODEL.simulationVersion||p.eventVersion!==3)throw new RangeError('Incompatible mission save version');
   if(expectedDefinition&&canonicalJson(p.definition)!==canonicalJson(expectedDefinition))throw new RangeError('Mission definition differs');
-  if(!Array.isArray(p.choices)||p.choices.length>1000||p.choices.some(id=>typeof id!=='string'&&(!id||typeof id!=='object'||Object.keys(id).length!==2||!Number.isFinite(id.waitUntil)||!Number.isFinite(id.stopUtcMs))))throw new RangeError('Invalid mission choices');
+  if(!Array.isArray(p.choices)||p.choices.length>1000||p.choices.some(choice=>{
+   if(typeof choice==='string')return false;
+   if(!choice||typeof choice!=='object')return true;
+   return Object.keys(choice).some(k=>!['waitUntil','stopUtcMs','destinationId'].includes(k))||
+    (choice.destinationId!==undefined&&(typeof choice.destinationId!=='string'||!choice.destinationId))||
+    !Number.isFinite(choice.waitUntil)||!Number.isFinite(choice.stopUtcMs);
+  }))throw new RangeError('Invalid mission choices');
   const session=new MissionSession(p.definition,p.options);
-  for(const [i,id] of p.choices.entries()) {if(i)session.resume();if(typeof id==='string'){if(!session.fly(id).allowed)throw new RangeError('Saved flight is blocked');}else {if(envelope.version!==4||session.waitUntil(id.waitUntil).status!=='safe')throw new RangeError('Saved wait is blocked');
-   if(id.stopUtcMs<session.currentTimeUtc||id.stopUtcMs>id.waitUntil)throw new RangeError('Invalid stopped wait');
-   if(id.stopUtcMs<id.waitUntil){session.stopAt(id.stopUtcMs);session.cancelWait();}}}
+  for(const [index,choice] of p.choices.entries()) {
+   if(index)session.resume();
+   if(typeof choice==='string'){
+    if(!session.fly(choice).allowed)throw new RangeError('Saved flight is blocked');
+    continue;
+   }
+   if(envelope.version<4)throw new RangeError('Saved wait is blocked');
+   let accepted:boolean;
+   if(choice.destinationId){
+    if(envelope.version<5)throw new RangeError('Saved wait is blocked');
+    accepted=session.waitForDeparture(choice.destinationId,choice.waitUntil);
+   }else accepted=session.waitUntil(choice.waitUntil).status==='safe';
+   if(!accepted)throw new RangeError('Saved wait is blocked');
+   if(choice.stopUtcMs<session.currentTimeUtc||choice.stopUtcMs>choice.waitUntil)throw new RangeError('Invalid stopped wait');
+   if(choice.stopUtcMs<choice.waitUntil){session.stopAt(choice.stopUtcMs);session.cancelWait();}
+  }
   validateUtcMs(p.cursorUtcMs);
   const lastStart=session.#plans.at(-1)?.origin.utcMs??session.#initial.utcMs;
   if(p.cursorUtcMs<lastStart||p.cursorUtcMs>session.endUtcMs)throw new RangeError('Invalid mission cursor');

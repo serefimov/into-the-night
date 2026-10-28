@@ -27,9 +27,9 @@
   <div class="map-controls">
    <button id="zoom-in" aria-label="Приблизить">+</button><button id="zoom-out" aria-label="Отдалить">−</button>
   </div>
-  <div class="playback" id="playback" hidden><button id="play-pause">Пауза</button><div><span id="phase-name"></span><progress id="flight-progress" max="1" value="0" aria-label="Ход принятого перелёта"></progress></div></div>
+  <div class="playback" id="playback" hidden><button id="play-pause">Пауза</button><button id="stop-wait" aria-label="Остановить ожидание" title="Остановить ожидание" hidden>Стоп</button><div><span id="phase-name"></span><progress id="flight-progress" max="1" value="0" aria-label="Ход принятого перелёта"></progress></div></div>
   <p class="map-detail-hint">Приблизьте, чтобы увидеть больше аэродромов</p>
-  <div class="map-legend"><span><i class="night"></i>Тень сейчас</span><span><i class="day"></i>Солнце сейчас</span><span class="availability-key">✓ доступен &nbsp; × заблокирован</span></div>
+  <div class="map-legend"><span><i class="night"></i>Тень сейчас</span><span><i class="day"></i>Солнце сейчас</span><span class="availability-key">✓ сейчас &nbsp; ◷ после ожидания &nbsp; × запрет</span></div>
  </section>
  <aside class="destination" aria-label="Маршрут и выбор аэродрома">
   <section id="availability-panel" class="availability-panel" aria-live="polite" aria-atomic="true" aria-labelledby="availability-title">
@@ -58,7 +58,9 @@
    <div><dt>После посадки</dt><dd id="arrival-fuel-value">—</dd></div><div><dt>Перед вылетом</dt><dd id="end-fuel-value">—</dd></div>
   </dl>
   <div id="route-verdict" class="verdict" aria-live="polite"><strong id="verdict-title">Время стоит, пока вы выбираете.</strong><p id="verdict-detail">Метки выбирают аэродром. Кнопка «Полёт» подтверждает вылет.</p></div>
+  <p id="window-detail" class="footnote" hidden></p>
   <button id="fly" class="fly-button" disabled>Полёт <span aria-hidden="true">↗</span></button>
+  <button id="wait-departure" class="fly-button" hidden>Ждать до вылета</button>
   <p id="dispatch-summary" class="dispatch-summary" hidden></p>
   <p class="footnote" id="ground-note">Заправка — перед выбранным рейсом, с резервом 5 т.</p>
   </div>
