@@ -32,7 +32,7 @@ export class FlightPlanningScan {
      const verified=this.controller.resolvePlanning().availability;
      // A transport result cannot override a safe forecast in the actual session.
      for(const id of verified.availableIds)this.statuses.set(id,{id,allowed:true,reasons:[]});
-     if(this.controller.view.state.status==='running'){
+     if(this.controller.view.state.status==='running'&&verified.status!=='no_safe_choices'){
       this.scan=new MissionAvailabilityScan(key,this.controller.session.definition.airports.filter(a=>a.id!==this.controller.view.state.airportId).map(a=>a.id));
       // Recompute transport progress if its all-blocked claim was not confirmed.
       this.fallback();return;

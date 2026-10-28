@@ -199,6 +199,21 @@ export async function sessionScenarioRun({send, evaluate, until, click, rootUrl,
   await menuClick('#save-mission');
   assert.equal(await evaluate(`JSON.parse(localStorage.getItem('into-the-night-flight-v3')).version`), 3);
 
+  await open();
+  const ground=await state();
+  await evaluate(`(()=>{const a=${app},c=a.controller;c.waitUntil(c.view.state.utcMs+3600000,0);c.pause(0);a.advanceTo(c.view.state.utcMs+1800000);})()`);
+  const waiting=await snapshot();
+  assert.equal((await state()).phase,'waiting');
+  await menuClick('#save-mission');await open(true);
+  assert.equal(await snapshot(),waiting);
+  assert.equal(await evaluate(`${app}.controller.playing`),false);
+  assert.match(await evaluate(`document.getElementById('phase-name').textContent`),/Ожидание/);
+  await evaluate(`${app}.controller.cancelWait(0);${app}.render()`);
+  const stopped=await state();
+  assert.equal(stopped.phase,'planning');assert.equal(stopped.flights,0);
+  assert.equal(stopped.fuelKg,ground.fuelKg);assert.deepEqual(stopped.stocks,ground.stocks);
+  assert.equal(stopped.utcMs,ground.utcMs+1800000);
+
   return {viewport:mobile?'390/320 touch':'1280 desktop',passed:true,steps:[
    'secondary session menu', 'cruise save and paused reload', 'refuel reload without stock reset',
    'file import and damaged/old save rejection', 'journal replay through CLI',

@@ -51,9 +51,9 @@ test('forged outcomes and v2 saves are rejected without replacing an existing pa
  const d=polar();d.initial.stocks.A-=1;assert.notEqual(new MissionSession(d).planningKey,s.planningKey);d.initial.utcMs+=1000;assert.notEqual(new MissionSession(d).planningKey,s.planningKey);d.scenarioId='different';assert.notEqual(new MissionSession(d).planningKey,s.planningKey);assert.equal(s.save(),saved);
  const lost=new MissionSession(polar({empty:true}));lost.resolvePlanning();const x=JSON.parse(lost.save());x.payload.snapshot.state.result.total++;x.checksum=saveChecksum(x.payload);assert.throws(()=>MissionSession.restore(JSON.stringify(x)),/snapshot/);
 });
-test('a real late arrival can lose without sunlight death; the committed event exists only at the final planning UTC',()=>{
+test('a real late arrival with solar blocks remains running until departure windows are analysed',()=>{
  const d=structuredClone(real);d.targetId='RJTT';const s=new MissionSession(d);for(const id of ['BIKF','CYEG','UHSS','UNNT']){assert.equal(s.fly(id).allowed,true,id);s.resume();}
- const end=s.current().state;assert.equal(end.phase,'planning');assert.equal(end.status,'running');const result=s.resolvePlanning();assert.equal(result.state.status,'lost');assert.equal(result.state.death,null);assert.equal(result.state.result.total,1182);
+ const end=s.current().state;assert.equal(end.phase,'planning');assert.equal(end.status,'running');const result=s.resolvePlanning();assert.equal(result.state.status,'running');assert.equal(result.state.death,null);assert.equal(result.availability.total,1182);assert.ok(result.availability.reasons.sun>0);
  const earlier=s.stateAt(end.utcMs-1);assert.equal(earlier.state.status,'running');assert.equal(earlier.state.result,null);assert.ok(earlier.events.every(e=>e.kind!=='mission_lost'));
  assert.deepEqual(MissionSession.restore(s.save()).current(),s.current());
 });

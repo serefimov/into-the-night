@@ -8,7 +8,7 @@ const time=new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'short',hour:'2-
 const clock=new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'UTC'});
 const tonnes=kg=>decimal.format(kg/1000)+' т';
 const duration=ms=>{const minutes=Math.round(ms/60000);return `${Math.floor(minutes/60)} ч ${minutes%60} мин`;};
-const phases={departure:'Отправление',cruise:'В полёте',arrival:'Посадка',service:'Обслуживание',refuelling:'Дозаправка перед вылетом',planning:'Выбор следующего аэродрома',won:'Цель достигнута',dead:'Партия завершена'};
+const phases={waiting:'Ожидание',departure:'Отправление',cruise:'В полёте',arrival:'Посадка',service:'Обслуживание',refuelling:'Дозаправка перед вылетом',planning:'Выбор следующего аэродрома',won:'Цель достигнута',dead:'Партия завершена'};
 const plural=new Intl.PluralRules('ru-RU'),landings=n=>`${n} ${{one:'посадка',few:'посадки',many:'посадок',other:'посадки'}[plural.select(n)]}`;
 const reasonNames={fuel_stock:'На текущем аэродроме не хватает топлива для выбранного рейса.',fuel_capacity:'Для выбранного рейса требуется больше ёмкости бака.',fuel_or_reference_reserve:'Не хватает топлива с необходимым резервом.',takeoff_mass:'Превышена взлётная масса.',landing_mass:'После рейса самолёт слишком тяжёлый для посадки.',unverified_airport:'Пригодность полосы для этого самолёта не подтверждена.',ground_fuel:'Не хватает топлива на наземные операции.',solar_indeterminate:'Безопасность не определена. Такой вылет пока нельзя подтвердить.',same_airport:'Самолёт уже на этом аэродроме.',unknown_airport:'Аэродром не найден.',ambiguous_route:'Нельзя однозначно построить этот маршрут.',mission_busy:'Сначала завершится принятый рейс.',mission_won:'Вы добрались до цели.',mission_dead:'Партия завершена.',mission_lost:'Маршрут оборвался: доступных перелётов нет.'};
 function text(id,value){const el=$(id);if(el.textContent!==value)el.textContent=value;}
@@ -66,11 +66,12 @@ export async function createFlightApp(definition,land) {
   if(s.status==='won'){title='Цель достигнута';detail=`${integer.format(s.distanceKm)} км · ${landings(s.flights)} · ${time.format(s.utcMs)} UTC.`;kind='safe';}
   else if(s.status==='dead'){title='Поражение: самолёт встретил Солнце';detail=`Солнце в текущей точке — ${time.format(s.death.utcMs)} UTC.`;kind='blocked';}
   else if(s.status==='lost'){title='Поражение: маршрут оборвался';detail=`Нет доступных перелётов. Проверены все ${s.result.total} направления текущего каталога. В этой версии нет ожидания — партия завершена.`;kind='blocked';}
-  else if(busy){title=controller.playing?'Рейс выполняется':'Рейс на паузе';detail='Следующие направления проверим после завершения полёта и обслуживания.';}
+  else if(busy){title=s.phase==='waiting'?(controller.playing?'Ожидание выполняется':'Ожидание на паузе'):controller.playing?'Рейс выполняется':'Рейс на паузе';detail='Следующие направления проверим после завершения полёта и обслуживания.';}
   else {
    if(report.availableIds.length){title=`Доступно перелётов: ${report.availableIds.length}`;kind='safe';}
    else if(report.status==='unresolved')title='Безопасность ещё не определена';
    else if(report.status==='failed')title='Проверка не завершена';
+   else if(report.status==='no_safe_choices')title='Сейчас нет доступных перелётов';
    else title='Проверяем направления';
    detail=`Проверено ${report.checked} из ${report.total} · осталось ${report.remaining}.`;
    if(report.unresolvedIds.length)detail+=` Требуют уточнения: ${report.unresolvedIds.length}. Поражение не подтверждено.`;
@@ -93,6 +94,7 @@ export async function createFlightApp(definition,land) {
   text('flight-fuel',tonnes(s.fuelKg)+' топлива');
   text('flight-status',s.status==='lost'?'Маршрут оборвался: нет доступных перелётов.':s.status==='dead'?'Партия завершена: самолёт встретил Солнце.':s.status==='won'?`Цель достигнута · ${integer.format(s.distanceKm)} км · ${landings(s.flights)}`:busy?`${phases[s.phase]} · ${controller.playing?'выполняется':'пауза'}`:'Время стоит. Выберите следующую посадку.');
   $('playback').hidden=!busy;text('play-pause',controller.playing?'Пауза':'Продолжить');text('phase-name',phases[s.phase]);
+  if(s.activeWait)$('flight-progress').value=(s.utcMs-s.activeWait.startUtcMs)/(s.activeWait.endUtcMs-s.activeWait.startUtcMs);
   if(s.activeFlight)$('flight-progress').value=(s.utcMs-s.activeFlight.startUtcMs)/(s.activeFlight.endUtcMs-s.activeFlight.startUtcMs);
   text('destination-title',airport?(airport.label??airport.name):'Куда летим?');text('destination-subtitle',airport?`${airport.iata?airport.iata+' · ':''}${airport.id} · ${airport.country}`:'Выберите аэродром на глобусе.');
   $('empty-card').hidden=!!airport;$('destination-metrics').hidden=!airport;
@@ -102,6 +104,7 @@ export async function createFlightApp(definition,land) {
   }
   let title='Время стоит, пока вы выбираете.',detail='Метки выбирают аэродром. Кнопка «Полёт» подтверждает вылет.',kind='';
   if(s.status==='won'){title='✓ Цель достигнута';detail=`${integer.format(s.distanceKm)} км позади. Место назначения — ${goal.label??goal.name}.`;kind='safe';}
+  else if(busy&&s.phase==='waiting'){title=controller.playing?'Ожидание выполняется':'Ожидание на паузе';detail='Время стоянки изменяется только при воспроизведении. После ожидания полёт подтверждается отдельно.';}
   else if(busy){title=controller.playing?'Выполняется принятый рейс':'Рейс на паузе';detail='Дозаправка перед вылетом, полёт и обслуживание проходят автоматически. Затем можно выбрать новое назначение.';}
   else if(choice?.allowed){title='✓ Весь переход безопасен';detail=`Заправка перед вылетом, полёт и обслуживание проверены. Завершение — ${time.format(forecast.endUtcMs)} UTC.`;kind='safe';}
   else if(choice){kind='blocked';title=choice.reasons.includes('solar_indeterminate')?'? Безопасность не подтверждена':'× Вылет недоступен';
