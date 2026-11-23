@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import { forecastChapterOne, validateChapterOne } from './mission-ground.js';
+import { forecastChapterOne, forecastExpedition, validateChapterOne } from './mission-ground.js';
 import { validateResearchState } from './mission-research.js';
 import { forecastMissionFlight } from './mission-flight.js';
 import { aircraftMetrics } from './aircraft.js';
@@ -119,7 +119,12 @@ export class MissionSession {
     get planningKey() { const state = this.current().state; return state.status === 'running' && state.phase === 'planning' ? saveChecksum({ definition: this.#definitionHash, options: this.#options, state: this.#ready() }) : null; }
     #airport(id) { return this.#definition.airports.find(a => a.id === id); }
     #ready() { return this.#plans.at(-1)?.forecast.next ?? this.#initial; }
-    forecastExpedition() {
+    forecastExpedition() { return this.#forecastExpedition(true); }
+    /** Preview a projected airport state with the same rules and solver options as dispatch. */
+    previewExpedition(origin) {
+        return forecastExpedition(this.#definition, origin, this.#options);
+    }
+    #forecastExpedition(requireOnward) {
         const state = this.current().state, d = this.#definition.chapterOne;
         const blocked = (reason) => ({ allowed: false, reasons: [reason], forecast: null });
         if (!d)
@@ -132,11 +137,14 @@ export class MissionSession {
             return blocked('expedition_completed');
         if (state.airportId !== d.airportId)
             return blocked('expedition_airport');
-        const forecast = forecastChapterOne(d, state.utcMs, this.#options);
+        // Journal replay also accepts expeditions committed under the earlier rule.
+        const forecast = requireOnward ? this.previewExpedition(this.#ready()) :
+            { ...forecastChapterOne(d, state.utcMs, this.#options), onward: null };
         return { allowed: forecast.allowed, reasons: forecast.reasons, forecast };
     }
-    startExpedition() {
-        const choice = this.forecastExpedition();
+    startExpedition() { return this.#startExpedition(true); }
+    #startExpedition(requireOnward) {
+        const choice = this.#forecastExpedition(requireOnward);
         if (choice.allowed) {
             const origin = copy(this.#ready());
             this.#plans.push({ origin, expedition: true, forecast: { ...copy(choice.forecast), next: { ...copy(origin), utcMs: choice.forecast.endUtcMs } } });
@@ -455,7 +463,7 @@ export class MissionSession {
                 continue;
             }
             if ('expedition' in choice) {
-                if (envelope.version !== 6 || !session.startExpedition().allowed)
+                if (envelope.version !== 6 || !session.#startExpedition(false).allowed)
                     throw new RangeError('Saved expedition is blocked');
                 continue;
             }

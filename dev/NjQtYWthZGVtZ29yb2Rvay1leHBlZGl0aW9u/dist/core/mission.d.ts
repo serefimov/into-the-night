@@ -1,6 +1,6 @@
-import type { GroundForecast, GroundStage } from './mission-ground.js';
+import type { ExpeditionForecast, GroundStage } from './mission-ground.js';
 import type { MissionWorld, MissionForecast } from './mission-flight.js';
-import type { ResearchPhase } from './mission-research.js';
+import type { ResearchState, ResearchPhase } from './mission-research.js';
 import type { Coordinates } from './solar.js';
 import type { SearchOptions } from './interval-search.js';
 import type { MissionAvailability, AvailabilityReason } from './mission-availability.js';
@@ -121,7 +121,7 @@ export interface MissionChoice {
 export interface GroundChoice {
     allowed: boolean;
     reasons: readonly string[];
-    forecast: GroundForecast | null;
+    forecast: ExpeditionForecast | null;
 }
 export interface MissionAcceptedFlight {
     fromId: string;
@@ -153,6 +153,8 @@ export declare class MissionSession {
     get endUtcMs(): number;
     get planningKey(): string | null;
     forecastExpedition(): GroundChoice;
+    /** Preview a projected airport state with the same rules and solver options as dispatch. */
+    previewExpedition(origin: ResearchState): ExpeditionForecast;
     startExpedition(): GroundChoice;
     waitingLimit(): import("./waiting.js").SunriseSearch;
     /** Read-only solar certification; accepting and executing a wait is separate. */

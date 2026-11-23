@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import {forecastChapterOne} from '../../dist/core/mission-ground.js';
 import {FlightController} from './controller.mjs';
 import {FlightPlanningScan} from './planning-scan.mjs';
 import {GlobeView} from './globe.mjs';
@@ -26,6 +25,7 @@ export async function createFlightApp(definition,land) {
 
  function restoreView() {
   planner.reset();
+  groundPreviewKey=null;
   follow = Boolean(controller.view.state.activeFlight||controller.view.state.activeGround);
   globe.focus(controller.view.state.position);
   render();
@@ -34,6 +34,7 @@ export async function createFlightApp(definition,land) {
  function restart() {
   planner.reset();
   controller.restart();
+  groundPreviewKey=null;
   follow = false;
   globe.focus(controller.view.state.position,1);
   render();
@@ -88,7 +89,7 @@ export async function createFlightApp(definition,land) {
   text('availability-reasons',reasons);$('availability-reasons').hidden=!reasons;
   $('restart-mission').hidden=!terminal;$('retry-scan').hidden=terminal||busy||!['failed','unresolved'].includes(report.status);
  }
- function renderCampaign(s,flightForecast) {
+ function renderCampaign(s,flightForecast,accepted) {
   const d=definition.chapterOne;
   $('campaign-panel').hidden=!d;if(!d)return;
   text('knowledge-count',String(s.campaign.knowledgeIds.length));
@@ -102,22 +103,38 @@ export async function createFlightApp(definition,land) {
   $('expedition-start').hidden=!(s.phase==='planning'&&parked&&!s.campaign.chapterOneCompleted);
   if(!shown)return;
   text('expedition-budget',`Дорога ${duration(d.outboundSeconds*1000)} · данные ${duration(d.acquisitionSeconds*1000)} · обратно ${duration(d.returnSeconds*1000)}. Обычная машина и здание не защищают от света.`);
-  let start;
-  if(s.activeGround)start=s.activeGround.startUtcMs;
-  else if(incoming)start=s.activeFlight.endUtcMs;
-  else if(parked)start=s.activeWait?.endUtcMs??s.utcMs;
-  else if(selected&&flightForecast?.allowed)start=flightForecast.endUtcMs;
-  if(start!==groundPreviewKey){
-   groundPreview=start===undefined?null:forecastChapterOne(d,start);
-   groundPreviewKey=start;
+  let origin;
+  if(s.activeGround||parked){
+   origin={...s,airportId:d.airportId,utcMs:s.activeGround?.startUtcMs??s.activeWait?.endUtcMs??s.utcMs,won:false};
+  }else if(incoming)origin=accepted?.next;
+  else if(selected)origin=flightForecast?.next;
+  // For the onward dispatch only the fuel aboard and the departure stock can
+  // change eligibility at the same airport and UTC.
+  const key=origin?`${origin.utcMs}/${origin.fuelKg}/${origin.stocks[d.airportId]}`:null;
+  if(key!==groundPreviewKey){
+   groundPreview=origin?controller.session.previewExpedition(origin):null;
+   groundPreviewKey=key;
   }
-  const f=groundPreview;
+  const f=key===null?null:groundPreview;
+  const onward=f?.onward;
   $('expedition-start').disabled=!f?.allowed;
-  text('expedition-verdict',s.activeGround?`${phases[s.phase]} · ${controller.playing?'выполняется':'пауза'}`:f?.allowed?'✓ Ночи хватает на весь путь и получение данных':f?'× Ночи не хватает на безопасную экспедицию':'Сначала нужен расчёт безопасного перелёта.');
+  let verdict='Сначала нужен расчёт безопасного перелёта.';
+  if(s.activeGround)verdict=`${phases[s.phase]} · ${controller.playing?'выполняется':'пауза'}`;
+  else if(f?.allowed)verdict='✓ Ночи хватает на экспедицию, следующий рейс подтверждён';
+  else if(onward?.status==='not_found')verdict='× После возвращения нет подтверждённого рейса. Запланируйте более раннее прибытие.';
+  else if(onward?.status==='indeterminate')verdict='× Безопасность следующего рейса после возвращения требует уточнения.';
+  else if(f)verdict='× Ночи не хватает на безопасную экспедицию';
+  text('expedition-verdict',verdict);
   $('expedition-verdict').className=f?.allowed?'safe':'blocked';
-  const problem=f&&!f.allowed?(f.solar.status==='unsafe'?`Солнце: ${phases[f.solar.stage]} — ${clock.format(f.solar.witnessUtcMs)} UTC.`:f.parkedSolar.status==='unsafe'?'Оставленный самолёт встретит Солнце.':'Безопасность требует уточнения.'):'Полный путь, место получения, последний UTC и стоянка самолёта проверены.';
-  text('expedition-times',f?`После обслуживания: ${clock.format(f.startUtcMs)} UTC. Данные: ${clock.format(f.acquiredUtcMs)} UTC. У самолёта: ${clock.format(f.endUtcMs)} UTC. ${problem}`:'');
-  text('expedition-margin',f?`${f.returnMarginSeconds===null?'Запас до рассвета у самолёта не определён.':f.returnMarginSeconds>=0?`После возвращения до рассвета у самолёта: ${duration(f.returnMarginSeconds*1000)}.`:`Возвращение позже рассвета у самолёта на ${duration(-f.returnMarginSeconds*1000)}.`} Рассвет НГУ: ${f.siteSunriseUtcMs===null?'не определён':clock.format(f.siteSunriseUtcMs)+' UTC'}. Следующий рейс проверяется отдельно.`:'');
+  const problem=f&&!onward?(f.solar.status==='unsafe'?`Солнце: ${phases[f.solar.stage]} — ${clock.format(f.solar.witnessUtcMs)} UTC.`:f.parkedSolar.status==='unsafe'?'Оставленный самолёт встретит Солнце.':'Безопасность требует уточнения.'):'';
+  text('expedition-times',f?`После обслуживания: ${clock.format(f.startUtcMs)} UTC. Данные: ${clock.format(f.acquiredUtcMs)} UTC. У самолёта: ${clock.format(f.endUtcMs)} UTC. ${problem}`.trim():'');
+  let exit='';
+  if(onward?.status==='available'){
+   const next=airports.get(onward.destinationId);
+   const wait=onward.startUtcMs-f.endUtcMs;
+   exit=` Пример безопасного продолжения: ${next.label??next.name}${wait>0?` после ожидания ${duration(wait)}`:''}.`;
+  }
+  text('expedition-margin',f?`${f.returnMarginSeconds===null?'Запас до рассвета у самолёта не определён.':f.returnMarginSeconds>=0?`После возвращения до рассвета у самолёта: ${duration(f.returnMarginSeconds*1000)}.`:`Возвращение позже рассвета у самолёта на ${duration(-f.returnMarginSeconds*1000)}.`} Рассвет НГУ: ${f.siteSunriseUtcMs===null?'не определён':clock.format(f.siteSunriseUtcMs)+' UTC'}.${exit}`:'');
  }
  function select(id){controller.select(id);planner.prioritize(id);if(controller.view.state.phase==='planning')planner.record(id,controller.choice);render();}
  function render() {
@@ -125,7 +142,7 @@ export async function createFlightApp(definition,land) {
   const window=statuses.get(controller.selectedId)?.window;
   const forecast=(window?.status==='waiting'?window.forecast:choice?.forecast)??(s.activeFlight?.toId===controller.selectedId?accepted:null),busy=s.status==='running'&&s.phase!=='planning';
   renderAvailability(s);
-  renderCampaign(s,forecast);
+  renderCampaign(s,forecast,accepted);
   renderMissionSummary(s);
   const goal=airports.get(definition.targetId),start=airports.get(definition.initial.airportId);text('goal-name',definition.chapterOne?'Академгородок':goal.label??goal.name);text('route-name',`${start.label??start.name} → ${goal.label??goal.name}`);text('flight-clock',clock.format(s.utcMs)+' UTC');$('flight-clock').dateTime=new Date(s.utcMs).toISOString();
   text('flight-fuel',tonnes(s.fuelKg)+' топлива');

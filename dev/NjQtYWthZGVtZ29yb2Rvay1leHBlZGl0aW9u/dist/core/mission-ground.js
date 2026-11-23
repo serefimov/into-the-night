@@ -5,6 +5,9 @@ import { validateCoordinates } from './solar.js';
 import { searchLimits } from './interval-search.js';
 import { searchStationarySunrise } from './waiting.js';
 import { validateUtcMs } from './time.js';
+import { forecastMissionFlight } from './mission-flight.js';
+import { availabilityReason } from './mission-availability.js';
+import { departureWindowSteps } from './departure-window.js';
 const equal = (a, b) => a.latitudeDeg === b.latitudeDeg && a.longitudeDeg === b.longitudeDeg;
 export function validateChapterOne(d, airport) {
     if (d.version !== 1 || d.id !== 'akademgorodok-expedition-v1' || d.knowledgeId !== 'akademgorodok' || typeof d.siteName !== 'string' || !d.siteName)
@@ -71,4 +74,65 @@ export function forecastChapterOne(d, startUtcMs, options = {}) {
     if (parkedSolar.status !== 'safe')
         reasons.push(parkedSolar.status === 'unsafe' ? 'parked_plane_sun' : 'parked_plane_indeterminate');
     return { allowed: reasons.length === 0, reasons, startUtcMs, acquiredUtcMs, endUtcMs: cursor, phases, solar, parkedSolar, airportSunriseUtcMs, siteSunriseUtcMs, returnMarginSeconds: airportSunriseUtcMs === null ? null : (airportSunriseUtcMs - cursor) / 1000 };
+}
+/** Certify one action from the actual post-expedition state. Ground travel
+ * advances UTC only, so dispatch still sees the aircraft's fuel and stocks. */
+export function forecastExpedition(world, origin, options = {}) {
+    const chapter = world.chapterOne;
+    if (!chapter || origin.airportId !== chapter.airportId)
+        throw new RangeError('Invalid expedition origin');
+    const ground = forecastChapterOne(chapter, origin.utcMs, options);
+    if (!ground.allowed)
+        return { ...ground, onward: null };
+    const onward = findOnwardDeparture(world, { ...origin, utcMs: ground.endUtcMs }, options);
+    const allowed = onward.status === 'available';
+    return { ...ground, onward, allowed, reasons: allowed ? [] : ['onward_' + onward.status] };
+}
+function findOnwardDeparture(world, state, options) {
+    const candidates = [];
+    let uncertain = false;
+    const budget = searchLimits(options).maxEvaluations;
+    let evaluations = 0;
+    for (const airport of world.airports) {
+        if (airport.id === state.airportId || airport.suitability.status !== 'screened-candidate')
+            continue;
+        const remaining = budget - evaluations;
+        if (remaining < 4)
+            return { status: 'indeterminate' };
+        let forecast;
+        try {
+            forecast = forecastMissionFlight(world, state, airport.id, { ...options, maxEvaluations: remaining });
+        }
+        catch (error) {
+            if (error instanceof RangeError && /Coincident|antipodal/.test(error.message))
+                continue;
+            if (error instanceof RangeError && error.message.startsWith('UTC must')) {
+                uncertain = true;
+                continue;
+            }
+            throw error;
+        }
+        evaluations += forecast.solar.evaluations;
+        if (forecast.allowed)
+            return { status: 'available', destinationId: airport.id, startUtcMs: state.utcMs };
+        if (['sun', 'unresolved'].includes(availabilityReason(forecast)))
+            candidates.push({ id: airport.id, forecast });
+    }
+    for (const { id, forecast } of candidates) {
+        const remaining = budget - evaluations;
+        if (remaining < 4)
+            return { status: 'indeterminate' };
+        // The immediate check is already charged to the shared budget above.
+        const steps = departureWindowSteps(world, state, id, { allowed: forecast.allowed, reasons: forecast.reasons, forecast }, { ...options, maxEvaluations: remaining + forecast.solar.evaluations });
+        let step = steps.next();
+        while (!step.done)
+            step = steps.next();
+        const window = step.value;
+        evaluations += window.evaluations - forecast.solar.evaluations;
+        if (window.status === 'waiting' && window.startUtcMs !== null)
+            return { status: 'available', destinationId: id, startUtcMs: window.startUtcMs };
+        if (window.status === 'indeterminate' || window.limit === 'range')
+            uncertain = true;
+    }
+    return { status: uncertain ? 'indeterminate' : 'not_found' };
 }
