@@ -24,7 +24,13 @@ export async function chapterOneScenarioRun({send,evaluate,until,click,rootUrl,m
   assert.match(preview,/Ночи хватает.*После обслуживания.*Данные:.*У самолёта:.*После возвращения до рассвета.*1 ч 12 мин/s);
   assert.equal(await evaluate(`document.getElementById('expedition-start').hidden`),true,'No expedition before landing');
   await evaluate(`document.getElementById('expedition-card').scrollIntoView({block:'center'})`);await shot('preflight');
-  await click('#fly',mobile);await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
+  const plannedTimes=await evaluate("document.getElementById('expedition-times').textContent");
+  await click('#fly',mobile);
+  await evaluate(`${app}.controller.pause();${app}.advanceTo(${app}.controller.activeForecast.arrivalUtcMs+60000)`);
+  assert.equal((await state()).phase,'service');
+  assert.equal(await evaluate("document.getElementById('expedition-times').textContent"),plannedTimes,
+   'The expedition still starts after service while the crew is servicing the plane');
+  await evaluate(`${app}.advanceTo(${app}.controller.session.endUtcMs)`);
   assert.equal((await state()).status,'running');assert.equal(await evaluate(`document.getElementById('mission-summary').hidden`),true);
   assert.equal(await evaluate(`document.getElementById('expedition-start').disabled`),false);
   const airport=await state();await click('#expedition-start',mobile);await click('#play-pause',mobile);
