@@ -1,0 +1,31 @@
+{
+  "scenarioId": "okinawa-aircraft-transfer",
+  "scenarioVersion": 1,
+  "purpose": "Regional control: transfer, Hateruma out and back, then onward in the original widebody",
+  "seed": "okinawa-aircraft-transfer-v1",
+  "refuelingPolicy": "route-before-departure-v2",
+  "stockVersion": "departure-stocks-v2",
+  "stockKgPerAirport": 64000,
+  "stockOverridesKg": {
+    "RORH": 700,
+    "ROAH": 20000
+  },
+  "profileId": "B788-reference-v1",
+  "profileVersion": 1,
+  "catalogVersion": 2,
+  "catalogSourceCommit": "11e4de2834aff6ab54c1f8fc89b8679ea3d08418",
+  "targetId": "ZGGG",
+  "targetCompletion": "after_service",
+  "initial": {
+    "airportId": "ROAH",
+    "utcMs": 1786534200000,
+    "fuelKg": 5000
+  },
+  "fleet": "data/campaign/aircraft-transfer/fleet.json",
+  "airportIds": [
+    "ROAH",
+    "ZGGG",
+    "RKSI",
+    "RJAA"
+  ]
+}

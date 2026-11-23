@@ -1,0 +1,48 @@
+{
+  "initialAircraftId": "dreamliner",
+  "transferSeconds": 900,
+  "parked": [
+    {
+      "id": "twin-otter",
+      "profileId": "DHC6-400-reference-v1",
+      "airportId": "ROAH",
+      "fuelKg": 260
+    }
+  ],
+  "regionalProfiles": [
+    {
+      "profileSource": "data/campaign/aircraft-transfer/dhc6.json",
+      "airportIds": [
+        "ROAH",
+        "RORH"
+      ]
+    }
+  ],
+  "verifiedPavement": {
+    "ROAH": {
+      "lengthM": 3000,
+      "widthM": 45,
+      "source": "https://www.cab.mlit.go.jp/wcab/file/e37686a23212482439f4fe492536a9ae5e1649d7.pdf",
+      "surface": "asphalt"
+    },
+    "RORH": {
+      "lengthM": 800,
+      "widthM": 25,
+      "source": "https://nagodede.github.io/aip/japan/documents/RORH_full.pdf",
+      "surface": "asphalt-concrete"
+    }
+  },
+  "extraAirports": [
+    {
+      "id": "RORH",
+      "name": "Hateruma Airport",
+      "iata": "HTR",
+      "country": "JP",
+      "latitudeDeg": 24.059751,
+      "longitudeDeg": 123.80558,
+      "suitability": {
+        "status": "unverified"
+      }
+    }
+  ]
+}

@@ -12,7 +12,8 @@ function downloadJournal(serialized) {
 
 /** Browser storage and file controls; MissionSession remains the save-format authority. */
 export function bindSessionMenu(controller, {onRestore, onRestart}) {
- const SAVE_KEY=controller.session.definition.chapterOne?'into-the-night-campaign-v1':'into-the-night-flight-v3';
+ const definition=controller.session.definition;
+ const SAVE_KEY=definition.fleet?'into-the-night-aircraft-transfer-v1':definition.chapterOne?'into-the-night-campaign-v1':'into-the-night-flight-v3';
  const menu = document.getElementById('session-menu');
  const message = document.getElementById('session-message');
  const restoreButton = document.getElementById('restore-mission');

@@ -6,6 +6,9 @@ import {forecastMissionFlight} from './mission-flight.js';
 import type {MissionWorld,MissionForecast} from './mission-flight.js';
 import type {ResearchState,ResearchPhase} from './mission-research.js';
 import {aircraftMetrics} from './aircraft.js';
+import type {AircraftProfile} from './aircraft.js';
+import {aircraftWorld,validateFleet} from './mission-fleet.js';
+import type {FleetDefinition,ParkedAircraft} from './mission-fleet.js';
 import {routePhasePosition} from './route.js';
 import {solarExposure,validateCoordinates} from './solar.js';
 import type {Coordinates} from './solar.js';
@@ -21,40 +24,55 @@ import {forecastMissionWait} from './mission-wait.js';
 
 export const MISSION_MODEL=Object.freeze({mode:'airport-flight-v3',simulationVersion:'flight-cycle-3',schemaVersion:3,eventVersion:3,saveVersion:5,waitingVersion:1} as const);
 export const CAMPAIGN_MODEL=Object.freeze({mode:'campaign-ground-v1',simulationVersion:'flight-ground-1',schemaVersion:4,eventVersion:4,saveVersion:6} as const);
+export const FLEET_MODEL=Object.freeze({mode:'campaign-fleet-v1',simulationVersion:'flight-fleet-1',schemaVersion:5,eventVersion:5,saveVersion:7} as const);
+const modelFor=(definition:MissionDefinition|undefined)=>definition?.fleet?FLEET_MODEL:definition?.chapterOne?CAMPAIGN_MODEL:MISSION_MODEL;
 export interface MissionDefinition extends MissionWorld {
  scenarioId:string; scenarioVersion:number; seed:string; stockVersion:string; worldVersion:string;
+ fleet?:FleetDefinition;
  targetCompletion:'arrival'|'after_service';
  initial:{airportId:string; utcMs:number; fuelKg:number; stocks:Record<string,number>};
 }
 export interface MissionEvent {
- version:3|4; sequence:number; utcMs:number; flightIndex:number; airportId:string;
- kind:'mission_started'|'flight_committed'|'flight_started'|'arrived'|'refuelling_started'|'flight_completed'|'mission_won'|'mission_died'|'mission_lost'|'waiting_started'|'waiting_completed'|'expedition_started'|'knowledge_acquired'|'chapter_completed';
+ version:3|4|5; sequence:number; utcMs:number; flightIndex:number; airportId:string;
+ kind:'mission_started'|'flight_committed'|'flight_started'|'arrived'|'refuelling_started'|'flight_completed'|'mission_won'|'mission_died'|'mission_lost'|'waiting_started'|'waiting_completed'|'expedition_started'|'knowledge_acquired'|'chapter_completed'|'transfer_started'|'transfer_completed';
+ aircraftId?:string;
+ fromAircraftId?:string;
 }
 export interface MissionState {
- mode:typeof MISSION_MODEL.mode|typeof CAMPAIGN_MODEL.mode; schemaVersion:3|4; simulationVersion:string; scenarioId:string; scenarioVersion:number; seed:string; stockVersion:string; worldVersion:string;
+ mode:typeof MISSION_MODEL.mode|typeof CAMPAIGN_MODEL.mode|typeof FLEET_MODEL.mode; schemaVersion:3|4|5; simulationVersion:string; scenarioId:string; scenarioVersion:number; seed:string; stockVersion:string; worldVersion:string;
  startUtcMs:number; utcMs:number; airportId:string|null; position:Coordinates; fuelKg:number; stocks:Record<string,number>;
  flights:number; distanceKm:number; status:'running'|'won'|'dead'|'lost';
- phase:GroundStage|'waiting'|'planning'|'won'|'dead'|'lost'|ResearchPhase['label']; death:null|{kind:'sun';utcMs:number};
+ phase:GroundStage|'transferring'|'waiting'|'planning'|'won'|'dead'|'lost'|ResearchPhase['label']; death:null|{kind:'sun';utcMs:number};
  result:MissionResult|null;
  campaign?:{chapterOneCompleted:boolean;knowledgeIds:('akademgorodok')[];objective:'akademgorodok'|'tsukuba';playerLocation:'aircraft'|'ground'};
  aircraft?:{airportId:string|null;position:Coordinates};
  activeGround?:{startUtcMs:number;acquiredUtcMs:number;endUtcMs:number;stage:GroundStage};
  activeWait?:{startUtcMs:number;endUtcMs:number};
+ activeTransfer?:{startUtcMs:number;endUtcMs:number;aircraftId:string};
+ fleet?:{activeId:string;profileId:string;aircraftName:string;reserveKg:number;parked:ParkedAircraft[]};
  activeFlight:null|{fromId:string;toId:string;startUtcMs:number;departureUtcMs:number;arrivalUtcMs:number;endUtcMs:number;phaseStartUtcMs:number;phaseEndUtcMs:number};
 }
 export type MissionResult={kind:'goal'|'sun';utcMs:number}|{kind:'no_routes';utcMs:number;checked:number;total:number;reasons:Record<AvailabilityReason,number>};
 export interface MissionView {state:MissionState;events:MissionEvent[]}
 export interface MissionAdvance extends MissionView {newEvents:MissionEvent[]}
 export interface MissionChoice {allowed:boolean; reasons:readonly string[]; forecast:MissionForecast|null}
-interface AcceptedFlight {origin:ResearchState;toId:string;forecast:MissionForecast}
+interface AcceptedFlight {origin:ResearchState;toId:string;profile:AircraftProfile;forecast:MissionForecast}
 interface AcceptedWait {origin:ResearchState;waitUntil:number;requestedUntil:number;destinationId?:string;forecast:{endUtcMs:number;next:ResearchState}}
 interface AcceptedGround {origin:ResearchState;expedition:true;forecast:GroundForecast&{next:ResearchState}}
-type AcceptedPlan=AcceptedFlight|AcceptedWait|AcceptedGround;
+interface AcceptedTransfer {
+ origin:ResearchState;
+ transferTo:string;
+ parked:ParkedAircraft;
+ forecast:{endUtcMs:number;next:ResearchState};
+}
+type AcceptedPlan=AcceptedFlight|AcceptedWait|AcceptedGround|AcceptedTransfer;
+export interface TransferChoice {allowed:boolean;reasons:readonly string[];forecast:ReturnType<typeof forecastMissionWait>|null}
+
 export interface GroundChoice {allowed:boolean;reasons:readonly string[];forecast:ExpeditionForecast|null}
 export interface MissionAcceptedFlight {fromId:string;toId:string;forecast:MissionForecast}
 interface MissionPayload {
  mode:string;simulationVersion:string;eventVersion:number;definition:MissionDefinition;options:SearchOptions;
- choices:(string|{expedition:true}|{waitUntil:number;stopUtcMs:number;destinationId?:string})[];noRoutesAt:number|null;cursorUtcMs:number;consumedEvents:number;snapshot:MissionView;
+ choices:(string|{expedition:true}|{transferTo:string}|{waitUntil:number;stopUtcMs:number;destinationId?:string})[];noRoutesAt:number|null;cursorUtcMs:number;consumedEvents:number;snapshot:MissionView;
 }
 function copy<T>(value:T):T {
  if(Array.isArray(value))return value.map(copy) as T;
@@ -85,6 +103,11 @@ function matchesSnapshot(stored:MissionView,actual:MissionView):boolean {
    normalized.state.aircraft!.position[key]=actual.state.aircraft.position[key];
   }
  }
+ for(const [i,parked] of (actual.state.fleet?.parked??[]).entries()){
+  const saved=normalized.state.fleet?.parked?.[i];
+  if(!saved||!near(saved.fuelKg,parked.fuelKg,1e-9))return false;
+  saved.fuelKg=parked.fuelKg;
+ }
  for (const [id,fuel] of Object.entries(actual.state.stocks)) {
   if (!near(stored.state.stocks[id],fuel,1e-9)) return false;
   normalized.state.stocks[id] = fuel;
@@ -101,6 +124,7 @@ function validateDefinition(d:MissionDefinition):void {
  for(const a of d.airports){validateCoordinates(a);if(typeof a.id!=='string'||!a.id||ids.has(a.id)||!['screened-candidate','unverified'].includes(a.suitability.status))throw new RangeError('Invalid mission airport');ids.add(a.id);}
  if(Object.keys(d.initial.stocks).length!==ids.size||Object.keys(d.initial.stocks).some(id=>!ids.has(id))||d.initial.airportId===d.targetId||d.airports.find(a=>a.id===d.initial.airportId)?.suitability.status!=='screened-candidate')throw new RangeError('Invalid mission stock coverage or endpoints');
  if(d.chapterOne){const a=d.airports.find(a=>a.id===d.chapterOne!.airportId);if(!a||d.targetId!==a.id)throw new RangeError('Invalid expedition airport');validateChapterOne(d.chapterOne,a);}
+ if(d.fleet)validateFleet(d,d.fleet);
  validateResearchState({profile:d.profile,airports:d.airports,targetId:d.targetId},initialResearch(d));
 }
 function validateOptions(options:SearchOptions):void {
@@ -117,7 +141,7 @@ export class MissionSession {
   this.#initial=initialResearch(this.#definition);this.#cursor=this.#initial.utcMs;
   this.#initialSun=!solarExposure(this.#airport(this.#initial.airportId),this.#cursor).safe;
  }
- get model(){return this.#definition.chapterOne?CAMPAIGN_MODEL:MISSION_MODEL;}
+ get model(){return modelFor(this.#definition);}
  get definition():MissionDefinition{return copy(this.#definition);}
  get currentTimeUtc():number{return this.#cursor;}
  /** Read-only-by-copy accepted plans, for presenting history and resuming playback. */
@@ -125,13 +149,57 @@ export class MissionSession {
   return this.#plans.filter((p):p is AcceptedFlight=>'toId' in p).map(plan=>({fromId:plan.origin.airportId,toId:plan.toId,forecast:copy(plan.forecast)}));
  }
  get endUtcMs():number{return this.#plans.at(-1)?.forecast.endUtcMs??this.#initial.utcMs;}
- get planningKey():string|null {const state=this.current().state;return state.status==='running'&&state.phase==='planning'?saveChecksum({definition:this.#definitionHash,options:this.#options,state:this.#ready()}):null;}
+ get planningKey():string|null {const state=this.current().state;return state.status==='running'&&state.phase==='planning'?saveChecksum({definition:this.#definitionHash,options:this.#options,state:this.#ready(),...(state.fleet?{aircraftId:state.fleet.activeId}:{})}):null;}
  #airport(id:string) {return this.#definition.airports.find(a=>a.id===id)!;}
  #ready():ResearchState {return this.#plans.at(-1)?.forecast.next??this.#initial;}
+ #fleetAt(utcMs:number):MissionState['fleet'] {
+  const fleet=this.#definition.fleet;
+  if(!fleet)return undefined;
+  let activeId=fleet.initialAircraftId,profileId=this.#definition.profile.id;
+  const parked=new Map(fleet.parked.map(plane=>[plane.id,plane]));
+  for(const plan of this.#plans){
+   if(plan.forecast.endUtcMs>utcMs)break;
+   if(!('transferTo' in plan))continue;
+   const next=parked.get(plan.transferTo)!;
+   parked.set(plan.parked.id,plan.parked);
+   parked.delete(next.id);
+   activeId=next.id;
+   profileId=next.profileId;
+  }
+  const {profile}=aircraftWorld(this.#definition,fleet,profileId);
+  return {activeId,profileId,aircraftName:profile.name,reserveKg:profile.assumptions.planningReserveKg,parked:copy([...parked.values()])};
+ }
+ #dispatchWorld():MissionWorld {
+  const fleet=this.#definition.fleet;
+  return fleet?aircraftWorld(this.#definition,fleet,this.#fleetAt(this.#cursor)!.profileId):this.#definition;
+ }
+ forecastTransfer(aircraftId:string):TransferChoice {
+  const state=this.current().state;
+  const plane=state.fleet?.parked.find(p=>p.id===aircraftId);
+  if(state.status!=='running'||state.phase!=='planning')return {allowed:false,reasons:['mission_busy'],forecast:null};
+  if(!plane||plane.airportId!==state.airportId)return {allowed:false,reasons:['aircraft_not_here'],forecast:null};
+  let forecast;
+  try{forecast=this.forecastWait(state.utcMs+this.#definition.fleet!.transferSeconds*1000);}
+  catch(error){
+   if(error instanceof RangeError&&error.message.startsWith('UTC must'))return {allowed:false,reasons:['transfer_horizon'],forecast:null};
+   throw error;
+  }
+  return {allowed:forecast.status==='safe',reasons:forecast.status==='safe'?[]:[forecast.status==='unsafe'?'transfer_sun':'transfer_indeterminate'],forecast};
+ }
+ transferTo(aircraftId:string):TransferChoice {
+  const choice=this.forecastTransfer(aircraftId);
+  if(!choice.allowed)return choice;
+  const fleet=this.#fleetAt(this.#cursor)!,plane=fleet.parked.find(p=>p.id===aircraftId)!;
+  const origin=copy(this.#ready()),endUtcMs=choice.forecast!.safeUntilUtcMs;
+  this.#plans.push({origin,transferTo:aircraftId,
+   parked:{id:fleet.activeId,profileId:fleet.profileId,airportId:origin.airportId,fuelKg:origin.fuelKg},
+   forecast:{endUtcMs,next:{...copy(origin),utcMs:endUtcMs,fuelKg:plane.fuelKg}}});
+  return choice;
+ }
  forecastExpedition():GroundChoice {return this.#forecastExpedition(true);}
  /** Preview a projected airport state with the same rules and solver options as dispatch. */
  previewExpedition(origin:ResearchState):ExpeditionForecast {
-  return forecastExpedition(this.#definition,origin,this.#options);
+  return forecastExpedition(this.#dispatchWorld(),origin,this.#options);
  }
  #forecastExpedition(requireOnward:boolean):GroundChoice {
   const state=this.current().state,d=this.#definition.chapterOne;
@@ -170,7 +238,7 @@ export class MissionSession {
    if(!(error instanceof RangeError)||!error.message.startsWith('UTC must'))throw error;
    immediate={allowed:false,reasons:['simulation_horizon'],forecast:null};
   }
-  return departureWindowSteps(this.#definition,copy(this.#ready()),destinationId,immediate,this.#options);
+  return departureWindowSteps(this.#dispatchWorld(),copy(this.#ready()),destinationId,immediate,this.#options);
  }
  departureWindow(destinationId:string) {
   const steps=this.departureWindowSteps(destinationId);
@@ -182,7 +250,7 @@ export class MissionSession {
  waitForDeparture(destinationId:string,startUtcMs:number) {
   const standing=this.forecastWait(startUtcMs);
   if(standing.status!=='safe')return false;
-  const flight=forecastMissionFlight(this.#definition,{...copy(this.#ready()),utcMs:startUtcMs},destinationId,this.#options);
+  const flight=forecastMissionFlight(this.#dispatchWorld(),{...copy(this.#ready()),utcMs:startUtcMs},destinationId,this.#options);
   if(!flight.allowed)return false;
   this.#acceptWait(startUtcMs).destinationId=destinationId;
   return true;
@@ -217,12 +285,12 @@ export class MissionSession {
  }
  #forecastReady(destinationId:string):MissionChoice {
   const blocked=(reason:string):MissionChoice=>({allowed:false,reasons:[reason],forecast:null});
-  try {const forecast=forecastMissionFlight(this.#definition,this.#ready(),destinationId,this.#options);return {allowed:forecast.allowed,reasons:forecast.reasons,forecast};}
+  try {const forecast=forecastMissionFlight(this.#dispatchWorld(),this.#ready(),destinationId,this.#options);return {allowed:forecast.allowed,reasons:forecast.reasons,forecast};}
   catch(error){if(error instanceof RangeError&&/Coincident|antipodal/.test(error.message))return blocked('ambiguous_route');throw error;}
  }
  fly(destinationId:string):MissionChoice {
   const choice=this.forecast(destinationId);
-  if(choice.allowed)this.#plans.push({origin:copy(this.#ready()),toId:destinationId,forecast:copy(choice.forecast!)});
+  if(choice.allowed)this.#plans.push({origin:copy(this.#ready()),toId:destinationId,profile:this.#dispatchWorld().profile,forecast:copy(choice.forecast!)});
   return choice;
  }
  /** Pure, complete analysis: it never changes time, resources, result or event delivery. */
@@ -242,7 +310,9 @@ export class MissionSession {
   * Worker counts are progress, never authority to end a party. Only time-independent blocks establish a dead end without departure-window analysis. */
  resolvePlanning():MissionAdvance&{availability:MissionAvailability} {
   const availability=this.availability();
-  if(!(this.#definition.chapterOne&&this.current().state.airportId===this.#definition.chapterOne.airportId&&!this.current().state.campaign?.chapterOneCompleted)&&!this.#noRoutes&&this.current().state.phase==='planning'&&availability.status==='no_safe_choices'&&availability.complete&&availability.reasons.sun===0){
+  const {state}=this.current(),localExpedition=this.#definition.chapterOne?.airportId===state.airportId&&!state.campaign?.chapterOneCompleted;
+  if(!localExpedition&&!this.#noRoutes&&state.phase==='planning'&&availability.status==='no_safe_choices'&&availability.complete&&availability.reasons.sun===0&&
+     !state.fleet?.parked.some(p=>p.airportId===state.airportId&&this.forecastTransfer(p.id).allowed)){
    this.#noRoutes={utcMs:this.#cursor,report:copy(availability)};
    return {...this.stopAt(this.#cursor),availability};
   }
@@ -254,6 +324,12 @@ export class MissionSession {
   append('mission_started',this.#initial.utcMs,0,this.#initial.airportId);
   if(this.#initialSun)append('mission_died',this.#initial.utcMs,0,this.#initial.airportId);
   for(const plan of this.#plans){
+   if('transferTo' in plan){
+    const details={aircraftId:plan.transferTo,fromAircraftId:plan.parked.id};
+    for(const [kind,utcMs] of [['transfer_started',plan.origin.utcMs],['transfer_completed',plan.forecast.endUtcMs]] as const)
+     events.push({kind,utcMs,version:this.model.eventVersion,sequence:events.length,flightIndex:plan.origin.flights,airportId:plan.origin.airportId,...details});
+    continue;
+   }
    if('expedition' in plan){append('expedition_started',plan.origin.utcMs,plan.origin.flights,plan.origin.airportId);append('knowledge_acquired',plan.forecast.acquiredUtcMs,plan.origin.flights,plan.origin.airportId);append('chapter_completed',plan.forecast.endUtcMs,plan.origin.flights,plan.origin.airportId);continue;}
    if('waitUntil' in plan){append('waiting_started',plan.origin.utcMs,plan.origin.flights,plan.origin.airportId);append('waiting_completed',plan.waitUntil,plan.origin.flights,plan.origin.airportId);continue;}
    const f=plan.forecast,index=plan.origin.flights+1;
@@ -280,7 +356,12 @@ export class MissionSession {
    return state;
   }
   if('waitUntil' in plan){const state=this.#base(plan.origin);state.utcMs=time;state.phase='waiting';state.activeWait={startUtcMs:plan.origin.utcMs,endUtcMs:plan.waitUntil};return state;}
-  const f=plan.forecast,a=this.#definition.profile.assumptions,m=aircraftMetrics(this.#definition.profile),state=this.#base(plan.origin);
+  if('transferTo' in plan){
+   const state=this.#base(plan.origin);state.utcMs=time;state.phase='transferring';
+   state.activeTransfer={startUtcMs:plan.origin.utcMs,endUtcMs:plan.forecast.endUtcMs,aircraftId:plan.transferTo};
+   return state;
+  }
+  const f=plan.forecast,a=plan.profile.assumptions,m=aircraftMetrics(plan.profile),state=this.#base(plan.origin);
   state.utcMs=time;let fuel=plan.origin.fuelKg;
   for(const phase of f.phases) {
    const p=phase.route;if(time<p.startUtcMs)break;
@@ -316,6 +397,7 @@ export class MissionSession {
    // Position contains coordinates only; airport metadata is not runtime state.
    state.aircraft.position={latitudeDeg:state.aircraft.position.latitudeDeg,longitudeDeg:state.aircraft.position.longitudeDeg};
   }
+  if(this.#definition.fleet)state.fleet=this.#fleetAt(time)!;
   return {state,events:this.#events().filter(e=>e.utcMs<=time)};
  }
  current():MissionView{return this.stateAt(this.#cursor);}
@@ -327,21 +409,22 @@ export class MissionSession {
  resume():MissionAdvance{return this.stopAt(this.endUtcMs);}
  save():string {
   const payload:MissionPayload={mode:this.model.mode,simulationVersion:this.model.simulationVersion,eventVersion:this.model.eventVersion,definition:copy(this.#definition),options:copy(this.#options),
-   choices:this.#plans.map(p=>'toId' in p?p.toId:'expedition' in p?{expedition:true}:{waitUntil:p.requestedUntil,stopUtcMs:p.waitUntil,...(p.destinationId?{destinationId:p.destinationId}:{})}),noRoutesAt:this.#noRoutes?.utcMs??null,cursorUtcMs:this.#cursor,consumedEvents:this.#consumedEvents,snapshot:this.current()};
-  return canonicalJson({format:'into-the-night-mission',version:this.#definition.chapterOne?6:this.#plans.some(p=>'waitUntil' in p&&p.destinationId)?5:this.#plans.some(p=>'waitUntil' in p)?4:3,checksum:saveChecksum(payload),payload});
+   choices:this.#plans.map(p=>'toId' in p?p.toId:'expedition' in p?{expedition:true}:'transferTo' in p?{transferTo:p.transferTo}:{waitUntil:p.requestedUntil,stopUtcMs:p.waitUntil,...(p.destinationId?{destinationId:p.destinationId}:{})}),noRoutesAt:this.#noRoutes?.utcMs??null,cursorUtcMs:this.#cursor,consumedEvents:this.#consumedEvents,snapshot:this.current()};
+  return canonicalJson({format:'into-the-night-mission',version:this.model!==MISSION_MODEL?this.model.saveVersion:this.#plans.some(p=>'waitUntil' in p&&p.destinationId)?5:this.#plans.some(p=>'waitUntil' in p)?4:3,checksum:saveChecksum(payload),payload});
  }
  /** Separate format: historical survival saves are rejected rather than reinterpreted as food-free missions. */
  static restore(serialized:string,expectedDefinition?:MissionDefinition):MissionSession {
   if(typeof serialized!=='string'||serialized.length>16*1024*1024)throw new RangeError('Invalid mission save size');
   const envelope=JSON.parse(serialized) as {format:string;version:number;checksum:string;payload:MissionPayload};
-  if(!envelope||envelope.format!=='into-the-night-mission'||![3,4,5,6].includes(envelope.version)||!envelope.payload||envelope.checksum!==saveChecksum(envelope.payload))throw new RangeError('Unsupported or damaged mission save');
+  if(!envelope||envelope.format!=='into-the-night-mission'||![3,4,5,6,7].includes(envelope.version)||!envelope.payload||envelope.checksum!==saveChecksum(envelope.payload))throw new RangeError('Unsupported or damaged mission save');
   const p=envelope.payload;
-  const model=p.definition?.chapterOne?CAMPAIGN_MODEL:MISSION_MODEL;
-  if((model===CAMPAIGN_MODEL)!==(envelope.version===6)||p.mode!==model.mode||p.simulationVersion!==model.simulationVersion||p.eventVersion!==model.eventVersion)throw new RangeError('Incompatible mission save version');
+  const model=modelFor(p.definition);
+  if((model===MISSION_MODEL?envelope.version>MISSION_MODEL.saveVersion:envelope.version!==model.saveVersion)||p.mode!==model.mode||p.simulationVersion!==model.simulationVersion||p.eventVersion!==model.eventVersion)throw new RangeError('Incompatible mission save version');
   if(expectedDefinition&&canonicalJson(p.definition)!==canonicalJson(expectedDefinition))throw new RangeError('Mission definition differs');
   if(!Array.isArray(p.choices)||p.choices.length>1000||p.choices.some(choice=>{
    if(typeof choice==='string')return false;
    if(!choice||typeof choice!=='object')return true;
+   if('transferTo' in choice)return typeof choice.transferTo!=='string'||!choice.transferTo||Object.keys(choice).length!==1;
    if('expedition' in choice)return choice.expedition!==true||Object.keys(choice).length!==1;
    return Object.keys(choice).some(k=>!['waitUntil','stopUtcMs','destinationId'].includes(k))||
     (choice.destinationId!==undefined&&(typeof choice.destinationId!=='string'||!choice.destinationId))||
@@ -354,7 +437,8 @@ export class MissionSession {
     if(!session.fly(choice).allowed)throw new RangeError('Saved flight is blocked');
     continue;
    }
-   if('expedition' in choice){if(envelope.version!==6||!session.#startExpedition(false).allowed)throw new RangeError('Saved expedition is blocked');continue;}
+   if('transferTo' in choice){if(envelope.version!==7||!session.transferTo(choice.transferTo).allowed)throw new RangeError('Saved transfer is blocked');continue;}
+   if('expedition' in choice){if(envelope.version<6||!session.#startExpedition(false).allowed)throw new RangeError('Saved expedition is blocked');continue;}
    if(envelope.version<4)throw new RangeError('Saved wait is blocked');
    let accepted:boolean;
    if(choice.destinationId){
