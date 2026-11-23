@@ -1,4 +1,3 @@
-// SPDX-License-Identifier: GPL-3.0-only
 import { aircraftLeg, aircraftMetrics, aircraftRefuelling } from './aircraft.js';
 import { greatCircle } from './geometry.js';
 import { validateResearchState, auditResearchPhases } from './mission-research.js';
@@ -51,6 +50,6 @@ export function forecastMissionFlight(world, state, destinationId, options = {})
     if (solar.status !== 'safe')
         reasons.push(solar.status === 'unsafe' ? 'sun' : 'solar_indeterminate');
     const allowed = reasons.length === 0;
-    const next = allowed ? { airportId: destinationId, utcMs: cursor, fuelKg, stocks: { ...state.stocks, [from.id]: refuelling.stockKg }, flights: state.flights + 1, distanceKm: state.distanceKm + path.distanceKm, won: destinationId === world.targetId } : null;
+    const next = allowed ? { airportId: destinationId, utcMs: cursor, fuelKg, stocks: { ...state.stocks, [from.id]: refuelling.stockKg }, flights: state.flights + 1, distanceKm: state.distanceKm + path.distanceKm, won: destinationId === world.targetId && !world.chapterOne } : null;
     return { allowed, reasons, distanceKm: path.distanceKm, departureUtcMs, arrivalUtcMs, endUtcMs: cursor, flight, refuelling, phases, solar, solarScope: invalidResources ? 'invalid_resources' : terminalArrival ? 'departure_and_flight' : 'departure_flight_service', next };
 }

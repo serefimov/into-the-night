@@ -1,8 +1,10 @@
+import type { ChapterOneDefinition } from './mission-ground.js';
 import { aircraftLeg, aircraftRefuelling } from './aircraft.js';
 import type { ResearchWorld, ResearchState, ResearchPhase, PhaseAudit } from './mission-research.js';
 import type { SearchOptions } from './interval-search.js';
 export interface MissionWorld extends Omit<ResearchWorld, 'targetCompletion'> {
     targetCompletion: 'arrival' | 'after_service';
+    chapterOne?: ChapterOneDefinition;
 }
 export interface MissionForecast {
     allowed: boolean;

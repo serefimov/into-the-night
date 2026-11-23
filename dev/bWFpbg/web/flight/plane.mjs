@@ -12,7 +12,7 @@ export function acceptedCruiseRoute(state,acceptedForecast){
 export function flightPlanePose(state,acceptedForecast,frame){
  const cruise=state.phase==='cruise'?acceptedCruiseRoute(state,acceptedForecast):null;
  const fraction=cruise?(state.utcMs-cruise.startUtcMs)/(cruise.endUtcMs-cruise.startUtcMs):null;
- const point=cruise?globeFlightPoint(cruise.path,fraction,frame):globePoint(state.position,frame);
+ const point=cruise?globeFlightPoint(cruise.path,fraction,frame):globePoint(state.aircraft?.position??state.position,frame);
  const heading=cruise?globeFlightHeading(cruise.path,fraction,frame):null;
  return {...point,angleRad:heading??0,directional:heading!==null};
 }

@@ -9,7 +9,8 @@ export { ForecastTimeline, SimulationSession, SessionError } from './sessions.js
 export { serializeSession, restoreSession, SAVE_FORMAT_VERSION } from './saves.js';
 export { validateAircraftProfile, aircraftMetrics, aircraftLeg, aircraftRefuelling } from './aircraft.js';
 export { RESEARCH_MODEL, forecastResearchFlight, executeResearchFlight, firstFlightFuelEnvelope, auditResearchPhases } from './mission-research.js';
-export { MISSION_MODEL, MissionSession } from './mission.js';
+export { MISSION_MODEL, CAMPAIGN_MODEL, MissionSession } from './mission.js';
 export { forecastMissionFlight } from './mission-flight.js';
 export * from './globe.js';
 export * from './mission-availability.js';
+export { forecastChapterOne, validateChapterOne } from './mission-ground.js';

@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-only
+import { forecastChapterOne, forecastExpedition, validateChapterOne } from './mission-ground.js';
 import { validateResearchState } from './mission-research.js';
 import { forecastMissionFlight } from './mission-flight.js';
 import { aircraftMetrics } from './aircraft.js';
@@ -12,6 +13,7 @@ import { searchStationarySunrise } from './waiting.js';
 import { departureWindowSteps } from './departure-window.js';
 import { forecastMissionWait } from './mission-wait.js';
 export const MISSION_MODEL = Object.freeze({ mode: 'airport-flight-v3', simulationVersion: 'flight-cycle-3', schemaVersion: 3, eventVersion: 3, saveVersion: 5, waitingVersion: 1 });
+export const CAMPAIGN_MODEL = Object.freeze({ mode: 'campaign-ground-v1', simulationVersion: 'flight-ground-1', schemaVersion: 4, eventVersion: 4, saveVersion: 6 });
 function copy(value) {
     if (Array.isArray(value))
         return value.map(copy);
@@ -36,6 +38,15 @@ function matchesSnapshot(stored, actual) {
         if (!near(stored.state.position[key], actual.state.position[key], 1e-10))
             return false;
         normalized.state.position[key] = actual.state.position[key];
+    }
+    if (actual.state.aircraft) {
+        if (!stored.state.aircraft)
+            return false;
+        for (const key of ['latitudeDeg', 'longitudeDeg']) {
+            if (!near(stored.state.aircraft.position[key], actual.state.aircraft.position[key], 1e-10))
+                return false;
+            normalized.state.aircraft.position[key] = actual.state.aircraft.position[key];
+        }
     }
     for (const [id, fuel] of Object.entries(actual.state.stocks)) {
         if (!near(stored.state.stocks[id], fuel, 1e-9))
@@ -63,6 +74,12 @@ function validateDefinition(d) {
     }
     if (Object.keys(d.initial.stocks).length !== ids.size || Object.keys(d.initial.stocks).some(id => !ids.has(id)) || d.initial.airportId === d.targetId || d.airports.find(a => a.id === d.initial.airportId)?.suitability.status !== 'screened-candidate')
         throw new RangeError('Invalid mission stock coverage or endpoints');
+    if (d.chapterOne) {
+        const a = d.airports.find(a => a.id === d.chapterOne.airportId);
+        if (!a || d.targetId !== a.id)
+            throw new RangeError('Invalid expedition airport');
+        validateChapterOne(d.chapterOne, a);
+    }
     validateResearchState({ profile: d.profile, airports: d.airports, targetId: d.targetId }, initialResearch(d));
 }
 function validateOptions(options) {
@@ -91,6 +108,7 @@ export class MissionSession {
         this.#cursor = this.#initial.utcMs;
         this.#initialSun = !solarExposure(this.#airport(this.#initial.airportId), this.#cursor).safe;
     }
+    get model() { return this.#definition.chapterOne ? CAMPAIGN_MODEL : MISSION_MODEL; }
     get definition() { return copy(this.#definition); }
     get currentTimeUtc() { return this.#cursor; }
     /** Read-only-by-copy accepted plans, for presenting history and resuming playback. */
@@ -101,6 +119,38 @@ export class MissionSession {
     get planningKey() { const state = this.current().state; return state.status === 'running' && state.phase === 'planning' ? saveChecksum({ definition: this.#definitionHash, options: this.#options, state: this.#ready() }) : null; }
     #airport(id) { return this.#definition.airports.find(a => a.id === id); }
     #ready() { return this.#plans.at(-1)?.forecast.next ?? this.#initial; }
+    forecastExpedition() { return this.#forecastExpedition(true); }
+    /** Preview a projected airport state with the same rules and solver options as dispatch. */
+    previewExpedition(origin) {
+        return forecastExpedition(this.#definition, origin, this.#options);
+    }
+    #forecastExpedition(requireOnward) {
+        const state = this.current().state, d = this.#definition.chapterOne;
+        const blocked = (reason) => ({ allowed: false, reasons: [reason], forecast: null });
+        if (!d)
+            return blocked('no_expedition');
+        if (state.status !== 'running')
+            return blocked('mission_' + state.status);
+        if (state.phase !== 'planning')
+            return blocked('mission_busy');
+        if (state.campaign.chapterOneCompleted)
+            return blocked('expedition_completed');
+        if (state.airportId !== d.airportId)
+            return blocked('expedition_airport');
+        // Journal replay also accepts expeditions committed under the earlier rule.
+        const forecast = requireOnward ? this.previewExpedition(this.#ready()) :
+            { ...forecastChapterOne(d, state.utcMs, this.#options), onward: null };
+        return { allowed: forecast.allowed, reasons: forecast.reasons, forecast };
+    }
+    startExpedition() { return this.#startExpedition(true); }
+    #startExpedition(requireOnward) {
+        const choice = this.#forecastExpedition(requireOnward);
+        if (choice.allowed) {
+            const origin = copy(this.#ready());
+            this.#plans.push({ origin, expedition: true, forecast: { ...copy(choice.forecast), next: { ...copy(origin), utcMs: choice.forecast.endUtcMs } } });
+        }
+        return choice;
+    }
     waitingLimit() {
         const state = this.current().state;
         if (state.status !== 'running' || state.phase !== 'planning')
@@ -231,7 +281,7 @@ export class MissionSession {
      * Worker counts are progress, never authority to end a party. Only time-independent blocks establish a dead end without departure-window analysis. */
     resolvePlanning() {
         const availability = this.availability();
-        if (!this.#noRoutes && this.current().state.phase === 'planning' && availability.status === 'no_safe_choices' && availability.complete && availability.reasons.sun === 0) {
+        if (!(this.#definition.chapterOne && this.current().state.airportId === this.#definition.chapterOne.airportId && !this.current().state.campaign?.chapterOneCompleted) && !this.#noRoutes && this.current().state.phase === 'planning' && availability.status === 'no_safe_choices' && availability.complete && availability.reasons.sun === 0) {
             this.#noRoutes = { utcMs: this.#cursor, report: copy(availability) };
             return { ...this.stopAt(this.#cursor), availability };
         }
@@ -239,11 +289,17 @@ export class MissionSession {
     }
     #events() {
         const events = [];
-        const append = (kind, utcMs, flightIndex, airportId) => events.push({ version: 3, sequence: events.length, kind, utcMs, flightIndex, airportId });
+        const append = (kind, utcMs, flightIndex, airportId) => events.push({ version: this.model.eventVersion, sequence: events.length, kind, utcMs, flightIndex, airportId });
         append('mission_started', this.#initial.utcMs, 0, this.#initial.airportId);
         if (this.#initialSun)
             append('mission_died', this.#initial.utcMs, 0, this.#initial.airportId);
         for (const plan of this.#plans) {
+            if ('expedition' in plan) {
+                append('expedition_started', plan.origin.utcMs, plan.origin.flights, plan.origin.airportId);
+                append('knowledge_acquired', plan.forecast.acquiredUtcMs, plan.origin.flights, plan.origin.airportId);
+                append('chapter_completed', plan.forecast.endUtcMs, plan.origin.flights, plan.origin.airportId);
+                continue;
+            }
             if ('waitUntil' in plan) {
                 append('waiting_started', plan.origin.utcMs, plan.origin.flights, plan.origin.airportId);
                 append('waiting_completed', plan.waitUntil, plan.origin.flights, plan.origin.airportId);
@@ -266,12 +322,21 @@ export class MissionSession {
     }
     #base(r) {
         const d = this.#definition, status = this.#initialSun ? 'dead' : r.won ? 'won' : this.#noRoutes && r.utcMs >= this.#noRoutes.utcMs ? 'lost' : 'running';
-        return { mode: MISSION_MODEL.mode, schemaVersion: 3, simulationVersion: MISSION_MODEL.simulationVersion, scenarioId: d.scenarioId, scenarioVersion: d.scenarioVersion, seed: d.seed, stockVersion: d.stockVersion, worldVersion: d.worldVersion,
+        return { mode: this.model.mode, schemaVersion: this.model.schemaVersion, simulationVersion: this.model.simulationVersion, scenarioId: d.scenarioId, scenarioVersion: d.scenarioVersion, seed: d.seed, stockVersion: d.stockVersion, worldVersion: d.worldVersion,
             startUtcMs: this.#initial.utcMs, utcMs: r.utcMs, airportId: r.airportId, position: { latitudeDeg: this.#airport(r.airportId).latitudeDeg, longitudeDeg: this.#airport(r.airportId).longitudeDeg },
             fuelKg: r.fuelKg, stocks: copy(r.stocks), flights: r.flights, distanceKm: r.distanceKm, status, phase: status === 'running' ? 'planning' : status,
             death: this.#initialSun ? { kind: 'sun', utcMs: this.#initial.utcMs } : null, result: status === 'dead' ? { kind: 'sun', utcMs: this.#initial.utcMs } : status === 'won' ? { kind: 'goal', utcMs: r.utcMs } : status === 'lost' ? { kind: 'no_routes', utcMs: this.#noRoutes.utcMs, checked: this.#noRoutes.report.checked, total: this.#noRoutes.report.total, reasons: copy(this.#noRoutes.report.reasons) } : null, activeFlight: null };
     }
     #during(plan, time) {
+        if ('expedition' in plan) {
+            const state = this.#base(plan.origin), phase = plan.forecast.phases.find(p => time < p.route.endUtcMs);
+            state.utcMs = time;
+            state.phase = phase.label;
+            state.position = routePhasePosition(phase.route, time);
+            state.airportId = null;
+            state.activeGround = { startUtcMs: plan.origin.utcMs, acquiredUtcMs: plan.forecast.acquiredUtcMs, endUtcMs: plan.forecast.endUtcMs, stage: phase.label };
+            return state;
+        }
         if ('waitUntil' in plan) {
             const state = this.#base(plan.origin);
             state.utcMs = time;
@@ -338,6 +403,13 @@ export class MissionSession {
                 break;
             state = time >= plan.forecast.endUtcMs ? this.#base(plan.forecast.next) : this.#during(plan, time);
         }
+        if (this.#definition.chapterOne) {
+            const ground = this.#plans.find((p) => 'expedition' in p), acquired = !!ground && time >= ground.forecast.acquiredUtcMs, completed = !!ground && time >= ground.forecast.endUtcMs;
+            state.campaign = { chapterOneCompleted: completed, knowledgeIds: acquired ? ['akademgorodok'] : [], objective: completed ? 'tsukuba' : 'akademgorodok', playerLocation: state.activeGround ? 'ground' : 'aircraft' };
+            state.aircraft = { airportId: state.activeGround ? this.#definition.chapterOne.airportId : state.airportId, position: state.activeGround ? copy(this.#airport(this.#definition.chapterOne.airportId)) : copy(state.position) };
+            // Position contains coordinates only; airport metadata is not runtime state.
+            state.aircraft.position = { latitudeDeg: state.aircraft.position.latitudeDeg, longitudeDeg: state.aircraft.position.longitudeDeg };
+        }
         return { state, events: this.#events().filter(e => e.utcMs <= time) };
     }
     current() { return this.stateAt(this.#cursor); }
@@ -352,19 +424,20 @@ export class MissionSession {
     }
     resume() { return this.stopAt(this.endUtcMs); }
     save() {
-        const payload = { mode: MISSION_MODEL.mode, simulationVersion: MISSION_MODEL.simulationVersion, eventVersion: 3, definition: copy(this.#definition), options: copy(this.#options),
-            choices: this.#plans.map(p => 'toId' in p ? p.toId : { waitUntil: p.requestedUntil, stopUtcMs: p.waitUntil, ...(p.destinationId ? { destinationId: p.destinationId } : {}) }), noRoutesAt: this.#noRoutes?.utcMs ?? null, cursorUtcMs: this.#cursor, consumedEvents: this.#consumedEvents, snapshot: this.current() };
-        return canonicalJson({ format: 'into-the-night-mission', version: this.#plans.some(p => 'waitUntil' in p && p.destinationId) ? 5 : this.#plans.some(p => 'waitUntil' in p) ? 4 : 3, checksum: saveChecksum(payload), payload });
+        const payload = { mode: this.model.mode, simulationVersion: this.model.simulationVersion, eventVersion: this.model.eventVersion, definition: copy(this.#definition), options: copy(this.#options),
+            choices: this.#plans.map(p => 'toId' in p ? p.toId : 'expedition' in p ? { expedition: true } : { waitUntil: p.requestedUntil, stopUtcMs: p.waitUntil, ...(p.destinationId ? { destinationId: p.destinationId } : {}) }), noRoutesAt: this.#noRoutes?.utcMs ?? null, cursorUtcMs: this.#cursor, consumedEvents: this.#consumedEvents, snapshot: this.current() };
+        return canonicalJson({ format: 'into-the-night-mission', version: this.#definition.chapterOne ? 6 : this.#plans.some(p => 'waitUntil' in p && p.destinationId) ? 5 : this.#plans.some(p => 'waitUntil' in p) ? 4 : 3, checksum: saveChecksum(payload), payload });
     }
     /** Separate format: historical survival saves are rejected rather than reinterpreted as food-free missions. */
     static restore(serialized, expectedDefinition) {
         if (typeof serialized !== 'string' || serialized.length > 16 * 1024 * 1024)
             throw new RangeError('Invalid mission save size');
         const envelope = JSON.parse(serialized);
-        if (!envelope || envelope.format !== 'into-the-night-mission' || ![3, 4, 5].includes(envelope.version) || !envelope.payload || envelope.checksum !== saveChecksum(envelope.payload))
+        if (!envelope || envelope.format !== 'into-the-night-mission' || ![3, 4, 5, 6].includes(envelope.version) || !envelope.payload || envelope.checksum !== saveChecksum(envelope.payload))
             throw new RangeError('Unsupported or damaged mission save');
         const p = envelope.payload;
-        if (p.mode !== MISSION_MODEL.mode || p.simulationVersion !== MISSION_MODEL.simulationVersion || p.eventVersion !== 3)
+        const model = p.definition?.chapterOne ? CAMPAIGN_MODEL : MISSION_MODEL;
+        if ((model === CAMPAIGN_MODEL) !== (envelope.version === 6) || p.mode !== model.mode || p.simulationVersion !== model.simulationVersion || p.eventVersion !== model.eventVersion)
             throw new RangeError('Incompatible mission save version');
         if (expectedDefinition && canonicalJson(p.definition) !== canonicalJson(expectedDefinition))
             throw new RangeError('Mission definition differs');
@@ -373,6 +446,8 @@ export class MissionSession {
                 return false;
             if (!choice || typeof choice !== 'object')
                 return true;
+            if ('expedition' in choice)
+                return choice.expedition !== true || Object.keys(choice).length !== 1;
             return Object.keys(choice).some(k => !['waitUntil', 'stopUtcMs', 'destinationId'].includes(k)) ||
                 (choice.destinationId !== undefined && (typeof choice.destinationId !== 'string' || !choice.destinationId)) ||
                 !Number.isFinite(choice.waitUntil) || !Number.isFinite(choice.stopUtcMs);
@@ -385,6 +460,11 @@ export class MissionSession {
             if (typeof choice === 'string') {
                 if (!session.fly(choice).allowed)
                     throw new RangeError('Saved flight is blocked');
+                continue;
+            }
+            if ('expedition' in choice) {
+                if (envelope.version !== 6 || !session.#startExpedition(false).allowed)
+                    throw new RangeError('Saved expedition is blocked');
                 continue;
             }
             if (envelope.version < 4)
