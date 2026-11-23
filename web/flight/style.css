@@ -74,3 +74,5 @@
 #expedition-verdict.safe{color:var(--safe)}#expedition-verdict.blocked{color:var(--danger)}
 #expedition-start{margin-top:10px}#expedition-times,#expedition-margin{font-size:11px}
 .campaign-panel .footnote{display:block;font-size:10px}.campaign-panel .footnote a{text-decoration:underline}
+
+.scenario-link{display:block;padding:8px 0;color:var(--accent);text-decoration:underline}

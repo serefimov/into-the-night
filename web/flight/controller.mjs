@@ -19,7 +19,8 @@ export class FlightController {
   this.tracks = history.map(flight => flight.forecast.phases.find(p => p.label === 'cruise').route.path);
   this.anchorUtc = view.state.utcMs;
   this.anchorReal = 0;
-  this.rate = view.state.activeGround ? (session.endUtcMs-view.state.activeGround.startUtcMs)/FLIGHT_PLAYBACK_MS : view.state.activeWait ? (session.endUtcMs-view.state.activeWait.startUtcMs)/FLIGHT_PLAYBACK_MS : active ? (session.endUtcMs - view.state.activeFlight.startUtcMs) / FLIGHT_PLAYBACK_MS : 1;
+  const action = view.state.activeTransfer ?? view.state.activeGround ?? view.state.activeWait ?? view.state.activeFlight;
+  this.rate = action ? (session.endUtcMs-action.startUtcMs)/FLIGHT_PLAYBACK_MS : 1;
   this.refresh();
  }
 
@@ -49,6 +50,15 @@ export class FlightController {
   const result=this.session.startExpedition();
   if(result.allowed){this.activeForecast=null;this.rate=(this.session.endUtcMs-this.session.currentTimeUtc)/FLIGHT_PLAYBACK_MS;this.play(now);}
   this.refresh();return result;
+ }
+ transferTo(aircraftId,now=performance.now()) {
+  const result=this.session.transferTo(aircraftId);
+  if(result.allowed){
+   this.rate=(this.session.endUtcMs-this.session.currentTimeUtc)/FLIGHT_PLAYBACK_MS;
+   this.play(now);
+  }
+  this.refresh();
+  return result;
  }
  resolvePlanning(){const result=this.session.resolvePlanning();this.refresh();return result;}
  select(id){this.selectedId=id;this.refresh();}

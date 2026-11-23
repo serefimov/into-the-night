@@ -7,9 +7,10 @@ import type {ResearchWorld,ResearchState,ResearchPhase,PhaseAudit} from './missi
 import type {SearchOptions} from './interval-search.js';
 import type {RoutePhase} from './route.js';
 import type {Coordinates} from './solar.js';
+import {airportSuitable} from './mission-fleet.js';
 import {validateUtcMs} from './time.js';
 
-export interface MissionWorld extends Omit<ResearchWorld,'targetCompletion'> {targetCompletion:'arrival'|'after_service';chapterOne?:ChapterOneDefinition}
+export interface MissionWorld extends Omit<ResearchWorld,'targetCompletion'> {targetCompletion:'arrival'|'after_service';chapterOne?:ChapterOneDefinition;screenedAirportIds?:readonly string[]}
 export interface MissionForecast {
  allowed:boolean;reasons:readonly string[];distanceKm:number;departureUtcMs:number;arrivalUtcMs:number;endUtcMs:number;
  flight:ReturnType<typeof aircraftLeg>;
@@ -31,7 +32,7 @@ export function forecastMissionFlight(world:MissionWorld,state:ResearchState,des
  if(requiredFuelKg>m.fuelCapacityKg)reasons.push('fuel_capacity');
  if(neededKg>state.stocks[from.id]!)reasons.push('fuel_stock');
  if(!refuelling.sufficient&&!reasons.includes('fuel_or_reference_reserve'))reasons.push('fuel_or_reference_reserve');
- if(to.suitability.status!=='screened-candidate')reasons.push('unverified_airport');
+ if(!airportSuitable(world,to)||(world.screenedAirportIds&&!airportSuitable(world,from)))reasons.push('unverified_airport');
  const phases:ResearchPhase[]=[];let cursor=state.utcMs;
  function append(label:ResearchPhase['label'],kind:RoutePhase['kind'],location:Coordinates,seconds:number,moving=false):void {
   const start=cursor;cursor+=seconds*1000;validateUtcMs(cursor);

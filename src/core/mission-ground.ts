@@ -12,6 +12,7 @@ import {forecastMissionFlight} from './mission-flight.js';
 import type {MissionWorld,MissionForecast} from './mission-flight.js';
 import type {ResearchState} from './mission-research.js';
 import {availabilityReason} from './mission-availability.js';
+import {airportSuitable} from './mission-fleet.js';
 import {departureWindowSteps} from './departure-window.js';
 
 export interface ChapterOneDefinition {
@@ -95,7 +96,7 @@ function findOnwardDeparture(world:MissionWorld,state:ResearchState,options:Sear
  let evaluations=0;
 
  for(const airport of world.airports){
-  if(airport.id===state.airportId||airport.suitability.status!=='screened-candidate')continue;
+  if(airport.id===state.airportId||!airportSuitable(world,airport))continue;
   const remaining=budget-evaluations;
   if(remaining<4)return {status:'indeterminate'};
   let forecast:MissionForecast;

@@ -13,12 +13,23 @@ try {
  if(flags['--load']&&flags['--definition'])throw Error('Choose definition or saved session');
  const session=flags['--load']?MissionSession.restore(await readFile(flags['--load'],'utf8')):new MissionSession(await loadCycleDefinition(flags['--definition']));
  const path=flags['--path']?JSON.parse(await readFile(flags['--path'],'utf8')):[];
- if(!Array.isArray(path)||path.some(choice=>typeof choice!=='string'&&(!choice||choice.expedition!==true||Object.keys(choice).length!==1)))throw Error('Path must contain airport IDs or {expedition:true}');
+ if(!Array.isArray(path)||path.some(choice=>{
+  if(typeof choice==='string')return !choice;
+  if(!choice||typeof choice!=='object'||Object.keys(choice).length!==1)return true;
+  return choice.expedition!==true&&!(typeof choice.transferTo==='string'&&choice.transferTo)&&
+   !(Number.isFinite(choice.waitSeconds)&&choice.waitSeconds>0);
+ }))throw Error('Path must contain airport IDs, {expedition:true}, {transferTo:id} or {waitSeconds:seconds}');
  const stop=flags['--stop-at']?parseUtc(flags['--stop-at']):null;let blocked=null;
  if(flags['--resume'])session.resume();
  for(const to of path) {
   if(stop!==null&&stop<session.currentTimeUtc)throw Error('Stop UTC precedes current state');
-  const choice=typeof to==='string'?session.fly(to):session.startExpedition();if(!choice.allowed){blocked={to,reasons:choice.reasons,solar:choice.forecast?.solar??null};break;}
+  if(typeof to==='object'&&'waitSeconds' in to){
+   const forecast=session.waitUntil(session.currentTimeUtc+to.waitSeconds*1000);
+   if(forecast.status!=='safe'){blocked={to,reasons:['wait_'+forecast.status],solar:forecast};break;}
+  }else{
+   const choice=typeof to==='string'?session.fly(to):'transferTo' in to?session.transferTo(to.transferTo):session.startExpedition();
+   if(!choice.allowed){blocked={to,reasons:choice.reasons,solar:choice.forecast?.solar??(choice.forecast?.status?choice.forecast:null)};break;}
+  }
   if(stop!==null&&stop<session.endUtcMs){session.stopAt(stop);break;}
   session.resume();
  }

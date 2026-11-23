@@ -15,6 +15,7 @@
    <button id="import-mission-button" type="button">Загрузить из файла</button>
    <input id="import-mission" type="file" accept="application/json,.json" aria-label="Файл сохранения партии" hidden>
    <button id="new-mission" type="button">Новая партия</button>
+   <a id="scenario-link" class="scenario-link" href="?scenario=aircraft-transfer">Проверить смену самолёта</a>
    <p id="session-message" role="status">Прогресс сохраняется автоматически в этом браузере.</p>
   </div>
  </details>
@@ -36,6 +37,11 @@
    <span class="eyebrow" id="availability-scope">По всему каталогу</span><strong id="availability-title">Проверяем направления</strong>
    <p id="availability-detail"></p><p id="availability-reasons" hidden></p>
    <button id="retry-scan" hidden>Повторить проверку</button><button id="restart-mission" hidden>Начать заново</button>
+  </section>
+  <section id="fleet-panel" class="campaign-panel" aria-label="Самолёты" hidden>
+   <h2 id="active-aircraft"></h2>
+   <p id="transfer-exercise" hidden>Наха → Хатерума → Наха. Вернитесь к Boeing и вылетайте в Гуанчжоу.</p>
+   <div id="parked-aircraft"></div>
   </section>
   <section id="campaign-panel" class="campaign-panel" aria-label="Кампания" hidden>
    <span class="eyebrow">Кампания · знание <span id="knowledge-count">0</span>/3</span>

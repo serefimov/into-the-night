@@ -1,0 +1,37 @@
+{
+  "id": "DHC6-400-reference-v1",
+  "profileVersion": 1,
+  "name": "DHC-6 Twin Otter 400",
+  "facts": {
+    "usableTankLitres": 1477.5,
+    "maxTakeoffKg": 5670,
+    "maxLandingKg": 5579,
+    "maxZeroFuelKg": 5579,
+    "cruiseTasKnots": 182,
+    "cruiseMach": 0.29,
+    "publishedRangeNm": 763,
+    "referenceTakeoffDistanceM": 455,
+    "referenceLandingDistanceM": 460
+  },
+  "assumptions": {
+    "fuelDensityKgPerLitre": 0.8,
+    "zeroFuelKg": 4000,
+    "cruiseBurnKgPerKm": 0.81,
+    "departureSeconds": 300,
+    "departureBurnKg": 24,
+    "arrivalSeconds": 300,
+    "arrivalBurnKg": 12,
+    "serviceSeconds": 300,
+    "serviceBurnKgPerSecond": 0,
+    "refuellingSetupSeconds": 180,
+    "refuellingLitresPerMinute": 100,
+    "planningReserveKg": 150,
+    "windKmPerHour": 0,
+    "runwayScreenLengthM": 700,
+    "runwayScreenWidthM": 20
+  },
+  "sources": [
+    "https://dehavilland.com/twin-otter/",
+    "https://www.easa.europa.eu/en/downloads/7070/en"
+  ]
+}
