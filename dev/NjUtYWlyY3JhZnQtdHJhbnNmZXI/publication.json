@@ -1,0 +1,11 @@
+{
+  "kind": "dev",
+  "branch": "65-aircraft-transfer",
+  "tag": "",
+  "version": "0.1.0-alpha.1",
+  "commit": "2c6bbb9461fd387f81f51d85648b31f63a5dd138",
+  "runId": "45210457820",
+  "builtAt": "2026-11-23T15:57:21.653Z",
+  "source": "https://github.com/serefimov/into-the-night/tree/2c6bbb9461fd387f81f51d85648b31f63a5dd138",
+  "contentHash": "d86280f6b92178ee21cab08847bae4ce264676eee106460dd1b95912d3e1e822"
+}
