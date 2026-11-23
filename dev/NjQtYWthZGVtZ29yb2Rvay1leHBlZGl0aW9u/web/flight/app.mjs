@@ -94,14 +94,23 @@ export async function createFlightApp(definition,land) {
   text('knowledge-count',String(s.campaign.knowledgeIds.length));
   text('campaign-objective',s.campaign.chapterOneCompleted?'Глава 1 завершена · дальше — Цукуба за наводкой':'Знание №1 · научный архив НГУ');
   text('campaign-location',s.activeGround?`${phases[s.phase]}. Самолёт оставлен в Толмачёво. Взлёт после возвращения.`:s.campaign.chapterOneCompleted?'Первая часть получена. Выберите следующий безопасный перелёт.':s.airportId===d.airportId?'Вы в Толмачёво. Данные нужно забрать в Академгородке и вернуться.':'Свет смертелен. Первая часть данных находится в Академгородке; доберитесь через запад.');
-  const shown=s.activeGround||!s.campaign.chapterOneCompleted&&(controller.selectedId===d.airportId||s.airportId===d.airportId);
-  $('expedition-card').hidden=!shown;$('expedition-start').hidden=!(s.phase==='planning'&&s.airportId===d.airportId&&!s.campaign.chapterOneCompleted);
+  const incoming=s.activeFlight?.toId===d.airportId;
+  const parked=!s.activeFlight&&s.airportId===d.airportId;
+  const selected=controller.selectedId===d.airportId;
+  const shown=!s.campaign.chapterOneCompleted&&(s.activeGround||incoming||parked||selected);
+  $('expedition-card').hidden=!shown;
+  $('expedition-start').hidden=!(s.phase==='planning'&&parked&&!s.campaign.chapterOneCompleted);
   if(!shown)return;
   text('expedition-budget',`Дорога ${duration(d.outboundSeconds*1000)} · данные ${duration(d.acquisitionSeconds*1000)} · обратно ${duration(d.returnSeconds*1000)}. Обычная машина и здание не защищают от света.`);
-  const start=s.activeGround?.startUtcMs??(s.airportId===d.airportId?s.utcMs:flightForecast?.endUtcMs);
-  if(start!==undefined){
-   const key=String(start);if(key!==groundPreviewKey){groundPreviewKey=key;groundPreview=forecastChapterOne(d,start);}
-  }else groundPreview=null;
+  let start;
+  if(s.activeGround)start=s.activeGround.startUtcMs;
+  else if(incoming)start=s.activeFlight.endUtcMs;
+  else if(parked)start=s.activeWait?.endUtcMs??s.utcMs;
+  else if(selected&&flightForecast?.allowed)start=flightForecast.endUtcMs;
+  if(start!==groundPreviewKey){
+   groundPreview=start===undefined?null:forecastChapterOne(d,start);
+   groundPreviewKey=start;
+  }
   const f=groundPreview;
   $('expedition-start').disabled=!f?.allowed;
   text('expedition-verdict',s.activeGround?`${phases[s.phase]} · ${controller.playing?'выполняется':'пауза'}`:f?.allowed?'✓ Ночи хватает на весь путь и получение данных':f?'× Ночи не хватает на безопасную экспедицию':'Сначала нужен расчёт безопасного перелёта.');
