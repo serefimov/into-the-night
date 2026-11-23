@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "id": "akademgorodok-expedition-v1",
+  "airportId": "UNNT",
+  "siteName": "НГУ, ул. Пирогова, 1 — локальный научный архив",
+  "knowledgeId": "akademgorodok",
+  "outboundSource": "data/campaign/chapter-one/outbound.json",
+  "inboundSource": "data/campaign/chapter-one/return.json",
+  "outboundSeconds": 5400,
+  "acquisitionSeconds": 3600,
+  "returnSeconds": 5400
+}

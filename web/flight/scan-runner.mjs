@@ -3,7 +3,8 @@
  * It calls only the shared session forecast; grouping and camera are absent. */
 export async function runMissionScan(session,{emit,alive=()=>true,batchSize=24,priority=()=>null}) {
  const state=session.current().state;if(state.status!=='running'||state.phase!=='planning')return;
- const ids=session.definition.airports.filter(a=>a.id!==state.airportId).map(a=>a.id);
+ const {airports,chapterOne}=session.definition;
+ const ids=airports.filter(a=>a.id!==state.airportId).map(a=>a.id);
  await new Promise(r=>setTimeout(r,0));
  for(let i=0;i<ids.length;i+=batchSize){
   if(!alive())return;
@@ -18,8 +19,8 @@ export async function runMissionScan(session,{emit,alive=()=>true,batchSize=24,p
   while(!step.done){await new Promise(r=>setTimeout(r,0));if(!alive())return;step=steps.next();}
   if(!alive())return;
   const window=step.value;
-  // Transport needs a display forecast, not a copy of every warehouse per row.
-  windowBatch.push({id,window:{...window,forecast:window.status==='waiting'?{...window.forecast,next:null}:null}});checked++;
+  // Only the expedition preview consumes the actual state after arrival.
+  windowBatch.push({id,window:{...window,forecast:window.status==='waiting'?{...window.forecast,next:id===chapterOne?.airportId?window.forecast.next:null}:null}});checked++;
   if(windowBatch.length>=8||id===priority()||!pending.length){emit({windowBatch,windowsChecked:checked,windowsTotal:ids.length,windowsDone:pending.length===0});windowBatch=[];}
   await new Promise(r=>setTimeout(r,0));
  }

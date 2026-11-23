@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: GPL-3.0-only
-const SAVE_KEY = 'into-the-night-flight-v3';
 const CHECKPOINT_INTERVAL_MS = 2000;
 
 function downloadJournal(serialized) {
@@ -13,6 +12,7 @@ function downloadJournal(serialized) {
 
 /** Browser storage and file controls; MissionSession remains the save-format authority. */
 export function bindSessionMenu(controller, {onRestore, onRestart}) {
+ const SAVE_KEY=controller.session.definition.chapterOne?'into-the-night-campaign-v1':'into-the-night-flight-v3';
  const menu = document.getElementById('session-menu');
  const message = document.getElementById('session-message');
  const restoreButton = document.getElementById('restore-mission');

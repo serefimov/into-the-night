@@ -13,7 +13,7 @@ export async function outcomeScenarioRun({send,evaluate,until,click,rootUrl,mobi
  let scriptId=null;
  async function open(kind,{fake=false}={}){
   if(scriptId)await send('Page.removeScriptToEvaluateOnNewDocument',{identifier:scriptId});
-  const script=`(()=>{const original=window.fetch.bind(window);window.fetch=(input,...args)=>String(input).endsWith('/data/runtime/mission.json')?Promise.resolve(new Response(${JSON.stringify(JSON.stringify(fixture(kind)))},{headers:{'Content-Type':'application/json'}})):original(input,...args);
+  const script=`(()=>{const original=window.fetch.bind(window);window.fetch=(input,...args)=>(String(input).endsWith('/data/runtime/mission.json')||String(input).endsWith('/data/runtime/airport-spike.json'))?Promise.resolve(new Response(${JSON.stringify(JSON.stringify(fixture(kind)))},{headers:{'Content-Type':'application/json'}})):original(input,...args);
    ${fake?`window.outcomeWorkers=[];window.Worker=class{constructor(){this.requests=[];window.outcomeWorkers.push(this);}postMessage(data){this.requests.push(data);}terminate(){this.terminated=true;}};`:''}})()`;
   scriptId=(await send('Page.addScriptToEvaluateOnNewDocument',{source:script})).identifier;
   await openFlightPage({send,evaluate,until,rootUrl});
