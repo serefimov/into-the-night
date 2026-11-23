@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import {forecastChapterOne,validateChapterOne} from './mission-ground.js';
-import type {GroundForecast,GroundStage} from './mission-ground.js';
+import {forecastChapterOne,forecastExpedition,validateChapterOne} from './mission-ground.js';
+import type {ExpeditionForecast,GroundForecast,GroundStage} from './mission-ground.js';
 import {validateResearchState} from './mission-research.js';
 import {forecastMissionFlight} from './mission-flight.js';
 import type {MissionWorld,MissionForecast} from './mission-flight.js';
@@ -50,7 +50,7 @@ interface AcceptedFlight {origin:ResearchState;toId:string;forecast:MissionForec
 interface AcceptedWait {origin:ResearchState;waitUntil:number;requestedUntil:number;destinationId?:string;forecast:{endUtcMs:number;next:ResearchState}}
 interface AcceptedGround {origin:ResearchState;expedition:true;forecast:GroundForecast&{next:ResearchState}}
 type AcceptedPlan=AcceptedFlight|AcceptedWait|AcceptedGround;
-export interface GroundChoice {allowed:boolean;reasons:readonly string[];forecast:GroundForecast|null}
+export interface GroundChoice {allowed:boolean;reasons:readonly string[];forecast:ExpeditionForecast|null}
 export interface MissionAcceptedFlight {fromId:string;toId:string;forecast:MissionForecast}
 interface MissionPayload {
  mode:string;simulationVersion:string;eventVersion:number;definition:MissionDefinition;options:SearchOptions;
@@ -128,7 +128,12 @@ export class MissionSession {
  get planningKey():string|null {const state=this.current().state;return state.status==='running'&&state.phase==='planning'?saveChecksum({definition:this.#definitionHash,options:this.#options,state:this.#ready()}):null;}
  #airport(id:string) {return this.#definition.airports.find(a=>a.id===id)!;}
  #ready():ResearchState {return this.#plans.at(-1)?.forecast.next??this.#initial;}
- forecastExpedition():GroundChoice {
+ forecastExpedition():GroundChoice {return this.#forecastExpedition(true);}
+ /** Preview a projected airport state with the same rules and solver options as dispatch. */
+ previewExpedition(origin:ResearchState):ExpeditionForecast {
+  return forecastExpedition(this.#definition,origin,this.#options);
+ }
+ #forecastExpedition(requireOnward:boolean):GroundChoice {
   const state=this.current().state,d=this.#definition.chapterOne;
   const blocked=(reason:string):GroundChoice=>({allowed:false,reasons:[reason],forecast:null});
   if(!d)return blocked('no_expedition');
@@ -136,11 +141,14 @@ export class MissionSession {
   if(state.phase!=='planning')return blocked('mission_busy');
   if(state.campaign!.chapterOneCompleted)return blocked('expedition_completed');
   if(state.airportId!==d.airportId)return blocked('expedition_airport');
-  const forecast=forecastChapterOne(d,state.utcMs,this.#options);
+  // Journal replay also accepts expeditions committed under the earlier rule.
+  const forecast=requireOnward?this.previewExpedition(this.#ready()):
+   {...forecastChapterOne(d,state.utcMs,this.#options),onward:null};
   return {allowed:forecast.allowed,reasons:forecast.reasons,forecast};
  }
- startExpedition():GroundChoice {
-  const choice=this.forecastExpedition();
+ startExpedition():GroundChoice {return this.#startExpedition(true);}
+ #startExpedition(requireOnward:boolean):GroundChoice {
+  const choice=this.#forecastExpedition(requireOnward);
   if(choice.allowed){const origin=copy(this.#ready());this.#plans.push({origin,expedition:true,forecast:{...copy(choice.forecast!),next:{...copy(origin),utcMs:choice.forecast!.endUtcMs}}});}
   return choice;
  }
@@ -346,7 +354,7 @@ export class MissionSession {
     if(!session.fly(choice).allowed)throw new RangeError('Saved flight is blocked');
     continue;
    }
-   if('expedition' in choice){if(envelope.version!==6||!session.startExpedition().allowed)throw new RangeError('Saved expedition is blocked');continue;}
+   if('expedition' in choice){if(envelope.version!==6||!session.#startExpedition(false).allowed)throw new RangeError('Saved expedition is blocked');continue;}
    if(envelope.version<4)throw new RangeError('Saved wait is blocked');
    let accepted:boolean;
    if(choice.destinationId){

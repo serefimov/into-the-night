@@ -21,7 +21,7 @@ export async function chapterOneScenarioRun({send,evaluate,until,click,rootUrl,m
   assert.notEqual(await evaluate(`getComputedStyle(document.querySelector('#expedition-card .footnote')).display`),'none');
   const preview=await evaluate(`document.getElementById('expedition-card').textContent`);
   assert.match(preview,/Дорога 1 ч 30 мин.*данные 1 ч 0 мин.*обратно 1 ч 30 мин/s);
-  assert.match(preview,/Ночи хватает.*После обслуживания.*Данные:.*У самолёта:.*После возвращения до рассвета.*1 ч 12 мин/s);
+  assert.match(preview,/Ночи хватает.*После обслуживания.*Данные:.*У самолёта:.*После возвращения до рассвета.*1 ч 12 мин.*Астана/s);
   assert.equal(await evaluate(`document.getElementById('expedition-start').hidden`),true,'No expedition before landing');
   await evaluate(`document.getElementById('expedition-card').scrollIntoView({block:'center'})`);await shot('preflight');
   const plannedTimes=await evaluate("document.getElementById('expedition-times').textContent");
@@ -59,12 +59,24 @@ export async function chapterOneScenarioRun({send,evaluate,until,click,rootUrl,m
   assert.match(await evaluate(`document.getElementById('campaign-objective').textContent`),/Глава 1 завершена.*Цукуба/);
   await fly('UACC');assert.equal((await state()).airportId,'UACC');assert.equal((await state()).campaign.knowledgeIds.length,1);
   await open(true);assert.equal((await state()).airportId,'UACC');assert.equal((await state()).campaign.knowledgeIds.length,1);
+  // Delay the final leg enough for the expedition to fit, but lose every next flight.
+  await open();
+  for(const to of ['BIKF','CYEG','UHMA'])await fly(to);
+  await evaluate(`(()=>{const a=${app},s=a.controller.session,arrival=s.forecast('UNNT').forecast.endUtcMs;
+   const wait=s.waitUntil(s.currentTimeUtc+Date.parse('2026-08-11T18:27:30Z')-arrival);
+   if(wait.status!=='safe')throw Error('Expected safe wait before departure');
+   a.advanceTo(s.endUtcMs);a.select('UNNT');})()`);
+  assert.match(await evaluate("document.getElementById('expedition-verdict').textContent"),/После возвращения нет подтверждённого рейса/);
+  assert.equal(await evaluate("document.getElementById('fly').disabled"),false,'Tolmachevo remains a reachable airfield');
+  await fly('UNNT');
+  assert.equal(await evaluate("document.getElementById('expedition-start').disabled"),true);
+  assert.equal((await state()).campaign.knowledgeIds.length,0);
   // Recreate the old airport conditions as a separate campaign fixture. Its card must explain the road sunrise.
   await evaluate(`(async()=>{const m=await import('./app.mjs'),d=${app}.controller.session.definition;d.initial.utcMs=Date.parse('2026-08-01T20:00:00Z');d.initial.fuelKg=30000;${app}.destroy();localStorage.removeItem('into-the-night-campaign-v1');window.chapterApp=await m.createFlightApp(d,{type:'MultiPolygon',coordinates:[]});for(const to of ['BIKF','CYEG','UHMA']){${app}.controller.select(to);${app}.controller.fly(0);${app}.advanceTo(${app}.controller.session.endUtcMs);} ${app}.select('UNNT');})()`);
   assert.match(await evaluate(`document.getElementById('expedition-card').textContent`),/Ночи не хватает.*Солнце: Возвращение.*позже рассвета/s);
   await evaluate(`document.getElementById('expedition-card').scrollIntoView({block:'center'})`);await shot('late-arrival');
   await fly('UNNT');assert.equal(await evaluate(`document.getElementById('expedition-start').disabled`),true);
   assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
-  return {viewport:mobile?'390/320 touch':'1280 desktop',passed:true,steps:['preflight four-hour expedition and computed margin','landing does not win','three ground phases pause/reload','separate player and plane locations','one knowledge and chapter return','export resumes in CLI','inherited safe UACC flight','late arrival explains road sunrise']};
+  return {viewport:mobile?'390/320 touch':'1280 desktop',passed:true,steps:['preflight four-hour expedition and computed margin','landing does not win','three ground phases pause/reload','separate player and plane locations','one knowledge and chapter return','export resumes in CLI','inherited safe UACC flight','late arrival explains road sunrise','preflight warning and refusal when return has no onward flight']};
  }finally{await evaluate(`${app}?.destroy()`);await rm(directory,{recursive:true,force:true});}
 }

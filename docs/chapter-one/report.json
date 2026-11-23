@@ -1651,6 +1651,11 @@
       "airportSunriseUtcMs": 1786489462294.8157,
       "siteSunriseUtcMs": 1786489385445.4504,
       "returnMarginSeconds": 4320.964050292969,
+      "onward": {
+        "status": "available",
+        "destinationId": "UACC",
+        "startUtcMs": 1786485141330.7654
+      },
       "phases": [
         {
           "label": "ground_outbound",

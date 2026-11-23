@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {MissionSession,CAMPAIGN_MODEL} from '../dist/core/mission.js';
-import {forecastChapterOne} from '../dist/core/mission-ground.js';
+import {forecastChapterOne,forecastExpedition} from '../dist/core/mission-ground.js';
 import {solarExposure} from '../dist/core/solar.js';
 import {saveChecksum} from '../dist/core/serialization.js';
 import {loadCycleDefinition} from '../scripts/mission-cycle-data.mjs';
@@ -82,4 +82,36 @@ test('campaign saves version their model and reject duplicate operations, forged
  const old=new MissionSession(await loadCycleDefinition());assert.equal(JSON.parse(old.save()).version,3);assert.throws(()=>MissionSession.restore(old.save(),definition),/definition differs/);
  assert.equal(MissionSession.restore(old.save()).definition.scenarioId,'academic-westward');
  const invalid=structuredClone(definition);invalid.chapterOne.outboundSeconds=0;assert.throws(()=>new MissionSession(invalid),/durations/);
+});
+
+test('a dark expedition is refused when its actual return has no confirmed onward departure',()=>{
+ const session=atAirport();
+ // Reproduce the reported return UTC and 5 t on board using a certified wait before the drive.
+ assert.equal(session.waitUntil(Date.parse('2026-08-11T18:27:30Z')).status,'safe');
+ session.resume();
+ const before=session.save();
+ const ground=forecastChapterOne(definition.chapterOne,session.currentTimeUtc);
+ assert.equal(ground.allowed,true);
+ assert.equal(new Date(ground.endUtcMs).toISOString(),'2026-08-11T22:27:30.000Z');
+ const choice=session.startExpedition();
+ assert.equal(choice.allowed,false);
+ assert.deepEqual(choice.reasons,['onward_not_found']);
+ assert.equal(session.save(),before);
+});
+
+
+test('the one-step check accepts a confirmed waiting window and uses the inherited fuel stock',async()=>{
+ const d=await loadCycleDefinition(),airport=d.airports.find(a=>a.id==='ULLI');
+ const site={latitudeDeg:airport.latitudeDeg-.002,longitudeDeg:airport.longitudeDeg};
+ // Synthetic short drive ends at the established KMCI departure-window fixture.
+ d.airports=d.airports.filter(a=>['ULLI','KMCI'].includes(a.id));d.targetId='ULLI';
+ d.chapterOne={...definition.chapterOne,airportId:'ULLI',outbound:[airport,site],inbound:[site,airport],
+  outboundSeconds:60,acquisitionSeconds:60,returnSeconds:60};
+ const origin={...d.initial,utcMs:d.initial.utcMs-180000,flights:4,distanceKm:0,won:false};
+ const f=forecastExpedition(d,origin);
+ assert.equal(f.allowed,true);
+ assert.deepEqual(f.onward,{status:'available',destinationId:'KMCI',startUtcMs:d.initial.utcMs+15*60000});
+ const empty=forecastExpedition(d,{...origin,stocks:{...origin.stocks,ULLI:0}});
+ assert.equal(empty.allowed,false);
+ assert.deepEqual(empty.reasons,['onward_not_found']);
 });
